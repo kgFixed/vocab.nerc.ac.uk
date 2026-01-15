@@ -1,0 +1,169 @@
+
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2007_01_01_00_00_00_2007_12_31_00_00_00.ttl> .
+
+<>
+    a tree:Node ;
+    
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2006_01_01_00_00_00_2006_12_31_00_00_00.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2007-12-31T00:00:00+00:00'^^xsd:dateTime
+    ] ;
+    
+    ldes:retentionPolicy [
+        a ldes:RetentionPolicy ;
+        ldes:versionAmount 100
+    ] .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  ldes:immutable 'false'^^xsd:boolean ;
+  ldes:pollingInterval '3600'^^xsd:integer ;
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/LTEMPEQ3/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/LTEMPEQ3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/LTEMPEQ3/>;
+    dc:modified '2007-12-12T09:15:55'^^xsd:dateTime ;
+    skos:altLabel 'Low_Eq_PRT_R'^^xsd:string ;
+    skos:prefLabel 'Electrical resistance (of thermometer at equilibrator base) by platinum resistance thermometer'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::LTEMPEQ3'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/LTEMPEQ4/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/LTEMPEQ4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/LTEMPEQ4/>;
+    dc:modified '2007-12-12T09:15:55'^^xsd:dateTime ;
+    skos:altLabel 'Low_Eq_PRT_RC'^^xsd:string ;
+    skos:prefLabel 'Electrical resistance (of thermometer at equilibrator base) by platinum resistance thermometer and calibration'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::LTEMPEQ4'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/UTEMPEQ3/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/UTEMPEQ3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/UTEMPEQ3/>;
+    dc:modified '2007-12-12T09:15:55'^^xsd:dateTime ;
+    skos:altLabel 'Upp_Eq_PRT_R'^^xsd:string ;
+    skos:prefLabel 'Electrical resistance (of thermometer at equilibrator top) by platinum resistance thermometer'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::UTEMPEQ3'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/UTEMPEQ4/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/UTEMPEQ4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/UTEMPEQ4/>;
+    dc:modified '2007-12-12T09:15:55'^^xsd:dateTime ;
+    skos:altLabel 'Upp_Eq_PRT_RC'^^xsd:string ;
+    skos:prefLabel 'Electrical resistance (of thermometer at equilibrator top) by platinum resistance thermometer and calibration'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::UTEMPEQ4'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/ACFLSA01/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/ACFLSA01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/ACFLSA01/>;
+    dc:modified '2007-10-09T10:14:32'^^xsd:dateTime ;
+    skos:altLabel 'Altim_flag'^^xsd:string ;
+    skos:prefLabel 'Data quality flag (satellite radar altimeter)'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::ACFLSA01'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/CSUNRS01/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/CSUNRS01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/CSUNRS01/>;
+    dc:modified '2007-10-09T10:14:32'^^xsd:dateTime ;
+    skos:altLabel 'Sun_Dur'^^xsd:string ;
+    skos:prefLabel 'Sunshine duration in the atmosphere by pyranometer'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::CSUNRS01'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/OXYTAAOP/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/OXYTAAOP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/OXYTAAOP/>;
+    dc:modified '2007-09-25T14:37:56'^^xsd:dateTime ;
+    skos:altLabel 'O2_temp'^^xsd:string ;
+    skos:prefLabel 'Temperature of oxygen determination by optode'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::OXYTAAOP'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/ACFLPCO2/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/ACFLPCO2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/ACFLPCO2/>;
+    dc:modified '2007-09-25T14:37:56'^^xsd:dateTime ;
+    skos:altLabel 'pCO2_flag'^^xsd:string ;
+    skos:prefLabel 'Data quality flag (pCO2 IOCCP)'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::ACFLPCO2'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/NLADCPBN/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/NLADCPBN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/NLADCPBN/>;
+    dc:modified '2007-08-23T14:57:14'^^xsd:dateTime ;
+    skos:altLabel 'Num_LADCP_bin'^^xsd:string ;
+    skos:prefLabel 'Number (per bin) of measurements by lowered acoustic doppler current profiler (ADCP)'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::NLADCPBN'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/REFFMEXX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/REFFMEXX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/REFFMEXX/>;
+    dc:modified '2007-07-30T11:35:36'^^xsd:dateTime ;
+    skos:altLabel 'RFF'^^xsd:string ;
+    skos:prefLabel 'Resistivity formation factor of the sediment pore water by division of in-situ resistivity by resistivity of overlying water'^^xsd:string ;
+    skos:definition 'Pt microelectrode (ratio of resistivity/resistivity of overlying water)'^^xsd:string ;
+    skos:notation 'SDN:P01::REFFMEXX'^^xsd:string .
+

@@ -1,0 +1,619 @@
+
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2005_01_01_00_00_00_2005_12_31_00_00_00.ttl> .
+
+<>
+    a tree:Node ;
+    
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2004_01_01_00_00_00_2004_12_31_00_00_00.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2005-12-31T00:00:00+00:00'^^xsd:dateTime
+    ] ;
+    
+    ldes:retentionPolicy [
+        a ldes:RetentionPolicy ;
+        ldes:versionAmount 100
+    ] .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  ldes:immutable 'false'^^xsd:boolean ;
+  ldes:pollingInterval '3600'^^xsd:integer ;
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/DISTSOSI/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/DISTSOSI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/DISTSOSI/>;
+    dc:modified '2005-11-08T14:57:15'^^xsd:dateTime ;
+    skos:altLabel 'Range'^^xsd:string ;
+    skos:prefLabel 'Range (from fixed reference point) by Sound Ocean Systems Incorporated DGPS'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::DISTSOSI'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BEARRFTR/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BEARRFTR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BEARRFTR/>;
+    dc:modified '2005-11-08T11:54:23'^^xsd:dateTime ;
+    skos:altLabel 'Bearing'^^xsd:string ;
+    skos:prefLabel 'Bearing (from fixed reference point) by Trimble GPS'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::BEARRFTR'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/ELTMSFIX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/ELTMSFIX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/ELTMSFIX/>;
+    dc:modified '2005-11-08T11:54:23'^^xsd:dateTime ;
+    skos:altLabel 'ElTime_fix'^^xsd:string ;
+    skos:prefLabel 'Elapsed time (since satellite position fix) by Trimble GPS'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::ELTMSFIX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/NUMFXGPS/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/NUMFXGPS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/NUMFXGPS/>;
+    dc:modified '2005-11-08T11:54:23'^^xsd:dateTime ;
+    skos:altLabel 'Num_GPSFix'^^xsd:string ;
+    skos:prefLabel 'Number (during previous powered-up period) of fixes by Trimble GPS'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::NUMFXGPS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/DISTRFTR/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/DISTRFTR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/DISTRFTR/>;
+    dc:modified '2005-11-08T11:54:23'^^xsd:dateTime ;
+    skos:altLabel 'Range'^^xsd:string ;
+    skos:prefLabel 'Range (from fixed reference point) by Trimble GPS'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::DISTRFTR'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/VOLTBAT2/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/VOLTBAT2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/VOLTBAT2/>;
+    dc:modified '2005-10-14T12:19:03'^^xsd:dateTime ;
+    skos:altLabel 'V_batt_SF'^^xsd:string ;
+    skos:prefLabel 'Voltage (seafloor battery output) by telemetry buoy systems monitor'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::VOLTBAT2'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/ELTMIRDL/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/ELTMIRDL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/ELTMIRDL/>;
+    dc:modified '2005-10-06T14:35:23'^^xsd:dateTime ;
+    skos:altLabel 'TimIridLastDial'^^xsd:string ;
+    skos:prefLabel 'Elapsed time (since previous dial-up attempt) by Iridium telecommunications'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::ELTMIRDL'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/I51ANL68/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/I51ANL68/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/I51ANL68/>;
+    dc:modified '2005-10-03T08:44:53'^^xsd:dateTime ;
+    skos:altLabel 'NumAnalysed'^^xsd:string ;
+    skos:prefLabel 'Number (in analysis) of specimens'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::I51ANL68'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/ELTMYEAR/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/ELTMYEAR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/ELTMYEAR/>;
+    dc:modified '2005-09-12T16:31:27'^^xsd:dateTime ;
+    skos:altLabel 'Eltime_year=1'^^xsd:string ;
+    skos:prefLabel 'Elapsed time (from start of year UT = 1.0)'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::ELTMYEAR'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/TDGPSPER/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/TDGPSPER/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/TDGPSPER/>;
+    dc:modified '2005-09-02T12:04:46'^^xsd:dateTime ;
+    skos:altLabel 'Clock_Diff'^^xsd:string ;
+    skos:prefLabel 'Time difference (GPS time - Persistor clock)'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::TDGPSPER'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/CURRSOLA/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/CURRSOLA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/CURRSOLA/>;
+    dc:modified '2005-09-02T12:04:46'^^xsd:dateTime ;
+    skos:altLabel 'Curr_SolPanel'^^xsd:string ;
+    skos:prefLabel 'Current (solar panel output) by telemetry buoy systems monitor'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::CURRSOLA'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/CURRBATT/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/CURRBATT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/CURRBATT/>;
+    dc:modified '2005-09-02T12:04:46'^^xsd:dateTime ;
+    skos:altLabel 'Curr_batt'^^xsd:string ;
+    skos:prefLabel 'Current (battery output) by telemetry buoy systems monitor'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::CURRBATT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/CURRELEC/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/CURRELEC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/CURRELEC/>;
+    dc:modified '2005-09-02T12:04:46'^^xsd:dateTime ;
+    skos:altLabel 'Curr_consump'^^xsd:string ;
+    skos:prefLabel 'Current (electronics consumption) by telemetry buoy systems monitor'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::CURRELEC'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/DVTRANIR/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/DVTRANIR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/DVTRANIR/>;
+    dc:modified '2005-09-02T12:04:46'^^xsd:dateTime ;
+    skos:altLabel 'DatVolTrans'^^xsd:string ;
+    skos:prefLabel 'Data volume transmitted by Iridium telecommunications'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::DVTRANIR'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SQNOIRCN/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SQNOIRCN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SQNOIRCN/>;
+    dc:modified '2005-09-02T12:04:46'^^xsd:dateTime ;
+    skos:altLabel 'DialSeq_Irid'^^xsd:string ;
+    skos:prefLabel 'Sequence number (connection attempt) by Iridium telecommunications'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::SQNOIRCN'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SREMFLSH/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SREMFLSH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SREMFLSH/>;
+    dc:modified '2005-09-02T12:04:46'^^xsd:dateTime ;
+    skos:altLabel 'FlashMem_Left'^^xsd:string ;
+    skos:prefLabel 'Digital storage remaining (flash card)'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::SREMFLSH'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/INSREFMC/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/INSREFMC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/INSREFMC/>;
+    dc:modified '2005-09-02T12:04:46'^^xsd:dateTime ;
+    skos:altLabel 'ID_MCat'^^xsd:string ;
+    skos:prefLabel 'Instrument identifier (SBE MicroCAT)'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::INSREFMC'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/INSREFST/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/INSREFST/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/INSREFST/>;
+    dc:modified '2005-09-02T12:04:46'^^xsd:dateTime ;
+    skos:altLabel 'ID_STek'^^xsd:string ;
+    skos:prefLabel 'Instrument identifier (SonTek current meter)'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::INSREFST'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/DTRANSTP/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/DTRANSTP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/DTRANSTP/>;
+    dc:modified '2005-09-02T12:04:46'^^xsd:dateTime ;
+    skos:altLabel 'Max_SVolDist'^^xsd:string ;
+    skos:prefLabel 'Distance (transducer to end of sampling volume)'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::DTRANSTP'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/DTRANSTR/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/DTRANSTR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/DTRANSTR/>;
+    dc:modified '2005-09-02T12:04:46'^^xsd:dateTime ;
+    skos:altLabel 'Min_SVolDist'^^xsd:string ;
+    skos:prefLabel 'Distance (transducer to start of sampling volume)'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::DTRANSTR'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/STATFLIR/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/STATFLIR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/STATFLIR/>;
+    dc:modified '2005-09-02T12:04:46'^^xsd:dateTime ;
+    skos:altLabel 'Status_Irid'^^xsd:string ;
+    skos:prefLabel 'Status flag by Iridium telecommunications'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::STATFLIR'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/ELTMIRPW/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/ELTMIRPW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/ELTMIRPW/>;
+    dc:modified '2005-09-02T12:04:46'^^xsd:dateTime ;
+    skos:altLabel 'TimIridOn'^^xsd:string ;
+    skos:prefLabel 'Elapsed time (power up to power down) by Iridium telecommunications'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::ELTMIRPW'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/VOLTSOLA/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/VOLTSOLA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/VOLTSOLA/>;
+    dc:modified '2005-09-02T12:04:46'^^xsd:dateTime ;
+    skos:altLabel 'V_SolPanel'^^xsd:string ;
+    skos:prefLabel 'Voltage (solar panel output) by telemetry buoy systems monitor'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::VOLTSOLA'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/VOLTBATT/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/VOLTBATT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/VOLTBATT/>;
+    dc:modified '2005-09-02T12:04:46'^^xsd:dateTime ;
+    skos:altLabel 'V_batt'^^xsd:string ;
+    skos:prefLabel 'Voltage (battery output) by telemetry buoy systems monitor'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::VOLTBATT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/VOLTELEC/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/VOLTELEC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/VOLTELEC/>;
+    dc:modified '2005-09-02T12:04:46'^^xsd:dateTime ;
+    skos:altLabel 'V_consump'^^xsd:string ;
+    skos:prefLabel 'Voltage (electronics supply) by telemetry buoy systems monitor'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::VOLTELEC'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/I51A0468/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/I51A0468/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/I51A0468/>;
+    dc:modified '2005-07-29T12:24:30'^^xsd:dateTime ;
+    skos:altLabel 'NumFemales'^^xsd:string ;
+    skos:prefLabel 'Number (in incubation experiment) of females'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::I51A0468'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/DISTTRAN/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/DISTTRAN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/DISTTRAN/>;
+    dc:modified '2005-04-27T11:28:30'^^xsd:dateTime ;
+    skos:altLabel 'Tran_dist'^^xsd:string ;
+    skos:prefLabel 'Distance (from transducer along measurement axis)'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::DISTTRAN'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/AADYAA01/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/AADYAA01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/AADYAA01/>;
+    dc:modified '2005-03-03T16:54:38'^^xsd:dateTime ;
+    skos:altLabel 'Date(Loch_Day)'^^xsd:string ;
+    skos:prefLabel 'Date (time from 00:00 01/01/1760 to 00:00 UT on day)'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::AADYAA01'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SPOLMWXT/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SPOLMWXT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SPOLMWXT/>;
+    dc:modified '2005-03-02T15:26:30'^^xsd:dateTime ;
+    skos:altLabel 'BulkSedPollCont'^^xsd:string ;
+    skos:prefLabel 'Abundance of pollen grains per unit dry weight of sediment by Moore and Webb (1978) protocols'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::SPOLMWXT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/MNESDOPC/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/MNESDOPC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/MNESDOPC/>;
+    dc:modified '2005-02-15T15:54:39'^^xsd:dateTime ;
+    skos:altLabel 'Min_OPC_ESD'^^xsd:string ;
+    skos:prefLabel 'Size class minimum size (equivalent spherical diameter) by optical plankton counter'^^xsd:string ;
+    skos:definition 'Lower limit of an optical plankton counter (OPC) size class'^^xsd:string ;
+    skos:notation 'SDN:P01::MNESDOPC'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/NRADR101/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/NRADR101/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/NRADR101/>;
+    dc:modified '2005-02-15T15:54:39'^^xsd:dateTime ;
+    skos:altLabel 'NetRad'^^xsd:string ;
+    skos:prefLabel 'Nett radiative flux as energy (300-600 nm wavelengths) in the atmosphere by radiometer'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::NRADR101'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/IDNOOPCS/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/IDNOOPCS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/IDNOOPCS/>;
+    dc:modified '2005-02-15T15:54:39'^^xsd:dateTime ;
+    skos:altLabel 'OPC_sampnum'^^xsd:string ;
+    skos:prefLabel 'Sample reference number (optical plankton recorder count)'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::IDNOOPCS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/CPRPRG01/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/CPRPRG01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/CPRPRG01/>;
+    dc:modified '2005-02-15T15:54:39'^^xsd:dateTime ;
+    skos:altLabel 'Precip'^^xsd:string ;
+    skos:prefLabel 'Thickness of precipitation amount (liquid water equivalent) in the atmosphere by in-situ rain gauge'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::CPRPRG01'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/CPRRRG01/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/CPRRRG01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/CPRRRG01/>;
+    dc:modified '2005-02-15T15:54:39'^^xsd:dateTime ;
+    skos:altLabel 'PrecipRate'^^xsd:string ;
+    skos:prefLabel 'Precipitation rate (liquid water equivalent) in the atmosphere by in-situ rain gauge'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::CPRRRG01'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/RPOTPRTX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/RPOTPRTX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/RPOTPRTX/>;
+    dc:modified '2005-02-15T15:54:39'^^xsd:dateTime ;
+    skos:altLabel 'RdxPot'^^xsd:string ;
+    skos:prefLabel 'Redox potential in the sediment by redox electrode'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::RPOTPRTX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/INFLTF01/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/INFLTF01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/INFLTF01/>;
+    dc:modified '2005-02-15T15:54:39'^^xsd:dateTime ;
+    skos:altLabel 'TSG+Fl_Flow'^^xsd:string ;
+    skos:prefLabel 'Flow rate through instrument'^^xsd:string ;
+    skos:definition 'The volume of water passing through a sensor package or sampling device per unit time.'^^xsd:string ;
+    skos:notation 'SDN:P01::INFLTF01'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/ADYFAA01/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/ADYFAA01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/ADYFAA01/>;
+    dc:modified '2005-02-15T15:54:39'^^xsd:dateTime ;
+    skos:altLabel 'Unspec'^^xsd:string ;
+    skos:prefLabel 'Date and time (time between 00:00 UT on 01/01/1760 and timestamp)'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::ADYFAA01'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/XKEYZZ01/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/XKEYZZ01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/XKEYZZ01/>;
+    dc:modified '2005-02-15T15:54:39'^^xsd:dateTime ;
+    skos:altLabel 'Unspec'^^xsd:string ;
+    skos:prefLabel 'Access control key'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::XKEYZZ01'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/AYMDAA01/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/AYMDAA01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/AYMDAA01/>;
+    dc:modified '2005-02-15T15:54:39'^^xsd:dateTime ;
+    skos:altLabel 'yyyymmddhh24miss.dd'^^xsd:string ;
+    skos:prefLabel 'Date and time (UT as yyyymmddhh24miss.dd)'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::AYMDAA01'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/GAINFRXX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/GAINFRXX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/GAINFRXX/>;
+    dc:modified '2005-02-03T11:00:56'^^xsd:dateTime ;
+    skos:altLabel 'FRRF_gain'^^xsd:string ;
+    skos:prefLabel 'Automatic gain factor by in-situ fast repetition rate fluorometer (FRRF)'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::GAINFRXX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BSHVESXX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BSHVESXX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BSHVESXX/>;
+    dc:modified '2005-01-28T11:22:40'^^xsd:dateTime ;
+    skos:altLabel 'EstBottShearVel'^^xsd:string ;
+    skos:prefLabel 'Critical shear current velocity of the bed by bottom photography and estimation from surface roughness'^^xsd:string ;
+    skos:definition 'Estimated from surface roughness determined using bottom photography'^^xsd:string ;
+    skos:notation 'SDN:P01::BSHVESXX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/DENSDWTM/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/DENSDWTM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/DENSDWTM/>;
+    dc:modified '2005-01-28T11:22:40'^^xsd:dateTime ;
+    skos:altLabel 'TrapPartDens'^^xsd:string ;
+    skos:prefLabel 'Density (dry bulk) of the suspended particulate material by sediment trapping, volume measurement, drying and gravimetry'^^xsd:string ;
+    skos:definition 'Sediment trap sample dry weight divided by wet sample volume'^^xsd:string ;
+    skos:notation 'SDN:P01::DENSDWTM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/XDSCWS01/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/XDSCWS01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/XDSCWS01/>;
+    dc:modified '2005-01-28T11:22:40'^^xsd:dateTime ;
+    skos:altLabel 'WSDisc'^^xsd:string ;
+    skos:prefLabel 'Instrument identifier (wavestaff)'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::XDSCWS01'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/FLOWARFM/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/FLOWARFM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/FLOWARFM/>;
+    dc:modified '2005-01-17T10:32:49'^^xsd:dateTime ;
+    skos:altLabel 'ARIESNETflow'^^xsd:string ;
+    skos:prefLabel 'Flow velocity through instrument (ARIESNET)'^^xsd:string ;
+    skos:definition 'The velocity at which water is passing through the ARIESNET sampling device as determined by the onboard flowmeter'^^xsd:string ;
+    skos:notation 'SDN:P01::FLOWARFM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/IDNOAROR/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/IDNOAROR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/IDNOAROR/>;
+    dc:modified '2005-01-17T10:32:49'^^xsd:dateTime ;
+    skos:altLabel 'ARIESNETsampnum'^^xsd:string ;
+    skos:prefLabel 'Sample identifier (ARIESNET)'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::IDNOAROR'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/EVNTAGFL/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/EVNTAGFL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/EVNTAGFL/>;
+    dc:modified '2005-01-17T10:32:49'^^xsd:dateTime ;
+    skos:altLabel 'ArgoFlEvntNo'^^xsd:string ;
+    skos:prefLabel 'Event number (Argo float)'^^xsd:string ;
+    skos:definition 'Monotonic numeric sequence from 1 for each float'^^xsd:string ;
+    skos:notation 'SDN:P01::EVNTAGFL'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/CLCTXDXT/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/CLCTXDXT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/CLCTXDXT/>;
+    dc:modified '2005-01-17T10:32:49'^^xsd:dateTime ;
+    skos:altLabel 'BSCalcite'^^xsd:string ;
+    skos:prefLabel 'Concentration of calcite per unit dry weight of sediment by X-ray diffraction'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::CLCTXDXT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/ILLPXDXT/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/ILLPXDXT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/ILLPXDXT/>;
+    dc:modified '2005-01-17T10:32:49'^^xsd:dateTime ;
+    skos:altLabel 'BSIlliteP'^^xsd:string ;
+    skos:prefLabel 'Concentration of illite (pure) per unit dry weight of sediment by X-ray diffraction'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::ILLPXDXT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/QRTZXDXT/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/QRTZXDXT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/QRTZXDXT/>;
+    dc:modified '2005-01-17T10:32:49'^^xsd:dateTime ;
+    skos:altLabel 'BSQuartz'^^xsd:string ;
+    skos:prefLabel 'Concentration of quartz per unit dry weight of sediment by X-ray diffraction'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::QRTZXDXT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SDGSPSXX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SDGSPSXX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SDGSPSXX/>;
+    dc:modified '2005-01-17T10:32:49'^^xsd:dateTime ;
+    skos:altLabel 'StdDevGrSize'^^xsd:string ;
+    skos:prefLabel 'Grain-size arithmetic standard deviation in sediment by particle sizer'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::SDGSPSXX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SDGSSSXX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SDGSSSXX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SDGSSSXX/>;
+    dc:modified '2005-01-17T10:32:49'^^xsd:dateTime ;
+    skos:altLabel 'StdDevGrSize'^^xsd:string ;
+    skos:prefLabel 'Grain-size arithmetic standard deviation in sediment by sieving and settling tube method'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::SDGSSSXX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SRTCSSFX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SRTCSSFX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SRTCSSFX/>;
+    dc:modified '2005-01-14T15:26:12'^^xsd:dateTime ;
+    skos:altLabel 'FWSortCoeff'^^xsd:string ;
+    skos:prefLabel 'Grain-size sorting coefficient in sediment by sieving and settling tube method and computation after Folk and Ward (1957)'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::SRTCSSFX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SRTCPSXX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SRTCPSXX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SRTCPSXX/>;
+    dc:modified '2005-01-14T15:26:12'^^xsd:dateTime ;
+    skos:altLabel 'SortCoeff'^^xsd:string ;
+    skos:prefLabel 'Grain-size sorting coefficient in sediment by particle sizer'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::SRTCPSXX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SMDMISGA/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SMDMISGA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SMDMISGA/>;
+    dc:modified '2005-01-06T12:25:48'^^xsd:dateTime ;
+    skos:altLabel 'SDiamSPM1.2-250'^^xsd:string ;
+    skos:prefLabel 'Sauter mean diameter in suspended particulate material 1.2-250um by in-situ particle sizer'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::SMDMISGA'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/DSRNGR01/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/DSRNGR01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/DSRNGR01/>;
+    dc:modified '2005-01-04T11:57:59'^^xsd:dateTime ;
+    skos:altLabel 'DisRun'^^xsd:string ;
+    skos:prefLabel 'Distance travelled by ADCP bottom tracking refined using GPS fixes'^^xsd:string ;
+    skos:definition 'ADCP bottom tracking refined using GPS fixes'^^xsd:string ;
+    skos:notation 'SDN:P01::DSRNGR01'^^xsd:string .
+

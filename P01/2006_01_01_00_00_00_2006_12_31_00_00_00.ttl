@@ -1,0 +1,549 @@
+
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2006_01_01_00_00_00_2006_12_31_00_00_00.ttl> .
+
+<>
+    a tree:Node ;
+    
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2005_01_01_00_00_00_2005_12_31_00_00_00.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2006-12-31T00:00:00+00:00'^^xsd:dateTime
+    ] ;
+    
+    ldes:retentionPolicy [
+        a ldes:RetentionPolicy ;
+        ldes:versionAmount 100
+    ] .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  ldes:immutable 'false'^^xsd:boolean ;
+  ldes:pollingInterval '3600'^^xsd:integer ;
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/IMGXE289/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/IMGXE289/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/IMGXE289/>;
+    dc:modified '2006-11-28T12:13:32'^^xsd:dateTime ;
+    skos:altLabel 'Abund_BE006190'^^xsd:string ;
+    skos:prefLabel 'Abundance of Chronrocladia per unit area of the bed by image analysis'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::IMGXE289'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/IMGXQ7A9/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/IMGXQ7A9/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/IMGXQ7A9/>;
+    dc:modified '2006-11-28T12:13:32'^^xsd:dateTime ;
+    skos:altLabel 'Abund_BE006195'^^xsd:string ;
+    skos:prefLabel 'Abundance of Ophuria sarsi per unit area of the bed by image analysis'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::IMGXQ7A9'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/IMGXX62B/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/IMGXX62B/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/IMGXX62B/>;
+    dc:modified '2006-11-28T12:13:32'^^xsd:dateTime ;
+    skos:altLabel 'Abund_BE006217'^^xsd:string ;
+    skos:prefLabel 'Abundance of Pomachocrinus kerguelensis per unit area of the bed by image analysis'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::IMGXX62B'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/IMGXN051/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/IMGXN051/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/IMGXN051/>;
+    dc:modified '2006-11-28T12:13:32'^^xsd:dateTime ;
+    skos:altLabel 'Abund_BE006269'^^xsd:string ;
+    skos:prefLabel 'Abundance of Staurocumucumis turqueti per unit area of the bed by image analysis'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::IMGXN051'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/E2898515/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/E2898515/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/E2898515/>;
+    dc:modified '2006-11-07T10:43:37'^^xsd:dateTime ;
+    skos:altLabel 'Count_BE006190'^^xsd:string ;
+    skos:prefLabel 'Count of Chronrocladia on the bed by image analysis'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::E2898515'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/Q7A98681/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/Q7A98681/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/Q7A98681/>;
+    dc:modified '2006-11-07T10:43:37'^^xsd:dateTime ;
+    skos:altLabel 'Count_BE006195'^^xsd:string ;
+    skos:prefLabel 'Count of Ophuria sarsi on the bed by image analysis'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::Q7A98681'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/X62B2620/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/X62B2620/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/X62B2620/>;
+    dc:modified '2006-11-07T10:43:37'^^xsd:dateTime ;
+    skos:altLabel 'Count_BE006217'^^xsd:string ;
+    skos:prefLabel 'Count of Pomachocrinus kerguelensis on the bed by image analysis'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::X62B2620'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/N051B945/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/N051B945/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/N051B945/>;
+    dc:modified '2006-11-07T10:43:37'^^xsd:dateTime ;
+    skos:altLabel 'Count_BE006269'^^xsd:string ;
+    skos:prefLabel 'Count of Staurocumucumis turqueti on the bed by image analysis'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::N051B945'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/HEAVGPAC/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/HEAVGPAC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/HEAVGPAC/>;
+    dc:modified '2006-10-06T13:25:48'^^xsd:dateTime ;
+    skos:altLabel 'Heave_DGPS'^^xsd:string ;
+    skos:prefLabel 'Vertical displacement {heave} by Seatex Seapath DGPS and double integration'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::HEAVGPAC'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/ERRVADCP/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/ERRVADCP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/ERRVADCP/>;
+    dc:modified '2006-09-29T15:58:28'^^xsd:dateTime ;
+    skos:altLabel 'ADCPErrVel'^^xsd:string ;
+    skos:prefLabel 'RMS error velocity by acoustic doppler current profiler (ADCP)'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::ERRVADCP'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/ACACHPXT/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/ACACHPXT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/ACACHPXT/>;
+    dc:modified '2006-09-29T15:58:28'^^xsd:dateTime ;
+    skos:altLabel 'AlloChlaCont'^^xsd:string ;
+    skos:prefLabel 'Concentration of allo chlorophyll-a per unit dry weight of sediment by acetone extraction and high performance liquid chromatography (HPLC)'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::ACACHPXT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/ACADHPXT/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/ACADHPXT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/ACADHPXT/>;
+    dc:modified '2006-09-29T15:58:28'^^xsd:dateTime ;
+    skos:altLabel 'AlloChlaContSD'^^xsd:string ;
+    skos:prefLabel 'Concentration standard deviation of allo chlorophyll-a per unit dry weight of sediment by acetone extraction and high performance liquid chromatography (HPLC)'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::ACADHPXT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/HAACHPXT/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/HAACHPXT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/HAACHPXT/>;
+    dc:modified '2006-09-29T15:58:28'^^xsd:dateTime ;
+    skos:altLabel 'BSTHAACont'^^xsd:string ;
+    skos:prefLabel 'Concentration of amino acids (total hydrolysable) per unit dry weight of sediment by hydrolysis and high performance liquid chromatography (HPLC)'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::HAACHPXT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/CHCCHPXT/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/CHCCHPXT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/CHCCHPXT/>;
+    dc:modified '2006-09-29T15:58:28'^^xsd:dateTime ;
+    skos:altLabel 'ChlcCont'^^xsd:string ;
+    skos:prefLabel 'Concentration of chlorophyll-c {chl-c} per unit dry weight of sediment by acetone extraction and high performance liquid chromatography (HPLC)'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::CHCCHPXT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/CDTASSMS/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/CDTASSMS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/CDTASSMS/>;
+    dc:modified '2006-09-06T20:17:29'^^xsd:dateTime ;
+    skos:altLabel 'AirTemp_AvSens'^^xsd:string ;
+    skos:prefLabel 'Temperature of the atmosphere by dry bulb thermometer and taking the average value from two or more sensors'^^xsd:string ;
+    skos:definition 'Averaged data from two or more dry bulb thermometers'^^xsd:string ;
+    skos:notation 'SDN:P01::CDTASSMS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/OXYTPR01/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/OXYTPR01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/OXYTPR01/>;
+    dc:modified '2006-08-10T08:46:57'^^xsd:dateTime ;
+    skos:altLabel 'OxyMembTemp'^^xsd:string ;
+    skos:prefLabel 'Temperature of oxygen sensor membrane'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::OXYTPR01'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SDPLPHTX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SDPLPHTX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SDPLPHTX/>;
+    dc:modified '2006-08-07T07:59:12'^^xsd:dateTime ;
+    skos:altLabel 'SDSedPhosLip'^^xsd:string ;
+    skos:prefLabel 'Concentration standard deviation of phospholipids (total) per unit wet volume of sediment by chloroform extraction, reaction with NH4 molybdate and malachite green and spectrophotometry'^^xsd:string ;
+    skos:definition 'The amount (mass or moles) of the specified organic compound per unit mass of dry sediment.'^^xsd:string ;
+    skos:notation 'SDN:P01::SDPLPHTX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SDPRPHTX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SDPRPHTX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SDPRPHTX/>;
+    dc:modified '2006-08-07T07:59:12'^^xsd:dateTime ;
+    skos:altLabel 'SDSedProt'^^xsd:string ;
+    skos:prefLabel 'Concentration standard deviation of proteins (total) per unit wet volume of sediment by NaOH hydrolysis, addition of Coomassie blue indicator and spectrophotometry'^^xsd:string ;
+    skos:definition 'Photometric assay of NaOH hydrolysed sample indicated by Coomassie blue'^^xsd:string ;
+    skos:notation 'SDN:P01::SDPRPHTX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/PHLPPHTX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/PHLPPHTX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/PHLPPHTX/>;
+    dc:modified '2006-08-07T07:59:12'^^xsd:dateTime ;
+    skos:altLabel 'SedPhosLipids'^^xsd:string ;
+    skos:prefLabel 'Concentration of phospholipids (total) per unit wet volume of sediment by chloroform extraction, reaction with NH4 molybdate and malachite green and spectrophotometry'^^xsd:string ;
+    skos:definition 'The amount (mass or moles) of the specified organic compound per unit mass of dry sediment.'^^xsd:string ;
+    skos:notation 'SDN:P01::PHLPPHTX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SPROPHTX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SPROPHTX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SPROPHTX/>;
+    dc:modified '2006-08-07T07:59:12'^^xsd:dateTime ;
+    skos:altLabel 'SedProtein'^^xsd:string ;
+    skos:prefLabel 'Concentration of proteins (total) per unit wet volume of sediment by NaOH hydrolysis, addition of Coomassie blue indicator and spectrophotometry'^^xsd:string ;
+    skos:definition 'Photometric assay of NaOH hydrolysed sample indicated by Coomassie blue'^^xsd:string ;
+    skos:notation 'SDN:P01::SPROPHTX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/ACTVM007/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/ACTVM007/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/ACTVM007/>;
+    dc:modified '2006-07-05T09:05:02'^^xsd:dateTime ;
+    skos:altLabel 'ACTVM007'^^xsd:string ;
+    skos:prefLabel 'Activity of alpha emitters per unit dry weight of suspended particulate material by filtration and alpha spectroscopy'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::ACTVM007'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/ACTVM008/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/ACTVM008/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/ACTVM008/>;
+    dc:modified '2006-07-05T09:05:02'^^xsd:dateTime ;
+    skos:altLabel 'ACTVM008'^^xsd:string ;
+    skos:prefLabel 'Activity of beta emitters per unit dry weight of suspended particulate material by filtration and beta spectroscopy'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::ACTVM008'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SDGSISXX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SDGSISXX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SDGSISXX/>;
+    dc:modified '2006-07-05T09:05:02'^^xsd:dateTime ;
+    skos:altLabel 'StdDevGrSize'^^xsd:string ;
+    skos:prefLabel 'Grain-size arithmetic standard deviation in suspended particulate material by in-situ particle sizer'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::SDGSISXX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/ZNTHSS01/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/ZNTHSS01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/ZNTHSS01/>;
+    dc:modified '2006-07-03T10:09:03'^^xsd:dateTime ;
+    skos:altLabel 'ISTilt'^^xsd:string ;
+    skos:prefLabel 'Orientation (tilt) of measurement platform by inclinometer'^^xsd:string ;
+    skos:definition 'The angle between true vertical and the vertical axis of the framework to which one or more sensors are attached'^^xsd:string ;
+    skos:notation 'SDN:P01::ZNTHSS01'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/DEPHPRMN/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/DEPHPRMN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/DEPHPRMN/>;
+    dc:modified '2006-06-29T11:42:14'^^xsd:dateTime ;
+    skos:altLabel 'Mean_depth'^^xsd:string ;
+    skos:prefLabel 'Mean depth below sea surface (during sampling event) by profiling pressure sensor and conversion to depth using unspecified algorithm'^^xsd:string ;
+    skos:definition 'Measurement determined from an in-situ pressure sensor data averaged over a sampling event'^^xsd:string ;
+    skos:notation 'SDN:P01::DEPHPRMN'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/TRISMBBS/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/TRISMBBS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/TRISMBBS/>;
+    dc:modified '2006-05-25T14:46:35'^^xsd:dateTime ;
+    skos:altLabel 'SedTotRedInorgS'^^xsd:string ;
+    skos:prefLabel 'Concentration of sulphur (total reduced inorganic) per unit dry weight of sediment by methylene blue colorimetric analysis'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::TRISMBBS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/NTRZAADC/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/NTRZAADC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/NTRZAADC/>;
+    dc:modified '2006-05-05T16:34:58'^^xsd:dateTime ;
+    skos:altLabel 'DissNO3+NO2_centrifuge'^^xsd:string ;
+    skos:prefLabel 'Concentration of nitrate+nitrite {NO3+NO2} per unit volume of the sediment pore water [dissolved plus reactive particulate phase] by centrifugal extraction and colorimetric autoanalysis'^^xsd:string ;
+    skos:definition 'Colorometric autoanalysis of water sample separated from the solid phase by centrifugation.'^^xsd:string ;
+    skos:notation 'SDN:P01::NTRZAADC'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/NTRZPWD1/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/NTRZPWD1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/NTRZPWD1/>;
+    dc:modified '2006-05-05T16:34:58'^^xsd:dateTime ;
+    skos:altLabel 'NO3+NO2_SedPW'^^xsd:string ;
+    skos:prefLabel 'Concentration of nitrate+nitrite {NO3+NO2} per unit volume of the sediment pore water [dissolved plus reactive particulate <GF/F phase] by extraction, filtration and colorimetric autoanalysis'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::NTRZPWD1'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/ILLMXDXT/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/ILLMXDXT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/ILLMXDXT/>;
+    dc:modified '2006-04-26T15:38:23'^^xsd:dateTime ;
+    skos:altLabel 'BSIlliteML'^^xsd:string ;
+    skos:prefLabel 'Concentration of illite mixed layer (10-14V) per unit dry weight of sediment by X-ray diffraction'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::ILLMXDXT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/ALONLO01/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/ALONLO01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/ALONLO01/>;
+    dc:modified '2006-04-26T15:38:23'^^xsd:dateTime ;
+    skos:altLabel 'LORAN'^^xsd:string ;
+    skos:prefLabel 'Longitude east by LORAN navigation'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::ALONLO01'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/THRTAPXT/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/THRTAPXT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/THRTAPXT/>;
+    dc:modified '2006-04-24T17:18:30'^^xsd:dateTime ;
+    skos:altLabel 'BSTh230/Th232'^^xsd:string ;
+    skos:prefLabel 'Activity ratio of thorium-230/thorium-232 {230Th/232Th} in the sediment by digestion, purification, plating and alpha spectroscopy'^^xsd:string ;
+    skos:definition 'Alpha spectroscopy on plated purified digestion'^^xsd:string ;
+    skos:notation 'SDN:P01::THRTAPXT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/URATAPXT/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/URATAPXT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/URATAPXT/>;
+    dc:modified '2006-04-24T17:18:30'^^xsd:dateTime ;
+    skos:altLabel 'BSU234/U238'^^xsd:string ;
+    skos:prefLabel 'Activity ratio of uranium-234/uranium-238 {234U/238U} in the sediment by digestion, purification, plating and alpha spectroscopy'^^xsd:string ;
+    skos:definition 'Alpha spectroscopy on plated purified digestion'^^xsd:string ;
+    skos:notation 'SDN:P01::URATAPXT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BESTCRXX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BESTCRXX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BESTCRXX/>;
+    dc:modified '2006-04-24T17:18:30'^^xsd:dateTime ;
+    skos:altLabel 'CritBottErosStrss'^^xsd:string ;
+    skos:prefLabel 'Critical erosion stress of the bed by visual observation in a flume'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::BESTCRXX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BSHVCRXX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BSHVCRXX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BSHVCRXX/>;
+    dc:modified '2006-04-24T17:18:30'^^xsd:dateTime ;
+    skos:altLabel 'CritBottShearVel'^^xsd:string ;
+    skos:prefLabel 'Critical shear current velocity of the bed by visual observation in a flume'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::BSHVCRXX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/XMGSXPBT/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/XMGSXPBT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/XMGSXPBT/>;
+    dc:modified '2006-04-06T16:17:36'^^xsd:dateTime ;
+    skos:altLabel 'BulkMagSus'^^xsd:string ;
+    skos:prefLabel 'Magnetic susceptibility of wet sediment by magnetic susceptibility meter'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::XMGSXPBT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/XMGSWSCT/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/XMGSWSCT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/XMGSWSCT/>;
+    dc:modified '2006-04-06T16:17:36'^^xsd:dateTime ;
+    skos:altLabel 'CrseMagSus'^^xsd:string ;
+    skos:prefLabel 'Magnetic susceptibility of wet sediment 63-1000um by wet sieving and magnetic susceptibility meter'^^xsd:string ;
+    skos:definition 'Wet sieving then magnetic susceptibility detector'^^xsd:string ;
+    skos:notation 'SDN:P01::XMGSWSCT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/XMGSWSFT/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/XMGSWSFT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/XMGSWSFT/>;
+    dc:modified '2006-04-06T16:17:36'^^xsd:dateTime ;
+    skos:altLabel 'FineMagSus'^^xsd:string ;
+    skos:prefLabel 'Magnetic susceptibility of wet sediment <63um by wet sieving and magnetic susceptibility meter'^^xsd:string ;
+    skos:definition 'Wet sieving then magnetic susceptibility detector'^^xsd:string ;
+    skos:notation 'SDN:P01::XMGSWSFT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/CHLOXDXT/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/CHLOXDXT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/CHLOXDXT/>;
+    dc:modified '2006-04-06T15:43:26'^^xsd:dateTime ;
+    skos:altLabel 'BSChlorite'^^xsd:string ;
+    skos:prefLabel 'Concentration of chlorite per unit dry weight of sediment by X-ray diffraction'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::CHLOXDXT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/CLAYXDXT/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/CLAYXDXT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/CLAYXDXT/>;
+    dc:modified '2006-04-06T15:43:26'^^xsd:dateTime ;
+    skos:altLabel 'BSClays'^^xsd:string ;
+    skos:prefLabel 'Concentration of clay minerals per unit dry weight of sediment by X-ray diffraction'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::CLAYXDXT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/FELDXDXT/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/FELDXDXT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/FELDXDXT/>;
+    dc:modified '2006-04-06T15:43:26'^^xsd:dateTime ;
+    skos:altLabel 'BSFeldspar'^^xsd:string ;
+    skos:prefLabel 'Concentration of feldspar per unit dry weight of sediment by X-ray diffraction'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::FELDXDXT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/KAOLXDXT/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/KAOLXDXT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/KAOLXDXT/>;
+    dc:modified '2006-04-06T15:43:26'^^xsd:dateTime ;
+    skos:altLabel 'BSKaolinite'^^xsd:string ;
+    skos:prefLabel 'Concentration of kaolinite per unit dry weight of sediment by X-ray diffraction'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::KAOLXDXT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/ORTHXDXT/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/ORTHXDXT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/ORTHXDXT/>;
+    dc:modified '2006-04-06T15:43:26'^^xsd:dateTime ;
+    skos:altLabel 'BSOrthoclase'^^xsd:string ;
+    skos:prefLabel 'Concentration of orthoclase feldspar per unit dry weight of sediment by X-ray diffraction'^^xsd:string ;
+    skos:definition 'Unavailable'^^xsd:string ;
+    skos:notation 'SDN:P01::ORTHXDXT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/DENSWWTX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/DENSWWTX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/DENSWWTX/>;
+    dc:modified '2006-04-06T15:34:00'^^xsd:dateTime ;
+    skos:altLabel 'BulkSedDens'^^xsd:string ;
+    skos:prefLabel 'Density (wet bulk) of sediment by gravimetry'^^xsd:string ;
+    skos:definition 'Sediment wet weight divided by sample volume'^^xsd:string ;
+    skos:notation 'SDN:P01::DENSWWTX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SAGESCCX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SAGESCCX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SAGESCCX/>;
+    dc:modified '2006-04-06T15:34:00'^^xsd:dateTime ;
+    skos:altLabel 'Crse14CAge'^^xsd:string ;
+    skos:prefLabel '14C age of sediment >5um by acid liberation, purification and trapping CO2 and scintillation counting'^^xsd:string ;
+    skos:definition 'Scintillation counting on purified and trapped acid liberated CO2'^^xsd:string ;
+    skos:notation 'SDN:P01::SAGESCCX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/DBDXCMXX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/DBDXCMXX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/DBDXCMXX/>;
+    dc:modified '2006-04-06T15:34:00'^^xsd:dateTime ;
+    skos:altLabel 'DryBulkDens'^^xsd:string ;
+    skos:prefLabel 'Density (dry bulk) of sediment by volume measurement, drying and gravimetry and salt correction'^^xsd:string ;
+    skos:definition 'Salt-corrected particle mass and measured volume'^^xsd:string ;
+    skos:notation 'SDN:P01::DBDXCMXX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/DBDXCSXX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/DBDXCSXX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/DBDXCSXX/>;
+    dc:modified '2006-04-06T15:34:00'^^xsd:dateTime ;
+    skos:altLabel 'DryBulkDens'^^xsd:string ;
+    skos:prefLabel 'Density (dry bulk) of sediment by drying and gravimetry and volume computation from weight loss on drying and salt correction'^^xsd:string ;
+    skos:definition 'Salt-corrected particle mass and volume computed from mass'^^xsd:string ;
+    skos:notation 'SDN:P01::DBDXCSXX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/DBDXZZXX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/DBDXZZXX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/DBDXZZXX/>;
+    dc:modified '2006-04-06T15:34:00'^^xsd:dateTime ;
+    skos:altLabel 'DryBulkDens'^^xsd:string ;
+    skos:prefLabel 'Density (dry bulk) of sediment by drying and gravimetry'^^xsd:string ;
+    skos:definition 'Particle mass and volume of unknown derivation. Not known whether salt corrected'^^xsd:string ;
+    skos:notation 'SDN:P01::DBDXZZXX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SAGESCFX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SAGESCFX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SAGESCFX/>;
+    dc:modified '2006-04-06T15:34:00'^^xsd:dateTime ;
+    skos:altLabel 'Fine14CAge'^^xsd:string ;
+    skos:prefLabel '14C age of sediment <5um by acid liberation, purification and trapping CO2 and scintillation counting'^^xsd:string ;
+    skos:definition 'Scintillation counting on purified and trapped acid liberated CO2'^^xsd:string ;
+    skos:notation 'SDN:P01::SAGESCFX'^^xsd:string .
+

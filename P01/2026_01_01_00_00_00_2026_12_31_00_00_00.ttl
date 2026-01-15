@@ -1,0 +1,129 @@
+
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2026_01_01_00_00_00_2026_12_31_00_00_00.ttl> .
+
+<>
+    a tree:Node ;
+    
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2025_01_01_00_00_00_2025_12_31_00_00_00.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-01-15T13:40:36+00:00'^^xsd:dateTime
+    ] ;
+    
+    ldes:retentionPolicy [
+        a ldes:RetentionPolicy ;
+        ldes:versionAmount 100
+    ] .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  ldes:immutable 'false'^^xsd:boolean ;
+  ldes:pollingInterval '3600'^^xsd:integer ;
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/X726A8SD/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/X726A8SD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/X726A8SD/>;
+    dc:modified '2026-01-09T16:27:00'^^xsd:dateTime ;
+    skos:altLabel 'Abund_BE006318_SD'^^xsd:string ;
+    skos:prefLabel 'Abundance standard deviation of nanoeukaryotic cells [Size: 2-12um] per unit volume of the water body by flow cytometry'^^xsd:string ;
+    skos:definition 'The square root of the average of the squares of deviations about the mean of a set of values of the specified measurement.'^^xsd:string ;
+    skos:notation 'SDN:P01::X726A8SD'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/P200A0SD/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/P200A0SD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/P200A0SD/>;
+    dc:modified '2026-01-09T16:27:00'^^xsd:dateTime ;
+    skos:altLabel 'P200A00Z_SD'^^xsd:string ;
+    skos:prefLabel 'Abundance standard deviation of Dinoflagellates (ITIS: 9873: WoRMS 19542) per unit volume of the water body by flow cytometry'^^xsd:string ;
+    skos:definition 'The square root of the average of the squares of deviations about the mean of a set of values of the specified measurement.'^^xsd:string ;
+    skos:notation 'SDN:P01::P200A0SD'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/MAJO0042/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/MAJO0042/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/MAJO0042/>;
+    dc:modified '2026-01-07T13:52:43'^^xsd:dateTime ;
+    skos:altLabel 'H2O(-)_sed'^^xsd:string ;
+    skos:prefLabel 'Proportion of chemically uncombined water {H2O(-)} per unit weight of sediment'^^xsd:string ;
+    skos:definition 'The weight percentage of a sediment sample of an unspecified size range lost by drying at 110C or below, after sieving.'^^xsd:string ;
+    skos:notation 'SDN:P01::MAJO0042'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/MAJO0041/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/MAJO0041/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/MAJO0041/>;
+    dc:modified '2026-01-07T13:52:43'^^xsd:dateTime ;
+    skos:altLabel 'H2O(-)_sed<2000um'^^xsd:string ;
+    skos:prefLabel 'Proportion of chemically uncombined water {H2O(-)} per unit weight of sediment <2000um'^^xsd:string ;
+    skos:definition 'The weight percentage of a sediment sample in the specified size range lost by drying at 110C or below, after sieving.'^^xsd:string ;
+    skos:notation 'SDN:P01::MAJO0041'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/MAJO0040/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/MAJO0040/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/MAJO0040/>;
+    dc:modified '2026-01-07T13:52:43'^^xsd:dateTime ;
+    skos:altLabel 'H2O(-)_sed<63um'^^xsd:string ;
+    skos:prefLabel 'Proportion of chemically uncombined water {H2O(-)} per unit weight of sediment <63um'^^xsd:string ;
+    skos:definition 'The weight percentage of a sediment sample in the specified size range lost by drying at 110C or below, after sieving.'^^xsd:string ;
+    skos:notation 'SDN:P01::MAJO0040'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/PRSDT014/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/PRSDT014/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/PRSDT014/>;
+    dc:modified '2026-01-07T12:36:37'^^xsd:dateTime ;
+    skos:altLabel 'PrSedByWt_BulkSed'^^xsd:string ;
+    skos:prefLabel 'Proportion by dry weight of particles in the sediment'^^xsd:string ;
+    skos:definition 'The dry mass of particles of an unspecified size range over the total dry mass of an unsieved sediment sample.'^^xsd:string ;
+    skos:notation 'SDN:P01::PRSDT014'^^xsd:string .
+
