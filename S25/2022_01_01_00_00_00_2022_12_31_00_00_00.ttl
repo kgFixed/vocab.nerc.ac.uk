@@ -1,0 +1,499 @@
+
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S25/2022_01_01_00_00_00_2022_12_31_00_00_00.ttl> .
+
+<>
+    a tree:Node ;
+    
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S25/2021_01_01_00_00_00_2021_12_31_00_00_00.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2022-12-31T00:00:00+00:00'^^xsd:dateTime
+    ] ;
+    
+    ldes:retentionPolicy [
+        a ldes:RetentionPolicy ;
+        ldes:versionAmount 100
+    ] .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  ldes:immutable 'false'^^xsd:boolean ;
+  ldes:pollingInterval '3600'^^xsd:integer ;
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009784/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009784/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009784/>;
+    dc:modified '2022-12-12T15:03:58'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Clupea harengus membras (ITIS: 161726: WoRMS 234068) [Subcomponent: liver]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009784'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009785/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009785/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009785/>;
+    dc:modified '2022-12-12T15:03:58'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Clupea harengus membras (ITIS: 161726: WoRMS 234068) [Subcomponent: muscle tissue]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009785'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE001911/3/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE001911/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE001911/>;
+    dc:modified '2022-10-27T11:34:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Discosphaera tubifer (ITIS: 2256: WoRMS 615464) - !!Deprecated!!'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE001911'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009781/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009781/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009781/>;
+    dc:modified '2022-10-18T11:38:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Clupea harengus (ITIS: 161722: WoRMS 126417) [Sex: female Subcomponent: muscle tissue]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009781'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009782/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009782/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009782/>;
+    dc:modified '2022-10-18T11:38:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Clupea harengus (ITIS: 161722: WoRMS 126417) [Sex: female Subcomponent: bile]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009782'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009783/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009783/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009783/>;
+    dc:modified '2022-10-18T11:38:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Platichthys flesus (ITIS: 172894: WoRMS 127141) [Sex: female Subcomponent: bile]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009783'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009761/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009761/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009761/>;
+    dc:modified '2022-07-18T07:20:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'biological entity specified elsewhere [Subcomponent: culmen]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009761'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009741/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009741/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009741/>;
+    dc:modified '2022-07-13T15:10:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'metazoan zooplankton'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009741'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009742/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009742/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009742/>;
+    dc:modified '2022-07-13T15:10:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'protozoan zooplankton'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009742'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009721/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009721/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009721/>;
+    dc:modified '2022-06-06T18:14:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Thunnus alalonga (WoRMS 127026) [Subcomponent: muscle tissue]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009721'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009722/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009722/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009722/>;
+    dc:modified '2022-06-06T18:14:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Phycis phycis (WoRMS 126502) [Subcomponent: muscle tissue]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009722'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009723/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009723/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009723/>;
+    dc:modified '2022-06-06T18:14:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Capros aper (WoRMS 127419) [Subcomponent: muscle tissue]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009723'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009724/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009724/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009724/>;
+    dc:modified '2022-06-06T18:14:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Dreissena (WoRMS 181565) [Subcomponent: flesh]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009724'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009725/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009725/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009725/>;
+    dc:modified '2022-06-06T18:14:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Maja squinado (WoRMS 107350) [Subcomponent: white muscle tissue]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009725'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009726/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009726/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009726/>;
+    dc:modified '2022-06-06T18:14:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Trisopterus luscus (WoRMS 126445) [Subcomponent: muscle tissue]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009726'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009727/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009727/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009727/>;
+    dc:modified '2022-06-06T18:14:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Cancer pagurus (WoRMS 107276) [Subcomponent: white muscle tissue]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009727'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009728/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009728/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009728/>;
+    dc:modified '2022-06-06T18:14:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Trachurus trachurus (WoRMS 126822) [Subcomponent: muscle tissue]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009728'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009729/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009729/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009729/>;
+    dc:modified '2022-06-06T18:14:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Helicolenus dactylopterus (WoRMS 127251) [Subcomponent: muscle tissue]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009729'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009730/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009730/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009730/>;
+    dc:modified '2022-06-06T18:14:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Maja squinado (WoRMS 107350) [Subcomponent: brown meat]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009730'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009731/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009731/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009731/>;
+    dc:modified '2022-06-06T18:14:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Micromesistius poutassou (WoRMS 126439) [Subcomponent: flesh]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009731'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009732/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009732/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009732/>;
+    dc:modified '2022-06-06T18:14:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Scophthalmus aquosus (WoRMS 158907) [Subcomponent: muscle tissue]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009732'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009733/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009733/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009733/>;
+    dc:modified '2022-06-06T18:14:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Abramis brama (WoRMS 154281) [Subcomponent: muscle tissue]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009733'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009690/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009690/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009690/>;
+    dc:modified '2022-05-23T12:33:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'zooxanthellae [Subgroup: in coral tissue]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009690'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009689/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009689/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009689/>;
+    dc:modified '2022-05-19T18:22:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'zooxanthellae'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009689'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009685/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009685/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009685/>;
+    dc:modified '2022-05-17T16:09:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'phytoplankton [Size: small Subcomponent: intracellular reserve pool]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009685'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009686/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009686/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009686/>;
+    dc:modified '2022-05-17T16:09:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'phytoplankton [Size: large Subcomponent: intracellular reserve pool]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009686'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009687/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009687/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009687/>;
+    dc:modified '2022-05-17T16:09:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Trichodesmium (ITIS: 918: WoRMS 177604) [Subcomponent: intracellular reserve pool]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009687'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009688/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009688/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009688/>;
+    dc:modified '2022-05-17T16:09:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'benthic microalgae [Subcomponent: intracellular reserve pool]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009688'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009681/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009681/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009681/>;
+    dc:modified '2022-05-17T09:48:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'phytoplankton [Size: small Subcomponent: structural cellular components]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009681'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009682/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009682/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009682/>;
+    dc:modified '2022-05-17T09:48:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'phytoplankton [Size: large Subcomponent: structural cellular components]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009682'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009683/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009683/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009683/>;
+    dc:modified '2022-05-17T09:48:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Trichodesmium (ITIS: 918: WoRMS 177604) [Subcomponent: structural cellular components]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009683'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009684/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009684/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009684/>;
+    dc:modified '2022-05-17T09:48:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'benthic microalgae [Subcomponent: structural cellular components]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009684'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009661/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009661/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009661/>;
+    dc:modified '2022-05-13T11:20:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Halophila ovalis (ITIS: 38959: WoRMS 208930) [Subcomponent: roots+rhizomes]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009661'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009662/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009662/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009662/>;
+    dc:modified '2022-05-13T11:20:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Zostera (ITIS: 39073: WoRMS 144233) [Subcomponent: roots+rhizomes]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009662'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009663/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009663/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009663/>;
+    dc:modified '2022-05-13T11:20:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Halophila decipiens (ITIS: 38961: WoRMS 145713) [Subcomponent: roots+rhizomes]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009663'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009642/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009642/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009642/>;
+    dc:modified '2022-05-03T11:58:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'biological entity specified elsewhere [Subcomponent: starfish arm]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009642'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009641/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009641/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009641/>;
+    dc:modified '2022-05-03T11:27:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'biological entity specified elsewhere [Subcomponent: shell]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009641'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009621/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009621/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009621/>;
+    dc:modified '2022-04-08T14:00:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Halophila ovalis (ITIS: 38959: WoRMS 208930)'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009621'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009622/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009622/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009622/>;
+    dc:modified '2022-04-08T14:00:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Zostera (ITIS: 39073: WoRMS 144233)'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009622'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009623/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009623/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009623/>;
+    dc:modified '2022-04-08T14:00:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'coral [Subcomponent: host tissue]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009623'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009624/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009624/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009624/>;
+    dc:modified '2022-04-08T14:00:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'macroalgae'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009624'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009625/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009625/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009625/>;
+    dc:modified '2022-04-08T14:00:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Halophila decipiens (ITIS: 38961: WoRMS 145713)'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009625'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009603/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009603/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009603/>;
+    dc:modified '2022-03-01T10:41:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'macrofauna [Size: >1000um]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009603'^^xsd:string .
+

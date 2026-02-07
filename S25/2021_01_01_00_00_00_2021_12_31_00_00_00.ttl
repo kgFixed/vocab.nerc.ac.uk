@@ -1,0 +1,1289 @@
+
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S25/2021_01_01_00_00_00_2021_12_31_00_00_00.ttl> .
+
+<>
+    a tree:Node ;
+    
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S25/2020_01_01_00_00_00_2020_12_31_00_00_00.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2021-12-31T00:00:00+00:00'^^xsd:dateTime
+    ] ;
+    
+    ldes:retentionPolicy [
+        a ldes:RetentionPolicy ;
+        ldes:versionAmount 100
+    ] .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  ldes:immutable 'false'^^xsd:boolean ;
+  ldes:pollingInterval '3600'^^xsd:integer ;
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009602/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009602/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009602/>;
+    dc:modified '2021-11-30T12:10:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Discosphaera tubifera (WoRMS 573399)'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009602'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009601/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009601/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009601/>;
+    dc:modified '2021-11-30T12:10:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ophiaster reductus (WoRMS 619039)'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009601'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009581/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009581/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009581/>;
+    dc:modified '2021-10-19T10:58:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bacillariophyceae (ITIS: 2287: WoRMS 148899) [Stage: cyst]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009581'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009561/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009561/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009561/>;
+    dc:modified '2021-09-24T09:24:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Anisakis (ITIS: 63864: WoRMS 22832)'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009561'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009541/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009541/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009541/>;
+    dc:modified '2021-08-25T08:42:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'biological entity specified elsewhere [Subcomponent: central disc]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009541'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009521/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009521/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009521/>;
+    dc:modified '2021-08-09T10:31:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Salmo salar (ITIS: 161996: WoRMS 127186) [Stage: adult]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009521'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009522/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009522/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009522/>;
+    dc:modified '2021-08-09T10:31:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Salmo trutta (ITIS: 161997: WoRMS 127187) [Stage: adult]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009522'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009501/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009501/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009501/>;
+    dc:modified '2021-07-07T16:35:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'biological entity specified elsewhere [Subcomponent: mantle]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009501'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009502/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009502/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009502/>;
+    dc:modified '2021-07-07T16:35:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'biological entity specified elsewhere [Subcomponent: bell]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009502'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009503/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009503/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009503/>;
+    dc:modified '2021-07-07T16:35:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'biological entity specified elsewhere [Subcomponent: shoot]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009503'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009504/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009504/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009504/>;
+    dc:modified '2021-07-07T16:35:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'biological entity specified elsewhere [Subcomponent: carapace]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009504'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009505/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009505/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009505/>;
+    dc:modified '2021-07-07T16:35:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'biological entity specified elsewhere [Subcomponent: bill]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009505'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009506/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009506/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009506/>;
+    dc:modified '2021-07-07T16:35:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'biological entity specified elsewhere [Subcomponent: clasper]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009506'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009507/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009507/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009507/>;
+    dc:modified '2021-07-07T16:35:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'biological entity specified elsewhere [Subcomponent: lower rostrum]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009507'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009508/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009508/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009508/>;
+    dc:modified '2021-07-07T16:35:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'biological entity specified elsewhere [Subcomponent: upper rostrum]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009508'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009509/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009509/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009509/>;
+    dc:modified '2021-07-07T16:35:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'biological entity specified elsewhere [Subcomponent: head]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009509'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009510/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009510/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009510/>;
+    dc:modified '2021-07-07T16:35:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'biological entity specified elsewhere [Subcomponent: prosome]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009510'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009511/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009511/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009511/>;
+    dc:modified '2021-07-07T16:35:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'biological entity specified elsewhere [Subcomponent: metasome]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009511'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009512/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009512/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009512/>;
+    dc:modified '2021-07-07T16:35:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'biological entity specified elsewhere [Subcomponent: tarsus]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009512'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009513/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009513/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009513/>;
+    dc:modified '2021-07-07T16:35:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'biological entity specified elsewhere [Subcomponent: wings]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009513'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE005896/2/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE005896/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE005896/>;
+    dc:modified '2021-04-27T11:26:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'aloricate ciliates [Size: medium]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE005896'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE005897/2/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE005897/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE005897/>;
+    dc:modified '2021-04-27T11:26:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'aloricate ciliates'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE005897'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE005898/2/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE005898/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE005898/>;
+    dc:modified '2021-04-27T11:26:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'aloricate ciliates [Size: small]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE005898'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009481/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009481/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009481/>;
+    dc:modified '2021-03-13T19:04:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Salmo salar (ITIS: 161996: WoRMS 127186) [Stage: smolt]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009481'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009482/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009482/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009482/>;
+    dc:modified '2021-03-13T19:04:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Salmo trutta (ITIS: 161997: WoRMS 127187) [Stage: smolt]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009482'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009364/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009364/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009364/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Arctapodema antarctica (WoRMS 174734)'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009364'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009365/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009365/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009365/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Arctapodema (WoRMS 117214)'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009365'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009367/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009367/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009367/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Racovitzanus antarcticus (WoRMS 104784) [Stage: copepodite C5]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009367'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009368/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009368/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009368/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Halistemma rubrum (WoRMS 135490) [Subcomponent: bracts]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009368'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009369/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009369/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009369/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Eucalanidae (WoRMS 104085)'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009369'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009370/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009370/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009370/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Heterorhabdus robustus (WoRMS 104581) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009370'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009371/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009371/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009371/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Rhincalanus (ITIS: 85316: WoRMS 104172) [Stage: copepodite C4]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009371'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009372/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009372/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009372/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Clausocalanidae (ITIS: 610015: WoRMS 104082) [Stage: copepodite C4]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009372'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009373/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009373/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009373/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Euchaetidae (WoRMS 104086) [Stage: nauplius]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009373'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009374/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009374/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009374/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Euphausia superba (ITIS: 95514: WoRMS 236217) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009374'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009375/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009375/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009375/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Haloptilus ocelatus (WoRMS 342624) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009375'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009376/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009376/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009376/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Aetideopsis (ITIS: 85414: WoRMS 104111) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009376'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009377/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009377/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009377/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Thysanoessa macrura (WoRMS 236219) [Stage: adult Sex: male]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009377'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009378/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009378/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009378/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Andaniotes (WoRMS 101751)'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009378'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009379/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009379/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009379/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Beroe cucumis (WoRMS 106358)'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009379'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009380/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009380/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009380/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mertensia (WoRMS 106341)'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009380'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009381/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009381/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009381/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ctenocalanus (ITIS: 85362: WoRMS 104162) [Stage: copepodite C4]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009381'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009382/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009382/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009382/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Euchirella (ITIS: 85451: WoRMS 104120) [Stage: copepodite C3]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009382'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009383/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009383/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009383/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Racovitzanus antarcticus (WoRMS 104784) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009383'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009384/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009384/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009384/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Scaphocalanus elongatus (WoRMS 104794) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009384'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009385/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009385/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009385/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Triconia (WoRMS 128691) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009385'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009386/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009386/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009386/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Metridia curticauda (ITIS: 85738: WoRMS 104628) [Stage: copepodite C5]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009386'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009387/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009387/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009387/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Cavolinioidea (WoRMS 411903)'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009387'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009388/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009388/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009388/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Euchirella (ITIS: 85451: WoRMS 104120) [Stage: copepodite C2]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009388'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009390/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009390/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009390/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Balanidae (ITIS: 89599: WoRMS 106057) [Stage: cypris]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009390'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009391/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009391/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009391/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Euphausia superba (ITIS: 95514: WoRMS 236217) [Stage: adult Sex: male]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009391'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009392/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009392/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009392/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Euphausiacea (ITIS: 95496: WoRMS 1128) [Stage: adult Sex: male]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009392'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009393/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009393/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009393/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Fish (WoRMS 11676) [Stage: juvenile]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009393'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009394/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009394/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009394/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ctenocalanus (ITIS: 85362: WoRMS 104162) [Stage: copepodite C5]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009394'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009395/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009395/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009395/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Euphausia triacantha (ITIS: 95518: WoRMS 236220) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009395'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009396/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009396/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009396/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Thaliacea (WoRMS 22626) [Stage: nauplius]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009396'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009397/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009397/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009397/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Candacia (ITIS: 86020: WoRMS 104157) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009397'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009398/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009398/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009398/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Candacia maxima (WoRMS 342438) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009398'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009399/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009399/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009399/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Spinocalanus abyssalis (ITIS: 85392: WoRMS 104846) [Stage: adult Sex: male]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009399'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009400/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009400/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009400/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ctenocalanus (ITIS: 85362: WoRMS 104162) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009400'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009401/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009401/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009401/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Euphausia frigida (ITIS: 95517: WoRMS 236218) [Stage: juvenile]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009401'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009402/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009402/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009402/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Echinodermata (ITIS: 156857: WoRMS 1806) [Stage: nauplius]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009402'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009403/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009403/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009403/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Triconia (WoRMS 128691) [Stage: adult Sex: male]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009403'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009404/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009404/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009404/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Calycopsis (WoRMS 117028)'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009404'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009405/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009405/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009405/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Aetideus australis (ITIS: 779915: WoRMS 341238) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009405'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009406/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009406/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009406/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Clausocalanidae (ITIS: 610015: WoRMS 104082) [Stage: copepodite C5]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009406'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009407/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009407/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009407/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Euchirella (ITIS: 85451: WoRMS 104120) [Stage: copepodite C4]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009407'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009409/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009409/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009409/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Oplophorus spinosu (WoRMS 107602)'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009409'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009410/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009410/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009410/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Clausocalanidae (ITIS: 610015: WoRMS 104082) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009410'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009411/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009411/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009411/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Pleuromamma antarctica (WoRMS 345241) [Stage: adult Sex: male]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009411'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009412/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009412/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009412/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Racovitzanus antarcticus (WoRMS 104784) [Stage: copepodite C4]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009412'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009413/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009413/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009413/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Euchaetidae (WoRMS 104086) [Stage: copepodite C1]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009413'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009414/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009414/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009414/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Caridea (ITIS: 96106: WoRMS 106674) [Stage: larva]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009414'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009415/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009415/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009415/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ctenocalanus (ITIS: 85362: WoRMS 104162) [Stage: adult Sex: male]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009415'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009416/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009416/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009416/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Euphausiacea (ITIS: 95496: WoRMS 1128) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009416'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009417/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009417/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009417/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Haloptilus ocellatus (WoRMS 342624) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009417'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009418/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009418/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009418/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Lubbockia (ITIS: 88535: WoRMS 128672) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009418'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009419/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009419/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009419/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Thysanoessa macrura (WoRMS 236219) [Stage: juvenile]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009419'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009420/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009420/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009420/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Thysanoessa (ITIS: 95571: WoRMS 110679) [Stage: adult Sex: male]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009420'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009421/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009421/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009421/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Thysanoessa (ITIS: 95571: WoRMS 110679) [Stage: juvenile]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009421'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009422/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009422/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009422/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Triconia (WoRMS 128691) [Stage: copepodite C5]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009422'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009423/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009423/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009423/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Euchaetidae (WoRMS 104086) [Stage: copepodite C3]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009423'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009424/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009424/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009424/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Heterorhabdus austrinus (WoRMS 343728) [Stage: adult Sex: male]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009424'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009426/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009426/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009426/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Euphausia (ITIS: 95501: WoRMS 110673) [Stage: adult Sex: male]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009426'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009427/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009427/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009427/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Rhincalanus (ITIS: 85316: WoRMS 104172) [Stage: copepodite C3]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009427'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009428/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009428/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009428/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Clausocalanus laticeps (ITIS: 610035: WoRMS 342444) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009428'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009429/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009429/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009429/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Euphausia frigida (ITIS: 95517: WoRMS 236218) [Stage: adult Sex: male]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009429'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009430/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009430/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009430/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Peracle (WoRMS 138327)'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009430'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009431/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009431/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009431/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Euphausia frigida (ITIS: 95517: WoRMS 236218) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009431'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009432/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009432/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009432/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Euphausia triacantha (ITIS: 95518: WoRMS 236220) [Stage: juvenile]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009432'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009433/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009433/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009433/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Pleuromamma antarctica (WoRMS 345241) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009433'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009434/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009434/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009434/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Euchaetidae (WoRMS 104086) [Stage: copepodite C4]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009434'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009435/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009435/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009435/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Vanadis longissima (WoRMS 129766)'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009435'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009436/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009436/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009436/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Rhincalanus (ITIS: 85316: WoRMS 104172) [Stage: copepodite C2]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009436'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009437/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009437/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009437/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Acanthephyra pelagica (WoRMS 107581)'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009437'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009438/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009438/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009438/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Heterorhabdus austrinus (WoRMS 343728) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009438'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009439/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009439/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009439/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Botrynema brucei (WoRMS 117615)'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009439'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009440/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009440/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009440/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Haloptilus oxycephalus (ITIS: 85977: WoRMS 104434) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009440'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009443/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009443/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009443/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Halistemma rubrum (WoRMS 135490) [Subcomponent: nectophores]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009443'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009444/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009444/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009444/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Metridia gerlachei (ITIS: 85750: WoRMS 344689) [Stage: copepodite C5]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009444'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009445/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009445/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009445/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Eucalanidae (WoRMS 104085) [Stage: copepodite C2]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009445'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009446/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009446/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009446/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Metridia curticauda (ITIS: 85738: WoRMS 104628) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009446'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009447/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009447/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009447/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Pseudocalanidae (ITIS: 85351: WoRMS 149739)'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009447'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009448/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009448/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009448/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Pleuromamma (ITIS: 85751: WoRMS 104191) [Stage: copepodite C5]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009448'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009449/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009449/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009449/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Calanoida (ITIS: 85258: WoRMS 1100) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009449'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009450/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009450/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009450/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Euchaetidae (WoRMS 104086) [Stage: copepodite C5]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009450'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009451/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009451/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009451/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Eusirus antarcticus (WoRMS 237719)'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009451'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009452/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009452/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009452/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Euphausia triacantha (ITIS: 95518: WoRMS 236220) [Stage: adult Sex: male]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009452'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009453/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009453/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009453/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Heterorhabdidae (ITIS: 85907: WoRMS 104087) [Stage: nauplius]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009453'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009454/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009454/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009454/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Thysanoessa (ITIS: 95571: WoRMS 110679) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009454'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009455/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009455/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009455/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Nototheniops larseni (WoRMS 313400)'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009455'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009456/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009456/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009456/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Gaetanus (ITIS: 85467: WoRMS 104121) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009456'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009457/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009457/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009457/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Aetideus (ITIS: 85419: WoRMS 104112) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009457'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009458/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009458/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009458/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Eucalanidae (WoRMS 104085) [Stage: copepodite C1]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009458'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009459/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009459/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009459/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Eucalanidae (WoRMS 104085) [Stage: copepodite C3]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009459'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009460/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009460/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009460/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Euchaetidae (WoRMS 104086) [Stage: copepodite C2]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009460'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009461/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009461/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009461/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Euchirella tunicata (WoRMS 104304) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009461'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009462/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009462/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009462/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Subeucalanus (WoRMS 104173) [Stage: copepodite C3]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009462'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009463/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009463/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009463/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Triconia (WoRMS 128691) [Stage: nauplius]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009463'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009464/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009464/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009464/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ctenocalanus (ITIS: 85362: WoRMS 104162) [Stage: copepodite C3]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009464'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009465/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009465/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009465/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Euphausia (ITIS: 95501: WoRMS 110673) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009465'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S25/current/BE009466/1/> .
+<http://vocab.nerc.ac.uk/collection/S25/current/BE009466/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S25/current/BE009466/>;
+    dc:modified '2021-02-13T07:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Metridia (ITIS: 85734: WoRMS 104190) [Stage: adult Sex: female]'@en ;
+    skos:definition ''@en ;
+    skos:notation 'SDN:S25::BE009466'^^xsd:string .
+
