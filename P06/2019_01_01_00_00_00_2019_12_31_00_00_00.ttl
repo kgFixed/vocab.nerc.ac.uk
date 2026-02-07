@@ -1,0 +1,239 @@
+
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2019_01_01_00_00_00_2019_12_31_00_00_00.ttl> .
+
+<>
+    a tree:Node ;
+    
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2018_01_01_00_00_00_2018_12_31_00_00_00.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2019-12-31T00:00:00+00:00'^^xsd:dateTime
+    ] ;
+    
+    ldes:retentionPolicy [
+        a ldes:RetentionPolicy ;
+        ldes:versionAmount 100
+    ] .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  ldes:immutable 'false'^^xsd:boolean ;
+  ldes:pollingInterval '3600'^^xsd:integer ;
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MTON/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MTON/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MTON/>;
+    dc:modified '2019-07-23T10:49:45'^^xsd:dateTime ;
+    skos:altLabel 't'^^xsd:string ;
+    skos:prefLabel 'Tonnes'@en ;
+    skos:definition 'A non-SI unit of mass equivalent to 1000 SI unit of mass (kilogram).'@en ;
+    skos:notation 'SDN:P06::MTON'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/BQ11/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/BQ11/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/BQ11/>;
+    dc:modified '2019-05-30T18:56:49'^^xsd:dateTime ;
+    skos:altLabel 'Bq'^^xsd:string ;
+    skos:prefLabel 'Becquerels'@en ;
+    skos:definition 'The SI derived unit of radioactivity defined as one radioactive disintegration per second.'@en ;
+    skos:notation 'SDN:P06::BQ11'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/PASX/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/PASX/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/PASX/>;
+    dc:modified '2019-05-20T14:42:26'^^xsd:dateTime ;
+    skos:altLabel 'Pa'^^xsd:string ;
+    skos:prefLabel 'Pascals'@en ;
+    skos:definition 'The derived unit of pressure or stress in the international System of Units (SI). It is defined as one newton per square metre.'@en ;
+    skos:notation 'SDN:P06::PASX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/GCM2/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/GCM2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/GCM2/>;
+    dc:modified '2019-05-20T14:42:21'^^xsd:dateTime ;
+    skos:altLabel 'g/cm^2'^^xsd:string ;
+    skos:prefLabel 'Grams per square centimetre'@en ;
+    skos:definition 'A non-SI unit of pressure (sometimes referred to as gram-force per centimetre square) equivalent to 98.0665 Pascals.'@en ;
+    skos:notation 'SDN:P06::GCM2'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UXNM/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UXNM/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UXNM/>;
+    dc:modified '2019-05-20T14:07:44'^^xsd:dateTime ;
+    skos:altLabel 'nm'^^xsd:string ;
+    skos:prefLabel 'Nanometres'@en ;
+    skos:definition 'Unit of length which is one billionth (10^-9) of a metre.'@en ;
+    skos:notation 'SDN:P06::UXNM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UXMM/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UXMM/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UXMM/>;
+    dc:modified '2019-05-20T14:05:46'^^xsd:dateTime ;
+    skos:altLabel 'mm'^^xsd:string ;
+    skos:prefLabel 'Millimetres'@en ;
+    skos:definition 'Unit of length which is one thousandth of a metre.'@en ;
+    skos:notation 'SDN:P06::UXMM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/ULKM/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/ULKM/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/ULKM/>;
+    dc:modified '2019-05-20T14:04:43'^^xsd:dateTime ;
+    skos:altLabel 'km'^^xsd:string ;
+    skos:prefLabel 'Kilometres'@en ;
+    skos:definition 'Unit of length which is one thousand metres.'@en ;
+    skos:notation 'SDN:P06::ULKM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/ULAA/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/ULAA/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/ULAA/>;
+    dc:modified '2019-05-20T14:02:49'^^xsd:dateTime ;
+    skos:altLabel 'm'^^xsd:string ;
+    skos:prefLabel 'Metres'@en ;
+    skos:definition 'The base unit of length in the International System of Units.'@en ;
+    skos:notation 'SDN:P06::ULAA'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/ULDM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/ULDM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/ULDM/>;
+    dc:modified '2019-05-20T14:02:04'^^xsd:dateTime ;
+    skos:altLabel 'dm'^^xsd:string ;
+    skos:prefLabel 'Decimetres'@en ;
+    skos:definition 'Unit of length which is one tenth of a metre.'@en ;
+    skos:notation 'SDN:P06::ULDM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/KGAK/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/KGAK/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/KGAK/>;
+    dc:modified '2019-02-10T14:15:07'^^xsd:dateTime ;
+    skos:altLabel 'kg/km^2'^^xsd:string ;
+    skos:prefLabel 'Kilograms per square kilometre'@en ;
+    skos:definition 'One SI standard unit of mass over the square of one thousand standard unit of length.'@en ;
+    skos:notation 'SDN:P06::KGAK'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UESC/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UESC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UESC/>;
+    dc:modified '2019-02-05T07:53:09'^^xsd:dateTime ;
+    skos:altLabel 'uE/cm^2/s'^^xsd:string ;
+    skos:prefLabel 'MicroEinsteins per square centimetre per second'@en ;
+    skos:definition 'Energy of 10^-6 moles of photons per 10^-4 SI unit area over a period of one second.'@en ;
+    skos:notation 'SDN:P06::UESC'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/NBMG/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/NBMG/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/NBMG/>;
+    dc:modified '2019-01-20T17:58:23'^^xsd:dateTime ;
+    skos:altLabel '#/mg'^^xsd:string ;
+    skos:prefLabel 'Number per milligram'@en ;
+    skos:definition 'Count of an entity or phenomenon occurrence in one millionth of the SI unit of mass (kilogram).'@en ;
+    skos:notation 'SDN:P06::NBMG'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/NBHG/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/NBHG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/NBHG/>;
+    dc:modified '2019-01-20T17:56:11'^^xsd:dateTime ;
+    skos:altLabel '#/100g'^^xsd:string ;
+    skos:prefLabel 'Number per 100 grams'@en ;
+    skos:definition 'Count of an entity or phenomenon occurrence in one 10th of the SI unit of mass (kilogram).'@en ;
+    skos:notation 'SDN:P06::NBHG'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/BSM3/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/BSM3/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/BSM3/>;
+    dc:modified '2019-01-20T17:48:48'^^xsd:dateTime ;
+    skos:altLabel 'Bq.s/m^3'^^xsd:string ;
+    skos:prefLabel 'Becquerels second per cubic metre'@en ;
+    skos:definition 'TBC'@en ;
+    skos:notation 'SDN:P06::BSM3'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MAKG/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MAKG/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MAKG/>;
+    dc:modified '2019-01-20T17:47:01'^^xsd:dateTime ;
+    skos:altLabel '10^6at/kg'^^xsd:string ;
+    skos:prefLabel 'Million atoms per kilogram'@en ;
+    skos:definition 'Unit based on one million atoms in a SI standard unit of mass.'@en ;
+    skos:notation 'SDN:P06::MAKG'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MBQF/4/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MBQF/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MBQF/>;
+    dc:modified '2019-01-20T17:32:57'^^xsd:dateTime ;
+    skos:altLabel 'mBq/m^2/d'^^xsd:string ;
+    skos:prefLabel 'Millibecquerels per square metre per day'@en ;
+    skos:definition 'One radioactive disintegration per thousand seconds in material passing through an area of one square metre during a period of one day (86400 seconds).'@en ;
+    skos:notation 'SDN:P06::MBQF'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UMKS/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UMKS/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UMKS/>;
+    dc:modified '2019-01-20T17:30:02'^^xsd:dateTime ;
+    skos:altLabel '10^-8m^3kg^-1'^^xsd:string ;
+    skos:prefLabel '10^-8 * Cubic metres per kilogram'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UMKS'^^xsd:string .
+

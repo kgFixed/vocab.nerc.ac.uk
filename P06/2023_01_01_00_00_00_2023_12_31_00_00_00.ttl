@@ -1,0 +1,139 @@
+
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2023_01_01_00_00_00_2023_12_31_00_00_00.ttl> .
+
+<>
+    a tree:Node ;
+    
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2022_01_01_00_00_00_2022_12_31_00_00_00.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2023-12-31T00:00:00+00:00'^^xsd:dateTime
+    ] ;
+    
+    ldes:retentionPolicy [
+        a ldes:RetentionPolicy ;
+        ldes:versionAmount 100
+    ] .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  ldes:immutable 'false'^^xsd:boolean ;
+  ldes:pollingInterval '3600'^^xsd:integer ;
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/NMPM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/NMPM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/NMPM/>;
+    dc:modified '2023-10-11T11:53:28'^^xsd:dateTime ;
+    skos:altLabel 'nmol/mol'^^xsd:string ;
+    skos:prefLabel 'Nanomoles per mole'@en ;
+    skos:definition 'Molar fraction of 10^-9 of the SI unit of quantity of matter (the mole) per SI unit quantity of matter. A concentration unit used to express the number of molecules of a particular substance in a mixture (in nanomoles) divided by the total number of moles in the given mixture.'@en ;
+    skos:notation 'SDN:P06::NMPM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/NPMM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/NPMM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/NPMM/>;
+    dc:modified '2023-10-11T10:42:16'^^xsd:dateTime ;
+    skos:altLabel 'nmol/mg/min'^^xsd:string ;
+    skos:prefLabel 'Nanomoles per milligram per minute'@en ;
+    skos:definition '10^-9 of the SI unit of quantity of matter (the mole) per milligram of a substance per minute. Used to express the activity of enzymes by giving the quantity of product formed by the enzyme (in nanomoles), per mass of total protein (milligrams) in a given amount of time (minute).'@en ;
+    skos:notation 'SDN:P06::NPMM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/USTR/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/USTR/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/USTR/>;
+    dc:modified '2023-09-04T09:56:22'^^xsd:dateTime ;
+    skos:altLabel 'sr'^^xsd:string ;
+    skos:prefLabel 'Steradians'@en ;
+    skos:definition 'The steradian is the SI unit of solid angle. It is used to describe two-dimensional angular spans in three-dimensional space, analogous to the way in which the radian describes angles in a plane.'@en ;
+    skos:notation 'SDN:P06::USTR'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/NBTM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/NBTM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/NBTM/>;
+    dc:modified '2023-06-28T10:07:56'^^xsd:dateTime ;
+    skos:altLabel '#/100ml'^^xsd:string ;
+    skos:prefLabel 'Number per 100 millilitres'@en ;
+    skos:definition 'Count of an entity or phenomenon occurrence in one part in 10^6 of the SI unit of volume (cubic metre).'@en ;
+    skos:notation 'SDN:P06::NBTM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/CMM3/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/CMM3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/CMM3/>;
+    dc:modified '2023-04-04T15:57:51'^^xsd:dateTime ;
+    skos:altLabel 'mm^3'^^xsd:string ;
+    skos:prefLabel 'Cubic millimetres'@en ;
+    skos:definition 'A unit of volume defined as a cube 1 millimetre long on each edge.'@en ;
+    skos:notation 'SDN:P06::CMM3'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/FMTG/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/FMTG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/FMTG/>;
+    dc:modified '2023-03-17T08:59:59'^^xsd:dateTime ;
+    skos:altLabel 'fg'^^xsd:string ;
+    skos:prefLabel 'Femtograms'@en ;
+    skos:definition '10^-15 grams or one 10^-18 of the SI standard unit of mass (kilogram).'@en ;
+    skos:notation 'SDN:P06::FMTG'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UMUB/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UMUB/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UMUB/>;
+    dc:modified '2023-03-02T12:36:20'^^xsd:dateTime ;
+    skos:altLabel 'um/um/d'^^xsd:string ;
+    skos:prefLabel 'Micromoles per micromole per day'@en ;
+    skos:definition 'A change of one part per 10^6 of the SI unit of quantity of matter per one part per 10^6 of the SI unit of quantity of matter the quantity of matter over a period of 86400 seconds.'@en ;
+    skos:notation 'SDN:P06::UMUB'^^xsd:string .
+

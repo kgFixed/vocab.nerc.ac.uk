@@ -1,0 +1,649 @@
+
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2009_01_01_00_00_00_2009_12_31_00_00_00.ttl> .
+
+<>
+    a tree:Node ;
+    
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2008_01_01_00_00_00_2008_12_31_00_00_00.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2009-12-31T00:00:00+00:00'^^xsd:dateTime
+    ] ;
+    
+    ldes:retentionPolicy [
+        a ldes:RetentionPolicy ;
+        ldes:versionAmount 100
+    ] .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  ldes:immutable 'false'^^xsd:boolean ;
+  ldes:pollingInterval '3600'^^xsd:integer ;
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/PMSC/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/PMSC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/PMSC/>;
+    dc:modified '2009-12-03T16:30:09'^^xsd:dateTime ;
+    skos:altLabel '/ms'^^xsd:string ;
+    skos:prefLabel 'per millisecond'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::PMSC'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MPM3/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MPM3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MPM3/>;
+    dc:modified '2009-09-16T16:20:29'^^xsd:dateTime ;
+    skos:altLabel 'ml/m^3'^^xsd:string ;
+    skos:prefLabel 'Millilitres per cubic metre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::MPM3'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/M2S2/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/M2S2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/M2S2/>;
+    dc:modified '2009-07-06T21:31:54'^^xsd:dateTime ;
+    skos:altLabel '/m^2/s'^^xsd:string ;
+    skos:prefLabel 'per square metre per second'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::M2S2'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/KGS2/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/KGS2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/KGS2/>;
+    dc:modified '2009-07-06T21:24:54'^^xsd:dateTime ;
+    skos:altLabel 'kg^2/s^2'^^xsd:string ;
+    skos:prefLabel 'Kilograms squared per second squared'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::KGS2'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/PMSQ/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/PMSQ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/PMSQ/>;
+    dc:modified '2009-07-06T21:19:42'^^xsd:dateTime ;
+    skos:altLabel '/m^2'^^xsd:string ;
+    skos:prefLabel 'per square metre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::PMSQ'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/PAPM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/PAPM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/PAPM/>;
+    dc:modified '2009-07-06T17:33:39'^^xsd:dateTime ;
+    skos:altLabel 'Pa/m'^^xsd:string ;
+    skos:prefLabel 'Pascals per metre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::PAPM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/DEGE/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/DEGE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/DEGE/>;
+    dc:modified '2009-06-17T14:23:55'^^xsd:dateTime ;
+    skos:altLabel 'degree_east'^^xsd:string ;
+    skos:prefLabel 'Degrees east'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::DEGE'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/DEGN/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/DEGN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/DEGN/>;
+    dc:modified '2009-06-17T14:23:30'^^xsd:dateTime ;
+    skos:altLabel 'degree_north'^^xsd:string ;
+    skos:prefLabel 'Degrees north'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::DEGN'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/M3PS/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/M3PS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/M3PS/>;
+    dc:modified '2009-06-11T15:18:07'^^xsd:dateTime ;
+    skos:altLabel '/m^3/s'^^xsd:string ;
+    skos:prefLabel 'per cubic metre per second'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::M3PS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/KLSQ/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/KLSQ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/KLSQ/>;
+    dc:modified '2009-06-11T14:48:06'^^xsd:dateTime ;
+    skos:altLabel 'K^2'^^xsd:string ;
+    skos:prefLabel 'Kelvin squared'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::KLSQ'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/M2RD/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/M2RD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/M2RD/>;
+    dc:modified '2009-06-11T14:46:10'^^xsd:dateTime ;
+    skos:altLabel 'm2.s/rad'^^xsd:string ;
+    skos:prefLabel 'Square metre seconds per radian'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::M2RD'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/M3SR/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/M3SR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/M3SR/>;
+    dc:modified '2009-06-11T14:38:42'^^xsd:dateTime ;
+    skos:altLabel 'mol/m^2/s/sr'^^xsd:string ;
+    skos:prefLabel 'Moles per square metre per second per steradian'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::M3SR'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/M2SR/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/M2SR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/M2SR/>;
+    dc:modified '2009-06-11T14:38:07'^^xsd:dateTime ;
+    skos:altLabel 'mol/m^2/s/m/sr'^^xsd:string ;
+    skos:prefLabel 'Moles per square metre per second per metre per steradian'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::M2SR'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/M2MM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/M2MM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/M2MM/>;
+    dc:modified '2009-06-11T14:37:18'^^xsd:dateTime ;
+    skos:altLabel 'mol/m^2/s/m'^^xsd:string ;
+    skos:prefLabel 'Moles per square metre per second per metre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::M2MM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/PRSC/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/PRSC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/PRSC/>;
+    dc:modified '2009-06-11T14:32:42'^^xsd:dateTime ;
+    skos:altLabel '/s'^^xsd:string ;
+    skos:prefLabel 'per second'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::PRSC'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MLPS/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MLPS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MLPS/>;
+    dc:modified '2009-06-11T14:31:56'^^xsd:dateTime ;
+    skos:altLabel 'mol/s'^^xsd:string ;
+    skos:prefLabel 'Moles per second'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::MLPS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MLKG/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MLKG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MLKG/>;
+    dc:modified '2009-06-11T14:27:57'^^xsd:dateTime ;
+    skos:altLabel 'mol/kg'^^xsd:string ;
+    skos:prefLabel 'Moles per kilogram'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::MLKG'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MOLE/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MOLE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MOLE/>;
+    dc:modified '2009-06-11T14:27:17'^^xsd:dateTime ;
+    skos:altLabel 'mol'^^xsd:string ;
+    skos:prefLabel 'Moles'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::MOLE'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/SQM2/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/SQM2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/SQM2/>;
+    dc:modified '2009-06-11T14:25:49'^^xsd:dateTime ;
+    skos:altLabel 'm^2/s^2'^^xsd:string ;
+    skos:prefLabel 'Square metres per second squared'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::SQM2'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/SQMS/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/SQMS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/SQMS/>;
+    dc:modified '2009-06-11T14:24:09'^^xsd:dateTime ;
+    skos:altLabel 'm^2/s'^^xsd:string ;
+    skos:prefLabel 'Square metres per second'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::SQMS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/URAD/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/URAD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/URAD/>;
+    dc:modified '2009-06-11T14:21:23'^^xsd:dateTime ;
+    skos:altLabel 'rad'^^xsd:string ;
+    skos:prefLabel 'Radians'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::URAD'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/PMSR/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/PMSR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/PMSR/>;
+    dc:modified '2009-06-11T13:47:38'^^xsd:dateTime ;
+    skos:altLabel '/m/sr'^^xsd:string ;
+    skos:prefLabel 'per metre per steradian'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::PMSR'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/PMPS/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/PMPS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/PMPS/>;
+    dc:modified '2009-06-11T13:46:23'^^xsd:dateTime ;
+    skos:altLabel '/m/s'^^xsd:string ;
+    skos:prefLabel 'per metre per second'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::PMPS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/M2SX/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/M2SX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/M2SX/>;
+    dc:modified '2009-06-11T13:44:06'^^xsd:dateTime ;
+    skos:altLabel 'm^2.s'^^xsd:string ;
+    skos:prefLabel 'Square metre seconds'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::M2SX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MCS2/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MCS2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MCS2/>;
+    dc:modified '2009-06-11T13:42:13'^^xsd:dateTime ;
+    skos:altLabel 'm^3/s^2'^^xsd:string ;
+    skos:prefLabel 'Cubic metres per second squared'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::MCS2'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MCUB/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MCUB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MCUB/>;
+    dc:modified '2009-06-11T13:33:19'^^xsd:dateTime ;
+    skos:altLabel 'm^3'^^xsd:string ;
+    skos:prefLabel 'Cubic metres'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::MCUB'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MPS2/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MPS2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MPS2/>;
+    dc:modified '2009-06-11T13:29:41'^^xsd:dateTime ;
+    skos:altLabel 'm/s^2'^^xsd:string ;
+    skos:prefLabel 'Metres per second squared'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::MPS2'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/KSP3/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/KSP3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/KSP3/>;
+    dc:modified '2009-06-11T13:27:13'^^xsd:dateTime ;
+    skos:altLabel 'kg/m^3/s'^^xsd:string ;
+    skos:prefLabel 'Kilograms per cubic metre per second'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::KSP3'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/KSP2/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/KSP2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/KSP2/>;
+    dc:modified '2009-06-11T13:25:51'^^xsd:dateTime ;
+    skos:altLabel 'kg/m^2/s'^^xsd:string ;
+    skos:prefLabel 'Kilograms per square metre per second'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::KSP2'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/KMP2/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/KMP2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/KMP2/>;
+    dc:modified '2009-06-11T13:25:00'^^xsd:dateTime ;
+    skos:altLabel 'kg/m^2'^^xsd:string ;
+    skos:prefLabel 'Kilograms per square metre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::KMP2'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/KMPS/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/KMPS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/KMPS/>;
+    dc:modified '2009-06-11T13:23:32'^^xsd:dateTime ;
+    skos:altLabel 'kg/m/s'^^xsd:string ;
+    skos:prefLabel 'Kilograms per metre per second'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::KMPS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/KGPS/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/KGPS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/KGPS/>;
+    dc:modified '2009-06-11T13:21:36'^^xsd:dateTime ;
+    skos:altLabel 'kg/s'^^xsd:string ;
+    skos:prefLabel 'Kilogram per second'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::KGPS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/DGPS/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/DGPS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/DGPS/>;
+    dc:modified '2009-06-11T13:18:49'^^xsd:dateTime ;
+    skos:altLabel 'deg/s'^^xsd:string ;
+    skos:prefLabel 'Degrees per second'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::DGPS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UPDB/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UPDB/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UPDB/>;
+    dc:modified '2009-06-11T13:15:54'^^xsd:dateTime ;
+    skos:altLabel 'dbar'^^xsd:string ;
+    skos:prefLabel 'Decibars'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UPDB'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UDBL/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UDBL/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UDBL/>;
+    dc:modified '2009-06-11T13:14:57'^^xsd:dateTime ;
+    skos:altLabel 'dB'^^xsd:string ;
+    skos:prefLabel 'Decibels'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UDBL'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/WSMM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/WSMM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/WSMM/>;
+    dc:modified '2009-06-11T13:09:10'^^xsd:dateTime ;
+    skos:altLabel 'W.s/m^2'^^xsd:string ;
+    skos:prefLabel 'Watt seconds per square metre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::WSMM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/WMSS/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/WMSS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/WMSS/>;
+    dc:modified '2009-06-11T13:07:03'^^xsd:dateTime ;
+    skos:altLabel 'W/m^2/sr'^^xsd:string ;
+    skos:prefLabel 'Watts per square metre per steradian'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::WMSS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/WM2S/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/WM2S/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/WM2S/>;
+    dc:modified '2009-06-11T13:04:54'^^xsd:dateTime ;
+    skos:altLabel 'W/m^2/m/sr'^^xsd:string ;
+    skos:prefLabel 'Watts per square metre per metre per steradian'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::WM2S'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/WM2M/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/WM2M/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/WM2M/>;
+    dc:modified '2009-06-11T13:02:31'^^xsd:dateTime ;
+    skos:altLabel 'W/m^2/m'^^xsd:string ;
+    skos:prefLabel 'Watts per square metre per metre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::WM2M'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/WAPK/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/WAPK/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/WAPK/>;
+    dc:modified '2009-06-11T13:00:37'^^xsd:dateTime ;
+    skos:altLabel 'W/m/K'^^xsd:string ;
+    skos:prefLabel 'Watts per metre per Kelvin'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::WAPK'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/WAPM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/WAPM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/WAPM/>;
+    dc:modified '2009-06-11T12:59:47'^^xsd:dateTime ;
+    skos:altLabel 'W/m'^^xsd:string ;
+    skos:prefLabel 'Watts per metre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::WAPM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/PPS2/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/PPS2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/PPS2/>;
+    dc:modified '2009-06-11T12:55:57'^^xsd:dateTime ;
+    skos:altLabel 'Pa^2/s^2'^^xsd:string ;
+    skos:prefLabel 'Pascal squared per second squared'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::PPS2'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/PPPS/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/PPPS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/PPPS/>;
+    dc:modified '2009-06-11T12:54:45'^^xsd:dateTime ;
+    skos:altLabel '/Pa/s'^^xsd:string ;
+    skos:prefLabel 'per Pascal per second'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::PPPS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/PAM2/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/PAM2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/PAM2/>;
+    dc:modified '2009-06-11T12:52:37'^^xsd:dateTime ;
+    skos:altLabel 'Pa.m/s^2'^^xsd:string ;
+    skos:prefLabel 'Pascal metres per second squared'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::PAM2'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/PAMS/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/PAMS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/PAMS/>;
+    dc:modified '2009-06-11T12:50:55'^^xsd:dateTime ;
+    skos:altLabel 'Pa.m/s'^^xsd:string ;
+    skos:prefLabel 'Pascal metres per second'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::PAMS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/PAPS/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/PAPS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/PAPS/>;
+    dc:modified '2009-06-11T12:49:05'^^xsd:dateTime ;
+    skos:altLabel 'Pa/s'^^xsd:string ;
+    skos:prefLabel 'Pascals per second'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::PAPS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/PASS/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/PASS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/PASS/>;
+    dc:modified '2009-06-11T12:48:20'^^xsd:dateTime ;
+    skos:altLabel 'Pa.s'^^xsd:string ;
+    skos:prefLabel 'Pascal seconds'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::PASS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/NCUM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/NCUM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/NCUM/>;
+    dc:modified '2009-06-11T12:41:41'^^xsd:dateTime ;
+    skos:altLabel 'N/m^3'^^xsd:string ;
+    skos:prefLabel 'Newtons per cubic metre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::NCUM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/KMSS/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/KMSS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/KMSS/>;
+    dc:modified '2009-06-11T12:39:22'^^xsd:dateTime ;
+    skos:altLabel 'K.m^2/kg/s'^^xsd:string ;
+    skos:prefLabel 'Kelvin square metres per kilogram per second'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::KMSS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/KPRS/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/KPRS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/KPRS/>;
+    dc:modified '2009-06-11T12:31:51'^^xsd:dateTime ;
+    skos:altLabel 'K/s'^^xsd:string ;
+    skos:prefLabel 'Kelvin per second'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::KPRS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/KSXX/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/KSXX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/KSXX/>;
+    dc:modified '2009-06-11T12:31:02'^^xsd:dateTime ;
+    skos:altLabel 'K.s'^^xsd:string ;
+    skos:prefLabel 'Kelvin second'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::KSXX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/KMTS/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/KMTS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/KMTS/>;
+    dc:modified '2009-06-11T12:23:52'^^xsd:dateTime ;
+    skos:altLabel 'K.m/s'^^xsd:string ;
+    skos:prefLabel 'Kelvin metres per second'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::KMTS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/KMTX/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/KMTX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/KMTX/>;
+    dc:modified '2009-06-11T12:22:54'^^xsd:dateTime ;
+    skos:altLabel 'K.m'^^xsd:string ;
+    skos:prefLabel 'Kelvin metres'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::KMTX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/KPAS/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/KPAS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/KPAS/>;
+    dc:modified '2009-06-11T12:22:08'^^xsd:dateTime ;
+    skos:altLabel 'K.Pa/s'^^xsd:string ;
+    skos:prefLabel 'Kelvin Pascals per second'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::KPAS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/JMSQ/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/JMSQ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/JMSQ/>;
+    dc:modified '2009-06-11T12:20:04'^^xsd:dateTime ;
+    skos:altLabel 'J/m^2'^^xsd:string ;
+    skos:prefLabel 'Joules per square metre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::JMSQ'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/JKGK/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/JKGK/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/JKGK/>;
+    dc:modified '2009-06-11T12:14:23'^^xsd:dateTime ;
+    skos:altLabel 'J/kg/K'^^xsd:string ;
+    skos:prefLabel 'Joules per kilogram per Kelvin'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::JKGK'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/JPKG/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/JPKG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/JPKG/>;
+    dc:modified '2009-06-11T12:04:27'^^xsd:dateTime ;
+    skos:altLabel 'J/kg'^^xsd:string ;
+    skos:prefLabel 'Joules per kilogram'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::JPKG'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MSMD/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MSMD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MSMD/>;
+    dc:modified '2009-03-16T17:11:48'^^xsd:dateTime ;
+    skos:altLabel 'ml/m^2/d'^^xsd:string ;
+    skos:prefLabel 'Millilitres per square metre per day'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::MSMD'^^xsd:string .
+

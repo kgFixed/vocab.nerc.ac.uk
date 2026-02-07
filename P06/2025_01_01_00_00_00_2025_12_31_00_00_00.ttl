@@ -1,0 +1,139 @@
+
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2025_01_01_00_00_00_2025_12_31_00_00_00.ttl> .
+
+<>
+    a tree:Node ;
+    
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2024_01_01_00_00_00_2024_12_31_00_00_00.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2025-12-31T00:00:00+00:00'^^xsd:dateTime
+    ] ;
+    
+    ldes:retentionPolicy [
+        a ldes:RetentionPolicy ;
+        ldes:versionAmount 100
+    ] .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  ldes:immutable 'false'^^xsd:boolean ;
+  ldes:pollingInterval '3600'^^xsd:integer ;
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MMVY/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MMVY/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MMVY/>;
+    dc:modified '2025-11-23T16:28:37'^^xsd:dateTime ;
+    skos:altLabel 'mmol/m^3/yr'^^xsd:string ;
+    skos:prefLabel 'Millimoles per cubic metre per year'@en ;
+    skos:definition 'A rate of change of one part in 10^3 of the SI unit of quantity of matter per SI unit of volume in a period of an average calendar year (365.25 days).'@en ;
+    skos:notation 'SDN:P06::MMVY'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MMPY/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MMPY/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MMPY/>;
+    dc:modified '2025-11-23T16:28:19'^^xsd:dateTime ;
+    skos:altLabel 'mm/yr'^^xsd:string ;
+    skos:prefLabel 'Millimetres per year'@en ;
+    skos:definition 'A rate of change in length of one thousandth (0.001) of a metre over a period of an average calendar year (365.25 days).'@en ;
+    skos:notation 'SDN:P06::MMPY'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MMKY/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MMKY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MMKY/>;
+    dc:modified '2025-11-23T16:26:22'^^xsd:dateTime ;
+    skos:altLabel 'umol/kg/yr'^^xsd:string ;
+    skos:prefLabel 'Micromoles per kilogram per year'@en ;
+    skos:definition 'A rate of change of one part in 10^3 of the SI unit of quantity of matter (mole) in an SI unit of mass (kilogram) in a period of an average calendar year (365.25 days).'@en ;
+    skos:notation 'SDN:P06::MMKY'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MM2H/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MM2H/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MM2H/>;
+    dc:modified '2025-08-11T16:57:46'^^xsd:dateTime ;
+    skos:altLabel 'mmol/m^2/h'^^xsd:string ;
+    skos:prefLabel 'Millimoles per square metre per hour'@en ;
+    skos:definition '10^-3 of the SI unit of quantity of matter per SI unit area over 3600 times one SI standard unit of time.'@en ;
+    skos:notation 'SDN:P06::MM2H'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MGPF/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MGPF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MGPF/>;
+    dc:modified '2025-07-15T10:09:54'^^xsd:dateTime ;
+    skos:altLabel 'mg/mg/h/(umol/m^2/s)'^^xsd:string ;
+    skos:prefLabel 'Milligrams per milligram per hour per (micromole per square metre per second)'@en ;
+    skos:definition '10^-6 of the SI unit of mass (kilogram) per 10^-6 of the SI unit of mass over 3600 times one SI standard unit of time per (one part per 10^6 of the SI unit of quantity of matter (the mole) per SI unit area per SI unit of time). The units in brackets are units for photosynthetic photon flux density (PPFD).'@en ;
+    skos:notation 'SDN:P06::MGPF'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MGMH/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MGMH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MGMH/>;
+    dc:modified '2025-07-15T10:06:20'^^xsd:dateTime ;
+    skos:altLabel 'mg/mg/h'^^xsd:string ;
+    skos:prefLabel 'Milligrams per milligram per hour'@en ;
+    skos:definition '10^-6 of the SI unit of mass (kilogram) per 10^-6 of the SI unit of mass over 3600 times one SI standard unit of time.'@en ;
+    skos:notation 'SDN:P06::MGMH'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/KGVM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/KGVM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/KGVM/>;
+    dc:modified '2025-06-03T12:35:50'^^xsd:dateTime ;
+    skos:altLabel 'kg/m^3/m'^^xsd:string ;
+    skos:prefLabel 'Kilograms per cubic metre per metre'@en ;
+    skos:definition 'One SI standard unit of mass per SI standard unit of volume per SI standard unit of length.'@en ;
+    skos:notation 'SDN:P06::KGVM'^^xsd:string .
+

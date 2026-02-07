@@ -1,0 +1,259 @@
+
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2017_01_01_00_00_00_2017_12_31_00_00_00.ttl> .
+
+<>
+    a tree:Node ;
+    
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2016_01_01_00_00_00_2016_12_31_00_00_00.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2017-12-31T00:00:00+00:00'^^xsd:dateTime
+    ] ;
+    
+    ldes:retentionPolicy [
+        a ldes:RetentionPolicy ;
+        ldes:versionAmount 100
+    ] .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  ldes:immutable 'false'^^xsd:boolean ;
+  ldes:pollingInterval '3600'^^xsd:integer ;
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/CMPS/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/CMPS/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/CMPS/>;
+    dc:modified '2017-12-11T18:51:03'^^xsd:dateTime ;
+    skos:altLabel 'm^3/s'^^xsd:string ;
+    skos:prefLabel 'Cubic metres per second'@en ;
+    skos:definition 'A rate of volumetric flow of one SI unit of volume per one SI unit of time. Also known as \'cumecs\'.'@en ;
+    skos:notation 'SDN:P06::CMPS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/XXPY/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/XXPY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/XXPY/>;
+    dc:modified '2017-12-08T18:09:28'^^xsd:dateTime ;
+    skos:altLabel '/yr'^^xsd:string ;
+    skos:prefLabel 'per year'@en ;
+    skos:definition 'A rate of change over a period of an average calendar year (365.25 days).'@en ;
+    skos:notation 'SDN:P06::XXPY'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/DBPY/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/DBPY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/DBPY/>;
+    dc:modified '2017-12-08T18:08:51'^^xsd:dateTime ;
+    skos:altLabel 'dbar/yr'^^xsd:string ;
+    skos:prefLabel 'Decibars per year'@en ;
+    skos:definition 'A rate of change of pressure expressed in decibars over a period of an average calendar year (365.25 days).'@en ;
+    skos:notation 'SDN:P06::DBPY'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/DCPY/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/DCPY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/DCPY/>;
+    dc:modified '2017-12-08T17:56:32'^^xsd:dateTime ;
+    skos:altLabel 'degC/yr'^^xsd:string ;
+    skos:prefLabel 'Degrees Celsius per year'@en ;
+    skos:definition 'A rate of change of temperature expressed on the Celsius scale over a period of an average calendar year (365.25 days).'@en ;
+    skos:notation 'SDN:P06::DCPY'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UPCM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UPCM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UPCM/>;
+    dc:modified '2017-10-25T10:36:43'^^xsd:dateTime ;
+    skos:altLabel '/cm'^^xsd:string ;
+    skos:prefLabel 'per centimetre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UPCM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UPCW/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UPCW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UPCW/>;
+    dc:modified '2017-10-25T10:34:00'^^xsd:dateTime ;
+    skos:altLabel '%/wk'^^xsd:string ;
+    skos:prefLabel 'Percent per week'@en ;
+    skos:definition 'A rate of change in percent over a period of 7 days'@en ;
+    skos:notation 'SDN:P06::UPCW'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UPAM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UPAM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UPAM/>;
+    dc:modified '2017-10-25T10:32:43'^^xsd:dateTime ;
+    skos:altLabel 'pA/umol/l'^^xsd:string ;
+    skos:prefLabel 'Picoamps per micromole per litre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UPAM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/SQCM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/SQCM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/SQCM/>;
+    dc:modified '2017-10-22T14:18:44'^^xsd:dateTime ;
+    skos:altLabel 'cm^2'^^xsd:string ;
+    skos:prefLabel 'Square centimetres'@en ;
+    skos:definition 'A unit of area defined as a square of one centimetre long on each side.'@en ;
+    skos:notation 'SDN:P06::SQCM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UUUU/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UUUU/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UUUU/>;
+    dc:modified '2017-10-22T14:07:46'^^xsd:dateTime ;
+    skos:altLabel 'Dmnless'^^xsd:string ;
+    skos:prefLabel 'Dimensionless'@en ;
+    skos:definition 'A quantity with the dimension of 1.'@en ;
+    skos:notation 'SDN:P06::UUUU'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/USPC/3/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/USPC/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/USPC/>;
+    dc:modified '2017-10-15T16:13:12'^^xsd:dateTime ;
+    skos:altLabel 'Unspec.'^^xsd:string ;
+    skos:prefLabel 'Not specified'@en ;
+    skos:definition 'The units are deliberately undefined such as arbitrary units.'@en ;
+    skos:notation 'SDN:P06::USPC'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/JOUL/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/JOUL/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/JOUL/>;
+    dc:modified '2017-08-10T12:25:40'^^xsd:dateTime ;
+    skos:altLabel 'J'^^xsd:string ;
+    skos:prefLabel 'Joule'@en ;
+    skos:definition 'A derived unit of energy in the International System of Units. It is equal to the energy transferred (or work done) when applying a force of one newton through a distance of one metre (1 newton metre or Nm), or in passing an electric current of one ampere through a resistance of one ohm for one second. It is named after the English physicist James Prescott Joule (1818-1889).'@en ;
+    skos:notation 'SDN:P06::JOUL'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/KGXX/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/KGXX/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/KGXX/>;
+    dc:modified '2017-07-26T17:31:20'^^xsd:dateTime ;
+    skos:altLabel 'kg'^^xsd:string ;
+    skos:prefLabel 'Kilograms'@en ;
+    skos:definition 'The SI standard unit of mass.'@en ;
+    skos:notation 'SDN:P06::KGXX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/DKM2/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/DKM2/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/DKM2/>;
+    dc:modified '2017-06-22T08:17:57'^^xsd:dateTime ;
+    skos:altLabel 'degC.kg/m^2'^^xsd:string ;
+    skos:prefLabel 'Degrees Celsius kilogram per square metre'@en ;
+    skos:definition 'Derived unit for the product of the temperature in degrees Celsius and the mass density of a medium, integrated over vertical depth or height in metres.'@en ;
+    skos:notation 'SDN:P06::DKM2'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/KGPH/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/KGPH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/KGPH/>;
+    dc:modified '2017-03-17T14:45:02'^^xsd:dateTime ;
+    skos:altLabel 'kg/h'^^xsd:string ;
+    skos:prefLabel 'Kilograms per hour'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::KGPH'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/NOPH/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/NOPH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/NOPH/>;
+    dc:modified '2017-03-10T12:44:40'^^xsd:dateTime ;
+    skos:altLabel '#/h'^^xsd:string ;
+    skos:prefLabel 'Number per hour'@en ;
+    skos:definition 'Unavailable.'@en ;
+    skos:notation 'SDN:P06::NOPH'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/NOPM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/NOPM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/NOPM/>;
+    dc:modified '2017-03-10T12:27:39'^^xsd:dateTime ;
+    skos:altLabel '#/m'^^xsd:string ;
+    skos:prefLabel 'Number per metre'@en ;
+    skos:definition 'Unavailable.'@en ;
+    skos:notation 'SDN:P06::NOPM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MWSR/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MWSR/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MWSR/>;
+    dc:modified '2017-02-28T12:22:44'^^xsd:dateTime ;
+    skos:altLabel 'mW/cm^2/um/sr'^^xsd:string ;
+    skos:prefLabel 'Milliwatts per square centimetre per micrometre per steradian'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::MWSR'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/M4S1/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/M4S1/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/M4S1/>;
+    dc:modified '2017-02-28T12:22:01'^^xsd:dateTime ;
+    skos:altLabel 'm^4/s'^^xsd:string ;
+    skos:prefLabel 'Metres to the power four per second'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::M4S1'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MPYR/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MPYR/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MPYR/>;
+    dc:modified '2017-02-28T12:21:09'^^xsd:dateTime ;
+    skos:altLabel 'm/yr'^^xsd:string ;
+    skos:prefLabel 'Metres per year'@en ;
+    skos:definition 'A rate of change of SI standard unit length over a period of an average calendar year (365.25 days).'@en ;
+    skos:notation 'SDN:P06::MPYR'^^xsd:string .
+

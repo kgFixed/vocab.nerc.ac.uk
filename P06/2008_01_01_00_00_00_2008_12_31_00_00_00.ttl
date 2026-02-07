@@ -1,0 +1,149 @@
+
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2008_01_01_00_00_00_2008_12_31_00_00_00.ttl> .
+
+<>
+    a tree:Node ;
+    
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2007_01_01_00_00_00_2007_12_31_00_00_00.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2008-12-31T00:00:00+00:00'^^xsd:dateTime
+    ] ;
+    
+    ldes:retentionPolicy [
+        a ldes:RetentionPolicy ;
+        ldes:versionAmount 100
+    ] .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  ldes:immutable 'false'^^xsd:boolean ;
+  ldes:pollingInterval '3600'^^xsd:integer ;
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UCNL/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UCNL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UCNL/>;
+    dc:modified '2008-03-04T13:00:01'^^xsd:dateTime ;
+    skos:altLabel '#/nl'^^xsd:string ;
+    skos:prefLabel 'Number per nanolitre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UCNL'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UPMM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UPMM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UPMM/>;
+    dc:modified '2008-02-20T12:04:52'^^xsd:dateTime ;
+    skos:altLabel '#/m^3'^^xsd:string ;
+    skos:prefLabel 'Number per cubic metre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UPMM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MMPL/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MMPL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MMPL/>;
+    dc:modified '2008-02-20T12:02:02'^^xsd:dateTime ;
+    skos:altLabel 'mmol/l'^^xsd:string ;
+    skos:prefLabel 'Millimoles per litre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::MMPL'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UMLL/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UMLL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UMLL/>;
+    dc:modified '2008-02-20T11:52:40'^^xsd:dateTime ;
+    skos:altLabel 'ml/l'^^xsd:string ;
+    skos:prefLabel 'Millilitres per litre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UMLL'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MMPH/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MMPH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MMPH/>;
+    dc:modified '2008-02-20T11:50:20'^^xsd:dateTime ;
+    skos:altLabel 'mm/h'^^xsd:string ;
+    skos:prefLabel 'Millimetres per hour'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::MMPH'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UNID/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UNID/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UNID/>;
+    dc:modified '2008-02-20T11:48:40'^^xsd:dateTime ;
+    skos:altLabel 'ng/d'^^xsd:string ;
+    skos:prefLabel 'Nanograms per day'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UNID'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UGM3/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UGM3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UGM3/>;
+    dc:modified '2008-02-20T11:33:17'^^xsd:dateTime ;
+    skos:altLabel 'ug/m^3/h'^^xsd:string ;
+    skos:prefLabel 'Micrograms per cubic metre per hour'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UGM3'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UCUL/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UCUL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UCUL/>;
+    dc:modified '2008-02-20T11:15:48'^^xsd:dateTime ;
+    skos:altLabel '#/ul'^^xsd:string ;
+    skos:prefLabel 'Number per microlitre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UCUL'^^xsd:string .
+

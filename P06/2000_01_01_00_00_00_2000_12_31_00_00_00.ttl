@@ -1,0 +1,102 @@
+
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2000_01_01_00_00_00_2000_12_31_00_00_00.ttl> .
+
+<>
+    a tree:Node ;
+    
+    ldes:retentionPolicy [
+        a ldes:RetentionPolicy ;
+        ldes:versionAmount 100
+    ] .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  ldes:immutable 'false'^^xsd:boolean ;
+  ldes:pollingInterval '3600'^^xsd:integer ;
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UKNT/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UKNT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UKNT/>;
+    dc:modified '2000-12-28T12:25:11'^^xsd:dateTime ;
+    skos:altLabel 'Knots'^^xsd:string ;
+    skos:prefLabel 'Knots (nautical miles per hour)'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UKNT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UNIM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UNIM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UNIM/>;
+    dc:modified '2000-12-12T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'ng/ind/min'^^xsd:string ;
+    skos:prefLabel 'Nanograms per individual per minute'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UNIM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UNAH/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UNAH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UNAH/>;
+    dc:modified '2000-02-10T00:00:00'^^xsd:dateTime ;
+    skos:altLabel '#/ind/h'^^xsd:string ;
+    skos:prefLabel 'Number per individual per hour'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UNAH'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UGPL/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UGPL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UGPL/>;
+    dc:modified '2000-02-09T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'ug/l'^^xsd:string ;
+    skos:prefLabel 'Micrograms per litre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UGPL'^^xsd:string .
+

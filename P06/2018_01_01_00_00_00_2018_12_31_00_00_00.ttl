@@ -1,0 +1,169 @@
+
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2018_01_01_00_00_00_2018_12_31_00_00_00.ttl> .
+
+<>
+    a tree:Node ;
+    
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2017_01_01_00_00_00_2017_12_31_00_00_00.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2018-12-31T00:00:00+00:00'^^xsd:dateTime
+    ] ;
+    
+    ldes:retentionPolicy [
+        a ldes:RetentionPolicy ;
+        ldes:versionAmount 100
+    ] .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  ldes:immutable 'false'^^xsd:boolean ;
+  ldes:pollingInterval '3600'^^xsd:integer ;
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/SCPM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/SCPM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/SCPM/>;
+    dc:modified '2018-07-10T09:55:39'^^xsd:dateTime ;
+    skos:altLabel 's/m'^^xsd:string ;
+    skos:prefLabel 'Seconds per metre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::SCPM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/XXXX/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/XXXX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/XXXX/>;
+    dc:modified '2018-07-05T17:09:42'^^xsd:dateTime ;
+    skos:altLabel 'NA'^^xsd:string ;
+    skos:prefLabel 'Not applicable'@en ;
+    skos:definition 'The property is a nominal property to which the concept of unit does not apply.'@en ;
+    skos:notation 'SDN:P06::XXXX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/NTPM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/NTPM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/NTPM/>;
+    dc:modified '2018-07-03T16:34:35'^^xsd:dateTime ;
+    skos:altLabel 'N/m'^^xsd:string ;
+    skos:prefLabel 'Newtons per metre'@en ;
+    skos:definition 'Derived SI unit for expressing surface tension.'@en ;
+    skos:notation 'SDN:P06::NTPM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MBPG/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MBPG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MBPG/>;
+    dc:modified '2018-05-03T21:30:32'^^xsd:dateTime ;
+    skos:altLabel 'mBq/g'^^xsd:string ;
+    skos:prefLabel 'Millibecquerels per gram'@en ;
+    skos:definition 'One radioactive disintegration per thousand seconds per 1000th SI unit of sample mass.'@en ;
+    skos:notation 'SDN:P06::MBPG'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/USTU/3/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/USTU/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/USTU/>;
+    dc:modified '2018-04-16T12:05:57'^^xsd:dateTime ;
+    skos:altLabel 'NTU'^^xsd:string ;
+    skos:prefLabel 'Nephelometric Turbidity Units'@en ;
+    skos:definition 'Standardised scale for nephelometric measurement of turbidity calibrated against formazine solutions of different concentration and measured using a white light source at a 90 degree detection angle. Earlier measurements of turbidity tended to use NTU (sometimes also labelled STU or FTU) as the unit regardless of the measurement method.'@en ;
+    skos:notation 'SDN:P06::USTU'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UFNU/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UFNU/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UFNU/>;
+    dc:modified '2018-04-13T15:17:24'^^xsd:dateTime ;
+    skos:altLabel 'FNU'^^xsd:string ;
+    skos:prefLabel 'Formazin Nephelometric Units'@en ;
+    skos:definition 'Standardised scale for nephelometric measurement of turbidity calibrated against formazine solutions of different concentration and measured using an 860 nm light (near IR) with a 90 degree detection angle (ISO7027 compliant).'@en ;
+    skos:notation 'SDN:P06::UFNU'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/NCM3/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/NCM3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/NCM3/>;
+    dc:modified '2018-02-15T11:52:37'^^xsd:dateTime ;
+    skos:altLabel '#/cm^3'^^xsd:string ;
+    skos:prefLabel 'Number per cubic centimetre'@en ;
+    skos:definition 'Quantification of occurrence of an observed phenomenon in one part in 10^6 of the SI unit of volume. Equivalent to number per millilitre.'@en ;
+    skos:notation 'SDN:P06::NCM3'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/BQM3/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/BQM3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/BQM3/>;
+    dc:modified '2018-02-02T16:35:30'^^xsd:dateTime ;
+    skos:altLabel 'Bq/m^3'^^xsd:string ;
+    skos:prefLabel 'Becquerels per cubic metre'@en ;
+    skos:definition 'One radioactive disintegration per second from an SI standard unit of volume. Equivalent to millibecquerels per litre.'@en ;
+    skos:notation 'SDN:P06::BQM3'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/EVLT/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/EVLT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/EVLT/>;
+    dc:modified '2018-01-18T22:12:46'^^xsd:dateTime ;
+    skos:altLabel 'eV'^^xsd:string ;
+    skos:prefLabel 'Electronvolts'@en ;
+    skos:definition 'The amount of energy gained or lost by the charge of a single electron moving across an electric potential difference of one volt. One electronvolt equal to 1.602*10−19 joules.'@en ;
+    skos:notation 'SDN:P06::EVLT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/PIXY/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/PIXY/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/PIXY/>;
+    dc:modified '2018-01-12T11:45:21'^^xsd:dateTime ;
+    skos:altLabel 'px'^^xsd:string ;
+    skos:prefLabel 'Pixels'@en ;
+    skos:definition 'The smallest resolvable element of a digital image and a unit of measure in image analysis.'@en ;
+    skos:notation 'SDN:P06::PIXY'^^xsd:string .
+

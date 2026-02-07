@@ -1,0 +1,529 @@
+
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2014_01_01_00_00_00_2014_12_31_00_00_00.ttl> .
+
+<>
+    a tree:Node ;
+    
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2013_01_01_00_00_00_2013_12_31_00_00_00.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2014-12-31T00:00:00+00:00'^^xsd:dateTime
+    ] ;
+    
+    ldes:retentionPolicy [
+        a ldes:RetentionPolicy ;
+        ldes:versionAmount 100
+    ] .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  ldes:immutable 'false'^^xsd:boolean ;
+  ldes:pollingInterval '3600'^^xsd:integer ;
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UNUL/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UNUL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UNUL/>;
+    dc:modified '2014-11-06T10:55:27'^^xsd:dateTime ;
+    skos:altLabel 'ng/ul'^^xsd:string ;
+    skos:prefLabel 'Nanograms per microlitre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UNUL'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/SMPG/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/SMPG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/SMPG/>;
+    dc:modified '2014-08-15T09:49:21'^^xsd:dateTime ;
+    skos:altLabel 'm^2/g'^^xsd:string ;
+    skos:prefLabel 'Square metres per gram'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::SMPG'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UMSG/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UMSG/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UMSG/>;
+    dc:modified '2014-08-15T09:49:15'^^xsd:dateTime ;
+    skos:altLabel 'm^2/g dry'^^xsd:string ;
+    skos:prefLabel 'Square metres per gram of dry sediment'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UMSG'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UPDS/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UPDS/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UPDS/>;
+    dc:modified '2014-08-15T09:45:12'^^xsd:dateTime ;
+    skos:altLabel '% dry sed'^^xsd:string ;
+    skos:prefLabel 'Percentage of dry sediment'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UPDS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MWNS/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MWNS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MWNS/>;
+    dc:modified '2014-08-14T11:23:12'^^xsd:dateTime ;
+    skos:altLabel 'mW/m^2/nm/sr'^^xsd:string ;
+    skos:prefLabel 'Milliwatts per square metre per nanometre per steradian'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::MWNS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MWNM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MWNM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MWNM/>;
+    dc:modified '2014-08-14T11:22:40'^^xsd:dateTime ;
+    skos:altLabel 'mW/m^2/nm'^^xsd:string ;
+    skos:prefLabel 'Milliwatts per square metre per nanometre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::MWNM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MGPM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MGPM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MGPM/>;
+    dc:modified '2014-07-17T13:40:21'^^xsd:dateTime ;
+    skos:altLabel 'mGal/mon'^^xsd:string ;
+    skos:prefLabel 'MilliGals per month'@en ;
+    skos:definition 'A rate of change of one millionth part of a unit of gravitational acceleration equal to one centimetre per second per second over a time duration of 30.4375 days or 2629800 seconds.'@en ;
+    skos:notation 'SDN:P06::MGPM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/LPUM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/LPUM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/LPUM/>;
+    dc:modified '2014-06-24T12:09:26'^^xsd:dateTime ;
+    skos:altLabel 'l/umol'^^xsd:string ;
+    skos:prefLabel 'Litres per micromole'@en ;
+    skos:definition 'The inverse of a molar concentration - the untits of per molarity.'@en ;
+    skos:notation 'SDN:P06::LPUM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UMBQ/3/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UMBQ/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UMBQ/>;
+    dc:modified '2014-06-07T11:10:10'^^xsd:dateTime ;
+    skos:altLabel 'mBq/l'^^xsd:string ;
+    skos:prefLabel 'Millibecquerels per litre'@en ;
+    skos:definition 'One radioactive disintegration per second from the SI unit of volume (cubic metre). Equivalent to Becquerels per cubic metre.'@en ;
+    skos:notation 'SDN:P06::UMBQ'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UBQK/3/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UBQK/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UBQK/>;
+    dc:modified '2014-06-07T11:03:42'^^xsd:dateTime ;
+    skos:altLabel 'Bq/kg'^^xsd:string ;
+    skos:prefLabel 'Becquerels per kilogram'@en ;
+    skos:definition 'One radioactive disintegration per second from an SI standard unit of mass of sample.'@en ;
+    skos:notation 'SDN:P06::UBQK'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MBQK/3/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MBQK/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MBQK/>;
+    dc:modified '2014-06-07T11:03:42'^^xsd:dateTime ;
+    skos:altLabel 'mBq/kg'^^xsd:string ;
+    skos:prefLabel 'Millibecquerels per kilogram'@en ;
+    skos:definition 'One radioactive disintegration per thousand seconds from an SI standard unit of mass of sample.'@en ;
+    skos:notation 'SDN:P06::MBQK'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UNBQ/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UNBQ/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UNBQ/>;
+    dc:modified '2014-06-07T11:03:42'^^xsd:dateTime ;
+    skos:altLabel 'nBq/l'^^xsd:string ;
+    skos:prefLabel 'Nanobecquerels per litre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UNBQ'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UUBQ/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UUBQ/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UUBQ/>;
+    dc:modified '2014-06-07T11:03:42'^^xsd:dateTime ;
+    skos:altLabel 'uBq/l'^^xsd:string ;
+    skos:prefLabel 'Microbecquerels per litre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UUBQ'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/HPAX/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/HPAX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/HPAX/>;
+    dc:modified '2014-05-27T11:29:50'^^xsd:dateTime ;
+    skos:altLabel 'hPa'^^xsd:string ;
+    skos:prefLabel 'Hectopascals'@en ;
+    skos:definition 'A pressure of one hundred Newtons per square metre (100 Pascals).  Equivalent to a millibar.'@en ;
+    skos:notation 'SDN:P06::HPAX'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UMNT/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UMNT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UMNT/>;
+    dc:modified '2014-05-06T09:26:00'^^xsd:dateTime ;
+    skos:altLabel 'mon'^^xsd:string ;
+    skos:prefLabel 'Months'@en ;
+    skos:definition 'A time interval of 30.4375 days or 2629800 seconds.'@en ;
+    skos:notation 'SDN:P06::UMNT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UTBB/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UTBB/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UTBB/>;
+    dc:modified '2014-05-06T09:22:27'^^xsd:dateTime ;
+    skos:altLabel 's'^^xsd:string ;
+    skos:prefLabel 'Seconds'@en ;
+    skos:definition 'The duration of 9192631770 periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the caesium 133 atom.'@en ;
+    skos:notation 'SDN:P06::UTBB'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UTAA/3/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UTAA/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UTAA/>;
+    dc:modified '2014-05-06T09:20:49'^^xsd:dateTime ;
+    skos:altLabel 'd'^^xsd:string ;
+    skos:prefLabel 'Days'@en ;
+    skos:definition 'A time interval of 24 hours or 86400 seconds.'@en ;
+    skos:notation 'SDN:P06::UTAA'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/USEC/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/USEC/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/USEC/>;
+    dc:modified '2014-05-06T09:19:27'^^xsd:dateTime ;
+    skos:altLabel 'us'^^xsd:string ;
+    skos:prefLabel 'Microseconds'@en ;
+    skos:definition 'A time interval of one millionth of a second.'@en ;
+    skos:notation 'SDN:P06::USEC'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UMSC/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UMSC/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UMSC/>;
+    dc:modified '2014-05-06T09:18:50'^^xsd:dateTime ;
+    skos:altLabel 'ms'^^xsd:string ;
+    skos:prefLabel 'Milliseconds'@en ;
+    skos:definition 'A time interval of one thousandth of a second.'@en ;
+    skos:notation 'SDN:P06::UMSC'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/PCUM/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/PCUM/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/PCUM/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel '/m^3'^^xsd:string ;
+    skos:prefLabel 'per cubic metre'@en ;
+    skos:definition 'Volume of a cube with sides of length 1 metre.'@en ;
+    skos:notation 'SDN:P06::PCUM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/THSC/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/THSC/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/THSC/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel '10^-3s'^^xsd:string ;
+    skos:prefLabel 'thousandths of a second'@en ;
+    skos:definition 'One thousandth part of the time interval of a second.'@en ;
+    skos:notation 'SDN:P06::THSC'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UYAD/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UYAD/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UYAD/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'AD'^^xsd:string ;
+    skos:prefLabel 'Gregorian calendar years anno Domini'@en ;
+    skos:definition 'A calendar year after the origin of the Gregorian calendar.'@en ;
+    skos:notation 'SDN:P06::UYAD'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UYBC/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UYBC/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UYBC/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'BC'^^xsd:string ;
+    skos:prefLabel 'Gregorian calendar years before Christ'@en ;
+    skos:definition 'A calendar year prior to the origin of the Gregorian calendar expressed as a incrementing integer going back into the past.'@en ;
+    skos:notation 'SDN:P06::UYBC'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UYBP/3/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UYBP/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UYBP/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'BP'^^xsd:string ;
+    skos:prefLabel 'Years before present'@en ;
+    skos:definition 'The length of time elapsed expressed as years between the event of interest and the year 1950 AD.'@en ;
+    skos:notation 'SDN:P06::UYBP'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UFFU/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UFFU/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UFFU/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'FFU'^^xsd:string ;
+    skos:prefLabel 'Fluorescein Fluorescence Units'@en ;
+    skos:definition 'Dimensionless scale derived in the laboratory using fluorescein as a proxy for environmental pigments.'@en ;
+    skos:notation 'SDN:P06::UFFU'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/TISO/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/TISO/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/TISO/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'ISO8601'^^xsd:string ;
+    skos:prefLabel 'ISO8601'@en ;
+    skos:definition 'String corresponding to any legal ISO8601 format mask. This is the concatenation of \'yyyy-mm-dd\' with any part of \'Thh:mm:ss.sss\' (including none) depending on precision and an optional time zone indicator \'Zxxx\' where xxx is the offset from UT.'@en ;
+    skos:notation 'SDN:P06::TISO'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UYMA/3/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UYMA/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UYMA/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'Myr'^^xsd:string ;
+    skos:prefLabel 'Millions of years before present'@en ;
+    skos:definition 'The length of time elapsed expressed as millions of years between the event of interest and the year 1950 AD.'@en ;
+    skos:notation 'SDN:P06::UYMA'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/USVD/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/USVD/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/USVD/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'Sv'^^xsd:string ;
+    skos:prefLabel 'Sverdrup'@en ;
+    skos:definition 'One Sverdrup is a million cubic metres per second or a million cumecs.'@en ;
+    skos:notation 'SDN:P06::USVD'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/WMSW/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/WMSW/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/WMSW/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'W/m^2/m^-1/sr'^^xsd:string ;
+    skos:prefLabel 'Watts per square metre per inverse metre per steradian'@en ;
+    skos:definition 'The power per unit area of radiation of a given wavenumber illuminating a target at a given incident angle.'@en ;
+    skos:notation 'SDN:P06::WMSW'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UAMN/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UAMN/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UAMN/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'arc_min'^^xsd:string ;
+    skos:prefLabel 'Arc minutes'@en ;
+    skos:definition 'Unit of angle described as one sixtieth of a degree.'@en ;
+    skos:notation 'SDN:P06::UAMN'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/ULCM/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/ULCM/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/ULCM/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'cm'^^xsd:string ;
+    skos:prefLabel 'Centimetres'@en ;
+    skos:definition 'Unit of length which is one hundredth of a metre.'@en ;
+    skos:notation 'SDN:P06::ULCM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/DEGF/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/DEGF/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/DEGF/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'degF'^^xsd:string ;
+    skos:prefLabel 'Degrees Fahrenheit'@en ;
+    skos:definition 'Unit of object hotness based upon a scale having 32 as the freezing point of water and 212 as the boiling point of water.'@en ;
+    skos:notation 'SDN:P06::DEGF'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UGRM/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UGRM/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UGRM/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'g'^^xsd:string ;
+    skos:prefLabel 'Grams'@en ;
+    skos:definition 'One thousandth part of the SI base unit of mass (kilogram).'@en ;
+    skos:notation 'SDN:P06::UGRM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/KIPA/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/KIPA/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/KIPA/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'kPa'^^xsd:string ;
+    skos:prefLabel 'Kilopascals'@en ;
+    skos:definition 'A force of one thousand Newtons per square metre.'@en ;
+    skos:notation 'SDN:P06::KIPA'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/KMDY/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/KMDY/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/KMDY/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'km/d'^^xsd:string ;
+    skos:prefLabel 'Kilometres per day'@en ;
+    skos:definition 'A change in location of a distance of one thousand metres in an elapsed time of one day (86400 seconds).'@en ;
+    skos:notation 'SDN:P06::KMDY'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UYKA/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UYKA/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UYKA/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'kyr'^^xsd:string ;
+    skos:prefLabel 'Kiloyears before present'@en ;
+    skos:definition 'The length of time elapsed expressed as thousands of years between the event of interest and the year 1950 AD.'@en ;
+    skos:notation 'SDN:P06::UYKA'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MGAL/3/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MGAL/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MGAL/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'mGal'^^xsd:string ;
+    skos:prefLabel 'MilliGals'@en ;
+    skos:definition 'One thousandth part of a unit of gravitational acceleration equal to one centimetre per second per second.'@en ;
+    skos:notation 'SDN:P06::MGAL'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MRAD/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MRAD/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MRAD/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'mRad/hr'^^xsd:string ;
+    skos:prefLabel 'Millirads per hour'@en ;
+    skos:definition 'One thousandth part of an absorbed ionizing radiation dose equal to 100 ergs per gram of irradiated material received per hour.'@en ;
+    skos:notation 'SDN:P06::MRAD'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UMIN/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UMIN/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UMIN/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'min'^^xsd:string ;
+    skos:prefLabel 'Minutes'@en ;
+    skos:definition 'A time interval of sixty seconds.'@en ;
+    skos:notation 'SDN:P06::UMIN'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MMPD/4/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MMPD/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MMPD/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'mm/d'^^xsd:string ;
+    skos:prefLabel 'Millimetres per day'@en ;
+    skos:definition 'A change in location of a distance of one thousandth (0.001) of a metre in an elapsed time of one day (86400 seconds).'@en ;
+    skos:notation 'SDN:P06::MMPD'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MLM2/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MLM2/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MLM2/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'mol/m^2'^^xsd:string ;
+    skos:prefLabel 'Moles per square metre'@en ;
+    skos:definition 'SI unit of quantity of matter per SI unit area.'@en ;
+    skos:notation 'SDN:P06::MLM2'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/M2MS/3/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/M2MS/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/M2MS/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'mol/m^2/s'^^xsd:string ;
+    skos:prefLabel 'Moles per square metre per second'@en ;
+    skos:definition 'SI unit of quantity of matter per SI unit area per SI unit of time.'@en ;
+    skos:notation 'SDN:P06::M2MS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MLM3/3/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MLM3/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MLM3/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'mol/m^3'^^xsd:string ;
+    skos:prefLabel 'Moles per cubic metre'@en ;
+    skos:definition 'SI unit of quantity of matter per SI unit volume.'@en ;
+    skos:notation 'SDN:P06::MLM3'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MM3S/3/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MM3S/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MM3S/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'mol/m^3/s'^^xsd:string ;
+    skos:prefLabel 'Moles per cubic metre per second'@en ;
+    skos:definition 'SI unit of quantity of matter per SI unit volume per SI unit of time.'@en ;
+    skos:notation 'SDN:P06::MM3S'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UPHI/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UPHI/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UPHI/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'phi units'^^xsd:string ;
+    skos:prefLabel 'phi units'@en ;
+    skos:definition 'Logarithm to the base 2 of a length, generally sediment grain diameter, in millimetres as devised by Krumbein (1936).'@en ;
+    skos:notation 'SDN:P06::UPHI'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UYRS/3/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UYRS/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UYRS/>;
+    dc:modified '2014-02-04T12:49:44'^^xsd:dateTime ;
+    skos:altLabel 'yr'^^xsd:string ;
+    skos:prefLabel 'Years'@en ;
+    skos:definition 'A time interval of 365.25 days or 31557600 seconds.'@en ;
+    skos:notation 'SDN:P06::UYRS'^^xsd:string .
+

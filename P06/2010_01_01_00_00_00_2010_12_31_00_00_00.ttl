@@ -1,0 +1,199 @@
+
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2010_01_01_00_00_00_2010_12_31_00_00_00.ttl> .
+
+<>
+    a tree:Node ;
+    
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2009_01_01_00_00_00_2009_12_31_00_00_00.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2010-12-31T00:00:00+00:00'^^xsd:dateTime
+    ] ;
+    
+    ldes:retentionPolicy [
+        a ldes:RetentionPolicy ;
+        ldes:versionAmount 100
+    ] .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  ldes:immutable 'false'^^xsd:boolean ;
+  ldes:pollingInterval '3600'^^xsd:integer ;
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/USIS/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/USIS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/USIS/>;
+    dc:modified '2010-12-07T14:10:04'^^xsd:dateTime ;
+    skos:altLabel 'MSSI'^^xsd:string ;
+    skos:prefLabel 'Magnetic susceptibility SI units'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::USIS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UGPM/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UGPM/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UGPM/>;
+    dc:modified '2010-11-04T12:38:04'^^xsd:dateTime ;
+    skos:altLabel 'uGal/m'^^xsd:string ;
+    skos:prefLabel 'MicroGals per metre'@en ;
+    skos:definition 'A rate of change of one millionth part of a unit of gravitational acceleration equal to one centimetre per second per second over a distance of one metre.'@en ;
+    skos:notation 'SDN:P06::UGPM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/OHMM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/OHMM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/OHMM/>;
+    dc:modified '2010-11-04T12:00:15'^^xsd:dateTime ;
+    skos:altLabel 'ohm.m'^^xsd:string ;
+    skos:prefLabel 'Ohm metres'@en ;
+    skos:definition 'Electrical resistance expressed in Ohms of a one metre length of conductor. Ohm is the SI unit of electrical resistance defined as the electrical resistance offered by a current-carrying element that produces a voltage drop of one volt when a current of one ampere is flowing through it.'@en ;
+    skos:notation 'SDN:P06::OHMM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/PAMT/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/PAMT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/PAMT/>;
+    dc:modified '2010-10-11T15:01:07'^^xsd:dateTime ;
+    skos:altLabel 'Pa.m'^^xsd:string ;
+    skos:prefLabel 'Pascal metres'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::PAMT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UYMD/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UYMD/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UYMD/>;
+    dc:modified '2010-09-30T13:13:09'^^xsd:dateTime ;
+    skos:altLabel 'yyyymmdd'^^xsd:string ;
+    skos:prefLabel 'Gregorian date (yyyymmdd)'@en ;
+    skos:definition 'A date according to the Gregorian Calendar expressed as an 8-byte string with the year in bytes 1-4, month within year in bytes 5-6 and day within month in bytes 7-8.'@en ;
+    skos:notation 'SDN:P06::UYMD'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UHOR/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UHOR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UHOR/>;
+    dc:modified '2010-09-16T16:54:37'^^xsd:dateTime ;
+    skos:altLabel 'h'^^xsd:string ;
+    skos:prefLabel 'Hours'@en ;
+    skos:definition 'A time interval of sixty minutes or 3600 seconds.'@en ;
+    skos:notation 'SDN:P06::UHOR'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UKWN/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UKWN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UKWN/>;
+    dc:modified '2010-09-16T11:33:50'^^xsd:dateTime ;
+    skos:altLabel 'Unknown'^^xsd:string ;
+    skos:prefLabel 'Not known'@en ;
+    skos:definition 'A unit of measure exists, but it is not known.'@en ;
+    skos:notation 'SDN:P06::UKWN'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UDBZ/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UDBZ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UDBZ/>;
+    dc:modified '2010-09-16T11:33:50'^^xsd:dateTime ;
+    skos:altLabel 'dBZ'^^xsd:string ;
+    skos:prefLabel 'Decibels of Z'@en ;
+    skos:definition 'Radar reflectivity unit. Decibels with a reference level of 1mm^6/m^3, which is equal to a cubic micron.'@en ;
+    skos:notation 'SDN:P06::UDBZ'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UOHM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UOHM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UOHM/>;
+    dc:modified '2010-09-16T11:33:50'^^xsd:dateTime ;
+    skos:altLabel 'ohm'^^xsd:string ;
+    skos:prefLabel 'Ohms'@en ;
+    skos:definition 'SI unit of electrical resistance defined as the electrical resistance offered by a current-carrying element that produces a voltage drop of one volt when a current of one ampere is flowing through it.'@en ;
+    skos:notation 'SDN:P06::UOHM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/SQKM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/SQKM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/SQKM/>;
+    dc:modified '2010-07-20T08:23:28'^^xsd:dateTime ;
+    skos:altLabel 'km^2'^^xsd:string ;
+    skos:prefLabel 'Square kilometres'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::SQKM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/NPKM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/NPKM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/NPKM/>;
+    dc:modified '2010-07-20T08:21:54'^^xsd:dateTime ;
+    skos:altLabel '#/km^2'^^xsd:string ;
+    skos:prefLabel 'Number per square kilometre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::NPKM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MCUG/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MCUG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MCUG/>;
+    dc:modified '2010-04-12T14:53:07'^^xsd:dateTime ;
+    skos:altLabel 'ug/m^3'^^xsd:string ;
+    skos:prefLabel 'Micrograms per cubic metre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::MCUG'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/PSTR/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/PSTR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/PSTR/>;
+    dc:modified '2010-03-12T09:24:38'^^xsd:dateTime ;
+    skos:altLabel '/sr'^^xsd:string ;
+    skos:prefLabel 'per steradian'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::PSTR'^^xsd:string .
+

@@ -1,0 +1,229 @@
+
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2020_01_01_00_00_00_2020_12_31_00_00_00.ttl> .
+
+<>
+    a tree:Node ;
+    
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2019_01_01_00_00_00_2019_12_31_00_00_00.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2020-12-31T00:00:00+00:00'^^xsd:dateTime
+    ] ;
+    
+    ldes:retentionPolicy [
+        a ldes:RetentionPolicy ;
+        ldes:versionAmount 100
+    ] .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  ldes:immutable 'false'^^xsd:boolean ;
+  ldes:pollingInterval '3600'^^xsd:integer ;
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MILM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MILM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MILM/>;
+    dc:modified '2020-12-15T10:56:29'^^xsd:dateTime ;
+    skos:altLabel 'mm^2'^^xsd:string ;
+    skos:prefLabel 'Square millimetres'@en ;
+    skos:definition 'A unit of area defined as a square of one millimetre long on each side. It has a dimension of L2 where L is length. It can be converted to the corresponding standard SI unit area by multiplying its value by a factor of 10^-6.'@en ;
+    skos:notation 'SDN:P06::MILM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/KMHR/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/KMHR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/KMHR/>;
+    dc:modified '2020-11-25T11:15:04'^^xsd:dateTime ;
+    skos:altLabel 'km/hr'^^xsd:string ;
+    skos:prefLabel 'Kilometres per hour'@en ;
+    skos:definition 'A change in location of a distance of one thousand metres in an elapsed time of one hour (3600 seconds).'@en ;
+    skos:notation 'SDN:P06::KMHR'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MGRM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MGRM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MGRM/>;
+    dc:modified '2020-11-03T13:25:35'^^xsd:dateTime ;
+    skos:altLabel 'mg'^^xsd:string ;
+    skos:prefLabel 'Milligrams'@en ;
+    skos:definition '10^-6 of the SI unit of mass (kilogram) or 10^-3 grams.'@en ;
+    skos:notation 'SDN:P06::MGRM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/ATKG/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/ATKG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/ATKG/>;
+    dc:modified '2020-10-08T15:55:40'^^xsd:dateTime ;
+    skos:altLabel 'at/kg'^^xsd:string ;
+    skos:prefLabel 'Atoms per kilogram'@en ;
+    skos:definition 'Unit based on one atom in a SI standard unit of mass.'@en ;
+    skos:notation 'SDN:P06::ATKG'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MBQM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MBQM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MBQM/>;
+    dc:modified '2020-09-25T15:47:41'^^xsd:dateTime ;
+    skos:altLabel 'mBq/m^3'^^xsd:string ;
+    skos:prefLabel 'Millibecquerels per cubic metre'@en ;
+    skos:definition 'One radioactive disintegration per thousand seconds from an SI standard unit of volume. Equivalent microbecquerels per litre.'@en ;
+    skos:notation 'SDN:P06::MBQM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/SQUM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/SQUM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/SQUM/>;
+    dc:modified '2020-09-18T08:45:39'^^xsd:dateTime ;
+    skos:altLabel 'um^2'^^xsd:string ;
+    skos:prefLabel 'Square micrometres'@en ;
+    skos:definition 'A unit of area defined as a square of one micrometre long on each side. It has a dimension of L2 where L is length. It can be converted to the corresponding standard SI unit area by multiplying its value by a factor of 10^-12.'@en ;
+    skos:notation 'SDN:P06::SQUM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/DKPM/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/DKPM/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/DKPM/>;
+    dc:modified '2020-09-08T16:34:14'^^xsd:dateTime ;
+    skos:altLabel 'degK/m'^^xsd:string ;
+    skos:prefLabel 'Degrees Kelvin per metre'@en ;
+    skos:definition 'A rate of change of one unit on the Kelvin temperature scale per unit length of one metre.'@en ;
+    skos:notation 'SDN:P06::DKPM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/KPMT/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/KPMT/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/KPMT/>;
+    dc:modified '2020-09-08T16:25:00'^^xsd:dateTime ;
+    skos:altLabel 'K/m'^^xsd:string ;
+    skos:prefLabel 'Kelvins per metre'@en ;
+    skos:definition 'A change of temperature on the Kelvin temperature scale in one SI unit of length.'@en ;
+    skos:notation 'SDN:P06::KPMT'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UPKA/3/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UPKA/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UPKA/>;
+    dc:modified '2020-09-08T16:21:48'^^xsd:dateTime ;
+    skos:altLabel 'K'^^xsd:string ;
+    skos:prefLabel 'Kelvins'@en ;
+    skos:definition 'The base unit of temperature in the International System of Units.'@en ;
+    skos:notation 'SDN:P06::UPKA'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/DGPM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/DGPM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/DGPM/>;
+    dc:modified '2020-09-04T09:53:05'^^xsd:dateTime ;
+    skos:altLabel 'deg/m'^^xsd:string ;
+    skos:prefLabel 'Degrees per metre'@en ;
+    skos:definition 'A change of angle in one SI unit of length.'@en ;
+    skos:notation 'SDN:P06::DGPM'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/NHTR/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/NHTR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/NHTR/>;
+    dc:modified '2020-05-05T16:54:11'^^xsd:dateTime ;
+    skos:altLabel '#/ha'^^xsd:string ;
+    skos:prefLabel 'Number per hectare'@en ;
+    skos:definition 'Count of an entity or phenomenon\'s occurrence in 10,000 times the SI unit area (square metre).'@en ;
+    skos:notation 'SDN:P06::NHTR'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/HCTR/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/HCTR/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/HCTR/>;
+    dc:modified '2020-05-05T16:49:18'^^xsd:dateTime ;
+    skos:altLabel 'ha'^^xsd:string ;
+    skos:prefLabel 'Hectares'@en ;
+    skos:definition 'A non-SI unit of area equal to a square with 100-metre sides or 10,000 square metres.'@en ;
+    skos:notation 'SDN:P06::HCTR'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/AMPB/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/AMPB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/AMPB/>;
+    dc:modified '2020-04-07T10:42:31'^^xsd:dateTime ;
+    skos:altLabel 'A'^^xsd:string ;
+    skos:prefLabel 'Amperes'@en ;
+    skos:definition 'The SI base unit of electric current equal to a flow of one coulomb per second.'@en ;
+    skos:notation 'SDN:P06::AMPB'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/NAMP/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/NAMP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/NAMP/>;
+    dc:modified '2020-04-07T10:36:38'^^xsd:dateTime ;
+    skos:altLabel 'nA'^^xsd:string ;
+    skos:prefLabel 'Nanoamperes'@en ;
+    skos:definition 'An SI unit of electrical current equal to 10^−9 amperes.'@en ;
+    skos:notation 'SDN:P06::NAMP'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UAAA/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UAAA/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UAAA/>;
+    dc:modified '2020-04-07T09:57:38'^^xsd:dateTime ;
+    skos:altLabel 'deg'^^xsd:string ;
+    skos:prefLabel 'Degrees'@en ;
+    skos:definition 'A degree of arc or arc degree is a unit of measurement of a plane angle defined so that a full rotation is 360 degrees.'@en ;
+    skos:notation 'SDN:P06::UAAA'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/KGMH/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/KGMH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/KGMH/>;
+    dc:modified '2020-01-20T15:32:17'^^xsd:dateTime ;
+    skos:altLabel 'kg/m/h'^^xsd:string ;
+    skos:prefLabel 'Kilograms per metre per hour'@en ;
+    skos:definition 'One SI standard unit of mass over one SI standard unit of length over 3600 times one SI standard unit of time.'@en ;
+    skos:notation 'SDN:P06::KGMH'^^xsd:string .
+

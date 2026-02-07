@@ -1,0 +1,139 @@
+
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2021_01_01_00_00_00_2021_12_31_00_00_00.ttl> .
+
+<>
+    a tree:Node ;
+    
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2020_01_01_00_00_00_2020_12_31_00_00_00.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2021-12-31T00:00:00+00:00'^^xsd:dateTime
+    ] ;
+    
+    ldes:retentionPolicy [
+        a ldes:RetentionPolicy ;
+        ldes:versionAmount 100
+    ] .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  ldes:immutable 'false'^^xsd:boolean ;
+  ldes:pollingInterval '3600'^^xsd:integer ;
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UECA/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UECA/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UECA/>;
+    dc:modified '2021-08-09T12:20:40'^^xsd:dateTime ;
+    skos:altLabel 'S/m'^^xsd:string ;
+    skos:prefLabel 'Siemens per metre'@en ;
+    skos:definition 'The SI derived unit of electrical conductivity divided by the SI base unit of length.'@en ;
+    skos:notation 'SDN:P06::UECA'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/DCWK/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/DCWK/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/DCWK/>;
+    dc:modified '2021-06-09T16:32:32'^^xsd:dateTime ;
+    skos:altLabel 'degC.wk'^^xsd:string ;
+    skos:prefLabel 'Degrees Celsius weeks'@en ;
+    skos:definition 'Temperature multiplied by time. Used to express temperature accumulation over the duration of a week, also known as Degree Heating Weeks.'@en ;
+    skos:notation 'SDN:P06::DCWK'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/NTML/3/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/NTML/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/NTML/>;
+    dc:modified '2021-06-08T14:10:54'^^xsd:dateTime ;
+    skos:altLabel 'Nm'^^xsd:string ;
+    skos:prefLabel 'Nautical miles'@en ;
+    skos:definition 'A unit of length used to measure distance at sea, equivalent to 1852 standard SI units of length (metres).'@en ;
+    skos:notation 'SDN:P06::NTML'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/SQM3/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/SQM3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/SQM3/>;
+    dc:modified '2021-06-08T13:39:52'^^xsd:dateTime ;
+    skos:altLabel 'm^2/s^3'^^xsd:string ;
+    skos:prefLabel 'Square metres per second cubed'@en ;
+    skos:definition 'The SI unit of area, defined as a square of one metre long on each side, per cubic SI unit of time (seconds).'@en ;
+    skos:notation 'SDN:P06::SQM3'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MGSS/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MGSS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MGSS/>;
+    dc:modified '2021-04-11T23:23:37'^^xsd:dateTime ;
+    skos:altLabel 'mg/m^2/s'^^xsd:string ;
+    skos:prefLabel 'Milligrams per square metre per second'@en ;
+    skos:definition '10^-6 of the SI unit of mass (kilogram) per SI unit of area per SI unit of time.'@en ;
+    skos:notation 'SDN:P06::MGSS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MGCS/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MGCS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MGCS/>;
+    dc:modified '2021-04-11T23:11:21'^^xsd:dateTime ;
+    skos:altLabel 'mg/m^3/s'^^xsd:string ;
+    skos:prefLabel 'Milligrams per cubic metre per second'@en ;
+    skos:definition '10^-6 of the SI unit of mass (kilogram) per SI unit of volume per SI unit of time.'@en ;
+    skos:notation 'SDN:P06::MGCS'^^xsd:string .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MMSD/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MMSD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MMSD/>;
+    dc:modified '2021-04-11T23:00:09'^^xsd:dateTime ;
+    skos:altLabel 'mol/m^2/d'^^xsd:string ;
+    skos:prefLabel 'Moles per square metre per day'@en ;
+    skos:definition 'SI standard unit of amount of substance per SI unit area in an elapsed time of one day (86400 seconds).'@en ;
+    skos:notation 'SDN:P06::MMSD'^^xsd:string .
+
