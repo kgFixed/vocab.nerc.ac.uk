@@ -6,29 +6,29 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P02/2013_01_01_00_00_00_2013_12_31_00_00_00.ttl> .
+@base </P02/2013_01_01_00_00_00_2013_12_31_23_59_59.ttl.ttl> .
 
 <>
     a tree:Node ;
     
     tree:relation [
       a tree:LessThanRelation ;
-      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P02/2012_01_01_00_00_00_2012_12_31_00_00_00.ttl> ;
+      tree:node </P02/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl.ttl> ;
       tree:path dc:modified ;
-      tree:value '2013-12-31T00:00:00+00:00'^^xsd:dateTime
+      tree:value '2013-12-31T23:59:59'^^xsd:dateTime
     ] ;
     
     ldes:retentionPolicy [
         a ldes:RetentionPolicy ;
-        ldes:versionAmount 100
+        ldes:versionAmount 
     ] .
 
 <feed>
   a ldes:EventStream ;
   ldes:timestampPath dc:modified ;
   ldes:versionOfPath dc:isVersionOf ;
-  ldes:immutable 'false'^^xsd:boolean ;
-  ldes:pollingInterval '3600'^^xsd:integer ;
+  
+  
   tree:shape [
     a sh:NodeShape ;
     sh:nodeKind sh:IRI ;
@@ -67,20 +67,20 @@
   tree:view <> ;
   .
 
-<feed> tree:member <http://vocab.nerc.ac.uk/collection/P02/current/PREX/2/> .
-<http://vocab.nerc.ac.uk/collection/P02/current/PREX/2/>
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/PREX/2/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/PREX/2/>
     a skos:Concept ;
-    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P02/current/PREX/>;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/PREX/>;
     dc:modified '2013-11-15T10:30:47'^^xsd:dateTime ;
     skos:altLabel 'SeaLvl_Press'^^xsd:string ;
     skos:prefLabel 'Sea level expressed as pressure'@en ;
     skos:definition 'Measurements of the displacement of the water column surface from a fixed, stable reference expressed as either total pressure or sea pressure'@en ;
     skos:notation 'SDN:P02::PREX'^^xsd:string .
 
-<feed> tree:member <http://vocab.nerc.ac.uk/collection/P02/current/ZADX/5/> .
-<http://vocab.nerc.ac.uk/collection/P02/current/ZADX/5/>
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/ZADX/5/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/ZADX/5/>
     a skos:Concept ;
-    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P02/current/ZADX/>;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/ZADX/>;
     dc:modified '2013-08-01T09:07:37'^^xsd:dateTime ;
     skos:altLabel 'ZoobenthDryBiomass'^^xsd:string ;
     skos:prefLabel 'Zoobenthos dry weight biomass'@en ;
