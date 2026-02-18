@@ -1,0 +1,299 @@
+
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base </P02/2006_01_01_00_00_00_2006_12_31_23_59_59.ttl.ttl> .
+
+<>
+    a tree:Node ;
+    
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node </P02/2005_01_01_00_00_00_2005_12_31_23_59_59.ttl.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2006-12-31T23:59:59'^^xsd:dateTime
+    ] ;
+    
+    ldes:retentionPolicy [
+        a ldes:RetentionPolicy ;
+        ldes:versionAmount 
+    ] .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/BLEN/3/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/BLEN/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/BLEN/>;
+    dc:modified '2006-09-29T17:06:50'^^xsd:dateTime ;
+    skos:altLabel 'Animal_morph'^^xsd:string ;
+    skos:prefLabel 'Zooplankton and zoobenthos morphological parameters'@en ;
+    skos:definition 'Morphological parameters of zooplankton and zoobenthos (essentially any animal except for insects, earthworms or fish), such as size, shape and weight.  Benthic and planktonic animals have not been seggregated because there is a degree of overlap (eg shrimps).'@en ;
+    skos:notation 'SDN:P02::BLEN'^^xsd:string .
+
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/MBAN/2/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/MBAN/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/MBAN/>;
+    dc:modified '2006-09-29T16:58:04'^^xsd:dateTime ;
+    skos:altLabel 'Bath_Elev'^^xsd:string ;
+    skos:prefLabel 'Bathymetry and Elevation'@en ;
+    skos:definition 'Depth of the water column or elevation of land surface relative to sea surface, geoid or other datum'@en ;
+    skos:notation 'SDN:P02::MBAN'^^xsd:string .
+
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/ATDP/1/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/ATDP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/ATDP/>;
+    dc:modified '2006-07-07T12:36:43'^^xsd:dateTime ;
+    skos:altLabel 'At_Dep_Rate'^^xsd:string ;
+    skos:prefLabel 'Atmospheric deposition rates'@en ;
+    skos:definition 'Fluxes of chemical species from the atmosphere to sea or land surface including precipitation and aerosol deposition but excluding fluxes due to exchange of gases'@en ;
+    skos:notation 'SDN:P02::ATDP'^^xsd:string .
+
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/SSCN/1/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/SSCN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/SSCN/>;
+    dc:modified '2006-06-28T17:37:15'^^xsd:dateTime ;
+    skos:altLabel 'Side_Scan'^^xsd:string ;
+    skos:prefLabel 'Side-scan sonar'@en ;
+    skos:definition 'A technique for mapping the morphology of the seafloor using a sonar swath projected sideways from a towed underwater vehicle.'@en ;
+    skos:notation 'SDN:P02::SSCN'^^xsd:string .
+
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/SPAG/1/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/SPAG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/SPAG/>;
+    dc:modified '2006-06-21T09:23:05'^^xsd:dateTime ;
+    skos:altLabel 'Speleo_Age'^^xsd:string ;
+    skos:prefLabel 'Speleothem age'@en ;
+    skos:definition 'Measured or stratigraphically estimated ages of secondary mineral deposits in caves. This includes stalactites, stalagmites, flowstone, and crystal growths.'@en ;
+    skos:notation 'SDN:P02::SPAG'^^xsd:string .
+
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/HEAV/1/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/HEAV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/HEAV/>;
+    dc:modified '2006-06-13T15:25:06'^^xsd:dateTime ;
+    skos:altLabel 'WaveHeight'^^xsd:string ;
+    skos:prefLabel 'Wave height estimates'@en ;
+    skos:definition 'Measurements of wave height that are not based on the statistical analysis of wave records, such as heave, surface roughness and visual height estimates'@en ;
+    skos:notation 'SDN:P02::HEAV'^^xsd:string .
+
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/CPRP/2/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/CPRP/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/CPRP/>;
+    dc:modified '2006-06-13T14:28:34'^^xsd:dateTime ;
+    skos:altLabel 'Precip+Evap'^^xsd:string ;
+    skos:prefLabel 'Precipitation and evaporation'@en ;
+    skos:definition 'Parameters relating to all kinds of precipitation (rain, snow, etc.) and water loss from the surface of the Earth'@en ;
+    skos:notation 'SDN:P02::CPRP'^^xsd:string .
+
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/CBSD/2/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/CBSD/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/CBSD/>;
+    dc:modified '2006-06-13T09:21:23'^^xsd:dateTime ;
+    skos:altLabel 'Sed_Carb'^^xsd:string ;
+    skos:prefLabel 'Carbon concentrations in sediment'@en ;
+    skos:definition 'Concentrations of total, organic and inorganic carbon per unit weight of sediment.  Sediment is understood to be the solid phase of the bed, including the recently settled material sometimes known as fluff collected from the bed surface.'@en ;
+    skos:notation 'SDN:P02::CBSD'^^xsd:string .
+
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/OPFX/2/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/OPFX/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/OPFX/>;
+    dc:modified '2006-06-13T09:18:26'^^xsd:dateTime ;
+    skos:altLabel 'WC_SedFlux_nonmet'^^xsd:string ;
+    skos:prefLabel 'Sedimentation flux of non-metallic inorganic species in the water column'@en ;
+    skos:definition 'Quantity of any inorganic species such as silicon (opal) and phosphorus passing through unit area of the water column in unit time. Carbon and nitrogen are regarded as organic and explicitly excluded'@en ;
+    skos:notation 'SDN:P02::OPFX'^^xsd:string .
+
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/PTOX/1/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/PTOX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/PTOX/>;
+    dc:modified '2006-06-05T14:32:17'^^xsd:dateTime ;
+    skos:altLabel 'Phycotox_biota'^^xsd:string ;
+    skos:prefLabel 'Concentration of phycotoxins in biota'@en ;
+    skos:definition 'Parameters associated with the concentration of algae-generated toxins in either whole organisms or their constituent parts'@en ;
+    skos:notation 'SDN:P02::PTOX'^^xsd:string .
+
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/R410/2/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/R410/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/R410/>;
+    dc:modified '2006-06-05T14:11:44'^^xsd:dateTime ;
+    skos:altLabel 'Ocean_clr'^^xsd:string ;
+    skos:prefLabel 'Ocean colour and earth-leaving visible waveband spectral radiation'@en ;
+    skos:definition 'Parameters associated with the measurement of ocean colour, including visible waveband satellite spectral radiometer measurements, their calibration measurements (spectral water-leaving radiance and reflectance) and chart colour estimates.'@en ;
+    skos:notation 'SDN:P02::R410'^^xsd:string .
+
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/VSRA/2/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/VSRA/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/VSRA/>;
+    dc:modified '2006-06-05T14:02:32'^^xsd:dateTime ;
+    skos:altLabel 'Atm_VisRad'^^xsd:string ;
+    skos:prefLabel 'Visible waveband radiance and irradiance measurements in the atmosphere'@en ;
+    skos:definition 'Includes visible waveband measurements at discrete wavelengths and PAR integrated values as photon and energy fluxes. Does not include satellite radiometer and associated calibration parameters (e.g. water-leaving radiance and reflectance)'@en ;
+    skos:notation 'SDN:P02::VSRA'^^xsd:string .
+
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/OZON/1/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/OZON/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/OZON/>;
+    dc:modified '2006-06-05T12:27:47'^^xsd:dateTime ;
+    skos:altLabel 'Atm_O3_Oxy'^^xsd:string ;
+    skos:prefLabel 'Ozone and oxygen concentrations in the atmosphere'@en ;
+    skos:definition 'Ozone and oxygen concentration parameters in any phase of the atmosphere (but usually the gaseous phase)'@en ;
+    skos:notation 'SDN:P02::OZON'^^xsd:string .
+
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/ACO2/2/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/ACO2/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/ACO2/>;
+    dc:modified '2006-06-05T12:17:29'^^xsd:dateTime ;
+    skos:altLabel 'Atm_pCO2'^^xsd:string ;
+    skos:prefLabel 'Carbon monoxide and dioxide concentrations in the atmosphere'@en ;
+    skos:definition 'CO and CO2 concentration parameters in any phase of the atmosphere (but usuall the gaseous phase). Includes pCO2.'@en ;
+    skos:notation 'SDN:P02::ACO2'^^xsd:string .
+
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/SUAT/2/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/SUAT/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/SUAT/>;
+    dc:modified '2006-06-05T11:38:28'^^xsd:dateTime ;
+    skos:altLabel 'Sulph_At'^^xsd:string ;
+    skos:prefLabel 'Sulphur species concentrations in the atmosphere'@en ;
+    skos:definition 'Concentration of sulphur species (element or compounds) in any phase of the atmosphere. Includes sulphur dioxide.'@en ;
+    skos:notation 'SDN:P02::SUAT'^^xsd:string .
+
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/CBSP/2/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/CBSP/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/CBSP/>;
+    dc:modified '2006-05-26T14:55:39'^^xsd:dateTime ;
+    skos:altLabel 'SPM_C'^^xsd:string ;
+    skos:prefLabel 'Carbon concentrations in suspended particulate material'@en ;
+    skos:definition 'Concentrations of total, organic and inorganic carbon per unit weight of suspended particulate material collected by water column filtration, centrifugation or sediment trapping.'@en ;
+    skos:notation 'SDN:P02::CBSP'^^xsd:string .
+
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/COAS/1/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/COAS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/COAS/>;
+    dc:modified '2006-05-26T14:47:05'^^xsd:dateTime ;
+    skos:altLabel 'Land_map'^^xsd:string ;
+    skos:prefLabel 'Terrestrial mapping'@en ;
+    skos:definition 'Parameters relating to the mapping of terrestrial features, including coastlines'@en ;
+    skos:notation 'SDN:P02::COAS'^^xsd:string .
+
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/LWET/1/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/LWET/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/LWET/>;
+    dc:modified '2006-05-26T13:36:40'^^xsd:dateTime ;
+    skos:altLabel 'LandWet'^^xsd:string ;
+    skos:prefLabel 'Terrestrial water content'@en ;
+    skos:definition 'Parameters relating to the water held by land masses such as soil and vegetation moisture content'@en ;
+    skos:notation 'SDN:P02::LWET'^^xsd:string .
+
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/ATPC/2/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/ATPC/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/ATPC/>;
+    dc:modified '2006-05-26T13:26:07'^^xsd:dateTime ;
+    skos:altLabel 'At_Part'^^xsd:string ;
+    skos:prefLabel 'Atmospheric particulates'@en ;
+    skos:definition 'Parameters quantifying and categorising the particulate phases (solids and aerosols) of the atmosphere, excluding chemical composition'@en ;
+    skos:notation 'SDN:P02::ATPC'^^xsd:string .
+
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/LVEG/1/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/LVEG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/LVEG/>;
+    dc:modified '2006-05-26T10:18:46'^^xsd:dateTime ;
+    skos:altLabel 'LandVeg'^^xsd:string ;
+    skos:prefLabel 'Land vegetation'@en ;
+    skos:definition 'Parameters relating to land (including marshes and the intertidal zone) vegetation'@en ;
+    skos:notation 'SDN:P02::LVEG'^^xsd:string .
+
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/LSST/1/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/LSST/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/LSST/>;
+    dc:modified '2006-05-26T10:16:40'^^xsd:dateTime ;
+    skos:altLabel 'LandTemp'^^xsd:string ;
+    skos:prefLabel 'Land surface temperature'@en ;
+    skos:definition 'Parameters relating to land surface temperature including fire and other hot spot location'@en ;
+    skos:notation 'SDN:P02::LSST'^^xsd:string .
+
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/ATVS/1/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/ATVS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/ATVS/>;
+    dc:modified '2006-05-26T09:57:58'^^xsd:dateTime ;
+    skos:altLabel 'AtmosVis'^^xsd:string ;
+    skos:prefLabel 'Atmospheric visibility and transparency'@en ;
+    skos:definition 'Parameters relating to atmospheric clarity, such as optical transmittance/attenuance, and resultant visibility'@en ;
+    skos:notation 'SDN:P02::ATVS'^^xsd:string .
+
+<feed> tree:member <http://vocabdev.nerc.ac.uk/collection/P02/current/IAGE/1/> .
+<http://vocabdev.nerc.ac.uk/collection/P02/current/IAGE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocabdev.nerc.ac.uk/collection/P02/current/IAGE/>;
+    dc:modified '2006-02-20T11:55:04'^^xsd:dateTime ;
+    skos:altLabel 'Age_Ice'^^xsd:string ;
+    skos:prefLabel 'Ice age'@en ;
+    skos:definition 'Measured or stratigraphically estimated age of ice'@en ;
+    skos:notation 'SDN:P02::IAGE'^^xsd:string .
+
