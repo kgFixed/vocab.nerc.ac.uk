@@ -1,0 +1,174 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P24/2011_01_01_00_00_00_2011_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P24/current/PERVOL/1/> .
+<http://vocab.nerc.ac.uk/collection/P24/current/PERVOL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P24/current/PERVOL/>;
+    dc:modified '2011-11-18T11:21:07'^^xsd:dateTime ;
+    skos:altLabel '/[L*L*L]'^^xsd:string ;
+    skos:prefLabel '/[length*length*length]'@en ;
+    skos:definition 'Per the cube of the fundamental dimension of length known as volume'@en ;
+    skos:notation 'SDN:P24::PERVOL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P24/current/PERAREA/1/> .
+<http://vocab.nerc.ac.uk/collection/P24/current/PERAREA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P24/current/PERAREA/>;
+    dc:modified '2011-11-18T11:21:07'^^xsd:dateTime ;
+    skos:altLabel '/[L*L]'^^xsd:string ;
+    skos:prefLabel '/[length*length]'@en ;
+    skos:definition 'Per the square of the fundamental dimension of length known as area'@en ;
+    skos:notation 'SDN:P24::PERAREA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P24/current/PERTIME/1/> .
+<http://vocab.nerc.ac.uk/collection/P24/current/PERTIME/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P24/current/PERTIME/>;
+    dc:modified '2011-11-18T11:21:07'^^xsd:dateTime ;
+    skos:altLabel '/[T]'^^xsd:string ;
+    skos:prefLabel '/[time]'@en ;
+    skos:definition 'Per the fundamental dimension of time'@en ;
+    skos:notation 'SDN:P24::PERTIME'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P24/current/DIMLESS/1/> .
+<http://vocab.nerc.ac.uk/collection/P24/current/DIMLESS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P24/current/DIMLESS/>;
+    dc:modified '2011-11-18T11:21:07'^^xsd:dateTime ;
+    skos:altLabel '[D]'^^xsd:string ;
+    skos:prefLabel '[dimensionless]'@en ;
+    skos:definition 'The concept of dimension does not apply'@en ;
+    skos:notation 'SDN:P24::DIMLESS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P24/current/KELVIN/1/> .
+<http://vocab.nerc.ac.uk/collection/P24/current/KELVIN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P24/current/KELVIN/>;
+    dc:modified '2011-11-18T11:21:07'^^xsd:dateTime ;
+    skos:altLabel '[K]'^^xsd:string ;
+    skos:prefLabel '[temperature]'@en ;
+    skos:definition 'The fundamental dimension of the amount of hotness'@en ;
+    skos:notation 'SDN:P24::KELVIN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P24/current/VOL/1/> .
+<http://vocab.nerc.ac.uk/collection/P24/current/VOL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P24/current/VOL/>;
+    dc:modified '2011-11-18T11:21:07'^^xsd:dateTime ;
+    skos:altLabel '[L*L*L]'^^xsd:string ;
+    skos:prefLabel '[length*length*length]'@en ;
+    skos:definition 'The cubeof the fundamental dimension of distance known as volume'@en ;
+    skos:notation 'SDN:P24::VOL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P24/current/AREA/1/> .
+<http://vocab.nerc.ac.uk/collection/P24/current/AREA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P24/current/AREA/>;
+    dc:modified '2011-11-18T11:21:07'^^xsd:dateTime ;
+    skos:altLabel '[L*L]'^^xsd:string ;
+    skos:prefLabel '[length*length]'@en ;
+    skos:definition 'The square of the fundamental dimension of distance known as area'@en ;
+    skos:notation 'SDN:P24::AREA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P24/current/SPEED/1/> .
+<http://vocab.nerc.ac.uk/collection/P24/current/SPEED/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P24/current/SPEED/>;
+    dc:modified '2011-11-18T11:21:07'^^xsd:dateTime ;
+    skos:altLabel '[L]/[T]'^^xsd:string ;
+    skos:prefLabel '[length]/[time]'@en ;
+    skos:definition 'Fundamental dimension of distance per fundamental dimension of time known as speed'@en ;
+    skos:notation 'SDN:P24::SPEED'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P24/current/NMASS/1/> .
+<http://vocab.nerc.ac.uk/collection/P24/current/NMASS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P24/current/NMASS/>;
+    dc:modified '2011-11-18T11:21:07'^^xsd:dateTime ;
+    skos:altLabel '[M]'^^xsd:string ;
+    skos:prefLabel '[mass]'@en ;
+    skos:definition 'The fundamental dimension of heaviness'@en ;
+    skos:notation 'SDN:P24::NMASS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P24/current/MSPVOL/1/> .
+<http://vocab.nerc.ac.uk/collection/P24/current/MSPVOL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P24/current/MSPVOL/>;
+    dc:modified '2011-11-18T11:21:07'^^xsd:dateTime ;
+    skos:altLabel '[M]/[L*L*L]'^^xsd:string ;
+    skos:prefLabel '[mass]/[length*length*length]'@en ;
+    skos:definition 'The fundamental dimension of heaviness per the cube of the fundamental dimension of distance known as volume'@en ;
+    skos:notation 'SDN:P24::MSPVOL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P24/current/MSPAREA/1/> .
+<http://vocab.nerc.ac.uk/collection/P24/current/MSPAREA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P24/current/MSPAREA/>;
+    dc:modified '2011-11-18T11:21:07'^^xsd:dateTime ;
+    skos:altLabel '[M]/[L*L]'^^xsd:string ;
+    skos:prefLabel '[mass]/[length*length]'@en ;
+    skos:definition 'The fundamental dimension of heaviness per the square of the fundamental dimension of distance known as area'@en ;
+    skos:notation 'SDN:P24::MSPAREA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P24/current/NASSMASS/1/> .
+<http://vocab.nerc.ac.uk/collection/P24/current/NASSMASS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P24/current/NASSMASS/>;
+    dc:modified '2011-11-18T11:21:07'^^xsd:dateTime ;
+    skos:altLabel '[M]/[M]'^^xsd:string ;
+    skos:prefLabel '[mass]/[mass]'@en ;
+    skos:definition 'The fundamental dimension of heaviness per fundamental dimension of heaviness'@en ;
+    skos:notation 'SDN:P24::NASSMASS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P24/current/LENGTH/1/> .
+<http://vocab.nerc.ac.uk/collection/P24/current/LENGTH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P24/current/LENGTH/>;
+    dc:modified '2011-10-26T15:30:12'^^xsd:dateTime ;
+    skos:altLabel '[L]'^^xsd:string ;
+    skos:prefLabel '[length]'@en ;
+    skos:definition 'Fundamental dimension of distance'@en ;
+    skos:notation 'SDN:P24::LENGTH'^^xsd:string .

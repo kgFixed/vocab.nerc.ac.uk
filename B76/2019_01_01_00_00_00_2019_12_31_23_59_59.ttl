@@ -1,0 +1,136 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/B76/2019_01_01_00_00_00_2019_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/B76/2018_01_01_00_00_00_2018_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2019-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B76/current/B7600022/1/> .
+<http://vocab.nerc.ac.uk/collection/B76/current/B7600022/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B76/current/B7600022/>;
+    dc:modified '2019-09-06T13:13:15'^^xsd:dateTime ;
+    skos:altLabel 'BAS SUCS'^^xsd:string ;
+    skos:prefLabel 'British Antarctic Survey Shallow Underwater Camera System {SUCS} benthic node'@en ;
+    skos:definition 'A camera system developed by the British Antarctic Survey (BAS). The system consists of an underwater tripod which holds an underwater housing unit fitted with a camera, electronics and a stand-alone light. The tripod is directly connected to a conductive cable via a Chinese finger. The cable is spooled from a platform on a small winch via a slip-ring connected to a deck unit. The deck unit is connected to a PC which runs a MatLab GUI to display and control the camera functions. The system works to depth up to 500m, showing a black and white live low resolution video stream and can take colour high resolution stills.'@en ;
+    skos:notation 'SDN:B76::B7600022'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B76/current/B7600021/1/> .
+<http://vocab.nerc.ac.uk/collection/B76/current/B7600021/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B76/current/B7600021/>;
+    dc:modified '2019-08-06T09:07:08'^^xsd:dateTime ;
+    skos:altLabel 'Autosub ALR1500'^^xsd:string ;
+    skos:prefLabel 'National Oceanography Centre Autosub Long Range 1500 {ALR1500} autonomous underwater vehicle'@en ;
+    skos:definition 'An autonomous underwater vehicle (AUV) by the National Oceanography Centre that has increased payload power capacity and operational speed. To achieve this, it uses a single central pressure vessel that increases buoyancy, allowing more batteries to be installed into the vehicle, and shallow depth rating (1500 m), making it optimised for long range missions such as surveying the continental shelf and upper slope or under ice. ALR may carry a wide range of sensors and samplers, including CTD, optical and chemical sensors, ADCP, altimeter, heading and attitude sensors. Data is transmitted via Iridium SBD format messages and stored on the vehicles internal data logger.'@en ;
+    skos:notation 'SDN:B76::B7600021'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B76/current/B7600020/3/> .
+<http://vocab.nerc.ac.uk/collection/B76/current/B7600020/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B76/current/B7600020/>;
+    dc:modified '2019-07-19T10:56:06'^^xsd:dateTime ;
+    skos:altLabel 'Autosub ALR6000'^^xsd:string ;
+    skos:prefLabel 'National Oceanography Centre Autosub Long Range 6000 {ALR6000} autonomous underwater vehicle'@en ;
+    skos:definition 'An autonomous underwater vehicle (AUV) by the National Oceanography Centre. The ALR has a depth rating of 6000m and mission range of 2000km. It is designed for deployments consisting of multiple months by using efficient propulsion at slow speed (0.4 ms-1). ALR may carry a wide range of sensors and samplers, including CTD, optical and chemical sensors, ADCP, altimeter, heading and attitude sensors. Data is transmitted via Iridium SBD format messages and stored on the vehicles internal data logger.'@en ;
+    skos:notation 'SDN:B76::B7600020'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B76/current/B7600017/1/> .
+<http://vocab.nerc.ac.uk/collection/B76/current/B7600017/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B76/current/B7600017/>;
+    dc:modified '2019-05-10T13:43:59'^^xsd:dateTime ;
+    skos:altLabel 'PAP-1'^^xsd:string ;
+    skos:prefLabel 'National Oceanography Centre PAP-1 mooring'@en ;
+    skos:definition 'A fixed-point mooring that formed part of the Porcupine Abyssal Plain Sustained Observatory (PAP-SO). It was initially designed for upper ocean biogeochemical measurements. The design was in use between 2002 and 2006 when it underwent a major re-configuration to a full depth mooring attached to a surface met buoy, to include physical measurements and to transmit data in near-real time. An \'S\' tether configuration was also applied to help the mooring better withstand the extremes of the environment it is in.'@en ;
+    skos:notation 'SDN:B76::B7600017'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B76/current/B7600019/1/> .
+<http://vocab.nerc.ac.uk/collection/B76/current/B7600019/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B76/current/B7600019/>;
+    dc:modified '2019-05-10T13:43:59'^^xsd:dateTime ;
+    skos:altLabel 'PAP-2'^^xsd:string ;
+    skos:prefLabel 'National Oceanography Centre PAP-2 mooring'@en ;
+    skos:definition 'A fixed-point mooring that formed part of the Porcupine Abyssal Plain Sustained Observatory (PAP-SO). It was designed for upper ocean physical measurements. Data were transmitted in near real-time. The design was in use between 2002 and 2006 when it underwent a major re-configuration.'@en ;
+    skos:notation 'SDN:B76::B7600019'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B76/current/B7600018/1/> .
+<http://vocab.nerc.ac.uk/collection/B76/current/B7600018/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B76/current/B7600018/>;
+    dc:modified '2019-05-10T13:43:59'^^xsd:dateTime ;
+    skos:altLabel 'PAP-3'^^xsd:string ;
+    skos:prefLabel 'National Oceanography Centre PAP-3 mooring'@en ;
+    skos:definition 'A sub-surface, fixed-point sediment trap mooring that forms part of the Porcupine Abyssal Plain Sustained Observatory (PAP-SO). It is designed for particle flux and current measurements. The design has been in use since 1998.'@en ;
+    skos:notation 'SDN:B76::B7600018'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B76/current/B7600016/1/> .
+<http://vocab.nerc.ac.uk/collection/B76/current/B7600016/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B76/current/B7600016/>;
+    dc:modified '2019-03-18T09:06:23'^^xsd:dateTime ;
+    skos:altLabel 'NOC modified spar buoy'^^xsd:string ;
+    skos:prefLabel 'National Oceanography Centre [modified length and strength] {Bubble Buoy} spar buoy'@en ;
+    skos:definition 'Modified version of the standard spar buoy designed by the National Oceanography Centre (NOC) also known as Bubble Buoy. Strengthened and lengthened structure in order to carry acoustic resonators that measure sub-surface bubble populations.'@en ;
+    skos:notation 'SDN:B76::B7600016'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B76/current/B7600015/1/> .
+<http://vocab.nerc.ac.uk/collection/B76/current/B7600015/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B76/current/B7600015/>;
+    dc:modified '2019-03-18T09:03:05'^^xsd:dateTime ;
+    skos:altLabel 'NOC spar buoy'^^xsd:string ;
+    skos:prefLabel 'National Oceanography Centre [standard] spar buoy'@en ;
+    skos:definition 'A custom-built spar buoy platform designed to measure waves, wave breaking and whitecaps in-situ using capacitance wave wires. The main body of the buoy consists of two sealed sections of aluminium alloy tubing, with the lower section being 6 m long and 25 cm in diameter, and the upper section being 4 m long and 10 cm in diameter. The wave wires are mounted along the upper section and the buoy is ballasted so that the wires are half submerged, on average. A sealed dome is mounted at the top of the buoy, and this contains the cameras, buoy motion sensors, and electronics for the wave wires. The acoustic and optical systems are distributed along the length of the submerged sections, and have separate electronics housing near the base of the buoy. At the bottom of the spar are two hexagonal damping plates that act to increase the natural period of oscillation of the spar to about 30 s. The buoy has an overall length of 11 m and, including all instrumentation, a total weight in air of approximately 440 kg. It can carry enough batteries to operate for 5 days at a time.'@en ;
+    skos:notation 'SDN:B76::B7600015'^^xsd:string .

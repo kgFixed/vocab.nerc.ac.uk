@@ -1,0 +1,100 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S05/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S05/2019_01_01_00_00_00_2019_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2020-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050227/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050227/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050227/>;
+    dc:modified '2020-10-20T21:35:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'classification to a term from the Marine Strategy Framework Directive broad habitat types (Commission Decision (EU)2017/848)'@en ;
+    skos:definition 'The data or information was reported using terms defined in the Broad habitat types vocabulary http://dd.eionet.europa.eu/vocabulary/msfd/broadHabitatTypes/ released 24 Oct 2017 14:47:22.'@en ;
+    skos:notation 'SDN:S05::S050227'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050226/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050226/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050226/>;
+    dc:modified '2020-10-20T21:31:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'classification to a term from the EMODnet Human Activities vocabulary (SDN:HA2::)'@en ;
+    skos:definition 'The data or information was reported using terms defined in the EMODnet Human Activities vocabulary vocab.nerc.ac.uk/collection/HA2.'@en ;
+    skos:notation 'SDN:S05::S050226'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050225/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050225/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050225/>;
+    dc:modified '2020-06-29T14:35:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'processing in near real-time'@en ;
+    skos:definition 'The data have been transformed using only fully automated data processing techniques and within the constraints of a near-real time data system with respect to transmission volume and processing power.'@en ;
+    skos:notation 'SDN:S05::S050225'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050224/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050224/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050224/>;
+    dc:modified '2020-02-19T17:33:58'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'conversion to WMO code using table 4300'@en ;
+    skos:definition 'Classification into classes with standardised boundaries specified in World Meteorological Organisation published table 4300.'@en ;
+    skos:notation 'SDN:S05::S050224'^^xsd:string .

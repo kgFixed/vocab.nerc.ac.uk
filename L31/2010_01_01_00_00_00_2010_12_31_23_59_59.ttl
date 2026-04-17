@@ -1,0 +1,102 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L31/2010_01_01_00_00_00_2010_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L31/current/4/1/> .
+<http://vocab.nerc.ac.uk/collection/L31/current/4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L31/current/4/>;
+    dc:modified '2010-09-21T10:29:30'^^xsd:dateTime ;
+    skos:altLabel 'bad'^^xsd:string ;
+    skos:prefLabel 'Not usable'@en ;
+    skos:definition 'The data object (such as a seismic section) quality is so poor that it cannot be exploited'@en ;
+    skos:notation 'SDN:L31::4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L31/current/2/1/> .
+<http://vocab.nerc.ac.uk/collection/L31/current/2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L31/current/2/>;
+    dc:modified '2010-09-21T10:29:30'^^xsd:dateTime ;
+    skos:altLabel 'fair'^^xsd:string ;
+    skos:prefLabel 'Fair seismic section'@en ;
+    skos:definition 'The data object (such as a seismic section)is noisy but the noise does not obliterate signals so they can be followed'@en ;
+    skos:notation 'SDN:L31::2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L31/current/1/1/> .
+<http://vocab.nerc.ac.uk/collection/L31/current/1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L31/current/1/>;
+    dc:modified '2010-09-21T10:29:30'^^xsd:dateTime ;
+    skos:altLabel 'good'^^xsd:string ;
+    skos:prefLabel 'Good seismic section'@en ;
+    skos:definition 'The data object (such as a seismic section) shows many signals and almost no noises'@en ;
+    skos:notation 'SDN:L31::1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L31/current/3/1/> .
+<http://vocab.nerc.ac.uk/collection/L31/current/3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L31/current/3/>;
+    dc:modified '2010-09-21T10:29:30'^^xsd:dateTime ;
+    skos:altLabel 'poor'^^xsd:string ;
+    skos:prefLabel 'Poor seismic section'@en ;
+    skos:definition 'Problems with acquisition parameter settings, or noise , or geological settings do not allow signals in the data object (such as a seismic section) to be highlighted'@en ;
+    skos:notation 'SDN:L31::3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L31/current/0/1/> .
+<http://vocab.nerc.ac.uk/collection/L31/current/0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L31/current/0/>;
+    dc:modified '2010-09-21T10:29:30'^^xsd:dateTime ;
+    skos:altLabel 'unknown'^^xsd:string ;
+    skos:prefLabel 'No quality control'@en ;
+    skos:definition 'No quality control procedures have been applied to the data object (such as a seismic section). This is the initial status for all data objects entering the working archive.'@en ;
+    skos:notation 'SDN:L31::0'^^xsd:string .

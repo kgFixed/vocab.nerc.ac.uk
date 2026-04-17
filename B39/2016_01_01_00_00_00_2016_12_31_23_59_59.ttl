@@ -1,0 +1,255 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/B39/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B39/current/time/2/> .
+<http://vocab.nerc.ac.uk/collection/B39/current/time/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B39/current/time/>;
+    dc:modified '2016-03-16T15:01:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'time as days since 1899-12-30T00:00:00Z'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:B39::time'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B39/current/logfa/1/> .
+<http://vocab.nerc.ac.uk/collection/B39/current/logfa/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B39/current/logfa/>;
+    dc:modified '2016-01-13T22:20:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'speed through water'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:B39::logfa'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B39/current/spar/1/> .
+<http://vocab.nerc.ac.uk/collection/B39/current/spar/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B39/current/spar/>;
+    dc:modified '2016-01-13T22:20:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'starboard photosynthetically active radiation'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:B39::spar'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B39/current/stir/1/> .
+<http://vocab.nerc.ac.uk/collection/B39/current/stir/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B39/current/stir/>;
+    dc:modified '2016-01-13T22:20:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'starboard total irradiance'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:B39::stir'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B39/current/truewinddir/1/> .
+<http://vocab.nerc.ac.uk/collection/B39/current/truewinddir/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B39/current/truewinddir/>;
+    dc:modified '2016-01-13T22:20:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'earthrelativewinddirection'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:B39::truewinddir'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B39/current/truewindspeed/1/> .
+<http://vocab.nerc.ac.uk/collection/B39/current/truewindspeed/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B39/current/truewindspeed/>;
+    dc:modified '2016-01-13T22:20:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'earth relative wind speed'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:B39::truewindspeed'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B39/current/pressure/1/> .
+<http://vocab.nerc.ac.uk/collection/B39/current/pressure/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B39/current/pressure/>;
+    dc:modified '2016-01-13T22:20:42'^^xsd:dateTime ;
+    skos:altLabel 'air_pressure'^^xsd:string ;
+    skos:prefLabel 'air pressure'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:B39::pressure'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B39/current/airtemp/1/> .
+<http://vocab.nerc.ac.uk/collection/B39/current/airtemp/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B39/current/airtemp/>;
+    dc:modified '2016-01-13T22:20:42'^^xsd:dateTime ;
+    skos:altLabel 'air_temperature'^^xsd:string ;
+    skos:prefLabel 'air temperature'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:B39::airtemp'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B39/current/fluorescence/1/> .
+<http://vocab.nerc.ac.uk/collection/B39/current/fluorescence/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B39/current/fluorescence/>;
+    dc:modified '2016-01-13T22:20:42'^^xsd:dateTime ;
+    skos:altLabel 'fluorescence_in_sea_water'^^xsd:string ;
+    skos:prefLabel 'fluorescence'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:B39::fluorescence'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B39/current/latitude/1/> .
+<http://vocab.nerc.ac.uk/collection/B39/current/latitude/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B39/current/latitude/>;
+    dc:modified '2016-01-13T22:20:42'^^xsd:dateTime ;
+    skos:altLabel 'latitude'^^xsd:string ;
+    skos:prefLabel 'latitude'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:B39::latitude'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B39/current/longitude/1/> .
+<http://vocab.nerc.ac.uk/collection/B39/current/longitude/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B39/current/longitude/>;
+    dc:modified '2016-01-13T22:20:42'^^xsd:dateTime ;
+    skos:altLabel 'longitude'^^xsd:string ;
+    skos:prefLabel 'longitude'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:B39::longitude'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B39/current/ppar/1/> .
+<http://vocab.nerc.ac.uk/collection/B39/current/ppar/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B39/current/ppar/>;
+    dc:modified '2016-01-13T22:20:42'^^xsd:dateTime ;
+    skos:altLabel 'photosynthetically_active_radiation'^^xsd:string ;
+    skos:prefLabel 'port photosynthetically active radiation'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:B39::ppar'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B39/current/gndcourse/1/> .
+<http://vocab.nerc.ac.uk/collection/B39/current/gndcourse/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B39/current/gndcourse/>;
+    dc:modified '2016-01-13T22:20:42'^^xsd:dateTime ;
+    skos:altLabel 'platform_course'^^xsd:string ;
+    skos:prefLabel 'course over the ground'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:B39::gndcourse'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B39/current/heading/1/> .
+<http://vocab.nerc.ac.uk/collection/B39/current/heading/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B39/current/heading/>;
+    dc:modified '2016-01-13T22:20:42'^^xsd:dateTime ;
+    skos:altLabel 'platform_orientation'^^xsd:string ;
+    skos:prefLabel 'ships heading'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:B39::heading'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B39/current/gndspeed/1/> .
+<http://vocab.nerc.ac.uk/collection/B39/current/gndspeed/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B39/current/gndspeed/>;
+    dc:modified '2016-01-13T22:20:42'^^xsd:dateTime ;
+    skos:altLabel 'platform_speed_wrt_ground'^^xsd:string ;
+    skos:prefLabel 'speed over the ground'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:B39::gndspeed'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B39/current/humidity/1/> .
+<http://vocab.nerc.ac.uk/collection/B39/current/humidity/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B39/current/humidity/>;
+    dc:modified '2016-01-13T22:20:42'^^xsd:dateTime ;
+    skos:altLabel 'relative_humidity'^^xsd:string ;
+    skos:prefLabel 'relative humidity'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:B39::humidity'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B39/current/salin/1/> .
+<http://vocab.nerc.ac.uk/collection/B39/current/salin/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B39/current/salin/>;
+    dc:modified '2016-01-13T22:20:42'^^xsd:dateTime ;
+    skos:altLabel 'sea_surface_salinity'^^xsd:string ;
+    skos:prefLabel 'sea surface salinity'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:B39::salin'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B39/current/seatemp/1/> .
+<http://vocab.nerc.ac.uk/collection/B39/current/seatemp/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B39/current/seatemp/>;
+    dc:modified '2016-01-13T22:20:42'^^xsd:dateTime ;
+    skos:altLabel 'sea_surface_temperature'^^xsd:string ;
+    skos:prefLabel 'sea surface temperature'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:B39::seatemp'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B39/current/conduct/1/> .
+<http://vocab.nerc.ac.uk/collection/B39/current/conduct/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B39/current/conduct/>;
+    dc:modified '2016-01-13T22:20:42'^^xsd:dateTime ;
+    skos:altLabel 'sea_water_electrical_conductivity'^^xsd:string ;
+    skos:prefLabel 'sea surface conductivity'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:B39::conduct'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B39/current/ptir/1/> .
+<http://vocab.nerc.ac.uk/collection/B39/current/ptir/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B39/current/ptir/>;
+    dc:modified '2016-01-13T22:20:42'^^xsd:dateTime ;
+    skos:altLabel 'total_irradiance'^^xsd:string ;
+    skos:prefLabel 'port total irradiance'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:B39::ptir'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B39/current/relwinddir/1/> .
+<http://vocab.nerc.ac.uk/collection/B39/current/relwinddir/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B39/current/relwinddir/>;
+    dc:modified '2016-01-13T22:20:42'^^xsd:dateTime ;
+    skos:altLabel 'wind_from_direction'^^xsd:string ;
+    skos:prefLabel 'ship relative wind direction'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:B39::relwinddir'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B39/current/relwindspeed/1/> .
+<http://vocab.nerc.ac.uk/collection/B39/current/relwindspeed/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B39/current/relwindspeed/>;
+    dc:modified '2016-01-13T22:20:42'^^xsd:dateTime ;
+    skos:altLabel 'wind_speed'^^xsd:string ;
+    skos:prefLabel 'ship relative wind speed'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:B39::relwindspeed'^^xsd:string .

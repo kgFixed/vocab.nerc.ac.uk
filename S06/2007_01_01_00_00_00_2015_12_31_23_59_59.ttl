@@ -1,0 +1,181 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S06/2007_01_01_00_00_00_2015_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S06/2006_01_01_00_00_00_2006_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2015-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600047/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600047/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600047/>;
+    dc:modified '2015-11-12T12:17:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Partial pressure'@en ;
+    skos:definition 'The pressure exerted by a gas as part of a gas mixture.'@en ;
+    skos:notation 'SDN:S06::S0600047'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600046/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600046/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600046/>;
+    dc:modified '2015-09-29T10:51:38'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Uptake rate'@en ;
+    skos:definition 'The speed with which a substance is taken in by cellular organisms or organs.'@en ;
+    skos:notation 'SDN:S06::S0600046'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600039/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600039/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600039/>;
+    dc:modified '2015-09-02T08:12:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Enrichment'@en ;
+    skos:definition 'The change in the relative abundances of the isotope of a given element relative to a known abundance either in the past geological record or used as a tracer in biological and chemical process rate measurements.'@en ;
+    skos:notation 'SDN:S06::S0600039'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600040/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600040/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600040/>;
+    dc:modified '2015-09-02T08:12:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mass ratio'@en ;
+    skos:definition 'The calculated ratio of the amount of two specified substances.'@en ;
+    skos:notation 'SDN:S06::S0600040'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600041/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600041/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600041/>;
+    dc:modified '2015-09-02T08:12:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Proportion of total fatty acids'@en ;
+    skos:definition 'A part or amount considered in relation to the total fatty acids in a sample or entity. A fatty acid being a carboxylic acid with a long aliphatic tail chain.'@en ;
+    skos:notation 'SDN:S06::S0600041'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600042/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600042/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600042/>;
+    dc:modified '2015-09-02T08:12:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mass'@en ;
+    skos:definition 'The amount of a specified substance.'@en ;
+    skos:notation 'SDN:S06::S0600042'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600042/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600042/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600042/>;
+    dc:modified '2015-09-02T08:12:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'masse'@en ;
+    skos:definition 'The amount of a specified substance.'@en ;
+    skos:notation 'SDN:S06::S0600042'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600042/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600042/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600042/>;
+    dc:modified '2015-09-02T08:12:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mass'@en ;
+    skos:definition 'Quantité d\'une substance spécifiée.'@en ;
+    skos:notation 'SDN:S06::S0600042'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600042/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600042/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600042/>;
+    dc:modified '2015-09-02T08:12:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'masse'@en ;
+    skos:definition 'Quantité d\'une substance spécifiée.'@en ;
+    skos:notation 'SDN:S06::S0600042'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600043/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600043/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600043/>;
+    dc:modified '2015-09-02T08:12:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Activity'@en ;
+    skos:definition 'The number of disintegrations of a radioactive substance in a given unit of time (physics) or in the ability of a substance to take part in a chemical reaction (chemistry).'@en ;
+    skos:notation 'SDN:S06::S0600043'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600043/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600043/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600043/>;
+    dc:modified '2015-09-02T08:12:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'activité'@en ;
+    skos:definition 'The number of disintegrations of a radioactive substance in a given unit of time (physics) or in the ability of a substance to take part in a chemical reaction (chemistry).'@en ;
+    skos:notation 'SDN:S06::S0600043'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600043/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600043/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600043/>;
+    dc:modified '2015-09-02T08:12:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Activity'@en ;
+    skos:definition 'Nombre de désintégrations d\'une substance radioactive dans une unité de temps donnée (physique) ou capacité d\'une substance à prendre part à une réaction chimique (chimie).'@en ;
+    skos:notation 'SDN:S06::S0600043'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600043/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600043/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600043/>;
+    dc:modified '2015-09-02T08:12:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'activité'@en ;
+    skos:definition 'Nombre de désintégrations d\'une substance radioactive dans une unité de temps donnée (physique) ou capacité d\'une substance à prendre part à une réaction chimique (chimie).'@en ;
+    skos:notation 'SDN:S06::S0600043'^^xsd:string .

@@ -1,0 +1,120 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/R01/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R01/current/MPROF/2/> .
+<http://vocab.nerc.ac.uk/collection/R01/current/MPROF/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R01/current/MPROF/>;
+    dc:modified '2020-04-04T16:03:12'^^xsd:dateTime ;
+    skos:altLabel 'MPROF'^^xsd:string ;
+    skos:prefLabel 'Argo profile merged'@en ;
+    skos:definition 'Argo float vertical profile file containing CTD sensors data (pressure, temperature, conductivity, salinity) and data from one or more biogeochemical (BGC) parameters (dissolved oxygen, nitrate, pH, chlorophyll-a, particle backscatter, irradiance), retaining all vertical sampling schemes.'@en ;
+    skos:notation 'SDN:R01::MPROF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R01/current/MTRAJ/2/> .
+<http://vocab.nerc.ac.uk/collection/R01/current/MTRAJ/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R01/current/MTRAJ/>;
+    dc:modified '2020-04-04T16:03:12'^^xsd:dateTime ;
+    skos:altLabel 'MTRAJ'^^xsd:string ;
+    skos:prefLabel 'Argo trajectory merged'@en ;
+    skos:definition 'Argo float trajectory file containing CTD sensors data (pressure, temperature, conductivity, salinity) and data from one or more biogeochemical (BGC) parameters (dissolved oxygen, nitrate, pH, chlorophyll-a, particle backscatter, irradiance), retaining all temporal sampling schemes.'@en ;
+    skos:notation 'SDN:R01::MTRAJ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R01/current/BPROF/1/> .
+<http://vocab.nerc.ac.uk/collection/R01/current/BPROF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R01/current/BPROF/>;
+    dc:modified '2020-04-04T15:05:33'^^xsd:dateTime ;
+    skos:altLabel 'BPROF'^^xsd:string ;
+    skos:prefLabel 'B-Argo profile'@en ;
+    skos:definition 'Argo float vertical profile file containing CTD pressure data and data from one or more biogeochemical (BGC) parameters (dissolved oxygen, nitrate, pH, chlorophyll-a, particle backscatter, irradiance).'@en ;
+    skos:notation 'SDN:R01::BPROF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R01/current/PROF/1/> .
+<http://vocab.nerc.ac.uk/collection/R01/current/PROF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R01/current/PROF/>;
+    dc:modified '2020-04-04T15:05:33'^^xsd:dateTime ;
+    skos:altLabel 'PROF'^^xsd:string ;
+    skos:prefLabel 'Argo profile'@en ;
+    skos:definition 'Argo float vertical profile file containing CTD sensors data (pressure, temperature, conductivity, salinity).'@en ;
+    skos:notation 'SDN:R01::PROF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R01/current/SPROF/1/> .
+<http://vocab.nerc.ac.uk/collection/R01/current/SPROF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R01/current/SPROF/>;
+    dc:modified '2020-04-04T15:05:33'^^xsd:dateTime ;
+    skos:altLabel 'SPROF'^^xsd:string ;
+    skos:prefLabel 'Argo synthetic profile'@en ;
+    skos:definition 'Argo float vertical profile file containing CTD sensors data (pressure, temperature, conductivity, salinity) and one or more biogeochemical (BGC) parameters data (dissolved oxygen, nitrate, pH, chlorophyll-a, particle backscatter, irradiance), interpolated onto common pressure levels.'@en ;
+    skos:notation 'SDN:R01::SPROF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R01/current/TECH/1/> .
+<http://vocab.nerc.ac.uk/collection/R01/current/TECH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R01/current/TECH/>;
+    dc:modified '2020-04-04T15:05:33'^^xsd:dateTime ;
+    skos:altLabel 'TECH'^^xsd:string ;
+    skos:prefLabel 'Argo technical data'@en ;
+    skos:definition 'File containing technical information about an Argo float.'@en ;
+    skos:notation 'SDN:R01::TECH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R01/current/TRAJ/1/> .
+<http://vocab.nerc.ac.uk/collection/R01/current/TRAJ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R01/current/TRAJ/>;
+    dc:modified '2020-04-04T15:05:33'^^xsd:dateTime ;
+    skos:altLabel 'TRAJ'^^xsd:string ;
+    skos:prefLabel 'Argo trajectory'@en ;
+    skos:definition 'Argo float trajectory file containing CTD sensors data (pressure, temperature, conductivity, salinity).'@en ;
+    skos:notation 'SDN:R01::TRAJ'^^xsd:string .

@@ -1,0 +1,154 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C48/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C48/2011_01_01_00_00_00_2011_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2012-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG030/1/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG030/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG030/>;
+    dc:modified '2012-04-30T10:53:40'^^xsd:dateTime ;
+    skos:altLabel 'ACC'^^xsd:string ;
+    skos:prefLabel 'Seabed survey acoustic feature'@en ;
+    skos:definition 'MEDIN product guideline for observed acoustic features'@en ;
+    skos:notation 'SDN:C48::MDG030'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG028/1/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG028/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG028/>;
+    dc:modified '2012-04-30T10:53:40'^^xsd:dateTime ;
+    skos:altLabel 'CONTOUR'^^xsd:string ;
+    skos:prefLabel 'Seabed survey contour'@en ;
+    skos:definition 'MEDIN product guideline for contours'@en ;
+    skos:notation 'SDN:C48::MDG028'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG031/1/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG031/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG031/>;
+    dc:modified '2012-04-30T10:53:40'^^xsd:dateTime ;
+    skos:altLabel 'GEO'^^xsd:string ;
+    skos:prefLabel 'Seabed survey geological feature'@en ;
+    skos:definition 'MEDIN product guideline for geological features'@en ;
+    skos:notation 'SDN:C48::MDG031'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG019/1/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG019/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG019/>;
+    dc:modified '2012-04-30T10:53:40'^^xsd:dateTime ;
+    skos:altLabel 'MAG'^^xsd:string ;
+    skos:prefLabel 'Geophysical magnetic'@en ;
+    skos:definition 'MEDIN data guideline for magnetometer/ magnetic gradiometer data'@en ;
+    skos:notation 'SDN:C48::MDG019'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG029/1/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG029/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG029/>;
+    dc:modified '2012-04-30T10:53:40'^^xsd:dateTime ;
+    skos:altLabel 'PROF'^^xsd:string ;
+    skos:prefLabel 'Seabed survey profile'@en ;
+    skos:definition 'MEDIN product guideline for profiles'@en ;
+    skos:notation 'SDN:C48::MDG029'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG032/1/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG032/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG032/>;
+    dc:modified '2012-04-30T10:53:40'^^xsd:dateTime ;
+    skos:altLabel 'SED'^^xsd:string ;
+    skos:prefLabel 'Seabedsurvey sediment distribution'@en ;
+    skos:definition 'MEDIN product guideline for seabed sediment distribution'@en ;
+    skos:notation 'SDN:C48::MDG032'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG027/1/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG027/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG027/>;
+    dc:modified '2012-04-30T10:53:40'^^xsd:dateTime ;
+    skos:altLabel 'SED_CHAR'^^xsd:string ;
+    skos:prefLabel 'Sediment and rock characteristics'@en ;
+    skos:definition 'MEDIN data guideline for sediment and rock characteristics'@en ;
+    skos:notation 'SDN:C48::MDG027'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG035/1/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG035/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG035/>;
+    dc:modified '2012-04-30T10:53:40'^^xsd:dateTime ;
+    skos:altLabel 'SLOPE'^^xsd:string ;
+    skos:prefLabel 'Seabed survey slope and aspect'@en ;
+    skos:definition 'MEDIN product guideline for seabed slope (gradient) and aspect'@en ;
+    skos:notation 'SDN:C48::MDG035'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG036/1/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG036/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG036/>;
+    dc:modified '2012-04-30T10:53:40'^^xsd:dateTime ;
+    skos:altLabel 'SURV_E'^^xsd:string ;
+    skos:prefLabel 'Seabed survey extents'@en ;
+    skos:definition 'MEDIN product guideline for survey extents'@en ;
+    skos:notation 'SDN:C48::MDG036'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG037/1/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG037/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG037/>;
+    dc:modified '2012-04-30T10:53:40'^^xsd:dateTime ;
+    skos:altLabel 'SURV_L'^^xsd:string ;
+    skos:prefLabel 'Seabed survey line plans'@en ;
+    skos:definition 'MEDIN product guideline for survey line plans'@en ;
+    skos:notation 'SDN:C48::MDG037'^^xsd:string .

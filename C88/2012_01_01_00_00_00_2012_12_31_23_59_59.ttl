@@ -1,0 +1,109 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C88/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C88/2011_01_01_00_00_00_2011_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2012-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR38/2/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR38/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR38/>;
+    dc:modified '2012-04-30T14:13:48'^^xsd:dateTime ;
+    skos:altLabel 'INSPIRE AM vocabulary editor'^^xsd:string ;
+    skos:prefLabel 'INSPIRE TWG AM vocabulary editor'@en ;
+    skos:definition 'Person or persons authorised to make changes to controlled vocabularies under the governance of the INSPIRE Thematic Working Group on Management areas/restriction/regulation zones and reporting units (TWG AM).'@en ;
+    skos:notation 'SDN:C88::BODCSR38'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR33/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR33/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR33/>;
+    dc:modified '2012-04-04T13:37:40'^^xsd:dateTime ;
+    skos:altLabel 'SMRUCODAMemb'^^xsd:string ;
+    skos:prefLabel 'Sea Mammal Research Unit CODA participant'@en ;
+    skos:definition 'Principal and co-investigators of the CODA Project or people designated by them as workers on the project.'@en ;
+    skos:notation 'SDN:C88::BODCSR33'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR32/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR32/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR32/>;
+    dc:modified '2012-04-04T13:36:05'^^xsd:dateTime ;
+    skos:altLabel 'SMRUSCANSMemb'^^xsd:string ;
+    skos:prefLabel 'Sea Mammal Research Unit SCANS participant'@en ;
+    skos:definition 'Principal and co-investigators of the SCANS Project or people designated by them as workers on the project.'@en ;
+    skos:notation 'SDN:C88::BODCSR32'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR24/3/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR24/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR24/>;
+    dc:modified '2012-03-13T12:37:40'^^xsd:dateTime ;
+    skos:altLabel 'APDCFileDownload'^^xsd:string ;
+    skos:prefLabel 'APDC secure file-download participant'@en ;
+    skos:definition 'Any member of the Animal Platform programme and people designated by the APDC who are involved in co-ordinated programmes, who wish to download files from BODC via the BODC secure file transfer area.'@en ;
+    skos:notation 'SDN:C88::BODCSR24'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR23/3/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR23/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR23/>;
+    dc:modified '2012-03-13T12:37:02'^^xsd:dateTime ;
+    skos:altLabel 'APDCFileUpload'^^xsd:string ;
+    skos:prefLabel 'APDC secure file-upload participant'@en ;
+    skos:definition 'Any member of the Animal Platform programme and people designated by the APDC who are involved in co-ordinated programmes, who wish to upload files to BODC via the BODC secure file transfer area.'@en ;
+    skos:notation 'SDN:C88::BODCSR23'^^xsd:string .

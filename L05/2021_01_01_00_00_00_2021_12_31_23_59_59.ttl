@@ -1,0 +1,91 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L05/2021_01_01_00_00_00_2021_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L05/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2021-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/MPIS/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/MPIS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/MPIS/>;
+    dc:modified '2021-06-15T11:00:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'profiling sonars'@en ;
+    skos:definition 'Active sonar systems that provide a cross-sectional profile of a target area. These instruments typically emit a series of acoustic pulses in a beam pattern like a spot or pencil beam and the peak echo return is recorded. They provide a digitised version of echo returns as opposed to multicoloured images by imaging sonars. They are generally deployed on survey vessels pointing the transducer down towards the target. Applications of profiling sonars include cross-sectional profiling in pipeline and trench survey, bottom profiles, and surveying of underwater cave systems or manmade structures like road and rail bridge foundations. Examples of this type of system are Tritech Super SeaKing DFP Profiler and Imagenex 881A Profiling Sonar Head.'@en ;
+    skos:notation 'SDN:L05::MPIS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/395/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/395/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/395/>;
+    dc:modified '2021-04-20T18:54:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'clock synchronisers'@en ;
+    skos:definition 'Instruments that coordinate the time or frequency of independent time devices usually across networks.'@en ;
+    skos:notation 'SDN:L05::395'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB51/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB51/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB51/>;
+    dc:modified '2021-01-25T10:23:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'holographic microscopes'@en ;
+    skos:definition 'Instruments that generate enlarged images of samples using the phenomena of digital inline holography with numerical reconstruction instead of reflection and absorption of visible light.'@en ;
+    skos:notation 'SDN:L05::LAB51'^^xsd:string .

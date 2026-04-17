@@ -1,0 +1,145 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C88/2017_01_01_00_00_00_2017_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C88/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2017-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR118/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR118/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR118/>;
+    dc:modified '2017-12-01T06:34:14'^^xsd:dateTime ;
+    skos:altLabel 'CAOFileUploadDownload'^^xsd:string ;
+    skos:prefLabel 'Changing Arctic Oceans (CAO) Secure File Transfer (SFT) participant - upload and download'@en ;
+    skos:definition 'Person or persons authorised to upload and download files to the Changing Arctic Oceans (CAO) team area of the BODC Secure File Transfer facility.'@en ;
+    skos:notation 'SDN:C88::BODCSR118'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR117/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR117/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR117/>;
+    dc:modified '2017-12-01T06:33:10'^^xsd:dateTime ;
+    skos:altLabel 'CAOMemb'^^xsd:string ;
+    skos:prefLabel 'Changing Arctic Oceans (CAO) project participant'@en ;
+    skos:definition 'Principal and co-investigators of the Changing Arctic Oceans (CAO) Programme or people designated by them as workers on the programme.'@en ;
+    skos:notation 'SDN:C88::BODCSR117'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR116/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR116/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR116/>;
+    dc:modified '2017-08-23T13:29:47'^^xsd:dateTime ;
+    skos:altLabel 'C2_pilot_user'^^xsd:string ;
+    skos:prefLabel 'Command and Control (C2) Oceanids pilot'@en ;
+    skos:definition 'Person or persons designated for preferential referral to the the Command and Control (C2) Oceanids portal piloting area'@en ;
+    skos:notation 'SDN:C88::BODCSR116'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR115/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR115/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR115/>;
+    dc:modified '2017-08-23T13:28:04'^^xsd:dateTime ;
+    skos:altLabel 'C2_portal_user'^^xsd:string ;
+    skos:prefLabel 'Command and Control (C2) Oceanids portal user'@en ;
+    skos:definition 'Person or persons registered and approved to use the Command and Control (C2) Oceanids portal'@en ;
+    skos:notation 'SDN:C88::BODCSR115'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR112/2/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR112/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR112/>;
+    dc:modified '2017-08-10T12:19:08'^^xsd:dateTime ;
+    skos:altLabel 'DynOPOFileUploadDownload'^^xsd:string ;
+    skos:prefLabel 'Dynamics of the Orkney Passage Outflow (DynOPO) Secure File Transfer (SFT) participant - upload and download'@en ;
+    skos:definition 'Person or persons authorised to upload and download files to the Dynamics of the Orkney Passage Outflow (DynOPO) team area of the BODC Secure File Transfer facility.'@en ;
+    skos:notation 'SDN:C88::BODCSR112'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR114/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR114/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR114/>;
+    dc:modified '2017-07-18T16:43:48'^^xsd:dateTime ;
+    skos:altLabel 'OrchestraMemb'^^xsd:string ;
+    skos:prefLabel 'ORCHESTRA project participant'@en ;
+    skos:definition 'Principal and co-investigators of the Ocean Regulation of Climate by Heat and Carbon Sequestration Transports (ORCHESTRA) project participant or people designated by them as workers on the project.'@en ;
+    skos:notation 'SDN:C88::BODCSR114'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR113/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR113/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR113/>;
+    dc:modified '2017-07-14T14:44:55'^^xsd:dateTime ;
+    skos:altLabel 'MASSMO04Memb'^^xsd:string ;
+    skos:prefLabel 'MASSMO04 project participant'@en ;
+    skos:definition 'Principal and co-investigators of the Marine Autonomous Systems in Support of Marine Observations (MASSMO) mission 4 or people designated by them as workers on the project.'@en ;
+    skos:notation 'SDN:C88::BODCSR113'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR111/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR111/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR111/>;
+    dc:modified '2017-06-02T16:32:09'^^xsd:dateTime ;
+    skos:altLabel 'BODC vocab DPT manager'^^xsd:string ;
+    skos:prefLabel 'BODC vocabulary editor - DPT Manager Governance'@en ;
+    skos:definition 'Person or persons authorised to make changes to controlled vocabularies related to Data Production tools and platforms.'@en ;
+    skos:notation 'SDN:C88::BODCSR111'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR110/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR110/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR110/>;
+    dc:modified '2017-05-31T18:25:36'^^xsd:dateTime ;
+    skos:altLabel 'SWE vocabulary editor'^^xsd:string ;
+    skos:prefLabel 'SWE Marine Profiles vocabulary editor'@en ;
+    skos:definition 'Person or persons authorised to make changes to controlled vocabularies under the governance of the SWE Marine Profiles community.'@en ;
+    skos:notation 'SDN:C88::BODCSR110'^^xsd:string .

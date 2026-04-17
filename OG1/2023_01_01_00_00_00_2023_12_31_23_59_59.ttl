@@ -1,0 +1,145 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/OG1/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/OG1/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2023-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/RSHEAR_SD2/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/RSHEAR_SD2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/RSHEAR_SD2/>;
+    dc:modified '2023-08-07T10:17:32'^^xsd:dateTime ;
+    skos:altLabel 'RAW_STDEV_TURB_SHEAR_2'^^xsd:string ;
+    skos:prefLabel 'Raw signal (standard deviation) from turbulence profiler shear sensor (second sensor)'@en ;
+    skos:definition 'The square root of the average of the squares of deviations about the mean of counts in the water body by a second turbulence profiler shear sensor.'@en ;
+    skos:notation 'SDN:OG1::RSHEAR_SD2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/RSHEAR_SD/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/RSHEAR_SD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/RSHEAR_SD/>;
+    dc:modified '2023-08-07T10:17:31'^^xsd:dateTime ;
+    skos:altLabel 'RAW_STDEV_TURB_SHEAR'^^xsd:string ;
+    skos:prefLabel 'Raw signal (standard deviation) from turbulence profiler shear sensor'@en ;
+    skos:definition 'The square root of the average of the squares of deviations about the mean of counts in the water body by a turbulence profiler shear sensor.'@en ;
+    skos:notation 'SDN:OG1::RSHEAR_SD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/RTHERTUR_SD2/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/RTHERTUR_SD2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/RTHERTUR_SD2/>;
+    dc:modified '2023-08-07T10:17:29'^^xsd:dateTime ;
+    skos:altLabel 'RAW_STDEV_TURB_THERMISTOR_2'^^xsd:string ;
+    skos:prefLabel 'Raw signal (standard deviation) from turbulence profiler thermistor (second sensor)'@en ;
+    skos:definition 'The square root of the average of the squares of deviations about the mean of counts in the water body by a second turbulence profiler thermistor.'@en ;
+    skos:notation 'SDN:OG1::RTHERTUR_SD2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/RTHERTUR_SD/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/RTHERTUR_SD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/RTHERTUR_SD/>;
+    dc:modified '2023-08-07T10:17:28'^^xsd:dateTime ;
+    skos:altLabel 'RAW_STDEV_TURB_THERMISTOR'^^xsd:string ;
+    skos:prefLabel 'Raw signal (standard deviation) from turbulence profiler thermistor'@en ;
+    skos:definition 'The square root of the average of the squares of deviations about the mean of counts in the water body by a turbulence profiler thermistor.'@en ;
+    skos:notation 'SDN:OG1::RTHERTUR_SD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/RTHERTUR_MN2/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/RTHERTUR_MN2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/RTHERTUR_MN2/>;
+    dc:modified '2023-08-07T10:17:27'^^xsd:dateTime ;
+    skos:altLabel 'RAW_MEAN_TURB_THERMISTOR_2'^^xsd:string ;
+    skos:prefLabel 'Raw signal (mean) from turbulence profiler thermistor (second sensor)'@en ;
+    skos:definition 'The average number of counts in the water body across multiple measurements by a second turbulence profiler thermistor.'@en ;
+    skos:notation 'SDN:OG1::RTHERTUR_MN2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/RTHERTUR_MN/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/RTHERTUR_MN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/RTHERTUR_MN/>;
+    dc:modified '2023-08-07T10:17:26'^^xsd:dateTime ;
+    skos:altLabel 'RAW_MEAN_TURB_THERMISTOR'^^xsd:string ;
+    skos:prefLabel 'Raw signal (mean) from turbulence profiler thermistor'@en ;
+    skos:definition 'The average number of counts in the water body across multiple measurements by a turbulence profiler thermistor.'@en ;
+    skos:notation 'SDN:OG1::RTHERTUR_MN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/DIST_ALT/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/DIST_ALT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/DIST_ALT/>;
+    dc:modified '2023-06-02T13:43:09'^^xsd:dateTime ;
+    skos:altLabel 'DISTANCE_ALTIMETER'^^xsd:string ;
+    skos:prefLabel 'Altitude'@en ;
+    skos:definition 'Distance in meters from the transducer face to the target.'@en ;
+    skos:notation 'SDN:OG1::DIST_ALT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/ENLEVEL/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/ENLEVEL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/ENLEVEL/>;
+    dc:modified '2023-06-02T13:43:08'^^xsd:dateTime ;
+    skos:altLabel 'ENERGYLEVEL_ALTIMETER'^^xsd:string ;
+    skos:prefLabel 'Energy level of acoustic signal by altimeter'@en ;
+    skos:definition 'Intensity of the echo return from an altimeter, ranging from 0 to 1. A value of 1 represents full saturation of the receiver. An energy level of 0.707 (square root of 2) is the theoretical perfect level as it represents the energy of a pure sine wave with an amplitude utilising the maximum dynamic range of the receiver.'@en ;
+    skos:notation 'SDN:OG1::ENLEVEL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/COR_FACT/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/COR_FACT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/COR_FACT/>;
+    dc:modified '2023-06-02T13:42:23'^^xsd:dateTime ;
+    skos:altLabel 'CORRELATIONFACTOR_ALTIMETER'^^xsd:string ;
+    skos:prefLabel 'Correlation factor of acoustic signal by altimeter'@en ;
+    skos:definition 'Quality of the echo return from an altimeter, ranging from 0 to 1. A value of 1 represents a perfect return echo with negligible noise and distortion.'@en ;
+    skos:notation 'SDN:OG1::COR_FACT'^^xsd:string .

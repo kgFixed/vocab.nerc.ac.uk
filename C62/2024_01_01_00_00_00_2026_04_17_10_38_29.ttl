@@ -1,0 +1,118 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C62/2024_01_01_00_00_00_2026_04_17_10_38_29.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C62/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-17T10:38:29'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EE-37/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EE-37/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EE-37/>;
+    dc:modified '2026-03-13T16:33:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Harju'@en ;
+    skos:definition 'County of Estonia. Native names are Harju maakond and Harjumaa.'@en ;
+    skos:notation 'SDN:C62::EE-37'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/CL-AN/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/CL-AN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/CL-AN/>;
+    dc:modified '2026-01-19T15:34:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Antofagasta'@en ;
+    skos:definition 'Region of Chile'@en ;
+    skos:notation 'SDN:C62::CL-AN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/JP-17/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/JP-17/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/JP-17/>;
+    dc:modified '2025-11-06T13:33:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ishikawa Prefecture'@en ;
+    skos:definition 'Prefecture of Japan.'@en ;
+    skos:notation 'SDN:C62::JP-17'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/VI-ST/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/VI-ST/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/VI-ST/>;
+    dc:modified '2025-03-07T16:21:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'St Thomas'@en ;
+    skos:definition 'Island in the US Virgin Islands'@en ;
+    skos:notation 'SDN:C62::VI-ST'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/CH-SG/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/CH-SG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/CH-SG/>;
+    dc:modified '2024-12-11T10:17:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'St. Gallen'@en ;
+    skos:definition 'Canton of Switzerland. Sankt Gallen in German.'@en ;
+    skos:notation 'SDN:C62::CH-SG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/NG-CR/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/NG-CR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/NG-CR/>;
+    dc:modified '2024-05-23T17:11:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Cross River'@en ;
+    skos:definition 'State in Nigeria.'@en ;
+    skos:notation 'SDN:C62::NG-CR'^^xsd:string .

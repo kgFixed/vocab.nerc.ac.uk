@@ -1,0 +1,91 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P29/2021_01_01_00_00_00_2023_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P29/2019_01_01_00_00_00_2020_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2023-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/CFAT11SC/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/CFAT11SC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/CFAT11SC/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'stratiform_cloud'@en ;
+    skos:definition 'This area type complements the "convective_cloud" area type, which is the other major category of cloud. The "cloud" area type is a more general term and includes both convective_cloud and stratiform_cloud types.'@en ;
+    skos:notation 'SDN:P29::CFAT11SC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/CFATAIR0/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/CFATAIR0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/CFATAIR0/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'air'@en ;
+    skos:definition 'The area type of "air" distinguishes the atmospheric portion of a domain from the land portion (or any other non-air portion). It is needed when a variable such as wind speed is reported, for example, on a surface at mean sea level pressure. At most locations over land, this surface would be underground and would need to be excluded from consideration, which could be indicated by specifying a cell_methods "where air".'@en ;
+    skos:notation 'SDN:P29::CFATAIR0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/cfat5ish/2/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/cfat5ish/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/cfat5ish/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ice_sheet'@en ;
+    skos:definition 'An area type of "ice sheet" indicates where ice sheets are present. It includes both grounded ice sheets resting over bedrock and any ice shelves flowing over the ocean that are attached to grounded ice sheets. The ice sheet area type excludes ice-caps and glaciers and any floating ice shelves and ice tongues attached to them, but the land_ice area type includes those as well as the ice_sheet area.'@en ;
+    skos:notation 'SDN:P29::cfat5ish'^^xsd:string .

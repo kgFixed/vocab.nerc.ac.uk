@@ -1,0 +1,210 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/GS3/2010_01_01_00_00_00_2010_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GS3/current/gM/1/> .
+<http://vocab.nerc.ac.uk/collection/GS3/current/gM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GS3/current/gM/>;
+    dc:modified '2010-10-14T10:12:15'^^xsd:dateTime ;
+    skos:altLabel 'gravMud'^^xsd:string ;
+    skos:prefLabel 'gravelly mud'@en ;
+    skos:definition 'Sand:mud ratio = <1:1 and gravel percentage 5-30'@en ;
+    skos:notation 'SDN:GS3::gM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GS3/current/gmS/1/> .
+<http://vocab.nerc.ac.uk/collection/GS3/current/gmS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GS3/current/gmS/>;
+    dc:modified '2010-10-14T10:12:15'^^xsd:dateTime ;
+    skos:altLabel 'gravMudSand'^^xsd:string ;
+    skos:prefLabel 'gravelly muddy sand'@en ;
+    skos:definition 'Sand:mud ratio = 1:1 to 9:1 and gravel percentage 5-30'@en ;
+    skos:notation 'SDN:GS3::gmS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GS3/current/gS/1/> .
+<http://vocab.nerc.ac.uk/collection/GS3/current/gS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GS3/current/gS/>;
+    dc:modified '2010-10-14T10:12:15'^^xsd:dateTime ;
+    skos:altLabel 'gravSand'^^xsd:string ;
+    skos:prefLabel 'gravelly sand'@en ;
+    skos:definition 'Sand:mud ratio = >9:1 and gravel percentage 5-30'@en ;
+    skos:notation 'SDN:GS3::gS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GS3/current/G/1/> .
+<http://vocab.nerc.ac.uk/collection/GS3/current/G/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GS3/current/G/>;
+    dc:modified '2010-10-14T10:12:15'^^xsd:dateTime ;
+    skos:altLabel 'gravel'^^xsd:string ;
+    skos:prefLabel 'gravel'@en ;
+    skos:definition 'Sand:mud ratio = all ratios and gravel percentage >80'@en ;
+    skos:notation 'SDN:GS3::G'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GS3/current/M/1/> .
+<http://vocab.nerc.ac.uk/collection/GS3/current/M/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GS3/current/M/>;
+    dc:modified '2010-10-14T10:12:15'^^xsd:dateTime ;
+    skos:altLabel 'mud'^^xsd:string ;
+    skos:prefLabel 'mud'@en ;
+    skos:definition 'Sand:mud ratio = <1:19 and gravel percentage <1'@en ;
+    skos:notation 'SDN:GS3::M'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GS3/current/mG/1/> .
+<http://vocab.nerc.ac.uk/collection/GS3/current/mG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GS3/current/mG/>;
+    dc:modified '2010-10-14T10:12:15'^^xsd:dateTime ;
+    skos:altLabel 'mudGrav'^^xsd:string ;
+    skos:prefLabel 'muddy gravel'@en ;
+    skos:definition 'Sand:mud ratio = <1:1 and gravel percentage 30-80'@en ;
+    skos:notation 'SDN:GS3::mG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GS3/current/mS/1/> .
+<http://vocab.nerc.ac.uk/collection/GS3/current/mS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GS3/current/mS/>;
+    dc:modified '2010-10-14T10:12:15'^^xsd:dateTime ;
+    skos:altLabel 'mudSand'^^xsd:string ;
+    skos:prefLabel 'muddy sand'@en ;
+    skos:definition 'Sand:mud ratio = 1:1 to 3:1 and gravel percentage <1'@en ;
+    skos:notation 'SDN:GS3::mS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GS3/current/msG/1/> .
+<http://vocab.nerc.ac.uk/collection/GS3/current/msG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GS3/current/msG/>;
+    dc:modified '2010-10-14T10:12:15'^^xsd:dateTime ;
+    skos:altLabel 'mudSandGrav'^^xsd:string ;
+    skos:prefLabel 'muddy sandy gravel'@en ;
+    skos:definition 'Sand:mud ratio = 1:1 to 9:1 and gravel percentage 30-80'@en ;
+    skos:notation 'SDN:GS3::msG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GS3/current/S/1/> .
+<http://vocab.nerc.ac.uk/collection/GS3/current/S/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GS3/current/S/>;
+    dc:modified '2010-10-14T10:12:15'^^xsd:dateTime ;
+    skos:altLabel 'sand'^^xsd:string ;
+    skos:prefLabel 'sand'@en ;
+    skos:definition 'Sand:mud ratio = >19:1 and gravel percentage <1'@en ;
+    skos:notation 'SDN:GS3::S'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GS3/current/sG/1/> .
+<http://vocab.nerc.ac.uk/collection/GS3/current/sG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GS3/current/sG/>;
+    dc:modified '2010-10-14T10:12:15'^^xsd:dateTime ;
+    skos:altLabel 'sandGrav'^^xsd:string ;
+    skos:prefLabel 'sandy gravel'@en ;
+    skos:definition 'Sand:mud ratio = >9:1 and gravel percentage 30-80'@en ;
+    skos:notation 'SDN:GS3::sG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GS3/current/sM/1/> .
+<http://vocab.nerc.ac.uk/collection/GS3/current/sM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GS3/current/sM/>;
+    dc:modified '2010-10-14T10:12:15'^^xsd:dateTime ;
+    skos:altLabel 'sandMud'^^xsd:string ;
+    skos:prefLabel 'sandy mud'@en ;
+    skos:definition 'Sand:mud ratio = 1:3 to 1:1 and gravel percentage <1'@en ;
+    skos:notation 'SDN:GS3::sM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GS3/current/(g)M/1/> .
+<http://vocab.nerc.ac.uk/collection/GS3/current/(g)M/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GS3/current/(g)M/>;
+    dc:modified '2010-10-14T10:12:15'^^xsd:dateTime ;
+    skos:altLabel 'slGravMud'^^xsd:string ;
+    skos:prefLabel 'slightly gravelly mud'@en ;
+    skos:definition 'Sand:mud ratio = <1:9 and gravel percentage 1-5'@en ;
+    skos:notation 'SDN:GS3::(g)M'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GS3/current/(g)mS/1/> .
+<http://vocab.nerc.ac.uk/collection/GS3/current/(g)mS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GS3/current/(g)mS/>;
+    dc:modified '2010-10-14T10:12:15'^^xsd:dateTime ;
+    skos:altLabel 'slGravMudSand'^^xsd:string ;
+    skos:prefLabel 'slightly gravelly muddy sand'@en ;
+    skos:definition 'Sand:mud ratio = 1:1 to 9:1 and gravel percentage 1-5'@en ;
+    skos:notation 'SDN:GS3::(g)mS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GS3/current/(g)S/1/> .
+<http://vocab.nerc.ac.uk/collection/GS3/current/(g)S/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GS3/current/(g)S/>;
+    dc:modified '2010-10-14T10:12:15'^^xsd:dateTime ;
+    skos:altLabel 'slGravSand'^^xsd:string ;
+    skos:prefLabel 'slightly gravelly sand'@en ;
+    skos:definition 'Sand:mud ratio = >9:1 and gravel percentage 1-5'@en ;
+    skos:notation 'SDN:GS3::(g)S'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GS3/current/(g)sM/1/> .
+<http://vocab.nerc.ac.uk/collection/GS3/current/(g)sM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GS3/current/(g)sM/>;
+    dc:modified '2010-10-14T10:12:15'^^xsd:dateTime ;
+    skos:altLabel 'slGravSandMud'^^xsd:string ;
+    skos:prefLabel 'slightly gravelly sandy mud'@en ;
+    skos:definition 'Sand:mud ratio = 1:9 to 1:1 and gravel percentage 1-5'@en ;
+    skos:notation 'SDN:GS3::(g)sM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GS3/current/(m)S/1/> .
+<http://vocab.nerc.ac.uk/collection/GS3/current/(m)S/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GS3/current/(m)S/>;
+    dc:modified '2010-10-14T10:12:15'^^xsd:dateTime ;
+    skos:altLabel 'slMudSand'^^xsd:string ;
+    skos:prefLabel 'slightly muddy sand'@en ;
+    skos:definition 'Sand:mud ratio = 3:1 to 19:1 and gravel percentage <1'@en ;
+    skos:notation 'SDN:GS3::(m)S'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GS3/current/(s)M/1/> .
+<http://vocab.nerc.ac.uk/collection/GS3/current/(s)M/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GS3/current/(s)M/>;
+    dc:modified '2010-10-14T10:12:15'^^xsd:dateTime ;
+    skos:altLabel 'slSandMud'^^xsd:string ;
+    skos:prefLabel 'slightly sandy mud'@en ;
+    skos:definition 'Sand:mud ratio = 1:19 to 1:3 and gravel percentage <1'@en ;
+    skos:notation 'SDN:GS3::(s)M'^^xsd:string .

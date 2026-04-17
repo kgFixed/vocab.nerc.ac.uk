@@ -1,0 +1,161 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P17/2015_01_01_00_00_00_2015_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P17/2014_01_01_00_00_00_2014_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2015-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/45CV/4/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/45CV/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/45CV/>;
+    dc:modified '2015-09-10T15:33:38'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Celtic Voyager'@en ;
+    skos:definition '''{"node": {
+    "country": "Ireland",
+    "MMSI": 250089000,
+    "platformclass": "research vessel",
+    "notes": "Marine Institute Galway research vessel.",
+    "built": "1997-07",
+    "callsign": "EIQN",
+    "length": 31.4,
+    "IMO": 9154842,
+    "title": "RV",
+    "WOD": 9711,
+    "commissioned": 1997
+}}'''@en ;
+    skos:notation 'SDN:P17::45CV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/49YP/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/49YP/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/49YP/>;
+    dc:modified '2015-06-24T17:08:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Yokosuka'@en ;
+    skos:definition '''{"node": {
+    "country": "Japan",
+    "MMSI": 431460000,
+    "platformclass": "research vessel",
+    "built": "1990-04",
+    "callsign": "JCOY",
+    "length": 105,
+    "IMO": 8711019
+}}'''@en ;
+    skos:notation 'SDN:P17::49YP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/33RO/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/33RO/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/33RO/>;
+    dc:modified '2015-06-05T09:18:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ronald H. Brown'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "platformclass": "research vessel",
+    "built": "1997-04-25",
+    "pennant": "R 104",
+    "callsign": "WTEC",
+    "length": 83.5,
+    "IMO": 9105786,
+    "title": "NOAA Ship",
+    "commissioned": "1997-07-19"
+}}'''@en ;
+    skos:notation 'SDN:P17::33RO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/49HH/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/49HH/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/49HH/>;
+    dc:modified '2015-05-19T16:41:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Hakuho Maru'@en ;
+    skos:definition '''{"node": {
+    "country": "Japan",
+    "MMSI": 431010000,
+    "synonym": "Hakuho-Maru",
+    "platformclass": "research vessel",
+    "built": "1989-05",
+    "callsign": "JDSS",
+    "length": 100,
+    "IMO": 8714700,
+    "WOD": 10057,
+    "commissioned": "1989-05"
+}}'''@en ;
+    skos:notation 'SDN:P17::49HH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/45CE/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/45CE/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/45CE/>;
+    dc:modified '2015-05-13T12:59:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Celtic Explorer'@en ;
+    skos:definition '''{"node": {
+    "country": "Ireland",
+    "MMSI": 250487000,
+    "platformclass": "research vessel",
+    "notes": "Marine Institute Galway research vessel",
+    "built": 2002,
+    "callsign": "EIGB",
+    "length": 65.5,
+    "IMO": 9244439,
+    "WOD": 9215,
+    "commissioned": 2003
+}}'''@en ;
+    skos:notation 'SDN:P17::45CE'^^xsd:string .

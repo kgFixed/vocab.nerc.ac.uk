@@ -1,0 +1,334 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P35/2017_01_01_00_00_00_2018_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P35/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2018-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00182/6/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00182/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00182/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'Anthracene in Mytilus'^^xsd:string ;
+    skos:prefLabel 'Anthracene in Mytilus'@en ;
+    skos:definition 'Concentration of anthracene per unit weight (dry or wet) of Mytilus spp. (regardless of Mytilus species and size class).'@en ;
+    skos:notation 'SDN:P35::EPC00182'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00140/6/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00140/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00140/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'Benzo(a)pyrene in Mytilus'^^xsd:string ;
+    skos:prefLabel 'Benzo(a)pyrene in Mytilus'@en ;
+    skos:definition 'Concentration of Benzo(a)pyrene per unit weight (dry or wet) of Mytilus spp. (regardless of Mytilus species and size class).'@en ;
+    skos:notation 'SDN:P35::EPC00140'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00188/6/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00188/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00188/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'Cadmium in Mytilus'^^xsd:string ;
+    skos:prefLabel 'Cadmium in Mytilus'@en ;
+    skos:definition 'Concentration of cadmium per unit weight (dry or wet) of Mytilus spp. (regardless of Mytilus species and size class).'@en ;
+    skos:notation 'SDN:P35::EPC00188'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00167/6/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00167/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00167/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'Cadmium in the sediment'^^xsd:string ;
+    skos:prefLabel 'Cadmium in the sediment'@en ;
+    skos:definition 'Concentration of cadmium in sediment and sediment pore waters (regardless of sediment size class and analytical method).'@en ;
+    skos:notation 'SDN:P35::EPC00167'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00143/6/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00143/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00143/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'Copper in Mytilus'^^xsd:string ;
+    skos:prefLabel 'Copper in Mytilus'@en ;
+    skos:definition 'Concentration of copper per unit weight (dry or wet) of Mytilus spp. (regardless of Mytilus species and size class).'@en ;
+    skos:notation 'SDN:P35::EPC00143'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00144/6/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00144/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00144/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'Copper in the sediment'^^xsd:string ;
+    skos:prefLabel 'Copper in the sediment'@en ;
+    skos:definition 'Concentration of copper in sediment and sediment pore waters (regardless of sediment size class and analytical method).'@en ;
+    skos:notation 'SDN:P35::EPC00144'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00161/6/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00161/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00161/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'Fluoranthene in Mytilus'^^xsd:string ;
+    skos:prefLabel 'Fluoranthene in Mytilus'@en ;
+    skos:definition 'Concentration of fluoranthene per unit weight (dry or wet) of Mytilus spp. (regardless of Mytilus species and size class).'@en ;
+    skos:notation 'SDN:P35::EPC00161'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00207/6/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00207/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00207/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'Hexachlorobenzene {HCB} in Mytilus'^^xsd:string ;
+    skos:prefLabel 'Hexachlorobenzene {HCB} in Mytilus'@en ;
+    skos:definition 'Concentration of hexachlorobenzene per unit weight (dry or wet) of Mytilus spp. (regardless of Mytilus species and size class).'@en ;
+    skos:notation 'SDN:P35::EPC00207'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00155/6/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00155/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00155/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'Lead in Mytilus'^^xsd:string ;
+    skos:prefLabel 'Lead in Mytilus'@en ;
+    skos:definition 'Concentration of lead per unit weight (dry or wet) of Mytilus spp. (reardless of Mytilus species and size class).'@en ;
+    skos:notation 'SDN:P35::EPC00155'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00197/6/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00197/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00197/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'Lead in the sediment'^^xsd:string ;
+    skos:prefLabel 'Lead in the sediment'@en ;
+    skos:definition 'Concentration of lead in sediment and sediment pore waters (regardless of sediment size class and analytical method).'@en ;
+    skos:notation 'SDN:P35::EPC00197'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00189/6/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00189/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00189/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'Mercury in Mytilus'^^xsd:string ;
+    skos:prefLabel 'Mercury in Mytilus'@en ;
+    skos:definition 'Concentration of mercury per unit weight (dry or wet) of Mytilus spp. (regardless of Mytilus species and size class).'@en ;
+    skos:notation 'SDN:P35::EPC00189'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00202/6/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00202/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00202/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'Naphthalene in Mytilus'^^xsd:string ;
+    skos:prefLabel 'Naphthalene in Mytilus'@en ;
+    skos:definition 'Concentration of naphtalene per unit weight (dry or wet) of Mytilus spp. (regardless of Mytilus species and size class).'@en ;
+    skos:notation 'SDN:P35::EPC00202'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00219/6/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00219/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00219/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'PCB101 in Mytilus'^^xsd:string ;
+    skos:prefLabel 'PCB101 in Mytilus'@en ;
+    skos:definition 'Concentration of PCB101 per unit weight (dry or wet) of Mytilus spp. (regardless of Mytilus species and size class).'@en ;
+    skos:notation 'SDN:P35::EPC00219'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00149/7/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00149/7/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00149/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'PCB105 in Mytilus'^^xsd:string ;
+    skos:prefLabel 'PCB105 in Mytilus'@en ;
+    skos:definition 'Concentration of PCB105 per unit weight (dry or wet) of Mytilus spp. (regardless of Mytilus species and size class).'@en ;
+    skos:notation 'SDN:P35::EPC00149'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00166/7/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00166/7/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00166/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'PCB105 in the sediment'^^xsd:string ;
+    skos:prefLabel 'PCB105 in the sediment'@en ;
+    skos:definition 'Concentration of PCB105 per unit dry weight of sediment (reardless of sediment size class).'@en ;
+    skos:notation 'SDN:P35::EPC00166'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00204/7/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00204/7/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00204/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'PCB118 in Mytilus'^^xsd:string ;
+    skos:prefLabel 'PCB118 in Mytilus'@en ;
+    skos:definition 'Concentration of PCB118 per unit weight (dry or wet) of Mytilus spp. (regardless of Mytilus species and size class).'@en ;
+    skos:notation 'SDN:P35::EPC00204'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00191/6/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00191/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00191/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'PCB138 in Mytilus'^^xsd:string ;
+    skos:prefLabel 'PCB138 in Mytilus'@en ;
+    skos:definition 'Concentration of PCB138 per unit weight (dry or wet) of Mytilus spp. (reagardless of Mytilus species and size class).'@en ;
+    skos:notation 'SDN:P35::EPC00191'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00192/6/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00192/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00192/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'PCB153 in Mytilus'^^xsd:string ;
+    skos:prefLabel 'PCB153 in Mytilus'@en ;
+    skos:definition 'Concentration of PCB153 per unit weight (dry or wet) of Mytilus spp. (regardless of Mytilus species and size class).'@en ;
+    skos:notation 'SDN:P35::EPC00192'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00184/6/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00184/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00184/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'PCB180 in Mytilus'^^xsd:string ;
+    skos:prefLabel 'PCB180 in Mytilus'@en ;
+    skos:definition 'Concentration of PCB180 per unit weight (dry or wet) of Mytilus spp. (reardless of Mytilus species and size class).'@en ;
+    skos:notation 'SDN:P35::EPC00184'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00205/7/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00205/7/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00205/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'PCB28 in Mytilus'^^xsd:string ;
+    skos:prefLabel 'PCB28 in Mytilus'@en ;
+    skos:definition 'Concentration of PCB28 per unit weight (dry or wet) of Mytilus spp. (regardless of Mytilus species and size class).'@en ;
+    skos:notation 'SDN:P35::EPC00205'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00165/6/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00165/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00165/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'PCB52 in Mytilus'^^xsd:string ;
+    skos:prefLabel 'PCB52 in Mytilus'@en ;
+    skos:definition 'Concentration of PCB52 per unit weight (dry or wet) of Mytilus spp. (regardless of Mytilus species and size class).'@en ;
+    skos:notation 'SDN:P35::EPC00165'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00203/6/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00203/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00203/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'Phenanthrene in Mytilus'^^xsd:string ;
+    skos:prefLabel 'Phenanthrene in Mytilus'@en ;
+    skos:definition 'Concentration of phenantrene per unit weight (dry or wet) of Mytilus spp. (regardless of Mytilus species and size class).'@en ;
+    skos:notation 'SDN:P35::EPC00203'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00169/8/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00169/8/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00169/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'Tributyltin (TBT) in Mytilus'^^xsd:string ;
+    skos:prefLabel 'Tributyltin (TBT) in Mytilus'@en ;
+    skos:definition 'Concentration of tributyltin per unit weight (dry or wet) of Mytilus spp. (regardless of Mytilus size class).'@en ;
+    skos:notation 'SDN:P35::EPC00169'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00137/6/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00137/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00137/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'Triphenyltin (TPT) in Mytilus'^^xsd:string ;
+    skos:prefLabel 'Triphenyltin (TPT) in Mytilus'@en ;
+    skos:definition 'Concentration of triphenyltin cation per unit weight (dry or wet) of Mytilus spp. (regardless of Mytilus species and size class).'@en ;
+    skos:notation 'SDN:P35::EPC00137'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00215/6/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00215/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00215/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'Zinc in Mytilus'^^xsd:string ;
+    skos:prefLabel 'Zinc in Mytilus'@en ;
+    skos:definition 'Concentration of zinc per unit weight (dry or wet) of Mytilus spp. (regardless of Mytilus species and size class).'@en ;
+    skos:notation 'SDN:P35::EPC00215'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00145/6/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00145/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00145/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'Zinc in the sediment'^^xsd:string ;
+    skos:prefLabel 'Zinc in the sediment'@en ;
+    skos:definition 'Concentration of zinc in sediment and sediment pore waters (regardless of sediment size class and analytical method).'@en ;
+    skos:notation 'SDN:P35::EPC00145'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00229/3/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00229/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00229/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'p,p\'-DDD in Mytilus'^^xsd:string ;
+    skos:prefLabel 'p,p\'-DDD in Mytilus'@en ;
+    skos:definition 'Concentration of p,p\'-DDD per unit weight (dry or wet) of Mytilus spp. (regardless of Mytilus species and size class).'@en ;
+    skos:notation 'SDN:P35::EPC00229'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00230/3/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00230/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00230/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'p,p\'-DDE in Mytilus'^^xsd:string ;
+    skos:prefLabel 'p,p\'-DDE in Mytilus'@en ;
+    skos:definition 'Concentration of p,p\'-DDE per unit weight (dry or wet) of Mytilus spp. (regardless of Mytilus species and size class).'@en ;
+    skos:notation 'SDN:P35::EPC00230'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00228/3/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00228/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00228/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'p,p\'-DDT in Mytilus'^^xsd:string ;
+    skos:prefLabel 'p,p\'-DDT in Mytilus'@en ;
+    skos:definition 'Concentration of p,p\'-DDT per unit weight (dry or wet) of Mytilus spp. (regardless of Mytilus species and size class).'@en ;
+    skos:notation 'SDN:P35::EPC00228'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P35/current/EPC00176/7/> .
+<http://vocab.nerc.ac.uk/collection/P35/current/EPC00176/7/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P35/current/EPC00176/>;
+    dc:modified '2018-03-20T16:58:29'^^xsd:dateTime ;
+    skos:altLabel 'p,p\'-DDT+DDD+DDE in Mytilus'^^xsd:string ;
+    skos:prefLabel 'p,p\'-DDT+DDD+DDE in Mytilus'@en ;
+    skos:definition 'Concentration of p,p\'-DDT+DDD+DDE per unit weight (dry or wet) of Mytilus spp. (regardless of Mytilus species and size class).'@en ;
+    skos:notation 'SDN:P35::EPC00176'^^xsd:string .

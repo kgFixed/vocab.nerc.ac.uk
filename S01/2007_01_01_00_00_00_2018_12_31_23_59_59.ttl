@@ -1,0 +1,145 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S01/2007_01_01_00_00_00_2018_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S01/2006_01_01_00_00_00_2006_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2018-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S01/current/S018/2/> .
+<http://vocab.nerc.ac.uk/collection/S01/current/S018/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S01/current/S018/>;
+    dc:modified '2018-10-15T15:20:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'matrix entity'@en ;
+    skos:definition 'Portion of the BODC parameter semantic model describing the sphere or matrix in which a measurement is made.  It is a subcomponent of the where theme'@en ;
+    skos:notation 'SDN:S01::S018'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S01/current/S0113/1/> .
+<http://vocab.nerc.ac.uk/collection/S01/current/S0113/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S01/current/S0113/>;
+    dc:modified '2018-10-12T18:37:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'measurement to matrix relationship entity'@en ;
+    skos:definition 'Portion of the BODC parameter semantic model defining the relationship between the \'what\' theme and the \'where\' theme.'@en ;
+    skos:notation 'SDN:S01::S0113'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S01/current/S019/2/> .
+<http://vocab.nerc.ac.uk/collection/S01/current/S019/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S01/current/S019/>;
+    dc:modified '2018-08-23T15:25:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sample preparation method entity'@en ;
+    skos:definition 'Portion of the BODC parameter semantic model describing pre-analysis processing.  It is part of the how theme.'@en ;
+    skos:notation 'SDN:S01::S019'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S01/current/S0110/2/> .
+<http://vocab.nerc.ac.uk/collection/S01/current/S0110/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S01/current/S0110/>;
+    dc:modified '2018-08-23T15:24:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'analytical method entity'@en ;
+    skos:definition 'Portion of the BODC parameter semantic model describing analysis. It is part of the how theme.'@en ;
+    skos:notation 'SDN:S01::S0110'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S01/current/S0111/2/> .
+<http://vocab.nerc.ac.uk/collection/S01/current/S0111/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S01/current/S0111/>;
+    dc:modified '2018-08-23T15:23:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'data processing method entity'@en ;
+    skos:definition 'Portion of the BODC parameter semantic model describing post-analysis data processing.  It is part of the how theme.'@en ;
+    skos:notation 'SDN:S01::S0111'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S01/current/S012/4/> .
+<http://vocab.nerc.ac.uk/collection/S01/current/S012/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S01/current/S012/>;
+    dc:modified '2018-04-03T15:41:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'where theme'@en ;
+    skos:definition 'Portion of the BODC parameter semantic model describing the matrix or sphere of the measurement, such as water body, atmosphere. Also possible for this to be biota linked to a biological entity such as cod liver.'@en ;
+    skos:notation 'SDN:S01::S012'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S01/current/S011/3/> .
+<http://vocab.nerc.ac.uk/collection/S01/current/S011/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S01/current/S011/>;
+    dc:modified '2018-03-25T13:04:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'what theme'@en ;
+    skos:definition 'Portion of the BODC parameter semantic model describing what was measured'@en ;
+    skos:notation 'SDN:S01::S011'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S01/current/S013/3/> .
+<http://vocab.nerc.ac.uk/collection/S01/current/S013/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S01/current/S013/>;
+    dc:modified '2018-03-25T13:04:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'how theme'@en ;
+    skos:definition 'Portion of the BODC parameter semantic model describing how a measurement was made'@en ;
+    skos:notation 'SDN:S01::S013'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S01/current/S0112/1/> .
+<http://vocab.nerc.ac.uk/collection/S01/current/S0112/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S01/current/S0112/>;
+    dc:modified '2018-03-24T14:37:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'parameter statistic entity'@en ;
+    skos:definition 'Portion of the BODC parameter semantic model describing the statistical measure associated with the parameter. It is part of the what theme.'@en ;
+    skos:notation 'SDN:S01::S0112'^^xsd:string .

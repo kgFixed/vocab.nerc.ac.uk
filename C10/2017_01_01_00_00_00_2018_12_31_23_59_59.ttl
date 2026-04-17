@@ -1,0 +1,109 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C10/2017_01_01_00_00_00_2018_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C10/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2018-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C10/current/SPDPROF/1/> .
+<http://vocab.nerc.ac.uk/collection/C10/current/SPDPROF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C10/current/SPDPROF/>;
+    dc:modified '2018-09-20T09:02:59'^^xsd:dateTime ;
+    skos:altLabel 'SP_Prof_D'^^xsd:string ;
+    skos:prefLabel 'Single point Profile with depth'@en ;
+    skos:definition 'The series has a single set of instantaneous measurements at a fixed position and elevation.  Z co-ordinates are included along the primary dimension (rank 1) as depth. Time and position are stored as metadata. This is to cover series that would be a profile if there was more than one point.'@en ;
+    skos:notation 'SDN:C10::SPDPROF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C10/current/SPPDPROF/1/> .
+<http://vocab.nerc.ac.uk/collection/C10/current/SPPDPROF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C10/current/SPPDPROF/>;
+    dc:modified '2018-09-20T09:02:58'^^xsd:dateTime ;
+    skos:altLabel 'SP_Prof_PandD'^^xsd:string ;
+    skos:prefLabel 'Single point Profile with pressure and depth'@en ;
+    skos:definition 'The series has a single set of instantaneous measurements at a fixed position and elevation.  Z co-ordinates are included along the primary dimension (rank 1) as both pressure and depth. Time and position are stored as metadata. This is to cover series that would be a profile if there was more than one point.'@en ;
+    skos:notation 'SDN:C10::SPPDPROF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C10/current/SPPPROF/1/> .
+<http://vocab.nerc.ac.uk/collection/C10/current/SPPPROF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C10/current/SPPPROF/>;
+    dc:modified '2018-09-20T09:02:55'^^xsd:dateTime ;
+    skos:altLabel 'SP_Prof_P'^^xsd:string ;
+    skos:prefLabel 'Single point Profile with pressure'@en ;
+    skos:definition 'The series has a single set of instantaneous measurements at a fixed position and elevation.  Data and z co-ordinate (as pressure) are included along the primary dimension (rank 1). Time and position are stored as metadata. This is to cover series that would be a profile if there was more than one point.'@en ;
+    skos:notation 'SDN:C10::SPPPROF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C10/current/SPPOINT/1/> .
+<http://vocab.nerc.ac.uk/collection/C10/current/SPPOINT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C10/current/SPPOINT/>;
+    dc:modified '2018-09-20T09:02:54'^^xsd:dateTime ;
+    skos:altLabel 'SP_Point_Ser'^^xsd:string ;
+    skos:prefLabel 'Single point Point time series'@en ;
+    skos:definition 'The series has a single set of measurements at a fixed position, elevation and time. Time and data parameters are stored along the primary dimension (rank 1). Position and the z co-ordinate (depth or height) are stored in metadata. This is to cover series that would be a time series i.e. POINT if there was more than one point.'@en ;
+    skos:notation 'SDN:C10::SPPOINT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C10/current/SPTRAJ/1/> .
+<http://vocab.nerc.ac.uk/collection/C10/current/SPTRAJ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C10/current/SPTRAJ/>;
+    dc:modified '2018-09-20T09:02:36'^^xsd:dateTime ;
+    skos:altLabel 'SP_Traj'^^xsd:string ;
+    skos:prefLabel 'Single point Trajectory'@en ;
+    skos:definition 'The series has measurements at a single fixed elevation, position and time. Time and horizontal spatial (e.g. latitude and longitude) coordinates together with data are stored along the primary dimension (rank 1). The z co-ordinate (depth or height) is stored in metadata. This is to cover series that would be TRAJ if there was more than one point.'@en ;
+    skos:notation 'SDN:C10::SPTRAJ'^^xsd:string .

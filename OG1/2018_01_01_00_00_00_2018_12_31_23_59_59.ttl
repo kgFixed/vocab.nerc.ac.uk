@@ -1,0 +1,525 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/OG1/2018_01_01_00_00_00_2018_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/OXYSAT/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/OXYSAT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/OXYSAT/>;
+    dc:modified '2018-08-24T10:57:58'^^xsd:dateTime ;
+    skos:altLabel 'OXYSAT_DOXY'^^xsd:string ;
+    skos:prefLabel 'Oxygen saturation by Optode'@en ;
+    skos:definition 'Saturation of oxygen {O2 CAS 7782-44-7} in the water body [dissolved plus reactive particulate phase] by in-situ oxygen optode and computation from concentration.'@en ;
+    skos:notation 'SDN:OG1::OXYSAT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/NCNTTUR1/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/NCNTTUR1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/NCNTTUR1/>;
+    dc:modified '2018-06-26T10:19:15'^^xsd:dateTime ;
+    skos:altLabel 'SIDE_SCATTERING_TURBIDITY'^^xsd:string ;
+    skos:prefLabel 'Turbidity signal from side scattering sensor'@en ;
+    skos:definition 'Turbidity signal from side scattering sensor.'@en ;
+    skos:notation 'SDN:OG1::NCNTTUR1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/TURB/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/TURB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/TURB/>;
+    dc:modified '2018-06-26T10:19:15'^^xsd:dateTime ;
+    skos:altLabel 'TURBIDITY'^^xsd:string ;
+    skos:prefLabel 'Turbidity of water in the water body'@en ;
+    skos:definition 'Estimate of suspended sediment concentration based on the proportion of a light transmission in the water column that is reflected back to a co-located receiver.'@en ;
+    skos:notation 'SDN:OG1::TURB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/BBP/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/BBP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/BBP/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'BBP'^^xsd:string ;
+    skos:prefLabel 'Particle backscattering at x nanometers'@en ;
+    skos:definition 'Particle backscattering at a specified optical wavelength.'@en ;
+    skos:notation 'SDN:OG1::BBP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/BBP470/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/BBP470/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/BBP470/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'BBP470'^^xsd:string ;
+    skos:prefLabel 'Particle backscattering at 470 nanometers'@en ;
+    skos:definition 'Particle backscattering at 470 nanometers.'@en ;
+    skos:notation 'SDN:OG1::BBP470'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/BBP532/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/BBP532/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/BBP532/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'BBP532'^^xsd:string ;
+    skos:prefLabel 'Particle backscattering at 532 nanometers'@en ;
+    skos:definition 'Particle backscattering at 532 nanometers.'@en ;
+    skos:notation 'SDN:OG1::BBP532'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/BBP700/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/BBP700/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/BBP700/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'BBP700'^^xsd:string ;
+    skos:prefLabel 'Particle backscattering at 700 nanometers'@en ;
+    skos:definition 'Particle backscattering at 700 nanometers.'@en ;
+    skos:notation 'SDN:OG1::BBP700'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/BETA470/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/BETA470/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/BETA470/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'BETA_BACKSCATTERING470'^^xsd:string ;
+    skos:prefLabel 'Total angle specific volume from backscattering sensor at 470 nanometers'@en ;
+    skos:definition 'Total angle specific volume from backscattering sensor at 470 nanometers.'@en ;
+    skos:notation 'SDN:OG1::BETA470'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/BETA532/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/BETA532/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/BETA532/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'BETA_BACKSCATTERING532'^^xsd:string ;
+    skos:prefLabel 'Total angle specific volume from backscattering sensor at 532 nanometers'@en ;
+    skos:definition 'Total angle specific volume from backscattering sensor at 532 nanometers.'@en ;
+    skos:notation 'SDN:OG1::BETA532'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/BETA700/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/BETA700/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/BETA700/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'BETA_BACKSCATTERING700'^^xsd:string ;
+    skos:prefLabel 'Total angle specific volume from backscattering sensor at 700 nanometers'@en ;
+    skos:definition 'Total angle specific volume from backscattering sensor at 700 nanometers.'@en ;
+    skos:notation 'SDN:OG1::BETA700'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/CDOM/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/CDOM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/CDOM/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'CDOM'^^xsd:string ;
+    skos:prefLabel 'Concentration of coloured dissolved organic matter in sea water'@en ;
+    skos:definition 'The quantity of coloured organic compounds in solution in unit volume of any body of water.'@en ;
+    skos:notation 'SDN:OG1::CDOM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/CHLA/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/CHLA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/CHLA/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'CHLA'^^xsd:string ;
+    skos:prefLabel 'Chlorophyll-A'@en ;
+    skos:definition 'In-situ fluorometer with either manufacturer, laboratory or sample calibration applied.'@en ;
+    skos:notation 'SDN:OG1::CHLA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/CPITMPOS/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/CPITMPOS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/CPITMPOS/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'CONFIGURED_GLIDER_PITCH_MASS_POSITION'^^xsd:string ;
+    skos:prefLabel 'Setting (offset distance from neutral) of glider pitchmass'@en ;
+    skos:definition 'The distance of a glider\'s internal pitch mass from the position that would maintain neutral pitch (Positive nose up).'@en ;
+    skos:notation 'SDN:OG1::CPITMPOS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/CROLMPOS/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/CROLMPOS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/CROLMPOS/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'CONFIGURED_GLIDER_ROLL_MASS_POSITION'^^xsd:string ;
+    skos:prefLabel 'Setting (offset angle from neutral) of glider roll mass'@en ;
+    skos:definition 'The angle of a glider\'s internal roll mass from the position that would maintain neutral roll (Positive starboard wing down).'@en ;
+    skos:notation 'SDN:OG1::CROLMPOS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/CNTDOXY/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/CNTDOXY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/CNTDOXY/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'COUNT_DOXY'^^xsd:string ;
+    skos:prefLabel 'Count reported by oxygen sensor'@en ;
+    skos:definition 'The raw output from a dissolved oxygen sensor such as an SBE43 with output converted from voltage or frequency into counts by an ADC.'@en ;
+    skos:notation 'SDN:OG1::CNTDOXY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/DENSITY/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/DENSITY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/DENSITY/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'DENSITY'^^xsd:string ;
+    skos:prefLabel 'Sea water density'@en ;
+    skos:definition 'The mass of a unit volume of any body of fresh or salt water.'@en ;
+    skos:notation 'SDN:OG1::DENSITY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/DPAR/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/DPAR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/DPAR/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'DOWNWELLING_PAR'^^xsd:string ;
+    skos:prefLabel 'Downwelling photosynthetic available radiation'@en ;
+    skos:definition 'Downwelling vector irradiance as energy of electromagnetic radiation (PAR wavelengths) in the water body by cosine-collector radiometer.'@en ;
+    skos:notation 'SDN:OG1::DPAR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/CYCLEENG/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/CYCLEENG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/CYCLEENG/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'ENGINEERING_CYCLE_NUMBER'^^xsd:string ;
+    skos:prefLabel 'Engineering data cycle number'@en ;
+    skos:definition 'Engineering data cycle number.'@en ;
+    skos:notation 'SDN:OG1::CYCLEENG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/FLUOCDOM/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/FLUOCDOM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/FLUOCDOM/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'FLUORESCENCE_CDOM'^^xsd:string ;
+    skos:prefLabel 'Raw fluorescence from coloured dissolved organic matter sensor'@en ;
+    skos:definition 'The amount of violet to low ultra-violet radiation generated in the water column in response to high ultra-violet radiation transmission expressed relative to an unspecified baseline using fluorometer designed to detect CDOM, crude oil or UV-fluorescent dyes.'@en ;
+    skos:notation 'SDN:OG1::FLUOCDOM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/GLCOMPH/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/GLCOMPH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/GLCOMPH/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'GLIDER_COMMAND_PHASE'^^xsd:string ;
+    skos:prefLabel 'Glider command phase'@en ;
+    skos:definition 'Glider command phase.'@en ;
+    skos:notation 'SDN:OG1::GLCOMPH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/DEPTH/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/DEPTH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/DEPTH/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'GLIDER_DEPTH'^^xsd:string ;
+    skos:prefLabel 'Depth below sea surface (zero at sea level) of measurement platform'@en ;
+    skos:definition 'Depth below surface of the water body by unknown instrument and correction to zero at sea level using unspecified algorithm.'@en ;
+    skos:notation 'SDN:OG1::DEPTH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/PITMPOS/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/PITMPOS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/PITMPOS/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'GLIDER_PITCH_MASS_POSITION_COUNT'^^xsd:string ;
+    skos:prefLabel 'Setting (counts) of glider pitch mass'@en ;
+    skos:definition 'The pitch A/D count position of a glider internal mass.'@en ;
+    skos:notation 'SDN:OG1::PITMPOS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/RELVBD/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/RELVBD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/RELVBD/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'GLIDER_RELATIVE_VBD'^^xsd:string ;
+    skos:prefLabel 'Setting (volume offset from neutrally buoyant) of glider variable buoyancy device'@en ;
+    skos:definition 'The difference between the volume of the internal variable buoyancy device (VBD) on a glider and the volume of the VBD that would maintain neutral buoyancy. If values are positive then the glider rises in the water.'@en ;
+    skos:notation 'SDN:OG1::RELVBD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/ROLMPOS/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/ROLMPOS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/ROLMPOS/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'GLIDER_ROLL_MASS_POSITION_COUNT'^^xsd:string ;
+    skos:prefLabel 'Setting (counts) of glider roll mass'@en ;
+    skos:definition 'The roll A/D count position of a glider internal mass.'@en ;
+    skos:notation 'SDN:OG1::ROLMPOS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/VBD/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/VBD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/VBD/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'GLIDER_VBD_COUNT'^^xsd:string ;
+    skos:prefLabel 'Setting (counts) of glider variable buoyancy device'@en ;
+    skos:definition 'The variable buoyancy device (VBD) A/D count position of a glider.'@en ;
+    skos:notation 'SDN:OG1::VBD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/LCNTDOXY/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/LCNTDOXY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/LCNTDOXY/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'LED_FLASHING_COUNT_DOXY'^^xsd:string ;
+    skos:prefLabel 'Number of times oxygen sensor flashing to measure oxygen'@en ;
+    skos:definition 'Number of times oxygen sensor flashing to measure oxygen.'@en ;
+    skos:notation 'SDN:OG1::LCNTDOXY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/MLPLDOXY/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/MLPLDOXY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/MLPLDOXY/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'MLPL_DOXY'^^xsd:string ;
+    skos:prefLabel 'Oxygen concentration reported by the oxygen sensor'@en ;
+    skos:definition 'Concentration of dissolved oxygen per unit volume of the water column. Oxygen may be expressed in terms of mass, volume or quantity of substance.'@en ;
+    skos:notation 'SDN:OG1::MLPLDOXY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/MOLDOXY/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/MOLDOXY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/MOLDOXY/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'MOLAR_DOXY'^^xsd:string ;
+    skos:prefLabel 'Uncompensated (pressure and salinity) oxygen concentration reported by the oxygen sensor'@en ;
+    skos:definition 'Water body dissolved oxygen concentration expressed at zero rather than in-situ salinity. This is NOT an environment state variable.'@en ;
+    skos:notation 'SDN:OG1::MOLDOXY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/NBSAMP/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/NBSAMP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/NBSAMP/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'NB_SAMPLE'^^xsd:string ;
+    skos:prefLabel 'Number of samples in bin'@en ;
+    skos:definition 'Number of values included in the determination of a statistic such as an average.'@en ;
+    skos:notation 'SDN:OG1::NBSAMP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/PHDEDOXY/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/PHDEDOXY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/PHDEDOXY/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'PHASE_DELAY_DOXY'^^xsd:string ;
+    skos:prefLabel 'Phase delay reported by oxygen sensor'@en ;
+    skos:definition 'Phase delay reported by oxygen sensor.'@en ;
+    skos:notation 'SDN:OG1::PHDEDOXY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/PPOXDOXY/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/PPOXDOXY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/PPOXDOXY/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'PPOX_DOXY'^^xsd:string ;
+    skos:prefLabel 'Partial pressure of oxygen'@en ;
+    skos:definition 'The pressure that the oxygen component of an atmosphere sample would have if it alone occupied the same volume at the same temperature as the sample.'@en ;
+    skos:notation 'SDN:OG1::PPOXDOXY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/EDLAM380/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/EDLAM380/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/EDLAM380/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'RAW_DOWNWELLING_IRRADIANCE380'^^xsd:string ;
+    skos:prefLabel 'Raw downwelling irradiance at 380 nanometers'@en ;
+    skos:definition 'The raw output expressed in counts from an upward-facing cosine collector radiometer for optical wavelength 380nm.'@en ;
+    skos:notation 'SDN:OG1::EDLAM380'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/EDLAM412/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/EDLAM412/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/EDLAM412/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'RAW_DOWNWELLING_IRRADIANCE412'^^xsd:string ;
+    skos:prefLabel 'Raw downwelling irradiance at 412 nanometers'@en ;
+    skos:definition 'The raw output expressed in counts from an upward-facing cosine collector radiometer for optical wavelength 412nm.'@en ;
+    skos:notation 'SDN:OG1::EDLAM412'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/EDLAM443/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/EDLAM443/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/EDLAM443/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'RAW_DOWNWELLING_IRRADIANCE443'^^xsd:string ;
+    skos:prefLabel 'Raw downwelling irradiance at 443 nanometers'@en ;
+    skos:definition 'The raw output expressed in counts from an upward-facing cosine collector radiometer for optical wavelength 443nm.'@en ;
+    skos:notation 'SDN:OG1::EDLAM443'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/EDLAM490/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/EDLAM490/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/EDLAM490/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'RAW_DOWNWELLING_IRRADIANCE490'^^xsd:string ;
+    skos:prefLabel 'Raw downwelling irradiance at 490 nanometers'@en ;
+    skos:definition 'The raw output expressed in counts from an upward-facing cosine collector radiometer for optical wavelength 490nm.'@en ;
+    skos:notation 'SDN:OG1::EDLAM490'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/EDLAM555/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/EDLAM555/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/EDLAM555/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'RAW_DOWNWELLING_IRRADIANCE555'^^xsd:string ;
+    skos:prefLabel 'Raw downwelling irradiance at 555 nanometers'@en ;
+    skos:definition 'The raw output expressed in counts from an upward-facing cosine collector radiometer for optical wavelength 555nm.'@en ;
+    skos:notation 'SDN:OG1::EDLAM555'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/RAWDPAR/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/RAWDPAR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/RAWDPAR/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'RAW_DOWNWELLING_PAR'^^xsd:string ;
+    skos:prefLabel 'Raw downwelling photosynthetic available radiation'@en ;
+    skos:definition 'The raw output expressed in counts from an upward-facing cosine collector radiometer measuring the integrated light over PAR wavelengths.'@en ;
+    skos:notation 'SDN:OG1::RAWDPAR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/SIGMA_T/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/SIGMA_T/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/SIGMA_T/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'SIGMA_T'^^xsd:string ;
+    skos:prefLabel 'Sigma-T'@en ;
+    skos:definition 'Computed by UNESCO SVAN function using in-situ temperature.'@en ;
+    skos:notation 'SDN:OG1::SIGMA_T'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/SOUNDVEL/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/SOUNDVEL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/SOUNDVEL/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'SOUNDVEL'^^xsd:string ;
+    skos:prefLabel 'Sound velocity in the water body'@en ;
+    skos:definition 'The rate at which sound travels through the water column.'@en ;
+    skos:notation 'SDN:OG1::SOUNDVEL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/TCNTDOXY/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/TCNTDOXY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/TCNTDOXY/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'TEMP_COUNT_DOXY'^^xsd:string ;
+    skos:prefLabel 'Count which is expressive of uncalibrated temperature value reported by oxygen sensor'@en ;
+    skos:definition 'Count which is expressive of uncalibrated temperature value reported by oxygen sensor.'@en ;
+    skos:notation 'SDN:OG1::TCNTDOXY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/TIME/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/TIME/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/TIME/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'TIME'^^xsd:string ;
+    skos:prefLabel 'epoch time (glider)'@en ;
+    skos:definition 'Time elapsed since 1970-01-01T00:00:00Z.'@en ;
+    skos:notation 'SDN:OG1::TIME'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/TIMEYO/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/TIMEYO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/TIMEYO/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'TIME_FROM_YO_START'^^xsd:string ;
+    skos:prefLabel 'Time elapsed since since start of glider yo'@en ;
+    skos:definition 'Time elapsed since since start of glider yo.'@en ;
+    skos:notation 'SDN:OG1::TIMEYO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/TIMEDF/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/TIMEDF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/TIMEDF/>;
+    dc:modified '2018-06-01T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'TIME_SINCE_MIDNIGHT_OF_CURRENT_DAY'^^xsd:string ;
+    skos:prefLabel 'Time elapsed since since start of day'@en ;
+    skos:definition 'Time elapsed since since start of day.'@en ;
+    skos:notation 'SDN:OG1::TIMEDF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/DOXY/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/DOXY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/DOXY/>;
+    dc:modified '2018-06-01T13:09:02'^^xsd:dateTime ;
+    skos:altLabel 'DOXY'^^xsd:string ;
+    skos:prefLabel 'Dissolved oxygen'@en ;
+    skos:definition 'Concentration of dissolved oxygen per unit mass of the water column. Oxygen may be expressed in terms of mass, volume or quantity of substance.'@en ;
+    skos:notation 'SDN:OG1::DOXY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/FREQDOXY/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/FREQDOXY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/FREQDOXY/>;
+    dc:modified '2018-06-01T13:09:02'^^xsd:dateTime ;
+    skos:altLabel 'FREQUENCY_DOXY'^^xsd:string ;
+    skos:prefLabel 'Frequency reported by oxygen sensor'@en ;
+    skos:definition 'The raw output from a dissolved oxygen sensor such as an SBE43 with output as a frequency related to DO concentration.'@en ;
+    skos:notation 'SDN:OG1::FREQDOXY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/TEMPDOXY/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/TEMPDOXY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/TEMPDOXY/>;
+    dc:modified '2018-06-01T13:09:02'^^xsd:dateTime ;
+    skos:altLabel 'TEMP_DOXY'^^xsd:string ;
+    skos:prefLabel 'Sea temperature from oxygen sensor ITS-90 scale'@en ;
+    skos:definition 'Temperature of oxygen determination by optode.'@en ;
+    skos:notation 'SDN:OG1::TEMPDOXY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/VLTDOXY/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/VLTDOXY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/VLTDOXY/>;
+    dc:modified '2018-06-01T13:09:02'^^xsd:dateTime ;
+    skos:altLabel 'VOLTAGE_DOXY'^^xsd:string ;
+    skos:prefLabel 'Voltage reported by oxygen sensor'@en ;
+    skos:definition 'The raw output from a dissolved oxygen sensor such as an SBE43 with output as a voltage related to DO concentration.'@en ;
+    skos:notation 'SDN:OG1::VLTDOXY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/PRES/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/PRES/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/PRES/>;
+    dc:modified '2018-05-31T16:35:24'^^xsd:dateTime ;
+    skos:altLabel 'PRES'^^xsd:string ;
+    skos:prefLabel 'Sea water pressure, equals 0 at sea-level'@en ;
+    skos:definition 'Pressure (spatial co-ordinate) exerted by the water body by profiling pressure sensor and corrected to read zero at sea level'@en ;
+    skos:notation 'SDN:OG1::PRES'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/PSAL/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/PSAL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/PSAL/>;
+    dc:modified '2018-05-31T16:35:24'^^xsd:dateTime ;
+    skos:altLabel 'PSAL'^^xsd:string ;
+    skos:prefLabel 'Practical salinity'@en ;
+    skos:definition 'Practical salinity of the water body by CTD and computation using UNESCO 1983 algorithm'@en ;
+    skos:notation 'SDN:OG1::PSAL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/TEMP/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/TEMP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/TEMP/>;
+    dc:modified '2018-05-31T16:35:24'^^xsd:dateTime ;
+    skos:altLabel 'TEMP'^^xsd:string ;
+    skos:prefLabel 'Sea temperature in-situ ITS-90 scale'@en ;
+    skos:definition 'Temperature of the water body by CTD or STD'@en ;
+    skos:notation 'SDN:OG1::TEMP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/CNDC/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/CNDC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/CNDC/>;
+    dc:modified '2018-04-23T16:53:35'^^xsd:dateTime ;
+    skos:altLabel 'CNDC'^^xsd:string ;
+    skos:prefLabel 'Electrical conductivity'@en ;
+    skos:definition 'Electrical conductivity of the water body by CTD'@en ;
+    skos:notation 'SDN:OG1::CNDC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/TVLTDOXY/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/TVLTDOXY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/TVLTDOXY/>;
+    dc:modified '2018-04-23T16:53:35'^^xsd:dateTime ;
+    skos:altLabel 'TEMP_VOLTAGE_DOXY'^^xsd:string ;
+    skos:prefLabel 'Thermistor voltage reported by oxygen sensor'@en ;
+    skos:definition 'Voltage of instrument output by in-situ thermistor'@en ;
+    skos:notation 'SDN:OG1::TVLTDOXY'^^xsd:string .

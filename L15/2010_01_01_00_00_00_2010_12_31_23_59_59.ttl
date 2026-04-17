@@ -1,0 +1,102 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L15/2010_01_01_00_00_00_2010_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L15/current/QUASIMEM/1/> .
+<http://vocab.nerc.ac.uk/collection/L15/current/QUASIMEM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L15/current/QUASIMEM/>;
+    dc:modified '2010-02-08T16:56:05'^^xsd:dateTime ;
+    skos:altLabel 'QUASIMEME'^^xsd:string ;
+    skos:prefLabel 'Quality Assurance of Information for Marine Environmental Monitoring in Europe'@en ;
+    skos:definition 'An organisation dedicated to the development of a quality assurance system for marine chemistry analytical measurements.'@en ;
+    skos:notation 'SDN:L15::QUASIMEM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L15/current/BEQUALM/1/> .
+<http://vocab.nerc.ac.uk/collection/L15/current/BEQUALM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L15/current/BEQUALM/>;
+    dc:modified '2010-02-08T16:53:08'^^xsd:dateTime ;
+    skos:altLabel 'BEQUALM'^^xsd:string ;
+    skos:prefLabel 'Biological Effects Quality Assurance in Monitoring Programmes'@en ;
+    skos:definition 'An EU project to develop a quality assurance system for biological effects techniques.'@en ;
+    skos:notation 'SDN:L15::BEQUALM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L15/current/JGOFSL1/1/> .
+<http://vocab.nerc.ac.uk/collection/L15/current/JGOFSL1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L15/current/JGOFSL1/>;
+    dc:modified '2010-02-08T16:49:36'^^xsd:dateTime ;
+    skos:altLabel 'JGOFS Level 1 protocols'^^xsd:string ;
+    skos:prefLabel 'Joint Global Ocean Flux Study core measurement protocols'@en ;
+    skos:definition 'A manual specifying field observation, sample collection, analytical and data quality procedures for quantification of the ocean carbon budget (http://ijgofs.whoi.edu/Publications/Report_Series/JGOFS_6.pdf).'@en ;
+    skos:notation 'SDN:L15::JGOFSL1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L15/current/COMBINE/2/> .
+<http://vocab.nerc.ac.uk/collection/L15/current/COMBINE/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L15/current/COMBINE/>;
+    dc:modified '2010-02-08T16:48:34'^^xsd:dateTime ;
+    skos:altLabel 'HELCOM COMBINE manual'^^xsd:string ;
+    skos:prefLabel 'Helsinki Commission Cooperative Monitoring in the Baltic Marine Environment manual of measurement protocols'@en ;
+    skos:definition 'A manual specifying field observation, sample collection, analytical and data quality procedures for environmental monitoring studies in the Baltic Sea (http://www.helcom.fi/groups/monas/CombineManual/en_GB/main/).'@en ;
+    skos:notation 'SDN:L15::COMBINE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L15/current/UNKNOWN/1/> .
+<http://vocab.nerc.ac.uk/collection/L15/current/UNKNOWN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L15/current/UNKNOWN/>;
+    dc:modified '2010-02-08T16:33:15'^^xsd:dateTime ;
+    skos:altLabel 'unknown'^^xsd:string ;
+    skos:prefLabel 'unknown'@en ;
+    skos:definition 'The correct value is not known to, or not computable by, the sender of this data. However, the correct value probably exists.'@en ;
+    skos:notation 'SDN:L15::UNKNOWN'^^xsd:string .

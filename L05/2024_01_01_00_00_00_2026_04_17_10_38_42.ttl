@@ -1,0 +1,163 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L05/2024_01_01_00_00_00_2026_04_17_10_38_42.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L05/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-17T10:38:42'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB55/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB55/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB55/>;
+    dc:modified '2026-03-03T11:58:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'solvent extractor samplers'@en ;
+    skos:definition 'Laboratory tools for separating soluble components from solid or semi-solid samples using solvents.'@en ;
+    skos:notation 'SDN:L05::LAB55'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/401/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/401/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/401/>;
+    dc:modified '2026-02-05T11:01:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'underwater illuminators'@en ;
+    skos:definition 'Devices used to provide light in an underwater setting.'@en ;
+    skos:notation 'SDN:L05::401'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/400/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/400/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/400/>;
+    dc:modified '2025-12-17T15:23:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'split-beam echosounder'@en ;
+    skos:definition 'A type of active sonar system that uses sound waves to determine a target\'s angular position while providing accurate target-strength (TS) estimates related to size and orientation of objects (targets) within the water column or along the seafloor. It uses a transducer that is physically divided into several (typically four) elements or quadrants.'@en ;
+    skos:notation 'SDN:L05::400'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/399/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/399/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/399/>;
+    dc:modified '2025-10-09T08:45:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Cherenkov detectors'@en ;
+    skos:definition 'Instruments that detect the Cherenkov radiation (emission of photons) that occurs when charged particles travel through a dielectric medium (like water or glass) at speeds greater than the phase velocity of light in that medium. These particle detectors require sensitive optical photon detection equipment such as photomultiplier tubes.'@en ;
+    skos:notation 'SDN:L05::399'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB54/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB54/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB54/>;
+    dc:modified '2025-08-01T09:36:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'thermal analysers'@en ;
+    skos:definition 'Instruments that heat samples whilst measuring their properties (e.g. mass, volume, gases evolved, conductivity) as they change with temperature.'@en ;
+    skos:notation 'SDN:L05::LAB54'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB53/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB53/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB53/>;
+    dc:modified '2025-07-09T09:43:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'alpha spectrometers'@en ;
+    skos:definition 'Instruments that identify and quantify radionuclides by measuring the energy and intensity of the alpha particles emitted during the process of radioactive decay.'@en ;
+    skos:notation 'SDN:L05::LAB53'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/CHRP/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/CHRP/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/CHRP/>;
+    dc:modified '2024-11-27T13:32:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'chirps'@en ;
+    skos:definition 'Chirp systems emit a \'swept-frequency signal\', meaning that the transmitted signal is emitted over a period of time and over a set range of frequencies. This repeatable (transmitted) waveform can be varied in terms of pulse length, frequency bandwidth, and phase/amplitude. A matched filter, or correlation process, collapses the swept frequency modulated (FM) received signal into a pulse of short duration, maximizing the signal-to-noise-ratio. The reflected signal is received by a tuned transducer array that generates the outgoing acoustic energy. Chirps operate within a range of 400Hz - 24 kHz and are used for the first 20-30 metres of unconsolidated sediments.'@en ;
+    skos:notation 'SDN:L05::CHRP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/BOMR/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/BOMR/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/BOMR/>;
+    dc:modified '2024-11-27T13:31:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'boomers'@en ;
+    skos:definition 'A marine seismic energy source in which capacitors are charged to high voltage and then discharged through a transducer in the water. The transducer consists of a flat coil with a spring-loaded aluminium plate. Eddy currents force the plates to separate sharply, producing a low pressure region between the plates into which the water rushes generating a pressure wave by implosion.'@en ;
+    skos:notation 'SDN:L05::BOMR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/69/3/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/69/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/69/>;
+    dc:modified '2024-11-27T13:29:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'neuston nets'@en ;
+    skos:definition 'A fine-meshed net designed to collect small size organisms, aggregates, or litter on top of or close to the surface of a water column (top 10 to 50 centimetres) including for example microzooplankton, mesozooplankton, nekton, microplastic or other litter.'@en ;
+    skos:notation 'SDN:L05::69'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/68/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/68/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/68/>;
+    dc:modified '2024-11-27T13:29:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'multinets'@en ;
+    skos:definition 'A system comprising several nets that can be opened and closed sequentially to collect a series of samples during a tow or haul. Samples microzooplankton, mesozooplankton and nekton.'@en ;
+    skos:notation 'SDN:L05::68'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/74/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/74/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/74/>;
+    dc:modified '2024-02-01T09:51:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'trap nets'@en ;
+    skos:definition 'Stationary nets (such as Fyke nets, Pound nets) that are used in shallow waters such as coastlines or estuaries. They are fixed to the bottom by anchors, ballast or stakes, and may be used individually or in groups. They often consist of a labyrinth-like chamber into which fish can easily enter, and from which they cannot easily escape. Target species include salmon, trout and eel.'@en ;
+    skos:notation 'SDN:L05::74'^^xsd:string .

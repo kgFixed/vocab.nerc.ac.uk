@@ -1,0 +1,111 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/R19/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R19/current/0/1/> .
+<http://vocab.nerc.ac.uk/collection/R19/current/0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R19/current/0/>;
+    dc:modified '2020-05-03T20:29:21'^^xsd:dateTime ;
+    skos:altLabel '0'^^xsd:string ;
+    skos:prefLabel 'Estimated value from pre-deployment metadata information'@en ;
+    skos:definition 'Value is estimated from pre-deployment information found in the metadata'@en ;
+    skos:notation 'SDN:R19::0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R19/current/1/1/> .
+<http://vocab.nerc.ac.uk/collection/R19/current/1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R19/current/1/>;
+    dc:modified '2020-05-03T20:29:21'^^xsd:dateTime ;
+    skos:altLabel '1'^^xsd:string ;
+    skos:prefLabel 'Estimated value from information not transmitted by the float and/or reliant on typical float behaviour'@en ;
+    skos:definition 'Value is estimated using information not transmitted by the float or by procedures that rely on typical float behaviour'@en ;
+    skos:notation 'SDN:R19::1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R19/current/2/1/> .
+<http://vocab.nerc.ac.uk/collection/R19/current/2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R19/current/2/>;
+    dc:modified '2020-05-03T20:29:21'^^xsd:dateTime ;
+    skos:altLabel '2'^^xsd:string ;
+    skos:prefLabel 'Value transmitted by the float'@en ;
+    skos:definition 'Value is transmitted by the float'@en ;
+    skos:notation 'SDN:R19::2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R19/current/3/1/> .
+<http://vocab.nerc.ac.uk/collection/R19/current/3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R19/current/3/>;
+    dc:modified '2020-05-03T20:29:21'^^xsd:dateTime ;
+    skos:altLabel '3'^^xsd:string ;
+    skos:prefLabel 'Value computed directly from transmitted float information'@en ;
+    skos:definition 'Value is directly computed from relevant, transmitted float information'@en ;
+    skos:notation 'SDN:R19::3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R19/current/4/1/> .
+<http://vocab.nerc.ac.uk/collection/R19/current/4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R19/current/4/>;
+    dc:modified '2020-05-03T20:29:21'^^xsd:dateTime ;
+    skos:altLabel '4'^^xsd:string ;
+    skos:prefLabel 'Value determined by satellite'@en ;
+    skos:definition 'Value is determined by satellite'@en ;
+    skos:notation 'SDN:R19::4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R19/current/9/1/> .
+<http://vocab.nerc.ac.uk/collection/R19/current/9/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R19/current/9/>;
+    dc:modified '2020-05-03T20:29:21'^^xsd:dateTime ;
+    skos:altLabel '9'^^xsd:string ;
+    skos:prefLabel 'Value not yet known'@en ;
+    skos:definition 'Value is not immediately known, but believe it can be estimated later'@en ;
+    skos:notation 'SDN:R19::9'^^xsd:string .

@@ -1,0 +1,802 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S29/2018_01_01_00_00_00_2018_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S29/2017_01_01_00_00_00_2017_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2018-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001314/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001314/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001314/>;
+    dc:modified '2018-10-02T17:05:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'measurement platform relative to water'@en ;
+    skos:definition 'A platform from which measurements are made. The measurement is defined relative to the water as in, for example, speed through water.'@en ;
+    skos:notation 'SDN:S29::PE001314'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001311/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001311/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001311/>;
+    dc:modified '2018-10-01T17:56:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'measurement platform'@en ;
+    skos:definition 'A platform from which measurements are made.'@en ;
+    skos:notation 'SDN:S29::PE001311'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001312/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001312/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001312/>;
+    dc:modified '2018-10-01T17:56:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'measurement platform relative to ground surface'@en ;
+    skos:definition 'A platform from which measurements are made. The entity is defined relative to the solid surface of the earth.'@en ;
+    skos:notation 'SDN:S29::PE001312'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001313/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001313/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001313/>;
+    dc:modified '2018-10-01T17:56:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water current relative to moving platform'@en ;
+    skos:definition 'The movement or flow of water. The entity is defined relative to the platform from which the measurement is made.'@en ;
+    skos:notation 'SDN:S29::PE001313'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001306/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001306/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001306/>;
+    dc:modified '2018-09-28T16:28:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water current (tidal)'@en ;
+    skos:definition 'The movement or flow of water. The movement or flow of water due to tidal forcing.'@en ;
+    skos:notation 'SDN:S29::PE001306'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001307/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/>;
+    dc:modified '2018-09-28T16:28:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water current'@en ;
+    skos:definition 'The movement or flow of water.'@en ;
+    skos:notation 'SDN:S29::PE001307'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001308/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001308/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001308/>;
+    dc:modified '2018-09-28T16:28:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water current (Eulerian measurement)'@en ;
+    skos:definition 'The movement or flow of water. The measurement of speed and direction of fluid flow as it passes a sensor deployed at a fixed geographical location over time, such as a mooring.'@en ;
+    skos:notation 'SDN:S29::PE001308'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001309/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001309/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001309/>;
+    dc:modified '2018-09-28T16:28:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water current (Eulerian measurement) relative to magnetic north'@en ;
+    skos:definition 'The movement or flow of water. The measurement of speed and direction of fluid flow as it passes a sensor deployed at a fixed geographical location over time, such as a mooring. The entity is defined relative to the direction indicated by a magnetic needle or compass.'@en ;
+    skos:notation 'SDN:S29::PE001309'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001310/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001310/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001310/>;
+    dc:modified '2018-09-28T16:28:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water current (Lagrangian measurement)'@en ;
+    skos:definition 'The movement or flow of water. The tracking of a fluid parcel as it moves by sensors deployed on free drifting platforms such as buoys or floats, to determine the speed and direction of fluid flow.'@en ;
+    skos:notation 'SDN:S29::PE001310'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001304/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001304/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001304/>;
+    dc:modified '2018-09-27T16:59:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ADCP bin relative to bed surface'@en ;
+    skos:definition 'Also called depth cells, ADCP bins are regularly spaced and contiguous segments dividing the section of water column that is covered by the instrument and over which data are averaged. The entity is defined relative to the surface of the bed of a water body.'@en ;
+    skos:notation 'SDN:S29::PE001304'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001305/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001305/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001305/>;
+    dc:modified '2018-09-27T16:59:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to sea level'@en ;
+    skos:definition 'The entity is defined relative to the sea surface elevation averaged over a period long enough to eliminate tidal signals.'@en ;
+    skos:notation 'SDN:S29::PE001305'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001303/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001303/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001303/>;
+    dc:modified '2018-09-27T16:59:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to ground surface'@en ;
+    skos:definition 'The entity is defined relative to the solid surface of the earth.'@en ;
+    skos:notation 'SDN:S29::PE001303'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001302/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001302/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001302/>;
+    dc:modified '2018-09-17T14:55:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'towing platform'@en ;
+    skos:definition 'A vehicle pulling an instrument or another platform.'@en ;
+    skos:notation 'SDN:S29::PE001302'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001301/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001301/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001301/>;
+    dc:modified '2018-09-11T14:47:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'acoustic signal returns'@en ;
+    skos:definition 'A portion of transmitted sound that is scattered back towards its source by organisms or particles in the water body, and detected by the intrument\'s receiver.'@en ;
+    skos:notation 'SDN:S29::PE001301'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001296/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001296/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001296/>;
+    dc:modified '2018-09-07T18:05:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ADCP bin relative to water surface'@en ;
+    skos:definition 'Also called depth cells, ADCP bins are regularly spaced and contiguous segments dividing the section of water column that is covered by the instrument and over which data are averaged. The entity is defined relative to the surface of a water body.'@en ;
+    skos:notation 'SDN:S29::PE001296'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001297/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001297/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001297/>;
+    dc:modified '2018-09-07T18:05:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sampling event end relative to water surface'@en ;
+    skos:definition 'Point in time and space marking the end of a sampling event. The entity is defined relative to the surface of a water body.'@en ;
+    skos:notation 'SDN:S29::PE001297'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001298/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001298/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001298/>;
+    dc:modified '2018-09-07T18:05:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to bed surface'@en ;
+    skos:definition 'The entity is defined relative to the surface of the bed of a water body.'@en ;
+    skos:notation 'SDN:S29::PE001298'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001299/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001299/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001299/>;
+    dc:modified '2018-09-07T18:05:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to water surface'@en ;
+    skos:definition 'The entity is defined relative to the surface of a water body.'@en ;
+    skos:notation 'SDN:S29::PE001299'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001300/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001300/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001300/>;
+    dc:modified '2018-09-07T18:05:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sampling event start relative to water surface'@en ;
+    skos:definition 'Point in time and space marking the beginning of a sampling event. The entity is defined relative to the surface of a water body.'@en ;
+    skos:notation 'SDN:S29::PE001300'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001295/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001295/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001295/>;
+    dc:modified '2018-07-19T13:50:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'particles (sand size-fraction)'@en ;
+    skos:definition 'Applies to particles that are in the sand size range (between 63 microns and 2 millimetres if using the Wentworth scale)'@en ;
+    skos:notation 'SDN:S29::PE001295'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001294/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001294/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001294/>;
+    dc:modified '2018-07-17T21:07:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'waves (infragravity)'@en ;
+    skos:definition 'Refers to waves observed at the surface of water bodies. A wave sample subset comprising the low frequency waves with a typical period of 25-250 seconds.'@en ;
+    skos:notation 'SDN:S29::PE001294'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001290/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001290/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001290/>;
+    dc:modified '2018-07-17T17:53:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'waves (mid wave spectrum)'@en ;
+    skos:definition 'Refers to waves observed at the surface of water bodies. A sample subset based on an arbitrary division of a wave spectrum using frequency containing the medium period waves in the spectrum. Definition in terms of frequency band may differ between datasets.'@en ;
+    skos:notation 'SDN:S29::PE001290'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001291/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001291/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001291/>;
+    dc:modified '2018-07-17T17:53:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'waves (around spectral peak)'@en ;
+    skos:definition 'Refers to waves observed at the surface of water bodies. A sample subset having the period at which the maximum variance spectral density occurs.'@en ;
+    skos:notation 'SDN:S29::PE001291'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001292/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001292/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001292/>;
+    dc:modified '2018-07-17T17:53:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'waves (lower wave spectrum)'@en ;
+    skos:definition 'Refers to waves observed at the surface of water bodies. A sample subset based on an arbitrary division of a wave spectrum using frequency containing the longest period waves in the spectrum. Definition in terms of frequency band may differ between datasets.'@en ;
+    skos:notation 'SDN:S29::PE001292'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001293/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001293/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001293/>;
+    dc:modified '2018-07-17T17:53:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'waves (upper wave spectrum)'@en ;
+    skos:definition 'Refers to waves observed at the surface of water bodies. A sample subset based on an arbitrary division of a wave spectrum using frequency containing the shortrest period waves in the spectrum. Definition in terms of frequency band may differ between datasets.'@en ;
+    skos:notation 'SDN:S29::PE001293'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001216/2/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001216/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001216/>;
+    dc:modified '2018-07-17T17:40:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'waves'@en ;
+    skos:definition 'Deprecated due to duplication with PE001208'@en ;
+    skos:notation 'SDN:S29::PE001216'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001289/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001289/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001289/>;
+    dc:modified '2018-07-11T09:32:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fluorescence measurement (emission filter)'@en ;
+    skos:definition 'A bandpass optical filter that blocks stray and undesired light and only passes the wavelengths of light emitted by the targetted fluorescing analyte.'@en ;
+    skos:notation 'SDN:S29::PE001289'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001284/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001284/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001284/>;
+    dc:modified '2018-07-09T11:13:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument output (578nm wavelength absorbance)'@en ;
+    skos:definition 'Raw signal generated by a measuring instrument. The physical entity refers to the instrument set up to measuring absorbance at a wavelength of 578 nanometer.'@en ;
+    skos:notation 'SDN:S29::PE001284'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001285/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001285/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001285/>;
+    dc:modified '2018-07-09T11:13:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument output (blue light wavelength excitation)'@en ;
+    skos:definition 'Raw signal generated by a measuring instrument. The physical entity refers to the instrument set up to emitting an excitation wavelength in the blue light spectrum.'@en ;
+    skos:notation 'SDN:S29::PE001285'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001286/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001286/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001286/>;
+    dc:modified '2018-07-09T11:13:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument output (434nm wavelength absorbance)'@en ;
+    skos:definition 'Raw signal generated by a measuring instrument. The physical entity refers to the instrument set up to measuring absorbance at a wavelength of 434 nanometer.'@en ;
+    skos:notation 'SDN:S29::PE001286'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001287/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001287/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001287/>;
+    dc:modified '2018-07-09T11:13:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument output (ambient light)'@en ;
+    skos:definition 'Raw signal generated by a measuring instrument. The physical entity refers to the instrument operating in ambient light.'@en ;
+    skos:notation 'SDN:S29::PE001287'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001288/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001288/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001288/>;
+    dc:modified '2018-07-09T11:13:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument output (red light wavelength excitation)'@en ;
+    skos:definition 'Raw signal generated by a measuring instrument. The physical entity refers to the instrument set up to emitting an excitation wavelength in the red light spectrum.'@en ;
+    skos:notation 'SDN:S29::PE001288'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001278/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001278/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001278/>;
+    dc:modified '2018-07-06T12:06:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument output (optical cell)'@en ;
+    skos:definition 'Raw signal generated by a measuring instrument. The physical entity refers to the photodetector sensing unit that converts light into current.'@en ;
+    skos:notation 'SDN:S29::PE001278'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001279/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001279/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001279/>;
+    dc:modified '2018-07-06T12:06:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument output (single unspecified wavelength in pure water)'@en ;
+    skos:definition 'Raw signal generated by a measuring instrument. The physical entity refers to a single wavelength that is either unknow or specified elsewhere in the metadata and a reading in pure water.'@en ;
+    skos:notation 'SDN:S29::PE001279'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001280/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001280/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001280/>;
+    dc:modified '2018-07-06T12:06:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument output (single unspecified wavelength in seawater)'@en ;
+    skos:definition 'Raw signal generated by a measuring instrument. The physical entity refers to a single wavelength that is either unknow or specified elsewhere in the metadata and a reading in seawater.'@en ;
+    skos:notation 'SDN:S29::PE001280'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001281/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001281/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001281/>;
+    dc:modified '2018-07-06T12:06:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument output (single unspecified wavelength)'@en ;
+    skos:definition 'Raw signal generated by a measuring instrument. The physical entity refers to a single wavelength that is either unknow or specified elsewhere in the metadata.'@en ;
+    skos:notation 'SDN:S29::PE001281'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001282/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001282/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001282/>;
+    dc:modified '2018-07-06T12:06:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument output (single unspecified wavelength in seawater and darkness)'@en ;
+    skos:definition 'Raw signal generated by a measuring instrument. The physical entity refers to a single wavelength that is either unknow or specified elsewhere in the metadata and a reading in seawater in the dark.'@en ;
+    skos:notation 'SDN:S29::PE001282'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001283/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001283/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001283/>;
+    dc:modified '2018-07-06T12:06:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument output (single unspecified wavelength in pure water and darkness)'@en ;
+    skos:definition 'Raw signal generated by a measuring instrument. The physical entity refers to a single wavelength that is either unknow or specified elsewhere in the metadata and a reading in pure water in the dark.'@en ;
+    skos:notation 'SDN:S29::PE001283'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001276/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001276/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001276/>;
+    dc:modified '2018-07-05T18:51:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sediment bioturbation'@en ;
+    skos:definition 'The reworking of sediments by animals or plants.'@en ;
+    skos:notation 'SDN:S29::PE001276'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001277/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001277/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001277/>;
+    dc:modified '2018-07-05T18:51:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sediment bedding and lamination'@en ;
+    skos:definition 'The physical structure of sediments.'@en ;
+    skos:notation 'SDN:S29::PE001277'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001275/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001275/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001275/>;
+    dc:modified '2018-07-05T18:49:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sediment'@en ;
+    skos:definition 'Physical entity consisting of disaggregated minerals or mineraloids.'@en ;
+    skos:notation 'SDN:S29::PE001275'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001274/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001274/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001274/>;
+    dc:modified '2018-06-14T15:48:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'habitat'@en ;
+    skos:definition 'An assemblage of animals and plants together with their abiotic environment.'@en ;
+    skos:notation 'SDN:S29::PE001274'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001273/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001273/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001273/>;
+    dc:modified '2018-06-14T12:41:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tar residues'@en ;
+    skos:definition 'Weathered oil conglomerations found in the environment as a result of natural and anthropogenic oil pollution.'@en ;
+    skos:notation 'SDN:S29::PE001273'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001208/2/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001208/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001208/>;
+    dc:modified '2018-06-10T18:03:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'waves'@en ;
+    skos:definition 'Waves at the surface of water bodies.'@en ;
+    skos:notation 'SDN:S29::PE001208'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001272/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001272/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001272/>;
+    dc:modified '2018-06-01T14:13:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water current (residual)'@en ;
+    skos:definition 'The movement of water averaged over a period of time to remove rapid variations in water flow.'@en ;
+    skos:notation 'SDN:S29::PE001272'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001271/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001271/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001271/>;
+    dc:modified '2018-05-02T15:35:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'particles (>1um)'@en ;
+    skos:definition 'Small solid forms of matter within the specified size range in microns.'@en ;
+    skos:notation 'SDN:S29::PE001271'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001270/2/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001270/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001270/>;
+    dc:modified '2018-04-30T16:38:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'particles (16000-22400um)'@en ;
+    skos:definition 'Created by mistake; duplicates existing code.'@en ;
+    skos:notation 'SDN:S29::PE001270'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001266/2/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001266/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001266/>;
+    dc:modified '2018-04-30T16:37:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'particles (45-63um)'@en ;
+    skos:definition 'Created by mistake; duplicates existing code.'@en ;
+    skos:notation 'SDN:S29::PE001266'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001267/2/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001267/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001267/>;
+    dc:modified '2018-04-30T16:37:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'particles (11200-16000um)'@en ;
+    skos:definition 'Created by mistake; duplicates existing code.'@en ;
+    skos:notation 'SDN:S29::PE001267'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001268/2/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001268/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001268/>;
+    dc:modified '2018-04-30T16:36:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'particles (22400-31500um)'@en ;
+    skos:definition 'Created by mistake; duplicates existing code.'@en ;
+    skos:notation 'SDN:S29::PE001268'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001269/2/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001269/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001269/>;
+    dc:modified '2018-04-30T16:29:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'particles (63-2000um)'@en ;
+    skos:definition 'Created by mistake; duplicates existing code.'@en ;
+    skos:notation 'SDN:S29::PE001269'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001265/2/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001265/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001265/>;
+    dc:modified '2018-04-30T16:28:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'particles (16-45um)'@en ;
+    skos:definition 'Created by mistake; duplicates existing code.'@en ;
+    skos:notation 'SDN:S29::PE001265'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001262/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001262/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001262/>;
+    dc:modified '2018-04-23T15:36:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'particles (900-1000um)'@en ;
+    skos:definition 'Small solid forms of matter within the specified size range in microns.'@en ;
+    skos:notation 'SDN:S29::PE001262'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001263/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001263/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001263/>;
+    dc:modified '2018-04-23T15:36:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'particles (<3.9um)'@en ;
+    skos:definition 'Small solid forms of matter within the specified size range in microns.'@en ;
+    skos:notation 'SDN:S29::PE001263'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001264/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001264/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001264/>;
+    dc:modified '2018-04-23T15:36:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'particles (3.9-63um)'@en ;
+    skos:definition 'Small solid forms of matter within the specified size range in microns.'@en ;
+    skos:notation 'SDN:S29::PE001264'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001261/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001261/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001261/>;
+    dc:modified '2018-04-16T18:47:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water'@en ;
+    skos:definition 'The liquid phase plus any dissolved material and suspended solids making up any body of water, such as oceans, rivers, streams, lakes, ponds or puddles.'@en ;
+    skos:notation 'SDN:S29::PE001261'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001260/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001260/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001260/>;
+    dc:modified '2018-02-19T12:07:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'battery output'@en ;
+    skos:definition 'Power provided by an electric battery.'@en ;
+    skos:notation 'SDN:S29::PE001260'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001259/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001259/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001259/>;
+    dc:modified '2018-02-19T11:59:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument output'@en ;
+    skos:definition 'Raw electronic signal generated by a measuring or analytical instrument.'@en ;
+    skos:notation 'SDN:S29::PE001259'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001258/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001258/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001258/>;
+    dc:modified '2018-01-30T20:52:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'flow cytometry cluster'@en ;
+    skos:definition 'A grouping of particles (cells) defined by statistical methods based on the similarity of their individual scattering and natural or artificial fluorescence properties.'@en ;
+    skos:notation 'SDN:S29::PE001258'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001245/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001245/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001245/>;
+    dc:modified '2018-01-26T17:02:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'wind (gust >3 second duration)'@en ;
+    skos:definition 'A sudden blast of wind generally regarded as an increase over sustained speed of more than 5 metres per second lasting more than 3 seconds.'@en ;
+    skos:notation 'SDN:S29::PE001245'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001246/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001246/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001246/>;
+    dc:modified '2018-01-26T17:02:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'wind'@en ;
+    skos:definition 'Movement of air in the atmosphere.'@en ;
+    skos:notation 'SDN:S29::PE001246'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001247/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001247/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001247/>;
+    dc:modified '2018-01-26T17:02:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'wind (at 10 metres) relative to True North'@en ;
+    skos:definition 'Applies to winds that are specifically said to have been corrected to, predicted, or measured at the ideal height of 10 metres above the surface of reference (ground level or sea surface). The direction towards the geographic North Pole is used as the reference point.'@en ;
+    skos:notation 'SDN:S29::PE001247'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001248/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001248/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001248/>;
+    dc:modified '2018-01-26T17:02:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'wind relative to True North'@en ;
+    skos:definition 'Movement of air in the atmosphere. The direction towards the geographic North Pole is used as the reference point.'@en ;
+    skos:notation 'SDN:S29::PE001248'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001249/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001249/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001249/>;
+    dc:modified '2018-01-26T17:02:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'wind (gust) relative to True North'@en ;
+    skos:definition 'A sudden and short-lived blast of wind generally regarded as an increase over sustained speed of more than 5 metres per second. The direction towards the geographic North Pole is used as the reference point.'@en ;
+    skos:notation 'SDN:S29::PE001249'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001250/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001250/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001250/>;
+    dc:modified '2018-01-26T17:02:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'wind (at 10 metres)'@en ;
+    skos:definition 'Applies to winds that are specifically said to have been corrected to, predicted, or measured at the ideal height of 10 metres above the surface of reference (ground level or sea surface).'@en ;
+    skos:notation 'SDN:S29::PE001250'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001251/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001251/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001251/>;
+    dc:modified '2018-01-26T17:02:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'wind (gust)'@en ;
+    skos:definition 'A sudden and short-lived blast of wind generally regarded as an increase over sustained speed of more than 5 metres per second.'@en ;
+    skos:notation 'SDN:S29::PE001251'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001252/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001252/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001252/>;
+    dc:modified '2018-01-26T17:02:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'wind (gust >1 minute duration) relative to True North'@en ;
+    skos:definition 'A sudden blast of wind generally regarded as an increase over sustained speed of more than 5 metres per second lasting more than 1 minute. The direction towards the geographic North Pole is used as the reference point.'@en ;
+    skos:notation 'SDN:S29::PE001252'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001253/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001253/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001253/>;
+    dc:modified '2018-01-26T17:02:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'wind (gust >15 second duration)'@en ;
+    skos:definition 'A sudden blast of wind generally regarded as an increase over sustained speed of more than 5 metres per second lasting more than 15 seconds.'@en ;
+    skos:notation 'SDN:S29::PE001253'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001254/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001254/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001254/>;
+    dc:modified '2018-01-26T17:02:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'wind (gust >1 minute duration)'@en ;
+    skos:definition 'A sudden blast of wind generally regarded as an increase over sustained speed of more than 5 metres per second lasting more than 1 minute.'@en ;
+    skos:notation 'SDN:S29::PE001254'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001255/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001255/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001255/>;
+    dc:modified '2018-01-26T17:02:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'wind (gust >5 second duration)'@en ;
+    skos:definition 'A sudden blast of wind generally regarded as an increase over sustained speed of more than 5 metres per second lasting more than 5 seconds.'@en ;
+    skos:notation 'SDN:S29::PE001255'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001256/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001256/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001256/>;
+    dc:modified '2018-01-26T17:02:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'wind relative to moving platform and heading'@en ;
+    skos:definition 'Movement of air in the atmosphere. The speed and direction of the observed phenomenon is measured relative to the moving platform (e.g. a ship) with no correction for the ship speed or direction.'@en ;
+    skos:notation 'SDN:S29::PE001256'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001257/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001257/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001257/>;
+    dc:modified '2018-01-26T17:02:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'wind (gust >30 second duration)'@en ;
+    skos:definition 'A sudden blast of wind generally regarded as an increase over sustained speed of more than 5 metres per second lasting more than 30 seconds.'@en ;
+    skos:notation 'SDN:S29::PE001257'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001244/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001244/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001244/>;
+    dc:modified '2018-01-12T12:47:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'waves (swell)'@en ;
+    skos:definition 'A sample subset comprising waves that originated a significant distance away from the measurement site whose direction is not governed by the wind field at that site. They are characterised by long periods, low velocity and a limited directional spread.'@en ;
+    skos:notation 'SDN:S29::PE001244'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001238/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001238/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001238/>;
+    dc:modified '2018-01-11T15:48:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'red fluorescence pulse'@en ;
+    skos:definition 'The signal detected when a particle containing a red fluorescent material such as chlorophyll-a or phycocyanin for instance, passes in front of a blue to red laser beam.'@en ;
+    skos:notation 'SDN:S29::PE001238'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001239/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001239/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001239/>;
+    dc:modified '2018-01-11T15:48:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'forward light scatter pulse'@en ;
+    skos:definition 'The signal generated by photons scattered in a frontal angle by a particle when crossing a laser beam of a flow cytometer.'@en ;
+    skos:notation 'SDN:S29::PE001239'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001240/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001240/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001240/>;
+    dc:modified '2018-01-11T15:48:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'yellow fluorescence pulse'@en ;
+    skos:definition 'The signal detected when a particle containing a yellow fluorescent material such as phycoerythrin for instance, passes in front of a blue to green laser beam. Phycoerythrin emits in the yellow and orange bandwidths.'@en ;
+    skos:notation 'SDN:S29::PE001240'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001241/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001241/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001241/>;
+    dc:modified '2018-01-11T15:48:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'green fluorescence pulse'@en ;
+    skos:definition 'The signal detected when a particle containing a green fluorescent material such as an artificial dye for example, passes in front of a blue laser beam.'@en ;
+    skos:notation 'SDN:S29::PE001241'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001242/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001242/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001242/>;
+    dc:modified '2018-01-11T15:48:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'orange fluorescence pulse'@en ;
+    skos:definition 'The signal detected when a particle containing orange fluorescent material such as phycoerythrin for instance, passes in front of a blue to green laser beam. Phycoerythrin emits in the yellow and orange bandwidths.'@en ;
+    skos:notation 'SDN:S29::PE001242'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001243/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001243/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001243/>;
+    dc:modified '2018-01-11T15:48:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sideward light scatter pulse'@en ;
+    skos:definition 'The signal generated by photons scattered at 90 degrees to the laser beam direction by a particle when crossing a laser beam of a flow cytometer.'@en ;
+    skos:notation 'SDN:S29::PE001243'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001236/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001236/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001236/>;
+    dc:modified '2018-01-10T14:52:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sample collector (aperture)'@en ;
+    skos:definition 'The mouth opening of a sample collecting device such as a plankton net or a trawl.'@en ;
+    skos:notation 'SDN:S29::PE001236'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001237/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001237/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001237/>;
+    dc:modified '2018-01-10T14:52:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sample collector (mesh)'@en ;
+    skos:definition 'The material made of a network of wire or thread that constitutes the filtering interface of sample collecting devices such as plankton nets, trawls, or sieves.'@en ;
+    skos:notation 'SDN:S29::PE001237'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001235/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001235/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001235/>;
+    dc:modified '2018-01-10T14:32:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'micro-litter particles'@en ;
+    skos:definition 'Microscopic debris originating from human activities or derived from man-made objects that are found in a natural environment.'@en ;
+    skos:notation 'SDN:S29::PE001235'^^xsd:string .

@@ -1,0 +1,163 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/B76/2024_01_01_00_00_00_2026_04_17_10_38_18.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/B76/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-17T10:38:18'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B76/current/B7600043/1/> .
+<http://vocab.nerc.ac.uk/collection/B76/current/B7600043/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B76/current/B7600043/>;
+    dc:modified '2025-11-18T10:02:46'^^xsd:dateTime ;
+    skos:altLabel 'RAFOS float'^^xsd:string ;
+    skos:prefLabel 'Unknown RAFOS drifting subsurface float - Rossby et al. (1986)'@en ;
+    skos:definition 'A drifting subsurface float used to map deep ocean currents and deployed at a target range of depths known as the Sound Fixing and Ranging (SOFAR) channel. The RAFOS float acts as a receiver of pongs emitted at designated times by moored acoustic beacons at ranges of hundreds of kilometres away which provide real-time underwater tracking of the float. Widely used by Woods Hole Oceanographic Institution (WHOI), the floats comprise a 2 m glass tube to house the electronics, an acoustic hydrophone, a ballast weight, and is typically fitted with temperature, pressure, and dissolved oxygen sensors. The float is depth rated to 3000 m and can have a deployment life span of up to 2 years. At the end of its mission, a pre-programmed command from the float\'s microprocessor releases the ballast weight, allowing it to rise to the surface and transmit the acoustic tracking data to satellites. The RAFOS system for oceanographic current measurements was first developed by T. Rossby, D. Dorson, and J. Fontaine at the University of Rhode Island and published in 1986. Rossby, T., Dorson, D., and Fontaine, J. (1986) The RAFOS System. J. Atmos. Oceanic Technol., 3(4), 672–679. doi: 10.1175/1520-0426(1986)0032.0.CO;2.'@en ;
+    skos:notation 'SDN:B76::B7600043'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B76/current/B7600042/1/> .
+<http://vocab.nerc.ac.uk/collection/B76/current/B7600042/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B76/current/B7600042/>;
+    dc:modified '2025-11-11T11:11:09'^^xsd:dateTime ;
+    skos:altLabel 'VAMPIRE'^^xsd:string ;
+    skos:prefLabel 'Arizona State University Bermuda Institute of Ocean Sciences Visual and Acoustic Mesopelagic Profiler for Interdisciplinary Research'@en ;
+    skos:definition 'An autonomous profiling vehicle developed in collaboration with the University of Rhode Island and Stony Brook University. It collects environmental, acoustic, and visual data and can be deployed down to 1000 meters. Operating autonomously for days at a time, VAMPIRE has the ability to analyse plankton and nekton communities at a very fine vertical scale, using cameras and acoustics, while environmental sensors simultaneously collect measurements of temperature, salinity, oxygen, chlorophyll, turbidity, beam attenuation, and photosynthetically active radiation (PAR).'@en ;
+    skos:notation 'SDN:B76::B7600042'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B76/current/B7600041/1/> .
+<http://vocab.nerc.ac.uk/collection/B76/current/B7600041/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B76/current/B7600041/>;
+    dc:modified '2025-10-24T15:47:38'^^xsd:dateTime ;
+    skos:altLabel 'SEATREC infiniTE float'^^xsd:string ;
+    skos:prefLabel 'SEATREC infiniTE autonomous profiling float'@en ;
+    skos:definition 'An autonomous profiling float rated to 1000 m (with a 2000 m version available on request) capable of profiling up to 3 times a day. The base of the float contains Seatrec’s thermal energy harvesting system which, through the incorporation of Phase Change Materials (PCMs), utilises the ocean’s thermocline for changing buoyancy and electricity generation. The limitless power source enables the floats to house CTD sensors, hydrophones, and echosounders.'@en ;
+    skos:notation 'SDN:B76::B7600041'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B76/current/B7600038/1/> .
+<http://vocab.nerc.ac.uk/collection/B76/current/B7600038/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B76/current/B7600038/>;
+    dc:modified '2025-10-17T10:18:51'^^xsd:dateTime ;
+    skos:altLabel 'APEX BGC float'^^xsd:string ;
+    skos:prefLabel 'Teledyne Webb Research APEX BioGeoChem autonomous profiling float'@en ;
+    skos:definition 'An autonomous profiling float with biogeochemical sensor options rated to 2000 m. Widely used within the international Argo program, it consists of an aluminium hull, an APF-11 controller, and an Iridium Circuit Switch/RUDICS telemetry system as standard. Sensors typically include a Sea-Bird SBE 41CP CTD, a WET Labs FLbb(CD) fluorometer, and an Aanderaa 4430 dissolved oxygen sensor. Sensor options include RBR Argo CTD, a RINKO ARO-FT dissolved oxygen sensor, an SBE Float Deep SeaFET pH sensor, a Satlantic OCR 504 radiometer, a WET Labs C Rover transmissometer, and a WET Labs SUNA nitrate sensor. There are also options for custom sensor integration, a carbon fibre hull, or for Iridium Short Burst Data (SBD) telemetry. Additional features such as ice avoidance can be included dependent on the float configuration.'@en ;
+    skos:notation 'SDN:B76::B7600038'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B76/current/B7600039/1/> .
+<http://vocab.nerc.ac.uk/collection/B76/current/B7600039/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B76/current/B7600039/>;
+    dc:modified '2025-10-17T10:18:51'^^xsd:dateTime ;
+    skos:altLabel 'APEX EM float'^^xsd:string ;
+    skos:prefLabel 'Teledyne Webb Research APEX Current Profiling autonomous profiling float'@en ;
+    skos:definition 'An autonomous profiling float with electromagnetic sensors that directly measures water motion through induced electromagnetic currents. The float can be deployed from aircraft using a parachute and can be programmed for surface avoidance during extreme weather events. It has a carbon fibre hull rated to 2000 m and an Iridium Circuit Switch/RUDICS telemetry system as standard. It is also typically fitted with a Sea-Bird SBE 41CP CTD, a WET Labs FLbb (CD) fluorometer, an SBE Float Deep SeaFET pH sensor, and either an Aanderaa 4430 or a RINKO II ARO-FT dissolved oxygen sensor. There are options for custom sensor integration or for Iridium Short Burst Data (SBD) telemetry. Additional features such as ice avoidance can be included dependent on the float configuration.'@en ;
+    skos:notation 'SDN:B76::B7600039'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B76/current/B7600040/1/> .
+<http://vocab.nerc.ac.uk/collection/B76/current/B7600040/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B76/current/B7600040/>;
+    dc:modified '2025-10-17T10:18:51'^^xsd:dateTime ;
+    skos:altLabel 'APEX float'^^xsd:string ;
+    skos:prefLabel 'Teledyne Webb Research APEX autonomous profiling float'@en ;
+    skos:definition 'An autonomous profiling float rated to 2000 m. Widely used within the international Argo program, it consists of an aluminium hull, an APF-11 controller, and an Iridium Circuit Switch/RUDICS telemetry system as standard. It is typically fitted with a Sea-Bird SBE 41(CP) CTD with the alternative option of an RBR CTD. There are also options for a carbon fibre hull or for Iridium Short Burst Data (SBD) telemetry. Additional features such as ice avoidance can be included but are dependent on the float configuration.'@en ;
+    skos:notation 'SDN:B76::B7600040'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B76/current/B7600035/1/> .
+<http://vocab.nerc.ac.uk/collection/B76/current/B7600035/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B76/current/B7600035/>;
+    dc:modified '2025-04-09T17:02:41'^^xsd:dateTime ;
+    skos:altLabel 'Alseamar SeaExplorer X2'^^xsd:string ;
+    skos:prefLabel 'Alseamar SeaExplorer X2 glider'@en ;
+    skos:definition 'A long-range autonomous underwater vehicle (AUV) based on buoyancy. It is used for remote water column sampling. It uses hydraulic buoyancy change to alter the vehicle density in relation to the surrounding water thereby causing the vehicle to either float or sink. Given an appropriate dive or climb angle, the wings and body lift and convert some of this vertical motion into a forward saw tooth horizontal motion. Periodically, the glider surfaces and calls via Iridium Satellite Phone (anywhere in world) or Free Wave RF Modem (line of sight) in to landstation name GLIMPS 0auto attendant computer) to relay navigational fix, data and receive further instructions for command and control. The glider is capable of storm sampling and can be flown in a coordinated fleet. It is about 2 m in length (+0.8 m foldable antenna), has a hull diameter of about 23 cm and mass of 60 kg in the air. Wing span 65 cm. Ballast 1000 cc, 20 to 1000 m depth range of operation. Rechargeable battery. It transmits via RF modem, Iridium (RUDICS), ARGOS or acoustic modem.'@en ;
+    skos:notation 'SDN:B76::B7600035'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B76/current/B7600036/1/> .
+<http://vocab.nerc.ac.uk/collection/B76/current/B7600036/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B76/current/B7600036/>;
+    dc:modified '2025-04-09T17:02:41'^^xsd:dateTime ;
+    skos:altLabel 'Alseamar SeaExplorer X3'^^xsd:string ;
+    skos:prefLabel 'Alseamar SeaExplorer X3 glider'@en ;
+    skos:definition 'A long-range autonomous underwater vehicle (AUV) based on buoyancy, released in 2025 with updated electronics compared to the X2. It is used for remote water column sampling. It uses hydraulic buoyancy change to alter the vehicle density in relation to the surrounding water thereby causing the vehicle to either float or sink. Given an appropriate dive or climb angle, the wings and body lift and convert some of this vertical motion into a forward saw tooth horizontal motion. Periodically, the glider surfaces and calls via Iridium Satellite Phone (anywhere in world) or Free Wave RF Modem (line of sight) in to landstation name GLIMPS 0auto attendant computer) to relay navigational fix, data and receive further instructions for command and control. The glider is capable of storm sampling and can be flown in a coordinated fleet. It is about 2 m in length (+0.8 m foldable antenna), has a hull diameter of about 23 cm and mass of 60 kg in the air. Wing span 65 cm. Ballast 1000 cc, 20 m to 1250 m depth range of operation. Rechargeable battery. It transmits via RF modem, Iridium (RUDICS), ARGOS or acoustic modem.'@en ;
+    skos:notation 'SDN:B76::B7600036'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B76/current/B7600037/1/> .
+<http://vocab.nerc.ac.uk/collection/B76/current/B7600037/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B76/current/B7600037/>;
+    dc:modified '2025-04-09T17:02:41'^^xsd:dateTime ;
+    skos:altLabel 'Alseamar SeaExplorer X3 shallow'^^xsd:string ;
+    skos:prefLabel 'Alseamar SeaExplorer X3 shallow glider'@en ;
+    skos:definition 'A long-range autonomous underwater vehicle (AUV) based on buoyancy, released in 2025 with updated electronics compared to the X2. It has a specific pump and ballast capacity to optimise flight in the shallow 5 to 200 m depth range. It is used for remote water column sampling. It uses hydraulic buoyancy change to alter the vehicle density in relation to the surrounding water thereby causing the vehicle to either float or sink. Given an appropriate dive or climb angle, the wings and body lift and convert some of this vertical motion into a forward saw tooth horizontal motion. Periodically, the glider surfaces and calls via Iridium Satellite Phone (anywhere in world) or Free Wave RF Modem (line of sight) in to landstation name GLIMPS 0auto attendant computer) to relay navigational fix, data and receive further instructions for command and control. The glider is capable of storm sampling and can be flown in a coordinated fleet. It is about 2.2 m in length (+0.8 m foldable antenna), has a hull diameter of about 23 cm and mass of 65 kg in the air. Wing span 65 cm. Ballast 1600 cc, 5m to 200 m depth range of operation. Rechargeable battery. It transmits via RF modem, Iridium (RUDICS), ARGOS or acoustic modem.'@en ;
+    skos:notation 'SDN:B76::B7600037'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B76/current/B7600034/1/> .
+<http://vocab.nerc.ac.uk/collection/B76/current/B7600034/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B76/current/B7600034/>;
+    dc:modified '2025-01-29T08:50:13'^^xsd:dateTime ;
+    skos:altLabel 'UoW Seaglider SGX'^^xsd:string ;
+    skos:prefLabel 'University of Washington Seaglider SGX'@en ;
+    skos:definition 'An autonomous underwater vehicle (AUV) based on buoyancy, developed at the University of Washington for continuous, long-term measurement of oceanographic parameters at full ocean depth. It uses small changes in buoyancy and wings to achieve forward motion. The systems pitch and roll are controlled using adjustable ballast (the vehicle battery). Pitch and roll trim are automatic. The vehicle moves through the water in a saw-tooth like pattern and surfaces often to determine its position. Navigation is waypoint-based and accomplished using a combination of GPS fixes while on the surface and internal sensors that monitor the vehicle heading, depth and attitude during dives. The SGX features advanced navigation capabilities including under-ice behaviour. External sensors are constantly scanning the ocean to determine environmental properties. The glider is approximately 203 cm long with a maximum diameter of 29.5 cm. It has a nominal displacement of 70 kg and is rated to 1000 m depth. The nominal mission duration for SGX is 12 months with continuous sampling, which may be extended with periods of loitering. Maximum roll is 80 degrees. Typical speeds of 0.1 - 0.25 m/s horizontal, 0.1 m/s vertical.'@en ;
+    skos:notation 'SDN:B76::B7600034'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B76/current/B7600033/1/> .
+<http://vocab.nerc.ac.uk/collection/B76/current/B7600033/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B76/current/B7600033/>;
+    dc:modified '2024-10-24T12:46:03'^^xsd:dateTime ;
+    skos:altLabel 'Slocum G3 shallow'^^xsd:string ;
+    skos:prefLabel 'Teledyne Webb Research Slocum G3 shallow glider'@en ;
+    skos:definition 'A long-range autonomous underwater vehicle (AUV) based on buoyancy. It is the shallow-water version of the standard Slocum G3, optimised for shallow water operation due to its specialised pump, with a depth range from 4 to 150 m. It is used for remote water column sampling. It uses hydraulic buoyancy change to alter the vehicle density in relation to the surrounding water thereby causing the vehicle to either float or sink. Given an appropriate dive or climb angle, the wings and body lift and convert some of this vertical motion into a forward saw tooth horizontal motion. Periodically, the glider surfaces and calls via Iridium Satellite Phone (anywhere in world) or Free Wave RF Modem (line of sight) in to Dockserver (auto attendant computer) to relay navigational fix, data and receive further instructions for command and control. The glider is capable of storm sampling and can be flown in a coordinated fleet. It is 1.5 m in length, has a hull diameter of 22 cm and mass of 55-70 kgs (dependent upon configuration). It has an exchangeable payload (capacity up to 6 L) which is capable of housing a variety of environmental sensors such as nitrate and oxygen. It uses lithium or alkaline batteries. It has a deployment range of 350-13000 km (dependent upon configuration), a deployment length of 15 days to 18 months (dependent upon configuration) and an operating depth range of 4-150 m. Navigation is via GPS waypoints, a pressure and altimeter sensor. Maximum speed is 0.35 m/s (0.68 knot) with the buoyancy engine and an average up to 0.5 m/s (1 knots) with full drive, with the thruster: Up to 1 m/s (2 knots). It transmits via RF modem, Iridium (RUDICS), ARGOS or acoustic modem.'@en ;
+    skos:notation 'SDN:B76::B7600033'^^xsd:string .

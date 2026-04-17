@@ -1,0 +1,730 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C77/2010_01_01_00_00_00_2011_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C77/2009_01_01_00_00_00_2009_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2011-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H21/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H21/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H21/>;
+    dc:modified '2011-12-08T10:58:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Oxygen'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::H21'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H22/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H22/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H22/>;
+    dc:modified '2011-12-08T10:58:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Phosphate'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::H22'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H23/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H23/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H23/>;
+    dc:modified '2011-12-08T10:58:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Total - P'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::H23'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H24/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H24/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H24/>;
+    dc:modified '2011-12-08T10:58:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Nitrate'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::H24'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H25/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H25/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H25/>;
+    dc:modified '2011-12-08T10:58:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Nitrite'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::H25'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H26/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H26/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H26/>;
+    dc:modified '2011-12-08T10:58:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Silicate'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::H26'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H27/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H27/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H27/>;
+    dc:modified '2011-12-08T10:58:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Alkalinity'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::H27'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H28/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H28/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H28/>;
+    dc:modified '2011-12-08T10:58:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'pH'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::H28'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H30/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H30/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H30/>;
+    dc:modified '2011-12-08T10:58:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Trace elements'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::H30'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H31/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H31/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H31/>;
+    dc:modified '2011-12-08T10:58:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Radioactivity'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::H31'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H32/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H32/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H32/>;
+    dc:modified '2011-12-08T10:58:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Isotopes'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::H32'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H33/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H33/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H33/>;
+    dc:modified '2011-12-08T10:58:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Other dissolved gases'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::H33'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H74/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H74/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H74/>;
+    dc:modified '2011-12-08T10:58:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Carbon dioxide'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::H74'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H75/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H75/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H75/>;
+    dc:modified '2011-12-08T10:58:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Total - N'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::H75'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H76/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H76/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H76/>;
+    dc:modified '2011-12-08T10:58:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ammonia'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::H76'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H90/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H90/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H90/>;
+    dc:modified '2011-12-08T10:58:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Other chemical oceanographic measurements'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::H90'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/P01/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/P01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/P01/>;
+    dc:modified '2011-12-08T10:58:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Suspended matter'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::P01'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/P02/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/P02/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/P02/>;
+    dc:modified '2011-12-08T10:58:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Trace metals'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::P02'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/P03/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/P03/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/P03/>;
+    dc:modified '2011-12-08T10:58:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Petroleum residues'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::P03'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/P04/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/P04/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/P04/>;
+    dc:modified '2011-12-08T10:58:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Chlorinated hydrocarbons'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::P04'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/P05/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/P05/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/P05/>;
+    dc:modified '2011-12-08T10:58:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Other dissolved substances'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::P05'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/P12/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/P12/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/P12/>;
+    dc:modified '2011-12-08T10:58:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bottom deposits'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::P12'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/P13/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/P13/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/P13/>;
+    dc:modified '2011-12-08T10:58:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Contaminants in organisms'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::P13'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/P90/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/P90/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/P90/>;
+    dc:modified '2011-12-08T10:58:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Other contaminant measurements'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::P90'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B13/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B13/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B13/>;
+    dc:modified '2011-12-08T10:58:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Eggs and larvae'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B13'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B14/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B14/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B14/>;
+    dc:modified '2011-12-08T10:58:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Pelagic fish'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B14'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B16/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B16/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B16/>;
+    dc:modified '2011-12-08T10:58:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Benthic bacteria/micro-organisms'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B16'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B17/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B17/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B17/>;
+    dc:modified '2011-12-08T10:58:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Phytobenthos'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B17'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B18/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B18/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B18/>;
+    dc:modified '2011-12-08T10:58:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Zoobenthos'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B18'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B19/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B19/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B19/>;
+    dc:modified '2011-12-08T10:58:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Demersal fish'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B19'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B20/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B20/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B20/>;
+    dc:modified '2011-12-08T10:58:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Molluscs'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B20'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B21/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B21/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B21/>;
+    dc:modified '2011-12-08T10:58:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Crustaceans'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B21'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B25/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B25/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B25/>;
+    dc:modified '2011-12-08T10:58:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Birds'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B25'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B26/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B26/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B26/>;
+    dc:modified '2011-12-08T10:58:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mammals and reptiles'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B26'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B28/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B28/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B28/>;
+    dc:modified '2011-12-08T10:58:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Acoustic reflection on marine organisms.'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B28'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B37/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B37/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B37/>;
+    dc:modified '2011-12-08T10:58:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Taggings'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B37'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B64/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B64/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B64/>;
+    dc:modified '2011-12-08T10:58:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Gear research'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B64'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B65/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B65/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B65/>;
+    dc:modified '2011-12-08T10:58:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Exploratory fishing'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B65'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B71/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B71/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B71/>;
+    dc:modified '2011-12-08T10:58:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Particulate organic matter (inc POC, PON)'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B71'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B72/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B72/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B72/>;
+    dc:modified '2011-12-08T10:58:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Biochemical measurements (eg lipids, amino acids)'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B72'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B73/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B73/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B73/>;
+    dc:modified '2011-12-08T10:58:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sediment traps'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B73'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B90/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B90/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B90/>;
+    dc:modified '2011-12-08T10:58:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Other biological/fisheries measurements'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B90'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B01/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B01/>;
+    dc:modified '2011-12-08T10:58:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Primary productivity'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B01'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B02/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B02/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B02/>;
+    dc:modified '2011-12-08T10:58:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Phytoplankton pigs (eg chlorophyll, fluorescence)'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B02'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B03/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B03/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B03/>;
+    dc:modified '2011-12-08T10:58:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Seston'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B03'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B06/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B06/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B06/>;
+    dc:modified '2011-12-08T10:58:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Dissolved organic matter (inc DOC)'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B06'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B07/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B07/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B07/>;
+    dc:modified '2011-12-08T10:58:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Pelagic bacteria/micro-organisms'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B07'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B08/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B08/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B08/>;
+    dc:modified '2011-12-08T10:58:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Phytoplankton'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B08'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B09/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B09/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B09/>;
+    dc:modified '2011-12-08T10:58:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Zooplankton'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B09'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B10/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B10/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B10/>;
+    dc:modified '2011-12-08T10:58:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Neuston'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B10'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/B11/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/B11/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/B11/>;
+    dc:modified '2011-12-08T10:58:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Nekton'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::B11'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/M01/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/M01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/M01/>;
+    dc:modified '2011-12-08T10:58:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Upper air observations'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::M01'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/M02/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/M02/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/M02/>;
+    dc:modified '2011-12-08T10:58:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Incident radiation'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::M02'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/M04/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/M04/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/M04/>;
+    dc:modified '2011-12-08T10:58:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ice observations'@en ;
+    skos:definition 'Descriptions of the extent or physical characteristics of sea ice or the collection of sea ice samples for physical, chemical or biological analysis.'@en ;
+    skos:notation 'SDN:C77::M04'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/M05/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/M05/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/M05/>;
+    dc:modified '2011-12-08T10:58:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Occasional standard measurements'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::M05'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/M06/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/M06/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/M06/>;
+    dc:modified '2011-12-08T10:58:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Routine standard measurements'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::M06'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/M71/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/M71/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/M71/>;
+    dc:modified '2011-12-08T10:58:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Atmospheric chemistry'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::M71'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/M90/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/M90/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/M90/>;
+    dc:modified '2011-12-08T10:58:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Other meteorological measurements'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::M90'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/G76/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/G76/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/G76/>;
+    dc:modified '2011-12-08T10:58:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Multichannel seismic reflection'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::G76'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/G90/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/G90/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/G90/>;
+    dc:modified '2011-12-08T10:58:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Other geological/geophysical measurements'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::G90'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/G02/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/G02/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/G02/>;
+    dc:modified '2011-12-08T10:58:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Grab'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::G02'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/G03/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/G03/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/G03/>;
+    dc:modified '2011-12-08T10:58:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Core - rock'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::G03'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/G04/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/G04/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/G04/>;
+    dc:modified '2011-12-08T10:58:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Core - soft bottom'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::G04'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/G08/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/G08/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/G08/>;
+    dc:modified '2011-12-08T10:58:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bottom photography'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::G08'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/G24/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/G24/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/G24/>;
+    dc:modified '2011-12-08T10:58:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Long/short range side scan sonar'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::G24'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/G26/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/G26/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/G26/>;
+    dc:modified '2011-12-08T10:58:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Seismic refraction'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::G26'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/G27/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/G27/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/G27/>;
+    dc:modified '2011-12-08T10:58:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Gravity measurements'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::G27'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/G28/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/G28/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/G28/>;
+    dc:modified '2011-12-08T10:58:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Magnetic measurements'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::G28'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/G71/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/G71/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/G71/>;
+    dc:modified '2011-12-08T10:58:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'In-situ seafloor measurement/sampling'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::G71'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/G72/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/G72/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/G72/>;
+    dc:modified '2011-12-08T10:58:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Geophysical measurements made at depth'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::G72'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/G73/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/G73/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/G73/>;
+    dc:modified '2011-12-08T10:58:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Single-beam echosounding'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::G73'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/G74/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/G74/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/G74/>;
+    dc:modified '2011-12-08T10:58:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Multi-beam echosounding'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::G74'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/G75/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/G75/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/G75/>;
+    dc:modified '2011-12-08T10:58:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Single channel seismic reflection'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::G75'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/G01/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/G01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/G01/>;
+    dc:modified '2011-12-08T10:58:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Dredge'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::G01'^^xsd:string .

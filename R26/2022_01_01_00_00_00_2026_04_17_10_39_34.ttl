@@ -1,0 +1,118 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/R26/2022_01_01_00_00_00_2026_04_17_10_39_34.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/R26/2020_01_01_00_00_00_2021_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-17T10:39:34'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R26/current/TWR/1/> .
+<http://vocab.nerc.ac.uk/collection/R26/current/TWR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R26/current/TWR/>;
+    dc:modified '2025-08-29T10:15:12'^^xsd:dateTime ;
+    skos:altLabel 'TWR'^^xsd:string ;
+    skos:prefLabel 'Teledyne Webb Research'@en ;
+    skos:definition 'Teledyne Webb Research (formerly Webb Research Corporation).'@en ;
+    skos:notation 'SDN:R26::TWR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R26/current/WRC/1/> .
+<http://vocab.nerc.ac.uk/collection/R26/current/WRC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R26/current/WRC/>;
+    dc:modified '2025-08-29T10:15:12'^^xsd:dateTime ;
+    skos:altLabel 'WRC'^^xsd:string ;
+    skos:prefLabel 'Webb Research Corporation'@en ;
+    skos:definition 'Webb Research Corporation.'@en ;
+    skos:notation 'SDN:R26::WRC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R26/current/NKE/1/> .
+<http://vocab.nerc.ac.uk/collection/R26/current/NKE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R26/current/NKE/>;
+    dc:modified '2025-08-28T11:45:52'^^xsd:dateTime ;
+    skos:altLabel 'NKE'^^xsd:string ;
+    skos:prefLabel 'NKE Instrumentation'@en ;
+    skos:definition 'NKE Instrumentation.'@en ;
+    skos:notation 'SDN:R26::NKE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R26/current/MARTEC/1/> .
+<http://vocab.nerc.ac.uk/collection/R26/current/MARTEC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R26/current/MARTEC/>;
+    dc:modified '2025-08-28T11:45:51'^^xsd:dateTime ;
+    skos:altLabel 'MARTEC'^^xsd:string ;
+    skos:prefLabel 'Martec'@en ;
+    skos:definition 'MARTEC.'@en ;
+    skos:notation 'SDN:R26::MARTEC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R26/current/OPTIMARE/1/> .
+<http://vocab.nerc.ac.uk/collection/R26/current/OPTIMARE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R26/current/OPTIMARE/>;
+    dc:modified '2025-08-28T11:45:51'^^xsd:dateTime ;
+    skos:altLabel 'OPTIMARE'^^xsd:string ;
+    skos:prefLabel 'Optimare'@en ;
+    skos:definition 'Optimare.'@en ;
+    skos:notation 'SDN:R26::OPTIMARE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R26/current/MICRON/2/> .
+<http://vocab.nerc.ac.uk/collection/R26/current/MICRON/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R26/current/MICRON/>;
+    dc:modified '2025-06-05T09:26:36'^^xsd:dateTime ;
+    skos:altLabel 'MICRON'^^xsd:string ;
+    skos:prefLabel 'Micron Instruments'@en ;
+    skos:definition 'A manufacturing company located in Simi Valley, California (United States of America), specialised in the production and supply of semiconductor strain gages, pressure transducers, temperature sensors and measuring systems (also operating as Piezo-metrics).'@en ;
+    skos:notation 'SDN:R26::MICRON'^^xsd:string .

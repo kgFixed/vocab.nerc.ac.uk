@@ -1,0 +1,109 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C88/2024_01_01_00_00_00_2026_04_17_10_38_31.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C88/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-17T10:38:31'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR193/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR193/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR193/>;
+    dc:modified '2026-04-01T17:36:44'^^xsd:dateTime ;
+    skos:altLabel 'EDS vocab editor'^^xsd:string ;
+    skos:prefLabel 'Environmental Data Service vocabulary editor'@en ;
+    skos:definition 'Person or persons authorised to make changes to controlled vocabularies under UKRI-NERC Environmental Data Service governance.'@en ;
+    skos:notation 'SDN:C88::BODCSR193'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR192/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR192/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR192/>;
+    dc:modified '2026-04-01T17:36:41'^^xsd:dateTime ;
+    skos:altLabel 'OceanOPS vocab editor'^^xsd:string ;
+    skos:prefLabel 'GOOS/OceanOPS vocabulary editor'@en ;
+    skos:definition 'Person or persons authorised to make changes to controlled vocabularies under GOOS/OceanOPS governance.'@en ;
+    skos:notation 'SDN:C88::BODCSR192'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR07/3/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR07/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR07/>;
+    dc:modified '2024-07-03T16:52:23'^^xsd:dateTime ;
+    skos:altLabel 'OGL(NERC)'^^xsd:string ;
+    skos:prefLabel 'Open Government Licence agreed'@en ;
+    skos:definition 'Code deprecated on 03/07/2024: retiring all references to NERC in the OGL policy and roles. Replacing with standard OGL policy and role. Description was: User agreed Open Government Licence for NERC Open Data - includes preamble for NERC copyright requirements'@en ;
+    skos:notation 'SDN:C88::BODCSR07'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR191/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR191/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR191/>;
+    dc:modified '2024-06-27T11:00:24'^^xsd:dateTime ;
+    skos:altLabel 'BODCexceptionalDM'^^xsd:string ;
+    skos:prefLabel 'Exceptional circumstances data project manager'@en ;
+    skos:definition 'A current member of BODC staff who is the data manager for a project in which the embargo period has been extended due to exceptional circumstances (eg delayed access to samples due to COVID).'@en ;
+    skos:notation 'SDN:C88::BODCSR191'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR190/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR190/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR190/>;
+    dc:modified '2024-01-08T18:45:11'^^xsd:dateTime ;
+    skos:altLabel 'EMODnet physics vocab editor'^^xsd:string ;
+    skos:prefLabel 'EMODnet Physics vocabulary editor'@en ;
+    skos:definition 'Person or persons authorised to make changes to controlled vocabularies owned by the EMODnet Physics consortium.'@en ;
+    skos:notation 'SDN:C88::BODCSR190'^^xsd:string .

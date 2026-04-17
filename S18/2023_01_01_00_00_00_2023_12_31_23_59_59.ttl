@@ -1,0 +1,127 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S18/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S18/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2023-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800114/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800114/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800114/>;
+    dc:modified '2023-08-31T09:27:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'spawning grounds'@en ;
+    skos:definition 'Areas of water where aquatic animals spawn, or produce their eggs.'@en ;
+    skos:notation 'SDN:S18::S1800114'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800113/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800113/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800113/>;
+    dc:modified '2023-08-30T11:38:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'river water'@en ;
+    skos:definition 'The liquid phase plus any dissolved material and suspended solids making up the body of rivers or streams. Rivers and streams are defined as being upstream of the tidal limit.'@en ;
+    skos:notation 'SDN:S18::S1800113'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800112/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800112/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800112/>;
+    dc:modified '2023-06-28T13:41:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'geomorphological feature'@en ;
+    skos:definition 'A topographic or bathymetric feature of the seafloor, coastline or terrestrial land surface created by physical, chemical or biological processes, such as beaches, dunes, bedforms, seamounts and ridges.'@en ;
+    skos:notation 'SDN:S18::S1800112'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800111/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800111/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800111/>;
+    dc:modified '2023-04-21T13:02:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'acoustic signal emissions'@en ;
+    skos:definition 'The property relates to the transmission of a sound by an instrument.'@en ;
+    skos:notation 'SDN:S18::S1800111'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800110/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800110/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800110/>;
+    dc:modified '2023-02-16T22:28:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'representative sample'@en ;
+    skos:definition 'Term to be used when the property reported is a characteristic of what a sample needs to be in order to be considered representative like e.g. a size threshold below which a sample is no longer representative.'@en ;
+    skos:notation 'SDN:S18::S1800110'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800109/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800109/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800109/>;
+    dc:modified '2023-01-11T09:50:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'survey'@en ;
+    skos:definition 'Term to be used when the property reported is a characteristic of a survey (for example its area, its duration). A survey is a sampling activity which can be made up of a single or multiple sampling events.'@en ;
+    skos:notation 'SDN:S18::S1800109'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800108/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800108/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800108/>;
+    dc:modified '2023-01-11T09:50:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sample'@en ;
+    skos:definition 'Term to be used when the property reported is a characteristic of a sample (for example its volume, its wet weight, its dry weight). A sample is a representative part of a larger whole or group.'@en ;
+    skos:notation 'SDN:S18::S1800108'^^xsd:string .

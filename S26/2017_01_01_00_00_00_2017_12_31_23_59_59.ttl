@@ -1,0 +1,172 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S26/2017_01_01_00_00_00_2017_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S26/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2017-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT01970/1/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT01970/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT01970/>;
+    dc:modified '2017-09-07T11:19:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water body [particulate 0.8-200um phase]'@en ;
+    skos:definition 'Solids contained in a sample from any body of water from a puddle to an ocean that have been collected by cascade filtration through 200um and 0.8um filters. This term is used for measurements on the solid expressed in the context of the water body (e.g. Analyte concentration multiplied by SPM concentration).'@en ;
+    skos:notation 'SDN:S26::MAT01970'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT00878/2/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT00878/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT00878/>;
+    dc:modified '2017-08-11T12:21:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'experiment water sample [particulate GF/F-90um phase]'@en ;
+    skos:definition 'Solids extracted from a sample of water whose chemical and biological composition has been modified under known controlled conditions by cascade filtration through a 90um screen and a GF/F (nominal pore size0.7um) filter.'@en ;
+    skos:notation 'SDN:S26::MAT00878'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT00885/2/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT00885/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT00885/>;
+    dc:modified '2017-08-11T12:21:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'experiment water sample [particulate >GF/F phase]'@en ;
+    skos:definition 'Solids extracted from a sample of water whose chemical and biological composition has been modified under known controlled conditions by filtration through a GF/F (nominal pore size0.7um) filter.'@en ;
+    skos:notation 'SDN:S26::MAT00885'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT00913/2/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT00913/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT00913/>;
+    dc:modified '2017-08-11T12:21:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'peat'@en ;
+    skos:definition 'An accumulation of partially decayed vegetation or organic matter.'@en ;
+    skos:notation 'SDN:S26::MAT00913'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT01074/2/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT01074/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT01074/>;
+    dc:modified '2017-08-11T12:21:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'wet sediment'@en ;
+    skos:definition 'A sample of disaggregated minerals and mineraloids collected from the bed of any body of water without any subsequent processing such as drying or sieving.'@en ;
+    skos:notation 'SDN:S26::MAT01074'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT01074/2/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT01074/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT01074/>;
+    dc:modified '2017-08-11T12:21:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sédiments bruts'@en ;
+    skos:definition 'A sample of disaggregated minerals and mineraloids collected from the bed of any body of water without any subsequent processing such as drying or sieving.'@en ;
+    skos:notation 'SDN:S26::MAT01074'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT01074/2/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT01074/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT01074/>;
+    dc:modified '2017-08-11T12:21:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'wet sediment'@en ;
+    skos:definition 'Échantillon de minéraux ou minéraloides non consolidés provenant du fond d\'une masse d\'eau et n\'ayant subit aucun traitement (ni séchage, ni tamisage…).'@en ;
+    skos:notation 'SDN:S26::MAT01074'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT01074/2/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT01074/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT01074/>;
+    dc:modified '2017-08-11T12:21:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sédiments bruts'@en ;
+    skos:definition 'Échantillon de minéraux ou minéraloides non consolidés provenant du fond d\'une masse d\'eau et n\'ayant subit aucun traitement (ni séchage, ni tamisage…).'@en ;
+    skos:notation 'SDN:S26::MAT01074'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT01969/1/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT01969/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT01969/>;
+    dc:modified '2017-08-01T11:35:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water body [particulate 2.5-500um phase]'@en ;
+    skos:definition 'Solids contained in a sample from any body of water from a puddle to an ocean that have been collected by sequential filtration through 500 and 2.5 microns mesh screens. This term is used for measurements on the solid expressed in the context of the water body (e.g. Analyte concentration multiplied by SPM concentration).'@en ;
+    skos:notation 'SDN:S26::MAT01969'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT01968/1/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT01968/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT01968/>;
+    dc:modified '2017-07-29T18:30:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water body [particulate 0.2-3um phase]'@en ;
+    skos:definition 'Solids contained in a sample from any body of water from a puddle to an ocean that have been collected by sequential filtration through 3um and 0.2um filters. This term is used for measurements on the solid expressed in the context of the water body (e.g. Analyte concentration multiplied by SPM concentration).'@en ;
+    skos:notation 'SDN:S26::MAT01968'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT01967/1/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT01967/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT01967/>;
+    dc:modified '2017-07-24T16:21:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water body [particulate 0.2-20um phase]'@en ;
+    skos:definition 'Solids contained in a sample from any body of water from a puddle to an ocean that have been collected by cascade filtration through 20um and 0.2um filters. This term is used for measurements on the solid expressed in the context of the water body (e.g. Analyte concentration multiplied by SPM concentration).'@en ;
+    skos:notation 'SDN:S26::MAT01967'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT01966/1/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT01966/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT01966/>;
+    dc:modified '2017-04-20T17:12:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'rainwater [dissolved plus reactive particulate <0.4/0.45um phase]'@en ;
+    skos:definition 'Sample of liquid precipitation filtered through a 0.4um or 0.45um pore filter.'@en ;
+    skos:notation 'SDN:S26::MAT01966'^^xsd:string .

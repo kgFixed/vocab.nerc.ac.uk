@@ -1,0 +1,102 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/H01/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/H01/current/H0100009/2/> .
+<http://vocab.nerc.ac.uk/collection/H01/current/H0100009/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/H01/current/H0100009/>;
+    dc:modified '2022-07-20T14:41:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'granules'@en ;
+    skos:definition 'Micro-litter particles with smooth spherical shape. In comparison with pellets, they have a rounder shape and are smaller in size (adapted from [Matiddi et al, 2021](https://accedacris.ulpgc.es/bitstream/10553/114417/1/Report_Monitoring-microlitter-ingestion-in-marine-fish.pdf)).'@en ;
+    skos:notation 'SDN:H01::H0100009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/H01/current/H0100004/3/> .
+<http://vocab.nerc.ac.uk/collection/H01/current/H0100004/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/H01/current/H0100004/>;
+    dc:modified '2022-06-28T10:23:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filaments'@en ;
+    skos:definition 'Slender thread-like micro-litter particles.'@en ;
+    skos:notation 'SDN:H01::H0100004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/H01/current/H0100007/3/> .
+<http://vocab.nerc.ac.uk/collection/H01/current/H0100007/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/H01/current/H0100007/>;
+    dc:modified '2022-06-28T10:20:54'^^xsd:dateTime ;
+    skos:altLabel 'non-plastic'^^xsd:string ;
+    skos:prefLabel 'non-plastic man-made micro-particles (e.g. glass, metal, tar)'@en ;
+    skos:definition 'Term deprecated on 2022/06/28 following review of the H01 categories; see https://github.com/nvs-vocabs/EMODnetChemVocabs/issues/19. A generic term for any kind of micro-litter item that is not made of plastic.'@en ;
+    skos:notation 'SDN:H01::H0100007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/H01/current/H0100008/2/> .
+<http://vocab.nerc.ac.uk/collection/H01/current/H0100008/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/H01/current/H0100008/>;
+    dc:modified '2022-06-28T10:20:52'^^xsd:dateTime ;
+    skos:altLabel 'natural fibres/rubber'^^xsd:string ;
+    skos:prefLabel 'non-plastic filaments (natural fibres, rubber)'@en ;
+    skos:definition 'Term deprecated on 2022/06/28 following review of the H01 categories; see https://github.com/nvs-vocabs/EMODnetChemVocabs/issues/19. Filaments of non-plastic material such as natural fibres or rubber that are present in micro-litter samples.'@en ;
+    skos:notation 'SDN:H01::H0100008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/H01/current/H0100003/3/> .
+<http://vocab.nerc.ac.uk/collection/H01/current/H0100003/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/H01/current/H0100003/>;
+    dc:modified '2022-06-28T10:20:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'pellets'@en ;
+    skos:definition 'Micro-litter particles from industrial origin only. In comparison with granules, pellets are usually flat on one side, rough surface and irregular, round shapes. Normally bigger in size.'@en ;
+    skos:notation 'SDN:H01::H0100003'^^xsd:string .

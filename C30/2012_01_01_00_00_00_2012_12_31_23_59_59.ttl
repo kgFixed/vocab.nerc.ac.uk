@@ -1,0 +1,100 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C30/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C30/2011_01_01_00_00_00_2011_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2012-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/CEDRE/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/CEDRE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/CEDRE/>;
+    dc:modified '2012-07-20T09:34:13'^^xsd:dateTime ;
+    skos:altLabel 'Cedre'^^xsd:string ;
+    skos:prefLabel 'Centre de documentation de recherche et d\'expérimentations sur les pollutions accidentelles des eaux'@en ;
+    skos:definition 'French national organisation for documentation, research and experimentation on pollutants, their effects and the response means and tools that can be used to combat them. It is charged with providing advice and expertise to the authorities responsible for responding to accidental pollution.'@en ;
+    skos:notation 'SDN:C30::CEDRE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/MFR/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/MFR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/MFR/>;
+    dc:modified '2012-07-20T09:13:15'^^xsd:dateTime ;
+    skos:altLabel 'METEO FRANCE'^^xsd:string ;
+    skos:prefLabel 'METEO FRANCE'@en ;
+    skos:definition 'Governance for vocabularies used in services and products provided by the French national weather forecasting and meteorology organisation.'@en ;
+    skos:notation 'SDN:C30::MFR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/TCE/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/TCE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/TCE/>;
+    dc:modified '2012-02-14T12:41:20'^^xsd:dateTime ;
+    skos:altLabel 'TCE'^^xsd:string ;
+    skos:prefLabel 'The Crown Estate'@en ;
+    skos:definition 'Authority for controlled vocabularies used in relation to the property portfolio owned by the Crown.  Authority delegated under the auspices of The Crown Estate Commissioners'@en ;
+    skos:notation 'SDN:C30::TCE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/ICAN/2/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/ICAN/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/ICAN/>;
+    dc:modified '2012-02-01T16:05:11'^^xsd:dateTime ;
+    skos:altLabel 'ICAN'^^xsd:string ;
+    skos:prefLabel 'International Coastal Atlas Network'@en ;
+    skos:definition 'International federation of coastal web atlases.  Governance implemented through the Technical team.'@en ;
+    skos:notation 'SDN:C30::ICAN'^^xsd:string .

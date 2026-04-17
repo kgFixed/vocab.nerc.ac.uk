@@ -1,0 +1,91 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S11/2011_01_01_00_00_00_2017_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S11/2009_01_01_00_00_00_2010_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2017-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S11/current/S1115/4/> .
+<http://vocab.nerc.ac.uk/collection/S11/current/S1115/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S11/current/S1115/>;
+    dc:modified '2017-07-30T14:44:29'^^xsd:dateTime ;
+    skos:altLabel 'nauplii'^^xsd:string ;
+    skos:prefLabel 'N1-6'@en ;
+    skos:definition 'This code is equivalent to S1130 and has been deprecated.'@en ;
+    skos:notation 'SDN:S11::S1115'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S11/current/S1166/1/> .
+<http://vocab.nerc.ac.uk/collection/S11/current/S1166/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S11/current/S1166/>;
+    dc:modified '2017-01-24T18:44:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'auricularia'@en ;
+    skos:definition 'The first stage of larval development of holothurians (sea cucumbers).'@en ;
+    skos:notation 'SDN:S11::S1166'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S11/current/S1120/2/> .
+<http://vocab.nerc.ac.uk/collection/S11/current/S1120/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S11/current/S1120/>;
+    dc:modified '2017-01-24T17:04:51'^^xsd:dateTime ;
+    skos:altLabel 'cyprids'^^xsd:string ;
+    skos:prefLabel 'cypris'@en ;
+    skos:definition 'The final larval stage of crustacean cirripedes or barnacles (infraclass Cirripedia) following the naupliar phase and prior to the sessile adult phase.'@en ;
+    skos:notation 'SDN:S11::S1120'^^xsd:string .

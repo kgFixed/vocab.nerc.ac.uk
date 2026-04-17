@@ -1,0 +1,145 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P24/2023_01_01_00_00_00_2026_04_17_10_39_15.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P24/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-17T10:39:15'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P24/current/AREAPVOL/1/> .
+<http://vocab.nerc.ac.uk/collection/P24/current/AREAPVOL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P24/current/AREAPVOL/>;
+    dc:modified '2026-04-13T16:39:16'^^xsd:dateTime ;
+    skos:altLabel '[L*L]/[L*L*L]'^^xsd:string ;
+    skos:prefLabel '[length*length]/[length*length*length]'@en ;
+    skos:definition 'The square of the fundamental dimension of distance (known as area) per the cube of the fundamental dimension of length (known as volume).'@en ;
+    skos:notation 'SDN:P24::AREAPVOL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P24/current/JPMOL/1/> .
+<http://vocab.nerc.ac.uk/collection/P24/current/JPMOL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P24/current/JPMOL/>;
+    dc:modified '2026-02-10T04:35:56'^^xsd:dateTime ;
+    skos:altLabel '[[M]*[L*L]/[T*T]]/[MOL]'^^xsd:string ;
+    skos:prefLabel '[[mass]*[length*length]/[time*time]]/[amount of substance]'@en ;
+    skos:definition 'The fundamental dimension of energy (mass per unit area per unit time squared) divided by the fundamental dimension of amount of substance.'@en ;
+    skos:notation 'SDN:P24::JPMOL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P24/current/MPMPTPPFD/1/> .
+<http://vocab.nerc.ac.uk/collection/P24/current/MPMPTPPFD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P24/current/MPMPTPPFD/>;
+    dc:modified '2025-08-04T14:54:07'^^xsd:dateTime ;
+    skos:altLabel '[M]/[M]/[T]/[[MOL]/[L*L]/[T]]'^^xsd:string ;
+    skos:prefLabel '[mass]/[mass]/[time],/[[amount of substance]/[length*length]/[time]]'@en ;
+    skos:definition 'The fundamental dimension of heaviness per the fundamental dimension of heaviness per the fundamental dimension of time per the fundamental units for Photosynthetic Photon Flux Density (PPFD).'@en ;
+    skos:notation 'SDN:P24::MPMPTPPFD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P24/current/MPMPTIME/1/> .
+<http://vocab.nerc.ac.uk/collection/P24/current/MPMPTIME/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P24/current/MPMPTIME/>;
+    dc:modified '2025-07-15T12:47:34'^^xsd:dateTime ;
+    skos:altLabel '[M]/[M]/[T]'^^xsd:string ;
+    skos:prefLabel '[mass]/[mass]/[time]'@en ;
+    skos:definition 'The fundamental dimension of heaviness per the fundamental dimension of heaviness per the fundamental dimension of time.'@en ;
+    skos:notation 'SDN:P24::MPMPTIME'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P24/current/MSPVOLLENGTH/1/> .
+<http://vocab.nerc.ac.uk/collection/P24/current/MSPVOLLENGTH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P24/current/MSPVOLLENGTH/>;
+    dc:modified '2025-06-03T12:39:23'^^xsd:dateTime ;
+    skos:altLabel '[M]/[L*L*L]/[L]'^^xsd:string ;
+    skos:prefLabel '[mass]/[length*length*length]/[length]'@en ;
+    skos:definition 'The fundamental dimension of heaviness per the cube of the fundamental dimension of length (known as volume) per the fundamental dimension of length.'@en ;
+    skos:notation 'SDN:P24::MSPVOLLENGTH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P24/current/SIEMPM/1/> .
+<http://vocab.nerc.ac.uk/collection/P24/current/SIEMPM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P24/current/SIEMPM/>;
+    dc:modified '2024-05-10T12:00:39'^^xsd:dateTime ;
+    skos:altLabel '[[[T*T*T]*[A*A]/[[M]*[L*L]]]/[L]'^^xsd:string ;
+    skos:prefLabel '[[[time*time*time]*[electric current*electric current]]/[[mass]*[length*length]]]/[length]'@en ;
+    skos:definition 'The base units for electrical conductity in the International System of Units (BIPM).'@en ;
+    skos:notation 'SDN:P24::SIEMPM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P24/current/ENERGY/2/> .
+<http://vocab.nerc.ac.uk/collection/P24/current/ENERGY/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P24/current/ENERGY/>;
+    dc:modified '2024-03-13T14:26:01'^^xsd:dateTime ;
+    skos:altLabel '[M]*[L*L]/[T*T]'^^xsd:string ;
+    skos:prefLabel '[mass]*[length*length]/[time*time]'@en ;
+    skos:definition 'The fundamental dimension of energy (mass per unit area per unit time squared).'@en ;
+    skos:notation 'SDN:P24::ENERGY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P24/current/POWER/1/> .
+<http://vocab.nerc.ac.uk/collection/P24/current/POWER/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P24/current/POWER/>;
+    dc:modified '2024-03-13T14:24:47'^^xsd:dateTime ;
+    skos:altLabel '[M]*[L*L]/[T*T*T]'^^xsd:string ;
+    skos:prefLabel '[mass]*[length*length]/[time*time*time]'@en ;
+    skos:definition 'The fundamental dimension of power (mass per unit area per unit time cubed).'@en ;
+    skos:notation 'SDN:P24::POWER'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P24/current/A/1/> .
+<http://vocab.nerc.ac.uk/collection/P24/current/A/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P24/current/A/>;
+    dc:modified '2024-03-13T13:59:13'^^xsd:dateTime ;
+    skos:altLabel '[A]'^^xsd:string ;
+    skos:prefLabel '[electric current]'@en ;
+    skos:definition 'The fundamental dimension of electric current.'@en ;
+    skos:notation 'SDN:P24::A'^^xsd:string .

@@ -1,0 +1,140 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P17/2014_01_01_00_00_00_2014_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P17/2013_01_01_00_00_00_2013_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2014-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/14CS/1/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/14CS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/14CS/>;
+    dc:modified '2014-06-26T10:11:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Cruzeiro do Sul'@en ;
+    skos:definition '''{"node": {
+    "country": "Brazil",
+    "platformclass": "research vessel",
+    "notes": "2011 XBT data in the US VOS SEAS Program",
+    "built": 1986,
+    "pennant": "H38",
+    "callsign": "PWCS",
+    "length": 66,
+    "previous_name": "Surveyor",
+    "IMO": 8600246,
+    "commissioned": 2008
+}}'''@en ;
+    skos:notation 'SDN:P17::14CS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/06M2/2/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/06M2/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/06M2/>;
+    dc:modified '2014-02-27T12:32:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Maria S. Merian'@en ;
+    skos:definition '''{"node": {
+    "country": "Germany",
+    "platformclass": "research vessel",
+    "notes": "WOD code 9048. MMSI 211753000",
+    "built": 2005,
+    "callsign": "DBBT",
+    "length": 94.8,
+    "IMO": 9274197,
+    "title": "RV",
+    "commissioned": "2006-02-09"
+}}'''@en ;
+    skos:notation 'SDN:P17::06M2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/46AS/1/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/46AS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/46AS/>;
+    dc:modified '2014-02-13T14:32:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Arni Fridriksson'@en ;
+    skos:definition '''{"node": {
+    "country": "Iceland",
+    "platformclass": "research vessel",
+    "notes": "Registration number 2350",
+    "built": 2000,
+    "callsign": "TFNA",
+    "length": 69.9,
+    "IMO": 9192404,
+    "commissioned": 2000
+}}'''@en ;
+    skos:notation 'SDN:P17::46AS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/77AR/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/77AR/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/77AR/>;
+    dc:modified '2014-01-22T15:15:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Argos'@en ;
+    skos:definition '''{"node": {
+    "country": "Sweden",
+    "decommissioned": 2011,
+    "platformclass": "research vessel",
+    "notes": "Research vessel owned and operated from 1974 to 2011 by the Swedish National Board of Fisheries (Fiskeriverket).",
+    "built": 1974,
+    "callsign": "SEPI",
+    "length": 61.2,
+    "IMO": 7364156,
+    "commissioned": 1974
+}}'''@en ;
+    skos:notation 'SDN:P17::77AR'^^xsd:string .

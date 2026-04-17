@@ -1,0 +1,199 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C61/2017_01_01_00_00_00_2017_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C61/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2017-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/EEPT0001/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/EEPT0001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/EEPT0001/>;
+    dc:modified '2017-11-28T22:03:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Tartu'@en ;
+    skos:definition 'City in Tartu County, Estonia.'@en ;
+    skos:notation 'SDN:C61::EEPT0001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/CHPT0002/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/CHPT0002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/CHPT0002/>;
+    dc:modified '2017-10-20T12:43:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Berne'@en ;
+    skos:definition 'City in Berne Canton, Switzerland. Berne in French, Bern in German, Berna in Italian and Romansh.'@en ;
+    skos:notation 'SDN:C61::CHPT0002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/EICTY12/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/EICTY12/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/EICTY12/>;
+    dc:modified '2017-07-29T17:26:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sligo'@en ;
+    skos:definition 'Town in County Sligo, Ireland.'@en ;
+    skos:notation 'SDN:C61::EICTY12'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/GERPT038/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/GERPT038/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/GERPT038/>;
+    dc:modified '2017-07-24T17:58:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Regensburg'@en ;
+    skos:definition 'City in Bavaria, Germany.'@en ;
+    skos:notation 'SDN:C61::GERPT038'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY144/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY144/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY144/>;
+    dc:modified '2017-07-19T09:54:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'St Petersburg'@en ;
+    skos:definition 'City in Florida, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY144'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY143/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY143/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY143/>;
+    dc:modified '2017-07-02T17:39:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'New Orleans'@en ;
+    skos:definition 'City in Louisiana, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY143'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/ATPT0003/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/ATPT0003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/ATPT0003/>;
+    dc:modified '2017-06-16T10:12:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Graz'@en ;
+    skos:definition 'City in Styria, Austria.'@en ;
+    skos:notation 'SDN:C61::ATPT0003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/FRPT0037/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/FRPT0037/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/FRPT0037/>;
+    dc:modified '2017-06-16T10:12:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Saint-Germain-en-Laye'@en ;
+    skos:definition 'Commune in Île-de-France, France.'@en ;
+    skos:notation 'SDN:C61::FRPT0037'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/GERPT037/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/GERPT037/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/GERPT037/>;
+    dc:modified '2017-06-16T10:12:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Aachen'@en ;
+    skos:definition 'City in North Rhine Westphalia, Germany. Also known as Bad Aachen and Aix-la-Chapelle.'@en ;
+    skos:notation 'SDN:C61::GERPT037'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY142/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY142/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY142/>;
+    dc:modified '2017-06-16T10:12:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Poway'@en ;
+    skos:definition 'City in California, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY142'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY141/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY141/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY141/>;
+    dc:modified '2017-06-14T18:47:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Yellow Springs'@en ;
+    skos:definition 'Town in Ohio, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY141'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/ISPT0002/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/ISPT0002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/ISPT0002/>;
+    dc:modified '2017-06-08T12:51:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Gardabaer'@en ;
+    skos:definition 'Town in the Capital Region of Iceland.'@en ;
+    skos:notation 'SDN:C61::ISPT0002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY140/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY140/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY140/>;
+    dc:modified '2017-05-14T21:55:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Newton'@en ;
+    skos:definition 'City in Massachusetts, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY140'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/TRPT0002/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/TRPT0002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/TRPT0002/>;
+    dc:modified '2017-02-02T14:38:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Izmir'@en ;
+    skos:definition 'City in Izmir province, Turkey.'@en ;
+    skos:notation 'SDN:C61::TRPT0002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/ITPT0016/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/ITPT0016/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/ITPT0016/>;
+    dc:modified '2017-01-18T12:20:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Siena'@en ;
+    skos:definition 'City in Tuscany, Italy.'@en ;
+    skos:notation 'SDN:C61::ITPT0016'^^xsd:string .

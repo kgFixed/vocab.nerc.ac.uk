@@ -1,0 +1,1099 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P09/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P09/2015_01_01_00_00_00_2015_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2016-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/BBFW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/BBFW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/BBFW/>;
+    dc:modified '2016-09-29T11:16:54'^^xsd:dateTime ;
+    skos:altLabel 'BBFW'^^xsd:string ;
+    skos:prefLabel 'Benzo(b)fluoranthene in water'@en ;
+    skos:definition 'Concentration of benzo(b)fluoranthene per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::BBFW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CADB/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CADB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CADB/>;
+    dc:modified '2016-09-29T11:16:54'^^xsd:dateTime ;
+    skos:altLabel 'CADB'^^xsd:string ;
+    skos:prefLabel 'Cadmium in biota'@en ;
+    skos:definition 'Concentration of cadmium per unit dry weight of biota Mytilus galloprovincialis.'@en ;
+    skos:notation 'SDN:P09::CADB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CHSD/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CHSD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CHSD/>;
+    dc:modified '2016-09-29T11:16:54'^^xsd:dateTime ;
+    skos:altLabel 'CHSD'^^xsd:string ;
+    skos:prefLabel 'STD deviation chlorophyll-a'@en ;
+    skos:definition 'Concentration standard deviation of chlorophyll-a per unit dry weight of sediment'@en ;
+    skos:notation 'SDN:P09::CHSD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/IROS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/IROS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/IROS/>;
+    dc:modified '2016-09-29T11:16:54'^^xsd:dateTime ;
+    skos:altLabel 'IROS'^^xsd:string ;
+    skos:prefLabel 'Total iron in sediment'@en ;
+    skos:definition 'Concentration of total iron per unit volume of the sediment pore water'@en ;
+    skos:notation 'SDN:P09::IROS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PCPW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PCPW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PCPW/>;
+    dc:modified '2016-09-29T11:16:54'^^xsd:dateTime ;
+    skos:altLabel 'PCPW'^^xsd:string ;
+    skos:prefLabel 'Pentachlorophenol in water'@en ;
+    skos:definition 'Concentration of pentachlorophenol per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::PCPW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/BGHW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/BGHW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/BGHW/>;
+    dc:modified '2016-09-29T10:56:45'^^xsd:dateTime ;
+    skos:altLabel 'BGHW'^^xsd:string ;
+    skos:prefLabel 'Benzo(g,h,i)perylene in water'@en ;
+    skos:definition 'Concentration of benzo(g,h,i)perylene per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::BGHW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/ACES/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/ACES/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/ACES/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'ACES'^^xsd:string ;
+    skos:prefLabel 'Acenaphthylene in sediment'@en ;
+    skos:definition 'Concentration of acenaphthylene per unit dry weight of sediment'@en ;
+    skos:notation 'SDN:P09::ACES'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/ACEW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/ACEW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/ACEW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'ACEW'^^xsd:string ;
+    skos:prefLabel 'Acenaphthylene in water body'@en ;
+    skos:definition 'Concentration of acenaphthylene per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::ACEW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/ALUW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/ALUW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/ALUW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'ALUW'^^xsd:string ;
+    skos:prefLabel 'Aluminium in water body'@en ;
+    skos:definition 'Concentration of aluminium per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::ALUW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/AMSE/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/AMSE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/AMSE/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'AMSE'^^xsd:string ;
+    skos:prefLabel 'Ammonium in sediment'@en ;
+    skos:definition 'Concentration of ammonium per unit volume of the sediment pore water'@en ;
+    skos:notation 'SDN:P09::AMSE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/ANTB/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/ANTB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/ANTB/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'ANTB'^^xsd:string ;
+    skos:prefLabel 'Anthracene in biota'@en ;
+    skos:definition 'Concentration of anthracene per unit dry weight of biota Mytilus galloprovincialis.'@en ;
+    skos:notation 'SDN:P09::ANTB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/ANTS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/ANTS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/ANTS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'ANTS'^^xsd:string ;
+    skos:prefLabel 'Anthracene in sediment'@en ;
+    skos:definition 'Concentration of anthracene per unit dry weight of sediment <2000um'@en ;
+    skos:notation 'SDN:P09::ANTS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/ANTW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/ANTW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/ANTW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'ANTW'^^xsd:string ;
+    skos:prefLabel 'Anthracene in water body'@en ;
+    skos:definition 'Concentration of anthracene  per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::ANTW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/ARSW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/ARSW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/ARSW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'ARSW'^^xsd:string ;
+    skos:prefLabel 'Arsenic in water body'@en ;
+    skos:definition 'Concentration of arsenic per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::ARSW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/BAAS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/BAAS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/BAAS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'BAAS'^^xsd:string ;
+    skos:prefLabel 'Benz(a)anthracene in sediment'@en ;
+    skos:definition 'Concentration of benz(a)anthracene per unit dry weight of sediment <2000um'@en ;
+    skos:notation 'SDN:P09::BAAS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/BAAW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/BAAW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/BAAW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'BAAW'^^xsd:string ;
+    skos:prefLabel 'Benz(a)anthracene in water'@en ;
+    skos:definition 'Concentration of benz(a)anthracene per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::BAAW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/BAPS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/BAPS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/BAPS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'BAPS'^^xsd:string ;
+    skos:prefLabel 'Benzo(a)pyrene in sediment'@en ;
+    skos:definition 'Concentration of benzo(a)pyrene per unit dry weight of sediment <2000um'@en ;
+    skos:notation 'SDN:P09::BAPS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/BAPW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/BAPW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/BAPW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'BAPW'^^xsd:string ;
+    skos:prefLabel 'Benzo(a)pyrene in water body'@en ;
+    skos:definition 'Concentration of benzo(a)pyrene per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::BAPW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/BBFS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/BBFS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/BBFS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'BBFS'^^xsd:string ;
+    skos:prefLabel 'Benzo(b)fluoranthene sediment'@en ;
+    skos:definition 'Concentration of benzo(b)fluoranthene per unit dry weight of sediment <2000um'@en ;
+    skos:notation 'SDN:P09::BBFS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/BENW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/BENW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/BENW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'BENW'^^xsd:string ;
+    skos:prefLabel 'Benzene in water body'@en ;
+    skos:definition 'Concentration of benzene per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::BENW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/BGHS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/BGHS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/BGHS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'BGHS'^^xsd:string ;
+    skos:prefLabel 'Benzo(g,h,i)perylene sediment'@en ;
+    skos:definition 'Concentration of benzo(g,h,i)perylene per unit dry weight of sediment <2000um'@en ;
+    skos:notation 'SDN:P09::BGHS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/BKFS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/BKFS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/BKFS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'BKFS'^^xsd:string ;
+    skos:prefLabel 'Benzo(k)fluoranthene sediment'@en ;
+    skos:definition 'Concentration of benzo(k)fluoranthene per unit dry weight of sediment <63um'@en ;
+    skos:notation 'SDN:P09::BKFS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/BKFW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/BKFW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/BKFW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'BKFW'^^xsd:string ;
+    skos:prefLabel 'Benzo(k)fluoranthene in water'@en ;
+    skos:definition 'Concentration of benzo(k)fluoranthene per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::BKFW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CADS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CADS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CADS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'CADS'^^xsd:string ;
+    skos:prefLabel 'Cadmium in sediment'@en ;
+    skos:definition 'Concentration of cadmium per unit volume of the sediment pore water'@en ;
+    skos:notation 'SDN:P09::CADS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CADW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CADW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CADW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'CADW'^^xsd:string ;
+    skos:prefLabel 'Cadmium in water body'@en ;
+    skos:definition 'Concentration of cadmium per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::CADW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CHAS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CHAS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CHAS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'CHAS'^^xsd:string ;
+    skos:prefLabel 'Chlorophyll-a in sediment'@en ;
+    skos:definition 'Concentration of chlorophyll-a per unit dry weight of sediment'@en ;
+    skos:notation 'SDN:P09::CHAS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CHRS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CHRS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CHRS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'CHRS'^^xsd:string ;
+    skos:prefLabel 'Chrysene in sediment'@en ;
+    skos:definition 'Concentration of chrysene per unit dry weight of sediment <2000um'@en ;
+    skos:notation 'SDN:P09::CHRS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/COPS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/COPS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/COPS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'COPS'^^xsd:string ;
+    skos:prefLabel 'Copper in sediment'@en ;
+    skos:definition 'Concentration of copper per unit volume of the sediment pore water'@en ;
+    skos:notation 'SDN:P09::COPS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CROW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CROW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CROW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'CROW'^^xsd:string ;
+    skos:prefLabel 'Chromium in water body'@en ;
+    skos:definition 'Concentration of chromium per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::CROW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CRYW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CRYW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CRYW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'CRYW'^^xsd:string ;
+    skos:prefLabel 'Chrysene in water body'@en ;
+    skos:definition 'Concentration of chrysene per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::CRYW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/DBAS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/DBAS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/DBAS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'DBAS'^^xsd:string ;
+    skos:prefLabel 'Dibenzo(ah)anthracene sediment'@en ;
+    skos:definition 'Concentration of dibenzo(a,h)anthracene per unit dry weight of sediment <2000um'@en ;
+    skos:notation 'SDN:P09::DBAS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/DBAW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/DBAW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/DBAW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'DBAW'^^xsd:string ;
+    skos:prefLabel 'Dibenzo(ah)anthracene in water'@en ;
+    skos:definition 'Concentration of dibenzo(a,h)anthracene per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::DBAW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/DMTW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/DMTW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/DMTW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'DMTW'^^xsd:string ;
+    skos:prefLabel '1,3-1,4dimethylbenzene water'@en ;
+    skos:definition 'Concentration of 1,3-dimethylbenzene and 1,4-dimethylbenzene per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::DMTW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/DOCS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/DOCS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/DOCS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'DOCS'^^xsd:string ;
+    skos:prefLabel 'Organic carbon DOC in sediment'@en ;
+    skos:definition 'Concentration of organic carbon {DOC} per unit volume of the sediment pore water'@en ;
+    skos:notation 'SDN:P09::DOCS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/ETBW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/ETBW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/ETBW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'ETBW'^^xsd:string ;
+    skos:prefLabel 'Ethylbenzene in water body'@en ;
+    skos:definition 'Concentration of ethylbenzene per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::ETBW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/ETYW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/ETYW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/ETYW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'ETYW'^^xsd:string ;
+    skos:prefLabel 'Bis(ethylhexyl)phthalate water'@en ;
+    skos:definition 'Concentration of bis(2-ethylhexyl)phthalate per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::ETYW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/FLRS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/FLRS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/FLRS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'FLRS'^^xsd:string ;
+    skos:prefLabel 'Fluoranthene in sediment'@en ;
+    skos:definition 'Concentration of fluoranthene per unit dry weight of sediment'@en ;
+    skos:notation 'SDN:P09::FLRS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/FLRW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/FLRW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/FLRW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'FLRW'^^xsd:string ;
+    skos:prefLabel 'Fluoranthene in water body'@en ;
+    skos:definition 'Concentration of fluoranthene per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::FLRW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/FLUS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/FLUS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/FLUS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'FLUS'^^xsd:string ;
+    skos:prefLabel 'Fluorene in sediment'@en ;
+    skos:definition 'Concentration of fluorene per unit dry weight of sediment'@en ;
+    skos:notation 'SDN:P09::FLUS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/FLUW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/FLUW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/FLUW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'FLUW'^^xsd:string ;
+    skos:prefLabel 'Fluorene in water body'@en ;
+    skos:definition 'Concentration of fluorene per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::FLUW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/HXC1/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/HXC1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/HXC1/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'HXC1'^^xsd:string ;
+    skos:prefLabel 'Hexachlorobiphenyl128 sediment'@en ;
+    skos:definition 'Concentration of 2,2\',3,3\',4,4\'-hexachlorobiphenyl per unit dry weight of sediment'@en ;
+    skos:notation 'SDN:P09::HXC1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/HXC2/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/HXC2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/HXC2/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'HXC2'^^xsd:string ;
+    skos:prefLabel 'Hexachlorobiphenyl138 sediment'@en ;
+    skos:definition 'Concentration of 2,2\',3,4,4\',5\'-hexachlorobiphenyl per unit dry weight of sediment'@en ;
+    skos:notation 'SDN:P09::HXC2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/HXC3/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/HXC3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/HXC3/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'HXC3'^^xsd:string ;
+    skos:prefLabel 'Hexachlorobiphenyl153 sediment'@en ;
+    skos:definition 'Concentration of 2,2\',4,4\',5,5\'-hexachlorobiphenyl per unit dry weight of sediment'@en ;
+    skos:notation 'SDN:P09::HXC3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/HXC4/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/HXC4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/HXC4/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'HXC4'^^xsd:string ;
+    skos:prefLabel 'Hexachlorobiphenyl156 sediment'@en ;
+    skos:definition 'Concentration of 2,3,3\',4,4\',5-hexachlorobiphenyl per unit dry weight of sediment'@en ;
+    skos:notation 'SDN:P09::HXC4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/IDPW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/IDPW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/IDPW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'IDPW'^^xsd:string ;
+    skos:prefLabel 'Indeno(1,2,3cd)pyrene in water'@en ;
+    skos:definition 'Concentration of indeno(1,2,3-cd)pyrene per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::IDPW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/INCS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/INCS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/INCS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'INCS'^^xsd:string ;
+    skos:prefLabel 'Inorganic carbon in sediment'@en ;
+    skos:definition 'Concentration of inorganic carbon per unit dry weight of sediment'@en ;
+    skos:notation 'SDN:P09::INCS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/INDE/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/INDE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/INDE/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'INDE'^^xsd:string ;
+    skos:prefLabel 'Indeno(1,2,3cd)pyrene sediment'@en ;
+    skos:definition 'Concentration of indeno(1,2,3-cd)pyrene per unit dry weight of sediment'@en ;
+    skos:notation 'SDN:P09::INDE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/IROW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/IROW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/IROW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'IROW'^^xsd:string ;
+    skos:prefLabel 'Total iron in water body'@en ;
+    skos:definition 'Concentration of total iron per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::IROW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/LEAB/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/LEAB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/LEAB/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'LEAB'^^xsd:string ;
+    skos:prefLabel 'Lead in biota'@en ;
+    skos:definition 'Concentration of lead per unit dry weight of biota Mytilus galloprovincialis.'@en ;
+    skos:notation 'SDN:P09::LEAB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/LEAS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/LEAS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/LEAS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'LEAS'^^xsd:string ;
+    skos:prefLabel 'Lead in sediment'@en ;
+    skos:definition 'Concentration of lead per unit volume of the sediment pore water'@en ;
+    skos:notation 'SDN:P09::LEAS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/LEAW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/LEAW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/LEAW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'LEAW'^^xsd:string ;
+    skos:prefLabel 'Lead in water body'@en ;
+    skos:definition 'Concentration of lead per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::LEAW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MANW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MANW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MANW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'MANW'^^xsd:string ;
+    skos:prefLabel 'Total manganese in water body'@en ;
+    skos:definition 'Concentration of total manganese per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::MANW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MERB/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MERB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MERB/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'MERB'^^xsd:string ;
+    skos:prefLabel 'Total mercury in biota'@en ;
+    skos:definition 'Concentration of total mercury per unit dry weight of biota Mytilus galloprovincialis.'@en ;
+    skos:notation 'SDN:P09::MERB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MERW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MERW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MERW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'MERW'^^xsd:string ;
+    skos:prefLabel 'Total mercury in water body'@en ;
+    skos:definition 'Concentration of total mercury per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::MERW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/METW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/METW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/METW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'METW'^^xsd:string ;
+    skos:prefLabel 'Methylbenzene in water body'@en ;
+    skos:definition 'Concentration of methylbenzene per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::METW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NAPS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NAPS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NAPS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'NAPS'^^xsd:string ;
+    skos:prefLabel 'Naphthalene in sediment'@en ;
+    skos:definition 'Concentration of naphthalene per unit dry weight of sediment'@en ;
+    skos:notation 'SDN:P09::NAPS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NAPW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NAPW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NAPW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'NAPW'^^xsd:string ;
+    skos:prefLabel 'Naphthalene in water body'@en ;
+    skos:definition 'Concentration of naphthalene per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::NAPW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NIKS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NIKS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NIKS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'NIKS'^^xsd:string ;
+    skos:prefLabel 'Nickel in sediment'@en ;
+    skos:definition 'Concentration of nickel per unit volume of the sediment pore water'@en ;
+    skos:notation 'SDN:P09::NIKS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NIKW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NIKW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NIKW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'NIKW'^^xsd:string ;
+    skos:prefLabel 'Nickel in water body'@en ;
+    skos:definition 'Concentration of nickel per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::NIKW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NITS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NITS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NITS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'NITS'^^xsd:string ;
+    skos:prefLabel 'Nitrogen in sediment'@en ;
+    skos:definition 'Concentration of nitrogen per unit dry weight of sediment'@en ;
+    skos:notation 'SDN:P09::NITS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NOPW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NOPW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NOPW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'NOPW'^^xsd:string ;
+    skos:prefLabel '4-nonylphenol in water body'@en ;
+    skos:definition 'Concentration of 4-nonylphenol (branched isomers) per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::NOPW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NTR1/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NTR1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NTR1/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'NTR1'^^xsd:string ;
+    skos:prefLabel 'Nitrate in sediment'@en ;
+    skos:definition 'Concentration of nitrate per unit volume of the sediment pore water [dissolved plus reactive particulate <0.4/0.45um phase]'@en ;
+    skos:notation 'SDN:P09::NTR1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NTRS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NTRS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NTRS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'NTRS'^^xsd:string ;
+    skos:prefLabel 'Nitrite in sediment'@en ;
+    skos:definition 'Concentration of nitrite per unit volume of the sediment pore water [dissolved plus reactive particulate <0.4/0.45um phase]'@en ;
+    skos:notation 'SDN:P09::NTRS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/OCCN/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/OCCN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/OCCN/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'OCCN'^^xsd:string ;
+    skos:prefLabel 'Organic carbon in sediment'@en ;
+    skos:definition 'Concentration of organic carbon per unit dry weight of sediment by acidification and elemental analysis'@en ;
+    skos:notation 'SDN:P09::OCCN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/OCSD/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/OCSD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/OCSD/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'OCSD'^^xsd:string ;
+    skos:prefLabel 'STD deviation organic carbon'@en ;
+    skos:definition 'Concentration standard deviation of organic carbon per unit dry weight of sediment by acidification and elemental analysis'@en ;
+    skos:notation 'SDN:P09::OCSD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/ONIS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/ONIS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/ONIS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'ONIS'^^xsd:string ;
+    skos:prefLabel 'Organic nitrogen in sediment'@en ;
+    skos:definition 'Concentration of organic nitrogen per unit dry weight of sediment'@en ;
+    skos:notation 'SDN:P09::ONIS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/ONSD/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/ONSD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/ONSD/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'ONSD'^^xsd:string ;
+    skos:prefLabel 'STD deviation organic nitrogen'@en ;
+    skos:definition 'Concentration standard deviation of organic nitrogen per unit dry weight of sediment by elemental analysis'@en ;
+    skos:notation 'SDN:P09::ONSD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PCOW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PCOW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PCOW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'PCOW'^^xsd:string ;
+    skos:prefLabel 'Carbon dioxide in water'@en ;
+    skos:definition 'The partial pressure of carbon dioxide in the water body by equilibration with air'@en ;
+    skos:notation 'SDN:P09::PCOW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PENW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PENW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PENW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'PENW'^^xsd:string ;
+    skos:prefLabel 'Pentachlorobiphenyl in water'@en ;
+    skos:definition 'Concentration of pentachlorobiphenyl (PCB118) per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::PENW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PETW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PETW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PETW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'PETW'^^xsd:string ;
+    skos:prefLabel 'Total petroleum in water body'@en ;
+    skos:definition 'Concentration of total petroleum hydrocarbons per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::PETW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PHAS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PHAS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PHAS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'PHAS'^^xsd:string ;
+    skos:prefLabel 'Phaeopigments in sediment'@en ;
+    skos:definition 'Concentration of phaeopigments per unit dry weight of sediment'@en ;
+    skos:notation 'SDN:P09::PHAS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PHES/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PHES/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PHES/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'PHES'^^xsd:string ;
+    skos:prefLabel 'Phenanthrene in sediment'@en ;
+    skos:definition 'Concentration of phenanthrene per unit dry weight of sediment'@en ;
+    skos:notation 'SDN:P09::PHES'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PHEW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PHEW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PHEW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'PHEW'^^xsd:string ;
+    skos:prefLabel 'Phenanthrene in water body'@en ;
+    skos:definition 'Concentration of phenanthrene per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::PHEW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PHSS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PHSS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PHSS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'PHSS'^^xsd:string ;
+    skos:prefLabel 'Phosphate in sediment'@en ;
+    skos:definition 'Concentration of phosphate per unit volume of the sediment pore water [dissolved plus reactive particulate <0.4/0.45um phase]'@en ;
+    skos:notation 'SDN:P09::PHSS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PTC1/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PTC1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PTC1/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'PTC1'^^xsd:string ;
+    skos:prefLabel 'Pentachlorobiphenyl101 in sed.'@en ;
+    skos:definition 'Concentration of 2,2\',4,5,5\'-pentachlorobiphenyl per unit dry weight of sediment'@en ;
+    skos:notation 'SDN:P09::PTC1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PTC2/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PTC2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PTC2/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'PTC2'^^xsd:string ;
+    skos:prefLabel 'Pentachlorobiphenyl118 in sed.'@en ;
+    skos:definition 'Concentration of 2,3\',4,4\',5-pentachlorobiphenyl per unit dry weight of sediment'@en ;
+    skos:notation 'SDN:P09::PTC2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PYRS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PYRS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PYRS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'PYRS'^^xsd:string ;
+    skos:prefLabel 'Pyrene in sediment'@en ;
+    skos:definition 'Concentration of pyrene per unit dry weight of sediment'@en ;
+    skos:notation 'SDN:P09::PYRS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PYRW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PYRW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PYRW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'PYRW'^^xsd:string ;
+    skos:prefLabel 'Pyrene in water body'@en ;
+    skos:definition 'Concentration of pyrene per unit volume of the water body [dissolved plus reactive particulate phase]'@en ;
+    skos:notation 'SDN:P09::PYRW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/SLC1/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/SLC1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/SLC1/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'SLC1'^^xsd:string ;
+    skos:prefLabel 'Silicate in sediment'@en ;
+    skos:definition 'Concentration of silicate per unit volume of the sediment pore water [dissolved plus reactive particulate <0.4/0.45um phase]'@en ;
+    skos:notation 'SDN:P09::SLC1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/STYW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/STYW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/STYW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'STYW'^^xsd:string ;
+    skos:prefLabel 'Styrene in water body'@en ;
+    skos:definition 'Concentration of styrene per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::STYW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TCSD/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TCSD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TCSD/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'TCSD'^^xsd:string ;
+    skos:prefLabel 'STD deviation total carbon'@en ;
+    skos:definition 'Concentration standard deviation of total carbon per unit dry weight of sediment by no acidification and elemental analysis'@en ;
+    skos:notation 'SDN:P09::TCSD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TETS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TETS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TETS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'TETS'^^xsd:string ;
+    skos:prefLabel 'Tetrachlorobiphenyl sediment'@en ;
+    skos:definition 'Concentration of 2,2\',5,5\'-tetrachlorobiphenyl per unit dry weight of sediment'@en ;
+    skos:notation 'SDN:P09::TETS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TETW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TETW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TETW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'TETW'^^xsd:string ;
+    skos:prefLabel 'Tetrachlorobiphenyl in water'@en ;
+    skos:definition 'Concentration of tetrachlorobiphenyl per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::TETW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TICS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TICS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TICS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'TICS'^^xsd:string ;
+    skos:prefLabel 'Total inorganic carbon sedimen'@en ;
+    skos:definition 'Concentration of total inorganic carbon per unit volume of the sediment pore water by centrifugal extraction, filtration, acidification and CO2 quantification by gas analyser'@en ;
+    skos:notation 'SDN:P09::TICS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TNIS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TNIS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TNIS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'TNIS'^^xsd:string ;
+    skos:prefLabel 'Total nitrogen in sediment'@en ;
+    skos:definition 'Concentration of total nitrogen {total_N} per unit volume of the sediment pore water'@en ;
+    skos:notation 'SDN:P09::TNIS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TOTS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TOTS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TOTS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'TOTS'^^xsd:string ;
+    skos:prefLabel 'Total carbon in sediment'@en ;
+    skos:definition 'Concentration of total carbon per unit dry weight of sediment by no acidification and elemental analysis'@en ;
+    skos:notation 'SDN:P09::TOTS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TRBB/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TRBB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TRBB/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'TRBB'^^xsd:string ;
+    skos:prefLabel 'Tributyltin cation in biota'@en ;
+    skos:definition 'Concentration of tributyltin cation per unit wet weight of biota Mytilus galloprovincialis.'@en ;
+    skos:notation 'SDN:P09::TRBB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TRCS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TRCS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TRCS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'TRCS'^^xsd:string ;
+    skos:prefLabel 'Trichlorobiphenyl in sediment'@en ;
+    skos:definition 'Concentration of 2,4,4\'-trichlorobiphenyl per unit dry weight of sediment'@en ;
+    skos:notation 'SDN:P09::TRCS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/VANW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/VANW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/VANW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'VANW'^^xsd:string ;
+    skos:prefLabel 'Vanadium in water body'@en ;
+    skos:definition 'Concentration of vanadium per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::VANW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/ZINS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/ZINS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/ZINS/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'ZINS'^^xsd:string ;
+    skos:prefLabel 'Zinc in sediment'@en ;
+    skos:definition 'Concentration of zinc per unit volume of the sediment pore water'@en ;
+    skos:notation 'SDN:P09::ZINS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/ZINW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/ZINW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/ZINW/>;
+    dc:modified '2016-09-28T17:24:53'^^xsd:dateTime ;
+    skos:altLabel 'ZINW'^^xsd:string ;
+    skos:prefLabel 'Zinc in water body'@en ;
+    skos:definition 'Concentration of zinc per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::ZINW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MAGP/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MAGP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MAGP/>;
+    dc:modified '2016-06-13T13:38:43'^^xsd:dateTime ;
+    skos:altLabel 'MAGP'^^xsd:string ;
+    skos:prefLabel 'TOTAL PARTICULATE SILVER'@en ;
+    skos:definition 'Mass of total silver (i.e. silver in any chemical form) in particulate material per unit mass of the water column.'@en ;
+    skos:notation 'SDN:P09::MAGP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/ANXW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/ANXW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/ANXW/>;
+    dc:modified '2016-06-13T13:34:36'^^xsd:dateTime ;
+    skos:altLabel 'ANXW'^^xsd:string ;
+    skos:prefLabel 'ANTHERAXANTHIN'@en ;
+    skos:definition 'Mass of antheraxanthin per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::ANXW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CPH7/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CPH7/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CPH7/>;
+    dc:modified '2016-06-13T13:34:36'^^xsd:dateTime ;
+    skos:altLabel 'CPH7'^^xsd:string ;
+    skos:prefLabel 'CHLOROPHYLL-A >3 <10 MICRON'@en ;
+    skos:definition 'Concentration of chlorophyll-a {chl-a} per unit volume of the water body [particulate >3um and <10um]'@en ;
+    skos:notation 'SDN:P09::CPH7'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CYAF/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CYAF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CYAF/>;
+    dc:modified '2016-06-13T13:34:36'^^xsd:dateTime ;
+    skos:altLabel 'CYAF'^^xsd:string ;
+    skos:prefLabel 'NUMBER OF CYANOBACTERIA'@en ;
+    skos:definition 'Number of cells identified as cyanobacteria per millilitre of the water body measured by flow cytometry.'@en ;
+    skos:notation 'SDN:P09::CYAF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/FESP/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/FESP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/FESP/>;
+    dc:modified '2016-06-13T13:34:36'^^xsd:dateTime ;
+    skos:altLabel 'FESP'^^xsd:string ;
+    skos:prefLabel 'Fe IN SUSPENDED MATTER'@en ;
+    skos:definition 'Quantity (i.e. number of moles) of elemental iron per unit mass of suspended particulate material.'@en ;
+    skos:notation 'SDN:P09::FESP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/LUTW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/LUTW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/LUTW/>;
+    dc:modified '2016-06-13T13:34:36'^^xsd:dateTime ;
+    skos:altLabel 'LUTW'^^xsd:string ;
+    skos:prefLabel 'LUTEIN'@en ;
+    skos:definition 'Mass of lutein per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::LUTW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MAGW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MAGW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MAGW/>;
+    dc:modified '2016-06-13T13:34:36'^^xsd:dateTime ;
+    skos:altLabel 'MAGW'^^xsd:string ;
+    skos:prefLabel 'DISSOLVED SILVER (Ag)'@en ;
+    skos:definition 'Mass of dissolved silver per unit volume of the water body.'@en ;
+    skos:notation 'SDN:P09::MAGW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MCDW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MCDW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MCDW/>;
+    dc:modified '2016-06-13T13:34:36'^^xsd:dateTime ;
+    skos:altLabel 'MCDW'^^xsd:string ;
+    skos:prefLabel 'DISSOLVED CADMIUM (Cd)'@en ;
+    skos:definition 'Mass of dissolved cadmium per unit volume of the water body.'@en ;
+    skos:notation 'SDN:P09::MCDW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MCOW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MCOW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MCOW/>;
+    dc:modified '2016-06-13T13:34:36'^^xsd:dateTime ;
+    skos:altLabel 'MCOW'^^xsd:string ;
+    skos:prefLabel 'DISSOLVED COBALT (Co)'@en ;
+    skos:definition 'Mass of dissolved cobalt per unit volume of the water body.'@en ;
+    skos:notation 'SDN:P09::MCOW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MCU2/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MCU2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MCU2/>;
+    dc:modified '2016-06-13T13:34:36'^^xsd:dateTime ;
+    skos:altLabel 'MCU2'^^xsd:string ;
+    skos:prefLabel 'DISSOLVED COPPER (Cu)'@en ;
+    skos:definition 'Mass of dissolved copper per unit volume of the water body.'@en ;
+    skos:notation 'SDN:P09::MCU2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MNI2/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MNI2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MNI2/>;
+    dc:modified '2016-06-13T13:34:36'^^xsd:dateTime ;
+    skos:altLabel 'MNI2'^^xsd:string ;
+    skos:prefLabel 'DISSOLVED NICKEL (Ni)'@en ;
+    skos:definition 'Mass of dissolved nickel per unit volume of the water body.'@en ;
+    skos:notation 'SDN:P09::MNI2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MNSP/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MNSP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MNSP/>;
+    dc:modified '2016-06-13T13:34:36'^^xsd:dateTime ;
+    skos:altLabel 'MNSP'^^xsd:string ;
+    skos:prefLabel 'Mn IN SUSPENDED MATTER'@en ;
+    skos:definition 'Quantity (i.e. number of moles) of elemental manganese per unit mass of suspended particulate material.'@en ;
+    skos:notation 'SDN:P09::MNSP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MPBW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MPBW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MPBW/>;
+    dc:modified '2016-06-13T13:34:36'^^xsd:dateTime ;
+    skos:altLabel 'MPBW'^^xsd:string ;
+    skos:prefLabel 'DISSOLVED LEAD (Pb)'@en ;
+    skos:definition 'Mass of dissolved lead per unit volume of the water body.'@en ;
+    skos:notation 'SDN:P09::MPBW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MZNW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MZNW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MZNW/>;
+    dc:modified '2016-06-13T13:34:36'^^xsd:dateTime ;
+    skos:altLabel 'MZNW'^^xsd:string ;
+    skos:prefLabel 'DISSOLVED ZINC (Zn)'@en ;
+    skos:definition 'Mass of dissolved zinc per unit volume of the water body.'@en ;
+    skos:notation 'SDN:P09::MZNW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NEXW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NEXW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NEXW/>;
+    dc:modified '2016-06-13T13:34:36'^^xsd:dateTime ;
+    skos:altLabel 'NEXW'^^xsd:string ;
+    skos:prefLabel 'NEOXANTHIN'@en ;
+    skos:definition 'Mass of neoxanthin per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::NEXW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NNEF/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NNEF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NNEF/>;
+    dc:modified '2016-06-13T13:34:36'^^xsd:dateTime ;
+    skos:altLabel 'NNEF'^^xsd:string ;
+    skos:prefLabel 'NUMBER OF NANOEUKARYOTES'@en ;
+    skos:definition 'Number of cells identified as nanoeukaryotes per millilitre of the water body measured by flow cytometry.'@en ;
+    skos:notation 'SDN:P09::NNEF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NPKF/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NPKF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NPKF/>;
+    dc:modified '2016-06-13T13:34:36'^^xsd:dateTime ;
+    skos:altLabel 'NPKF'^^xsd:string ;
+    skos:prefLabel 'NUMBER OF NANOPROKARYOTES'@en ;
+    skos:definition 'Number of cells identified as nanoprokaryotes unit volume of the water body measured by flow cytometry.'@en ;
+    skos:notation 'SDN:P09::NPKF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PCEF/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PCEF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PCEF/>;
+    dc:modified '2016-06-13T13:34:36'^^xsd:dateTime ;
+    skos:altLabel 'PCEF'^^xsd:string ;
+    skos:prefLabel 'NUMBER OF PICOEUKARYOTES'@en ;
+    skos:definition 'Number of cells identified as picoeukaryotes per unit volume of the water body measured by flow cytometry.'@en ;
+    skos:notation 'SDN:P09::PCEF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PHSP/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PHSP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PHSP/>;
+    dc:modified '2016-06-13T13:34:36'^^xsd:dateTime ;
+    skos:altLabel 'PHSP'^^xsd:string ;
+    skos:prefLabel 'PHOSPHORUS IN SUSP. MATT.'@en ;
+    skos:definition 'Quantity (i.e. number of moles) of elemental phosphorus in suspended particulate material per unit mass of the water body.'@en ;
+    skos:notation 'SDN:P09::PHSP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PPKF/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PPKF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PPKF/>;
+    dc:modified '2016-06-13T13:34:36'^^xsd:dateTime ;
+    skos:altLabel 'PPKF'^^xsd:string ;
+    skos:prefLabel 'NUMBER OF PICOPROKARYOTES'@en ;
+    skos:definition 'Number of cells identified as picoprokaryotes per unit volume of the water body measured by flow cytometry.'@en ;
+    skos:notation 'SDN:P09::PPKF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PRCF/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PRCF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PRCF/>;
+    dc:modified '2016-06-13T13:34:36'^^xsd:dateTime ;
+    skos:altLabel 'PRCF'^^xsd:string ;
+    skos:prefLabel 'NUMBER OF PROCHLOROCOCCUS'@en ;
+    skos:definition 'Number of cells identified as Prochlorococcus per unit volume of the water body measured by flow cytometry.'@en ;
+    skos:notation 'SDN:P09::PRCF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/SNCF/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/SNCF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/SNCF/>;
+    dc:modified '2016-06-13T13:34:36'^^xsd:dateTime ;
+    skos:altLabel 'SNCF'^^xsd:string ;
+    skos:prefLabel 'NUMBER OF SYNECHOCOCCUS'@en ;
+    skos:definition 'Number of cells identified as Synechococcus per unit volume of the water body measured by flow cytometry.'@en ;
+    skos:notation 'SDN:P09::SNCF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/VIOW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/VIOW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/VIOW/>;
+    dc:modified '2016-06-13T13:34:36'^^xsd:dateTime ;
+    skos:altLabel 'VIOW'^^xsd:string ;
+    skos:prefLabel 'VIOLAXANTHIN'@en ;
+    skos:definition 'Mass of violaxanthin per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::VIOW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PCEW/4/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PCEW/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PCEW/>;
+    dc:modified '2016-05-24T16:50:54'^^xsd:dateTime ;
+    skos:altLabel 'PCEW'^^xsd:string ;
+    skos:prefLabel 'NUMBER OF SW PICOEUCARYOTES'@en ;
+    skos:definition 'The number of cells identified as picoeukaryote (cells sized 0.2 to 2 microns containing a nucleus) per unit volume of a body of water.'@en ;
+    skos:notation 'SDN:P09::PCEW'^^xsd:string .

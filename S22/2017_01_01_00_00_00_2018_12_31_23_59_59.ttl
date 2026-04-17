@@ -1,0 +1,145 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S22/2017_01_01_00_00_00_2018_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S22/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2018-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S22/current/S22C0336/1/> .
+<http://vocab.nerc.ac.uk/collection/S22/current/S22C0336/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S22/current/S22C0336/>;
+    dc:modified '2018-05-02T13:38:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '<90um'@en ;
+    skos:definition 'The solid sphere (sediment or SPM) is categorised as comprising particles smaller than 90 microns.'@en ;
+    skos:notation 'SDN:S22::S22C0336'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S22/current/S22C0335/1/> .
+<http://vocab.nerc.ac.uk/collection/S22/current/S22C0335/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S22/current/S22C0335/>;
+    dc:modified '2018-05-02T13:38:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '<20um'@en ;
+    skos:definition 'The solid sphere (sediment or SPM) is categorised as comprising particles smaller than 20 microns.'@en ;
+    skos:notation 'SDN:S22::S22C0335'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S22/current/S22C0334/1/> .
+<http://vocab.nerc.ac.uk/collection/S22/current/S22C0334/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S22/current/S22C0334/>;
+    dc:modified '2018-05-02T13:38:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '<62um'@en ;
+    skos:definition 'The solid sphere (sediment or SPM) is categorised as comprising particles smaller than 62 microns.'@en ;
+    skos:notation 'SDN:S22::S22C0334'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S22/current/S22C0333/1/> .
+<http://vocab.nerc.ac.uk/collection/S22/current/S22C0333/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S22/current/S22C0333/>;
+    dc:modified '2018-05-02T13:37:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '<500um'@en ;
+    skos:definition 'The solid sphere (sediment or SPM) is categorised as comprising particles smaller than 500 microns.'@en ;
+    skos:notation 'SDN:S22::S22C0333'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S22/current/S22C0332/1/> .
+<http://vocab.nerc.ac.uk/collection/S22/current/S22C0332/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S22/current/S22C0332/>;
+    dc:modified '2018-05-02T13:37:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '<1000um'@en ;
+    skos:definition 'The solid sphere (sediment or SPM) is categorised as comprising particles smaller than 1 millimetre.'@en ;
+    skos:notation 'SDN:S22::S22C0332'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S22/current/S22C0328/1/> .
+<http://vocab.nerc.ac.uk/collection/S22/current/S22C0328/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S22/current/S22C0328/>;
+    dc:modified '2018-04-25T16:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '3.9-63um'@en ;
+    skos:definition 'The solid sphere (sediment or SPM) is categorised as comprising particles between 3.9 and 63 microns.'@en ;
+    skos:notation 'SDN:S22::S22C0328'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S22/current/S22C0329/1/> .
+<http://vocab.nerc.ac.uk/collection/S22/current/S22C0329/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S22/current/S22C0329/>;
+    dc:modified '2018-04-25T16:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '63-4000um'@en ;
+    skos:definition 'The solid sphere (sediment or SPM) is categorised as comprising particles between 63 microns and 4 millimetres.'@en ;
+    skos:notation 'SDN:S22::S22C0329'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S22/current/S22C0330/1/> .
+<http://vocab.nerc.ac.uk/collection/S22/current/S22C0330/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S22/current/S22C0330/>;
+    dc:modified '2018-04-25T16:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '4000-256000um'@en ;
+    skos:definition 'The solid sphere (sediment or SPM) is categorised as comprising particles between 4 and 256 millimetres.'@en ;
+    skos:notation 'SDN:S22::S22C0330'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S22/current/S22C0331/1/> .
+<http://vocab.nerc.ac.uk/collection/S22/current/S22C0331/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S22/current/S22C0331/>;
+    dc:modified '2018-04-25T16:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '63-256000um'@en ;
+    skos:definition 'The solid sphere (sediment or SPM) is categorised as comprising particles between 63 microns and 256 millimetres.'@en ;
+    skos:notation 'SDN:S22::S22C0331'^^xsd:string .

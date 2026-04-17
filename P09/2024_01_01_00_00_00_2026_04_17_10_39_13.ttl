@@ -1,0 +1,190 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P09/2024_01_01_00_00_00_2026_04_17_10_39_13.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P09/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-17T10:39:13'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PHOP/2/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PHOP/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PHOP/>;
+    dc:modified '2026-02-25T11:00:30'^^xsd:dateTime ;
+    skos:altLabel 'PHOP'^^xsd:string ;
+    skos:prefLabel 'PHOSPHATE IN SEDIMT PORE WATER'@en ;
+    skos:definition 'The concentration of phosphate determined in a sample of water extracted from or overlying a sediment sample.'@en ;
+    skos:notation 'SDN:P09::PHOP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/BTID/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/BTID/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/BTID/>;
+    dc:modified '2025-12-15T09:41:58'^^xsd:dateTime ;
+    skos:altLabel 'RosPos'^^xsd:string ;
+    skos:prefLabel 'BOTTLE ROSETTE POSITION IDENTIFIER'@en ;
+    skos:definition 'The numeric identifier of the physical location where a water bottle is mounted on a CTD rosette.'@en ;
+    skos:notation 'SDN:P09::BTID'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CSPW/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CSPW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CSPW/>;
+    dc:modified '2025-11-10T09:00:27'^^xsd:dateTime ;
+    skos:altLabel 'CSPW'^^xsd:string ;
+    skos:prefLabel 'NUMBER OF CROCOSPHAERA'@en ;
+    skos:definition 'Abundance of Crocosphaera (ITIS: 1237622: WoRMS 573269) per unit volume of the water body.'@en ;
+    skos:notation 'SDN:P09::CSPW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/GXAP/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/GXAP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/GXAP/>;
+    dc:modified '2025-11-10T09:00:27'^^xsd:dateTime ;
+    skos:altLabel 'GXAP'^^xsd:string ;
+    skos:prefLabel 'GYROXANTHIN DIESTER'@en ;
+    skos:definition 'The mass of gyroxanthin diester per unit volume of the water column held in particles of any size.'@en ;
+    skos:notation 'SDN:P09::GXAP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PHYE/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PHYE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PHYE/>;
+    dc:modified '2025-11-10T09:00:27'^^xsd:dateTime ;
+    skos:altLabel 'PHYE'^^xsd:string ;
+    skos:prefLabel 'PHYCOERYTHRINS'@en ;
+    skos:definition 'The mass of all variants of phycoerythrins per unit volume of the water column held in particles of any size.'@en ;
+    skos:notation 'SDN:P09::PHYE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/LHFL/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/LHFL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/LHFL/>;
+    dc:modified '2024-12-11T09:00:54'^^xsd:dateTime ;
+    skos:altLabel 'LHFL'^^xsd:string ;
+    skos:prefLabel 'Latent heat flux from the water body'@en ;
+    skos:definition 'Quantity of energy per unit area per unit time exchanged between the water body and the atmosphere when evaporation or condensation occurs. Positive from ocean to the atmosphere'@en ;
+    skos:notation 'SDN:P09::LHFL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MOFL/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MOFL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MOFL/>;
+    dc:modified '2024-12-11T09:00:54'^^xsd:dateTime ;
+    skos:altLabel 'MOFL'^^xsd:string ;
+    skos:prefLabel 'Momentum flux of wind on the water body'@en ;
+    skos:definition 'Transference of energy per unit area per unit time from the wind to the water body, also known as wind stress or shear stress of the wind. Positive from atmosphere to ocean'@en ;
+    skos:notation 'SDN:P09::MOFL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/SHFL/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/SHFL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/SHFL/>;
+    dc:modified '2024-12-11T09:00:54'^^xsd:dateTime ;
+    skos:altLabel 'SHFL'^^xsd:string ;
+    skos:prefLabel 'Sensible heat flux from the water body'@en ;
+    skos:definition 'Quantity of heat transferred from water to air per unit area per unit time caused by the difference in temperature between the water body and the atmosphere. Positive from ocean to the atmosphere'@en ;
+    skos:notation 'SDN:P09::SHFL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/EENG/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/EENG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/EENG/>;
+    dc:modified '2024-11-29T16:25:12'^^xsd:dateTime ;
+    skos:altLabel 'EEngAbund'^^xsd:string ;
+    skos:prefLabel 'ABUNDANCE OF ENGRAULIS EGGS'@en ;
+    skos:definition 'Number of Engraulis (ITIS: 161827: WoRMS 125724) [Stage: eggs] per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::EENG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/EFIS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/EFIS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/EFIS/>;
+    dc:modified '2024-11-29T16:25:12'^^xsd:dateTime ;
+    skos:altLabel 'EFisAbund'^^xsd:string ;
+    skos:prefLabel 'ABUNDANCE OF FISH EGGS'@en ;
+    skos:definition 'Number of Fish (WoRMS 11676) [Stage: eggs] per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::EFIS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/ESAR/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/ESAR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/ESAR/>;
+    dc:modified '2024-11-29T16:25:12'^^xsd:dateTime ;
+    skos:altLabel 'ESarAbund'^^xsd:string ;
+    skos:prefLabel 'ABUNDANCE OF SARDINE EGGS'@en ;
+    skos:definition 'Number of Sardina (ITIS: 161812: WoRMS 125720) [Stage: eggs] per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::ESAR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/LENG/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/LENG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/LENG/>;
+    dc:modified '2024-11-29T16:25:12'^^xsd:dateTime ;
+    skos:altLabel 'LEngAbund'^^xsd:string ;
+    skos:prefLabel 'ABUNDANCE OF ENGRAULIS LARVAE'@en ;
+    skos:definition 'Number of Engraulis (ITIS: 161827: WoRMS 125724) [Stage: larvae] per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::LENG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/LFIS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/LFIS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/LFIS/>;
+    dc:modified '2024-11-29T16:25:12'^^xsd:dateTime ;
+    skos:altLabel 'LFisAbund'^^xsd:string ;
+    skos:prefLabel 'ABUNDANCE OF FISH LARVAE'@en ;
+    skos:definition 'Number of Fish (WoRMS 11676) [Stage: larvae] per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::LFIS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/LSAR/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/LSAR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/LSAR/>;
+    dc:modified '2024-11-29T16:25:12'^^xsd:dateTime ;
+    skos:altLabel 'LSarAbund'^^xsd:string ;
+    skos:prefLabel 'ABUNDANCE OF SARDINE LARVAE'@en ;
+    skos:definition 'Number of Sardina (ITIS: 161812: WoRMS 125720) [Stage: larvae] per unit volume of the water body'@en ;
+    skos:notation 'SDN:P09::LSAR'^^xsd:string .

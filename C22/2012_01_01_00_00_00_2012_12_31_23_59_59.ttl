@@ -1,0 +1,147 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C22/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C22/current/3/2/> .
+<http://vocab.nerc.ac.uk/collection/C22/current/3/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C22/current/3/>;
+    dc:modified '2012-09-11T12:02:55'^^xsd:dateTime ;
+    skos:altLabel 'misfire'^^xsd:string ;
+    skos:prefLabel 'Bottle misfire'@en ;
+    skos:definition 'The feedback indicator on the deck unit reported that the bottle closure command had failed. General Oceanics deck units used on NERC vessels in the 80s and 90s were renowned for reporting misfires when the bottle had been closed. This flag is also suitable for when a trigger command is mistakenly sent to a bottle that has previously been fired.'@en ;
+    skos:notation 'SDN:C22::3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C22/current/8/4/> .
+<http://vocab.nerc.ac.uk/collection/C22/current/8/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C22/current/8/>;
+    dc:modified '2012-08-22T09:20:23'^^xsd:dateTime ;
+    skos:altLabel 'suspect_depth'^^xsd:string ;
+    skos:prefLabel 'Questionable depth'@en ;
+    skos:definition 'There is reason to doubt the accuracy of the sampling depth associated with the sample.'@en ;
+    skos:notation 'SDN:C22::8'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C22/current/7/3/> .
+<http://vocab.nerc.ac.uk/collection/C22/current/7/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C22/current/7/>;
+    dc:modified '2012-08-22T09:19:49'^^xsd:dateTime ;
+    skos:altLabel 'no_sample'^^xsd:string ;
+    skos:prefLabel 'No sample'@en ;
+    skos:definition 'Either the bottle was found to contain no sample on recovery or there was no bottle fitted to the rosette position fired (but SBE35 record may exist).'@en ;
+    skos:notation 'SDN:C22::7'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C22/current/9/1/> .
+<http://vocab.nerc.ac.uk/collection/C22/current/9/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C22/current/9/>;
+    dc:modified '2012-08-08T14:50:04'^^xsd:dateTime ;
+    skos:altLabel 'vent_open'^^xsd:string ;
+    skos:prefLabel 'Vent left open'@en ;
+    skos:definition 'The bottle air vent had not been closed prior to deployment giving rise to a risk of sample contamination through leakage.'@en ;
+    skos:notation 'SDN:C22::9'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C22/current/4/2/> .
+<http://vocab.nerc.ac.uk/collection/C22/current/4/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C22/current/4/>;
+    dc:modified '2012-04-17T15:59:48'^^xsd:dateTime ;
+    skos:altLabel 'firing_order_error'^^xsd:string ;
+    skos:prefLabel 'Bottles fired in incorrect order'@en ;
+    skos:definition 'During the sampling deployment the bottle was fired in an order other than incrementing rosette position. Indicative of the potential for errors in the assignment of bottle firing depth, especially with General Oceanics rosettes.'@en ;
+    skos:notation 'SDN:C22::4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C22/current/0/2/> .
+<http://vocab.nerc.ac.uk/collection/C22/current/0/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C22/current/0/>;
+    dc:modified '2012-04-17T15:58:36'^^xsd:dateTime ;
+    skos:altLabel 'OK'^^xsd:string ;
+    skos:prefLabel 'No problem reported'@en ;
+    skos:definition 'The sampling event occurred without any incident being reported to BODC.'@en ;
+    skos:notation 'SDN:C22::0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C22/current/1/2/> .
+<http://vocab.nerc.ac.uk/collection/C22/current/1/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C22/current/1/>;
+    dc:modified '2012-04-17T15:58:36'^^xsd:dateTime ;
+    skos:altLabel 'burst'^^xsd:string ;
+    skos:prefLabel 'Filter burst'@en ;
+    skos:definition 'The filter in an in-situ sampling pump physically ruptured during sample resulting in an unquantifiable loss of sampled material.'@en ;
+    skos:notation 'SDN:C22::1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C22/current/5/2/> .
+<http://vocab.nerc.ac.uk/collection/C22/current/5/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C22/current/5/>;
+    dc:modified '2012-04-17T15:58:36'^^xsd:dateTime ;
+    skos:altLabel 'leak'^^xsd:string ;
+    skos:prefLabel 'Bottle leak'@en ;
+    skos:definition 'Water was reported to be escaping from the bottle as the rosette was being recovered.'@en ;
+    skos:notation 'SDN:C22::5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C22/current/2/2/> .
+<http://vocab.nerc.ac.uk/collection/C22/current/2/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C22/current/2/>;
+    dc:modified '2012-04-17T15:58:36'^^xsd:dateTime ;
+    skos:altLabel 'leakage_contamination'^^xsd:string ;
+    skos:prefLabel 'Leakage contamination'@en ;
+    skos:definition 'Analytical evidence (e.g. surface water salinity measured on a sample collected at depth) indicates that the water sample has been contaminated by water from depths other than the depths of sampling.'@en ;
+    skos:notation 'SDN:C22::2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C22/current/6/2/> .
+<http://vocab.nerc.ac.uk/collection/C22/current/6/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C22/current/6/>;
+    dc:modified '2012-04-17T15:58:36'^^xsd:dateTime ;
+    skos:altLabel 'part_full'^^xsd:string ;
+    skos:prefLabel 'Partial sample loss'@en ;
+    skos:definition 'The bottle seals were observed to be incorrectly seated and the bottle was only part full of water on recovery.'@en ;
+    skos:notation 'SDN:C22::6'^^xsd:string .

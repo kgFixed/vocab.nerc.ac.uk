@@ -1,0 +1,244 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L05/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L05/2011_01_01_00_00_00_2011_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2012-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/310/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/310/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/310/>;
+    dc:modified '2012-12-18T15:18:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'laser altimeters'@en ;
+    skos:definition 'Instruments that determine the distance between the platform and the Earth\'s surface by timing reflected pulses of laser light.'@en ;
+    skos:notation 'SDN:L05::310'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/379/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/379/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/379/>;
+    dc:modified '2012-12-18T15:18:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'altimeters'@en ;
+    skos:definition 'Instruments that measure their distance above a specified elevation such as the sea surface or the seabed. Classification includes acoustic and pressure-based instruments that are designed to provide platform z co-ordinate spatial coverage in the atmosphere or a water body. It excludes remote sensing instruments such as LIDAR and satellite radar altimeters designed to map surface elevation.'@en ;
+    skos:notation 'SDN:L05::379'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB40/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB40/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB40/>;
+    dc:modified '2012-11-29T15:53:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Volume measures'@en ;
+    skos:definition 'Pieces of apparatus that determine the volume of a liquid sample or dispense measured volumes of liquid. Includes devices covering a wide range of sophistication from measuring cylinders, syringes and manual pipettes through to programmable electronic instruments.'@en ;
+    skos:notation 'SDN:L05::LAB40'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/POS26/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/POS26/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/POS26/>;
+    dc:modified '2012-11-13T13:38:20'^^xsd:dateTime ;
+    skos:altLabel 'USBL'^^xsd:string ;
+    skos:prefLabel 'Ultra Short Baseline Positioning Systems'@en ;
+    skos:definition 'Systems dedicated to the positioning of subsea vehicles such as ROV and AUV. They are based on acoustic transmitted signals between one or several transponders and one acoustic antenna installed on a surface vessel. The transponders are mounted on the underwater vehicle or are fixed on the seafloor. These underwater acoustic positioning systems are coupled with inertial navigation systems.'@en ;
+    skos:notation 'SDN:L05::POS26'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB39/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB39/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB39/>;
+    dc:modified '2012-08-30T14:13:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Geiger counters'@en ;
+    skos:definition 'Instruments that measure the amount of alpha, beta or gamma radiation through quantification of the ionization of a low-pressure gas contained in a tube. Sometimes referred to as Geiger-Müller counters.'@en ;
+    skos:notation 'SDN:L05::LAB39'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/85/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/85/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/85/>;
+    dc:modified '2012-08-02T14:49:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'biorectors and chemostats'@en ;
+    skos:definition 'Devices in which controlled conditions are maintained for a chemical process to be carried out by organisms or biochemically active substances derived from such organisms.'@en ;
+    skos:notation 'SDN:L05::85'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB37/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB37/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB37/>;
+    dc:modified '2012-08-02T14:45:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'flow cytometers'@en ;
+    skos:definition 'Instruments that suspend cells in a stream of fluid past detection sensors whilst illuminating them with laser light. Used for cell counting, sorting, biomarker detection and protein engineering.'@en ;
+    skos:notation 'SDN:L05::LAB37'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB36/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB36/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB36/>;
+    dc:modified '2012-08-02T14:44:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'flow injection analysers'@en ;
+    skos:definition 'Instruments that inject a sample into a flowing carrier solution, adding reagents whilst controlling the environment to produce a chemical reaction before passing the sample to a detector.'@en ;
+    skos:notation 'SDN:L05::LAB36'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB35/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB35/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB35/>;
+    dc:modified '2012-08-02T14:41:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'voltammetry analysers'@en ;
+    skos:definition 'Instruments that obtain information about an analyte by applying a potential and measuring the current produced in the analyte.'@en ;
+    skos:notation 'SDN:L05::LAB35'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/MOD08/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/MOD08/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/MOD08/>;
+    dc:modified '2012-07-16T14:20:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Biological and biogeochemical models'@en ;
+    skos:definition 'Numerical models that make predictions of biological parameters, including ecosystem models.'@en ;
+    skos:notation 'SDN:L05::MOD08'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/MOD07/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/MOD07/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/MOD07/>;
+    dc:modified '2012-07-16T14:19:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Physical oceanographic models'@en ;
+    skos:definition 'Numerical models that make predictions of physical oceanographic parameters such as water body temperature, salinity, currents and waves.'@en ;
+    skos:notation 'SDN:L05::MOD07'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/MOD06/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/MOD06/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/MOD06/>;
+    dc:modified '2012-07-16T14:18:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Meteorological models'@en ;
+    skos:definition 'Numerical models that make predictions of weather parameters such as air temperature, pressure, humidity and winds.'@en ;
+    skos:notation 'SDN:L05::MOD06'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/MOD05/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/MOD05/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/MOD05/>;
+    dc:modified '2012-07-16T14:17:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Coupled models'@en ;
+    skos:definition 'Numerical models that make predictions in both the atmosphere and the hydrosphere by considering both spheres as a single system.'@en ;
+    skos:notation 'SDN:L05::MOD05'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/MOD04/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/MOD04/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/MOD04/>;
+    dc:modified '2012-07-16T14:15:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ocean models'@en ;
+    skos:definition 'Numerical models the make predictions in the hydrosphere assuming that it is a closed system that doesn\'t interact with the atmosphere.'@en ;
+    skos:notation 'SDN:L05::MOD04'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/MOD03/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/MOD03/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/MOD03/>;
+    dc:modified '2012-07-16T14:14:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Atmosphere models'@en ;
+    skos:definition 'Numerical models the make predictions in the atmosphere assuming that it is a closed system that doesn\'t interact with the hydrosphere.'@en ;
+    skos:notation 'SDN:L05::MOD03'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/MOD02/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/MOD02/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/MOD02/>;
+    dc:modified '2012-07-16T14:13:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Regional models'@en ;
+    skos:definition 'Numerical models that make predictions within a limited geographic area.'@en ;
+    skos:notation 'SDN:L05::MOD02'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/MOD01/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/MOD01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/MOD01/>;
+    dc:modified '2012-07-16T14:13:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Global models'@en ;
+    skos:definition 'Numerical models that make predictions over the whole globe.'@en ;
+    skos:notation 'SDN:L05::MOD01'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB34/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB34/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB34/>;
+    dc:modified '2012-03-22T17:49:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'chemiluminescence analysers'@en ;
+    skos:definition 'Laboratory apparatus that detemines the concentration of a chemical species by quantification of the electromagnetic radiation (usually visible light) produced by a chemical reaction.'@en ;
+    skos:notation 'SDN:L05::LAB34'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB33/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB33/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB33/>;
+    dc:modified '2012-03-01T16:00:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'laboratory autosamplers'@en ;
+    skos:definition 'Laboratory apparatus  that automatically introduces one or more samples with a predetermined volume or mass into an analytical instrument.'@en ;
+    skos:notation 'SDN:L05::LAB33'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/184/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/184/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/184/>;
+    dc:modified '2012-02-23T10:11:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'microstructure sensors'@en ;
+    skos:definition 'Fast response sensors sampled at high frequency to determine the distribution of water body properties on a millimetric scale.'@en ;
+    skos:notation 'SDN:L05::184'^^xsd:string .

@@ -1,0 +1,145 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S04/2007_01_01_00_00_00_2007_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S04/2006_01_01_00_00_00_2006_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2007-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041000/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041000/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041000/>;
+    dc:modified '2007-12-05T15:18:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'radioimmunoassay'@en ;
+    skos:definition 'Method for determination of hormone levels in a sample by quantifying reaction with radiotracer-labelled ecdysone and \'Black\' antiserum.'@en ;
+    skos:notation 'SDN:S04::S041000'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S04389/2/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S04389/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S04389/>;
+    dc:modified '2007-09-24T14:02:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'in-situ oxygen optode'@en ;
+    skos:definition 'A sensor that measures dissolved oxygen concentration based on the ability of selected substances to act as dynamic fluorescence quenchers.'@en ;
+    skos:notation 'SDN:S04::S04389'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S04504/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S04504/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S04504/>;
+    dc:modified '2007-09-24T13:57:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'platinum resistance thermometer'@en ;
+    skos:definition 'Instrument that measures temperature by detecting the change in the electrical resistance of a platinum sensor'@en ;
+    skos:notation 'SDN:S04::S04504'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S04503/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S04503/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S04503/>;
+    dc:modified '2007-09-24T13:55:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'constant temperature non-dispersive infra-red gas analysis'@en ;
+    skos:definition 'Measurement in an instrument that simultaneously determines CO2 and water vapour concentrations in a gas mixture by measuring inra-red absorption'@en ;
+    skos:notation 'SDN:S04::S04503'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S04502/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S04502/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S04502/>;
+    dc:modified '2007-09-19T12:07:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'acoustic doppler wave array'@en ;
+    skos:definition 'An uprated ADCP that measures the current profile, mean water depth from pressure, wave statistics from pressure and directional wave spectra from orbital velocity measurements of near-surface particles determined using four acoustic beams.'@en ;
+    skos:notation 'SDN:S04::S04502'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S04406/3/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S04406/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S04406/>;
+    dc:modified '2007-09-19T09:48:06'^^xsd:dateTime ;
+    skos:altLabel 'LIDAR'^^xsd:string ;
+    skos:prefLabel 'infra-red laser rangefinder (infra-red LIDAR)'@en ;
+    skos:definition 'Device which uses an infrared laser beam to determine distance to an object by measuring the 2-way travel time of a reflected pulse'@en ;
+    skos:notation 'SDN:S04::S04406'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S04409/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S04409/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S04409/>;
+    dc:modified '2007-05-17T14:03:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'SCUFA turbidity meter'@en ;
+    skos:definition 'A specific type of instrument to measure optical backscatter'@en ;
+    skos:notation 'SDN:S04::S04409'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S0416/2/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S0416/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S0416/>;
+    dc:modified '2007-01-25T16:04:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'identification and counting by inverse microscopy'@en ;
+    skos:definition 'Identification and quantification of biological entities or other small objects using an optical microscope constructed such that the objectives sit under the specimen.'@en ;
+    skos:notation 'SDN:S04::S0416'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S04408/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S04408/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S04408/>;
+    dc:modified '2007-01-24T10:02:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'anodic stripping voltammetry'@en ;
+    skos:definition 'Anodic stripping voltammetry is an electrolytic method in which a mercury electrode is held at a negative potential to reduce metal ions in solution and form an amalgam with the electrode.'@en ;
+    skos:notation 'SDN:S04::S04408'^^xsd:string .

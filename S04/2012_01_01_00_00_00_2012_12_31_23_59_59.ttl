@@ -1,0 +1,118 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S04/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S04/2011_01_01_00_00_00_2011_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2012-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041075/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041075/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041075/>;
+    dc:modified '2012-11-28T16:09:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'infra-red kinetic fluorometry'@en ;
+    skos:definition 'not specified'@en ;
+    skos:notation 'SDN:S04::S041075'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041074/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041074/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041074/>;
+    dc:modified '2012-11-23T16:45:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'identification and counting by polarized light microscopy and automated image analysis'@en ;
+    skos:definition 'Identification and automated quantification of coccoliths and or coccospheres using cross-polarized light to identify birefringent areas'@en ;
+    skos:notation 'SDN:S04::S041074'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041073/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041073/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041073/>;
+    dc:modified '2012-08-17T15:54:24'^^xsd:dateTime ;
+    skos:altLabel 'TIMS'^^xsd:string ;
+    skos:prefLabel 'thermal ionization mass spectrometry'@en ;
+    skos:definition 'A highly sensitive isotope mass spectrometry characterization technique in which a chemically purified sample is heated to cause ionization of the atoms of the sample. The resulting ions are focused into a beam by an electromagnet, then separated into individual beams based on the mass/charge ratio of the ions.'@en ;
+    skos:notation 'SDN:S04::S041073'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041072/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041072/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041072/>;
+    dc:modified '2012-07-04T10:32:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'identification and counting by scanning electron microscopy (SEM)'@en ;
+    skos:definition 'Identification and quantification of biological entities or other small objects using a scanning electron microscope.'@en ;
+    skos:notation 'SDN:S04::S041072'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041070/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041070/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041070/>;
+    dc:modified '2012-04-20T15:21:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'combined Global Navigation Satellite System receiver'@en ;
+    skos:definition 'A type of satellite navigation receiver capable of combining  information from multiple systems, for example from the American GPS, Russian GLONASS and European Galileo satellites.'@en ;
+    skos:notation 'SDN:S04::S041070'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041069/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041069/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041069/>;
+    dc:modified '2012-02-07T14:12:25'^^xsd:dateTime ;
+    skos:altLabel 'HPLC-ICP-MS'^^xsd:string ;
+    skos:prefLabel 'high performance liquid chromatography - inductively coupled plasma mass spectrometry'@en ;
+    skos:definition 'A technique in which an HPLC is directly coupled to an ICP-MS to enable the determination of organometallic species'@en ;
+    skos:notation 'SDN:S04::S041069'^^xsd:string .

@@ -1,0 +1,100 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S03/2020_01_01_00_00_00_2021_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S03/2019_01_01_00_00_00_2019_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2021-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03471/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03471/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03471/>;
+    dc:modified '2021-12-14T13:08:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'round-mesh sieving, picking'@en ;
+    skos:definition 'The sediment was sieved using a round-meshed sieve followed by manual extraction of the targeted objects or organisms.'@en ;
+    skos:notation 'SDN:S03::S03471'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03470/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03470/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03470/>;
+    dc:modified '2021-12-14T13:08:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'square-mesh sieving, picking'@en ;
+    skos:definition 'The sediment was sieved using a square-meshed sieve followed by manual extraction of the targeted objects or organisms.'@en ;
+    skos:notation 'SDN:S03::S03470'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03469/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03469/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03469/>;
+    dc:modified '2021-12-06T15:29:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'distillation'@en ;
+    skos:definition 'Separation of the components or substances from a liquid mixture by using selective boiling and condensation.'@en ;
+    skos:notation 'SDN:S03::S03469'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03468/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03468/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03468/>;
+    dc:modified '2021-11-19T16:56:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '15N-tracer addition, incubation, fixation, gas purging and trapping'@en ;
+    skos:definition 'The sample was spiked with a 15N (nitrogen 15)-labelled substrate and incubated for a set time period. The incubation was terminated using a chemical fixation agent. Gases were stripped from the sample and trapped prior to analysis.'@en ;
+    skos:notation 'SDN:S03::S03468'^^xsd:string .

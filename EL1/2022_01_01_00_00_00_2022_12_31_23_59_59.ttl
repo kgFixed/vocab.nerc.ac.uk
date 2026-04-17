@@ -1,0 +1,255 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/EL1/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EL1/current/act11/1/> .
+<http://vocab.nerc.ac.uk/collection/EL1/current/act11/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EL1/current/act11/>;
+    dc:modified '2022-12-16T10:12:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Failure'@en ;
+    skos:definition 'Equipment failed during the operation due to malfunction.'@en ;
+    skos:notation 'SDN:EL1::act11'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EL1/current/act12/1/> .
+<http://vocab.nerc.ac.uk/collection/EL1/current/act12/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EL1/current/act12/>;
+    dc:modified '2022-12-16T10:12:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Lost'@en ;
+    skos:definition 'Equipment is lost while being deployed.'@en ;
+    skos:notation 'SDN:EL1::act12'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EL1/current/act13/1/> .
+<http://vocab.nerc.ac.uk/collection/EL1/current/act13/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EL1/current/act13/>;
+    dc:modified '2022-12-16T10:12:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'AtDepth'@en ;
+    skos:definition 'Equipment reached the required depth.'@en ;
+    skos:notation 'SDN:EL1::act13'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EL1/current/act14/1/> .
+<http://vocab.nerc.ac.uk/collection/EL1/current/act14/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EL1/current/act14/>;
+    dc:modified '2022-12-16T10:12:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Descend'@en ;
+    skos:definition 'Equipment starts its descent through a medium.'@en ;
+    skos:notation 'SDN:EL1::act14'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EL1/current/act15/1/> .
+<http://vocab.nerc.ac.uk/collection/EL1/current/act15/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EL1/current/act15/>;
+    dc:modified '2022-12-16T10:12:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ascend'@en ;
+    skos:definition 'The equipment starts its rising through a medium.'@en ;
+    skos:notation 'SDN:EL1::act15'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EL1/current/act16/1/> .
+<http://vocab.nerc.ac.uk/collection/EL1/current/act16/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EL1/current/act16/>;
+    dc:modified '2022-12-16T10:12:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'InWater'@en ;
+    skos:definition 'Equipment enters the water.'@en ;
+    skos:notation 'SDN:EL1::act16'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EL1/current/act25/1/> .
+<http://vocab.nerc.ac.uk/collection/EL1/current/act25/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EL1/current/act25/>;
+    dc:modified '2022-12-16T10:12:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Released'@en ;
+    skos:definition 'Equipment is released.'@en ;
+    skos:notation 'SDN:EL1::act25'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EL1/current/act26/1/> .
+<http://vocab.nerc.ac.uk/collection/EL1/current/act26/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EL1/current/act26/>;
+    dc:modified '2022-12-16T10:12:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Located'@en ;
+    skos:definition 'Equipment is located (by acoustic detection or visual observation).'@en ;
+    skos:notation 'SDN:EL1::act26'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EL1/current/act27/1/> .
+<http://vocab.nerc.ac.uk/collection/EL1/current/act27/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EL1/current/act27/>;
+    dc:modified '2022-12-16T10:12:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sighted'@en ;
+    skos:definition 'Visual observation of an uncontrolled phenomenon.'@en ;
+    skos:notation 'SDN:EL1::act27'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EL1/current/act29/1/> .
+<http://vocab.nerc.ac.uk/collection/EL1/current/act29/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EL1/current/act29/>;
+    dc:modified '2022-12-16T10:12:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'OutWater'@en ;
+    skos:definition 'Equipment is taken out of the water.'@en ;
+    skos:notation 'SDN:EL1::act29'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EL1/current/act30/1/> .
+<http://vocab.nerc.ac.uk/collection/EL1/current/act30/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EL1/current/act30/>;
+    dc:modified '2022-12-16T10:12:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'OffBottom'@en ;
+    skos:definition 'Equipment leaves the seabed.'@en ;
+    skos:notation 'SDN:EL1::act30'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EL1/current/act31/1/> .
+<http://vocab.nerc.ac.uk/collection/EL1/current/act31/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EL1/current/act31/>;
+    dc:modified '2022-12-16T10:12:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Close'@en ;
+    skos:definition 'A sampler is closed (plankton net, water sampling bottle, sediment trap).'@en ;
+    skos:notation 'SDN:EL1::act31'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EL1/current/act32/1/> .
+<http://vocab.nerc.ac.uk/collection/EL1/current/act32/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EL1/current/act32/>;
+    dc:modified '2022-12-16T10:12:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Open'@en ;
+    skos:definition 'A sampler is opened (plankton or fishing net).'@en ;
+    skos:notation 'SDN:EL1::act32'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EL1/current/act23/1/> .
+<http://vocab.nerc.ac.uk/collection/EL1/current/act23/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EL1/current/act23/>;
+    dc:modified '2022-12-16T10:12:44'^^xsd:dateTime ;
+    skos:altLabel 'Cancel'^^xsd:string ;
+    skos:prefLabel 'Abort'@en ;
+    skos:definition 'The operation is aborted for some reason.'@en ;
+    skos:notation 'SDN:EL1::act23'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EL1/current/act10/1/> .
+<http://vocab.nerc.ac.uk/collection/EL1/current/act10/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EL1/current/act10/>;
+    dc:modified '2022-12-16T10:12:44'^^xsd:dateTime ;
+    skos:altLabel 'Install'^^xsd:string ;
+    skos:prefLabel 'Setup'@en ;
+    skos:definition 'The equipment is prepared for deployment e.g. installation of sensors prior to actual measurements.'@en ;
+    skos:notation 'SDN:EL1::act10'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EL1/current/act28/1/> .
+<http://vocab.nerc.ac.uk/collection/EL1/current/act28/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EL1/current/act28/>;
+    dc:modified '2022-12-16T10:12:44'^^xsd:dateTime ;
+    skos:altLabel 'OnDeck'^^xsd:string ;
+    skos:prefLabel 'OnBoard'@en ;
+    skos:definition 'Equipment back on the platform after deployment.'@en ;
+    skos:notation 'SDN:EL1::act28'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EL1/current/act8/2/> .
+<http://vocab.nerc.ac.uk/collection/EL1/current/act8/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EL1/current/act8/>;
+    dc:modified '2022-11-27T06:57:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'AtMaxDepth'@en ;
+    skos:definition 'The equipment has reached its maximum depth in medium.'@en ;
+    skos:notation 'SDN:EL1::act8'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EL1/current/act4/1/> .
+<http://vocab.nerc.ac.uk/collection/EL1/current/act4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EL1/current/act4/>;
+    dc:modified '2022-11-27T06:52:19'^^xsd:dateTime ;
+    skos:altLabel 'Restart'^^xsd:string ;
+    skos:prefLabel 'Resume'@en ;
+    skos:definition 'The activity restarts after a pause.'@en ;
+    skos:notation 'SDN:EL1::act4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EL1/current/act3/1/> .
+<http://vocab.nerc.ac.uk/collection/EL1/current/act3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EL1/current/act3/>;
+    dc:modified '2022-11-27T06:51:22'^^xsd:dateTime ;
+    skos:altLabel 'Suspend'^^xsd:string ;
+    skos:prefLabel 'Pause'@en ;
+    skos:definition 'The activity is interrupted with intention to resume.'@en ;
+    skos:notation 'SDN:EL1::act3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EL1/current/act7/1/> .
+<http://vocab.nerc.ac.uk/collection/EL1/current/act7/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EL1/current/act7/>;
+    dc:modified '2022-11-27T06:49:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'OnBottom'@en ;
+    skos:definition 'The equipment has reached the bed. Terms applies to e.g. a benthic sampler or the anchor of a mooring line.'@en ;
+    skos:notation 'SDN:EL1::act7'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EL1/current/act2/1/> .
+<http://vocab.nerc.ac.uk/collection/EL1/current/act2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EL1/current/act2/>;
+    dc:modified '2022-11-27T06:33:33'^^xsd:dateTime ;
+    skos:altLabel 'Finish'^^xsd:string ;
+    skos:prefLabel 'End'@en ;
+    skos:definition 'Ending of an activity (procedure, operation, process).'@en ;
+    skos:notation 'SDN:EL1::act2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EL1/current/act1/1/> .
+<http://vocab.nerc.ac.uk/collection/EL1/current/act1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EL1/current/act1/>;
+    dc:modified '2022-11-27T06:32:21'^^xsd:dateTime ;
+    skos:altLabel 'Begin'^^xsd:string ;
+    skos:prefLabel 'Start'@en ;
+    skos:definition 'Beginning of an activity (procedure, operation, process).'@en ;
+    skos:notation 'SDN:EL1::act1'^^xsd:string .

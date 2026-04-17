@@ -1,0 +1,91 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S19/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S19/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2023-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S19/current/S1901385/1/> .
+<http://vocab.nerc.ac.uk/collection/S19/current/S1901385/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S19/current/S1901385/>;
+    dc:modified '2023-04-21T13:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'per ensemble'@en ;
+    skos:definition 'The physical entity refers to a group of measurements.'@en ;
+    skos:notation 'SDN:S19::S1901385'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S19/current/S1901384/1/> .
+<http://vocab.nerc.ac.uk/collection/S19/current/S1901384/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S19/current/S1901384/>;
+    dc:modified '2023-03-29T16:13:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '700nm wavelength at 142 degree incidence'@en ;
+    skos:definition 'The spatial period of a sinusoidal wave in nanometers at a 142 degree angle of ray incidence on a surface.'@en ;
+    skos:notation 'SDN:S19::S1901384'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S19/current/S1901383/1/> .
+<http://vocab.nerc.ac.uk/collection/S19/current/S1901383/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S19/current/S1901383/>;
+    dc:modified '2023-02-17T18:14:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtered'@en ;
+    skos:definition 'Term used to specify that an object (liquid) has been filtered.'@en ;
+    skos:notation 'SDN:S19::S1901383'^^xsd:string .

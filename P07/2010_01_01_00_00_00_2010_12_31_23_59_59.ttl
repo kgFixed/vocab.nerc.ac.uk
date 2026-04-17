@@ -1,0 +1,1189 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P07/2010_01_01_00_00_00_2010_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P07/2009_01_01_00_00_00_2009_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2010-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A14/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV16A14/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A14/>;
+    dc:modified '2010-10-11T13:13:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'heat_flux_into_sea_water_due_to_freezing_of_frazil_ice'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.  The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  "Frazil" consists of needle like crystals of ice, typically between three and four millimeters in diameter, which form as sea water begins to freeze. Salt is expelled during the freezing process and frazil ice consists of nearly pure fresh water.'@en ;
+    skos:notation 'SDN:P07::CFV16A14'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A17/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV16A17/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A17/>;
+    dc:modified '2010-10-11T13:13:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'liquid_water_content_of_permafrost_layer'@en ;
+    skos:definition '"Content" indicates a quantity per unit area.  Permafrost is soil or rock that has remained at a temperature at or below zero degrees Celsius throughout the seasonal cycle for two or more years.'@en ;
+    skos:notation 'SDN:P07::CFV16A17'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A3/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV16A3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A3/>;
+    dc:modified '2010-10-11T13:13:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_mass_of_carbon_dioxide'@en ;
+    skos:definition 'The chemical formula for carbon dioxide is CO2.'@en ;
+    skos:notation 'SDN:P07::CFV16A3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A30/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV16A30/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A30/>;
+    dc:modified '2010-10-11T13:13:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'number_concentration_of_ice_crystals_in_air'@en ;
+    skos:definition '"Number concentration" means the number of particles or other specified objects per unit volume.'@en ;
+    skos:notation 'SDN:P07::CFV16A30'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A31/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV16A31/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A31/>;
+    dc:modified '2010-10-11T13:13:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'number_concentration_of_ice_crystals_in_air_at_ice_cloud_top'@en ;
+    skos:definition '"Number concentration" means the number of particles or other specified objects per unit volume. cloud_top refers to the top of the highest cloud.'@en ;
+    skos:notation 'SDN:P07::CFV16A31'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A33/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV16A33/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A33/>;
+    dc:modified '2010-10-11T13:13:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'permafrost_layer_thickness'@en ;
+    skos:definition 'Permafrost is soil or rock that has remained at a temperature at or below zero degrees Celsius throughout the seasonal cycle for two or more years. "Thickness" means the vertical extent of a layer.'@en ;
+    skos:notation 'SDN:P07::CFV16A33'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A41/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV16A41/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A41/>;
+    dc:modified '2010-10-11T13:13:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'shallow_convection_time_fraction'@en ;
+    skos:definition '"Time fraction" means a fraction of a time interval. The interval in question must be specified by the values or bounds of the time coordinate variable associated with the data. "X_time_fraction" means the fraction of the time interval during which X occurs.'@en ;
+    skos:notation 'SDN:P07::CFV16A41'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A45/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV16A45/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A45/>;
+    dc:modified '2010-10-11T13:13:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface_downward_heat_flux_in_snow'@en ;
+    skos:definition '"Downward" indicates a vector component which is positive when directed downward (negative upward).  In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.  The surface called "surface" means the lower boundary of the atmosphere.'@en ;
+    skos:notation 'SDN:P07::CFV16A45'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A47/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV16A47/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A47/>;
+    dc:modified '2010-10-11T13:13:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface_net_downward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_all_land_processes'@en ;
+    skos:definition '"Downward" indicates a vector component which is positive when directed downward (negative upward).  The phrase "expressed_as" is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. "All land processes" means plant and soil respiration, photosynthesis, animal grazing, crop harvesting, natural fires and anthropogenic land use change. "Anthropogenic land use change" means human changes to land, excluding forest regrowth. It includes fires ignited by humans for the purpose of land use change and the processes of eventual disposal and decomposition of wood products such as paper, cardboard, furniture and timber for construction. The quantity with standard name surface_net_downward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_all_land_processes is  equal to the difference  between the quantities with standard names surface_net_downward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_all_land_processes_excluding_anthropogenic_land_use_change and surface_net_upward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_emission_from_anthropogenic_land_use_change. In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.  The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  The chemical formula for carbon dioxide is CO2.'@en ;
+    skos:notation 'SDN:P07::CFV16A47'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A48/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV16A48/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A48/>;
+    dc:modified '2010-10-11T13:13:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface_net_downward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_all_land_processes_excluding_anthropogenic_land_use_change'@en ;
+    skos:definition '"Downward" indicates a vector component which is positive when directed downward (negative upward).  The phrase "expressed_as" is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. "All land processes" means plant and soil respiration, photosynthesis, animal grazing, crop harvesting, natural fires and anthropogenic land use change. "Anthropogenic land use change" means human changes to land, excluding forest regrowth. It includes fires ignited by humans for the purpose of land use change and the processes of eventual disposal and decomposition of wood products such as paper, cardboard, furniture and timber for construction. The quantity with standard name surface_net_downward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_all_land_processes is  equal to the difference  between the quantities with standard names surface_net_downward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_all_land_processes_excluding_anthropogenic_land_use_change and surface_net_upward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_emission_from_anthropogenic_land_use_change. In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.  The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  The chemical formula for carbon dioxide is CO2.'@en ;
+    skos:notation 'SDN:P07::CFV16A48'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A49/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV16A49/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A49/>;
+    dc:modified '2010-10-11T13:13:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface_net_upward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_emission_from_anthropogenic_land_use_change'@en ;
+    skos:definition '"Upward" indicates a vector component which is positive when directed upward (negative downward).  The phrase "expressed_as" is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. "Anthropogenic land use change" means human changes to land, excluding forest regrowth. It includes fires ignited by humans for the purpose of land use change and the processes of eventual disposal and decomposition of wood products such as paper, cardboard, furniture and timber for construction. The quantity with standard name surface_net_downward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_all_land_processes is  equal to the difference  between the quantities with standard names surface_net_downward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_all_land_processes_excluding_anthropogenic_land_use_change and surface_net_upward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_emission_from_anthropogenic_land_use_change. In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.  The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth\'s surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. The chemical formula for carbon dioxide is CO2.'@en ;
+    skos:notation 'SDN:P07::CFV16A49'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A5/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV16A5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A5/>;
+    dc:modified '2010-10-11T13:13:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'carbon_mass_flux_into_soil_from_litter'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. "Litter" is dead plant material in or above the soil.'@en ;
+    skos:notation 'SDN:P07::CFV16A5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A53/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV16A53/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A53/>;
+    dc:modified '2010-10-11T13:13:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface_upward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_emission_from_fires_excluding_anthropogenic_land_use_change'@en ;
+    skos:definition '"Upward" indicates a vector component which is positive when directed upward (negative downward).  The phrase \'expressed_as\' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. "Fires excluding anthropogenic land use change" means all natural fires and human ignited fires that are not associated with change of land use. In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.  The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth\'s surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. The chemical formula for carbon dioxide is CO2. "Anthropogenic" means influenced, caused, or created by human activity.'@en ;
+    skos:notation 'SDN:P07::CFV16A53'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A54/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV16A54/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A54/>;
+    dc:modified '2010-10-11T13:13:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface_upward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_emission_from_grazing'@en ;
+    skos:definition '"Upward" indicates a vector component which is positive when directed upward (negative downward).  The phrase \'expressed_as\' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.  The surface called "surface" means the lower boundary of the atmosphere.  The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth\'s surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. The chemical formula for carbon dioxide is CO2.'@en ;
+    skos:notation 'SDN:P07::CFV16A54'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A55/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV16A55/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A55/>;
+    dc:modified '2010-10-11T13:13:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface_upward_mass_flux_of_carbon_dioxide_expressed_as_carbon_due_to_emission_from_natural_sources'@en ;
+    skos:definition '"Upward" indicates a vector component which is positive when directed upward (negative downward).  The phrase \'expressed_as\' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.  The surface called "surface" means the lower boundary of the atmosphere.  The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth\'s surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. The chemical formula for carbon dioxide is CO2.'@en ;
+    skos:notation 'SDN:P07::CFV16A55'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A56/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV16A56/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A56/>;
+    dc:modified '2010-10-11T13:13:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_carbon_dioxide_expressed_as_carbon_due_to_anthropogenic_emission'@en ;
+    skos:definition '"Content" indicates a quantity per unit area.  The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  The phrase \'expressed_as\' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  "tendency_of_X" means derivative of X with respect to time.  "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth\'s surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. The chemical formula for carbon dioxide is CO2. "Anthropogenic" means influenced, caused, or created by human activity. Anthropogenic emission of carbon dioxide includes fossil fuel use, cement production, agricultural burning and sources associated with anthropogenic land use change, except forest regrowth.'@en ;
+    skos:notation 'SDN:P07::CFV16A56'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A57/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV16A57/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A57/>;
+    dc:modified '2010-10-11T13:13:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_carbon_dioxide_expressed_as_carbon_due_to_emission_from_fossil_fuel_combustion'@en ;
+    skos:definition '"Content" indicates a quantity per unit area.  The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  The phrase \'expressed_as\' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.  "tendency_of_X" means derivative of X with respect to time.  "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth\'s surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. The chemical formula for carbon dioxide is CO2. Fossil fuel combustion includes cement production and flaring of natural gas.'@en ;
+    skos:notation 'SDN:P07::CFV16A57'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A6/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV16A6/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A6/>;
+    dc:modified '2010-10-11T13:13:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'carbon_mass_flux_into_soil_from_vegetation_excluding_litter'@en ;
+    skos:definition '"Vegetation" means any plants e.g. trees, shrubs, grass.  "Litter" is dead plant material in or above the soil. In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.'@en ;
+    skos:notation 'SDN:P07::CFV16A6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A8/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV16A8/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV16A8/>;
+    dc:modified '2010-10-11T13:13:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'convection_time_fraction'@en ;
+    skos:definition '"Time fraction" means a fraction of a time interval. The interval in question must be specified by the values or bounds of the time coordinate variable associated with the data. "X_time_fraction" means the fraction of the time interval during which X occurs.'@en ;
+    skos:notation 'SDN:P07::CFV16A8'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF12N102/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF12N102/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF12N102/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_mass_content_of_sulfate_expressed_as_sulfur_dry_aerosol'@en ;
+    skos:definition '"Content" indicates a quantity per unit area.  The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  "Aerosol" means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. "Dry aerosol" means aerosol without water. The phrase \'expressed_as\' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.'@en ;
+    skos:notation 'SDN:P07::CF12N102'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF12N211/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF12N211/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF12N211/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'large_scale_graupel_flux'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.  In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.'@en ;
+    skos:notation 'SDN:P07::CF12N211'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF12N666/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF12N666/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF12N666/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_sulfate_expressed_as_sulfur_dry_aerosol_due_to_dry_deposition'@en ;
+    skos:definition '"Content" indicates a quantity per unit area.  The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  "Aerosol" means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. "Dry aerosol" means aerosol without water. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  "tendency_of_X" means derivative of X with respect to time.  "Dry deposition" is the sum of turbulent deposition and gravitational settling. The phrase \'expressed_as\' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.'@en ;
+    skos:notation 'SDN:P07::CF12N666'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF12N667/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF12N667/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF12N667/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_sulfate_expressed_as_sulfur_dry_aerosol_due_to_gravitational_settling'@en ;
+    skos:definition '"Content" indicates a quantity per unit area.  The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  "Aerosol" means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. "Dry aerosol" means aerosol without water. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  "tendency_of_X" means derivative of X with respect to time.  The sum of turbulent deposition and gravitational settling is dry deposition. The phrase \'expressed_as\' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.'@en ;
+    skos:notation 'SDN:P07::CF12N667'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF12N668/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF12N668/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF12N668/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_sulfate_expressed_as_sulfur_dry_aerosol_due_to_turbulent_deposition'@en ;
+    skos:definition '"Content" indicates a quantity per unit area.  The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  "Aerosol" means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. "Dry aerosol" means aerosol without water. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  "tendency_of_X" means derivative of X with respect to time.  The sum of turbulent deposition and gravitational settling is dry deposition. The phrase \'expressed_as\' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.'@en ;
+    skos:notation 'SDN:P07::CF12N668'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF12N669/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF12N669/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF12N669/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_sulfate_expressed_as_sulfur_dry_aerosol_due_to_wet_deposition'@en ;
+    skos:definition '"Content" indicates a quantity per unit area.  The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  "Aerosol" means the suspended liquid or solid particles in air (except cloud droplets).  Aerosol takes up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the aerosol. "Dry aerosol" means aerosol without water. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  "tendency_of_X" means derivative of X with respect to time.  "Wet deposition" means deposition by precipitation. The phrase \'expressed_as\' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.'@en ;
+    skos:notation 'SDN:P07::CF12N669'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N87/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N87/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N87/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_mole_concentration_of_dissolved_inorganic_phosphate_in_sea_water_due_to_biological_processes'@en ;
+    skos:definition '\'Mole concentration\' means number of moles per unit volume, also called "molarity", and is used in the construction mole_concentration_of_X_in_Y, where X is a material constituent of Y.  A chemical or biological species denoted by X may be described by a single term such as \'nitrogen\' or a phrase such as \'nox_expressed_as_nitrogen\'. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  "tendency_of_X" means derivative of X with respect to time. "Dissolved inorganic phosphorus/phosphate" means phosphate ions in solution.  The chemical formula of the phosphate anion is PO4 with a charge of minus three.'@en ;
+    skos:notation 'SDN:P07::CF14N87'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N88/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N88/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N88/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_mole_concentration_of_dissolved_inorganic_silicate_in_sea_water_due_to_biological_processes'@en ;
+    skos:definition '\'Mole concentration\' means number of moles per unit volume, also called "molarity", and is used in the construction mole_concentration_of_X_in_Y, where X is a material constituent of Y.  A chemical or biological species denoted by X may be described by a single term such as \'nitrogen\' or a phrase such as \'nox_expressed_as_nitrogen\'. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  "tendency_of_X" means derivative of X with respect to time.  "Dissolved inorganic silicon/silicate" means silicate ions in solution.'@en ;
+    skos:notation 'SDN:P07::CF14N88'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0032/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0032/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0032/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water_vapor_pressure'@en ;
+    skos:definition 'Vapor pressure is the partial pressure of a constituent of air, such as water, which exists as liquid or solid under \'normal\' conditions. \'Water\' is specified when the term is being applied to water.'@en ;
+    skos:notation 'SDN:P07::CFSN0032'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0033/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0033/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0033/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water_vapor_saturation_deficit'@en ;
+    skos:definition 'Water vapor saturation deficit is the difference between the saturation water vapor pressure and the actual water vapor pressure.'@en ;
+    skos:notation 'SDN:P07::CFSN0033'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0141/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0141/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0141/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'thickness_of_large_scale_rainfall_amount'@en ;
+    skos:definition '\'Amount\' means mass per unit area. The construction thickness_of_[X_]rainfall_amount means the accumulated \'depth\' of rainfall i.e. the thickness of a layer of liquid water having the same mass per unit area as the rainfall amount.'@en ;
+    skos:notation 'SDN:P07::CFSN0141'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0142/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0142/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0142/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'thickness_of_large_scale_snowfall_amount'@en ;
+    skos:definition '\'Amount\' means mass per unit area. The construction thickness_of_[X_]snowfall_amount means the accumulated \'depth\' of snow which fell i.e. the thickness of the layer of snow at its own density. There are corresponding standard names for liquid water equivalent (lwe) thickness.'@en ;
+    skos:notation 'SDN:P07::CFSN0142'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0292/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0292/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0292/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface_carbon_dioxide_mole_flux'@en ;
+    skos:definition 'The surface called \'surface\' means the lower boundary of the atmosphere. In accordance with common usage in geophysical disciplines, \'flux\' implies per unit area, called \'flux density\' in physics.'@en ;
+    skos:notation 'SDN:P07::CFSN0292'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0340/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0340/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0340/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'snow_soot_content'@en ;
+    skos:definition '\'Content\' indicates a quantity per unit area.'@en ;
+    skos:notation 'SDN:P07::CFSN0340'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0341/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0341/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0341/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'snow_temperature'@en ;
+    skos:definition 'Snow temperature is the bulk temperature of the snow, not the surface (skin) temperature.'@en ;
+    skos:notation 'SDN:P07::CFSN0341'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0342/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0342/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0342/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'snow_thermal_energy_content'@en ;
+    skos:definition '\'Content\' indicates a quantity per unit area. Thermal energy is the total vibrational energy, kinetic and potential, of all the molecules and atoms in a substance.'@en ;
+    skos:notation 'SDN:P07::CFSN0342'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0495/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0495/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0495/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'northward_water_vapor_flux'@en ;
+    skos:definition '\'Northward\' indicates a vector component which is positive when directed northward (negative southward). In accordance with common usage in geophysical disciplines, \'flux\' implies per unit area, called \'flux density\' in physics.'@en ;
+    skos:notation 'SDN:P07::CFSN0495'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0557/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0557/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0557/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'lwe_large_scale_precipitation_rate'@en ;
+    skos:definition '\'lwe\' means liquid water equivalent.'@en ;
+    skos:notation 'SDN:P07::CFSN0557'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0558/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0558/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0558/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'lwe_large_scale_snowfall_rate'@en ;
+    skos:definition '\'lwe\' means liquid water equivalent.'@en ;
+    skos:notation 'SDN:P07::CFSN0558'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0566/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0566/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0566/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'lwe_thickness_of_large_scale_precipitation_amount'@en ;
+    skos:definition '\'lwe\' means liquid water equivalent. \'Amount\' means mass per unit area. The construction lwe_thickness_of_X_amount or _content means the vertical extent of a layer of liquid water having the same mass per unit area.'@en ;
+    skos:notation 'SDN:P07::CFSN0566'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0567/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0567/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0567/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'lwe_thickness_of_large_scale_snowfall_amount'@en ;
+    skos:definition '\'lwe\' means liquid water equivalent. \'Amount\' means mass per unit area. The construction lwe_thickness_of_X_amount or _content means the vertical extent of a layer of liquid water having the same mass per unit area.'@en ;
+    skos:notation 'SDN:P07::CFSN0567'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0592/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0592/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0592/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'large_scale_cloud_area_fraction'@en ;
+    skos:definition '\'X_area_fraction\' means the fraction of horizontal area occupied by X. \'X_area\' means the horizontal area occupied by X within the grid cell. Cloud area fraction is also called \'cloud amount\' and \'cloud cover\'. The cloud area fraction is for the whole atmosphere column, as seen from the surface or the top of the atmosphere. The cloud area fraction in a layer of the atmosphere has the standard name cloud_area_fraction_in_atmosphere_layer.'@en ;
+    skos:notation 'SDN:P07::CFSN0592'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0593/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0593/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0593/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'large_scale_precipitation_amount'@en ;
+    skos:definition '\'Amount\' means mass per unit area.'@en ;
+    skos:notation 'SDN:P07::CFSN0593'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0594/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0594/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0594/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'large_scale_precipitation_flux'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, \'flux\' implies per unit area, called \'flux density\' in physics.'@en ;
+    skos:notation 'SDN:P07::CFSN0594'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0595/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0595/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0595/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'large_scale_rainfall_amount'@en ;
+    skos:definition '\'Amount\' means mass per unit area.'@en ;
+    skos:notation 'SDN:P07::CFSN0595'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0596/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0596/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0596/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'large_scale_rainfall_flux'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, \'flux\' implies per unit area, called \'flux density\' in physics.'@en ;
+    skos:notation 'SDN:P07::CFSN0596'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0597/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0597/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0597/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'large_scale_rainfall_rate'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P07::CFSN0597'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0598/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0598/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0598/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'large_scale_snowfall_amount'@en ;
+    skos:definition '\'Amount\' means mass per unit area.'@en ;
+    skos:notation 'SDN:P07::CFSN0598'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0599/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0599/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0599/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'large_scale_snowfall_flux'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, \'flux\' implies per unit area, called \'flux density\' in physics.'@en ;
+    skos:notation 'SDN:P07::CFSN0599'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0602/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0602/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0602/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'liquid_water_content_of_snow_layer'@en ;
+    skos:definition '\'Content\' indicates a quantity per unit area.'@en ;
+    skos:notation 'SDN:P07::CFSN0602'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0651/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0651/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0651/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'eastward_water_vapor_flux'@en ;
+    skos:definition '\'Eastward\' indicates a vector component which is positive when directed eastward (negative westward). In accordance with common usage in geophysical disciplines, \'flux\' implies per unit area, called \'flux density\' in physics.'@en ;
+    skos:notation 'SDN:P07::CFSN0651'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0728/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0728/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0728/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'dissipation_in_atmosphere_boundary_layer'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P07::CFSN0728'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV13N18/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV13N18/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV13N18/>;
+    dc:modified '2010-07-26T09:53:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_ice_displacement'@en ;
+    skos:definition '"Displacement" means the change in geospatial position of an object that has moved over time. If possible, the time interval over which the motion took place should be specified using a bounds variable for the time coordinate variable.  A displacement can be represented as a vector. Such a vector should however not be interpreted as describing a rectilinear, constant speed motion but merely as an indication that the start point of the vector is found at the tip of the vector after the time interval associated with the displacement variable.  A displacement does not prescribe a trajectory. Sea ice displacement can be defined as a two-dimensional vector, with no vertical component. In that case, "displacement" is also the distance across the earth\'s surface calculated from the change in a moving object\'s geospatial position between the start and end of the time interval associated with the displacement variable.'@en ;
+    skos:notation 'SDN:P07::CFV13N18'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A10/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV15A10/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A10/>;
+    dc:modified '2010-07-26T09:49:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'northward_water_vapor_flux_in_air'@en ;
+    skos:definition '"Northward" indicates a vector component which is positive when directed northward (negative southward).  In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.'@en ;
+    skos:notation 'SDN:P07::CFV15A10'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A16/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV15A16/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A16/>;
+    dc:modified '2010-07-26T09:49:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'stratiform_rainfall_amount'@en ;
+    skos:definition 'Stratiform precipitation, whether liquid or frozen, is precipitation that formed in stratiform cloud.  "Amount" means mass per unit area.'@en ;
+    skos:notation 'SDN:P07::CFV15A16'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A17/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV15A17/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A17/>;
+    dc:modified '2010-07-26T09:49:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'stratiform_rainfall_flux'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.  Stratiform precipitation, whether liquid or frozen, is precipitation that formed in stratiform cloud.'@en ;
+    skos:notation 'SDN:P07::CFV15A17'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A18/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV15A18/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A18/>;
+    dc:modified '2010-07-26T09:49:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'stratiform_rainfall_rate'@en ;
+    skos:definition 'Stratiform precipitation, whether liquid or frozen, is precipitation that formed in stratiform cloud.'@en ;
+    skos:notation 'SDN:P07::CFV15A18'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A19/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV15A19/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A19/>;
+    dc:modified '2010-07-26T09:49:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'stratiform_snowfall_amount'@en ;
+    skos:definition 'Stratiform precipitation, whether liquid or frozen, is precipitation that formed in stratiform cloud.  "Amount" means mass per unit area.'@en ;
+    skos:notation 'SDN:P07::CFV15A19'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A2/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV15A2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A2/>;
+    dc:modified '2010-07-26T09:49:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'eastward_water_vapor_flux_in_air'@en ;
+    skos:definition '"Eastward" indicates a vector component which is positive when directed eastward (negative westward).  In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.'@en ;
+    skos:notation 'SDN:P07::CFV15A2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A20/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV15A20/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A20/>;
+    dc:modified '2010-07-26T09:49:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'stratiform_snowfall_flux'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.  Stratiform precipitation, whether liquid or frozen, is precipitation that formed in stratiform cloud.'@en ;
+    skos:notation 'SDN:P07::CFV15A20'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A21/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV15A21/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A21/>;
+    dc:modified '2010-07-26T09:49:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface_downward_mole_flux_of_carbon_dioxide'@en ;
+    skos:definition '"Downward" indicates a vector component which is positive when directed downward (negative upward).  In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.  The surface called "surface" means the lower boundary of the atmosphere.  The chemical formula for carbon dioxide is CO2. The standard name surface_upward_mole_flux_of_carbon_dioxide should be used to label data in which the flux is positive when directed upward. The standard name "surface_carbon_dioxide_mole_flux" is deprecated because it does not specify in which direction the flux is positive.  Any data having the standard name "surface_carbon_dioxide_mole_flux" should be examined carefully to determine which sign convention was used.'@en ;
+    skos:notation 'SDN:P07::CFV15A21'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A22/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV15A22/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A22/>;
+    dc:modified '2010-07-26T09:49:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface_upward_mole_flux_of_carbon_dioxide'@en ;
+    skos:definition '"Upward" indicates a vector component which is positive when directed upward (negative downward).  In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.  The surface called "surface" means the lower boundary of the atmosphere.  The chemical formula for carbon dioxide is CO2. The standard name surface_downward_mole_flux_of_carbon_dioxide should be used to label data in which the flux is positive when directed downward. The standard name "surface_carbon_dioxide_mole_flux" is deprecated because it does not specify in which direction the flux is positive.  Any data having the standard name "surface_carbon_dioxide_mole_flux" should be examined carefully to determine which sign convention was used.'@en ;
+    skos:notation 'SDN:P07::CFV15A22'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A3/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV15A3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A3/>;
+    dc:modified '2010-07-26T09:49:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'kinetic_energy_dissipation_in_atmosphere_boundary_layer'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P07::CFV15A3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A31/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV15A31/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A31/>;
+    dc:modified '2010-07-26T09:49:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'thickness_of_stratiform_rainfall_amount'@en ;
+    skos:definition '"Amount" means mass per unit area.  The construction thickness_of_[X_]rainfall_amount means the accumulated "depth" of rainfall i.e. the thickness of a layer of liquid water having the same mass per unit area as the rainfall amount.  Stratiform precipitation, whether liquid or frozen, is precipitation that formed in stratiform cloud.'@en ;
+    skos:notation 'SDN:P07::CFV15A31'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A32/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV15A32/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A32/>;
+    dc:modified '2010-07-26T09:49:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'thickness_of_stratiform_snowfall_amount'@en ;
+    skos:definition '"Amount" means mass per unit area.  The construction thickness_of_[X_]snowfall_amount means the accumulated "depth" of snow which fell i.e. the thickness of the layer of snow at its own density. There are corresponding standard names for liquid water equivalent (lwe) thickness.  Stratiform precipitation, whether liquid or frozen, is precipitation that formed in stratiform cloud.'@en ;
+    skos:notation 'SDN:P07::CFV15A32'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A6/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV15A6/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A6/>;
+    dc:modified '2010-07-26T09:49:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'lwe_stratiform_snowfall_rate'@en ;
+    skos:definition 'Stratiform precipitation, whether liquid or frozen, is precipitation that formed in stratiform cloud.  "lwe" means liquid water equivalent.'@en ;
+    skos:notation 'SDN:P07::CFV15A6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A8/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV15A8/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV15A8/>;
+    dc:modified '2010-07-26T09:49:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'lwe_thickness_of_stratiform_snowfall_amount'@en ;
+    skos:definition '"Amount" means mass per unit area.  "lwe" means liquid water equivalent.  The construction lwe_thickness_of_X_amount or _content means the vertical extent of a layer of liquid water having the same mass per unit area.  Stratiform precipitation, whether liquid or frozen, is precipitation that formed in stratiform cloud.'@en ;
+    skos:notation 'SDN:P07::CFV15A8'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF12N204/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF12N204/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF12N204/>;
+    dc:modified '2010-07-26T08:27:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'equivalent_reflectivity_factor'@en ;
+    skos:definition '"Equivalent reflectivity factor"  is the radar reflectivity factor that is calculated from the measured radar return power assuming the target is composed of liquid water droplets whose diameter is less than one tenth of the radar wavelength, i.e., treating the droplets as Rayleigh scatterers.  The actual radar reflectivity factor would depend on the size distribution and composition of the particles within the target volume and these are  often unknown.'@en ;
+    skos:notation 'SDN:P07::CF12N204'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N57/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N57/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N57/>;
+    dc:modified '2010-07-26T08:27:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sinking_mole_flux_of_aragonite_expressed_as_carbon_in_sea_water'@en ;
+    skos:definition 'The phrase \'expressed_as\' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.   \'Sinking\' is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid. Aragonite is a mineral that is a polymorph of calcium carbonate. The chemical formula of aragonite is CaCO3. Standard names also exist for calcite, another polymorph of calcium carbonate.'@en ;
+    skos:notation 'SDN:P07::CF14N57'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N58/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N58/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N58/>;
+    dc:modified '2010-07-26T08:27:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sinking_mole_flux_of_calcite_expressed_as_carbon_in_sea_water'@en ;
+    skos:definition 'The phrase \'expressed_as\' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.   \'Sinking\' is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid. Calcite is a mineral that is a polymorph of calcium carbonate. The chemical formula of calcite is CaCO3. Standard names also exist for aragonite, another polymorph of calcium carbonate.'@en ;
+    skos:notation 'SDN:P07::CF14N58'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N59/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N59/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N59/>;
+    dc:modified '2010-07-26T08:27:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sinking_mole_flux_of_particulate_iron_in_sea_water'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.   \'Sinking\' is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid.'@en ;
+    skos:notation 'SDN:P07::CF14N59'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N60/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N60/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N60/>;
+    dc:modified '2010-07-26T08:27:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sinking_mole_flux_of_particulate_organic_matter_expressed_as_carbon_in_sea_water'@en ;
+    skos:definition 'The phrase \'expressed_as\' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.   \'Sinking\' is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid.'@en ;
+    skos:notation 'SDN:P07::CF14N60'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N62/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N62/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N62/>;
+    dc:modified '2010-07-26T08:27:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sinking_mole_flux_of_particulate_organic_phosphorus_in_sea_water'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.   \'Sinking\' is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid.'@en ;
+    skos:notation 'SDN:P07::CF14N62'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N63/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N63/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N63/>;
+    dc:modified '2010-07-26T08:27:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sinking_mole_flux_of_particulate_silicon_in_sea_water'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.   \'Sinking\' is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid.'@en ;
+    skos:notation 'SDN:P07::CF14N63'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF15N1/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF15N1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF15N1/>;
+    dc:modified '2010-07-26T08:12:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water_surface_height_above_reference_datum'@en ;
+    skos:definition '\'Water surface height above reference datum\' means the height of the upper surface of a body of liquid water, such as sea, lake or river, above an arbitrary reference datum. The altitude of the datum should be provided in a variable with standard name water_surface_reference_datum_altitude. The surface called "surface" means the lower boundary of the atmosphere.'@en ;
+    skos:notation 'SDN:P07::CF15N1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF15N2/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF15N2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF15N2/>;
+    dc:modified '2010-07-26T08:12:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water_surface_reference_datum_altitude'@en ;
+    skos:definition 'Altitude is the (geometric) height above the geoid, which is the reference geopotential surface. The geoid is similar to mean sea level.   \'Water surface reference datum altitude\' means the altitude of the arbitrary datum referred to by a quantity with standard name \'water_surface_height_above_reference_datum\'. The surface called "surface" means the lower boundary of the atmosphere.'@en ;
+    skos:notation 'SDN:P07::CF15N2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N1/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N1/>;
+    dc:modified '2010-05-12T12:47:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'depth_at_shallowest_local_minimum_in_vertical_profile_of_mole_concentration_of_dissolved_molecular_oxygen_in_sea_water'@en ;
+    skos:definition 'Depth is the vertical distance below the surface.   \'Mole concentration\' means number of moles per unit volume, also called "molarity", and is used in the construction mole_concentration_of_X_in_Y, where X is a material constituent of Y.  A chemical or biological species denoted by X may be described by a single term such as \'nitrogen\' or a phrase such as \'nox_expressed_as_nitrogen\'. The concentration of any chemical species, whether particulate or dissolved, may vary with depth in the ocean.  A depth profile may go through one or more local minima in concentration. The  depth_at_shallowest_local_minimum_in_vertical_profile_of_mole_concentration_of_dissolved_molecular_oxygen_in_sea_water is the depth of the local minimum in the oxygen concentration that occurs closest to the sea surface.'@en ;
+    skos:notation 'SDN:P07::CF14N1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N101/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N101/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N101/>;
+    dc:modified '2010-05-12T12:47:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_ocean_mole_content_of_aragonite_expressed_as_carbon_due_to_biological_production'@en ;
+    skos:definition '"Content" indicates a quantity per unit area.  The phrase \'expressed_as\' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  "tendency_of_X" means derivative of X with respect to time.  Aragonite is a mineral that is a polymorph of calcium carbonate. The chemical formula of aragonite is CaCO3. Standard names also exist for calcite, another polymorph of calcium carbonate.'@en ;
+    skos:notation 'SDN:P07::CF14N101'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N102/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N102/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N102/>;
+    dc:modified '2010-05-12T12:47:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_ocean_mole_content_of_calcite_expressed_as_carbon_due_to_biological_production'@en ;
+    skos:definition '"Content" indicates a quantity per unit area.  The phrase \'expressed_as\' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  "tendency_of_X" means derivative of X with respect to time.  Calcite is a mineral that is a polymorph of calcium carbonate. The chemical formula of calcite is CaCO3. Standard names also exist for aragonite, another polymorph of calcium carbonate.'@en ;
+    skos:notation 'SDN:P07::CF14N102'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N107/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N107/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N107/>;
+    dc:modified '2010-05-12T12:47:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_ocean_mole_content_of_dissolved_inorganic_iron'@en ;
+    skos:definition '"Content" indicates a quantity per unit area.  "tendency_of_X" means derivative of X with respect to time. "Dissolved inorganic iron" means iron ions, in oxidation states of both Fe2+ and Fe3+, in solution.'@en ;
+    skos:notation 'SDN:P07::CF14N107'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N109/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N109/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N109/>;
+    dc:modified '2010-05-12T12:47:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_ocean_mole_content_of_dissolved_inorganic_nitrogen'@en ;
+    skos:definition '"Content" indicates a quantity per unit area.  "tendency_of_X" means derivative of X with respect to time. "Inorganic nitrogen" describes a family of chemical species which, in an ocean model, usually includes nitrite, nitrate and ammonium which act as nitrogen nutrients. "Inorganic nitrogen" is the term used in standard names for all species belonging to the family that are represented within a given model. The list of individual species that are included in a quantity having a group chemical standard name can vary between models.  Where possible, the data variable should be accompanied by a complete description of the species represented, for example, by using a comment attribute.'@en ;
+    skos:notation 'SDN:P07::CF14N109'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N110/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N110/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N110/>;
+    dc:modified '2010-05-12T12:47:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_ocean_mole_content_of_dissolved_inorganic_nitrogen_due_to_biological_processes'@en ;
+    skos:definition '"Content" indicates a quantity per unit area.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  "tendency_of_X" means derivative of X with respect to time.  "Inorganic nitrogen" describes a family of chemical species which, in an ocean model, usually includes nitrite, nitrate and ammonium which act as nitrogen nutrients. "Inorganic nitrogen" is the term used in standard names for all species belonging to the family that are represented within a given model. The list of individual species that are included in a quantity having a group chemical standard name can vary between models.  Where possible, the data variable should be accompanied by a complete description of the species represented, for example, by using a comment attribute.'@en ;
+    skos:notation 'SDN:P07::CF14N110'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N118/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N118/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N118/>;
+    dc:modified '2010-05-12T12:47:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_ocean_mole_content_of_iron_due_to_biological_production'@en ;
+    skos:definition '"Content" indicates a quantity per unit area.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  "tendency_of_X" means derivative of X with respect to time.'@en ;
+    skos:notation 'SDN:P07::CF14N118'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N12/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N12/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N12/>;
+    dc:modified '2010-05-12T12:47:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_inorganic_nitrogen_in_sea_water'@en ;
+    skos:definition '\'Mass concentration\' means mass per unit volume and is used in the construction mass_concentration_of_X_in_Y, where X is a material constituent of Y.  A chemical or biological species denoted by X may be described by a single term such as \'nitrogen\' or a phrase such as \'nox_expressed_as_nitrogen\'. \'Inorganic nitrogen\' describes a family of chemical species which, in an ocean model, usually includes nitrite, nitrate and ammonium which act as nitrogen nutrients. \'Inorganic nitrogen\' is the term used in standard names for all species belonging to the family that are represented within a given model. The list of individual species that are included in a quantity having a group chemical standard name can vary between models.  Where possible, the data variable should be accompanied by a complete description of the species represented, for example, by using a comment attribute.'@en ;
+    skos:notation 'SDN:P07::CF14N12'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N120/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N120/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N120/>;
+    dc:modified '2010-05-12T12:47:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_ocean_mole_content_of_iron_due_to_sedimentation'@en ;
+    skos:definition '"Content" indicates a quantity per unit area.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  "tendency_of_X" means derivative of X with respect to time.'@en ;
+    skos:notation 'SDN:P07::CF14N120'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N15/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N15/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N15/>;
+    dc:modified '2010-05-12T12:47:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'minimum_depth_of_aragonite_undersaturation_in_sea_water'@en ;
+    skos:definition 'Depth is the vertical distance below the surface.   \'Undersaturation\' means that a solution is unsaturated with respect to a solute. Aragonite is a mineral that is a polymorph of calcium carbonate. The chemical formula of aragonite is CaCO3. Standard names also exist for calcite, another polymorph of calcium carbonate. The "minimum depth of undersaturation", sometimes called the "saturation horizon", is the shallowest depth at which a body of water is an undersaturated solution of a named solute.'@en ;
+    skos:notation 'SDN:P07::CF14N15'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N16/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N16/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N16/>;
+    dc:modified '2010-05-12T12:47:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'minimum_depth_of_calcite_undersaturation_in_sea_water'@en ;
+    skos:definition 'Depth is the vertical distance below the surface.   \'Undersaturation\' means that a solution is unsaturated with respect to a solute. Calcite is a mineral that is a polymorph of calcium carbonate. The chemical formula of calcite is CaCO3. Standard names also exist for aragonite, another polymorph of calcium carbonate. The "minimum depth of undersaturation", sometimes called the "saturation horizon", is the shallowest depth at which a body of water is an undersaturated solution of a named solute.'@en ;
+    skos:notation 'SDN:P07::CF14N16'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N17/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N17/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N17/>;
+    dc:modified '2010-05-12T12:47:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_concentration_of_aragonite_expressed_as_carbon_in_sea_water'@en ;
+    skos:definition 'Mole concentration means number of moles per unit volume, also called "molarity", and is used in the construction mole_concentration_of_X_in_Y, where X is a material constituent of Y.  A chemical or biological species denoted by X may be described by a single term such as \'nitrogen\' or a phrase such as \'nox_expressed_as_nitrogen\'. The phrase \'expressed_as\' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. Aragonite is a mineral that is a polymorph of calcium carbonate. The chemical formula of aragonite is CaCO3. Standard names also exist for calcite, another polymorph of calcium carbonate.'@en ;
+    skos:notation 'SDN:P07::CF14N17'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N21/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N21/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N21/>;
+    dc:modified '2010-05-12T12:47:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_concentration_of_calcite_expressed_as_carbon_in_sea_water'@en ;
+    skos:definition 'Mole concentration means number of moles per unit volume, also called "molarity", and is used in the construction mole_concentration_of_X_in_Y, where X is a material constituent of Y.  A chemical or biological species denoted by X may be described by a single term such as \'nitrogen\' or a phrase such as \'nox_expressed_as_nitrogen\'. The phrase \'expressed_as\' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. Calcite is a mineral that is a polymorph of calcium carbonate. The chemical formula of calcite is CaCO3. Standard names also exist for aragonite, another polymorph of calcium carbonate.'@en ;
+    skos:notation 'SDN:P07::CF14N21'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N24/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N24/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N24/>;
+    dc:modified '2010-05-12T12:47:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_concentration_of_diatoms_expressed_as_carbon_in_sea_water'@en ;
+    skos:definition 'Mole concentration means number of moles per unit volume, also called "molarity", and is used in the construction mole_concentration_of_X_in_Y, where X is a material constituent of Y.  A chemical or biological species denoted by X may be described by a single term such as \'nitrogen\' or a phrase such as \'nox_expressed_as_nitrogen\'. The phrase \'expressed_as\' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. Diatoms are single-celled phytoplankton with an external skeleton made of silica. Phytoplankton are autotrophic prokaryotic or eukaryotic algae that live near the water surface where there is sufficient light to support photosynthesis.'@en ;
+    skos:notation 'SDN:P07::CF14N24'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N3/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N3/>;
+    dc:modified '2010-05-12T12:47:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'downward_northward_momentum_flux_in_air_due_to_diffusion'@en ;
+    skos:definition '"Northward" indicates a vector component which is positive when directed northward (negative southward).  "Downward" indicates a vector component which is positive when directed downward (negative upward).  "Downward northward" indicates the ZY component of a tensor.  Momentum flux is dimensionally equivalent to stress and pressure. It is a tensor quantity.  In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.'@en ;
+    skos:notation 'SDN:P07::CF14N3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N32/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N32/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N32/>;
+    dc:modified '2010-05-12T12:47:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_concentration_of_mesozooplankton_expressed_as_carbon_in_sea_water'@en ;
+    skos:definition 'Mole concentration\' means number of moles per unit volume, also called "molarity", and is used in the construction mole_concentration_of_X_in_Y, where X is a material constituent of Y.  A chemical or biological species denoted by X may be described by a single term such as \'nitrogen\' or a phrase such as \'nox_expressed_as_nitrogen\'. The phrase \'expressed_as\' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. Mesozooplankton are zooplankton ranging between 20 micrometers and 200 micrometers in size.'@en ;
+    skos:notation 'SDN:P07::CF14N32'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N33/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N33/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N33/>;
+    dc:modified '2010-05-12T12:47:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_concentration_of_microzooplankton_expressed_as_carbon_in_sea_water'@en ;
+    skos:definition 'Mole concentration\' means number of moles per unit volume, also called "molarity", and is used in the construction mole_concentration_of_X_in_Y, where X is a material constituent of Y.  A chemical or biological species denoted by X may be described by a single term such as \'nitrogen\' or a phrase such as \'nox_expressed_as_nitrogen\'. The phrase \'expressed_as\' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. Microzooplankton are zooplankton of less than 20 micrometers in size.'@en ;
+    skos:notation 'SDN:P07::CF14N33'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N36/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N36/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N36/>;
+    dc:modified '2010-05-12T12:47:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_concentration_of_organic_detritus_expressed_as_carbon_in_sea_water'@en ;
+    skos:definition 'Mole concentration means number of moles per unit volume, also called "molarity", and is used in the construction mole_concentration_of_X_in_Y, where X is a material constituent of Y.  A chemical or biological species denoted by X may be described by a single term such as \'nitrogen\' or a phrase such as \'nox_expressed_as_nitrogen\'. The phrase \'expressed_as\' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. Organic detritus are particles of debris from decaying plants and animals.'@en ;
+    skos:notation 'SDN:P07::CF14N36'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N55/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N55/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N55/>;
+    dc:modified '2010-05-12T12:47:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_water_alkalinity_expressed_as_mole_equivalent'@en ;
+    skos:definition '\'sea_water_alkalinity_expressed_as_mole_equivalent\' is the total alkalinity equivalent concentration (including carbonate, nitrogen, silicate, and borate components).'@en ;
+    skos:notation 'SDN:P07::CF14N55'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N65/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N65/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N65/>;
+    dc:modified '2010-05-12T12:47:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface_downward_mass_flux_of_carbon_dioxide_expressed_as_carbon'@en ;
+    skos:definition '"Downward" indicates a vector component which is positive when directed downward (negative upward).  The phrase \'expressed_as\' is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.  The surface called "surface" means the lower boundary of the atmosphere.  The chemical formula for carbon dioxide is CO2.'@en ;
+    skos:notation 'SDN:P07::CF14N65'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF14N66/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF14N66/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF14N66/>;
+    dc:modified '2010-05-12T12:47:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface_downward_mole_flux_of_molecular_oxygen'@en ;
+    skos:definition '"Downward" indicates a vector component which is positive when directed downward (negative upward).  In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.  The surface called "surface" means the lower boundary of the atmosphere.'@en ;
+    skos:notation 'SDN:P07::CF14N66'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0165/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0165/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0165/>;
+    dc:modified '2010-03-11T14:48:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_land_ice_thickness'@en ;
+    skos:definition '"Land ice" means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves.  "Thickness" means the vertical extent of a layer.  "tendency_of_X" means derivative of X with respect to time.'@en ;
+    skos:notation 'SDN:P07::CFSN0165'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0577/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0577/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0577/>;
+    dc:modified '2010-03-11T14:48:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'land_ice_basal_melt_rate'@en ;
+    skos:definition '"Land ice" means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves.  The land ice basal melt rate is the rate at which ice is lost per unit area at the base of the ice.'@en ;
+    skos:notation 'SDN:P07::CFSN0577'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0580/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0580/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0580/>;
+    dc:modified '2010-03-11T14:48:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'land_ice_calving_rate'@en ;
+    skos:definition '"Land ice" means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves.  The land ice calving rate is the rate at which ice is lost per unit area through calving into the ocean.'@en ;
+    skos:notation 'SDN:P07::CFSN0580'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0581/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0581/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0581/>;
+    dc:modified '2010-03-11T14:48:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'land_ice_lwe_basal_melt_rate'@en ;
+    skos:definition '"Land ice" means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves.  The land ice basal melt rate is the rate at which ice is lost per unit area at the base of the ice.  "lwe" means liquid water equivalent.'@en ;
+    skos:notation 'SDN:P07::CFSN0581'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0582/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0582/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0582/>;
+    dc:modified '2010-03-11T14:48:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'land_ice_lwe_calving_rate'@en ;
+    skos:definition '"Land ice" means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves.  The land ice calving rate is the rate at which ice is lost per unit area through calving into the ocean.  "lwe" means liquid water equivalent.'@en ;
+    skos:notation 'SDN:P07::CFSN0582'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0584/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0584/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0584/>;
+    dc:modified '2010-03-11T14:48:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'land_ice_sigma_coordinate'@en ;
+    skos:definition '"Land ice" means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves.'@en ;
+    skos:notation 'SDN:P07::CFSN0584'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0587/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0587/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0587/>;
+    dc:modified '2010-03-11T14:48:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'land_ice_thickness'@en ;
+    skos:definition '"Land ice" means glaciers, ice-caps and ice-sheets resting on bedrock and also includes ice-shelves.  "Thickness" means the vertical extent of a layer.'@en ;
+    skos:notation 'SDN:P07::CFSN0587'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV13N1/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV13N1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV13N1/>;
+    dc:modified '2010-03-11T14:38:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_downdraft_convective_mass_flux'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.  The atmosphere convective mass flux is the vertical transport of mass for a field of cumulus clouds or thermals, given by the product of air density and vertical velocity. For an area-average, cell_methods should specify whether the average is over all the area or the area of updrafts and/or downdrafts only.  "Downdraft" means that the flux is positive in the downward direction (negative upward).'@en ;
+    skos:notation 'SDN:P07::CFV13N1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV13N10/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV13N10/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV13N10/>;
+    dc:modified '2010-03-11T14:38:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'eastward_sea_water_velocity_assuming_no_tide'@en ;
+    skos:definition 'A velocity is a vector quantity.  "Eastward" indicates a vector component which is positive when directed eastward (negative westward).  A phrase assuming_condition  indicates that the named quantity is the value which would obtain if all  aspects of the system were unaltered except for the assumption of the  circumstances specified by the condition.'@en ;
+    skos:notation 'SDN:P07::CFV13N10'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV13N16/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV13N16/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV13N16/>;
+    dc:modified '2010-03-11T14:38:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'northward_sea_water_velocity_assuming_no_tide'@en ;
+    skos:definition 'A velocity is a vector quantity.  "Northward" indicates a vector component which is positive when directed northward (negative southward).  A phrase assuming_condition  indicates that the named quantity is the value which would obtain if all  aspects of the system were unaltered except for the assumption of the  circumstances specified by the condition.'@en ;
+    skos:notation 'SDN:P07::CFV13N16'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV13N17/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV13N17/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV13N17/>;
+    dc:modified '2010-03-11T14:38:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_floor_depth_below_sea_surface'@en ;
+    skos:definition 'The sea_floor_depth_below_sea_surface is the vertical distance between the sea surface and the seabed as measured at a given point in space including the variance caused by tides and possibly waves.'@en ;
+    skos:notation 'SDN:P07::CFV13N17'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV13N2/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV13N2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV13N2/>;
+    dc:modified '2010-03-11T14:38:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_net_upward_deep_convective_mass_flux'@en ;
+    skos:definition '"Upward" indicates a vector component which is positive when directed upward (negative downward).  In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.  The atmosphere convective mass flux is the vertical transport of mass for a field of cumulus clouds or thermals, given by the product of air density and vertical velocity. For an area-average, cell_methods should specify whether the average is over all the area or the area of updrafts and/or downdrafts only.  Net upward convective mass flux is the difference between the updraft mass flux and the downdraft mass flux.'@en ;
+    skos:notation 'SDN:P07::CFV13N2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV13N3/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV13N3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV13N3/>;
+    dc:modified '2010-03-11T14:38:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_net_upward_shallow_convective_mass_flux'@en ;
+    skos:definition '"Upward" indicates a vector component which is positive when directed upward (negative downward).  In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.  The atmosphere convective mass flux is the vertical transport of mass for a field of cumulus clouds or thermals, given by the product of air density and vertical velocity. For an area-average, cell_methods should specify whether the average is over all the area or the area of updrafts and/or downdrafts only.  Net upward convective mass flux is the difference between the updraft mass flux and the downdraft mass flux.'@en ;
+    skos:notation 'SDN:P07::CFV13N3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV13N32/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV13N32/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV13N32/>;
+    dc:modified '2010-03-11T14:38:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_mass_fraction_of_stratiform_cloud_ice_in_air_due_to_convective_detrainment'@en ;
+    skos:definition 'Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of X to the mass of Y (including X).  A chemical species denoted by X may be described by a single term such as \'nitrogen\' or a phrase such as \'nox_expressed_as_nitrogen\'. In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes).  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  "tendency_of_X" means derivative of X with respect to time.'@en ;
+    skos:notation 'SDN:P07::CFV13N32'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV13N37/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV13N37/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV13N37/>;
+    dc:modified '2010-03-11T14:38:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_absorption_optical_thickness_due_to_black_carbon_ambient_aerosol'@en ;
+    skos:definition 'The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path.  A coordinate variable of radiation_wavelength or radiation_frequency can be specified to indicate that the optical thickness applies at specific wavelengths or frequencies. "Absorption optical thickness" means that part of the atmosphere optical thickness that is caused by the absorption of incident radiation. "Aerosol" means the suspended liquid or solid particles in air (except cloud droplets).  "Ambient aerosol" is aerosol that has taken up ambient water through hygroscopic growth. The extent of hygroscopic growth depends on the relative humidity and the composition of the aerosol. The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.'@en ;
+    skos:notation 'SDN:P07::CFV13N37'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV13N42/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV13N42/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV13N42/>;
+    dc:modified '2010-03-11T14:38:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'angle_of_emergence'@en ;
+    skos:definition 'The angle of emergence is that between the direction of a beam of radiation emerging from the surface of a medium and the normal to that surface.'@en ;
+    skos:notation 'SDN:P07::CFV13N42'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV13N43/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV13N43/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV13N43/>;
+    dc:modified '2010-03-11T14:38:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'angle_of_incidence'@en ;
+    skos:definition 'The angle of incidence is that between the direction of approach of a beam of radiation toward a surface and the normal to that surface.'@en ;
+    skos:notation 'SDN:P07::CFV13N43'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV13A1/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV13A1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV13A1/>;
+    dc:modified '2010-03-11T13:13:38'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_net_upward_convective_mass_flux'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.  The atmosphere convective mass flux is the vertical transport of mass for a field of cumulus clouds or thermals, given by the product of air density and vertical velocity. Net upward convective mass flux is the difference between the updraft mass flux and the downdraft mass flux. "Upward" indicates a vector component which is positive when directed upward (negative downward).  For an area-average, cell_methods should specify whether the average is over all the area or the area of updrafts and/or downdrafts only.'@en ;
+    skos:notation 'SDN:P07::CFV13A1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF12N538/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF12N538/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF12N538/>;
+    dc:modified '2010-03-11T13:08:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'moles_per_unit_mass_of_cfc11_in_sea_water'@en ;
+    skos:definition 'The chemical formula of CFC11 is CFCl3. The IUPAC name fof CFC11 is trichloro-fluoro-methane.'@en ;
+    skos:notation 'SDN:P07::CF12N538'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF12N760/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF12N760/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF12N760/>;
+    dc:modified '2010-03-11T13:08:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_mass_fraction_of_stratiform_cloud_ice_in_air_due_to_heterogeneous_nucleation_from_cloud_liquid'@en ;
+    skos:definition 'Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of X to the mass of Y (including X).  A chemical species denoted by X may be described by a single term such as \'nitrogen\' or a phrase such as \'nox_expressed_as_nitrogen\'. In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes).  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  "tendency_of_X" means derivative of X with respect to time.  Heterogeneous nucleation occurs when a small particle of a substance other than water acts as a freezing or condensation nucleus.'@en ;
+    skos:notation 'SDN:P07::CF12N760'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF12N764/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF12N764/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF12N764/>;
+    dc:modified '2010-03-11T13:08:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_mass_fraction_of_stratiform_cloud_ice_in_air_due_to_melting_to_cloud_liquid'@en ;
+    skos:definition 'Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of X to the mass of Y (including X).  A chemical species denoted by X may be described by a single term such as \'nitrogen\' or a phrase such as \'nox_expressed_as_nitrogen\'. In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes).  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  "tendency_of_X" means derivative of X with respect to time.'@en ;
+    skos:notation 'SDN:P07::CF12N764'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF12N766/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF12N766/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF12N766/>;
+    dc:modified '2010-03-11T13:08:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_mass_fraction_of_stratiform_cloud_ice_in_air_due_to_riming_from_cloud_liquid'@en ;
+    skos:definition 'Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of X to the mass of Y (including X).  A chemical species denoted by X may be described by a single term such as \'nitrogen\' or a phrase such as \'nox_expressed_as_nitrogen\'. Riming is the rapid freezing of supercooled water onto a surface. In an atmosphere model, stratiform cloud is that produced by large-scale convergence (not the convection schemes).  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.  "tendency_of_X" means derivative of X with respect to time.'@en ;
+    skos:notation 'SDN:P07::CF12N766'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0009/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0009/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0009/>;
+    dc:modified '2010-03-11T13:08:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_convective_mass_flux'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, \'flux\' implies per unit area, called \'flux density\' in physics. The atmosphere convective mass flux is the vertical transport of mass for a field of cumulus clouds or thermals, given by the product of air density and vertical velocity. For an area-average, cell_methods should specify whether the average is over all the area or the area of updrafts only.'@en ;
+    skos:notation 'SDN:P07::CFSN0009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0207/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0207/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0207/>;
+    dc:modified '2010-03-11T13:08:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_air_temperature_due_to_large_scale_precipitation'@en ;
+    skos:definition 'The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. \'tendency_of_X\' means derivative of X with respect to time. Air temperature is the bulk temperature of the air, not the surface (skin) temperature.'@en ;
+    skos:notation 'SDN:P07::CFSN0207'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0437/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0437/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0437/>;
+    dc:modified '2010-03-11T13:08:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'product_of_northward_wind_and_specific_humdity'@en ;
+    skos:definition '\'product_of_X_and_Y\' means X*Y. \'specific\' means per unit mass. \'Northward\' indicates a vector component which is positive when directed northward (negative southward). Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.)'@en ;
+    skos:notation 'SDN:P07::CFSN0437'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0478/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0478/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0478/>;
+    dc:modified '2010-03-11T13:08:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'optical_thickness_of_atmosphere_layer_due_to_aerosol'@en ;
+    skos:definition 'The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. \'Layer\' means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well. The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path. \'Aerosol\' means the suspended liquid or solid particles in air (except cloud droplets).'@en ;
+    skos:notation 'SDN:P07::CFSN0478'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0743/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0743/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0743/>;
+    dc:modified '2010-03-11T13:08:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'change_over_time_in_atmospheric_water_content_due_to_advection'@en ;
+    skos:definition 'The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. \'change_over_time_in_X\' means change in a quantity X over a time-interval, which should be defined by the bounds of the time coordinate. \'Content\' indicates a quantity per unit area. \'Water\' means water in all phases.'@en ;
+    skos:notation 'SDN:P07::CFSN0743'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0763/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0763/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0763/>;
+    dc:modified '2010-03-11T13:08:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_optical_thickness_due_to_aerosol'@en ;
+    skos:definition 'The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path. The atmosphere optical thickness applies to radiation passing through the entire atmosphere. \'Aerosol\' means the suspended liquid or solid particles in air (except cloud droplets).'@en ;
+    skos:notation 'SDN:P07::CFSN0763'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0825/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0825/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0825/>;
+    dc:modified '2010-03-11T13:08:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_specific_humidity_due_to_large_scale_precipitation'@en ;
+    skos:definition 'The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "tendency_of_X" means derivative of X with respect to time. "specific" means per unit mass. Specific humidity is the mass fraction of water vapor in (moist) air.'@en ;
+    skos:notation 'SDN:P07::CFSN0825'^^xsd:string .

@@ -1,0 +1,118 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S04/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S04/2019_01_01_00_00_00_2019_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2020-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041169/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041169/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041169/>;
+    dc:modified '2020-06-17T20:15:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'acoustic doppler current profiler (ADCP) vertical beam'@en ;
+    skos:definition 'A vertical beam (sometimes referred to as "5th beam" on 5-beam ADCP designs) measuring the distance to the surface using the echo from short pulses and simple peak estimation algorithms. It is used to estimate wave height and amplitude.'@en ;
+    skos:notation 'SDN:S04::S041169'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041168/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041168/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041168/>;
+    dc:modified '2020-02-05T15:10:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'scattering photometer (second sensor)'@en ;
+    skos:definition 'An instrument that illuminates a sample with specified laser light wavelengths and determines the degree to which this is scattered by dissolved molecules or suspended particulate material. Deployed on a package of instruments or sensors as the second sensor of this type.'@en ;
+    skos:notation 'SDN:S04::S041168'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041167/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041167/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041167/>;
+    dc:modified '2020-01-08T18:21:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'port-mounted sonic anemometer'@en ;
+    skos:definition 'An instrument attached to the port (left) side of a ship to measure wind speed and direction by means of the properties of wind-borne sound waves.'@en ;
+    skos:notation 'SDN:S04::S041167'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041166/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041166/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041166/>;
+    dc:modified '2020-01-08T18:21:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'port-mounted anemometer'@en ;
+    skos:definition 'An instrument attached to the port (left) side of a ship to measure wind speed and direction.'@en ;
+    skos:notation 'SDN:S04::S041166'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041165/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041165/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041165/>;
+    dc:modified '2020-01-08T18:18:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'starboard-mounted sonic anemometer'@en ;
+    skos:definition 'An instrument attached to the starboard (right) side of a ship to measure wind speed and direction by means of the properties of wind-borne sound waves.'@en ;
+    skos:notation 'SDN:S04::S041165'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041164/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041164/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041164/>;
+    dc:modified '2020-01-08T18:18:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'starboard-mounted anemometer'@en ;
+    skos:definition 'An instrument attached to the starboard (right) side of a ship to measure wind speed and direction.'@en ;
+    skos:notation 'SDN:S04::S041164'^^xsd:string .

@@ -1,0 +1,109 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S03/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S03/2011_01_01_00_00_00_2011_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2012-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03437/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03437/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03437/>;
+    dc:modified '2012-11-28T16:02:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'on-deck incubation at simulated in-situ light level, DCMU poisoning'@en ;
+    skos:definition 'The samples were incubated for varying periods of time at a known fraction of incident light designed to match a specific depth. At the end of the incubation photosynthesis was stopped by the addition of DCMU.'@en ;
+    skos:notation 'SDN:S03::S03437'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03436/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03436/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03436/>;
+    dc:modified '2012-08-23T12:19:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, acidification, isotope dilution'@en ;
+    skos:definition 'Removal of particulates, lowering of pH followed by addition of a known amount of an analyte isotope to allow high precision assay based on isotopic ratios'@en ;
+    skos:notation 'SDN:S03::S03436'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03435/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03435/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03435/>;
+    dc:modified '2012-08-23T12:19:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'acidification, isotope dilution'@en ;
+    skos:definition 'Lowering of pH followed by addition of a known amount of an analyte isotope to allow high precision assay based on isotopic ratios'@en ;
+    skos:notation 'SDN:S03::S03435'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03434/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03434/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03434/>;
+    dc:modified '2012-06-21T12:21:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, acidification, pre-concentration, ion-exchange chromatography'@en ;
+    skos:definition 'Sample processing workflow to provide material for isotopic analysis'@en ;
+    skos:notation 'SDN:S03::S03434'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03433/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03433/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03433/>;
+    dc:modified '2012-02-15T11:44:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'anion exchange chromatography'@en ;
+    skos:definition 'Separation of the anion components of a sample by absorption on and subsequent elution from a matrix incorporating charged functional groups covalently bonded to the substrate.'@en ;
+    skos:notation 'SDN:S03::S03433'^^xsd:string .

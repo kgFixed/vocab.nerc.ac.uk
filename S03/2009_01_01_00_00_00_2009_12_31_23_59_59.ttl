@@ -1,0 +1,154 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S03/2009_01_01_00_00_00_2009_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S03/2008_01_01_00_00_00_2008_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2009-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03197/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03197/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03197/>;
+    dc:modified '2009-12-20T14:28:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'isotope-labelled tracer addition, incubation at different light levels, cascade filtration'@en ;
+    skos:definition 'A dissolved radioactive or stable isotope tracer was added to the samples which were held for a predetermined time at different unstated (usually documented elsewhere) light levels before filtration to collect the particulate phase as size fractions.'@en ;
+    skos:notation 'SDN:S03::S03197'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03198/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03198/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03198/>;
+    dc:modified '2009-12-20T14:27:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'isotope-labelled tracer addition, incubation at different light levels, filtration'@en ;
+    skos:definition 'A dissolved radioactive or stable isotope tracer was added to the samples which were held for a predetermined time at different unstated (usually documented elsewhere) light levels before filtration to collect the particulate phase.'@en ;
+    skos:notation 'SDN:S03::S03198'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03179/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03179/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03179/>;
+    dc:modified '2009-12-20T14:24:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'isotope-labelled tracer addition, antibiotic poisoning, incubation in the dark, cascade filtration'@en ;
+    skos:definition 'A dissolved radioactive or stable isotope tracer was added to the sample which was poisoned with antibiotic (to eliminate bacteria), held for a predetermined time in darkness before filtration to collect the particulate phase as size fractions.'@en ;
+    skos:notation 'SDN:S03::S03179'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03180/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03180/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03180/>;
+    dc:modified '2009-12-20T14:22:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'isotope-labelled tracer addition, antibiotic poisoning, incubation in the dark, filtration'@en ;
+    skos:definition 'A dissolved radioactive or stable isotope tracer was added to the sample which was poisoned with antibiotic (to eliminate bacteria), held for a predetermined time in darkness before filtration to collect the particulate phase.'@en ;
+    skos:notation 'SDN:S03::S03180'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03174/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03174/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03174/>;
+    dc:modified '2009-11-24T14:39:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'isotope-labelled tracer addition, DCMU poisoning, incubation at unspecified light level, filtration'@en ;
+    skos:definition 'A dissolved radioactive or stable isotope tracer was added to the sample which was poisoned with DCMU (to eliminate phytoplankton), held for a predetermined time at an unstated (usually documented elsewhere) light intensity before filtration to collect the particulate phase.'@en ;
+    skos:notation 'SDN:S03::S03174'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03173/3/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03173/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03173/>;
+    dc:modified '2009-11-24T10:41:58'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'isotope-labelled tracer addition, DCMU poisoning, incubation at unspecified light level, cascade filtration'@en ;
+    skos:definition 'A dissolved radioactive or stable isotope tracer was added to the sample which was poisoned with DCMU (to eliminate phytoplankton), held for a predetermined time at an unstated (usually documented elsewhere) light intensity before filtration to collect the particulate phase as size fractions.'@en ;
+    skos:notation 'SDN:S03::S03173'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03215/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03215/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03215/>;
+    dc:modified '2009-11-24T10:38:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'isotope-labelled tracer addition, on-deck incubation at simulated in-situ light level, cascade filtration'@en ;
+    skos:definition 'A dissolved radioactive or stable isotope tracer was added to the sample which was held for a predetermined time, in a surface seawater bath and quantitatively shaded natural light (level usually designed to mimic collection depth and documented elsewhere) before filtration to collect the particulate phase as size fractions.'@en ;
+    skos:notation 'SDN:S03::S03215'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03216/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03216/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03216/>;
+    dc:modified '2009-11-24T10:34:38'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'isotope-labelled tracer addition, on-deck incubation at simulated in-situ light level, filtration'@en ;
+    skos:definition 'A dissolved radioactive or stable isotope tracer was added to the sample which was held for a predetermined time, in a surface seawater bath and quantitatively shaded natural light (level usually designed to mimic collection depth and documented elsewhere) before filtration to collect the particulate phase.'@en ;
+    skos:notation 'SDN:S03::S03216'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03408/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03408/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03408/>;
+    dc:modified '2009-08-05T15:46:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'laboratory rock sample leaching'@en ;
+    skos:definition 'Laboratory experiment to create simulated groundwater by equilibrating water with field rock samples'@en ;
+    skos:notation 'SDN:S03::S03408'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03407/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03407/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03407/>;
+    dc:modified '2009-08-05T15:43:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'high temperature reduction in contact with carbon'@en ;
+    skos:definition 'Water sample passed over carbon chips at high temperature'@en ;
+    skos:notation 'SDN:S03::S03407'^^xsd:string .

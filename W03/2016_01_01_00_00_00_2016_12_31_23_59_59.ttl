@@ -1,0 +1,183 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/W03/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/W03/current/W030001/1/> .
+<http://vocab.nerc.ac.uk/collection/W03/current/W030001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/W03/current/W030001/>;
+    dc:modified '2016-06-23T16:42:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Delivery'@en ;
+    skos:definition 'Instrument or platform is delivered to the owner.'@en ;
+    skos:notation 'SDN:W03::W030001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/W03/current/W030002/1/> .
+<http://vocab.nerc.ac.uk/collection/W03/current/W030002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/W03/current/W030002/>;
+    dc:modified '2016-06-23T16:42:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Deployment'@en ;
+    skos:definition 'Placement of an instrument or platform to where it will make measurements.'@en ;
+    skos:notation 'SDN:W03::W030002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/W03/current/W030003/1/> .
+<http://vocab.nerc.ac.uk/collection/W03/current/W030003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/W03/current/W030003/>;
+    dc:modified '2016-06-23T16:42:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Calibration'@en ;
+    skos:definition 'An event in the life of a sensor or instrument in which the coefficients used to convert its outputs into engineering units, or improve its accuracy, are determined and applied.'@en ;
+    skos:notation 'SDN:W03::W030003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/W03/current/W030004/1/> .
+<http://vocab.nerc.ac.uk/collection/W03/current/W030004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/W03/current/W030004/>;
+    dc:modified '2016-06-23T16:42:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Recovery'@en ;
+    skos:definition 'Return of an instrument or platform from where it has made measurements.'@en ;
+    skos:notation 'SDN:W03::W030004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/W03/current/W030005/1/> .
+<http://vocab.nerc.ac.uk/collection/W03/current/W030005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/W03/current/W030005/>;
+    dc:modified '2016-06-23T16:42:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'LoanStart'@en ;
+    skos:definition 'Instrument or platform is supplied to a third-party for a limited period of time.'@en ;
+    skos:notation 'SDN:W03::W030005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/W03/current/W030006/1/> .
+<http://vocab.nerc.ac.uk/collection/W03/current/W030006/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/W03/current/W030006/>;
+    dc:modified '2016-06-23T16:42:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'LoanEnd'@en ;
+    skos:definition 'Instrument or platform is returned by a third party.'@en ;
+    skos:notation 'SDN:W03::W030006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/W03/current/W030007/1/> .
+<http://vocab.nerc.ac.uk/collection/W03/current/W030007/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/W03/current/W030007/>;
+    dc:modified '2016-06-23T16:42:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'RepairStart'@en ;
+    skos:definition 'Instrument or platform is taken out of service for correction of a malfunction.'@en ;
+    skos:notation 'SDN:W03::W030007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/W03/current/W030008/1/> .
+<http://vocab.nerc.ac.uk/collection/W03/current/W030008/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/W03/current/W030008/>;
+    dc:modified '2016-06-23T16:42:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'RepairEnd'@en ;
+    skos:definition 'Instrument or platform is returned to service following correction of a malfunction.'@en ;
+    skos:notation 'SDN:W03::W030008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/W03/current/W030009/1/> .
+<http://vocab.nerc.ac.uk/collection/W03/current/W030009/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/W03/current/W030009/>;
+    dc:modified '2016-06-23T16:42:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Failure'@en ;
+    skos:definition 'Unexpected malfunction of instrument or platform.'@en ;
+    skos:notation 'SDN:W03::W030009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/W03/current/W030010/1/> .
+<http://vocab.nerc.ac.uk/collection/W03/current/W030010/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/W03/current/W030010/>;
+    dc:modified '2016-06-23T16:42:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Maintenance'@en ;
+    skos:definition 'Instrument or platform is under maintainance.'@en ;
+    skos:notation 'SDN:W03::W030010'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/W03/current/W030011/1/> .
+<http://vocab.nerc.ac.uk/collection/W03/current/W030011/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/W03/current/W030011/>;
+    dc:modified '2016-06-23T16:42:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Loss'@en ;
+    skos:definition 'Instrument or platform is lost.'@en ;
+    skos:notation 'SDN:W03::W030011'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/W03/current/W030012/1/> .
+<http://vocab.nerc.ac.uk/collection/W03/current/W030012/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/W03/current/W030012/>;
+    dc:modified '2016-06-23T16:42:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Decommissioning'@en ;
+    skos:definition 'Instrument or platform is withdrawn from service.'@en ;
+    skos:notation 'SDN:W03::W030012'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/W03/current/W030013/1/> .
+<http://vocab.nerc.ac.uk/collection/W03/current/W030013/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/W03/current/W030013/>;
+    dc:modified '2016-06-23T16:42:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Repair'@en ;
+    skos:definition 'Instrument or platform is under repair.'@en ;
+    skos:notation 'SDN:W03::W030013'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/W03/current/W030014/1/> .
+<http://vocab.nerc.ac.uk/collection/W03/current/W030014/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/W03/current/W030014/>;
+    dc:modified '2016-06-23T16:42:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Upgrade'@en ;
+    skos:definition 'Instrument or platform is raised to a higher standard by specific improvements such as adding or replacing components.'@en ;
+    skos:notation 'SDN:W03::W030014'^^xsd:string .

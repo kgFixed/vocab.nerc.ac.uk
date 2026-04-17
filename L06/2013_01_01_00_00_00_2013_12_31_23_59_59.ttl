@@ -1,0 +1,199 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L06/2013_01_01_00_00_00_2013_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L06/2009_01_01_00_00_00_2012_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2013-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L06/current/49/1/> .
+<http://vocab.nerc.ac.uk/collection/L06/current/49/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L06/current/49/>;
+    dc:modified '2013-08-20T14:00:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface ice buoy'@en ;
+    skos:definition 'An undrogued (i.e. no sub-surface parachute) surface float that is deployed in regions where sea ice forms that moves with either ice or water depending upon the time of year.'@en ;
+    skos:notation 'SDN:L06::49'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L06/current/27/1/> .
+<http://vocab.nerc.ac.uk/collection/L06/current/27/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L06/current/27/>;
+    dc:modified '2013-08-20T13:56:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sub-surface gliders'@en ;
+    skos:definition 'Platforms with buoyancy-based propulsion that are capable of operations at variable depths which are not constrained to be near the sea surface.'@en ;
+    skos:notation 'SDN:L06::27'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L06/current/11/2/> .
+<http://vocab.nerc.ac.uk/collection/L06/current/11/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L06/current/11/>;
+    dc:modified '2013-08-20T13:53:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fixed benthic node'@en ;
+    skos:definition 'A collection of oceanographic instruments mounted at a fixed position on the seabed (e.g. POL Monitoring Platform, seabed ADCP).'@en ;
+    skos:notation 'SDN:L06::11'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L06/current/14/3/> .
+<http://vocab.nerc.ac.uk/collection/L06/current/14/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L06/current/14/>;
+    dc:modified '2013-08-20T13:53:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'land/onshore structure'@en ;
+    skos:definition 'A fixed man-made structure on land to which instrumentation may be attached (e.g. meteorological tower).'@en ;
+    skos:notation 'SDN:L06::14'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L06/current/16/3/> .
+<http://vocab.nerc.ac.uk/collection/L06/current/16/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L06/current/16/>;
+    dc:modified '2013-08-20T13:53:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'offshore structure'@en ;
+    skos:definition 'A fixed (for the duration of the measurements) man-made structure away from the coast to which instrumentation may be attached (e.g. oil rig, gas rig or jack-up barge).'@en ;
+    skos:notation 'SDN:L06::16'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L06/current/17/3/> .
+<http://vocab.nerc.ac.uk/collection/L06/current/17/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L06/current/17/>;
+    dc:modified '2013-08-20T13:53:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'coastal structure'@en ;
+    skos:definition 'A fixed man-made structure permanently linked to land with access to water at all states of the tide to which instrumentation may be attached (e.g. pier).'@en ;
+    skos:notation 'SDN:L06::17'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L06/current/21/2/> .
+<http://vocab.nerc.ac.uk/collection/L06/current/21/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L06/current/21/>;
+    dc:modified '2013-08-20T13:53:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'propelled manned submersible'@en ;
+    skos:definition 'A platform operating in the water column that has both self-contained propulsion and at least one human operator on board (e.g. submarine).'@en ;
+    skos:notation 'SDN:L06::21'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L06/current/23/2/> .
+<http://vocab.nerc.ac.uk/collection/L06/current/23/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L06/current/23/>;
+    dc:modified '2013-08-20T13:53:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'towed unmanned submersible'@en ;
+    skos:definition 'A vehicle towed by rigid cable through the water column at fixed or varying depth with no propulsion and no human operator (e.g. Towfish, Scanfish, UOR, SeaSoar).'@en ;
+    skos:notation 'SDN:L06::23'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L06/current/41/2/> .
+<http://vocab.nerc.ac.uk/collection/L06/current/41/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L06/current/41/>;
+    dc:modified '2013-08-20T13:53:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'moored surface buoy'@en ;
+    skos:definition 'An unmanned instrumented platform operating on the surface of the water column loosely tethered to the seafloor to maintain a fixed position (e.g. ODAS buoy).'@en ;
+    skos:notation 'SDN:L06::41'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L06/current/44/2/> .
+<http://vocab.nerc.ac.uk/collection/L06/current/44/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L06/current/44/>;
+    dc:modified '2013-08-20T13:53:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'drifting subsurface float'@en ;
+    skos:definition 'An unmanned instrumented platform drifting freely in the water column at a depth governed by its density (e.g. Swallow float).'@en ;
+    skos:notation 'SDN:L06::44'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L06/current/45/2/> .
+<http://vocab.nerc.ac.uk/collection/L06/current/45/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L06/current/45/>;
+    dc:modified '2013-08-20T13:53:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fixed subsurface vertical profiler'@en ;
+    skos:definition 'A platform that periodically makes an automated vertical traverse of the water column at a predetermined fixed location. (e.g. YSI vertical profiler, HOMER CTD).'@en ;
+    skos:notation 'SDN:L06::45'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L06/current/46/2/> .
+<http://vocab.nerc.ac.uk/collection/L06/current/46/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L06/current/46/>;
+    dc:modified '2013-08-20T13:53:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'drifting subsurface profiling float'@en ;
+    skos:definition 'An unmanned instrumented platform drifting freely in the water column that periodically makes vertical traverses through the water column (e.g. Argo float).'@en ;
+    skos:notation 'SDN:L06::46'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L06/current/6Z/2/> .
+<http://vocab.nerc.ac.uk/collection/L06/current/6Z/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L06/current/6Z/>;
+    dc:modified '2013-08-20T13:53:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'spacecraft'@en ;
+    skos:definition 'A platform operating beyond the Earth\'s atmosphere.'@en ;
+    skos:notation 'SDN:L06::6Z'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L06/current/70/2/> .
+<http://vocab.nerc.ac.uk/collection/L06/current/70/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L06/current/70/>;
+    dc:modified '2013-08-20T13:53:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'organism'@en ;
+    skos:definition 'A living creature carrying instruments or collecting samples.'@en ;
+    skos:notation 'SDN:L06::70'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L06/current/96/2/> .
+<http://vocab.nerc.ac.uk/collection/L06/current/96/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L06/current/96/>;
+    dc:modified '2013-08-20T13:53:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'amphibious crawler'@en ;
+    skos:definition 'A self-propelled vehicle capable of operation on land or the seabed (e.g. beach crawler).'@en ;
+    skos:notation 'SDN:L06::96'^^xsd:string .

@@ -1,0 +1,84 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L02/2014_01_01_00_00_00_2014_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L02/current/006/2/> .
+<http://vocab.nerc.ac.uk/collection/L02/current/006/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L02/current/006/>;
+    dc:modified '2014-03-27T09:10:25'^^xsd:dateTime ;
+    skos:altLabel 'Polygon'^^xsd:string ;
+    skos:prefLabel 'surface'@en ;
+    skos:definition 'Bounded, connected 2-dimensional geometric primitive, representing the continuous image of a region of a plane'@en ;
+    skos:notation 'SDN:L02::006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L02/current/004/2/> .
+<http://vocab.nerc.ac.uk/collection/L02/current/004/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L02/current/004/>;
+    dc:modified '2014-03-27T09:10:18'^^xsd:dateTime ;
+    skos:altLabel 'Point'^^xsd:string ;
+    skos:prefLabel 'point'@en ;
+    skos:definition 'Zero-dimensional geometric primitive, representing a position but not having an extent'@en ;
+    skos:notation 'SDN:L02::004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L02/current/003/2/> .
+<http://vocab.nerc.ac.uk/collection/L02/current/003/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L02/current/003/>;
+    dc:modified '2014-03-27T09:10:09'^^xsd:dateTime ;
+    skos:altLabel 'LineString'^^xsd:string ;
+    skos:prefLabel 'curve'@en ;
+    skos:definition 'Bounded, 1-dimensional geometric primitive, representing the continuous image of a line'@en ;
+    skos:notation 'SDN:L02::003'^^xsd:string .

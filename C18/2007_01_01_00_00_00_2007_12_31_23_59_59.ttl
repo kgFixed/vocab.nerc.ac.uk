@@ -1,0 +1,766 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C18/2007_01_01_00_00_00_2007_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C18/2006_01_01_00_00_00_2006_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2007-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/ZR/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/ZR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/ZR/>;
+    dc:modified '2007-06-28T16:13:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Zaire'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::ZR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/ZM/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/ZM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/ZM/>;
+    dc:modified '2007-06-28T16:13:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Zambia'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::ZM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/VU/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/VU/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/VU/>;
+    dc:modified '2007-06-28T16:12:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Vanuatu'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::VU'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/VA/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/VA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/VA/>;
+    dc:modified '2007-06-28T16:12:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Vatican City State'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::VA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/UZ/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/UZ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/UZ/>;
+    dc:modified '2007-06-28T16:12:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Uzbekistan'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::UZ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/UG/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/UG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/UG/>;
+    dc:modified '2007-06-28T16:11:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Uganda'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::UG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/TV/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/TV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/TV/>;
+    dc:modified '2007-06-28T16:11:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Tuvalu'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::TV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/TM/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/TM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/TM/>;
+    dc:modified '2007-06-28T16:11:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Turkmenistan'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::TM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/TJ/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/TJ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/TJ/>;
+    dc:modified '2007-06-28T16:10:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Tajikistan'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::TJ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/TD/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/TD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/TD/>;
+    dc:modified '2007-06-28T16:10:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Chad'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::TD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/SZ/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/SZ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/SZ/>;
+    dc:modified '2007-06-28T16:10:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Swaziland'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::SZ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/SV/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/SV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/SV/>;
+    dc:modified '2007-06-28T16:10:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Saint Vincent'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::SV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/SR/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/SR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/SR/>;
+    dc:modified '2007-06-28T16:10:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'San Marino'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::SR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/SK/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/SK/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/SK/>;
+    dc:modified '2007-06-28T16:08:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Slovakia (Slovak Republic)'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::SK'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/RW/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/RW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/RW/>;
+    dc:modified '2007-06-28T16:08:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Rwanda'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::RW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/PY/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/PY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/PY/>;
+    dc:modified '2007-06-28T16:08:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Paraguay'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::PY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/PG/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/PG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/PG/>;
+    dc:modified '2007-06-28T16:07:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Papua New Guinea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::PG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/UR/2/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/UR/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/UR/>;
+    dc:modified '2007-06-28T16:07:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ukraine'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::UR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/ST/2/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/ST/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/ST/>;
+    dc:modified '2007-06-28T16:07:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sao Tome and Principe'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::ST'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/NR/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/NR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/NR/>;
+    dc:modified '2007-06-28T16:02:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Nauru'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::NR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/NP/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/NP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/NP/>;
+    dc:modified '2007-06-28T16:02:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Nepal'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::NP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/NE/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/NE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/NE/>;
+    dc:modified '2007-06-28T16:02:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Niger'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::NE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/NA/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/NA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/NA/>;
+    dc:modified '2007-06-28T16:01:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Namibia'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::NA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/MW/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/MW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/MW/>;
+    dc:modified '2007-06-28T16:01:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Malawi'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::MW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/MV/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/MV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/MV/>;
+    dc:modified '2007-06-28T16:01:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Maldives'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::MV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/MN/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/MN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/MN/>;
+    dc:modified '2007-06-28T16:01:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mongolia'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::MN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/MK/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/MK/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/MK/>;
+    dc:modified '2007-06-28T16:00:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Macedonia'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::MK'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/MI/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/MI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/MI/>;
+    dc:modified '2007-06-28T16:00:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mali'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::MI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/MH/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/MH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/MH/>;
+    dc:modified '2007-06-28T16:00:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Marshall Islands'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::MH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/MD/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/MD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/MD/>;
+    dc:modified '2007-06-28T16:00:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Moldova, Republic of'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::MD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/LU/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/LU/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/LU/>;
+    dc:modified '2007-06-28T15:58:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Luxembourg'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::LU'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/LT/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/LT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/LT/>;
+    dc:modified '2007-06-28T15:58:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Lithuania'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::LT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/LS/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/LS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/LS/>;
+    dc:modified '2007-06-28T15:58:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Lesotho'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::LS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/LP/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/LP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/LP/>;
+    dc:modified '2007-06-28T15:57:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Lao, People\'s Democratic Republic'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::LP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/LC/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/LC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/LC/>;
+    dc:modified '2007-06-28T15:57:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Saint Lucia'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::LC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/KZ/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/KZ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/KZ/>;
+    dc:modified '2007-06-28T15:56:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Kazakhstan'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::KZ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/KN/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/KN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/KN/>;
+    dc:modified '2007-06-28T15:56:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Saint Kitts and Nevis'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::KN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/FM/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/FM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/FM/>;
+    dc:modified '2007-06-28T15:55:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Micronesia, Federated States of'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::FM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/KM/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/KM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/KM/>;
+    dc:modified '2007-06-28T15:55:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Comoro Istalns'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::KM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/KI/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/KI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/KI/>;
+    dc:modified '2007-06-28T15:54:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Kiribati, Republic of'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::KI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/KH/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/KH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/KH/>;
+    dc:modified '2007-06-28T15:54:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Cambodia'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::KH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/HU/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/HU/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/HU/>;
+    dc:modified '2007-06-28T15:54:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Hungary'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::HU'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/HR/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/HR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/HR/>;
+    dc:modified '2007-06-28T15:51:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Croatia'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::HR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/GR/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/GR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/GR/>;
+    dc:modified '2007-06-28T15:51:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Grenada'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::GR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/GQ/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/GQ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/GQ/>;
+    dc:modified '2007-06-28T15:51:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Equitorial Guinea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::GQ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/GE/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/GE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/GE/>;
+    dc:modified '2007-06-28T15:49:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Georgia'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::GE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/ES/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/ES/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/ES/>;
+    dc:modified '2007-06-28T15:49:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Estonia'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::ES'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/ER/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/ER/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/ER/>;
+    dc:modified '2007-06-28T15:49:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Eritrea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::ER'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/DJ/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/DJ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/DJ/>;
+    dc:modified '2007-06-28T15:48:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Djibouti'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::DJ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/CZ/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/CZ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/CZ/>;
+    dc:modified '2007-06-28T15:48:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Czech Republic'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::CZ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/CI/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/CI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/CI/>;
+    dc:modified '2007-06-28T15:47:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Cayman Islands'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::CI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/CF/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/CF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/CF/>;
+    dc:modified '2007-06-28T15:46:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Central African Republic'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::CF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/CA/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/CA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/CA/>;
+    dc:modified '2007-06-28T15:46:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Curacao'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::CA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/BZ/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/BZ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/BZ/>;
+    dc:modified '2007-06-28T15:46:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Belize'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::BZ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/BW/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/BW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/BW/>;
+    dc:modified '2007-06-28T15:45:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Botswana'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::BW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/BT/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/BT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/BT/>;
+    dc:modified '2007-06-28T15:45:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bhutan'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::BT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/BM/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/BM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/BM/>;
+    dc:modified '2007-06-28T15:44:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Brunei Darussalam'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::BM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/BL/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/BL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/BL/>;
+    dc:modified '2007-06-28T15:44:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Belorussia'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::BL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/BI/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/BI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/BI/>;
+    dc:modified '2007-06-28T15:43:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Burundi'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::BI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/BG/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/BG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/BG/>;
+    dc:modified '2007-06-28T15:43:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bangladesh'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::BG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/BF/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/BF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/BF/>;
+    dc:modified '2007-06-28T15:43:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Burkina Faso'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::BF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/BN/2/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/BN/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/BN/>;
+    dc:modified '2007-06-28T15:42:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bonaire'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::BN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/BC/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/BC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/BC/>;
+    dc:modified '2007-06-28T15:41:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bosnia and Herzegovina'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::BC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/BA/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/BA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/BA/>;
+    dc:modified '2007-06-28T15:41:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Barbados'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::BA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/AZ/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/AZ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/AZ/>;
+    dc:modified '2007-06-28T15:40:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Azerbaijan'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::AZ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/AW/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/AW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/AW/>;
+    dc:modified '2007-06-28T15:39:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Aruba'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::AW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/AM/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/AM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/AM/>;
+    dc:modified '2007-06-28T15:39:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Armenia'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::AM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/AG/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/AG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/AG/>;
+    dc:modified '2007-06-28T15:38:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Antigua'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::AG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/AF/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/AF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/AF/>;
+    dc:modified '2007-06-28T15:38:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Afghanistan'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::AF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/AD/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/AD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/AD/>;
+    dc:modified '2007-06-28T15:35:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Andorra'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::AD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/76/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/76/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/76/>;
+    dc:modified '2007-06-28T15:33:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'China'@en ;
+    skos:definition 'People\'s Republic'@en ;
+    skos:notation 'SDN:C18::76'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/55/2/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/55/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/55/>;
+    dc:modified '2007-06-28T15:33:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Malagasy/Madagascar'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::55'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/54/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/54/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/54/>;
+    dc:modified '2007-06-28T15:30:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Liberia'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::54'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/21/2/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/21/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/21/>;
+    dc:modified '2007-06-28T15:30:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Taiwan'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::21'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/33/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/33/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/33/>;
+    dc:modified '2007-06-28T15:30:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'USA'@en ;
+    skos:definition 'Another alternative code'@en ;
+    skos:notation 'SDN:C18::33'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/12/2/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/12/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/12/>;
+    dc:modified '2007-06-28T15:30:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Burma (Myanmar)'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::12'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/SN/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/SN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/SN/>;
+    dc:modified '2007-06-28T13:03:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Slovenia'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::SN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C18/current/BB/1/> .
+<http://vocab.nerc.ac.uk/collection/C18/current/BB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C18/current/BB/>;
+    dc:modified '2007-05-30T08:26:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bahrain'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C18::BB'^^xsd:string .

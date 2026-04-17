@@ -1,0 +1,82 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C30/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C30/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2023-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/EMODSBHB/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/EMODSBHB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/EMODSBHB/>;
+    dc:modified '2023-09-05T11:44:55'^^xsd:dateTime ;
+    skos:altLabel 'EMODnet SeaHab'^^xsd:string ;
+    skos:prefLabel 'EMODnet Seabed Habitats Lot'@en ;
+    skos:definition 'A European project consortium aimed at the creation of broad-scale seabed habitat data products (EUSeaMap) using data amassed through SeaDataNet from surveys across Europe. The governance is loosely defined as the scientific expertise within the consortium with no formal processes defined.'@en ;
+    skos:notation 'SDN:C30::EMODSBHB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/EMODBATH/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/EMODBATH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/EMODBATH/>;
+    dc:modified '2023-07-13T13:21:49'^^xsd:dateTime ;
+    skos:altLabel 'EMODnet Bathy'^^xsd:string ;
+    skos:prefLabel 'EMODnet Bathymetry Lot'@en ;
+    skos:definition 'A European project consortium aimed at the creation of data products using bathymetry data amassed through SeaDataNet. The governance is loosely defined as the scientific expertise within the consortium with no formal processes defined.'@en ;
+    skos:notation 'SDN:C30::EMODBATH'^^xsd:string .

@@ -1,0 +1,91 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C30/2019_01_01_00_00_00_2019_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C30/2017_01_01_00_00_00_2018_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2019-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/SB2030/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/SB2030/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/SB2030/>;
+    dc:modified '2019-10-31T17:20:28'^^xsd:dateTime ;
+    skos:altLabel 'Seabed 2030'^^xsd:string ;
+    skos:prefLabel 'Nippon Foundation-GEBCO Seabed 2030 Project Team'@en ;
+    skos:definition 'Governance for the definition of terms used to define the GEBCO source Data Type Identifier (TID) codes.'@en ;
+    skos:notation 'SDN:C30::SB2030'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/ADMT/2/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/ADMT/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/ADMT/>;
+    dc:modified '2019-10-03T13:56:50'^^xsd:dateTime ;
+    skos:altLabel 'ADMT'^^xsd:string ;
+    skos:prefLabel 'Argo Data Management Team'@en ;
+    skos:definition 'Governance for vocabularies used in the Argo data system, published and maintained by the Argo Data Management Team (ADMT) and hosted on the NERC Vocabulary Server.'@en ;
+    skos:notation 'SDN:C30::ADMT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/MPG/2/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/MPG/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/MPG/>;
+    dc:modified '2019-10-03T13:18:28'^^xsd:dateTime ;
+    skos:altLabel 'MPIO'^^xsd:string ;
+    skos:prefLabel 'Max Planck Institute of Animal Behavior'@en ;
+    skos:definition 'Governance for vocabularies used in the Movebank database (movebank.org) and hosted on the NERC Vocabulary Server.'@en ;
+    skos:notation 'SDN:C30::MPG'^^xsd:string .
