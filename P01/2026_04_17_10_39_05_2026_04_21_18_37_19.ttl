@@ -1,0 +1,127 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2026_04_17_10_39_05_2026_04_21_18_37_19.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2024_01_01_00_00_00_2026_04_17_10_39_04.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-21T18:37:19'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SVELCA01/2/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SVELCA01/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SVELCA01/>;
+    dc:modified '2026-04-20T16:11:31'^^xsd:dateTime ;
+    skos:altLabel 'Soundspeed_TEOS'^^xsd:string ;
+    skos:prefLabel 'Speed of sound {\'sound velocity\'} in the water body by computation from salinity and temperature using UNESCO algorithm'@en ;
+    skos:definition 'The rate at which sound waves move through the water column often inaccurately labelled \'sound velocity\' as calculated from salinity and temperature using the IOC, SCOR and IAPSO (UNESCO TEOS) algorithm where the TEOS version has not been specified.'@en ;
+    skos:notation 'SDN:P01::SVELCA01'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SVELXXXX/2/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SVELXXXX/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SVELXXXX/>;
+    dc:modified '2026-04-20T16:11:27'^^xsd:dateTime ;
+    skos:altLabel 'Soundspeed'^^xsd:string ;
+    skos:prefLabel 'Speed of sound {\'sound velocity\'} in the water body'@en ;
+    skos:definition 'The rate at which sound waves move through the water column often inaccurately labelled \'sound velocity\'.'@en ;
+    skos:notation 'SDN:P01::SVELXXXX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SVELMV01/2/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SVELMV01/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SVELMV01/>;
+    dc:modified '2026-04-20T16:11:24'^^xsd:dateTime ;
+    skos:altLabel 'Soundspeed_MVP'^^xsd:string ;
+    skos:prefLabel 'Speed of sound {\'sound velocity\'} in the water body by moving vessel profiler (MVP) and computation from temperature and salinity by unspecified algorithm'@en ;
+    skos:definition 'The rate at which sound waves move through the water column often inaccurately labelled \'sound velocity\' as calculated from an algorithm that has not been specified using salinity and temperature measurements made from a moving vessel profiler.'@en ;
+    skos:notation 'SDN:P01::SVELMV01'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SVELCT01/2/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SVELCT01/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SVELCT01/>;
+    dc:modified '2026-04-20T16:11:22'^^xsd:dateTime ;
+    skos:altLabel 'Soundspeed_CTD'^^xsd:string ;
+    skos:prefLabel 'Speed of sound {\'sound velocity\'} in the water body by CTD and computation from temperature and salinity by unspecified algorithm'@en ;
+    skos:definition 'The rate at which sound waves move through the water column often inaccurately labelled \'sound velocity\' as calculated from an algorithm that has not been specified using salinity and temperature measurements made from a stationary conductivity, temperature, depth vertical profiler.'@en ;
+    skos:notation 'SDN:P01::SVELCT01'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SVELSG01/2/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SVELSG01/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SVELSG01/>;
+    dc:modified '2026-04-20T16:11:19'^^xsd:dateTime ;
+    skos:altLabel 'Soundspeed_TSG'^^xsd:string ;
+    skos:prefLabel 'Speed of sound {\'sound velocity\'} in the water body by thermosalinograph and computation from temperature and salinity by unspecified algorithm'@en ;
+    skos:definition 'The rate at which sound waves move through the water column often inaccurately labelled \'sound velocity\' as calculated from an algorithm that has not been specified using salinity and temperature measurements made from a thermosalinograph connected to a ship\'s underway continuous water sampling system.'@en ;
+    skos:notation 'SDN:P01::SVELSG01'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SVELVP01/2/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SVELVP01/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SVELVP01/>;
+    dc:modified '2026-04-20T16:11:16'^^xsd:dateTime ;
+    skos:altLabel 'Soundspeed_SVP'^^xsd:string ;
+    skos:prefLabel 'Speed of sound {\'sound velocity\'} in the water body by sound velocity profiler'@en ;
+    skos:definition 'The rate at which sound waves move through the water column often inaccurately labelled \'sound velocity\' as measured in-situ by a sound velocity profiling instrument'@en ;
+    skos:notation 'SDN:P01::SVELVP01'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SVELCV01/2/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SVELCV01/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SVELCV01/>;
+    dc:modified '2026-04-20T16:11:13'^^xsd:dateTime ;
+    skos:altLabel 'Soundspeed_calc_unsp'^^xsd:string ;
+    skos:prefLabel 'Speed of sound {\'sound velocity\'} in the water body by computation from temperature and salinity by unspecified algorithm'@en ;
+    skos:definition 'The rate at which sound waves move through the water column often inaccurately labelled \'sound velocity\' as calculated from salinity and temperature using an algorithm that has not been specified.'@en ;
+    skos:notation 'SDN:P01::SVELCV01'^^xsd:string .
