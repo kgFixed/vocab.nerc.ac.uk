@@ -1,0 +1,579 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/V12/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/C37/2/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/C37/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/C37/>;
+    dc:modified '2012-05-17T12:09:09'^^xsd:dateTime ;
+    skos:altLabel 'Marsden-10'^^xsd:string ;
+    skos:prefLabel 'Ten-degree Marsden Squares'@en ;
+    skos:definition 'Labels applied to areas of ten degrees latitude by ten degrees longitude in the Marsden Square system.'@en ;
+    skos:notation 'SDN:V12::C37'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/C86/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/C86/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/C86/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Role Definitions'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/C86/current/accepted'@en ;
+    skos:notation 'SDN:V12::C86'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/GS3/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/GS3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/GS3/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'Adjusted Folk classes'^^xsd:string ;
+    skos:prefLabel 'Geo-Seas adjusted Folk sediment lithology classes'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/GS3/current/accepted'@en ;
+    skos:notation 'SDN:V12::GS3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/P01/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/P01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/P01/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'BODC PUV'^^xsd:string ;
+    skos:prefLabel 'BODC Parameter Usage Vocabulary'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/P01/current/accepted'@en ;
+    skos:notation 'SDN:V12::P01'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/P06/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/P06/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/P06/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'BODC units'^^xsd:string ;
+    skos:prefLabel 'BODC data storage units'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/P06/current/accepted'@en ;
+    skos:notation 'SDN:V12::P06'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/S25/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/S25/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/S25/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'Biological entity names'^^xsd:string ;
+    skos:prefLabel 'BODC parameter semantic model biological entity names'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/S25/current/accepted'@en ;
+    skos:notation 'SDN:V12::S25'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/P07/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/P07/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/P07/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'CF Standard Names'^^xsd:string ;
+    skos:prefLabel 'Climate and Forecast Standard Names'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/P07/current/accepted'@en ;
+    skos:notation 'SDN:V12::P07'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/L18/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/L18/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/L18/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'CSR units'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet Cruise Summary Report quantification units'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L18/current/accepted'@en ;
+    skos:notation 'SDN:V12::L18'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/L21/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/L21/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/L21/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'Device category types'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet device category types'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L21/current/accepted'@en ;
+    skos:notation 'SDN:V12::L21'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/L26/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/L26/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/L26/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'EDIOS sampling units'^^xsd:string ;
+    skos:prefLabel 'EDIOS permitted sampling interval units'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L26/current/accepted'@en ;
+    skos:notation 'SDN:V12::L26'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/C35/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/C35/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/C35/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'EUNIS3 Habitats'^^xsd:string ;
+    skos:prefLabel 'European Nature Information System Level 3 Habitats'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/C35/current/accepted'@en ;
+    skos:notation 'SDN:V12::C35'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/P04/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/P04/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/P04/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'GCMD Science Keywords'^^xsd:string ;
+    skos:prefLabel 'Global Change Master Directory Science Keywords'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/P04/current/accepted'@en ;
+    skos:notation 'SDN:V12::P04'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/GS4/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/GS4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/GS4/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'Geo-Seas colours'^^xsd:string ;
+    skos:prefLabel 'Geo-Seas geological sample colours'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/GS4/current/accepted'@en ;
+    skos:notation 'SDN:V12::GS4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/GS6/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/GS6/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/GS6/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'Geo-Seas kurtosis descriptors'^^xsd:string ;
+    skos:prefLabel 'Geo-Seas sediment grain-size kurtosos descriptors'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/GS6/current/accepted'@en ;
+    skos:notation 'SDN:V12::GS6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/L31/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/L31/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/L31/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'Geo-Seas object flags'^^xsd:string ;
+    skos:prefLabel 'Geo-Seas data object quality flags'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L31/current/accepted'@en ;
+    skos:notation 'SDN:V12::L31'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/GS5/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/GS5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/GS5/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'Geo-Seas skewness descriptors'^^xsd:string ;
+    skos:prefLabel 'Geo-Seas sediment grain-size skewness descriptors'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/GS5/current/accepted'@en ;
+    skos:notation 'SDN:V12::GS5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/C17/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/C17/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/C17/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'ICES Platforms'^^xsd:string ;
+    skos:prefLabel 'ICES Platform Codes'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/C17/current/accepted'@en ;
+    skos:notation 'SDN:V12::C17'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/P22/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/P22/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/P22/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'INSPIRE themes'^^xsd:string ;
+    skos:prefLabel 'INSPIRE themes'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/P22/current/accepted'@en ;
+    skos:notation 'SDN:V12::P22'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/P05/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/P05/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/P05/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'ISO Topic Categories'^^xsd:string ;
+    skos:prefLabel 'International Standards Organisation ISO19115 Topic Categories'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/P05/current/accepted'@en ;
+    skos:notation 'SDN:V12::P05'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/C32/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/C32/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/C32/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'ISO countries'^^xsd:string ;
+    skos:prefLabel 'International Standards Organisation countries'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/C32/current/accepted'@en ;
+    skos:notation 'SDN:V12::C32'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/L30/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/L30/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/L30/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'MEDATLAS Centres'^^xsd:string ;
+    skos:prefLabel 'MEDATLAS Data Centres'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L30/current/accepted'@en ;
+    skos:notation 'SDN:V12::L30'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/P09/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/P09/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/P09/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'MEDATLAS PUV'^^xsd:string ;
+    skos:prefLabel 'MEDATLAS Parameter Usage Vocabulary'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/P09/current/accepted'@en ;
+    skos:notation 'SDN:V12::P09'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/GSC/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/GSC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/GSC/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'MGD77 bathymetry corrections'^^xsd:string ;
+    skos:prefLabel 'MGD77 Bathymetry Sound Velocity Correction Codes'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/GSC/current/accepted'@en ;
+    skos:notation 'SDN:V12::GSC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/C46/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/C46/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/C46/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'MSFD criteria'^^xsd:string ;
+    skos:prefLabel 'Marine Strategy Framework Directive criteria'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/C46/current/accepted'@en ;
+    skos:notation 'SDN:V12::C46'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/C45/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/C45/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/C45/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'MSFD descriptors'^^xsd:string ;
+    skos:prefLabel 'Marine Strategy Framework Directive descriptors'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/C45/current/accepted'@en ;
+    skos:notation 'SDN:V12::C45'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/C47/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/C47/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/C47/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'MSFD indicators'^^xsd:string ;
+    skos:prefLabel 'Marine Strategy Framework Directive indicators'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/C47/current/accepted'@en ;
+    skos:notation 'SDN:V12::C47'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/C36/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/C36/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/C36/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'Monitoring drivers'^^xsd:string ;
+    skos:prefLabel 'Monitoring activity legislative drivers'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/C36/current/accepted'@en ;
+    skos:notation 'SDN:V12::C36'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/C97/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/C97/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/C97/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'NVS mappings'^^xsd:string ;
+    skos:prefLabel 'NERC Vocabulary Server mappings index'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/C97/current/accepted'@en ;
+    skos:notation 'SDN:V12::C97'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/P17/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/P17/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/P17/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'POGO ships'^^xsd:string ;
+    skos:prefLabel 'Partnership for Observation of the Global Ocean ships of interest'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/P17/current/accepted'@en ;
+    skos:notation 'SDN:V12::P17'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/C34/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/C34/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/C34/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'Purpose categories'^^xsd:string ;
+    skos:prefLabel 'Activity purpose categories'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/C34/current/accepted'@en ;
+    skos:notation 'SDN:V12::C34'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/L14/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/L14/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/L14/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'SDN Activity Operational Stati'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet Activity Operational Stati'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L14/current/accepted'@en ;
+    skos:notation 'SDN:V12::L14'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/L15/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/L15/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/L15/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'SDN QMS accreditations'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet quality management system accreditations'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L15/current/accepted'@en ;
+    skos:notation 'SDN:V12::L15'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/V12/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/V12/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/V12/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'SDN Vocabularies'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet Vocabularies'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/V12/current/accepted'@en ;
+    skos:notation 'SDN:V12::V12'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/L05/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/L05/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/L05/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'SDN devices'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet device categories'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L05/current/accepted'@en ;
+    skos:notation 'SDN:V12::L05'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/L24/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/L24/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/L24/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'SDN formats'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet data transport formats'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L24/current/accepted'@en ;
+    skos:notation 'SDN:V12::L24'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/L19/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/L19/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/L19/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'SDN keyword types'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet keyword types'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L19/current/accepted'@en ;
+    skos:notation 'SDN:V12::L19'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/L23/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/L23/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/L23/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'SDN metadata entities'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet metadata entities'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L23/current/accepted'@en ;
+    skos:notation 'SDN:V12::L23'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/C16/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/C16/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/C16/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'SDN sea areas'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet sea areas'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/C16/current/accepted'@en ;
+    skos:notation 'SDN:V12::C16'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/P03/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/P03/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/P03/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'SeaDataNet APG'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet Agreed Parameter Groups'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/P03/current/accepted'@en ;
+    skos:notation 'SDN:V12::P03'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/L10/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/L10/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/L10/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'SeaDataNet CRS'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet geographic co-ordinate reference frames'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L10/current/accepted'@en ;
+    skos:notation 'SDN:V12::L10'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/C77/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/C77/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/C77/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'SeaDataNet CSR data categories'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet Cruise Summary Report data categories'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/C77/current/accepted'@en ;
+    skos:notation 'SDN:V12::C77'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/L08/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/L08/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/L08/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'SeaDataNet Data Access Policies'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet Data Access Restriction Policies'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L08/current/accepted'@en ;
+    skos:notation 'SDN:V12::L08'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/P08/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/P08/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/P08/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'SeaDataNet Disciplines'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet Parameter Disciplines'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/P08/current/accepted'@en ;
+    skos:notation 'SDN:V12::P08'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/L02/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/L02/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/L02/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'SeaDataNet Geospatial Feature Types'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet Geospatial Feature Types'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L02/current/accepted'@en ;
+    skos:notation 'SDN:V12::L02'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/L03/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/L03/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/L03/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'SeaDataNet Measurement Periodicity'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet Measurement Periodicity Categories'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L03/current/accepted'@en ;
+    skos:notation 'SDN:V12::L03'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/P02/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/P02/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/P02/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'SeaDataNet PDV'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet Parameter Discovery Vocabulary'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/P02/current/accepted'@en ;
+    skos:notation 'SDN:V12::P02'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/C38/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/C38/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/C38/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'SeaDataNet Ports'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet Ports Gazetteer'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/C38/current/accepted'@en ;
+    skos:notation 'SDN:V12::C38'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/L12/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/L12/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/L12/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'SeaDataNet QC procedures'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet parameter quality control procedures'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L12/current/accepted'@en ;
+    skos:notation 'SDN:V12::L12'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/L07/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/L07/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/L07/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'SeaDataNet data access'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet data access mechanisms'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L07/current/accepted'@en ;
+    skos:notation 'SDN:V12::L07'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/L20/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/L20/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/L20/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'SeaDataNet flags'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet measurand qualifier flags'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L20/current/accepted'@en ;
+    skos:notation 'SDN:V12::L20'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/L22/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/L22/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/L22/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'SeaVoX Device Catalogue'^^xsd:string ;
+    skos:prefLabel 'SeaVoX Device Catalogue'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L22/current/accepted'@en ;
+    skos:notation 'SDN:V12::L22'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/L06/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/L06/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/L06/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'SeaVoX Platform Categories'^^xsd:string ;
+    skos:prefLabel 'SeaVoX Platform Categories'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L06/current/accepted'@en ;
+    skos:notation 'SDN:V12::L06'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/L13/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/L13/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/L13/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'SeaVoX Vertical Coverages'^^xsd:string ;
+    skos:prefLabel 'SeaVoX Vertical Co-ordinate Coverages'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L13/current/accepted'@en ;
+    skos:notation 'SDN:V12::L13'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/C19/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/C19/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/C19/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'SeaVoX water bodies'^^xsd:string ;
+    skos:prefLabel 'SeaVoX salt and fresh water body gazetteer'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/C19/current/accepted'@en ;
+    skos:notation 'SDN:V12::C19'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/GSA/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/GSA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/GSA/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'Seismic Data Products'^^xsd:string ;
+    skos:prefLabel 'Geo-Seas Seismic Data Product Types'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/GSA/current/accepted'@en ;
+    skos:notation 'SDN:V12::GSA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/GS9/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/GS9/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/GS9/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'Seismic Dimensionality'^^xsd:string ;
+    skos:prefLabel 'Geo-Seas Seismic Survey Dimensionality'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/GS9/current/accepted'@en ;
+    skos:notation 'SDN:V12::GS9'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/GS8/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/GS8/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/GS8/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'Seismic Methods'^^xsd:string ;
+    skos:prefLabel 'Geo-Seas Seismic Methods'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/GS8/current/accepted'@en ;
+    skos:notation 'SDN:V12::GS8'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/GSB/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/GSB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/GSB/>;
+    dc:modified '2012-02-14T16:36:01'^^xsd:dateTime ;
+    skos:altLabel 'Seismic Receivers'^^xsd:string ;
+    skos:prefLabel 'Geo-Seas Seismic Receiver Types'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/GSB/current/accepted'@en ;
+    skos:notation 'SDN:V12::GSB'^^xsd:string .

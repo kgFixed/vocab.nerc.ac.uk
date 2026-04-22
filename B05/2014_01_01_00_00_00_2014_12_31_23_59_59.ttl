@@ -1,0 +1,156 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/B05/2014_01_01_00_00_00_2014_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B05/current/FOR/1/> .
+<http://vocab.nerc.ac.uk/collection/B05/current/FOR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B05/current/FOR/>;
+    dc:modified '2014-07-23T15:13:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Former Chair'@en ;
+    skos:definition 'Member of a governance or committee who held the role of chair in the past but no longer does so.'@en ;
+    skos:notation 'SDN:B05::FOR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B05/current/OBS/1/> .
+<http://vocab.nerc.ac.uk/collection/B05/current/OBS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B05/current/OBS/>;
+    dc:modified '2014-07-23T15:13:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Observer'@en ;
+    skos:definition 'Member of a governance or committee who has no voting rights on issues the governance or committee decide by vote.'@en ;
+    skos:notation 'SDN:B05::OBS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B05/current/SCI/1/> .
+<http://vocab.nerc.ac.uk/collection/B05/current/SCI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B05/current/SCI/>;
+    dc:modified '2014-07-23T15:13:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Scientific Advisor'@en ;
+    skos:definition 'Member of a governance or committee whose role is to provide scientific or technical advice.'@en ;
+    skos:notation 'SDN:B05::SCI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B05/current/SEC/1/> .
+<http://vocab.nerc.ac.uk/collection/B05/current/SEC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B05/current/SEC/>;
+    dc:modified '2014-07-23T15:13:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Secretary'@en ;
+    skos:definition 'Member of a governance or committee with a specific management and administrative role.'@en ;
+    skos:notation 'SDN:B05::SEC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B05/current/CHA/1/> .
+<http://vocab.nerc.ac.uk/collection/B05/current/CHA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B05/current/CHA/>;
+    dc:modified '2014-06-08T13:51:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Chair'@en ;
+    skos:definition 'Member of a governance or committee responsible for overseeing roles, assigning work, acting as spokesperson and managing meetings.'@en ;
+    skos:notation 'SDN:B05::CHA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B05/current/CHI/1/> .
+<http://vocab.nerc.ac.uk/collection/B05/current/CHI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B05/current/CHI/>;
+    dc:modified '2014-06-08T13:51:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Chief Editor'@en ;
+    skos:definition 'Person responsible for managing the creation and/or maintenance of a publication.'@en ;
+    skos:notation 'SDN:B05::CHI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B05/current/DIG/1/> .
+<http://vocab.nerc.ac.uk/collection/B05/current/DIG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B05/current/DIG/>;
+    dc:modified '2014-06-08T13:51:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Digital Atlas Manager'@en ;
+    skos:definition 'Person responsible for the management of a specific type of geographical dataset(s).'@en ;
+    skos:notation 'SDN:B05::DIG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B05/current/MEM/1/> .
+<http://vocab.nerc.ac.uk/collection/B05/current/MEM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B05/current/MEM/>;
+    dc:modified '2014-06-08T13:51:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Member'@en ;
+    skos:definition 'Member of a governance or committee with no specific named title or role.'@en ;
+    skos:notation 'SDN:B05::MEM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B05/current/PER/1/> .
+<http://vocab.nerc.ac.uk/collection/B05/current/PER/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B05/current/PER/>;
+    dc:modified '2014-06-08T13:51:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Permanent Secretary'@en ;
+    skos:definition 'Member of a governance or committee with a specific management and administrative role.'@en ;
+    skos:notation 'SDN:B05::PER'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B05/current/PRO/1/> .
+<http://vocab.nerc.ac.uk/collection/B05/current/PRO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B05/current/PRO/>;
+    dc:modified '2014-06-08T13:51:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Project Manager'@en ;
+    skos:definition 'Person responsible for planning and executing a project.'@en ;
+    skos:notation 'SDN:B05::PRO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B05/current/VIC/1/> .
+<http://vocab.nerc.ac.uk/collection/B05/current/VIC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B05/current/VIC/>;
+    dc:modified '2014-06-08T13:51:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Vice Chair'@en ;
+    skos:definition 'Person immediately subordinate to a chairman who assists the Chair and assumes the role in the Chair\'s absence'@en ;
+    skos:notation 'SDN:B05::VIC'^^xsd:string .

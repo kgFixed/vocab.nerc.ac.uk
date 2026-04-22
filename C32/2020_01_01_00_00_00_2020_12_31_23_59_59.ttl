@@ -1,0 +1,82 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C32/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C32/2012_01_01_00_00_00_2019_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2020-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C32/current/EU/1/> .
+<http://vocab.nerc.ac.uk/collection/C32/current/EU/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C32/current/EU/>;
+    dc:modified '2020-11-17T18:50:08'^^xsd:dateTime ;
+    skos:altLabel 'EU'^^xsd:string ;
+    skos:prefLabel 'European Union'@en ;
+    skos:definition 'Exceptionally reserved ISO 3166 code for the European Union by the ISO 3166 Maintenance Agency (ISO 3166/MA) - to be used in applications where the European Union is the administrative or legal entity.'@en ;
+    skos:notation 'SDN:C32::EU'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C32/current/MK/4/> .
+<http://vocab.nerc.ac.uk/collection/C32/current/MK/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C32/current/MK/>;
+    dc:modified '2020-03-03T08:22:20'^^xsd:dateTime ;
+    skos:altLabel 'MKD'^^xsd:string ;
+    skos:prefLabel 'North Macedonia'@en ;
+    skos:definition 'Official name is the Republic of North Macedonia. Changed from \'Macedonia, The Former Yugoslav Republic of\' in 2019'@en ;
+    skos:notation 'SDN:C32::MK'^^xsd:string .

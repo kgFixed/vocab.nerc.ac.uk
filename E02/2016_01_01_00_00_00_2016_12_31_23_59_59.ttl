@@ -1,0 +1,111 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/E02/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/E02/current/4/1/> .
+<http://vocab.nerc.ac.uk/collection/E02/current/4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/E02/current/4/>;
+    dc:modified '2016-02-01T09:33:11'^^xsd:dateTime ;
+    skos:altLabel 'Level 4'^^xsd:string ;
+    skos:prefLabel 'Level 4'@en ;
+    skos:definition 'Model output or results from analyses of lower level data,  e.g.,  variables  derived  from multiple  measurements.'@en ;
+    skos:notation 'SDN:E02::4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/E02/current/3/1/> .
+<http://vocab.nerc.ac.uk/collection/E02/current/3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/E02/current/3/>;
+    dc:modified '2016-02-01T09:33:08'^^xsd:dateTime ;
+    skos:altLabel 'Level 3'^^xsd:string ;
+    skos:prefLabel 'Level 3'@en ;
+    skos:definition 'Variables mapped on uniform space-time grids, usually with some completeness and consistency.'@en ;
+    skos:notation 'SDN:E02::3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/E02/current/2/1/> .
+<http://vocab.nerc.ac.uk/collection/E02/current/2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/E02/current/2/>;
+    dc:modified '2016-02-01T09:33:06'^^xsd:dateTime ;
+    skos:altLabel 'Level 2'^^xsd:string ;
+    skos:prefLabel 'Level 2'@en ;
+    skos:definition 'Derived geophysical variables at the same resolution and location as the Level 1 source data.'@en ;
+    skos:notation 'SDN:E02::2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/E02/current/1B/1/> .
+<http://vocab.nerc.ac.uk/collection/E02/current/1B/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/E02/current/1B/>;
+    dc:modified '2016-02-01T09:33:04'^^xsd:dateTime ;
+    skos:altLabel 'Level 1B'^^xsd:string ;
+    skos:prefLabel 'Level 1B'@en ;
+    skos:definition 'Level 1A data that have been processed to sensor units (not all instruments have Level 1B data products).'@en ;
+    skos:notation 'SDN:E02::1B'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/E02/current/1A/1/> .
+<http://vocab.nerc.ac.uk/collection/E02/current/1A/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/E02/current/1A/>;
+    dc:modified '2016-02-01T09:33:01'^^xsd:dateTime ;
+    skos:altLabel 'Level 1A'^^xsd:string ;
+    skos:prefLabel 'Level 1A'@en ;
+    skos:definition 'Reconstructed,  unprocessed  instrument  data  at  full resolution, time-referenced, and annotated with ancillary information, including radiometric and geometric calibration coefficients and georeferencing parameters, e.g., platform ephemeris, computed and appended but not applied to the Level 0 data.'@en ;
+    skos:notation 'SDN:E02::1A'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/E02/current/0/1/> .
+<http://vocab.nerc.ac.uk/collection/E02/current/0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/E02/current/0/>;
+    dc:modified '2016-02-01T09:32:59'^^xsd:dateTime ;
+    skos:altLabel 'Level 0'^^xsd:string ;
+    skos:prefLabel 'Level 0'@en ;
+    skos:definition 'Reconstructed, unprocessed instrument/payload data at full resolution; any and all communications artifacts, e.g., synchronization frames, communications headers, duplicate data removed. In most cases these data are provided  by Earth Observing System (EOS) Data and Operations Systems  (EDOS)  to  a Distributed Active Archive Center (DAAC)  as  Production  Data Sets  for  processing  to  the  Science  Data  Processing  Segments  (SDPs)  in  the  DAAC  or  by the  Science Investigator-led Processing  Systems  (SIPSs) to produce the higher-level products.'@en ;
+    skos:notation 'SDN:E02::0'^^xsd:string .

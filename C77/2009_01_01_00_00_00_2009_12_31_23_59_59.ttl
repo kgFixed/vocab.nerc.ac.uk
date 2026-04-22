@@ -1,0 +1,75 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C77/2009_01_01_00_00_00_2009_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H72/2/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H72/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H72/>;
+    dc:modified '2009-09-16T15:18:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Subsurface temperature measurements'@en ;
+    skos:definition 'Measurements of temperature with no associated conductivity measurements within a water body, such as moored instruments with temperature sensors. Originally set up for thermistor chains but broadened as these were replaced by other hardware with the same functionality.'@en ;
+    skos:notation 'SDN:C77::H72'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H11/2/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H11/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H11/>;
+    dc:modified '2009-09-16T15:12:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Subsurface temperature and salinity measurements'@en ;
+    skos:definition 'Measurements of temperature and salinity within a water body other than CTD profiles which are considered as a separate entity in this vocabulary. Examples where this term is appropriate are conductivity+temperature sensors mounted on undulators, AUVs, moving vessel profilers, or moorings.'@en ;
+    skos:notation 'SDN:C77::H11'^^xsd:string .

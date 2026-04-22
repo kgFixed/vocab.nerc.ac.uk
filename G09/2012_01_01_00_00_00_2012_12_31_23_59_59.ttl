@@ -1,0 +1,309 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/G09/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/001/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/001/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ucs2'@en ;
+    skos:definition '16-bit fixed size Universal Character Set, based on ISO/IEC 10646'@en ;
+    skos:notation 'SDN:G09::001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/002/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/002/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ucs4'@en ;
+    skos:definition '32-bit fixed size Universal Character Set, based on ISO/IEC 10646'@en ;
+    skos:notation 'SDN:G09::002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/003/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/003/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'utf7'@en ;
+    skos:definition '7-bit variable size UCS Transfer Format, based on ISO/IEC 10646'@en ;
+    skos:notation 'SDN:G09::003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/004/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/004/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'utf8'@en ;
+    skos:definition '8-bit variable size UCS Transfer Format, based on ISO/IEC 10646'@en ;
+    skos:notation 'SDN:G09::004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/005/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/005/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'utf16'@en ;
+    skos:definition '16-bit variable size UCS Transfer Format, based on ISO/IEC 10646'@en ;
+    skos:notation 'SDN:G09::005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/006/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/006/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/006/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '8859part1'@en ;
+    skos:definition 'ISO/IEC 8859-1, Information technology - 8-bit single byte coded graphic character sets - Part 1 : Latin alphabet No.1'@en ;
+    skos:notation 'SDN:G09::006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/007/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/007/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/007/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '8859part2'@en ;
+    skos:definition 'ISO/IEC 8859-2, Information technology - 8-bit single byte coded graphic character sets - Part 2 : Latin alphabet No.2'@en ;
+    skos:notation 'SDN:G09::007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/008/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/008/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/008/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '8859part3'@en ;
+    skos:definition 'ISO/IEC 8859-3, Information technology - 8-bit single byte coded graphic character sets - Part 3 : Latin alphabet No.3'@en ;
+    skos:notation 'SDN:G09::008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/009/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/009/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/009/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '8859part4'@en ;
+    skos:definition 'ISO/IEC 8859-4, Information technology - 8-bit single byte coded graphic character sets - Part 4 : Latin alphabet No.4'@en ;
+    skos:notation 'SDN:G09::009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/010/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/010/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/010/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '8859part5'@en ;
+    skos:definition 'ISO/IEC 8859-5, Information technology - 8-bit single byte coded graphic character sets - Part 5 : Latin/Cyrillic alphabet'@en ;
+    skos:notation 'SDN:G09::010'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/011/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/011/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/011/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '8859part6'@en ;
+    skos:definition 'ISO/IEC 8859-6, Information technology - 8-bit single byte coded graphic character sets - Part 6 : Latin/Arabic alphabet'@en ;
+    skos:notation 'SDN:G09::011'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/012/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/012/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/012/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '8859part7'@en ;
+    skos:definition 'ISO/IEC 8859-7, Information technology - 8-bit single byte coded graphic character sets - Part 7 : Latin/Greek alphabet'@en ;
+    skos:notation 'SDN:G09::012'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/013/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/013/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/013/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '8859part8'@en ;
+    skos:definition 'ISO/IEC 8859-8, Information technology - 8-bit single byte coded graphic character sets - Part 8 : Latin/Hebrew alphabet'@en ;
+    skos:notation 'SDN:G09::013'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/014/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/014/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/014/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '8859part9'@en ;
+    skos:definition 'ISO/IEC 8859-9, Information technology - 8-bit single byte coded graphic character sets - Part 9 : Latin alphabet No.5'@en ;
+    skos:notation 'SDN:G09::014'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/015/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/015/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/015/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '8859part10'@en ;
+    skos:definition 'ISO/IEC 8859-10, Information technology - 8-bit single byte coded graphic character sets - Part 10 : Latin alphabet No.6'@en ;
+    skos:notation 'SDN:G09::015'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/016/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/016/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/016/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '8859part11'@en ;
+    skos:definition 'ISO/IEC 8859-11, Information technology - 8-bit single byte coded graphic character sets - Part 11 : Latin/Thai alphabet'@en ;
+    skos:notation 'SDN:G09::016'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/018/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/018/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/018/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '8859part13'@en ;
+    skos:definition 'ISO/IEC 8859-13, Information technology - 8-bit single byte coded graphic character sets - Part 13 : Latin alphabet No.7'@en ;
+    skos:notation 'SDN:G09::018'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/019/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/019/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/019/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '8859part14'@en ;
+    skos:definition 'ISO/IEC 8859-14, Information technology - 8-bit single byte coded graphic character sets - Part 14 : Latin alphabet No.8 (Celtic)'@en ;
+    skos:notation 'SDN:G09::019'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/020/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/020/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/020/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '8859part15'@en ;
+    skos:definition 'ISO/IEC 8859-15, Information technology - 8-bit single byte coded graphic character sets - Part 15 : Latin alphabet No.9'@en ;
+    skos:notation 'SDN:G09::020'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/021/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/021/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/021/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '8859part16'@en ;
+    skos:definition 'ISO/IEC 8859-16, Information technology - 8-bit single byte coded graphic character sets - Part 16 : Latin alphabet No.10'@en ;
+    skos:notation 'SDN:G09::021'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/022/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/022/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/022/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'jis'@en ;
+    skos:definition 'Japanese code set used for electronic transmission'@en ;
+    skos:notation 'SDN:G09::022'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/023/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/023/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/023/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'shiftJIS'@en ;
+    skos:definition 'Japanese code set used on MS-DOS machines'@en ;
+    skos:notation 'SDN:G09::023'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/024/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/024/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/024/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'eucJP'@en ;
+    skos:definition 'Japanese code set used on UNIX based machines'@en ;
+    skos:notation 'SDN:G09::024'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/025/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/025/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/025/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'usAscii'@en ;
+    skos:definition 'United States ASCII code set (ISO 646 US)'@en ;
+    skos:notation 'SDN:G09::025'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/026/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/026/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/026/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ebcdic'@en ;
+    skos:definition 'IBM mainframe code set'@en ;
+    skos:notation 'SDN:G09::026'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/027/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/027/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/027/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'eucKR'@en ;
+    skos:definition 'Korean code set'@en ;
+    skos:notation 'SDN:G09::027'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/028/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/028/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/028/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'big5'@en ;
+    skos:definition 'Traditional Chinese code set used in Taiwan, Hong Kong of China and other areas'@en ;
+    skos:notation 'SDN:G09::028'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G09/current/029/1/> .
+<http://vocab.nerc.ac.uk/collection/G09/current/029/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G09/current/029/>;
+    dc:modified '2012-07-04T11:00:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GB2312'@en ;
+    skos:definition 'Simplified Chinese code set'@en ;
+    skos:notation 'SDN:G09::029'^^xsd:string .

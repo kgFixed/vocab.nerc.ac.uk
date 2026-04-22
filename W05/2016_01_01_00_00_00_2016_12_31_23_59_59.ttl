@@ -1,0 +1,120 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/W05/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/W05/current/CHAR0007/1/> .
+<http://vocab.nerc.ac.uk/collection/W05/current/CHAR0007/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/W05/current/CHAR0007/>;
+    dc:modified '2016-09-14T22:29:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Transmission mode'@en ;
+    skos:definition 'The method of communication used to send information from a device or system to shore (e.g. ARGOS, IRIDIUM, Acoustic, Cabled).'@en ;
+    skos:notation 'SDN:W05::CHAR0007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/W05/current/CHAR0006/1/> .
+<http://vocab.nerc.ac.uk/collection/W05/current/CHAR0006/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/W05/current/CHAR0006/>;
+    dc:modified '2016-07-20T15:00:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Data storage'@en ;
+    skos:definition 'The capacity or memory space of a device or system.'@en ;
+    skos:notation 'SDN:W05::CHAR0006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/W05/current/CHAR0005/1/> .
+<http://vocab.nerc.ac.uk/collection/W05/current/CHAR0005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/W05/current/CHAR0005/>;
+    dc:modified '2016-07-20T15:00:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Housing material'@en ;
+    skos:definition 'The casing type of a device or system.'@en ;
+    skos:notation 'SDN:W05::CHAR0005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/W05/current/CHAR0004/1/> .
+<http://vocab.nerc.ac.uk/collection/W05/current/CHAR0004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/W05/current/CHAR0004/>;
+    dc:modified '2016-07-20T15:00:14'^^xsd:dateTime ;
+    skos:altLabel 'W'^^xsd:string ;
+    skos:prefLabel 'Width'@en ;
+    skos:definition 'The measured extent (distance) of an object that is at right angles to the length.'@en ;
+    skos:notation 'SDN:W05::CHAR0004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/W05/current/CHAR0003/1/> .
+<http://vocab.nerc.ac.uk/collection/W05/current/CHAR0003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/W05/current/CHAR0003/>;
+    dc:modified '2016-07-20T15:00:13'^^xsd:dateTime ;
+    skos:altLabel 'H'^^xsd:string ;
+    skos:prefLabel 'Height'@en ;
+    skos:definition 'The measured extent (distance) from the base to the top of an object.'@en ;
+    skos:notation 'SDN:W05::CHAR0003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/W05/current/CHAR0002/1/> .
+<http://vocab.nerc.ac.uk/collection/W05/current/CHAR0002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/W05/current/CHAR0002/>;
+    dc:modified '2016-07-20T15:00:12'^^xsd:dateTime ;
+    skos:altLabel 'L'^^xsd:string ;
+    skos:prefLabel 'Length'@en ;
+    skos:definition 'The measured extent (distance) of the longest dimension of an object.'@en ;
+    skos:notation 'SDN:W05::CHAR0002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/W05/current/CHAR0001/1/> .
+<http://vocab.nerc.ac.uk/collection/W05/current/CHAR0001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/W05/current/CHAR0001/>;
+    dc:modified '2016-07-20T15:00:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Weight'@en ;
+    skos:definition 'The mass or heaviness of an object on Earth.'@en ;
+    skos:notation 'SDN:W05::CHAR0001'^^xsd:string .

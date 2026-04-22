@@ -1,0 +1,138 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/EPL/2025_10_13_12_58_42_2026_04_22_15_36_12.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EPL/current/L0/1/> .
+<http://vocab.nerc.ac.uk/collection/EPL/current/L0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EPL/current/L0/>;
+    dc:modified '2025-10-13T13:21:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Level 0'@en ;
+    skos:definition 'Raw data. Unprocessed instrument data at full resolution, including synchronisation methods (e.g. elimination of CTD up-down duplicates) and excluding communication artefacts.'@en ;
+    skos:notation 'SDN:EPL::L0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EPL/current/L1/1/> .
+<http://vocab.nerc.ac.uk/collection/EPL/current/L1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EPL/current/L1/>;
+    dc:modified '2025-10-13T13:21:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Level 1'@en ;
+    skos:definition 'Full resolution data reconstructed with calibration coefficients, geo and time-referenced.'@en ;
+    skos:notation 'SDN:EPL::L1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EPL/current/L2/1/> .
+<http://vocab.nerc.ac.uk/collection/EPL/current/L2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EPL/current/L2/>;
+    dc:modified '2025-10-13T13:21:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Level 2'@en ;
+    skos:definition 'Geo- and time-referenced processed (derived) data with a minimum QC. Near-real time (NRT) with full spatial and/or temporal resolution.'@en ;
+    skos:notation 'SDN:EPL::L2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EPL/current/L3/1/> .
+<http://vocab.nerc.ac.uk/collection/EPL/current/L3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EPL/current/L3/>;
+    dc:modified '2025-10-13T13:21:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Level 3'@en ;
+    skos:definition 'Delayed mode data with further QC, usually with some completeness, consistency and space/time uniformity. Data QC checks may include comparison with historical data and/or Level 5 products such as climatologies or gridded data.'@en ;
+    skos:notation 'SDN:EPL::L3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EPL/current/L4/1/> .
+<http://vocab.nerc.ac.uk/collection/EPL/current/L4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EPL/current/L4/>;
+    dc:modified '2025-10-13T13:21:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Level 4'@en ;
+    skos:definition 'Collated data from different measurements, samples and/or sources that have been integrated in a data system by means of standardisation and/or categorisation, and subset or otherwise selected or derived to fulfil a specific requirement. Data can represent numerical values and presence/absence of a category or entity. Integration of datasets at this level enables further QC based on parameter to parameter relationships (e.g. TS diagrams).'@en ;
+    skos:notation 'SDN:EPL::L4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EPL/current/L5A/1/> .
+<http://vocab.nerc.ac.uk/collection/EPL/current/L5A/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EPL/current/L5A/>;
+    dc:modified '2025-10-13T13:21:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Level 5A'@en ;
+    skos:definition 'One-dimensional distribution of a specific parameter, without variations on the temporal or depth dimensions resulting from model or analysis output that uses data of Level 2 and/or 3 as input. Data products of this level represent the distribution of a single parameter derived from multiple measurements. Data are aggregated and undergo some level of geo-processing and spatial or temporal interpolation to cover data gaps and/or solve data discrepancies.'@en ;
+    skos:notation 'SDN:EPL::L5A'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EPL/current/L5B/1/> .
+<http://vocab.nerc.ac.uk/collection/EPL/current/L5B/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EPL/current/L5B/>;
+    dc:modified '2025-10-13T13:21:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Level 5B'@en ;
+    skos:definition 'Two-dimensional distribution of a specific parameter, with variations on the spatial or temporal/depth dimensions resulting from model or analysis output that uses data of Level 2 and/or 3 as input. Data products of this level represent the distribution of a single parameter derived from multiple measurements. Data are aggregated and undergo some level of geo-processing and spatial or temporal interpolation to cover data gaps and/or solve data discrepancies.'@en ;
+    skos:notation 'SDN:EPL::L5B'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EPL/current/L5C/1/> .
+<http://vocab.nerc.ac.uk/collection/EPL/current/L5C/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EPL/current/L5C/>;
+    dc:modified '2025-10-13T13:21:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Level 5C'@en ;
+    skos:definition 'Three-dimensional distribution of a specific parameter resulting from model or analysis output that uses data of Level 2 and/or 3 as input. Data products of this level represent the distribution of a single parameter derived from multiple measurements. Data are aggregated and undergo some level of geo-processing and spatial or temporal interpolation to cover data gaps and/or solve data discrepancies.'@en ;
+    skos:notation 'SDN:EPL::L5C'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/EPL/current/L6/1/> .
+<http://vocab.nerc.ac.uk/collection/EPL/current/L6/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/EPL/current/L6/>;
+    dc:modified '2025-10-13T13:21:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Level 6'@en ;
+    skos:definition 'Derived information from multi-variable model or analysis that has Level 5 data products and/or Level 2-3 data as input. These input data and data products might have been gathered or developed by the thematic lot itself, by other thematic lots or third parties.'@en ;
+    skos:notation 'SDN:EPL::L6'^^xsd:string .

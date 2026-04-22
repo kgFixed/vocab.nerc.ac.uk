@@ -1,0 +1,153 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/GBX/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/GBX/2020_01_01_00_00_00_2021_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2022-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/GN000033/2/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/GN000033/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/GN000033/>;
+    dc:modified '2022-11-17T11:36:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'registration - feedback sentence'@en ;
+    skos:definition 'Occasionally we may wish to contact you to tell you about general developments to the site or ask you for your feedback or an optional response to help us illustrate our impact. Would you agree to receiving these?'@en ;
+    skos:notation 'SDN:GBX::GN000033'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/GN000146/4/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/GN000146/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/GN000146/>;
+    dc:modified '2022-04-27T16:56:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'login page - GEOTRACES IDP sentence 2'@en ;
+    skos:definition '''{"node": {"p": [
+    "The GEOTRACES Intermediate Data Product (IDP) has been developed for the community. To improve understanding and services we would like to keep track of who is using the product and for what purpose. Please specify",
+    {
+        "strong": "usage to which the data product will be put",
+        "ol": {"li": [
+            "Compare with my data",
+            "Create compilation with other data for the same element/isotope",
+            "Do cross correlations among differnet elements/isotopes",
+            "Modelling",
+            "Use of data for biological studies",
+            "Use of data for paleoproxy research",
+            "Other? Please specify"
+        ]},
+        "content": [
+            "the",
+            "by copying and pasting one or more of the following options in to the \\"Reason\\" box below."
+        ]
+    },
+    {
+        "strong": "any source of funding",
+        "content": "that you may have for the intended research or usage of the data product in the \\"Funding\\" box below."
+    }
+]}}'''@en ;
+    skos:notation 'SDN:GBX::GN000146'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/HE000004/3/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/HE000004/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/HE000004/>;
+    dc:modified '2022-04-27T16:56:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'help text - originator help'@en ;
+    skos:definition '''{"node": {"p": [
+    "Restrict your search to series which were collected by particular countries and/or organisations.",
+    {
+        "strong": "narrow button",
+        "content": [
+            "Click to select a single entry from a list.  Use Control+click or Shift+click to select additional entries as appropriate. You may also use Control+click to deselect.  Once you have chosen from a list press the appropriate",
+            ". This will restrict the choices available in the other list."
+        ]
+    },
+    {
+        "strong": [
+            "completed your selection",
+            "update button"
+        ],
+        "content": [
+            "Once you have",
+            "use the",
+            "to submit to your search criteria."
+        ]
+    },
+    "The default is to match any series irrespective of who has collected the data.",
+    "You may revisit this section and amend your criteria at any time. To allow you to reuse your previous choices, we have provided a history of your last three selections. Display your earlier choices by hovering over the link(s). To update the form with a saved selection, click on the appropriate link."
+]}}'''@en ;
+    skos:notation 'SDN:GBX::HE000004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/HP00001A/5/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/HP00001A/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/HP00001A/>;
+    dc:modified '2022-04-27T16:56:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Data type help'@en ;
+    skos:definition '''{"node": {"p": [
+    "Restrict your search to particular keywords, data from particular types of instrument and/or data collected from particular types of platform.",
+    {
+        "strong": "narrow button",
+        "content": [
+            "Click to select a single entry from a list.  Use Control+click or Shift+click to select additional entries as appropriate. You may also use Control+click to deselect.  Once you have chosen from a list press the appropriate",
+            ". This will restrict the choices available in the other lists."
+        ]
+    }
+]}}'''@en ;
+    skos:notation 'SDN:GBX::HP00001A'^^xsd:string .

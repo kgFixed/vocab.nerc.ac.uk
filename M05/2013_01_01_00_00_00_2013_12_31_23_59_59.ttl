@@ -1,0 +1,147 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/M05/2013_01_01_00_00_00_2013_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M05/current/OBJCONS/1/> .
+<http://vocab.nerc.ac.uk/collection/M05/current/OBJCONS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M05/current/OBJCONS/>;
+    dc:modified '2013-08-22T11:16:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Conservation-related'@en ;
+    skos:definition 'Governance activities aimed at maintaining, conserving and/or restoring biodiversity, natural heritage of habitats, species, landscapes and protected status.'@en ;
+    skos:notation 'SDN:M05::OBJCONS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M05/current/OBJCUHE/1/> .
+<http://vocab.nerc.ac.uk/collection/M05/current/OBJCUHE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M05/current/OBJCUHE/>;
+    dc:modified '2013-08-22T11:16:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Cultural Heritage'@en ;
+    skos:definition 'Governance activities aimed at protecting, preserving and restoring cultural value of the environment.'@en ;
+    skos:notation 'SDN:M05::OBJCUHE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M05/current/OBJECOL/1/> .
+<http://vocab.nerc.ac.uk/collection/M05/current/OBJECOL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M05/current/OBJECOL/>;
+    dc:modified '2013-08-22T11:16:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ecological functions'@en ;
+    skos:definition 'Governance activities aimed at maintaining key ecological functions (spawning areas, nursery, feeding zone, rest areas, productivity areas, etc.).'@en ;
+    skos:notation 'SDN:M05::OBJECOL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M05/current/OBJFOSR/1/> .
+<http://vocab.nerc.ac.uk/collection/M05/current/OBJFOSR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M05/current/OBJFOSR/>;
+    dc:modified '2013-08-22T11:16:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Fostering scientific research'@en ;
+    skos:definition 'Governance activities aimed at encouraging relevant scientific research.'@en ;
+    skos:notation 'SDN:M05::OBJFOSR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M05/current/OBJMPAN/1/> .
+<http://vocab.nerc.ac.uk/collection/M05/current/OBJMPAN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M05/current/OBJMPAN/>;
+    dc:modified '2013-08-22T11:16:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Improving management of Marine Protected Area Network'@en ;
+    skos:definition 'Governance activities aimed improving operations within Marine Protected Area territory.'@en ;
+    skos:notation 'SDN:M05::OBJMPAN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M05/current/OBJPBAW/1/> .
+<http://vocab.nerc.ac.uk/collection/M05/current/OBJPBAW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M05/current/OBJPBAW/>;
+    dc:modified '2013-08-22T11:16:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Public Awareness'@en ;
+    skos:definition 'Governance activitivities aimed at educating on environmental issues and improving public awareness.'@en ;
+    skos:notation 'SDN:M05::OBJPBAW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M05/current/OBJREXP/1/> .
+<http://vocab.nerc.ac.uk/collection/M05/current/OBJREXP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M05/current/OBJREXP/>;
+    dc:modified '2013-08-22T11:16:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Resource exploitation'@en ;
+    skos:definition 'Governance activities that manage commercial gain from natural resources.'@en ;
+    skos:notation 'SDN:M05::OBJREXP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M05/current/OBJSEAM/1/> .
+<http://vocab.nerc.ac.uk/collection/M05/current/OBJSEAM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M05/current/OBJSEAM/>;
+    dc:modified '2013-08-22T11:16:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Management of socioeconomic activities'@en ;
+    skos:definition 'Governance activities aimed at promoting the sustainable management and/or development of socio-economic activities in the marine environment.'@en ;
+    skos:notation 'SDN:M05::OBJSEAM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M05/current/OBJSEAV/1/> .
+<http://vocab.nerc.ac.uk/collection/M05/current/OBJSEAV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M05/current/OBJSEAV/>;
+    dc:modified '2013-08-22T11:16:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Creating socioeconomic added values'@en ;
+    skos:definition 'Governance activities aimed at enhancing the  social or economic value of the environment.'@en ;
+    skos:notation 'SDN:M05::OBJSEAV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M05/current/OBJWQAL/1/> .
+<http://vocab.nerc.ac.uk/collection/M05/current/OBJWQAL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M05/current/OBJWQAL/>;
+    dc:modified '2013-08-22T11:16:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Water quality'@en ;
+    skos:definition 'Governance activities aimed at either improving or preventing degradation the chemical and biological environment of waters.'@en ;
+    skos:notation 'SDN:M05::OBJWQAL'^^xsd:string .

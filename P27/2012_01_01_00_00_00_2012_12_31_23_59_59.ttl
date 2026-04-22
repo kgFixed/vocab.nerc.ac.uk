@@ -1,0 +1,93 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P27/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P27/current/0.01/1/> .
+<http://vocab.nerc.ac.uk/collection/P27/current/0.01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P27/current/0.01/>;
+    dc:modified '2012-07-20T10:53:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'spillet is somewhere else'@en ;
+    skos:definition 'The spillet is not floating, on the seabed or washed up on the shore.'@en ;
+    skos:notation 'SDN:P27::0.01'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P27/current/0.05/1/> .
+<http://vocab.nerc.ac.uk/collection/P27/current/0.05/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P27/current/0.05/>;
+    dc:modified '2012-07-20T10:52:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'spillet is on the sea surface'@en ;
+    skos:definition 'The spillet is floating.'@en ;
+    skos:notation 'SDN:P27::0.05'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P27/current/0.1/1/> .
+<http://vocab.nerc.ac.uk/collection/P27/current/0.1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P27/current/0.1/>;
+    dc:modified '2012-07-20T10:51:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'spillet is on the shoreline'@en ;
+    skos:definition 'The spillet has washed up on land'@en ;
+    skos:notation 'SDN:P27::0.1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P27/current/0.0/1/> .
+<http://vocab.nerc.ac.uk/collection/P27/current/0.0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P27/current/0.0/>;
+    dc:modified '2012-07-20T10:46:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'spillet is on the sea bottom'@en ;
+    skos:definition 'The spillet has sunk to the seabed'@en ;
+    skos:notation 'SDN:P27::0.0'^^xsd:string .

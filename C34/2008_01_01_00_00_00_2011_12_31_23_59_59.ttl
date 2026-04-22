@@ -1,0 +1,82 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C34/2008_01_01_00_00_00_2011_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C34/2007_01_01_00_00_00_2007_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2011-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C34/current/MRAT0016/2/> .
+<http://vocab.nerc.ac.uk/collection/C34/current/MRAT0016/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C34/current/MRAT0016/>;
+    dc:modified '2011-08-26T10:26:06'^^xsd:dateTime ;
+    skos:altLabel 'Inapplicable'^^xsd:string ;
+    skos:prefLabel 'inapplicable'@en ;
+    skos:definition 'There is no appropriate value'@en ;
+    skos:notation 'SDN:C34::MRAT0016'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C34/current/MRAT0022/1/> .
+<http://vocab.nerc.ac.uk/collection/C34/current/MRAT0022/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C34/current/MRAT0022/>;
+    dc:modified '2011-02-24T15:47:45'^^xsd:dateTime ;
+    skos:altLabel 'Operational oceanography'^^xsd:string ;
+    skos:prefLabel 'Operational oceanography'@en ;
+    skos:definition 'Monitoring activities that are carried out to provide oceanographic forecasts and services to the public and scientific community. They do not provide information on a specific environmental pressure.'@en ;
+    skos:notation 'SDN:C34::MRAT0022'^^xsd:string .

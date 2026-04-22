@@ -1,0 +1,91 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L06/2019_01_01_00_00_00_2020_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L06/2017_01_01_00_00_00_2018_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2020-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L06/current/4A/1/> .
+<http://vocab.nerc.ac.uk/collection/L06/current/4A/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L06/current/4A/>;
+    dc:modified '2020-09-11T13:41:01'^^xsd:dateTime ;
+    skos:altLabel 'ITP'^^xsd:string ;
+    skos:prefLabel 'Ice-tethered subsurface profiling float'@en ;
+    skos:definition 'A platform that periodically makes an automated vertical traverse of the water column that is fixed to a floating body of ice.'@en ;
+    skos:notation 'SDN:L06::4A'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L06/current/93/2/> .
+<http://vocab.nerc.ac.uk/collection/L06/current/93/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L06/current/93/>;
+    dc:modified '2020-06-08T11:54:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'pack ice'@en ;
+    skos:definition 'Sea ice not connected to land with an ice concentration of over 70 per cent.'@en ;
+    skos:notation 'SDN:L06::93'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L06/current/94/2/> .
+<http://vocab.nerc.ac.uk/collection/L06/current/94/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L06/current/94/>;
+    dc:modified '2020-06-08T11:54:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'drift ice'@en ;
+    skos:definition 'Sea ice not connected to land with an ice concentration of under 70 per cent.'@en ;
+    skos:notation 'SDN:L06::94'^^xsd:string .

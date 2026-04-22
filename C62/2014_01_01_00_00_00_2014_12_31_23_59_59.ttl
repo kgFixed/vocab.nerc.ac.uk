@@ -1,0 +1,325 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C62/2014_01_01_00_00_00_2014_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C62/2013_01_01_00_00_00_2013_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2014-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/IT-75/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/IT-75/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/IT-75/>;
+    dc:modified '2014-12-05T08:06:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Puglia'@en ;
+    skos:definition 'Province of Italy. Native name is Apulia.'@en ;
+    skos:notation 'SDN:C62::IT-75'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/IT-82/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/IT-82/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/IT-82/>;
+    dc:modified '2014-12-05T08:06:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sicily'@en ;
+    skos:definition 'Region of Italy. Native name is Sicilia.'@en ;
+    skos:notation 'SDN:C62::IT-82'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/IL-HA/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/IL-HA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/IL-HA/>;
+    dc:modified '2014-09-30T12:30:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Haifa District'@en ;
+    skos:definition 'District of Israel containing city of same name.'@en ;
+    skos:notation 'SDN:C62::IL-HA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/MU-QB/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/MU-QB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/MU-QB/>;
+    dc:modified '2014-09-30T12:30:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Quatre Bornes'@en ;
+    skos:definition 'Region of Mauritius containing town of same name.'@en ;
+    skos:notation 'SDN:C62::MU-QB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/KR-26/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/KR-26/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/KR-26/>;
+    dc:modified '2014-07-23T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Busan'@en ;
+    skos:definition 'Metropolitan City (equivalent to Province) of the Republic of Korea. Romanised native name is Busan Gwang\'yeogsi'@en ;
+    skos:notation 'SDN:C62::KR-26'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/BD-B/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/BD-B/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/BD-B/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Chittagong'@en ;
+    skos:definition 'District of Bangladesh'@en ;
+    skos:notation 'SDN:C62::BD-B'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/BR-DF/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/BR-DF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/BR-DF/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Federal District'@en ;
+    skos:definition 'State of Brazil. Native name is Distrito Federal'@en ;
+    skos:notation 'SDN:C62::BR-DF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/CM-OU/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/CM-OU/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/CM-OU/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'West Region'@en ;
+    skos:definition 'Region of Cameroon. Native name is Région de l\'Ouest'@en ;
+    skos:notation 'SDN:C62::CM-OU'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/CN-12/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/CN-12/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/CN-12/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Tianjin'@en ;
+    skos:definition 'Municipality (equivalent to province) of China'@en ;
+    skos:notation 'SDN:C62::CN-12'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/CO-BOL/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/CO-BOL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/CO-BOL/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bolívar'@en ;
+    skos:definition 'Department of Colombia'@en ;
+    skos:notation 'SDN:C62::CO-BOL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EC-G/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EC-G/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EC-G/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Guayas'@en ;
+    skos:definition 'Province of Ecuador'@en ;
+    skos:notation 'SDN:C62::EC-G'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/FJ-C/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/FJ-C/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/FJ-C/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Central Division'@en ;
+    skos:definition 'Administrative unit of Fiji'@en ;
+    skos:notation 'SDN:C62::FJ-C'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/GH-AA/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/GH-AA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/GH-AA/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Greater Accra'@en ;
+    skos:definition 'Region of Ghana'@en ;
+    skos:notation 'SDN:C62::GH-AA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/KE37/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/KE37/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/KE37/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mombasa'@en ;
+    skos:definition 'County of Kenya'@en ;
+    skos:notation 'SDN:C62::KE37'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/KR-28/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/KR-28/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/KR-28/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Incheon'@en ;
+    skos:definition 'Metropolitan City (equivalent to Province) of the Republic of Korea. Romanised native name is Incheon Gwang\'yeogsi'@en ;
+    skos:notation 'SDN:C62::KR-28'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/KR-30/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/KR-30/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/KR-30/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Daejeon'@en ;
+    skos:definition 'Metropolitan city (equivalent to Province) of the Republic of Korea. Romanised native name is Daejeon Gwang\'yeogsi'@en ;
+    skos:notation 'SDN:C62::KR-30'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/LK-1/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/LK-1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/LK-1/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Western Province'@en ;
+    skos:definition 'Province of Sri Lanka. Native name is Basnahira palata'@en ;
+    skos:notation 'SDN:C62::LK-1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/LK-9/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/LK-9/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/LK-9/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sabaragamuwa'@en ;
+    skos:definition 'Province of Sri Lanka. Native name is Sabaragamuva palata'@en ;
+    skos:notation 'SDN:C62::LK-9'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/MM-06/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/MM-06/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/MM-06/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Yangon'@en ;
+    skos:definition 'Region of Myanmar'@en ;
+    skos:notation 'SDN:C62::MM-06'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/MY-10/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/MY-10/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/MY-10/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Selangor'@en ;
+    skos:definition 'State of Malaysia. Alternative name is Selangor Darul Ehsan'@en ;
+    skos:notation 'SDN:C62::MY-10'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/NG-LA/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/NG-LA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/NG-LA/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Lagos'@en ;
+    skos:definition 'State of Nigeria'@en ;
+    skos:notation 'SDN:C62::NG-LA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/PE-CAL/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/PE-CAL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/PE-CAL/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Callao'@en ;
+    skos:definition 'Constitutional Province (equivalent to Department) of Peru'@en ;
+    skos:notation 'SDN:C62::PE-CAL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/PK-SD/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/PK-SD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/PK-SD/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sindh'@en ;
+    skos:definition 'Province of Pakistan'@en ;
+    skos:notation 'SDN:C62::PK-SD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/SR-PM/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/SR-PM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/SR-PM/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Paramaribo'@en ;
+    skos:definition 'District of Suriname'@en ;
+    skos:notation 'SDN:C62::SR-PM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/TH-10/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/TH-10/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/TH-10/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bangkok'@en ;
+    skos:definition 'Metropolitan Administration (equivalent to Province) of Thailand. Native name is Krung Thep Maha Nakhon Lae Parimonthon'@en ;
+    skos:notation 'SDN:C62::TH-10'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/VN-HN/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/VN-HN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/VN-HN/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ha Noi'@en ;
+    skos:definition 'Municipality (equivalent to province) of Viet Nam'@en ;
+    skos:notation 'SDN:C62::VN-HN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/VN-HP/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/VN-HP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/VN-HP/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Hai Phong'@en ;
+    skos:definition 'Municipality (equivalent to province) of Viet Nam'@en ;
+    skos:notation 'SDN:C62::VN-HP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/TR-33/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/TR-33/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/TR-33/>;
+    dc:modified '2014-02-25T08:15:55'^^xsd:dateTime ;
+    skos:altLabel 'Mersin'^^xsd:string ;
+    skos:prefLabel 'Mersin'@en ;
+    skos:definition 'Province of Turkey.'@en ;
+    skos:notation 'SDN:C62::TR-33'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/HR-21/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/HR-21/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/HR-21/>;
+    dc:modified '2014-02-25T08:15:55'^^xsd:dateTime ;
+    skos:altLabel 'Zagreb'^^xsd:string ;
+    skos:prefLabel 'Grad Zagreb'@en ;
+    skos:definition 'City comprising its own subdivision of Croatia.'@en ;
+    skos:notation 'SDN:C62::HR-21'^^xsd:string .

@@ -1,0 +1,1639 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P09/2009_01_01_00_00_00_2009_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P09/2008_01_01_00_00_00_2008_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2009-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/LGH2/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/LGH2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/LGH2/>;
+    dc:modified '2009-12-20T12:54:26'^^xsd:dateTime ;
+    skos:altLabel 'LGH2'^^xsd:string ;
+    skos:prefLabel 'PAR ATTENUATION COEFFICIENT'@en ;
+    skos:definition 'Average visible light attenuation coefficient between surface and depth of measurement (sometimes called the extinction coefficient) given by K = [log(surface PAR irradiance) - log (underwater PAR irradiance at depth of measurement)]/10.'@en ;
+    skos:notation 'SDN:P09::LGH2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TB25/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TB25/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TB25/>;
+    dc:modified '2009-10-01T12:02:50'^^xsd:dateTime ;
+    skos:altLabel 'TR25'^^xsd:string ;
+    skos:prefLabel 'BLUE LIGHT TRANSMISSION 25CM'@en ;
+    skos:definition 'The proportion of transmitted blue light that passes through 25cm of a water body.'@en ;
+    skos:notation 'SDN:P09::TB25'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TR25/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TR25/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TR25/>;
+    dc:modified '2009-10-01T12:02:20'^^xsd:dateTime ;
+    skos:altLabel 'TR25'^^xsd:string ;
+    skos:prefLabel 'RED LIGHT TRANSMISSION 25CM'@en ;
+    skos:definition 'The proportion of transmitted red light that passes through 25cm of a water body.'@en ;
+    skos:notation 'SDN:P09::TR25'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TR10/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TR10/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TR10/>;
+    dc:modified '2009-10-01T12:01:52'^^xsd:dateTime ;
+    skos:altLabel 'TR10'^^xsd:string ;
+    skos:prefLabel 'RED LIGHT TRANSMISSION 10CM'@en ;
+    skos:definition 'The proportion of transmitted red light that passes through 10cm of a water body.'@en ;
+    skos:notation 'SDN:P09::TR10'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NUMN/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NUMN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NUMN/>;
+    dc:modified '2009-09-18T12:11:46'^^xsd:dateTime ;
+    skos:altLabel 'NUMN'^^xsd:string ;
+    skos:prefLabel 'NUMBER OF PARTICLES >0.7UM'@en ;
+    skos:definition 'The number of particles in the >7 micron size class in a sample of suspended particles.'@en ;
+    skos:notation 'SDN:P09::NUMN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/SAMA/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/SAMA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/SAMA/>;
+    dc:modified '2009-09-18T12:11:46'^^xsd:dateTime ;
+    skos:altLabel 'SAMA'^^xsd:string ;
+    skos:prefLabel 'SIGNAL RETURN AMPLITUDE'@en ;
+    skos:definition 'The magnitude of the signal transmitted by an acoustic current meter returned to the instrument due to acoustic backscatter in the water column.'@en ;
+    skos:notation 'SDN:P09::SAMA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/SLVR/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/SLVR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/SLVR/>;
+    dc:modified '2009-09-18T12:11:46'^^xsd:dateTime ;
+    skos:altLabel 'SLVR'^^xsd:string ;
+    skos:prefLabel 'RESIDUAL (OBS-PRED SEA LEVEL)'@en ;
+    skos:definition 'The difference between the observed and predicted distances between the sea surface and an unspecified datum.'@en ;
+    skos:notation 'SDN:P09::SLVR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NUMP/4/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NUMP/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NUMP/>;
+    dc:modified '2009-08-03T14:45:54'^^xsd:dateTime ;
+    skos:altLabel 'NUMP'^^xsd:string ;
+    skos:prefLabel 'NUMBER OF PARTICLES 3-80UM'@en ;
+    skos:definition 'The number of particles in the 3-80 micron size class in a sample of suspended particals'@en ;
+    skos:notation 'SDN:P09::NUMP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/ZNTH/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/ZNTH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/ZNTH/>;
+    dc:modified '2009-08-03T12:29:44'^^xsd:dateTime ;
+    skos:altLabel 'ZNTH'^^xsd:string ;
+    skos:prefLabel 'TILT OF MEASUREMENT PLATFORM'@en ;
+    skos:definition 'The angle between true vertical and the vertical axis of the framework to which one or more sensors are attached'@en ;
+    skos:notation 'SDN:P09::ZNTH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NUNM/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NUNM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NUNM/>;
+    dc:modified '2009-08-03T12:29:04'^^xsd:dateTime ;
+    skos:altLabel 'NUNM'^^xsd:string ;
+    skos:prefLabel 'NUMBER OF PARTICLES >=480UM'@en ;
+    skos:definition 'The number of particles in the >=480 micron size class in a sample of suspended particles'@en ;
+    skos:notation 'SDN:P09::NUNM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MSMP/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MSMP/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MSMP/>;
+    dc:modified '2009-08-03T11:55:06'^^xsd:dateTime ;
+    skos:altLabel 'MSMP'^^xsd:string ;
+    skos:prefLabel 'MEAN SPHERIC DIAM. MEDIAN'@en ;
+    skos:definition 'The average diameter of spherical geometric approximations to the most abundant size class of suspended particulate material in the water column'@en ;
+    skos:notation 'SDN:P09::MSMP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/REDS/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/REDS/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/REDS/>;
+    dc:modified '2009-08-03T11:55:06'^^xsd:dateTime ;
+    skos:altLabel 'REDS'^^xsd:string ;
+    skos:prefLabel 'REDOX POTENTIAL'@en ;
+    skos:definition 'The tendency of sediment pore water to either gain or lose electrons when it is subject to change by introduction of a new species'@en ;
+    skos:notation 'SDN:P09::REDS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/RVFL/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/RVFL/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/RVFL/>;
+    dc:modified '2009-08-03T11:55:06'^^xsd:dateTime ;
+    skos:altLabel 'RVFL'^^xsd:string ;
+    skos:prefLabel 'RIVER FLOW RATE'@en ;
+    skos:definition 'The volume of water passing a given point in the course of a river per unit time.'@en ;
+    skos:notation 'SDN:P09::RVFL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TREW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TREW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TREW/>;
+    dc:modified '2009-08-03T11:55:06'^^xsd:dateTime ;
+    skos:altLabel 'TREW'^^xsd:string ;
+    skos:prefLabel 'DISSOLVED TRITIUM ERROR'@en ;
+    skos:definition 'The error in a measurement of the number of atoms of 3H per 1018 atoms of 1H in the dissolved phase of the water column'@en ;
+    skos:notation 'SDN:P09::TREW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TRIW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TRIW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TRIW/>;
+    dc:modified '2009-08-03T11:55:06'^^xsd:dateTime ;
+    skos:altLabel 'TRIW'^^xsd:string ;
+    skos:prefLabel 'DISSOLVED TRITIUM'@en ;
+    skos:definition 'The number of atoms of 3H per 1018 atoms of 1H in the dissolved phase of the water column'@en ;
+    skos:notation 'SDN:P09::TRIW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/VERT/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/VERT/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/VERT/>;
+    dc:modified '2009-08-03T11:55:06'^^xsd:dateTime ;
+    skos:altLabel 'VERT'^^xsd:string ;
+    skos:prefLabel 'VERTICAL DISPLACEMENT'@en ;
+    skos:definition 'The perpendicular distance from a reference point on th Earth\'s surface at a given instant.'@en ;
+    skos:notation 'SDN:P09::VERT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MSDP/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MSDP/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MSDP/>;
+    dc:modified '2009-08-03T11:54:57'^^xsd:dateTime ;
+    skos:altLabel 'MSDP'^^xsd:string ;
+    skos:prefLabel 'MEAN SPHERIC DIAM. OF PARTICLE'@en ;
+    skos:definition 'The average diameter of spherical geometric approximations to suspended particulate material in the water column'@en ;
+    skos:notation 'SDN:P09::MSDP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/LSCT/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/LSCT/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/LSCT/>;
+    dc:modified '2009-08-03T11:53:08'^^xsd:dateTime ;
+    skos:altLabel 'LSCT'^^xsd:string ;
+    skos:prefLabel 'LIGHT SCATTERING'@en ;
+    skos:definition 'The proportion of light lost between a transmitter and a receiver due to the process of scattering (haphazard deflection of photons due to collisions with particles)'@en ;
+    skos:notation 'SDN:P09::LSCT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/DPS1/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/DPS1/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/DPS1/>;
+    dc:modified '2009-06-13T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'DPS1'^^xsd:string ;
+    skos:prefLabel 'DEPTH BELOW BOTTOM-LOWER LIMIT'@en ;
+    skos:definition 'The maximum distance between part of a sample and the seabed such as the distance between the base of a core segment and the top of a core.'@en ;
+    skos:notation 'SDN:P09::DPS1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/LSIC/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/LSIC/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/LSIC/>;
+    dc:modified '2009-06-13T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'LSIC'^^xsd:string ;
+    skos:prefLabel 'LITHOGENIC CONTENT'@en ;
+    skos:definition 'The proportion of terrestrially-derived material contined in the suspended particulate material of a water body'@en ;
+    skos:notation 'SDN:P09::LSIC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/LTHF/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/LTHF/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/LTHF/>;
+    dc:modified '2009-06-13T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'LTHF'^^xsd:string ;
+    skos:prefLabel 'LITHOGENIC FRACTION FLUX'@en ;
+    skos:definition 'Mass of terrestrially-derived material in particles of all sizes sinking through a unit area of the water column in unit time.'@en ;
+    skos:notation 'SDN:P09::LTHF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NHRW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NHRW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NHRW/>;
+    dc:modified '2009-06-13T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'NHRW'^^xsd:string ;
+    skos:prefLabel 'AMMONIUM REGENERATION'@en ;
+    skos:definition 'The quantity (number of moles) of ammonium excreted per unit volume of a water body per unit time.'@en ;
+    skos:notation 'SDN:P09::NHRW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NORW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NORW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NORW/>;
+    dc:modified '2009-06-13T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'NORW'^^xsd:string ;
+    skos:prefLabel 'NITRIFICATION'@en ;
+    skos:definition 'The quantity (number of moles) of ammonium removed by oxidation from a unit volume of a water body per unit time.'@en ;
+    skos:notation 'SDN:P09::NORW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/OMMF/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/OMMF/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/OMMF/>;
+    dc:modified '2009-06-13T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'OMMF'^^xsd:string ;
+    skos:prefLabel 'PART. ORGANIC MATTER FLUX'@en ;
+    skos:definition 'Mass of organic material (material comprised from carbon compounds other than carbonate) in particles of all sizes sinking through a unit area of the water column in unit time.'@en ;
+    skos:notation 'SDN:P09::OMMF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/OPAP/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/OPAP/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/OPAP/>;
+    dc:modified '2009-06-13T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'OPAP'^^xsd:string ;
+    skos:prefLabel 'OPAL CONTENT'@en ;
+    skos:definition 'The mass of hydrated silica of biogenic origin per unit mass of suspended particulate matter'@en ;
+    skos:notation 'SDN:P09::OPAP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PETD/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PETD/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PETD/>;
+    dc:modified '2009-06-13T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'PETD'^^xsd:string ;
+    skos:prefLabel 'POTENTIAL EVAPOTRANSPIRATION'@en ;
+    skos:definition 'The amount of moisture, expressed as equivalent depth of water, which, if available, would be removed from a given land area by the sum of evaporation and plant transpiration.'@en ;
+    skos:notation 'SDN:P09::PETD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PHNS/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PHNS/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PHNS/>;
+    dc:modified '2009-06-13T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'PHNS'^^xsd:string ;
+    skos:prefLabel 'SEDIMENT PHENOLS'@en ;
+    skos:definition 'Mass of phenols (aromatic hydrocarbons bound to at least one hydroxyl group) per unit mass of dry sediment.'@en ;
+    skos:notation 'SDN:P09::PHNS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/SIOF/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/SIOF/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/SIOF/>;
+    dc:modified '2009-06-13T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'SIOF'^^xsd:string ;
+    skos:prefLabel 'PART. BIOGENIC Si FLUX'@en ;
+    skos:definition 'Mass of elemental silicon in biogenic silica (opal) in particles of all sizes sinking through a unit area of the water column in unit time.'@en ;
+    skos:notation 'SDN:P09::SIOF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/SIOS/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/SIOS/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/SIOS/>;
+    dc:modified '2009-06-13T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'SIOS'^^xsd:string ;
+    skos:prefLabel 'SEDIMENT BIOGENIC SiO2'@en ;
+    skos:definition 'The mass of hydrated silica of biogenic origin per unit mass of dry sediment'@en ;
+    skos:notation 'SDN:P09::SIOS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/SLCP/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/SLCP/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/SLCP/>;
+    dc:modified '2009-06-13T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'SLCP'^^xsd:string ;
+    skos:prefLabel 'PARTICULATE ORGANIC SILICA(SI)'@en ;
+    skos:definition 'The quantity (number of moles) of silicon in biogenic silica (opal) contained in particles of any size per unit volume of the water column'@en ;
+    skos:notation 'SDN:P09::SLCP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TNNF/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TNNF/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TNNF/>;
+    dc:modified '2009-06-13T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'TNNF'^^xsd:string ;
+    skos:prefLabel 'PART. TOTAL NITROGEN FLUX'@en ;
+    skos:definition 'Mass of nitrogen in all chemical forms in particles of all sizes sinking through a unit area of the water column in unit time.'@en ;
+    skos:notation 'SDN:P09::TNNF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TNNS/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TNNS/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TNNS/>;
+    dc:modified '2009-06-13T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'TNNS'^^xsd:string ;
+    skos:prefLabel 'SEDIMENT TOTAL NITROGEN'@en ;
+    skos:definition 'Mass of nitrogen in all chemical forms per unit mass of dry sediment.'@en ;
+    skos:notation 'SDN:P09::TNNS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TOMP/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TOMP/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TOMP/>;
+    dc:modified '2009-06-13T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'TOMP'^^xsd:string ;
+    skos:prefLabel 'ORGANIC MATTER CONTENT'@en ;
+    skos:definition 'Mass of organic material (material comprised from carbon compounds other than carbonate) per unit mass of dry sediment.'@en ;
+    skos:notation 'SDN:P09::TOMP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/VOCP/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/VOCP/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/VOCP/>;
+    dc:modified '2009-06-13T16:44:29'^^xsd:dateTime ;
+    skos:altLabel 'VOCP'^^xsd:string ;
+    skos:prefLabel 'VOLUME CONC. OF PARTICLES'@en ;
+    skos:definition 'The volume of suspended particulate material per unit volume of a water body.'@en ;
+    skos:notation 'SDN:P09::VOCP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/XCO2/4/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/XCO2/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/XCO2/>;
+    dc:modified '2009-05-29T09:26:47'^^xsd:dateTime ;
+    skos:altLabel 'XCO2'^^xsd:string ;
+    skos:prefLabel 'CO2 MOLE FRACTION IN DRY GAS'@en ;
+    skos:definition 'The number of moles of carbon dioxide per mole of an equilibrated air sample containing no water vapour.'@en ;
+    skos:notation 'SDN:P09::XCO2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NAVG/4/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NAVG/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NAVG/>;
+    dc:modified '2009-05-28T17:09:54'^^xsd:dateTime ;
+    skos:altLabel 'NAVG'^^xsd:string ;
+    skos:prefLabel 'AVERAGED DATA CYCLE NUMBER'@en ;
+    skos:definition 'Number of values included in the determination of a statistic such as an average'@en ;
+    skos:notation 'SDN:P09::NAVG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PCO2/4/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PCO2/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PCO2/>;
+    dc:modified '2009-05-28T15:32:34'^^xsd:dateTime ;
+    skos:altLabel 'PCO2'^^xsd:string ;
+    skos:prefLabel 'CO2 PART. PRES IN DRY/WET GAS'@en ;
+    skos:definition 'The partial pressure of carbon dioxide in air in equilibrium with a water sample'@en ;
+    skos:notation 'SDN:P09::PCO2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/H2OS/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/H2OS/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/H2OS/>;
+    dc:modified '2009-05-28T15:24:09'^^xsd:dateTime ;
+    skos:altLabel 'H2OS'^^xsd:string ;
+    skos:prefLabel 'WATER CONTENT'@en ;
+    skos:definition 'Mass of water per unit mass of dry sediment.'@en ;
+    skos:notation 'SDN:P09::H2OS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NFAW/4/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NFAW/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NFAW/>;
+    dc:modified '2009-05-28T10:05:29'^^xsd:dateTime ;
+    skos:altLabel 'NFAW'^^xsd:string ;
+    skos:prefLabel 'AUTOTROPHIC NANOFLAGELLATES'@en ;
+    skos:definition 'The number of cells identified as nanoflagellates (cells 2-20 microns with flagella) able to obtain energy by photosynthesis per unit volume of a water body.'@en ;
+    skos:notation 'SDN:P09::NFAW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NFCW/4/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NFCW/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NFCW/>;
+    dc:modified '2009-05-28T10:05:29'^^xsd:dateTime ;
+    skos:altLabel 'NFCW'^^xsd:string ;
+    skos:prefLabel 'NUMBER OF SW NANOFLAGELLATES'@en ;
+    skos:definition 'The number of cells identified as nanoflagellates (cells 2-20 microns with flagella) per unit volume of a water body.'@en ;
+    skos:notation 'SDN:P09::NFCW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NFHW/4/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NFHW/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NFHW/>;
+    dc:modified '2009-05-28T10:05:29'^^xsd:dateTime ;
+    skos:altLabel 'NFHW'^^xsd:string ;
+    skos:prefLabel 'HETEROTROPHIC NANOFLAGELLATES'@en ;
+    skos:definition 'The number of cells identified as nanoflagellates (cells 2-20 microns with flagella) unable to obtain energy by photosynthesis per unit volume of a water body.'@en ;
+    skos:notation 'SDN:P09::NFHW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/GPMP/4/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/GPMP/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/GPMP/>;
+    dc:modified '2009-05-27T14:59:44'^^xsd:dateTime ;
+    skos:altLabel 'GPMP'^^xsd:string ;
+    skos:prefLabel 'TOTAL SUSP. PART. MATTER/GLASS'@en ;
+    skos:definition 'Mass of suspended particulate matter per unit volume of a water body that are trapprd on a GF/F filter'@en ;
+    skos:notation 'SDN:P09::GPMP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PTZF/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PTZF/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PTZF/>;
+    dc:modified '2009-05-27T09:46:59'^^xsd:dateTime ;
+    skos:altLabel 'PTZF'^^xsd:string ;
+    skos:prefLabel 'PROTOZOA PPC FLUX'@en ;
+    skos:definition 'Mass of carbon contained in cells identified as members of Kingdom Protozoa settling through unit area of a water body in unit time.'@en ;
+    skos:notation 'SDN:P09::PTZF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/SNCW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/SNCW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/SNCW/>;
+    dc:modified '2009-05-27T09:44:23'^^xsd:dateTime ;
+    skos:altLabel 'SNCW'^^xsd:string ;
+    skos:prefLabel 'NUMBER OF SW SYNECHOCOCCUS'@en ;
+    skos:definition 'The number of cells identified as members of Genus Synechococcus living in a unit volume of a water body'@en ;
+    skos:notation 'SDN:P09::SNCW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PRCW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PRCW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PRCW/>;
+    dc:modified '2009-05-27T09:42:07'^^xsd:dateTime ;
+    skos:altLabel 'PRCW'^^xsd:string ;
+    skos:prefLabel 'NUMBER OF SW PROCHLOROCOCCUS'@en ;
+    skos:definition 'The number of cells identified as members of Genus Prochlorococcus living in a unit volume of a water body'@en ;
+    skos:notation 'SDN:P09::PRCW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/FLPF/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/FLPF/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/FLPF/>;
+    dc:modified '2009-05-27T08:50:15'^^xsd:dateTime ;
+    skos:altLabel 'FLPF'^^xsd:string ;
+    skos:prefLabel 'FLAGELLATES PPC FLUX'@en ;
+    skos:definition 'Mass of carbon contained in cells with flagella settling through unit area of a water body in unit time.'@en ;
+    skos:notation 'SDN:P09::FLPF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/COPF/4/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/COPF/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/COPF/>;
+    dc:modified '2009-05-27T08:41:52'^^xsd:dateTime ;
+    skos:altLabel 'COPF'^^xsd:string ;
+    skos:prefLabel 'COCCOLITHOPHORIDAE PPC FLUX'@en ;
+    skos:definition 'Mass of carbon contained in cells identified as coccolithophorids settling through unit area of a water body in unit time.'@en ;
+    skos:notation 'SDN:P09::COPF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/COCW/4/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/COCW/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/COCW/>;
+    dc:modified '2009-05-27T08:41:10'^^xsd:dateTime ;
+    skos:altLabel 'COCW'^^xsd:string ;
+    skos:prefLabel 'NUMBER OF SW COCCOLITHOPHORIDS'@en ;
+    skos:definition 'The number of cells identified as coccolithophorids living in a unit volume of a water body'@en ;
+    skos:notation 'SDN:P09::COCW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/EPMP/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/EPMP/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/EPMP/>;
+    dc:modified '2009-05-26T10:41:50'^^xsd:dateTime ;
+    skos:altLabel 'EPMP'^^xsd:string ;
+    skos:prefLabel 'TOTAL SUSP. PART. MATTER/ESTER'@en ;
+    skos:definition 'Mass of suspended particulate matter per unit volume of a water body that are trapped on a cellulose ester filter'@en ;
+    skos:notation 'SDN:P09::EPMP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/FCO2/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/FCO2/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/FCO2/>;
+    dc:modified '2009-05-26T10:41:50'^^xsd:dateTime ;
+    skos:altLabel 'FCO2'^^xsd:string ;
+    skos:prefLabel 'CO2 FUGACITY'@en ;
+    skos:definition 'Fugacity (partial pressure corrected for non-ideality of gases) of carbon dioxide in air that is in equilibrium with a seawater sample.'@en ;
+    skos:notation 'SDN:P09::FCO2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/HBAW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/HBAW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/HBAW/>;
+    dc:modified '2009-05-26T10:41:50'^^xsd:dateTime ;
+    skos:altLabel 'HBAW'^^xsd:string ;
+    skos:prefLabel 'NB OF HETEROTROPHIC BACTERIA'@en ;
+    skos:definition 'The number of cells identified as bacteria unable to obtain energy by photosynthesis per unit volume of a water body.'@en ;
+    skos:notation 'SDN:P09::HBAW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/HEDE/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/HEDE/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/HEDE/>;
+    dc:modified '2009-05-26T10:41:50'^^xsd:dateTime ;
+    skos:altLabel 'HEDE'^^xsd:string ;
+    skos:prefLabel 'HELIUM ISOTOPIC RATIO ERROR'@en ;
+    skos:definition 'Experimental error in measurements of the isotopic enrichment (1000*(sample ratio - natural ratio)/(natural ratio)) of 3He in the helium dissolved in a water body.'@en ;
+    skos:notation 'SDN:P09::HEDE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/HEDW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/HEDW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/HEDW/>;
+    dc:modified '2009-05-26T10:41:50'^^xsd:dateTime ;
+    skos:altLabel 'HEDW'^^xsd:string ;
+    skos:prefLabel 'HELIUM DEV. OF ISOTOPIC RATIO'@en ;
+    skos:definition 'Standard deviation of replicate measurements of the isotopic enrichment (1000*(sample ratio - natural ratio)/(natural ratio)) of 3He in the helium dissolved in a water body.'@en ;
+    skos:notation 'SDN:P09::HEDW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/LIPI/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/LIPI/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/LIPI/>;
+    dc:modified '2009-05-26T10:41:50'^^xsd:dateTime ;
+    skos:altLabel 'LIPI'^^xsd:string ;
+    skos:prefLabel 'LIPIDS IN THE WATER COLUMN'@en ;
+    skos:definition 'Mass of lipids (fat-like substances characterized by their insolubility in water and solubility in organic solvents) per unit volume of a water body in particles of any size.'@en ;
+    skos:notation 'SDN:P09::LIPI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/LIPS/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/LIPS/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/LIPS/>;
+    dc:modified '2009-05-26T10:41:50'^^xsd:dateTime ;
+    skos:altLabel 'LIPS'^^xsd:string ;
+    skos:prefLabel 'SEDIMENT LIPIDS'@en ;
+    skos:definition 'Mass of lipids (fat-like substances characterized by their insolubility in water and solubility in organic solvents) per unit mass of dry sediment.'@en ;
+    skos:notation 'SDN:P09::LIPS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MSZW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MSZW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MSZW/>;
+    dc:modified '2009-05-26T10:41:50'^^xsd:dateTime ;
+    skos:altLabel 'MSZW'^^xsd:string ;
+    skos:prefLabel 'MESOZOOPLANCTON DRY WEIGHT'@en ;
+    skos:definition 'The mass of the dried remains of planktonic animals sized between 200 and 2000 microns collected from a unit volume of a water body.'@en ;
+    skos:notation 'SDN:P09::MSZW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/N15D/4/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/N15D/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/N15D/>;
+    dc:modified '2009-05-26T10:41:50'^^xsd:dateTime ;
+    skos:altLabel 'N15D'^^xsd:string ;
+    skos:prefLabel 'DELTA 15N (15N/14N)'@en ;
+    skos:definition 'The isotopic enrichment (1000*(sample 15/14 ratio - natural ratio)/(natural ratio)) of 15N in the nitorgen held in particles of all sizes in a water body.'@en ;
+    skos:notation 'SDN:P09::N15D'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/OXIR/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/OXIR/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/OXIR/>;
+    dc:modified '2009-05-26T10:41:50'^^xsd:dateTime ;
+    skos:altLabel 'OXIR'^^xsd:string ;
+    skos:prefLabel 'ISOTOPIC RATIO O18/O16'@en ;
+    skos:definition 'The isotopic enrichment (1000*(sample 18/16 ratio - natural ratio)/(natural ratio)) of 18O in oxygen dissolved in a water body.'@en ;
+    skos:notation 'SDN:P09::OXIR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PHCW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PHCW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PHCW/>;
+    dc:modified '2009-05-26T10:41:50'^^xsd:dateTime ;
+    skos:altLabel 'PHCW'^^xsd:string ;
+    skos:prefLabel 'PHYTOPLANKTON ABUNDANCE'@en ;
+    skos:definition 'The number of cells identified as phytoplankton (planktonic cells able to obtain energy by photosynthesis) per unit volume of a water body.'@en ;
+    skos:notation 'SDN:P09::PHCW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PROT/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PROT/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PROT/>;
+    dc:modified '2009-05-26T10:41:50'^^xsd:dateTime ;
+    skos:altLabel 'PROT'^^xsd:string ;
+    skos:prefLabel 'PROTEIN'@en ;
+    skos:definition 'The mass of protein (compounds made up of amino acids linked by peptide bonds) contained in particulate material of any size per unit volume of a water body.'@en ;
+    skos:notation 'SDN:P09::PROT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/SACC/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/SACC/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/SACC/>;
+    dc:modified '2009-05-26T10:41:50'^^xsd:dateTime ;
+    skos:altLabel 'SACC'^^xsd:string ;
+    skos:prefLabel 'SALINITY ACCURACY'@en ;
+    skos:definition 'Estimate of the deviation of salinity measurements from the true value'@en ;
+    skos:notation 'SDN:P09::SACC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/SO4O/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/SO4O/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/SO4O/>;
+    dc:modified '2009-05-26T10:41:50'^^xsd:dateTime ;
+    skos:altLabel 'SO4O'^^xsd:string ;
+    skos:prefLabel 'PORE WATER SULFATE'@en ;
+    skos:definition 'The quantity of sulphate ions per unit volume of water extracted from an unconsolidated sediment sample.'@en ;
+    skos:notation 'SDN:P09::SO4O'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/VERR/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/VERR/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/VERR/>;
+    dc:modified '2009-05-26T10:41:50'^^xsd:dateTime ;
+    skos:altLabel 'VERR'^^xsd:string ;
+    skos:prefLabel 'VELOCITY ERROR'@en ;
+    skos:definition 'The estimate of error in a current velocity measurement by acoustic doppler current profiler.'@en ;
+    skos:notation 'SDN:P09::VERR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/WMSP/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/WMSP/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/WMSP/>;
+    dc:modified '2009-05-26T10:41:50'^^xsd:dateTime ;
+    skos:altLabel 'WMSP'^^xsd:string ;
+    skos:prefLabel 'WIND SPEED - MAX AVER PER 2 MN'@en ;
+    skos:definition 'Maximum windspeed measured during a two-minute period.'@en ;
+    skos:notation 'SDN:P09::WMSP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CUPH/2/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CUPH/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CUPH/>;
+    dc:modified '2009-05-14T13:10:10'^^xsd:dateTime ;
+    skos:altLabel 'CUPH'^^xsd:string ;
+    skos:prefLabel '14C PRODUCTION FILTER UNSPECIF'@en ;
+    skos:definition 'Mass of dissolved inorganic carbon taken up per hour by particulate matter of unknown size contained in a unit volume of a water body'@en ;
+    skos:notation 'SDN:P09::CUPH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CUPW/4/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CUPW/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CUPW/>;
+    dc:modified '2009-05-14T13:10:10'^^xsd:dateTime ;
+    skos:altLabel 'CUPW'^^xsd:string ;
+    skos:prefLabel '14C PRODUCTION FILTER UNSPECIF'@en ;
+    skos:definition 'Mass of dissolved inorganic carbon taken up per day by particulate matter of unknown size contained in a unit volume of a water body'@en ;
+    skos:notation 'SDN:P09::CUPW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CHTS/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CHTS/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CHTS/>;
+    dc:modified '2009-05-12T13:10:51'^^xsd:dateTime ;
+    skos:altLabel 'CHTS'^^xsd:string ;
+    skos:prefLabel 'SEDIMENT CARBOHYDRATES'@en ;
+    skos:definition 'Mass of all carbohydrates per unit mass of sediment.'@en ;
+    skos:notation 'SDN:P09::CHTS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CHTF/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CHTF/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CHTF/>;
+    dc:modified '2009-05-12T13:09:41'^^xsd:dateTime ;
+    skos:altLabel 'CHTF'^^xsd:string ;
+    skos:prefLabel 'PART. TOTAL CARBOHYDRATES FLUX'@en ;
+    skos:definition 'Mass of all carbohydrates in particles of all sizes sinking through a unit area of the water column in unit time'@en ;
+    skos:notation 'SDN:P09::CHTF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/GLUC/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/GLUC/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/GLUC/>;
+    dc:modified '2009-05-12T12:54:58'^^xsd:dateTime ;
+    skos:altLabel 'GLUC'^^xsd:string ;
+    skos:prefLabel 'CARBOHYDRATE'@en ;
+    skos:definition 'The mass of all carbohydrates in suspended particulate material per unit volume of the water column.'@en ;
+    skos:notation 'SDN:P09::GLUC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/C13D/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/C13D/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/C13D/>;
+    dc:modified '2009-05-12T12:27:46'^^xsd:dateTime ;
+    skos:altLabel 'C13D'^^xsd:string ;
+    skos:prefLabel 'DELTA 13C (13C/12C)'@en ;
+    skos:definition 'The isotopic enrichment (1000*(sample 13/12 ratio - natural ratio)/(natural ratio)) of 13C in the carbon held in particles of all sizes in the water column.'@en ;
+    skos:notation 'SDN:P09::C13D'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/IC13/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/IC13/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/IC13/>;
+    dc:modified '2009-05-12T12:25:08'^^xsd:dateTime ;
+    skos:altLabel 'IC13'^^xsd:string ;
+    skos:prefLabel 'DIC DELTA-13C'@en ;
+    skos:definition 'The isotopic enrichment (1000*(sample 13/12 ratio - natural ratio)/(natural ratio)) of 13C in the inorganic carbon dissolved in the water column.'@en ;
+    skos:notation 'SDN:P09::IC13'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/DAYX/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/DAYX/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/DAYX/>;
+    dc:modified '2009-04-26T14:40:44'^^xsd:dateTime ;
+    skos:altLabel 'DAYX'^^xsd:string ;
+    skos:prefLabel 'DAY WITHIN MONTH'@en ;
+    skos:definition 'A digit from 1 through 28, 29, 30 or 31 representing the number of whole days that have elapsed within a calendar month plus one.'@en ;
+    skos:notation 'SDN:P09::DAYX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/LGH3/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/LGH3/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/LGH3/>;
+    dc:modified '2009-04-26T14:40:44'^^xsd:dateTime ;
+    skos:altLabel 'LGH3'^^xsd:string ;
+    skos:prefLabel 'LIGHT IRRADIANCE CORRECTED PAR'@en ;
+    skos:definition 'Quantity of visible light photons per unit are per unit time travelling vertically downwards in the water column corrected for variations in water column surface illumination.'@en ;
+    skos:notation 'SDN:P09::LGH3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/LGH4/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/LGH4/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/LGH4/>;
+    dc:modified '2009-04-26T14:40:44'^^xsd:dateTime ;
+    skos:altLabel 'LGH4'^^xsd:string ;
+    skos:prefLabel 'LIGHT IRRADIANCE SURFACE PAR'@en ;
+    skos:definition 'Quantity of visible light photons per unit are per unit time travelling vertically downwards in the atmosphere.'@en ;
+    skos:notation 'SDN:P09::LGH4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/LGH5/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/LGH5/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/LGH5/>;
+    dc:modified '2009-04-26T14:40:44'^^xsd:dateTime ;
+    skos:altLabel 'LGH5'^^xsd:string ;
+    skos:prefLabel 'IMMERGED/SURF IRRADIANCE RATIO'@en ;
+    skos:definition 'Ratio of downwelling PAR irradiance at depth divided by downwelling PAR irradiance just below the surface determined from downwelling PAR in air using the protocol of Morel (1978) expressed as percentage.'@en ;
+    skos:notation 'SDN:P09::LGH5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/LGHT/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/LGHT/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/LGHT/>;
+    dc:modified '2009-04-26T14:40:44'^^xsd:dateTime ;
+    skos:altLabel 'LGHT'^^xsd:string ;
+    skos:prefLabel 'LIGHT IRRADIANCE IMMERGED PAR'@en ;
+    skos:definition 'Quantity of visible light photons per unit are per unit time travelling vertically downwards in the water column.'@en ;
+    skos:notation 'SDN:P09::LGHT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MNTH/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MNTH/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MNTH/>;
+    dc:modified '2009-04-26T14:40:44'^^xsd:dateTime ;
+    skos:altLabel 'MNTH'^^xsd:string ;
+    skos:prefLabel 'MONTH'@en ;
+    skos:definition 'A digit from 1 through 12 representing the months of the Gregorian calendar from January through December.'@en ;
+    skos:notation 'SDN:P09::MNTH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TIME/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TIME/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TIME/>;
+    dc:modified '2009-04-26T14:40:44'^^xsd:dateTime ;
+    skos:altLabel 'TIME'^^xsd:string ;
+    skos:prefLabel 'TIME WITHIN DAY'@en ;
+    skos:definition 'Time elapsed between 00:00 UT on the date of the event of interest and that event.'@en ;
+    skos:notation 'SDN:P09::TIME'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/YEAR/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/YEAR/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/YEAR/>;
+    dc:modified '2009-04-26T14:40:44'^^xsd:dateTime ;
+    skos:altLabel 'YEAR'^^xsd:string ;
+    skos:prefLabel 'YEAR'@en ;
+    skos:definition 'The number of Gregorian calendar years that have elapsed since the birth of Christ.'@en ;
+    skos:notation 'SDN:P09::YEAR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/DOPW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/DOPW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/DOPW/>;
+    dc:modified '2009-04-14T09:36:47'^^xsd:dateTime ;
+    skos:altLabel 'DOPW'^^xsd:string ;
+    skos:prefLabel 'DISSOLVED ORGANIC PHOSPHORUS'@en ;
+    skos:definition 'Quantity (i.e. number of moles) of organic phosphorus (i.e.phosphorus in carbon compounds) dissolved per unit volume of the water column.'@en ;
+    skos:notation 'SDN:P09::DOPW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/EWCS/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/EWCS/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/EWCS/>;
+    dc:modified '2009-04-14T09:36:47'^^xsd:dateTime ;
+    skos:altLabel 'EWCS'^^xsd:string ;
+    skos:prefLabel 'CURRENT EAST  STD. DEVIATION'@en ;
+    skos:definition 'Standard deviation of the speed of Eulerian current flow towards due east.'@en ;
+    skos:notation 'SDN:P09::EWCS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NHUW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NHUW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NHUW/>;
+    dc:modified '2009-04-14T09:36:47'^^xsd:dateTime ;
+    skos:altLabel 'NHUW'^^xsd:string ;
+    skos:prefLabel 'AMMONIUM UPTAKE'@en ;
+    skos:definition 'The quantity (i.e. number of moles) of dissolved ammonium taken up by the particulate phase in unit volume of the water column in unit time. Referred to as regenerated production.'@en ;
+    skos:notation 'SDN:P09::NHUW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NOUW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NOUW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NOUW/>;
+    dc:modified '2009-04-14T09:36:47'^^xsd:dateTime ;
+    skos:altLabel 'NOUW'^^xsd:string ;
+    skos:prefLabel 'NITRATE UPTAKE'@en ;
+    skos:definition 'The quantity (i.e. number of moles) of dissolved nitrate taken up by the particulate phase in unit volume of the water column in unit time. Referred to as new production.'@en ;
+    skos:notation 'SDN:P09::NOUW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NSCS/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NSCS/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NSCS/>;
+    dc:modified '2009-04-14T09:36:47'^^xsd:dateTime ;
+    skos:altLabel 'NSCS'^^xsd:string ;
+    skos:prefLabel 'CURRENT NORTH STD. DEVIATION'@en ;
+    skos:definition 'Standard deviation of the speed of Eulerian current flow towards true north.'@en ;
+    skos:notation 'SDN:P09::NSCS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PHTF/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PHTF/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PHTF/>;
+    dc:modified '2009-04-14T09:36:47'^^xsd:dateTime ;
+    skos:altLabel 'PHTF'^^xsd:string ;
+    skos:prefLabel 'PHAEOPIGMENTS VERTICAL FLUX'@en ;
+    skos:definition 'Mass of phaeopigments in particles of all sizes sinking through a unit area of the water column in unit time.'@en ;
+    skos:notation 'SDN:P09::PHTF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PP1P/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PP1P/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PP1P/>;
+    dc:modified '2009-04-14T09:36:47'^^xsd:dateTime ;
+    skos:altLabel 'PP1P'^^xsd:string ;
+    skos:prefLabel 'PART. ORGANIC PHOSPHORUS (P)'@en ;
+    skos:definition 'Quantity (i.e. number of moles) of organic phosphorus (i.e.phosphorus in carbon compounds) in suspended particulate material per unit mass of the water column.'@en ;
+    skos:notation 'SDN:P09::PP1P'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/SSAL/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/SSAL/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/SSAL/>;
+    dc:modified '2009-04-14T09:36:47'^^xsd:dateTime ;
+    skos:altLabel 'SSAL'^^xsd:string ;
+    skos:prefLabel 'SALINITY (PRE-1978 DEFN)'@en ;
+    skos:definition 'The mass of sodium chloride dissolved per unit mass of the water column (definition prior to introduction of PSS-78 Practical Salinity Scale).'@en ;
+    skos:notation 'SDN:P09::SSAL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/SWDR/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/SWDR/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/SWDR/>;
+    dc:modified '2009-04-14T09:36:47'^^xsd:dateTime ;
+    skos:altLabel 'SWDR'^^xsd:string ;
+    skos:prefLabel 'SWELL DIRECTION  REL TRUE N.'@en ;
+    skos:definition 'Direction from which swell is coming relative to True North.'@en ;
+    skos:notation 'SDN:P09::SWDR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/SWHT/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/SWHT/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/SWHT/>;
+    dc:modified '2009-04-14T09:36:47'^^xsd:dateTime ;
+    skos:altLabel 'SWHT'^^xsd:string ;
+    skos:prefLabel 'SWELL HEIGHT'@en ;
+    skos:definition 'Height of the dominant swell above still water level.'@en ;
+    skos:notation 'SDN:P09::SWHT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/SWPR/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/SWPR/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/SWPR/>;
+    dc:modified '2009-04-14T09:36:47'^^xsd:dateTime ;
+    skos:altLabel 'SWPR'^^xsd:string ;
+    skos:prefLabel 'SWELL PERIOD'@en ;
+    skos:definition 'Period between successive swell maxima.'@en ;
+    skos:notation 'SDN:P09::SWPR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TDPW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TDPW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TDPW/>;
+    dc:modified '2009-04-14T09:36:47'^^xsd:dateTime ;
+    skos:altLabel 'TDPW'^^xsd:string ;
+    skos:prefLabel 'TOTAL DISSOLVED PHOSPHORUS'@en ;
+    skos:definition 'Quantity (i.e. number of moles) of total phosphorus (i.e.phosphorus in all chemical forms) dissolved per unit volume of the water column.'@en ;
+    skos:notation 'SDN:P09::TDPW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/VDIR/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/VDIR/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/VDIR/>;
+    dc:modified '2009-04-14T09:36:47'^^xsd:dateTime ;
+    skos:altLabel 'VDIR'^^xsd:string ;
+    skos:prefLabel 'WAVE DIRECTION REL. TRUE NORTH'@en ;
+    skos:definition 'Direction from which waves are coming relative to True North.'@en ;
+    skos:notation 'SDN:P09::VDIR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/VTDH/5/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/VTDH/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/VTDH/>;
+    dc:modified '2009-04-14T09:36:47'^^xsd:dateTime ;
+    skos:altLabel 'VTDH'^^xsd:string ;
+    skos:prefLabel 'SIGNIFICANT WAVE HEIGHT'@en ;
+    skos:definition 'Significant wave height as estimated by the Tucker Draper method (Draper L. (1963) Proc. Instn> Civ. Engnrs. 26 291-304.'@en ;
+    skos:notation 'SDN:P09::VTDH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/VTZA/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/VTZA/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/VTZA/>;
+    dc:modified '2009-04-14T09:36:47'^^xsd:dateTime ;
+    skos:altLabel 'VTZA'^^xsd:string ;
+    skos:prefLabel 'AVER ZERO CROSSING WAVE PERIOD'@en ;
+    skos:definition 'Avergae of the zero crossing intervals as obtained by dividing the record duration by the numer of times the water elevation crosses the mean record level in one direction.'@en ;
+    skos:notation 'SDN:P09::VTZA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/DRDD/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/DRDD/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/DRDD/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'DRDD'^^xsd:string ;
+    skos:prefLabel 'DURATION (DAYS)'@en ;
+    skos:definition 'The amount of time that has elapsed between the beginning and end of an event of interest.'@en ;
+    skos:notation 'SDN:P09::DRDD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/HEAD/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/HEAD/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/HEAD/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'HEAD'^^xsd:string ;
+    skos:prefLabel 'PLAT. HEADING REL. TRUE NORTH'@en ;
+    skos:definition 'The magnetically-corrected compass direction towards which a structure bearing sensors or sampling devices is pointing.'@en ;
+    skos:notation 'SDN:P09::HEAD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/HELD/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/HELD/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/HELD/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'HELD'^^xsd:string ;
+    skos:prefLabel 'DELTA HELIUM 3'@en ;
+    skos:definition 'The isotopic enrichment (1000*(sample ratio - natural ratio)/(natural ratio)) of 3He in the helium dissolved in the water column.'@en ;
+    skos:notation 'SDN:P09::HELD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/IODI/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/IODI/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/IODI/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'IODI'^^xsd:string ;
+    skos:prefLabel 'IODINE'@en ;
+    skos:definition 'The quantity (i.e. number of moles) of elemental iodine per unit volume of the water column.'@en ;
+    skos:notation 'SDN:P09::IODI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/ISMP/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/ISMP/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/ISMP/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'ISMP'^^xsd:string ;
+    skos:prefLabel 'INORGANIC SUSPENDED MATTER'@en ;
+    skos:definition 'The mass of non-combustible suspended particulate material per unit volume of the water column'@en ;
+    skos:notation 'SDN:P09::ISMP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/LATX/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/LATX/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/LATX/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'LATX'^^xsd:string ;
+    skos:prefLabel 'LATITUDE'@en ;
+    skos:definition 'The angular distance north or south from the equator, measured along the meridian of the point of interest.'@en ;
+    skos:notation 'SDN:P09::LATX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/LINC/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/LINC/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/LINC/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'LINC'^^xsd:string ;
+    skos:prefLabel 'LONG-WAVE INCOMING RADIATION'@en ;
+    skos:definition 'The electromagnetic radiation energy arriving at the Earth\'s surface with a wavelength greater than visible light.'@en ;
+    skos:notation 'SDN:P09::LINC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/LONX/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/LONX/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/LONX/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'LONX'^^xsd:string ;
+    skos:prefLabel 'LONGITUDE'@en ;
+    skos:definition 'The angular distance east or west east or west of Greenwich to the point of interest.'@en ;
+    skos:notation 'SDN:P09::LONX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/LTUW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/LTUW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/LTUW/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'LTUW'^^xsd:string ;
+    skos:prefLabel 'LEUCINE UPTAKE RATE'@en ;
+    skos:definition 'The rate at which leucine is taken from solution during incubation of a water sample.  This is taken as a proxy for bacterial production.'@en ;
+    skos:notation 'SDN:P09::LTUW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MALF/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MALF/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MALF/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'MALF'^^xsd:string ;
+    skos:prefLabel 'AL FLUX IN SETTLING PARTICLES'@en ;
+    skos:definition 'Mass of elemental aluminium in particles of all sizes sinking through a unit area of the water column in unit time.'@en ;
+    skos:notation 'SDN:P09::MALF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MCUF/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MCUF/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MCUF/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'MCUF'^^xsd:string ;
+    skos:prefLabel 'CU FLUX IN SETTLING PARTICLES'@en ;
+    skos:definition 'Mass of elemental copper in particles of all sizes sinking through a unit area of the water column in unit time.'@en ;
+    skos:notation 'SDN:P09::MCUF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MCUW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MCUW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MCUW/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'MCUW'^^xsd:string ;
+    skos:prefLabel 'DISSOLVED COPPER (Cu)'@en ;
+    skos:definition 'The quantity (number of moles) of copper in solution per unit volume of the water column.'@en ;
+    skos:notation 'SDN:P09::MCUW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MFEF/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MFEF/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MFEF/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'MFEF'^^xsd:string ;
+    skos:prefLabel 'FE FLUX IN SETTLING PARTICLES'@en ;
+    skos:definition 'Mass of elemental iron in particles of all sizes sinking through a unit area of the water column in unit time.'@en ;
+    skos:notation 'SDN:P09::MFEF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MMNF/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MMNF/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MMNF/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'MMNF'^^xsd:string ;
+    skos:prefLabel 'MN FLUX IN SETTLING PARTICLES'@en ;
+    skos:definition 'Mass of elemental manganese in particles of all sizes sinking through a unit area of the water column in unit time.'@en ;
+    skos:notation 'SDN:P09::MMNF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MNIW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MNIW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MNIW/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'MNIW'^^xsd:string ;
+    skos:prefLabel 'DISSOLVED NICKEL (Ni)'@en ;
+    skos:definition 'The quantity (number of moles) of nickel in solution per unit volume of the water column.'@en ;
+    skos:notation 'SDN:P09::MNIW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MPBF/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MPBF/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MPBF/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'MPBF'^^xsd:string ;
+    skos:prefLabel 'PB FLUX IN SETTLING PARTICLES'@en ;
+    skos:definition 'Mass of elemental lead in particles of all sizes sinking through a unit area of the water column in unit time.'@en ;
+    skos:notation 'SDN:P09::MPBF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/MZNF/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/MZNF/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/MZNF/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'MZNF'^^xsd:string ;
+    skos:prefLabel 'ZN FLUX IN SETTLING PARTICLES'@en ;
+    skos:definition 'Mass of elemental zinc in particles of all sizes sinking through a unit area of the water column in unit time.'@en ;
+    skos:notation 'SDN:P09::MZNF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/OSAT/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/OSAT/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/OSAT/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'OSAT'^^xsd:string ;
+    skos:prefLabel 'OXYGEN SATURATION'@en ;
+    skos:definition 'The concentration of dissolved oxygen expressed as a proportion of the oxygen concentration in water that is in equilibrium with the atmosphere.'@en ;
+    skos:notation 'SDN:P09::OSAT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/OSMP/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/OSMP/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/OSMP/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'OSMP'^^xsd:string ;
+    skos:prefLabel 'ORGANIC SUSPENDED MATTER'@en ;
+    skos:definition 'The mass of combustible suspended particulate material per unit volume of the water column'@en ;
+    skos:notation 'SDN:P09::OSMP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PERP/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PERP/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PERP/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'PERP'^^xsd:string ;
+    skos:prefLabel 'PERIDININE'@en ;
+    skos:definition 'The mass of peridinin per unit volume of the water column held in particles of any size.'@en ;
+    skos:notation 'SDN:P09::PERP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PHE2/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PHE2/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PHE2/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'PHE2'^^xsd:string ;
+    skos:prefLabel 'PHEOPHYTINE / 2 MICRON FILTER'@en ;
+    skos:definition 'Mass of phaeophytin per unit volume of the water column contained in plant material retained on a 2um filter.'@en ;
+    skos:notation 'SDN:P09::PHE2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PHE4/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PHE4/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PHE4/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'PHE4'^^xsd:string ;
+    skos:prefLabel 'PHEOPHYTINE / 10 MICRON FILTER'@en ;
+    skos:definition 'Mass of phaeophytin per unit volume of the water column contained in plant material retained on a 10um filter.'@en ;
+    skos:notation 'SDN:P09::PHE4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PHTP/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PHTP/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PHTP/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'PHTP'^^xsd:string ;
+    skos:prefLabel 'TOTAL PHEOPHYTINE'@en ;
+    skos:definition 'Mass of phaeophytin per unit volume of the water column contained in particles of any size.'@en ;
+    skos:notation 'SDN:P09::PHTP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PRRD/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PRRD/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PRRD/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'PRRD'^^xsd:string ;
+    skos:prefLabel 'PRECIPITATION RATE'@en ;
+    skos:definition 'The depth of water accumulating per unit time from any form of precipitation (rain, snow, hail) from the atmosphere.'@en ;
+    skos:notation 'SDN:P09::PRRD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PRRT/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PRRT/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PRRT/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'PRRT'^^xsd:string ;
+    skos:prefLabel 'PRECIPITATION RATE'@en ;
+    skos:definition 'The depth of water accumulating per unit time from any form of precipitation (rain, snow, hail) from the atmosphere.'@en ;
+    skos:notation 'SDN:P09::PRRT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TPAW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TPAW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TPAW/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'TPAW'^^xsd:string ;
+    skos:prefLabel 'DISS. TRIPHOSPHATE ADENOSINE'@en ;
+    skos:definition 'The mass of ATP (adenosine triphosphate) per unit volume of the water column.'@en ;
+    skos:notation 'SDN:P09::TPAW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TPHP/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TPHP/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TPHP/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'TPHP'^^xsd:string ;
+    skos:prefLabel 'TOTAL PHAEOPIGMENTS'@en ;
+    skos:definition 'The mass of all types of phaeopigment contained in particles of all sizes per unit volume of the water column.'@en ;
+    skos:notation 'SDN:P09::TPHP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TSMF/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TSMF/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TSMF/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'TSMF'^^xsd:string ;
+    skos:prefLabel 'TOTAL MASS FLUX'@en ;
+    skos:definition 'The mass of particulate material settling through unit area of the water column in unit time.'@en ;
+    skos:notation 'SDN:P09::TSMF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TSMP/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TSMP/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TSMP/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'TSMP'^^xsd:string ;
+    skos:prefLabel 'TOTAL SUSPENDED MATTER'@en ;
+    skos:definition 'The mass of suspended particulate material per unit volume of the water column.'@en ;
+    skos:notation 'SDN:P09::TSMP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/UPTH/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/UPTH/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/UPTH/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'UPTH'^^xsd:string ;
+    skos:prefLabel 'BACTERIAL PRODUCTION(THYM. UP)'@en ;
+    skos:definition 'The rate at which thymidine is taken from solution during incubation of a water sample.  This is taken as a proxy for bacterial production.'@en ;
+    skos:notation 'SDN:P09::UPTH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/UPTS/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/UPTS/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/UPTS/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'UPTS'^^xsd:string ;
+    skos:prefLabel 'BACT. PROD. STANDARD DEVIATION'@en ;
+    skos:definition 'The standard deviation of the rate at which thymidine is taken from solution during incubation of a water sample.'@en ;
+    skos:notation 'SDN:P09::UPTS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/UREA/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/UREA/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/UREA/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'UREA'^^xsd:string ;
+    skos:prefLabel 'UREA'@en ;
+    skos:definition 'The quantity (i.e. number of moles) of urea dissolved per unit volume of the water column.'@en ;
+    skos:notation 'SDN:P09::UREA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/VCSP/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/VCSP/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/VCSP/>;
+    dc:modified '2009-04-08T09:11:19'^^xsd:dateTime ;
+    skos:altLabel 'VCSP'^^xsd:string ;
+    skos:prefLabel 'VERTICAL CURRENT SPEED'@en ;
+    skos:definition 'The rate at which water flows vertically in the water column.'@en ;
+    skos:notation 'SDN:P09::VCSP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/ETDD/4/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/ETDD/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/ETDD/>;
+    dc:modified '2009-04-06T20:33:52'^^xsd:dateTime ;
+    skos:altLabel 'ETDD'^^xsd:string ;
+    skos:prefLabel 'ELLAPSED TIME'@en ;
+    skos:definition 'The amount of time passed since an unspecified origin'@en ;
+    skos:notation 'SDN:P09::ETDD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/FLU1/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/FLU1/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/FLU1/>;
+    dc:modified '2009-04-06T20:23:52'^^xsd:dateTime ;
+    skos:altLabel 'FLU1'^^xsd:string ;
+    skos:prefLabel 'FLUORESCENCE'@en ;
+    skos:definition 'The voltage output from a fluorometer deployed in the water column.'@en ;
+    skos:notation 'SDN:P09::FLU1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/FLU2/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/FLU2/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/FLU2/>;
+    dc:modified '2009-04-06T20:23:52'^^xsd:dateTime ;
+    skos:altLabel 'FLU2'^^xsd:string ;
+    skos:prefLabel 'FLUORESCENCE'@en ;
+    skos:definition 'The amount of radiation generated in the water column in response to higher energy radiation transmission expressed as pigment concentration based on a nominal calibration.'@en ;
+    skos:notation 'SDN:P09::FLU2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/FLU3/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/FLU3/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/FLU3/>;
+    dc:modified '2009-04-06T20:23:52'^^xsd:dateTime ;
+    skos:altLabel 'FLU3'^^xsd:string ;
+    skos:prefLabel 'FLUORESCENCE'@en ;
+    skos:definition 'The amount of radiation generated in the water column in response to higher energy radiation transmission expressed relative to the amount generated by that pulse in a standard solution of fluorescein.'@en ;
+    skos:notation 'SDN:P09::FLU3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/FLUO/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/FLUO/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/FLUO/>;
+    dc:modified '2009-04-06T20:23:52'^^xsd:dateTime ;
+    skos:altLabel 'FLUO'^^xsd:string ;
+    skos:prefLabel 'FLUORESCENCE'@en ;
+    skos:definition 'The amount of radiation generated in the water column in response to higher energy radiation transmission expressed relative to an unspecified baseline.'@en ;
+    skos:notation 'SDN:P09::FLUO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/HEEW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/HEEW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/HEEW/>;
+    dc:modified '2009-04-06T20:23:52'^^xsd:dateTime ;
+    skos:altLabel 'HEEW'^^xsd:string ;
+    skos:prefLabel 'DISSOLVED HELIUM ERROR'@en ;
+    skos:definition 'Observational error of the quantity (i.e. number of moles) of helium gas dissolved per unit mass of the water column.'@en ;
+    skos:notation 'SDN:P09::HEEW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NEEW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NEEW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NEEW/>;
+    dc:modified '2009-04-06T20:23:52'^^xsd:dateTime ;
+    skos:altLabel 'NEEW'^^xsd:string ;
+    skos:prefLabel 'DISSOLVED NEON ERROR'@en ;
+    skos:definition 'Observational error of the quantity (i.e. number of moles) of neon gas dissolved per unit mass of the water column.'@en ;
+    skos:notation 'SDN:P09::NEEW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/SVEL/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/SVEL/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/SVEL/>;
+    dc:modified '2009-04-06T20:23:52'^^xsd:dateTime ;
+    skos:altLabel 'SVEL'^^xsd:string ;
+    skos:prefLabel 'SOUND VELOCITY'@en ;
+    skos:definition 'The rate at which sound travels through the water column.'@en ;
+    skos:notation 'SDN:P09::SVEL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TUR2/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TUR2/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TUR2/>;
+    dc:modified '2009-04-06T20:23:52'^^xsd:dateTime ;
+    skos:altLabel 'TUR2'^^xsd:string ;
+    skos:prefLabel 'LIGHT ATTENUATION COEFFICIENT'@en ;
+    skos:definition 'The rate per unit length at which the intensity of a radiation decreases when transmitted through the water column.'@en ;
+    skos:notation 'SDN:P09::TUR2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TUR3/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TUR3/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TUR3/>;
+    dc:modified '2009-04-06T20:23:52'^^xsd:dateTime ;
+    skos:altLabel 'TUR3'^^xsd:string ;
+    skos:prefLabel 'LIGHT TRANSMISSION'@en ;
+    skos:definition 'The proportion of transmitted radiation reaching a receiver after passing through an unspecified length of the water column.'@en ;
+    skos:notation 'SDN:P09::TUR3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TUR4/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TUR4/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TUR4/>;
+    dc:modified '2009-04-06T20:23:52'^^xsd:dateTime ;
+    skos:altLabel 'TUR4'^^xsd:string ;
+    skos:prefLabel 'TURBIDITY'@en ;
+    skos:definition 'Estimate of suspended sediment concentration based on the proportion of a light transmission in the water column that is reflected back to a co-located receiver'@en ;
+    skos:notation 'SDN:P09::TUR4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TUR5/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TUR5/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TUR5/>;
+    dc:modified '2009-04-06T20:23:52'^^xsd:dateTime ;
+    skos:altLabel 'TUR5'^^xsd:string ;
+    skos:prefLabel 'TURBIDITY'@en ;
+    skos:definition 'Estimate of suspended sediment concentration based on the proportion of a light transmission in the water column that is reflected back to a co-located receiver'@en ;
+    skos:notation 'SDN:P09::TUR5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TUR6/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TUR6/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TUR6/>;
+    dc:modified '2009-04-06T20:23:52'^^xsd:dateTime ;
+    skos:altLabel 'TUR6'^^xsd:string ;
+    skos:prefLabel 'TURBIDITY'@en ;
+    skos:definition 'Estimate of suspended sediment concentration based on the proportion of a light transmission in the water column that is reflected back to a co-located receiver'@en ;
+    skos:notation 'SDN:P09::TUR6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/SAND/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/SAND/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/SAND/>;
+    dc:modified '2009-01-16T12:35:02'^^xsd:dateTime ;
+    skos:altLabel 'SAND'^^xsd:string ;
+    skos:prefLabel 'SAND IN THE SEDIMENT'@en ;
+    skos:definition 'Proportion of particles in a sediment sample that are in the Wentworth sand size fraction (size between 63um and 2mm)'@en ;
+    skos:notation 'SDN:P09::SAND'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/SILT/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/SILT/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/SILT/>;
+    dc:modified '2009-01-16T12:35:00'^^xsd:dateTime ;
+    skos:altLabel 'SILT'^^xsd:string ;
+    skos:prefLabel 'SILT IN THE SEDIMENT'@en ;
+    skos:definition 'Proportion of particles in a sediment sample that are in the Wentworth silt size fraction (size between 4 and 63um)'@en ;
+    skos:notation 'SDN:P09::SILT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CLAY/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CLAY/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CLAY/>;
+    dc:modified '2009-01-16T12:34:59'^^xsd:dateTime ;
+    skos:altLabel 'CLAY'^^xsd:string ;
+    skos:prefLabel 'CLAY IN THE SEDIMENT'@en ;
+    skos:definition 'Proportion of particles in a sediment sample that are in the Wentworth clay size fraction (size less than 4um)'@en ;
+    skos:notation 'SDN:P09::CLAY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TH4W/4/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TH4W/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TH4W/>;
+    dc:modified '2009-01-09T13:09:26'^^xsd:dateTime ;
+    skos:altLabel 'TH4W'^^xsd:string ;
+    skos:prefLabel 'DISSOLVED 234TH'@en ;
+    skos:definition 'Number of disintegrations of 234Th nucleii dissolved in unit volume of a water body per unit time.'@en ;
+    skos:notation 'SDN:P09::TH4W'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/TH4P/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/TH4P/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/TH4P/>;
+    dc:modified '2009-01-09T13:08:46'^^xsd:dateTime ;
+    skos:altLabel 'TH4P'^^xsd:string ;
+    skos:prefLabel 'PARTICULATE 234TH ACTIVTY'@en ;
+    skos:definition 'Number of disintegrations of 234Th nucleii in the particulate material of any size suspended in unit volume of a water body per unit time'@en ;
+    skos:notation 'SDN:P09::TH4P'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/ETHP/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/ETHP/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/ETHP/>;
+    dc:modified '2009-01-09T13:07:54'^^xsd:dateTime ;
+    skos:altLabel 'ETHP'^^xsd:string ;
+    skos:prefLabel 'PARTICULATE 234 TH ACT. ERROR'@en ;
+    skos:definition 'Experimental error in the determination of the number of disintegrations of 234Th nucleii in the particulate material of any size suspended in unit volume of a water body per unit time'@en ;
+    skos:notation 'SDN:P09::ETHP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/ETHW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/ETHW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/ETHW/>;
+    dc:modified '2009-01-09T13:06:52'^^xsd:dateTime ;
+    skos:altLabel 'ETHW'^^xsd:string ;
+    skos:prefLabel 'DISSOLVED 234 TH ACT. ERROR'@en ;
+    skos:definition 'Experimental error in the determination of the number of disintegrations of 234Th nucleii dissolved in unit volume of a water body per unit time'@en ;
+    skos:notation 'SDN:P09::ETHW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/VIAW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/VIAW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/VIAW/>;
+    dc:modified '2009-01-09T10:51:56'^^xsd:dateTime ;
+    skos:altLabel 'VIAW'^^xsd:string ;
+    skos:prefLabel 'VIRUS ABUNDANCE IN SEA WATER'@en ;
+    skos:definition 'The number of organisms identified as viruses living in a unit volume of a water body'@en ;
+    skos:notation 'SDN:P09::VIAW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/GYRW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/GYRW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/GYRW/>;
+    dc:modified '2009-01-09T10:45:31'^^xsd:dateTime ;
+    skos:altLabel 'GYRW'^^xsd:string ;
+    skos:prefLabel 'NUMBER OF SW GYRODINIUM'@en ;
+    skos:definition 'The number of cells identified as members of Genus Gyrodinium living in a unit volume of a water body'@en ;
+    skos:notation 'SDN:P09::GYRW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/DINW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/DINW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/DINW/>;
+    dc:modified '2009-01-09T10:44:02'^^xsd:dateTime ;
+    skos:altLabel 'DINW'^^xsd:string ;
+    skos:prefLabel 'NUMBER OF SW DYNOPHYSIS'@en ;
+    skos:definition 'The number of cells identified as members of Genus Dinophysis living in a unit volume of a water body'@en ;
+    skos:notation 'SDN:P09::DINW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/DFPF/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/DFPF/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/DFPF/>;
+    dc:modified '2009-01-09T10:42:41'^^xsd:dateTime ;
+    skos:altLabel 'DFPF'^^xsd:string ;
+    skos:prefLabel 'DINOFLAGELLATES PPC FLUX'@en ;
+    skos:definition 'Mass of carbon contained in cells identified as members of Division Pyrrophycophyta settling through unit area of a water body in unit time.'@en ;
+    skos:notation 'SDN:P09::DFPF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CICW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CICW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CICW/>;
+    dc:modified '2009-01-09T10:41:40'^^xsd:dateTime ;
+    skos:altLabel 'CICW'^^xsd:string ;
+    skos:prefLabel 'NUMBER OF SW CILIATES'@en ;
+    skos:definition 'The number of cells identified as members of Class Ciliatea living in a unit volume of a water body'@en ;
+    skos:notation 'SDN:P09::CICW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/DIPF/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/DIPF/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/DIPF/>;
+    dc:modified '2009-01-09T10:37:50'^^xsd:dateTime ;
+    skos:altLabel 'DIPF'^^xsd:string ;
+    skos:prefLabel 'DIATOMS PPC FLUX'@en ;
+    skos:definition 'Mass of carbon contained in cells identified as members of Division Bacillariophyta settling through unit area of a water body in unit time.'@en ;
+    skos:notation 'SDN:P09::DIPF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CNDC/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CNDC/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CNDC/>;
+    dc:modified '2009-01-09T10:35:26'^^xsd:dateTime ;
+    skos:altLabel 'CNDC'^^xsd:string ;
+    skos:prefLabel 'ELECTRICAL CONDUCTIVITY'@en ;
+    skos:definition 'The degree to which electricity flows through unit length of a water body.'@en ;
+    skos:notation 'SDN:P09::CNDC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/DTCW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/DTCW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/DTCW/>;
+    dc:modified '2009-01-09T10:32:33'^^xsd:dateTime ;
+    skos:altLabel 'DTCW'^^xsd:string ;
+    skos:prefLabel 'NUMBER OF SW DIATOMS'@en ;
+    skos:definition 'The number of cells identified as members of Division Bacillariophyta living in a unit volume of a water body'@en ;
+    skos:notation 'SDN:P09::DTCW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/DFCW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/DFCW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/DFCW/>;
+    dc:modified '2009-01-09T10:25:35'^^xsd:dateTime ;
+    skos:altLabel 'DFCW'^^xsd:string ;
+    skos:prefLabel 'NUMBER OF SW DINOFLAGELLATES'@en ;
+    skos:definition 'The number of cells identified as members of Division Pyrrophycophyta living in a unit volume of a water body'@en ;
+    skos:notation 'SDN:P09::DFCW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/COPP/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/COPP/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/COPP/>;
+    dc:modified '2009-01-09T10:19:16'^^xsd:dateTime ;
+    skos:altLabel 'COPP'^^xsd:string ;
+    skos:prefLabel 'NUMBER OF COPEPODS'@en ;
+    skos:definition 'The number of animals identified as members of subclass Copepoda living in a unit volume of a water body'@en ;
+    skos:notation 'SDN:P09::COPP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CODW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CODW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CODW/>;
+    dc:modified '2009-01-09T10:15:15'^^xsd:dateTime ;
+    skos:altLabel 'CODW'^^xsd:string ;
+    skos:prefLabel 'CHEMICAL OXYGEN DEMAND'@en ;
+    skos:definition 'Quantity of oxygen required to oxidize all dissolved oxidizable chemical material contained in a unit volume of a water body.'@en ;
+    skos:notation 'SDN:P09::CODW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/DENS/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/DENS/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/DENS/>;
+    dc:modified '2009-01-09T09:49:28'^^xsd:dateTime ;
+    skos:altLabel 'DENS'^^xsd:string ;
+    skos:prefLabel 'DENSITY (Sigma-theta)'@en ;
+    skos:definition 'Density anomaly (sample density in kgm-3 minus 1000) of a water sample at surface pressure assuming that it has been raised to the surface adiabatically.'@en ;
+    skos:notation 'SDN:P09::DENS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CO3F/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CO3F/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CO3F/>;
+    dc:modified '2009-01-08T15:15:01'^^xsd:dateTime ;
+    skos:altLabel 'CO3F'^^xsd:string ;
+    skos:prefLabel 'PART. CaCO3 FLUX'@en ;
+    skos:definition 'Mass of calcium carbonate in particles of all sizes sinking through a unit area of the water column in unit time'@en ;
+    skos:notation 'SDN:P09::CO3F'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CHAF/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CHAF/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CHAF/>;
+    dc:modified '2009-01-08T15:14:26'^^xsd:dateTime ;
+    skos:altLabel 'CHAF'^^xsd:string ;
+    skos:prefLabel 'CHLOROPHYLL-A VERTICAL FLUX'@en ;
+    skos:definition 'Mass of all forms of chlorophyll-a in particles of all sizes sinking through a unit area of the water column in unit time'@en ;
+    skos:notation 'SDN:P09::CHAF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/C4UW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/C4UW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/C4UW/>;
+    dc:modified '2009-01-08T15:10:53'^^xsd:dateTime ;
+    skos:altLabel 'C4UW'^^xsd:string ;
+    skos:prefLabel '14C PRODUCTION/10 MICRON FILT.'@en ;
+    skos:definition 'Mass of dissolved inorganic carbon taken up per day by particulate matter with size >10 um contained in a unit volume of a water body'@en ;
+    skos:notation 'SDN:P09::C4UW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/C2UW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/C2UW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/C2UW/>;
+    dc:modified '2009-01-08T15:10:29'^^xsd:dateTime ;
+    skos:altLabel 'C2UW'^^xsd:string ;
+    skos:prefLabel '14C PRODUCTION/2 MICRON FILT.'@en ;
+    skos:definition 'Mass of dissolved inorganic carbon taken up per day by particulate matter with size >2 um contained in a unit volume of a water body'@en ;
+    skos:notation 'SDN:P09::C2UW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/C1UW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/C1UW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/C1UW/>;
+    dc:modified '2009-01-08T15:09:53'^^xsd:dateTime ;
+    skos:altLabel 'C1UW'^^xsd:string ;
+    skos:prefLabel '14C UPTAKE 0.2-1 MICRON'@en ;
+    skos:definition 'Mass of dissolved inorganic carbon taken up per day by particulate matter with size between 0.2 and 1 um contained in a unit volume of a water body'@en ;
+    skos:notation 'SDN:P09::C1UW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CDFW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CDFW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CDFW/>;
+    dc:modified '2009-01-08T15:07:55'^^xsd:dateTime ;
+    skos:altLabel 'CDFW'^^xsd:string ;
+    skos:prefLabel 'DARK FIXATION'@en ;
+    skos:definition 'Mass of dissolved inorganic carbon taken up per day by particulate matter contained in a unit volume of a water body in the dark'@en ;
+    skos:notation 'SDN:P09::CDFW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CHC3/4/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CHC3/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CHC3/>;
+    dc:modified '2009-01-08T14:57:44'^^xsd:dateTime ;
+    skos:altLabel 'CHC3'^^xsd:string ;
+    skos:prefLabel 'CHLOROPHYLL-C3'@en ;
+    skos:definition 'Mass of chlorophyll-c3 pigment per unit volume of the water column held in particles of any size.'@en ;
+    skos:notation 'SDN:P09::CHC3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CHLC/4/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CHLC/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CHLC/>;
+    dc:modified '2009-01-08T14:57:12'^^xsd:dateTime ;
+    skos:altLabel 'CHLC'^^xsd:string ;
+    skos:prefLabel 'CHLOROPHYLL-C TOTAL'@en ;
+    skos:definition 'Mass of all types of chlorophyll-c pigment per unit volume of the water column held in particles of any size.'@en ;
+    skos:notation 'SDN:P09::CHLC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CHLB/4/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CHLB/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CHLB/>;
+    dc:modified '2009-01-08T14:56:47'^^xsd:dateTime ;
+    skos:altLabel 'CHLB'^^xsd:string ;
+    skos:prefLabel 'CHLOROPHYLL-B TOTAL'@en ;
+    skos:definition 'Mass of all types of chlorophyll-b pigment per unit volume of the water column held in particles of any size.'@en ;
+    skos:notation 'SDN:P09::CHLB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CH1T/5/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CH1T/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CH1T/>;
+    dc:modified '2009-01-08T14:56:04'^^xsd:dateTime ;
+    skos:altLabel 'CH1T'^^xsd:string ;
+    skos:prefLabel 'CHLOROPHYLL TOTAL'@en ;
+    skos:definition 'The mass of all types of chlorophyll per unit mass of the water column held in particles of any size.'@en ;
+    skos:notation 'SDN:P09::CH1T'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CHLT/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CHLT/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CHLT/>;
+    dc:modified '2009-01-08T14:53:51'^^xsd:dateTime ;
+    skos:altLabel 'CHLT'^^xsd:string ;
+    skos:prefLabel 'CHLOROPHYLL-TOTAL'@en ;
+    skos:definition 'The mass of all types of chlorophyll per unit volume of the water column held in particles of any size.'@en ;
+    skos:notation 'SDN:P09::CHLT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CH2P/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CH2P/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CH2P/>;
+    dc:modified '2009-01-08T14:52:21'^^xsd:dateTime ;
+    skos:altLabel 'CH2P'^^xsd:string ;
+    skos:prefLabel 'CHL-B(LESS DIVINYLCHL-B)'@en ;
+    skos:definition 'The mass of all types of chlorophyll-b except divinyl chlorophyll-b per unit volume of the water column held in particles of any size.'@en ;
+    skos:notation 'SDN:P09::CH2P'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CH1P/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CH1P/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CH1P/>;
+    dc:modified '2009-01-08T14:52:12'^^xsd:dateTime ;
+    skos:altLabel 'CH1P'^^xsd:string ;
+    skos:prefLabel 'CHL-A(LESS DIVINYLCHL-A)'@en ;
+    skos:definition 'The mass of all types of chlorophyll-a except divinyl chlorophyll-a per unit volume of the water column held in particles of any size.'@en ;
+    skos:notation 'SDN:P09::CH1P'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/BCMW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/BCMW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/BCMW/>;
+    dc:modified '2009-01-08T14:05:01'^^xsd:dateTime ;
+    skos:altLabel 'BCMW'^^xsd:string ;
+    skos:prefLabel 'BACTERIAL BIOMASS IN SEA WATER'@en ;
+    skos:definition 'The mass of carbon contained in cells identified as bacteria occurring per unit volume of a water body'@en ;
+    skos:notation 'SDN:P09::BCMW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/BCCW/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/BCCW/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/BCCW/>;
+    dc:modified '2009-01-08T14:04:06'^^xsd:dateTime ;
+    skos:altLabel 'BCCW'^^xsd:string ;
+    skos:prefLabel 'NUMBER OF SW BACTERIA'@en ;
+    skos:definition 'The number of cells identified as bacteria occurring per unit volume of a water body'@en ;
+    skos:notation 'SDN:P09::BCCW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/BCCS/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/BCCS/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/BCCS/>;
+    dc:modified '2009-01-08T14:01:56'^^xsd:dateTime ;
+    skos:altLabel 'BCCS'^^xsd:string ;
+    skos:prefLabel 'NUMBER OF BACTERIA IN SEDIMENT'@en ;
+    skos:definition 'The number of cells identified as bacteria occurring per unit volume of sediment'@en ;
+    skos:notation 'SDN:P09::BCCS'^^xsd:string .

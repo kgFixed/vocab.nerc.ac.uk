@@ -1,0 +1,190 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S24/2018_01_01_00_00_00_2018_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S24/2017_01_01_00_00_00_2017_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2018-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S24/current/S24C112/2/> .
+<http://vocab.nerc.ac.uk/collection/S24/current/S24C112/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S24/current/S24C112/>;
+    dc:modified '2018-10-30T22:02:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fast sinking'@en ;
+    skos:definition 'Particles classified as fast-sinking.'@en ;
+    skos:notation 'SDN:S24::S24C112'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S24/current/S24C113/2/> .
+<http://vocab.nerc.ac.uk/collection/S24/current/S24C113/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S24/current/S24C113/>;
+    dc:modified '2018-10-30T22:02:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'slow sinking'@en ;
+    skos:definition 'Particles classified as fast-sinking.'@en ;
+    skos:notation 'SDN:S24::S24C113'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S24/current/S24C107/2/> .
+<http://vocab.nerc.ac.uk/collection/S24/current/S24C107/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S24/current/S24C107/>;
+    dc:modified '2018-10-30T21:04:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'slow sinking >0.2um'@en ;
+    skos:definition 'Particles classified as slow sinking that are retained by a 0.2 micron filter.'@en ;
+    skos:notation 'SDN:S24::S24C107'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S24/current/S24C108/2/> .
+<http://vocab.nerc.ac.uk/collection/S24/current/S24C108/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S24/current/S24C108/>;
+    dc:modified '2018-10-30T21:04:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'slow sinking >0.8um'@en ;
+    skos:definition 'Particles classified as slow sinking that are retained by a 0.8 micron filter.'@en ;
+    skos:notation 'SDN:S24::S24C108'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S24/current/S24C109/2/> .
+<http://vocab.nerc.ac.uk/collection/S24/current/S24C109/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S24/current/S24C109/>;
+    dc:modified '2018-10-30T21:04:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'slow sinking 0.2 0.8um'@en ;
+    skos:definition 'Particles classified as slow sinking that pass through a 0.8 micron filter and are retained by a 0.2 micron filter.'@en ;
+    skos:notation 'SDN:S24::S24C109'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S24/current/S24C105/2/> .
+<http://vocab.nerc.ac.uk/collection/S24/current/S24C105/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S24/current/S24C105/>;
+    dc:modified '2018-10-30T21:03:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fast sinking >0.8um'@en ;
+    skos:definition 'Particles classified as fast sinking that are retained by a 0.8 micron filter.'@en ;
+    skos:notation 'SDN:S24::S24C105'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S24/current/S24C106/2/> .
+<http://vocab.nerc.ac.uk/collection/S24/current/S24C106/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S24/current/S24C106/>;
+    dc:modified '2018-10-30T21:03:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fast sinking >0.2um'@en ;
+    skos:definition 'Particles classified as fast sinking that are retained by a 0.2 micron filter.'@en ;
+    skos:notation 'SDN:S24::S24C106'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S24/current/S24C111/2/> .
+<http://vocab.nerc.ac.uk/collection/S24/current/S24C111/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S24/current/S24C111/>;
+    dc:modified '2018-10-30T21:03:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fast sinking 0.2 0.8um'@en ;
+    skos:definition 'Particles classified as fast sinking that pass through a 0.8 micron filter and are retained by a 0.2 micron filter.'@en ;
+    skos:notation 'SDN:S24::S24C111'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S24/current/S24C110/1/> .
+<http://vocab.nerc.ac.uk/collection/S24/current/S24C110/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S24/current/S24C110/>;
+    dc:modified '2018-10-30T15:44:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'non-sinking 0.2-0.8um'@en ;
+    skos:definition 'Particles classified as non-sinking that pass through a 0.8 micron filter and are retained by a 0.2 micron filter.'@en ;
+    skos:notation 'SDN:S24::S24C110'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S24/current/S24C104/1/> .
+<http://vocab.nerc.ac.uk/collection/S24/current/S24C104/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S24/current/S24C104/>;
+    dc:modified '2018-10-30T15:41:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'non-sinking >0.8um'@en ;
+    skos:definition 'Particles classified as non-sinking that are retained by a 0.8 micron filter.'@en ;
+    skos:notation 'SDN:S24::S24C104'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S24/current/S24C103/1/> .
+<http://vocab.nerc.ac.uk/collection/S24/current/S24C103/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S24/current/S24C103/>;
+    dc:modified '2018-10-30T15:41:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'non-sinking >0.2um'@en ;
+    skos:definition 'Particles classified as non-sinking that are retained by a 0.2 micron filter.'@en ;
+    skos:notation 'SDN:S24::S24C103'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S24/current/S24C102/1/> .
+<http://vocab.nerc.ac.uk/collection/S24/current/S24C102/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S24/current/S24C102/>;
+    dc:modified '2018-07-11T13:18:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'non-sinking >GF/F'@en ;
+    skos:definition 'Particles classified as non-sinking that are retained by a GF/F glass fibre filter. Nominal pore size is 0.7um.'@en ;
+    skos:notation 'SDN:S24::S24C102'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S24/current/S24C101/1/> .
+<http://vocab.nerc.ac.uk/collection/S24/current/S24C101/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S24/current/S24C101/>;
+    dc:modified '2018-07-11T13:10:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fast sinking >GF/F'@en ;
+    skos:definition 'Particles classified as fast sinking that are retained by a GF/F glass fibre filter. Nominal pore size is 0.7um.'@en ;
+    skos:notation 'SDN:S24::S24C101'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S24/current/S24C100/1/> .
+<http://vocab.nerc.ac.uk/collection/S24/current/S24C100/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S24/current/S24C100/>;
+    dc:modified '2018-07-11T13:00:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'slow sinking >GF/F'@en ;
+    skos:definition 'Particles classified as slow sinking that are retained by a GF/F glass fibre filter. Nominal pore size is 0.7um.'@en ;
+    skos:notation 'SDN:S24::S24C100'^^xsd:string .

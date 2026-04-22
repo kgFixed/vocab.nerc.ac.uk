@@ -1,0 +1,361 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/OG1/2024_01_01_00_00_00_2026_04_22_15_36_41.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/OG1/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-22T15:36:41'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/PHASE/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/PHASE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/PHASE/>;
+    dc:modified '2026-02-12T16:18:39'^^xsd:dateTime ;
+    skos:altLabel 'PHASE'^^xsd:string ;
+    skos:prefLabel 'Identifier of glider phase'@en ;
+    skos:definition 'Derived from the glider\'s engineering state, glider phase reflects the state of glider behaviour. Accepted values range from 0 - 7, with the definitions available at: https://github.com/OceanGlidersCommunity/OG-format-user-manual/blob/main/vocabularyCollection/phase_translation_tables.md.'@en ;
+    skos:notation 'SDN:OG1::PHASE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/RBBP700/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/RBBP700/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/RBBP700/>;
+    dc:modified '2025-07-07T17:13:32'^^xsd:dateTime ;
+    skos:altLabel 'RAW_BACKSCATTERING700'^^xsd:string ;
+    skos:prefLabel 'Raw signal from backscattering sensor at 700 nanometers'@en ;
+    skos:definition 'Raw backscattering sensor signal (count) at 700 nm wavelength. Volume scattering scale factor has not been applied.'@en ;
+    skos:notation 'SDN:OG1::RBBP700'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/EDLAM/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/EDLAM/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/EDLAM/>;
+    dc:modified '2025-07-07T13:26:20'^^xsd:dateTime ;
+    skos:altLabel 'RAW_DOWNWELLING_IRRADIANCE'^^xsd:string ;
+    skos:prefLabel 'Raw downwelling irradiance at x nanometers'@en ;
+    skos:definition 'The raw output expressed in counts from an upward-facing cosine collector radiometer for one unspecified wavelength from the measured spectrum.'@en ;
+    skos:notation 'SDN:OG1::EDLAM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/BETABBP/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/BETABBP/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/BETABBP/>;
+    dc:modified '2025-07-07T10:59:57'^^xsd:dateTime ;
+    skos:altLabel 'BETA_BACKSCATTERING'^^xsd:string ;
+    skos:prefLabel 'Total angle specific volume from backscattering sensor at x nanometers'@en ;
+    skos:definition 'Total angle specific volume from backscattering sensor at unspecified wavelength.'@en ;
+    skos:notation 'SDN:OG1::BETABBP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/WATER_VELOC_FINAL_U/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/WATER_VELOC_FINAL_U/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/WATER_VELOC_FINAL_U/>;
+    dc:modified '2025-04-28T13:58:38'^^xsd:dateTime ;
+    skos:altLabel 'WATER_VELOC_FINAL_U'^^xsd:string ;
+    skos:prefLabel 'Eastward current velocity in the water body by dead reckoning and surface drift correction'@en ;
+    skos:definition 'The depth-averaged current in the x-axis using dead reckoning between two surfacings. Corrected for surface drift while the glider receives its first GPS fix at the surface.'@en ;
+    skos:notation 'SDN:OG1::WATER_VELOC_FINAL_U'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/WATER_VELOC_FINAL_V/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/WATER_VELOC_FINAL_V/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/WATER_VELOC_FINAL_V/>;
+    dc:modified '2025-04-28T13:58:01'^^xsd:dateTime ;
+    skos:altLabel 'WATER_VELOC_FINAL_V'^^xsd:string ;
+    skos:prefLabel 'Northward current velocity in the water body by dead reckoning and surface drift correction'@en ;
+    skos:definition 'The depth-averaged current in the y-axis using dead reckoning between two surfacings. Corrected for surface drift while the glider receives its first GPS fix at the surface.'@en ;
+    skos:notation 'SDN:OG1::WATER_VELOC_FINAL_V'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/OIL_VOL/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/OIL_VOL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/OIL_VOL/>;
+    dc:modified '2025-04-11T12:56:00'^^xsd:dateTime ;
+    skos:altLabel 'OIL_VOL'^^xsd:string ;
+    skos:prefLabel 'Oil volume in the measurement platform'@en ;
+    skos:definition 'The volume of oil in the external reservoir of the platform. A positive change in OIL_VOL represents moving oil from the internal reservoir (within the pressure casing) to the external reservoir, increasing the total volume of the platform.'@en ;
+    skos:notation 'SDN:OG1::OIL_VOL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/PRES_ENG/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/PRES_ENG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/PRES_ENG/>;
+    dc:modified '2025-04-11T12:55:58'^^xsd:dateTime ;
+    skos:altLabel 'PRES_ENG'^^xsd:string ;
+    skos:prefLabel 'Sea water pressure, equals 0 at sea-level by non temperature compensated platform pressure sensor'@en ;
+    skos:definition 'Pressure (spatial co-ordinate) exerted by the water body by non temperature compensated platform pressure sensor and corrected to read zero at sea level.'@en ;
+    skos:notation 'SDN:OG1::PRES_ENG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/HEADINGTN/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/HEADINGTN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/HEADINGTN/>;
+    dc:modified '2025-04-11T12:55:57'^^xsd:dateTime ;
+    skos:altLabel 'GLIDER_HEADING_TN'^^xsd:string ;
+    skos:prefLabel 'Orientation (horizontal relative to True North) of measurement platform {heading}'@en ;
+    skos:definition 'The rotation of a platform relative to its upward/Z axis relative to True North. Often referred to as yaw or bearing.'@en ;
+    skos:notation 'SDN:OG1::HEADINGTN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/WCUR_X/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/WCUR_X/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/WCUR_X/>;
+    dc:modified '2025-04-11T12:17:27'^^xsd:dateTime ;
+    skos:altLabel 'WATERCURRENTS_U'^^xsd:string ;
+    skos:prefLabel 'Eastward current velocity in the water body'@en ;
+    skos:definition 'The depth-averaged current in the x-axis using dead reckoning between two surfacings.'@en ;
+    skos:notation 'SDN:OG1::WCUR_X'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/WCUR_Y/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/WCUR_Y/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/WCUR_Y/>;
+    dc:modified '2025-04-11T12:17:27'^^xsd:dateTime ;
+    skos:altLabel 'WATERCURRENTS_V'^^xsd:string ;
+    skos:prefLabel 'Northward current velocity in the water body'@en ;
+    skos:definition 'The depth-averaged current in the y-axis using dead reckoning between two surfacings.'@en ;
+    skos:notation 'SDN:OG1::WCUR_Y'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/ALTITUDE/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/ALTITUDE/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/ALTITUDE/>;
+    dc:modified '2025-04-11T12:17:26'^^xsd:dateTime ;
+    skos:altLabel 'ALTITUDE'^^xsd:string ;
+    skos:prefLabel 'Height above bed in the water body'@en ;
+    skos:definition 'The vertical distance of a platform above the bed surface of a water body.'@en ;
+    skos:notation 'SDN:OG1::ALTITUDE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/PITCH/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/PITCH/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/PITCH/>;
+    dc:modified '2025-04-11T12:17:25'^^xsd:dateTime ;
+    skos:altLabel 'GLIDER_PITCH'^^xsd:string ;
+    skos:prefLabel 'Orientation (pitch) of measurement platform by inclinometer'@en ;
+    skos:definition 'The up/down rotation of a platform relative to it Y axis as measured by an inclinometer.'@en ;
+    skos:notation 'SDN:OG1::PITCH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/ROLL/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/ROLL/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/ROLL/>;
+    dc:modified '2025-04-11T12:17:24'^^xsd:dateTime ;
+    skos:altLabel 'GLIDER_ROLL'^^xsd:string ;
+    skos:prefLabel 'Orientation (roll angle) of measurement platform by inclinometer'@en ;
+    skos:definition 'The tilting rotation of a platform relative to its longitudinal/X axis as measured by an inclinometer.'@en ;
+    skos:notation 'SDN:OG1::ROLL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/HEADING/3/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/HEADING/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/HEADING/>;
+    dc:modified '2025-04-11T12:17:23'^^xsd:dateTime ;
+    skos:altLabel 'GLIDER_HEADING'^^xsd:string ;
+    skos:prefLabel 'Orientation (horizontal relative to magnetic north) of measurement platform {heading}'@en ;
+    skos:definition 'The rotation of a platform relative to its upward/Z axis relative to magnetic north. Often referred to as yaw or bearing.'@en ;
+    skos:notation 'SDN:OG1::HEADING'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/PHYCOCYANIN/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/PHYCOCYANIN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/PHYCOCYANIN/>;
+    dc:modified '2024-10-21T15:11:44'^^xsd:dateTime ;
+    skos:altLabel 'PHYCOCYANIN'^^xsd:string ;
+    skos:prefLabel 'Concentration of phycocyanin by fluorometer'@en ;
+    skos:definition 'Phycocyanin concentration per unit volume of fresh or salt water.'@en ;
+    skos:notation 'SDN:OG1::PHYCOCYANIN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/TCPURADP/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/TCPURADP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/TCPURADP/>;
+    dc:modified '2024-09-10T16:05:59'^^xsd:dateTime ;
+    skos:altLabel 'TEMP_CPU_RADIOM'^^xsd:string ;
+    skos:prefLabel 'Thermistor signal from radiometer'@en ;
+    skos:definition 'The raw analogue-to-digital converter output from a temperature sensor mounted on a CPU that is a component part of a radiometer.'@en ;
+    skos:notation 'SDN:OG1::TCPURADP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/FDOM/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/FDOM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/FDOM/>;
+    dc:modified '2024-09-09T11:33:13'^^xsd:dateTime ;
+    skos:altLabel 'FDOM'^^xsd:string ;
+    skos:prefLabel 'Concentration of coloured dissolved organic matter expressed as quinine sulphate equivalent (FDOM) in seawater'@en ;
+    skos:definition 'The quantity of the optically measurable component of coloured (chromophoric) dissolved organic matter (CDOM) that fluoresces when excited with near ultra-violet (UV) light, measured in a unit volume of salt water by calibration against a quinine sulphate proxy. Often referred to as fluorescent dissolved organic matter (FDOM) when expressed as quinine sulphate equivalent.'@en ;
+    skos:notation 'SDN:OG1::FDOM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/PHYC/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/PHYC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/PHYC/>;
+    dc:modified '2024-09-09T11:28:54'^^xsd:dateTime ;
+    skos:altLabel 'PHYCOERYTHRIN'^^xsd:string ;
+    skos:prefLabel 'Concentration of phycoerythrin by fluorometer'@en ;
+    skos:definition 'Phycoerythrin concentration per unit volume of fresh or salt water.'@en ;
+    skos:notation 'SDN:OG1::PHYC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/TCPUCHLA/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/TCPUCHLA/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/TCPUCHLA/>;
+    dc:modified '2024-09-09T11:04:12'^^xsd:dateTime ;
+    skos:altLabel 'TEMP_CPU_FLUOR_BACKSC'^^xsd:string ;
+    skos:prefLabel 'Thermistor signal from backscattering meter and/or fluorometer'@en ;
+    skos:definition 'The raw analogue-to-digital converter output from a temperature sensor mounted on a CPU that is a component part of a backscattering meter and/or fluorometer.'@en ;
+    skos:notation 'SDN:OG1::TCPUCHLA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/FLUOCHLA/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/FLUOCHLA/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/FLUOCHLA/>;
+    dc:modified '2024-09-09T09:25:51'^^xsd:dateTime ;
+    skos:altLabel 'FLUORESCENCE_CHLA'^^xsd:string ;
+    skos:prefLabel 'Raw signal from chlorophyll-a fluorometer'@en ;
+    skos:definition 'Raw fluorescence signal (count) from chlorophyll-a fluorometer.'@en ;
+    skos:notation 'SDN:OG1::FLUOCHLA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/LAT/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/LAT/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/LAT/>;
+    dc:modified '2024-09-09T09:06:07'^^xsd:dateTime ;
+    skos:altLabel 'LATITUDE'^^xsd:string ;
+    skos:prefLabel 'Latitude north'@en ;
+    skos:definition 'Latitude north.'@en ;
+    skos:notation 'SDN:OG1::LAT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/LAT_GPS/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/LAT_GPS/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/LAT_GPS/>;
+    dc:modified '2024-09-09T09:06:07'^^xsd:dateTime ;
+    skos:altLabel 'LATITUDE_GPS'^^xsd:string ;
+    skos:prefLabel 'GPS fixed latitude'@en ;
+    skos:definition 'Latitude north by unspecified GPS system.'@en ;
+    skos:notation 'SDN:OG1::LAT_GPS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/LON/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/LON/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/LON/>;
+    dc:modified '2024-09-09T09:06:07'^^xsd:dateTime ;
+    skos:altLabel 'LONGITUDE'^^xsd:string ;
+    skos:prefLabel 'Longitude east'@en ;
+    skos:definition 'Longitude east.'@en ;
+    skos:notation 'SDN:OG1::LON'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/LON_GPS/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/LON_GPS/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/LON_GPS/>;
+    dc:modified '2024-09-09T09:06:07'^^xsd:dateTime ;
+    skos:altLabel 'LONGITUDE_GPS'^^xsd:string ;
+    skos:prefLabel 'GPS fixed longitude'@en ;
+    skos:definition 'Longitude east by unspecified GPS system.'@en ;
+    skos:notation 'SDN:OG1::LON_GPS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/ED532/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/ED532/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/ED532/>;
+    dc:modified '2024-08-22T14:14:14'^^xsd:dateTime ;
+    skos:altLabel 'DOWN_IRRADIANCE532'^^xsd:string ;
+    skos:prefLabel 'Downwelling irradiance at 532 nanometers'@en ;
+    skos:definition 'The vertical component of light at 532nm wavelength travelling downwards.'@en ;
+    skos:notation 'SDN:OG1::ED532'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/ED655/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/ED655/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/ED655/>;
+    dc:modified '2024-07-31T15:21:42'^^xsd:dateTime ;
+    skos:altLabel 'DOWN_IRRADIANCE655'^^xsd:string ;
+    skos:prefLabel 'Downwelling irradiance at 655 nanometers'@en ;
+    skos:definition 'The vertical component of light at 655nm wavelength travelling downwards.'@en ;
+    skos:notation 'SDN:OG1::ED655'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/ED/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/ED/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/ED/>;
+    dc:modified '2024-07-30T13:34:16'^^xsd:dateTime ;
+    skos:altLabel 'DOWN_IRRADIANCE'^^xsd:string ;
+    skos:prefLabel 'Downwelling irradiance at x nanometers'@en ;
+    skos:definition 'The vertical component of light at the specified wavelength travelling downwards.'@en ;
+    skos:notation 'SDN:OG1::ED'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/ED380/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/ED380/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/ED380/>;
+    dc:modified '2024-07-30T13:34:16'^^xsd:dateTime ;
+    skos:altLabel 'DOWN_IRRADIANCE380'^^xsd:string ;
+    skos:prefLabel 'Downwelling irradiance at 380 nanometers'@en ;
+    skos:definition 'The vertical component of light at 380nm wavelength travelling downwards.'@en ;
+    skos:notation 'SDN:OG1::ED380'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/ED412/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/ED412/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/ED412/>;
+    dc:modified '2024-07-30T13:34:16'^^xsd:dateTime ;
+    skos:altLabel 'DOWN_IRRADIANCE412'^^xsd:string ;
+    skos:prefLabel 'Downwelling irradiance at 412 nanometers'@en ;
+    skos:definition 'The vertical component of light at 412nm wavelength travelling downwards.'@en ;
+    skos:notation 'SDN:OG1::ED412'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/ED443/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/ED443/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/ED443/>;
+    dc:modified '2024-07-30T13:34:16'^^xsd:dateTime ;
+    skos:altLabel 'DOWN_IRRADIANCE443'^^xsd:string ;
+    skos:prefLabel 'Downwelling irradiance at 443 nanometers'@en ;
+    skos:definition 'The vertical component of light at 443nm wavelength travelling downwards.'@en ;
+    skos:notation 'SDN:OG1::ED443'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/ED490/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/ED490/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/ED490/>;
+    dc:modified '2024-07-30T13:34:16'^^xsd:dateTime ;
+    skos:altLabel 'DOWN_IRRADIANCE490'^^xsd:string ;
+    skos:prefLabel 'Downwelling irradiance at 490 nanometers'@en ;
+    skos:definition 'The vertical component of light at 490nm wavelength travelling downwards.'@en ;
+    skos:notation 'SDN:OG1::ED490'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/ED555/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/ED555/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/ED555/>;
+    dc:modified '2024-07-30T13:34:16'^^xsd:dateTime ;
+    skos:altLabel 'DOWN_IRRADIANCE555'^^xsd:string ;
+    skos:prefLabel 'Downwelling irradiance at 555 nanometers'@en ;
+    skos:definition 'The vertical component of light at 555nm wavelength travelling downwards.'@en ;
+    skos:notation 'SDN:OG1::ED555'^^xsd:string .

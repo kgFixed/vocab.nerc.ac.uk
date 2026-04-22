@@ -1,0 +1,919 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C75/2011_01_01_00_00_00_2011_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C75/2009_01_01_00_00_00_2010_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2011-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/DWT/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/DWT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/DWT/>;
+    dc:modified '2011-12-07T09:02:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Dorset Wildlife Trust'@en ;
+    skos:definition 'Organisation founded in 1961 to protect wildlife and natural habitats in Dorset.'@en ;
+    skos:notation 'SDN:C75::DWT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/UWB/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/UWB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/UWB/>;
+    dc:modified '2011-12-07T08:59:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Western Brittany University'@en ;
+    skos:definition 'Formerly 4 character lab code UWBR'@en ;
+    skos:notation 'SDN:C75::UWB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/USG/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/USG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/USG/>;
+    dc:modified '2011-12-07T08:59:08'^^xsd:dateTime ;
+    skos:altLabel 'USGS Marine Geology'^^xsd:string ;
+    skos:prefLabel 'United States Geological Survey Center for Coastal and Marine Geology'@en ;
+    skos:definition 'Marine geology laboratory for USGS located in Woods Hole Massechussetts'@en ;
+    skos:notation 'SDN:C75::USG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/TIN/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/TIN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/TIN/>;
+    dc:modified '2011-12-07T08:59:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Institute National de la Meteorologie, Tunisia'@en ;
+    skos:definition 'Formerly 4 character lab code TINM'@en ;
+    skos:notation 'SDN:C75::TIN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/UKL/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/UKL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/UKL/>;
+    dc:modified '2011-12-07T08:59:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'University of Karlsruhe, Germany'@en ;
+    skos:definition 'Formerly 4 character lab code UKLR'@en ;
+    skos:notation 'SDN:C75::UKL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/SAC/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/SAC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/SAC/>;
+    dc:modified '2011-12-07T08:59:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Saclant Undersea Research Centre, La Spezia, Italy'@en ;
+    skos:definition 'Formerly 4 character lab code SACL'@en ;
+    skos:notation 'SDN:C75::SAC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/SID/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/SID/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/SID/>;
+    dc:modified '2011-12-07T08:59:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'National Snow and Ice Data Centre, CIRES, Colorado'@en ;
+    skos:definition 'Formerly 4 character lab code SIDC'@en ;
+    skos:notation 'SDN:C75::SID'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/SMO/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/SMO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/SMO/>;
+    dc:modified '2011-12-07T08:59:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Instituto Nacional de Meteorologia, Spain'@en ;
+    skos:definition 'Formerly 4 character lab code SMOF'@en ;
+    skos:notation 'SDN:C75::SMO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/SMR/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/SMR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/SMR/>;
+    dc:modified '2011-12-07T08:59:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'French Atomic Energy Commission'@en ;
+    skos:definition 'Meaning of acronym SMRS is not known.  Formerly 4 character lab code SMRS'@en ;
+    skos:notation 'SDN:C75::SMR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/TEB/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/TEB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/TEB/>;
+    dc:modified '2011-12-07T08:59:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Televerkets Byggnadsavdelning, Stockholm, Sweden'@en ;
+    skos:definition 'Formerly 4 character lab code TEBY'@en ;
+    skos:notation 'SDN:C75::TEB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/SAI/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/SAI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/SAI/>;
+    dc:modified '2011-12-07T08:59:06'^^xsd:dateTime ;
+    skos:altLabel 'SAI'^^xsd:string ;
+    skos:prefLabel 'JRC Space Applications Institute'@en ;
+    skos:definition 'One of 7 scientific institutes in the European Commission Joint Research Centre at Ispra in Italy.'@en ;
+    skos:notation 'SDN:C75::SAI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/SMS/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/SMS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/SMS/>;
+    dc:modified '2011-12-07T08:59:06'^^xsd:dateTime ;
+    skos:altLabel 'SMSR'^^xsd:string ;
+    skos:prefLabel 'Service Mixte de Sécurité Radiologique, Monthléry'@en ;
+    skos:definition 'A joint department of Ministry of Defence-Commissariat à l\'Energie Atomique and the Direction des Centres d\'Expérimentations Nucléaires.'@en ;
+    skos:notation 'SDN:C75::SMS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/SP1/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/SP1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/SP1/>;
+    dc:modified '2011-12-07T08:59:06'^^xsd:dateTime ;
+    skos:altLabel 'Seville App, Physics I'^^xsd:string ;
+    skos:prefLabel 'University of Seville Department of Applied Physics I'@en ;
+    skos:definition 'One of three applied physics departments in the University of Seville.'@en ;
+    skos:notation 'SDN:C75::SP1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/SP3/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/SP3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/SP3/>;
+    dc:modified '2011-12-07T08:59:06'^^xsd:dateTime ;
+    skos:altLabel 'Seville App, Physics III'^^xsd:string ;
+    skos:prefLabel 'University of Seville Department of Applied Physics III'@en ;
+    skos:definition 'One of three applied physics departments in the University of Seville.'@en ;
+    skos:notation 'SDN:C75::SP3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/PNM/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/PNM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/PNM/>;
+    dc:modified '2011-12-07T08:59:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'National Mapping & Resource Auth., Philippines'@en ;
+    skos:definition 'Formerly 4 character lab code PNMR'@en ;
+    skos:notation 'SDN:C75::PNM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/PRC/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/PRC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/PRC/>;
+    dc:modified '2011-12-07T08:59:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Polar Research Centre, Korea'@en ;
+    skos:definition 'Formerly 4 character lab code PRCK'@en ;
+    skos:notation 'SDN:C75::PRC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/NOD/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/NOD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/NOD/>;
+    dc:modified '2011-12-07T08:59:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'National Oceanographic Data Center, USA'@en ;
+    skos:definition 'Formerly 4 character lab code NODC'@en ;
+    skos:notation 'SDN:C75::NOD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/NOO/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/NOO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/NOO/>;
+    dc:modified '2011-12-07T08:59:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'US Navy Oceanographic Office, St. Louis, USA'@en ;
+    skos:definition 'Formerly 4 character lab code NOOX'@en ;
+    skos:notation 'SDN:C75::NOO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/NOR/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/NOR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/NOR/>;
+    dc:modified '2011-12-07T08:59:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'National Ocean Research and Development Agency'@en ;
+    skos:definition 'Formerly 4 character lab code NORX'@en ;
+    skos:notation 'SDN:C75::NOR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/NOS/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/NOS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/NOS/>;
+    dc:modified '2011-12-07T08:59:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'National Ocean Service, USA'@en ;
+    skos:definition 'Formerly 4 character lab code NOSX'@en ;
+    skos:notation 'SDN:C75::NOS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/NRL/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/NRL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/NRL/>;
+    dc:modified '2011-12-07T08:59:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Naval Research Laboratory, Washington DC'@en ;
+    skos:definition 'Formerly 4 character lab code NRLW'@en ;
+    skos:notation 'SDN:C75::NRL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/ODO/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/ODO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/ODO/>;
+    dc:modified '2011-12-07T08:59:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Old Dominion University Department of Ocean, Earth and Atmospheric Sciences'@en ;
+    skos:definition 'Located in Norfolk, VA. Focus on ocean margin and coastal system processes'@en ;
+    skos:notation 'SDN:C75::ODO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/ONR/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/ONR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/ONR/>;
+    dc:modified '2011-12-07T08:59:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Office of Naval Research, Virginia, USA'@en ;
+    skos:definition 'Formerly 4 character lab code ONRX'@en ;
+    skos:notation 'SDN:C75::ONR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/NSD/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/NSD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/NSD/>;
+    dc:modified '2011-12-07T08:59:04'^^xsd:dateTime ;
+    skos:altLabel 'NOSC'^^xsd:string ;
+    skos:prefLabel 'Naval Ocean Systems Center San Diego'@en ;
+    skos:definition 'Naval research facility in San Diego.  Renamed to Space and Naval Warfare Systems Center, San Diego (SPAWAR)'@en ;
+    skos:notation 'SDN:C75::NSD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/NSF/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/NSF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/NSF/>;
+    dc:modified '2011-12-07T08:59:04'^^xsd:dateTime ;
+    skos:altLabel 'NSF'^^xsd:string ;
+    skos:prefLabel 'National Science Foundation'@en ;
+    skos:definition 'United States research funding organisation'@en ;
+    skos:notation 'SDN:C75::NSF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/NYS/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/NYS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/NYS/>;
+    dc:modified '2011-12-07T08:59:04'^^xsd:dateTime ;
+    skos:altLabel 'Stony Brook Chemistry'^^xsd:string ;
+    skos:prefLabel 'State University of New York Department of Chemistry'@en ;
+    skos:definition 'Department of SUNY located in the Stony Brook campus on Long Island (sometimes termed Stony Brook University)'@en ;
+    skos:notation 'SDN:C75::NYS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/NAM/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/NAM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/NAM/>;
+    dc:modified '2011-12-07T08:59:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'NAMIRA, Philippines'@en ;
+    skos:definition 'National Mapping and Resource Information Authority, Lawton Avenue, Fort Bonifacio, Makati City, Philippines, 1201'@en ;
+    skos:notation 'SDN:C75::NAM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/NCA/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/NCA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/NCA/>;
+    dc:modified '2011-12-07T08:59:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'National Centre for Atmospheric Research, Boulder'@en ;
+    skos:definition 'Formerly 4 character lab code NCAR'@en ;
+    skos:notation 'SDN:C75::NCA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/NCC/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/NCC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/NCC/>;
+    dc:modified '2011-12-07T08:59:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'National Climatic Center, Boulder, Colorado, USA'@en ;
+    skos:definition 'Formerly 4 character lab code NCCX'@en ;
+    skos:notation 'SDN:C75::NCC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/NCM/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/NCM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/NCM/>;
+    dc:modified '2011-12-07T08:59:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'National Centre for Marine Research, Greece'@en ;
+    skos:definition 'Formerly 4 character lab code NCMR'@en ;
+    skos:notation 'SDN:C75::NCM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/NGD/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/NGD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/NGD/>;
+    dc:modified '2011-12-07T08:59:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'National Geophysics Data Center, Colorado, USA'@en ;
+    skos:definition 'Formerly 4 character lab code NGDC'@en ;
+    skos:notation 'SDN:C75::NGD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/NHO/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/NHO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/NHO/>;
+    dc:modified '2011-12-07T08:59:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Netherlands Hydrographic Office'@en ;
+    skos:definition 'Formerly 4 character lab code NHOX'@en ;
+    skos:notation 'SDN:C75::NHO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/NAR/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/NAR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/NAR/>;
+    dc:modified '2011-12-07T08:59:03'^^xsd:dateTime ;
+    skos:altLabel 'IMEDEA Natural Resources'^^xsd:string ;
+    skos:prefLabel 'Mediterranean Institute for Advanced Studies Natural Resources Department'@en ;
+    skos:definition 'A joint research centre of the University of the Balearic Islands (UIB) and the Spanish Council for Scientific Research (CSIC).'@en ;
+    skos:notation 'SDN:C75::NAR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/NGL/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/NGL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/NGL/>;
+    dc:modified '2011-12-07T08:59:03'^^xsd:dateTime ;
+    skos:altLabel 'NASA GSFL'^^xsd:string ;
+    skos:prefLabel 'NASA Goddard Space Flight Center'@en ;
+    skos:definition 'Large NASA research facility located in Greenbelt, Maryland.'@en ;
+    skos:notation 'SDN:C75::NGL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/MUC/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/MUC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/MUC/>;
+    dc:modified '2011-12-07T08:59:03'^^xsd:dateTime ;
+    skos:altLabel 'UC Santa Cruz IMS'^^xsd:string ;
+    skos:prefLabel 'University of California Santa Cruz Institute of Marine Sciences'@en ;
+    skos:definition 'Research institute within UC Santa Cruz located in Santa Cruz, California, USA'@en ;
+    skos:notation 'SDN:C75::MUC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/MPK/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/MPK/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/MPK/>;
+    dc:modified '2011-12-07T08:59:03'^^xsd:dateTime ;
+    skos:altLabel 'USGS Menlo Park'^^xsd:string ;
+    skos:prefLabel 'United States Geological Survey Meno Park Science Center'@en ;
+    skos:definition 'Geological laboratory in Menlo Park California mainly studying earthquakes by has some interests in West Coast marine geology.'@en ;
+    skos:notation 'SDN:C75::MPK'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/MCS/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/MCS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/MCS/>;
+    dc:modified '2011-12-07T08:59:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Malta Council for Science and Technology'@en ;
+    skos:definition 'Formerly 4 character lab code MCST'@en ;
+    skos:notation 'SDN:C75::MCS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/MMA/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/MMA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/MMA/>;
+    dc:modified '2011-12-07T08:59:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Malta Maritime Agency'@en ;
+    skos:definition 'Formerly 4 character lab code MMAX'@en ;
+    skos:notation 'SDN:C75::MMA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/MMS/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/MMS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/MMS/>;
+    dc:modified '2011-12-07T08:59:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mauritius Meteorological Services'@en ;
+    skos:definition 'National operational meteorological organisation formed upon Mauritian independence in 1968'@en ;
+    skos:notation 'SDN:C75::MMS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/LIS/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/LIS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/LIS/>;
+    dc:modified '2011-12-07T08:59:02'^^xsd:dateTime ;
+    skos:altLabel 'LISA'^^xsd:string ;
+    skos:prefLabel 'Laboratoire Inter-universitaire des Systèmes Atmosphériques'@en ;
+    skos:definition 'Joint CNRS and university research unit located in Créteil.'@en ;
+    skos:notation 'SDN:C75::LIS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/MFR/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/MFR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/MFR/>;
+    dc:modified '2011-12-07T08:59:02'^^xsd:dateTime ;
+    skos:altLabel 'MFRI'^^xsd:string ;
+    skos:prefLabel 'Marine and Freshwater Resources Institute'@en ;
+    skos:definition 'Australian institute set up by Victoria State government in 1996 to provide research, consultancy and education services required for the sustainable management of aquatic resources and their environment'@en ;
+    skos:notation 'SDN:C75::MFR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/IOL/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/IOL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/IOL/>;
+    dc:modified '2011-12-07T08:59:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Israel Oceanographic & Limnological Research Ltd.'@en ;
+    skos:definition 'Formerly 4 character lab code IOLX'@en ;
+    skos:notation 'SDN:C75::IOL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/ITP/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/ITP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/ITP/>;
+    dc:modified '2011-12-07T08:59:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'International TOGA Project Office, Geneva'@en ;
+    skos:definition 'Formerly 4 character lab code ITPO'@en ;
+    skos:notation 'SDN:C75::ITP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/JOM/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/JOM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/JOM/>;
+    dc:modified '2011-12-07T08:59:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'USGS-NOAA Joint Office for Mapping and Research'@en ;
+    skos:definition 'Formerly 4 character lab code JOMR'@en ;
+    skos:notation 'SDN:C75::JOM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/JPL/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/JPL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/JPL/>;
+    dc:modified '2011-12-07T08:59:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Jet Propulsion Laboratory, Pasadena, USA'@en ;
+    skos:definition 'Formerly 4 character lab code JPLX'@en ;
+    skos:notation 'SDN:C75::JPL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/LEG/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/LEG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/LEG/>;
+    dc:modified '2011-12-07T08:59:01'^^xsd:dateTime ;
+    skos:altLabel 'LEGOS'^^xsd:string ;
+    skos:prefLabel 'Laboratoire d\'Etude en Géophysique et Océanographie Spatiales'@en ;
+    skos:definition 'Joint facility located in Toulose comprising personnel from four employing organisations: Centre National d\'Etudes Spatiales (CNES), the national research organisations (CNRS), the Institut de Recherche pour la Developpement (IRD) and the University Paul Sabatier (UPS). The primary area of interest is environmental research based upon satellite data.'@en ;
+    skos:notation 'SDN:C75::LEG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/HOS/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/HOS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/HOS/>;
+    dc:modified '2011-12-07T08:59:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Hydrographic Office, South Africa'@en ;
+    skos:definition 'Formerly 4 character lab code HOSA'@en ;
+    skos:notation 'SDN:C75::HOS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/IHE/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/IHE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/IHE/>;
+    dc:modified '2011-12-07T08:59:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Instituut voor Hygiene en Epidemiologie, Oostende'@en ;
+    skos:definition 'Formerly 4 character lab code IHEP'@en ;
+    skos:notation 'SDN:C75::IHE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/ICR/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/ICR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/ICR/>;
+    dc:modified '2011-12-07T08:59:00'^^xsd:dateTime ;
+    skos:altLabel 'ICREA Geologia'^^xsd:string ;
+    skos:prefLabel 'University of Barcelona Catalan Institute of Research and Advanced Studies Faculty of Geology'@en ;
+    skos:definition 'Geosciences research institute including a marine geology depatment in Barcleona. Institute name in Spanish is Institució Catalana de Recerca i Estudis Avançats'@en ;
+    skos:notation 'SDN:C75::ICR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/IMW/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/IMW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/IMW/>;
+    dc:modified '2011-12-07T08:59:00'^^xsd:dateTime ;
+    skos:altLabel 'IMWM Gdynia'^^xsd:string ;
+    skos:prefLabel 'Institute of Meteorology and Water Management Maritime Office in Gdynia'@en ;
+    skos:definition 'Polish government agency associated with navigation located in Gdynia.  Name in Polish is Urzad Morski w Gdynia.'@en ;
+    skos:notation 'SDN:C75::IMW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/IHB/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/IHB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/IHB/>;
+    dc:modified '2011-12-07T08:59:00'^^xsd:dateTime ;
+    skos:altLabel 'Int. Hdyrographic Bureau'^^xsd:string ;
+    skos:prefLabel 'International Hydrographic Bureau, Monaco'@en ;
+    skos:definition 'Formerly 4 character lab code IHBM'@en ;
+    skos:notation 'SDN:C75::IHB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/FLN/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/FLN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/FLN/>;
+    dc:modified '2011-12-07T08:58:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Nova Southeastern University, Florida'@en ;
+    skos:definition 'Formerly 4 character lab code FLNU'@en ;
+    skos:notation 'SDN:C75::FLN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/FLU/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/FLU/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/FLU/>;
+    dc:modified '2011-12-07T08:58:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Florida University'@en ;
+    skos:definition 'Formerly 4 character lab code FLUN'@en ;
+    skos:notation 'SDN:C75::FLU'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/GSI/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/GSI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/GSI/>;
+    dc:modified '2011-12-07T08:58:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Geological Survey of Israel'@en ;
+    skos:definition 'Formerly 4 character lab code GSIX'@en ;
+    skos:notation 'SDN:C75::GSI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/HDN/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/HDN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/HDN/>;
+    dc:modified '2011-12-07T08:58:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Head Dept. of Navigation & Oceanography, Leningrad'@en ;
+    skos:definition 'Formerly 4 character lab code HDNO'@en ;
+    skos:notation 'SDN:C75::HDN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/HIC/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/HIC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/HIC/>;
+    dc:modified '2011-12-07T08:58:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Hydrographic Institute of the Republic of Croatia'@en ;
+    skos:definition 'National agency resposible for the development of navigational safety service in the Adriatic'@en ;
+    skos:notation 'SDN:C75::HIC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/GCM/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/GCM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/GCM/>;
+    dc:modified '2011-12-07T08:58:59'^^xsd:dateTime ;
+    skos:altLabel 'GCM'^^xsd:string ;
+    skos:prefLabel 'General Command of Mapping Turkey'@en ;
+    skos:definition 'Turkish government mapping agency located in Ankara'@en ;
+    skos:notation 'SDN:C75::GCM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/DHN/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/DHN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/DHN/>;
+    dc:modified '2011-12-07T08:58:58'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Directorate of Hydrography and Navigation, Peru'@en ;
+    skos:definition 'Formerly 4 character lab code DHNP'@en ;
+    skos:notation 'SDN:C75::DHN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/DMA/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/DMA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/DMA/>;
+    dc:modified '2011-12-07T08:58:58'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Defense Mapping Agency, USA'@en ;
+    skos:definition 'Formerly 4 character lab code DMAX. Replaced by NIA (National Imagery Agency, KAR20000605).'@en ;
+    skos:notation 'SDN:C75::DMA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/DMI/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/DMI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/DMI/>;
+    dc:modified '2011-12-07T08:58:58'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Danish Meteorological Institute'@en ;
+    skos:definition 'Formerly 4 character lab code DMIX'@en ;
+    skos:notation 'SDN:C75::DMI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/DMS/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/DMS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/DMS/>;
+    dc:modified '2011-12-07T08:58:58'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Dubai Municipality Survey Department'@en ;
+    skos:definition 'Municipal department located in Deira.'@en ;
+    skos:notation 'SDN:C75::DMS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/DPT/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/DPT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/DPT/>;
+    dc:modified '2011-12-07T08:58:58'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Danish Post and Telegraph, Copenhagen, Denmark'@en ;
+    skos:definition 'Formerly 4 character lab code DPTX'@en ;
+    skos:notation 'SDN:C75::DPT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/EPS/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/EPS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/EPS/>;
+    dc:modified '2011-12-07T08:58:58'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'EPSHOM, Estab. Prin. Serv. Hydro. Ocean. Marine'@en ;
+    skos:definition 'Formerly 4 character lab code EPSH'@en ;
+    skos:notation 'SDN:C75::EPS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/DTU/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/DTU/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/DTU/>;
+    dc:modified '2011-12-07T08:58:58'^^xsd:dateTime ;
+    skos:altLabel 'DTU Space'^^xsd:string ;
+    skos:prefLabel 'National Space Institute at the Technical University of Denmark'@en ;
+    skos:definition 'Research institute formed 2007-01-01 by the merger of parts of Ørsted-DTU, the Department of Informatics and Mathematical Modeling at DTU and the Danish National Space Center'@en ;
+    skos:notation 'SDN:C75::DTU'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/DWD/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/DWD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/DWD/>;
+    dc:modified '2011-12-07T08:58:58'^^xsd:dateTime ;
+    skos:altLabel 'DWD Hamburg'^^xsd:string ;
+    skos:prefLabel 'German Meteorological Service Hamburg Centre'@en ;
+    skos:definition 'Hamburg regional centre of a scientific agency monitoring weather and climate over Germany with main office in Offenbach am Main. German name is Deutscher Wetterdienst.'@en ;
+    skos:notation 'SDN:C75::DWD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/FER/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/FER/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/FER/>;
+    dc:modified '2011-12-07T08:58:58'^^xsd:dateTime ;
+    skos:altLabel 'FERHRI'^^xsd:string ;
+    skos:prefLabel 'Far Eastern Regional Hydrometeorological Research Institute'@en ;
+    skos:definition 'State metocean reseach organisation under Russian Federal Service For Hydrometeorology and Environmental Monitoring. Founded in 1950 and located in Vladivostock.'@en ;
+    skos:notation 'SDN:C75::FER'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/COB/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/COB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/COB/>;
+    dc:modified '2011-12-07T08:58:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Centre Oceanologique De Bretagne, Brest, France'@en ;
+    skos:definition 'Mnemonic IFR replaces COB from 24th January 2001'@en ;
+    skos:notation 'SDN:C75::COB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/COL/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/COL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/COL/>;
+    dc:modified '2011-12-07T08:58:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Columbia University'@en ;
+    skos:definition 'Formerly 4 character lab code COLU'@en ;
+    skos:notation 'SDN:C75::COL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/CRS/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/CRS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/CRS/>;
+    dc:modified '2011-12-07T08:58:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Centre de Recherche Scientifique de Conakry Guinee'@en ;
+    skos:definition 'Formerly 4 character lab code CRSC'@en ;
+    skos:notation 'SDN:C75::CRS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/DCC/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/DCC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/DCC/>;
+    dc:modified '2011-12-07T08:58:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Donegal County Council, Donegal, Eire'@en ;
+    skos:definition 'Formerly 4 character lab code DCCX'@en ;
+    skos:notation 'SDN:C75::DCC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/CNI/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/CNI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/CNI/>;
+    dc:modified '2011-12-07T08:58:57'^^xsd:dateTime ;
+    skos:altLabel 'ISMAR'^^xsd:string ;
+    skos:prefLabel 'CNR Institute of Marine Science, Trieste'@en ;
+    skos:definition 'Physical and chemical oceanographic laboratory in Trieste.  Name in Italian is. Consiglio Nazionale delle Ricerche, Istituto di Scienze Marine Sezione di Trieste'@en ;
+    skos:notation 'SDN:C75::CNI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/BMM/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/BMM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/BMM/>;
+    dc:modified '2011-12-07T08:58:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Volksgezondheid, Min. van en Leefmilieu, Belgium'@en ;
+    skos:definition 'Formerly 4 character lab code BMMX'@en ;
+    skos:notation 'SDN:C75::BMM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/BND/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/BND/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/BND/>;
+    dc:modified '2011-12-07T08:58:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bureau Nat. de Donnees Oceanographiques, France'@en ;
+    skos:definition 'Formerly 4 character lab code BNDO'@en ;
+    skos:notation 'SDN:C75::BND'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/BPM/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/BPM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/BPM/>;
+    dc:modified '2011-12-07T08:58:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'US Geol. Survey, Branch of Pacific Marine Geology'@en ;
+    skos:definition 'Formerly 4 character lab code BPMG'@en ;
+    skos:notation 'SDN:C75::BPM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/CCO/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/CCO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/CCO/>;
+    dc:modified '2011-12-07T08:58:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CCOP/SOPAC, Suva, Fiji'@en ;
+    skos:definition 'Committee for Co-ordination of Joint Prospection for Mineral Resources in South Pacific Offshore Areas.  Formerly 4 character lab code CCOP'@en ;
+    skos:notation 'SDN:C75::CCO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/BGR/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/BGR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/BGR/>;
+    dc:modified '2011-12-07T08:58:56'^^xsd:dateTime ;
+    skos:altLabel 'BGR'^^xsd:string ;
+    skos:prefLabel 'Federal Institute for Geosciences and Natural Resources'@en ;
+    skos:definition 'The central geoscientific authority providing advice to the German Federal Government in all geo-relevant questions.  Based in Hannover. Name in German is Bundesanstalt für Geowissenschaften und Rohstoffe'@en ;
+    skos:notation 'SDN:C75::BGR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/BHY/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/BHY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/BHY/>;
+    dc:modified '2011-12-07T08:58:56'^^xsd:dateTime ;
+    skos:altLabel 'BHMW'^^xsd:string ;
+    skos:prefLabel 'Hydrographic Office of the Polish Navy'@en ;
+    skos:definition 'Service supporting the Polish Navy in terms of navigation, hydrography, meteorology, and oceanography based in Gdynia. Name in Polish is Biuro Hydrograficzne.'@en ;
+    skos:notation 'SDN:C75::BHY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/BLE/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/BLE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/BLE/>;
+    dc:modified '2011-12-07T08:58:56'^^xsd:dateTime ;
+    skos:altLabel 'BLE'^^xsd:string ;
+    skos:prefLabel 'Federal Agency for Agriculture and Food'@en ;
+    skos:definition 'Agency responsible in Germany for a wide range of tasks in the agricultural, food and consumer protection sector, based in Bonn, Germany.  Name in German is Bundesanstalt fr Landwirtschaft und Ern hrung'@en ;
+    skos:notation 'SDN:C75::BLE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/CIO/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/CIO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/CIO/>;
+    dc:modified '2011-12-07T08:58:56'^^xsd:dateTime ;
+    skos:altLabel 'Can.Inst.Ocean.Sci'^^xsd:string ;
+    skos:prefLabel 'Institute of Ocean Sciences, Canada'@en ;
+    skos:definition 'Formerly 4 character lab code CIOS'@en ;
+    skos:notation 'SDN:C75::CIO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/CGM/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/CGM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/CGM/>;
+    dc:modified '2011-12-07T08:58:56'^^xsd:dateTime ;
+    skos:altLabel 'IGM'^^xsd:string ;
+    skos:prefLabel 'CNR Institute of Marine Geology, Bologna'@en ;
+    skos:definition 'Marine geology laboratory in Bolgna.  Name in Italian is. Consiglio Nazionale delle Ricerche, Istituto di Geologia Marina di Bologna'@en ;
+    skos:notation 'SDN:C75::CGM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/ADE/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/ADE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/ADE/>;
+    dc:modified '2011-12-07T08:58:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Armada del Ecuador'@en ;
+    skos:definition 'Formerly 4 character lab code ADEX'@en ;
+    skos:notation 'SDN:C75::ADE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/AMG/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/AMG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/AMG/>;
+    dc:modified '2011-12-07T08:58:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Andrija Mohorovicic Geophysical Institute'@en ;
+    skos:definition 'Part of the Department of Geophysics of the Faculty of Science of Zagreb University, Croatia'@en ;
+    skos:notation 'SDN:C75::AMG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/BAK/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/BAK/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/BAK/>;
+    dc:modified '2011-12-07T08:58:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'BAKOSURTANAL, Indonesia'@en ;
+    skos:definition 'National Coordinating Agency for Survey and Mapping, Jl Raya Jakarta-Bogor Km 46, Cibinong, Indonesia'@en ;
+    skos:notation 'SDN:C75::BAK'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/BGI/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/BGI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/BGI/>;
+    dc:modified '2011-12-07T08:58:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bureau Gravimetrique International, France'@en ;
+    skos:definition 'Formerly 4 character lab code BGIX'@en ;
+    skos:notation 'SDN:C75::BGI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/ANL/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/ANL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/ANL/>;
+    dc:modified '2011-12-07T08:58:55'^^xsd:dateTime ;
+    skos:altLabel 'Argonne'^^xsd:string ;
+    skos:prefLabel 'Argonne National Laboratory'@en ;
+    skos:definition 'US Department of Energy research laboratory working on energy, biological and environmental systems and national security.  Located in Argonne, Illinois.'@en ;
+    skos:notation 'SDN:C75::ANL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/BFG/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/BFG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/BFG/>;
+    dc:modified '2011-12-07T08:58:55'^^xsd:dateTime ;
+    skos:altLabel 'BfG'^^xsd:string ;
+    skos:prefLabel 'Federal Agency of Hydrology'@en ;
+    skos:definition 'Agency responsible for for the German waterways in federal ownership, based in Koblenz. Name in German is Bundesanstalt für Gewässerkunde.'@en ;
+    skos:notation 'SDN:C75::BFG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/SNT/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/SNT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/SNT/>;
+    dc:modified '2011-12-07T08:58:45'^^xsd:dateTime ;
+    skos:altLabel 'Shell Norway'^^xsd:string ;
+    skos:prefLabel 'A/S Norske Shell, Tananger'@en ;
+    skos:definition 'One of four Norwegian offices of the exploration/production division of Shell'@en ;
+    skos:notation 'SDN:C75::SNT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/FGO/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/FGO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/FGO/>;
+    dc:modified '2011-12-07T08:58:44'^^xsd:dateTime ;
+    skos:altLabel 'Fugro GEOS'^^xsd:string ;
+    skos:prefLabel 'Fugro GEOS Limited'@en ;
+    skos:definition 'Metocean survey company formerly located in Swindon but relocated to Wallingford, Oxfordshire'@en ;
+    skos:notation 'SDN:C75::FGO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/HSL/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/HSL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/HSL/>;
+    dc:modified '2011-12-07T08:58:44'^^xsd:dateTime ;
+    skos:altLabel 'Hunting Surveys'^^xsd:string ;
+    skos:prefLabel 'Hunting Surveys Limited'@en ;
+    skos:definition 'Survey company based in Borehamwood, Hertfordshire. Formed in 1960 by merger of Hunting Geophysics and Hunting Aerosurveys. Closed in 1974.'@en ;
+    skos:notation 'SDN:C75::HSL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/HDM/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/HDM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/HDM/>;
+    dc:modified '2011-12-07T08:58:44'^^xsd:dateTime ;
+    skos:altLabel 'Hydromod'^^xsd:string ;
+    skos:prefLabel 'Hydromod Service GmbH'@en ;
+    skos:definition 'Scientific consultancy company based in Wedel, Germany'@en ;
+    skos:notation 'SDN:C75::HDM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/ELF/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/ELF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/ELF/>;
+    dc:modified '2011-12-07T08:58:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Elf Aquitaine, France'@en ;
+    skos:definition 'Formerly 4 character lab code ELFA'@en ;
+    skos:notation 'SDN:C75::ELF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/UWI/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/UWI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/UWI/>;
+    dc:modified '2011-12-07T08:58:32'^^xsd:dateTime ;
+    skos:altLabel 'UWIST Marine'^^xsd:string ;
+    skos:prefLabel 'University of Wales Institute of Technology Department of Marine Studies'@en ;
+    skos:definition 'Department in component body of University of Wales.  Merged with University College Cardiff in 1988 to form University of Wales College Cardiff'@en ;
+    skos:notation 'SDN:C75::UWI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/SCE/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/SCE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/SCE/>;
+    dc:modified '2011-12-07T08:58:30'^^xsd:dateTime ;
+    skos:altLabel 'Southampton Civ, Eng. Env.'^^xsd:string ;
+    skos:prefLabel 'University of Southampton School of Civil Engineering and the Environment'@en ;
+    skos:definition 'University school concerned with civil and environmental engineering and applied environmental science'@en ;
+    skos:notation 'SDN:C75::SCE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/TOR/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/TOR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/TOR/>;
+    dc:modified '2011-12-07T08:57:05'^^xsd:dateTime ;
+    skos:altLabel 'Torry'^^xsd:string ;
+    skos:prefLabel 'Torry Research Laboratory'@en ;
+    skos:definition 'Laboratory in Aberdeen specialising in research on the handling and preservation of fish and fishery by-products'@en ;
+    skos:notation 'SDN:C75::TOR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/INA/2/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/INA/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/INA/>;
+    dc:modified '2011-08-26T10:26:06'^^xsd:dateTime ;
+    skos:altLabel 'Inapplicable'^^xsd:string ;
+    skos:prefLabel 'inapplicable'@en ;
+    skos:definition 'There is no appropriate value'@en ;
+    skos:notation 'SDN:C75::INA'^^xsd:string .

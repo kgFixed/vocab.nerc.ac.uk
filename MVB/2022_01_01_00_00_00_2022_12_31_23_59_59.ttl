@@ -1,0 +1,1189 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/MVB/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/MVB/2020_01_01_00_00_00_2021_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2022-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000145/4/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000145/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000145/>;
+    dc:modified '2022-09-27T10:32:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'location lat'@en ;
+    skos:definition 'The geographic latitude of the location as estimated by the sensor. Example: \'-41.0982423\'; Units: decimal degrees, WGS84 reference system; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000145'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000084/5/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000084/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000084/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'deployment end type'@en ;
+    skos:definition 'A categorical classification describing the end of the tag deployment on the animal. Best practice is to clarify how the \'deploy-off timestamp\', if present, was chosen. Values are chosen from a controlled list: analysis-end = the end time represents the end of the period of interest; captured = The tag remained on the animal but the animal was captured or confined; dead = The deployment ended with the death of the animal that was carrying the tag; dead/fall-off = The tag stopped moving, and it is not possible to determine whether it is due to death of the animal or unscheduled tag detachment; equipment-failure = The tag stopped working; fall-off = The attachment of the tag to the animal failed, and it fell of accidentally; other = other; released = The tag remained on the animal but the animal was released from captivity or confinement; removal = The tag was purposefully removed from the animal; scheduled-detachment = The tag was programmed to detach from the animal; transmission-end = The tag stopped transmitting usable data; unknown = The cause of the end of data availability or transmission is unknown. Format: controlled list; Entity described: deployment'@en ;
+    skos:notation 'SDN:MVB::MVB000084'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000236/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000236/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000236/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'principal investigator name'@en ;
+    skos:definition 'This attribute has been merged with \'principal investigator\'. The principal investigator (PI) or lead researcher for the study. Used when the PI does not have a Movebank account. Example: \'Charles Darwin\'; Units: none; Entity described: study'@en ;
+    skos:notation 'SDN:MVB::MVB000236'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000271/2/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000271/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000271/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'study permission'@en ;
+    skos:definition 'Used in the REST API. Whether the user credentials used in the request are for a Movebank user that is a Collaborator or Data Manager for the study. Allowed values are collaborator = user is a Collaborator (unless the user is also a Data Manager); data_manager = user is a Data Manager (and may also be a Collaborator); na = user has no credentials for the study and has the same access as the public. Format: controlled list; Entity described: study'@en ;
+    skos:notation 'SDN:MVB::MVB000271'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000279/2/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000279/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000279/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Argos nb mes identical'@en ;
+    skos:definition 'Duplicate of \'Argos nb mes\'. Deprecated. Units: count; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000279'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000286/2/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000286/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000286/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Gt activity count'@en ;
+    skos:definition 'Activity count from GeoTrak tags. Duplicate of \'GPS activity count\'. Deprecated. Example: \'136\'; Units: count; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000286'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000295/2/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000295/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000295/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tag battery voltage'@en ;
+    skos:definition 'Duplicate of \'tag voltage\'. Depracated. Example: \'2895\'; Units: mV; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000295'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000300/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000300/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000300/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CTT solar current since last fix'@en ;
+    skos:definition 'The cumulative current pushed from the solar panel into the battery of a CTT tag since the last GPS fix. Example: \'231\'; Units: milliamperes (mA); Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000300'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000301/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000301/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000301/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GMatrix alert'@en ;
+    skos:definition 'Alert status of the G-Matrix tag. The value is 0 if there is no alert and a numeric value greater than 0 if there is an alert. Further information about alerts is provided in \'GMatrix alert message\' (definition from RAMAC CALLBACK Specification, v2.0.2, August 2021). Example: \'19\'; Units: none; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000301'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000302/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000302/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000302/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GMatrix alert message'@en ;
+    skos:definition 'If Alert > 0 then the alert message which shows information regarding why the alert was generated (definition from RAMAC CALLBACK Specification, v2.0.2, August 2021). Example: \'P1 Panic\'; Units: none; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000302'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000303/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000303/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000303/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GMatrix device type'@en ;
+    skos:definition 'The type of the G-Matrix device (definition from RAMAC CALLBACK Specification, v2.0.2, August 2021). Example: \'12\'; Units: none; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000303'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000304/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000304/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000304/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GMatrix event'@en ;
+    skos:definition 'The G-Matrix event (definition from RAMAC CALLBACK Specification, v2.0.2, August 2021). Allowed values are 16 = Panic; 48 = Short press; 49 = Single press; 50 = Double press; 51 = Triple press; 52 = Long press; 80 = Fall. Format: controlled list; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000304'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000305/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000305/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000305/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GMatrix firmware version'@en ;
+    skos:definition 'The firmware version of the G-Matrix tag (definition from RAMAC CALLBACK Specification, v2.0.2, August 2021). Example: \'8\'; Units: none; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000305'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000306/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000306/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000306/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GMatrix GPS event'@en ;
+    skos:definition 'The G-Matrix GPS event (definition from RAMAC CALLBACK Specification, v2.0.2, August 2021). Allowed values are 0 = Unknown location; 1 = Alert; 2 = Panic; 3 = Timed; 4 = Fall; 5 = Heartbeat. Format: controlled list; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000306'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000307/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000307/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000307/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GMatrix GPS event text'@en ;
+    skos:definition 'The text equivalent of \'GMatrix GPS event\' (definition from RAMAC CALLBACK Specification, v2.0.2, August 2021). Allowed values are Unknown location; Alert; Panic; Timed; Fall; Heartbeat. Format: controlled list; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000307'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000308/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000308/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000308/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GMatrix GPS fix interval'@en ;
+    skos:definition 'The GPS fix interval for the G-Matrix tag (0 means disabled) (definition from RAMAC CALLBACK Specification, v2.0.2, August 2021). Example: \'69\'; Units: seconds; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000308'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000309/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000309/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000309/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GMatrix GPS fix interval text'@en ;
+    skos:definition 'The text equivalent of \'GMatrix GPS fix interval\' (definition from RAMAC CALLBACK Specification, v2.0.2, August 2021). Example: \'5 minutes\'; Units: not defined; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000309'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000310/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000310/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000310/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GMatrix hardware version'@en ;
+    skos:definition 'The hardware version of the G-Matrix tag (definition from RAMAC CALLBACK Specification, v2.0.2, August 2021). Example: \'1\'; Units: none; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000310'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000312/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000312/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000312/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GMatrix is moving text'@en ;
+    skos:definition 'The text equivalent of \'GMatrix is moving\' (definition from RAMAC CALLBACK Specification, v2.0.2, August 2021). Allowed values are MOVING or STATIC. Format: controlled list; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000312'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000313/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000313/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000313/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GMatrix last location'@en ;
+    skos:definition 'The last known location of the G-Matrix tag (definition from RAMAC CALLBACK Specification, v2.0.2, August 2021). Allowed values are null = not available; 0 = new location; 1 = last known location. Format: controlled list; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000313'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000314/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000314/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000314/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GMatrix last location text'@en ;
+    skos:definition 'The text equivalent of \'GMatrix last location\' (definition from RAMAC CALLBACK Specification, v2.0.2, August 2021). Allowed values are not available; new location; last known location. Format: controlled list; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000314'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000315/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000315/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000315/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GMatrix mode'@en ;
+    skos:definition 'The currently configured G-Matrix mode (definition from RAMAC CALLBACK Specification, v2.0.2, August 2021). Allowed values are 0 = reserved; 1 = help me; 2 = press it; 3 = track it; 4 = guard it; 5 = monitor it; 6 = don\'t lose it. Format: controlled list; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000315'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000316/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000316/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000316/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GMatrix mode text'@en ;
+    skos:definition 'The text equivalent of \'GMatrix mode\' (definition from RAMAC CALLBACK Specification, v2.0.2, August 2021). Allowed values are reserved; help me; press it; track it; guard it; monitor it; don\'t lose it. Format: controlled list; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000316'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000317/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000317/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000317/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GMatrix packet type'@en ;
+    skos:definition 'The type of G-Matrix packet. The value 0 indicates status packet (definition from RAMAC CALLBACK Specification, v2.0.2, August 2021). Example: \'2\'; Units: none; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000317'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000318/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000318/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000318/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Savannah alarm type'@en ;
+    skos:definition 'For alarm-triggered records of Savannah tags, this indicates the type of alarm that triggered the update. This will always be blank unless \'Savannah record type\' has the value A (alarm). Example: \'GEO ZONE EXIT\'; Units: none; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000318'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000320/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000320/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000320/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sequence number'@en ;
+    skos:definition 'The sequence number of the event. Example: \'3776\'; Units: count; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000320'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000321/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000321/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000321/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sigfox computed location radius'@en ;
+    skos:definition 'The radius limit that defines the zone in which the device is located (definition from Sigfox support, 2022). Example: \'12000\'; Units: meters; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000321'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000322/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000322/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000322/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sigfox computed location source'@en ;
+    skos:definition 'The data source from which the geolocation was computed (definition from Sigfox Support, 2022). Allowed values are 1 = GPS data inside the payload; 2 = the network location; 6 = the WiFi location (external provider). Format: controlled list; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000322'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000323/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000323/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000323/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sigfox computed location status'@en ;
+    skos:definition 'The status of the computation made by the location service (definition from Sigfox Support, 2022). Allowed values are 00 = no position; 01 = OK; 02 = fallback of WiFi location; 20 = invalid payload. Format: controlled list; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000323'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000324/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000324/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000324/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sigfox country'@en ;
+    skos:definition 'The country code of the operator who received the Sigfox message (definition from Sigfox support, 2022). Example: \'710\'; Units: none; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000324'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000325/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000325/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000325/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sigfox device type'@en ;
+    skos:definition 'The name for a group of Sigfox devices with shared means for processing transmitted data (definition from Sigfox support, 2022). Units: none; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000325'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000326/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000326/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000326/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sigfox duplicates'@en ;
+    skos:definition 'The list of the duplicates including the base station ID (bsId), the number of repetitions received (nbRep), and the best signal to noise ratio of the received repetitions (RSSI) (definition from Sigfox support, 2022). Example: \'[{bsId:49AC,rssi:-137,nbRep:3}]\'; Units: none; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000326'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000328/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000328/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000328/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sigfox LQI'@en ;
+    skos:definition 'The computed link quality based on the received signal strength indicator (RSSI), the number of stations that received a message (receiver redundancy) and the radio configuration (RC) zone, due to the difference between the RCs (definition from Sigfox Support, 2022). Allowed values are Limit; Average; Good; Excellent; NA. Format: controlled list; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000328'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000329/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000329/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000329/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sigfox operator'@en ;
+    skos:definition 'The name of the operator who received the Sigfox message (definition from Sigfox support, 2022). Example: \'SIGFOX_Germany\'; Units: none; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000329'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000330/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000330/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000330/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sigfox RSSI'@en ;
+    skos:definition 'The received signal strength indicator (definition from Sigfox support, 2022). Example: \'-93\'; Units: not defined; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000330'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000331/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000331/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000331/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sigfox tx interval'@en ;
+    skos:definition 'The heartbeat interval in minutes as provided by Sigfox (0 indicates not used). Example: \'134\'; Units: minutes; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000331'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000332/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000332/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000332/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sigfox tx interval text'@en ;
+    skos:definition 'The text equivalent of \'Sigfox tx interval\', the heartbeat interval as provided by Sigfox. Example: \'6 Hours\'; Units: none; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000332'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000134/4/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000134/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000134/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel 'animal ID'^^xsd:string ;
+    skos:prefLabel 'individual local identifier'@en ;
+    skos:definition 'This attribute has been merged with \'animal ID\'. An individual identifier for the animal, provided by the data owner. Values are unique within the study. If the data owner does not provide an Animal ID, an internal Movebank animal identifier is sometimes shown. Example: \'91876A, Gary\'; Units: none; Entity described: individual'@en ;
+    skos:notation 'SDN:MVB::MVB000134'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000135/5/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000135/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000135/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel 'animal taxon'^^xsd:string ;
+    skos:prefLabel 'individual taxon canonical name'@en ;
+    skos:definition 'This attribute has been merged with \'animal taxon\'. The scientific name of the species on which the tag was deployed, as defined by the Integrated Taxonomic Information System (ITIS, www.itis.gov). If the species name can not be provided, this should be the lowest level taxonomic rank that can be determined and that is used in the ITIS taxonomy. Additional information can be provided using the term \'taxon detail\'. Format: controlled list; Entity described: individual'@en ;
+    skos:notation 'SDN:MVB::MVB000135'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000182/5/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000182/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000182/>;
+    dc:modified '2022-09-23T14:36:33'^^xsd:dateTime ;
+    skos:altLabel 'tag ID'^^xsd:string ;
+    skos:prefLabel 'tag local identifier'@en ;
+    skos:definition 'This attribute has been merged with \'tag ID\'. An identifier for the tag, provided by the data owner. Values are unique within the study. If the data owner does not provide a tag ID, an internal Movebank tag identifier may sometimes be shown. Example: \'2342\'; Units: none; Entity described: tag'@en ;
+    skos:notation 'SDN:MVB::MVB000182'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000009/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000009/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000009/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'accelerations raw'@en ;
+    skos:definition 'Burst of raw acceleration sensor values. Range and units may vary by provider, tag, and orientation of the sensor on the animal. To interpret values, best practice is to further define the measurements using \'acceleration axes\' and \'acceleration sampling frequency per axis\', and to order the burst by alternating one measurement for each active axis in alphabetical order. Example: \'1844 1889 1653 1845 1896 1653 1837 1897 1653 1842 1898 1650 1844 1899 1644 1840...\'; Units: not defined; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000010/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000010/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000010/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'acknowledgements'@en ;
+    skos:definition 'Acknowledgements for the study. For example, people or institutions that provided logistics support or site access, and names of field assistants or collaborators. Example: \'We thank Carrie Smith and John Johnson for help in the field and the Delaware Parks Association for access to our research site and logistical support.\'; Units: none; Entity described: study'@en ;
+    skos:notation 'SDN:MVB::MVB000010'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000026/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000026/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000026/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Argos altitude'@en ;
+    skos:definition 'Altitude used for location calculation, Argos diagnostic data (definition from Argos User\'s Manual 2011). Example: \'27\'; Units: meters; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000026'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000029/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000029/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000029/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Argos error radius'@en ;
+    skos:definition 'One standard deviation (sigma) of the estimated location error, assuming isotropic error, Argos diagnostic data (definition from Argos User\'s Manual 2011). Example: \'229\'; Units: meters; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000029'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000034/4/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000034/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000034/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Argos LC'@en ;
+    skos:definition 'The location class retrieved from Argos, Argos diagnostic data. Classes are based on the type of location (Argos Doppler Shift or GPS) and the number of messages received during the satellite pass. Location classes in order of decreasing accuracy are G (GPS), 3, 2, 1, 0, A, B and Z (definition from Argos User\'s Manual V1.6.6, 2016). Format: controlled list; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000034'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000041/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000041/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000041/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Argos pass duration'@en ;
+    skos:definition 'Time elapsed between the first and last message received by the satellite, Argos diagnostic data (definition from Argos User\'s Manual 2011). Example: \'118\'; Units: seconds; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000041'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000043/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000043/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000043/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Argos semi major'@en ;
+    skos:definition 'Length of the semi-major axis of the error ellipse, Argos diagnostic data (definition from Argos User\'s Manual 2011). Example: \'300\'; Units: meters; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000043'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000044/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000044/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000044/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Argos semi minor'@en ;
+    skos:definition 'Length of the semi-minor axis of the error ellipse, Argos diagnostic data (definition from Argos User\'s Manual 2011). Example: \'175\'; Units: meters; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000044'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000068/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000068/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000068/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'citation'@en ;
+    skos:definition 'One or more citations for the study. Include citations for published papers or reports describing the data in the study, or datasets derived from the study. If the data have not been published, an \'unpublished data\' or \'in progress\' citation should be used, listing authors and a title for the dataset. Example: \'McIntyre CL, Douglas DC, Collopy MW (2008) Movements of golden eagles (Aquila chrysaetos) from interior Alaska during their first year of independence. The Auk 125(1): 214-224. https://doi.org/10.1525/auk.2008.125.1.214 \'; Units: none; Entity described: study'@en ;
+    skos:notation 'SDN:MVB::MVB000068'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000071/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000071/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000071/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'conductivity'@en ;
+    skos:definition 'The maximum conductivity recorded during the measurement interval. Range and units may vary by provider and tag settings. Example: \'17\'; Units: not defined; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000071'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000083/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000083/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000083/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'deployment end comments'@en ;
+    skos:definition 'Additional information about the end of a tag deployment. Also see \'deployment end type\', \'animal death comments\', and \'tag failure comments\'. Example: \'data transmission stopped after 108 days. Cause unknown\'; Units: none; Entity described: deployment'@en ;
+    skos:notation 'SDN:MVB::MVB000083'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000086/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000086/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000086/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'duty cycle'@en ;
+    skos:definition 'Remarks associated with the duty cycle of a tag during the deployment, describing the times it is on/off and the frequency at which it transmits or records data. Units and time zones should be defined in the remarks. Example: \'15-min fixes from 8:00-18:00 local time (0:00-10:00 UTC)\'; Units: none; Entity described: deployment'@en ;
+    skos:notation 'SDN:MVB::MVB000086'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000094/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000094/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000094/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'eobs horizontal accuracy estimate'@en ;
+    skos:definition 'A horizontal (in)accuracy estimate, calculated by the GPS module (definition from e-obs Digital Telemetry Manual for DataDecoder Software, 2010; Franz Kuemmeth, e-obs Digital Telemetry, personal communication, 2012). Example: \'35.07\'; Units: meters; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000094'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000105/4/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000105/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000105/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Flt switch'@en ;
+    skos:definition 'The \'switch\' value provided by Fleetronic tags. Identifies the action carried out by the tag, relevant for logger performance testing and data filtering (definition from Kris Van Uffelen, Fleetronic, personal communication 2014). Allowed values are 0 = SV_LowestPositionSwitch; 6 = SV_PositionAcceleration; 48 = SV_PowerUp; 49 = SV_InternalStatus1; 64 = SV_Network; 69 = SV_ReceivedSMS; 72 = SV_SettingsAccepted; 77 = SV_TimeAlive; 112 =SV_LcdData1. Format: controlled list; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000105'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000108/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000108/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000108/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'geolocator light threshold'@en ;
+    skos:definition 'The light threshold used for location estimation with solar geolocators. Range and units may vary by provider and tag settings. Example: \'16\'; Units: not defined; Entity described: deployment'@en ;
+    skos:notation 'SDN:MVB::MVB000108'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000111/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000111/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000111/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Gt sys week'@en ;
+    skos:definition 'The week number since the device was activated (definition from GeoTrak\'s \'PTT Decode Overview\', 2014). Example: \'4\'; Units: count; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000111'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000112/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000112/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000112/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Gt tx count'@en ;
+    skos:definition 'The number of transmissions since last rollover (definition from GeoTrak\'s \'PTT Decode Overview\', 2014). Example: \'4840\'; Units: count; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000112'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000120/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000120/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000120/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GPS satellite count'@en ;
+    skos:definition 'The number of GPS satellites used to estimate the location. Example: \'8\'; Units: count; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000120'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000121/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000121/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000121/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GPS time to fix'@en ;
+    skos:definition 'The time required to obtain the GPS location fix. Example: \'36\'; Units: seconds; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000121'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000123/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000123/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000123/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'grants used'@en ;
+    skos:definition 'A list or description of grants and other funding sources for the research. Example: \'This project was funded by an NSF grant to RK.\'; Units: none; Entity described: study'@en ;
+    skos:notation 'SDN:MVB::MVB000123'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000127/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000127/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000127/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'habitat'@en ;
+    skos:definition 'A category or description of the habitat. Information about the values and how they were obtained can be provided in \'habitat according to\'. Example: \'oak savannah\'; Units: none; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000127'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000140/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000140/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000140/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'study local timestamp'@en ;
+    skos:definition 'The date and time a sensor measurement was taken, converted from the values in \'timestamp\' to the time zone of the study reference location. The time zone for the study reference location is determined using the IANA Time Zone Database and a shapefile of these zones provided by efele.net. Example: \'2008-08-14 15:31:00.000\'; Format: yyyy-MM-dd HH:mm:ss.SSS; Units: time zone is specific to the study; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000140'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000141/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000141/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000141/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'location accuracy comments'@en ;
+    skos:definition 'Comments about the location accuracy. This can further describe values provided in \'location error text\', \'location error numerical\', \'vertical error numerical\', \'lat lower\', \'lat upper\', \'long lower\' and/or \'long upper\'. The percentile uncertainty can be provided using \'location error percentile\'. Example: \'1 standard deviation errors, assuming normal distribution, provided by the GPS unit\'; Units: none; Entity described: deployment'@en ;
+    skos:notation 'SDN:MVB::MVB000141'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000142/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000142/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000142/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'location error numerical'@en ;
+    skos:definition 'An estimate of the horizontal error of the location including only numbers. (If the error estimates include non-numerical characters such as \'>\' use \'location error text\'.) These values can be described using \'location error percentile\' and \'location accuracy comments\'. Example: \'50\'; Units: meters; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000142'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000143/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000143/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000143/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'location error percentile'@en ;
+    skos:definition 'The percentile error for horizontal error values provided in \'location error text\', \'location error numerical\', \'lat lower\', \'lat upper\', \'long lower\' and/or \'long upper\'. Additional comments about these values can be provided using \'location accuracy comments\'. Example: \'67\'; Units: none (percent); Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000143'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000162/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000162/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000162/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'modelled'@en ;
+    skos:definition 'Can be used to identify locations or light level values that are modelled, interpolated, or otherwise added or changed based on original sensor measurements. These may include movement model outputs, locations added to create a dataset with equal time intervals, etc. Details about the procedures used can be provided in \'data processing software\'. Allowed values are TRUE or FALSE. Units: none; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000162'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000169/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000169/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000169/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sampling frequency'@en ;
+    skos:definition 'The sampling frequency. If multiple sensors are deployed, use sensor-type-specific frequency attributes. Example: \'5.93\'; Units: Hz; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000169'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000173/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000173/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000173/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'study name'@en ;
+    skos:definition 'The name of the study in Movebank. Example: \'Coyotes, Kays and Bogan, Albany NY\'; Units: none; Entity described: study'@en ;
+    skos:notation 'SDN:MVB::MVB000173'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000174/4/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000174/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000174/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'study reference location'@en ;
+    skos:definition 'A reference location for the study chosen by the data owner that is used as the location for the study marker shown on the Movebank map. This location can represent a colony, homing location, deployment site, or other location relevant to the study. Example: \'-73.856, 42.718\'; Units: decimal degrees, WGS84 reference system; Entity described: study'@en ;
+    skos:notation 'SDN:MVB::MVB000174'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000177/4/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000177/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000177/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'study timezone'@en ;
+    skos:definition 'The time zone at the study reference location, determined using the IANA Time Zone Database and a shapefile of these zones provided by efele.net. Format: controlled list; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000177'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000180/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000180/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000180/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tag failure comments'@en ;
+    skos:definition 'Comments about tag malfunction or failure. Example: \'tag stopped transmitting 23/12/08, was not found\'; Units: none; Entity described: tag'@en ;
+    skos:notation 'SDN:MVB::MVB000180'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000187/4/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000187/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000187/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tag production date'@en ;
+    skos:definition 'The approximate date the tag was produced (can be a year, month, or day). Example: \'March 2011\'; Units: none; Entity described: tag'@en ;
+    skos:notation 'SDN:MVB::MVB000187'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000188/4/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000188/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000188/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tag readout method'@en ;
+    skos:definition 'The way the data are received from the tag. Values are chosen from a controlled list: ISS = Data are transferred via the International Space Station; LPWAN = Data are transferred through a low-power wide-area network, such as LoRa or Sigfox; multiple = Data are acquired using multiple methods; none = Data are obtained without use of an animal-borne tag, such as by observing a unique marking; other-wireless = Data are transferred via another form of wireless data transfer, such as a VHF transmitter/receiver; phone-network = Data are transferred via a phone network, such as GSM or AMPS; satellite = Data are transferred via satellite; tag-retrieval = The tag must be physically retrieved in order to obtain the data; telemetry-network = Data are obtained through a radio or acoustic telemetry network; Wi-Fi/Bluetooth = Data are transferred via a local Wi-Fi or Bluetooth system. Format: controlled list; Entity described: deployment'@en ;
+    skos:notation 'SDN:MVB::MVB000188'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000202/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000202/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000202/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'underwater count'@en ;
+    skos:definition 'The number of times the tag went underwater during the measurement period. Example: \'11\'; Units: count; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000202'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000203/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000203/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000203/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'underwater time'@en ;
+    skos:definition 'The amount of time the tag was underwater during the measurement period. Example: \'547\'; Units: seconds; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000203'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000208/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000208/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000208/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'vertical error numerical'@en ;
+    skos:definition 'An estimate of the vertical error of the location. These values can be described using \'location error percentile\' and \'location accuracy comments\'. Example: \'12\'; Units: meters; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000208'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000213/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000213/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000213/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'wet count'@en ;
+    skos:definition 'The wet count during the measurement interval. Example: \'11\'; Units: count; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000213'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000214/2/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000214/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000214/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'data decoding software'@en ;
+    skos:definition 'The name or version of software used to decode the sensor data. Example: \'11\'; Units: none; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000214'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000224/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000224/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000224/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'number of deployed locations'@en ;
+    skos:definition 'The number of deployed locations in the study. Values displayed in the study details on Movebank are calculated within minutes when changes are made. Values obtained through the REST API are calculated approximately daily. Example: \'172231\'; Units: count; Entity described: study'@en ;
+    skos:notation 'SDN:MVB::MVB000224'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000226/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000226/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000226/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'number of individuals'@en ;
+    skos:definition 'The number of individual animals in the study. Values displayed in the study details on Movebank are calculated within minutes when changes are made. Values obtained through the REST API are calculated approximately daily. Example: \'73\'; Units: count; Entity described: study'@en ;
+    skos:notation 'SDN:MVB::MVB000226'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000227/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000227/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000227/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'number of tags'@en ;
+    skos:definition 'The number of tags in the study. Values displayed in the study details on Movebank are calculated within minutes when changes are made. Values obtained through the REST API are calculated approximately daily. Example: \'73\'; Units: count; Entity described: study'@en ;
+    skos:notation 'SDN:MVB::MVB000227'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000241/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000241/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000241/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'timestamp of last deployed location'@en ;
+    skos:definition 'The timestamp of the last deployed location in the study. Values displayed in the study details on Movebank are calculated within minutes when changes are made. Values obtained through the REST API are calculated approximately daily. Example: \'2014-03-11 18:06:44.000\'; Format: yyyy-MM-dd HH:mm:ss.SSS; Units: UTC or GPS time; Entity described: study'@en ;
+    skos:notation 'SDN:MVB::MVB000241'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000244/2/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000244/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000244/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'alt project ID'@en ;
+    skos:definition 'A name or unique identifier for a project associated with the deployment, for example a monitoring program or another data platform. Best practice is to include the name of the related database or organization followed by the project identifier. Example: \'MOTUS145\'; Units: none; Entity described: deployment'@en ;
+    skos:notation 'SDN:MVB::MVB000244'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000261/2/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000261/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000261/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mortality status'@en ;
+    skos:definition 'The mortality status, as reported by the tag. Use \'animal death comments\' to report details about the death of the animal. Example: \'1\'; Units: none; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000261'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000263/2/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000263/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000263/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'pitch'@en ;
+    skos:definition 'The pitch of the tag, as measured by the gyroscope, accelerometer and/or magnetometer on the tag. Values range from -180 to 180, with positive values indicating backward pitch and negative values indicating forward pitch. Example: \'-3.37\'; Units: degrees; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000263'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000149/4/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000149/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000149/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'Lot CRC status'^^xsd:string ;
+    skos:prefLabel 'Lotek CRC status'@en ;
+    skos:definition 'Cyclic Redundancy Check (raw values) provided by Lotek. These translate to the values stored in \'Lotek CRC status text\' (definition from \'11884 PinPoint User Manual Rev 5.pdf\', Lotek, personal correspondence 2018). Allowed values are G = OK (good data); E = Fail (data has been corrupted on transmission, and therefore cannot be trusted); F = OK(corrected) (the message was corrected with Lotek\'s error correction algorithm). Format: controlled list; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000149'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000150/4/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000150/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000150/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'Lot CRC status text'^^xsd:string ;
+    skos:prefLabel 'Lotek CRC status text'@en ;
+    skos:definition 'Cyclic Redundancy Check provided by Lotek (definition from \'11884 PinPoint User Manual Rev 5.pdf\', Lotek, personal correspondence 2018). Allowed values are OK = good data; Fail = data has been corrupted on transmission, and therefore cannot be trusted; OK(corrected) = the message was corrected with Lotek\'s error correction algorithm. Format: controlled list; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000150'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000158/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000158/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000158/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'Microwave activity count'^^xsd:string ;
+    skos:prefLabel 'Mw activity count'@en ;
+    skos:definition 'The activity counter value. This value increments when the PTT is moving while it is transmitting. If the activity counter is constant for two or more transmission periods (and the GPS locations are unvarying), you should consider the possibility that the PTT has become detached or the bird is down (definition from the Microwave Telemetry, Inc. Solar Argos/GPS PTT-100 Field Manual, 2012). Example: \'209\'; Units: count; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000158'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000054/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000054/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000054/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'bar barometric height'^^xsd:string ;
+    skos:prefLabel 'barometric height'@en ;
+    skos:definition 'Altitude estimated by a barometric pressure sensor on the tag. Example: \'179\'; Units: meters; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000054'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000055/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000055/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000055/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'bar barometric pressure'^^xsd:string ;
+    skos:prefLabel 'barometric pressure'@en ;
+    skos:definition 'The barometric air or water pressure. Example: \'32536.0\'; Units: mbar (hPa); Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000055'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000065/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000065/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000065/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'beacon frequency'^^xsd:string ;
+    skos:prefLabel 'tag beacon frequency'@en ;
+    skos:definition 'The frequency of the radio tag or tag retrieval beacon. Example: \'450.5\'; Units: MHz; Entity described: tag'@en ;
+    skos:notation 'SDN:MVB::MVB000065'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000077/4/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000077/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000077/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'deploy off date'^^xsd:string ;
+    skos:prefLabel 'deploy off timestamp'@en ;
+    skos:definition 'The timestamp when the tag deployment ended. Data records recorded after this day and time are not associated with the animal related to the deployment. Values are typically defined by the data owner, and in some cases are created automatically during data import. Further information can be provided in \'deployment end type\' and \'deployment end comments\'. Example: \'2009-10-01 12:00:00.000\'; Format: yyyy-MM-dd HH:mm:ss.SSS; Units: UTC or GPS time; Entity described: deployment'@en ;
+    skos:notation 'SDN:MVB::MVB000077'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000081/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000081/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000081/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'deploy on date'^^xsd:string ;
+    skos:prefLabel 'deploy on timestamp'@en ;
+    skos:definition 'The timestamp when the tag deployment started. Data records recorded before this day and time are not associated with the animal related to the deployment. Values are typically defined by the data owner, and in some cases are created automatically during data import. Example: \'2008-08-30 18:00:00.000\'; Format: yyyy-MM-dd HH:mm:ss.SSS; Units: UTC or GPS time; Entity described: deployment'@en ;
+    skos:notation 'SDN:MVB::MVB000081'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000139/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000139/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000139/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'gls light level'^^xsd:string ;
+    skos:prefLabel 'light level'@en ;
+    skos:definition 'Light-level values measured by a solar geolocator. Range and units may vary by provider and tag settings. Best practice is to define values in the reference data. Example: \'28\'; Units: not defined; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000139'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000113/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000113/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000113/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'gls twilight'^^xsd:string ;
+    skos:prefLabel 'twilight'@en ;
+    skos:definition 'Identifies light-level measurements determined to represent twilight events. Typically 1 = sunrise, 2 = sunset, 0 = not twilight. Example: \'2\'; Units: none; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000113'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000232/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000232/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000232/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'guaternions-raw'^^xsd:string ;
+    skos:prefLabel 'orientation quaternions raw'@en ;
+    skos:definition 'Burst of raw coordinate values of quaternions defining the orientation of the tag. Example: \'-10136 -6 -3 -121 -10944 -3 2 -120 -12516 -1 11 -117 -17502 2 15 -107 -19954 -11 10 -100 -20825 -7 12 -97 -19864 -12 18 -99 -21930 -1 6 -94 -22438 -3 19 -91 -21594 -7 24 -92\'; Units: not defined; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000232'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000131/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000131/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000131/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'height above msl'^^xsd:string ;
+    skos:prefLabel 'height above mean sea level'@en ;
+    skos:definition 'The estimated height of the tag above mean sea level, typically estimated by the tag. If altitudes are calculated as height above an ellipsoid, use \'height above ellipsoid\'. Example: \'34\'; Units: meters; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000131'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000016/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000016/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000016/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'individual local identifier'^^xsd:string ;
+    skos:prefLabel 'animal ID'@en ;
+    skos:definition 'An individual identifier for the animal, provided by the data owner. Values are unique within the study. If the data owner does not provide an Animal ID, an internal Movebank animal identifier is sometimes shown. Example: \'TUSC_CV5\'; Units: none; Entity described: individual'@en ;
+    skos:notation 'SDN:MVB::MVB000016'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000219/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000219/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000219/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'mag magnetic field axes'^^xsd:string ;
+    skos:prefLabel 'magnetic field axes'@en ;
+    skos:definition 'The enabled magnetometer axes. Example: \'XYZ\'; Units: none; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000219'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000151/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000151/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000151/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'mag magnetic field raw x'^^xsd:string ;
+    skos:prefLabel 'magnetic field raw x'@en ;
+    skos:definition 'Raw magnetic field values provided by the tag for the X axis. May include an unknown offset. Range and units may vary by provider, tag, and orientation of the sensor on the animal. Example: \'-0.5197\'; Units: not defined; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000151'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000152/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000152/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000152/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'mag magnetic field raw y'^^xsd:string ;
+    skos:prefLabel 'magnetic field raw y'@en ;
+    skos:definition 'Raw magnetic field values provided by the tag for the Y axis. May include an unknown offset. Range and units may vary by provider, tag, and orientation of the sensor on the animal. Example: \'-0.993\'; Units: not defined; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000152'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000153/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000153/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000153/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'mag magnetic field raw z'^^xsd:string ;
+    skos:prefLabel 'magnetic field raw z'@en ;
+    skos:definition 'Raw magnetic field values provided by the tag for the Z axis. May include an unknown offset. Range and units may vary by provider, tag, and orientation of the sensor on the animal. Example: \'-0.8857\'; Units: not defined; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000153'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000220/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000220/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000220/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'mag magnetic field sampling frequency per axies'^^xsd:string ;
+    skos:prefLabel 'magnetic field sampling frequency per axis'@en ;
+    skos:definition 'The sampling frequency for each axis measured by the magnetometer. Can be used to report bursts of values associated with a single timestamp. Example: \'20\'; Units: Hz; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000220'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000221/2/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000221/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000221/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'mag magnetic fields raw'^^xsd:string ;
+    skos:prefLabel 'magnetic fields raw'@en ;
+    skos:definition 'Burst of magnetic field values along the X, Y, and/or Z axes of the tag, depending on which axes are enabled. Measurements alternate one measurement for each active axis in alphabetical order. Range and units may vary by provider, tag, and orientation of the sensor on the animal. Example: \'-1 115 -29 12 112 -26 3 103 -27 14 112 -30 10 108 -22 12 100 -30 6 106 -26 16 102 -26 2 102 -18 2 102 -18\'; Units: not defined; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000221'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000183/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000183/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000183/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'manufacturer name'^^xsd:string ;
+    skos:prefLabel 'tag manufacturer name'@en ;
+    skos:definition 'The company or person that produced the tag. Example: \'Holohil\'; Units: none; Entity described: tag'@en ;
+    skos:notation 'SDN:MVB::MVB000183'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000163/4/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000163/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000163/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'orn transmission protocol'^^xsd:string ;
+    skos:prefLabel 'Ornitela transmission protocol'@en ;
+    skos:definition 'The way in which the data from Ornitela tags were transmitted. Allowed values are SMS or GPRS. Format: controlled list; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000163'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000228/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000228/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000228/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'quaternion-raw-w'^^xsd:string ;
+    skos:prefLabel 'orientation quaternion raw w'@en ;
+    skos:definition 'The w component of the quaternion representing the orientation of the tag, in raw values provided by the tag. Component values must be converted in order to get true quaternions. Example: \'492\'; Units: not defined; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000228'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000229/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000229/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000229/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'quaternion-raw-x'^^xsd:string ;
+    skos:prefLabel 'orientation quaternion raw x'@en ;
+    skos:definition 'The x component of the quaternion representing the orientation of the tag, in raw values provided by the tag. Component values must be converted in order to get true quaternions. Example: \'-90\'; Units: not defined; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000229'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000230/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000230/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000230/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'quaternion-raw-y'^^xsd:string ;
+    skos:prefLabel 'orientation quaternion raw y'@en ;
+    skos:definition 'The y component of the quaternion representing the orientation of the tag, in raw values provided by the tag. Component values must be converted in order to get true quaternions. Example: \'127\'; Units: not defined; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000230'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000231/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000231/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000231/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'quaternion-raw-z'^^xsd:string ;
+    skos:prefLabel 'orientation quaternion raw z'@en ;
+    skos:definition 'The z component of the quaternion representing the orientation of the tag, in raw values provided by the tag. Component values must be converted in order to get true quaternions. Example: \'-103\'; Units: not defined; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000231'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000189/3/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000189/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000189/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'serial no'^^xsd:string ;
+    skos:prefLabel 'tag serial no'@en ;
+    skos:definition 'The serial number of the tag. Example: \'MN93-33243\'; Units: none; Entity described: tag'@en ;
+    skos:notation 'SDN:MVB::MVB000189'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000222/2/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000222/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000222/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'study reference location latitude'^^xsd:string ;
+    skos:prefLabel 'main location lat'@en ;
+    skos:definition 'The latitude of the reference location for the study chosen by the data owner that is used as the location for the study marker shown on the Movebank map. This location can represent a colony, homing location, deployment site, research institute location, or other location relevant to the study. Example: \'42.718\'; Units: decimal degrees, WGS84 reference system; Entity described: study'@en ;
+    skos:notation 'SDN:MVB::MVB000222'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000223/2/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000223/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000223/>;
+    dc:modified '2022-08-15T10:20:18'^^xsd:dateTime ;
+    skos:altLabel 'study reference location longitude'^^xsd:string ;
+    skos:prefLabel 'main location long'@en ;
+    skos:definition 'The longitude of the reference location for the study chosen by the data owner that is used as the location for the study marker shown on the Movebank map. This location can represent a colony, homing location, deployment site, research institute location, or other location relevant to the study. Example: \'-73.856\'; Units: decimal degrees, WGS84 reference system; Entity described: study'@en ;
+    skos:notation 'SDN:MVB::MVB000223'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000278/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000278/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000278/>;
+    dc:modified '2022-08-15T10:20:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Argos location algorithm'@en ;
+    skos:definition 'The processing algorithm used by Argos to estimate locations using Doppler shift. If the location data represent model output rather than the original estimates from Argos, also use \'modelled\'. Values are chosen from a controlled list: least squares = locations were calculated by Argos using a least-squares analysis; Kalman = locations were calculated by Argos using Kalman filtering. Format: controlled list; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000278'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000280/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000280/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000280/>;
+    dc:modified '2022-08-15T10:20:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'contact person ID'@en ;
+    skos:definition 'Used in the REST API. Internal identifier for the user account that is the contact for the study. Format: controlled list; Entity described: study'@en ;
+    skos:notation 'SDN:MVB::MVB000280'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000284/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000284/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000284/>;
+    dc:modified '2022-08-15T10:20:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GPS PDOP'@en ;
+    skos:definition 'Position dilution of precision provided by the GPS. Example: \'1.9\'; Units: unitless; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000284'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000285/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000285/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000285/>;
+    dc:modified '2022-08-15T10:20:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GPS twilight'@en ;
+    skos:definition 'An indication of twilight or time of day based on the GPS location and timestamp. Example: \'DARK\'; Units: none; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000285'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000289/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000289/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000289/>;
+    dc:modified '2022-08-15T10:20:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'is location sensor'@en ;
+    skos:definition 'Used in the REST API. Whether or not the sensor type provides events that include location estimates. Allowed values are TRUE or FALSE. Units: none; Entity described: tag_type'@en ;
+    skos:notation 'SDN:MVB::MVB000289'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000290/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000290/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000290/>;
+    dc:modified '2022-08-15T10:20:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'is test'@en ;
+    skos:definition 'Used in the REST API. Whether the Study Type is Test. TRUE or FALSE. If FALSE, the Study Type is Research. Units: none; Entity described: study'@en ;
+    skos:notation 'SDN:MVB::MVB000290'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000292/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000292/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000292/>;
+    dc:modified '2022-08-15T10:20:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'receiver deployment ID'@en ;
+    skos:definition 'An identifier for the deployment of a radio or acoustic receiver. Example: \'V21-987\'; Units: none; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000292'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000293/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000293/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000293/>;
+    dc:modified '2022-08-15T10:20:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'receiver detector ID'@en ;
+    skos:definition 'Identifier for the detector or antenna on an acoustic or radio receiver. Example: \'2\'; Units: none; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000293'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000296/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000296/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000296/>;
+    dc:modified '2022-08-15T10:20:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'telemetry detection count'@en ;
+    skos:definition 'Number of telemetry detections related to the location estimate. Example: \'447\'; Units: count; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000296'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000297/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000297/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000297/>;
+    dc:modified '2022-08-15T10:20:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'telemetry run ID'@en ;
+    skos:definition 'Identifier for a run of consecutive hits on a receiver station from a tag. Example: \'3459209\'; Units: none; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000297'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000294/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000294/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000294/>;
+    dc:modified '2022-08-15T10:20:17'^^xsd:dateTime ;
+    skos:altLabel 'heartrate RR interval'^^xsd:string ;
+    skos:prefLabel 'RR interval'@en ;
+    skos:definition 'The difference in time between heart beats, measured as the time elapsed between two successive R-waves of the QRS signal on the electrocardiogram (and its reciprocal, the HR). Units: seconds; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000294'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000287/1/> .
+<http://vocab.nerc.ac.uk/collection/MVB/current/MVB000287/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/MVB/current/MVB000287/>;
+    dc:modified '2022-08-15T10:20:17'^^xsd:dateTime ;
+    skos:altLabel 'heartrate heart rate'^^xsd:string ;
+    skos:prefLabel 'heart rate'@en ;
+    skos:definition 'The animal\'s heart rate. Units: beats per minute; Entity described: event'@en ;
+    skos:notation 'SDN:MVB::MVB000287'^^xsd:string .

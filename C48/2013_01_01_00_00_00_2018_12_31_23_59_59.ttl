@@ -1,0 +1,199 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C48/2013_01_01_00_00_00_2018_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C48/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2018-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG012/2/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG012/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG012/>;
+    dc:modified '2018-10-08T20:48:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Video survey'@en ;
+    skos:definition 'MEDIN data guideline for transfer video survey data'@en ;
+    skos:notation 'SDN:C48::MDG012'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG018/2/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG018/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG018/>;
+    dc:modified '2018-10-08T20:48:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Geophysical gravity'@en ;
+    skos:definition 'MEDIN data guideline for marine gravimeter/ gravity data'@en ;
+    skos:notation 'SDN:C48::MDG018'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG022/2/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG022/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG022/>;
+    dc:modified '2018-10-08T20:48:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Hydrographic sidescan sonar'@en ;
+    skos:definition 'MEDIN data guideline for side scan sonar (SSS) data'@en ;
+    skos:notation 'SDN:C48::MDG022'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG023/2/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG023/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG023/>;
+    dc:modified '2018-10-08T20:48:01'^^xsd:dateTime ;
+    skos:altLabel 'MBES'^^xsd:string ;
+    skos:prefLabel 'Hydrographic multibeam echo'@en ;
+    skos:definition 'MEDIN data guideline for multibeam echosounder (MBES) data'@en ;
+    skos:notation 'SDN:C48::MDG023'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG020/2/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG020/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG020/>;
+    dc:modified '2018-10-08T20:48:01'^^xsd:dateTime ;
+    skos:altLabel 'MCS'^^xsd:string ;
+    skos:prefLabel 'Geophysical multi channel siesmic'@en ;
+    skos:definition 'MEDIN data guideline for multi channel seismic (2D,3D & 4D) data'@en ;
+    skos:notation 'SDN:C48::MDG020'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG021/2/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG021/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG021/>;
+    dc:modified '2018-10-08T20:48:01'^^xsd:dateTime ;
+    skos:altLabel 'SCS'^^xsd:string ;
+    skos:prefLabel 'Geophysical single channel siesmic'@en ;
+    skos:definition 'MEDIN data guideline for single channel seismic (sub bottom profiler (SBP)) data'@en ;
+    skos:notation 'SDN:C48::MDG021'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG034/2/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG034/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG034/>;
+    dc:modified '2018-10-08T20:48:01'^^xsd:dateTime ;
+    skos:altLabel 'SF'^^xsd:string ;
+    skos:prefLabel 'Seabed survey feature interpretations'@en ;
+    skos:definition 'MEDIN product seabed feature and contact interpretations'@en ;
+    skos:notation 'SDN:C48::MDG034'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG026/2/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG026/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG026/>;
+    dc:modified '2018-10-08T20:48:01'^^xsd:dateTime ;
+    skos:altLabel 'TIDE'^^xsd:string ;
+    skos:prefLabel 'Tidal reduction'@en ;
+    skos:definition 'MEDIN data guideline for tidal reduction data'@en ;
+    skos:notation 'SDN:C48::MDG026'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG010/2/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG010/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG010/>;
+    dc:modified '2018-10-08T20:48:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Underway ocean data'@en ;
+    skos:definition 'MEDIN data guideline for the recording of oceanographic data while underway'@en ;
+    skos:notation 'SDN:C48::MDG010'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG039/1/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG039/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG039/>;
+    dc:modified '2018-10-08T20:48:00'^^xsd:dateTime ;
+    skos:altLabel 'AD_HOC'^^xsd:string ;
+    skos:prefLabel 'Ad-hoc sightings'@en ;
+    skos:definition 'MEDIN data guideline for ad-hoc sightings and non-effort or quantitative based visual surveys of marine life'@en ;
+    skos:notation 'SDN:C48::MDG039'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG040/1/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG040/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG040/>;
+    dc:modified '2018-10-08T20:48:00'^^xsd:dateTime ;
+    skos:altLabel 'BATHY'^^xsd:string ;
+    skos:prefLabel 'Bathymetry'@en ;
+    skos:definition 'MEDIN data guideline for Bathymetry data'@en ;
+    skos:notation 'SDN:C48::MDG040'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG041/1/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG041/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG041/>;
+    dc:modified '2018-10-08T20:48:00'^^xsd:dateTime ;
+    skos:altLabel 'GEOTECH'^^xsd:string ;
+    skos:prefLabel 'Offshore geotechnical site investigation'@en ;
+    skos:definition 'MEDIN data guideline for the recording of offshore geotechnical site investigation data'@en ;
+    skos:notation 'SDN:C48::MDG041'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG042/1/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG042/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG042/>;
+    dc:modified '2018-10-08T20:48:00'^^xsd:dateTime ;
+    skos:altLabel 'MET'^^xsd:string ;
+    skos:prefLabel 'Fixed position meteorology'@en ;
+    skos:definition 'MEDIN data guideline for fixed position meteorological measuring instruments'@en ;
+    skos:notation 'SDN:C48::MDG042'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG043/1/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG043/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG043/>;
+    dc:modified '2018-10-08T20:48:00'^^xsd:dateTime ;
+    skos:altLabel 'SEIS'^^xsd:string ;
+    skos:prefLabel 'Seismic'@en ;
+    skos:definition 'MEDIN data guideline for seismic data'@en ;
+    skos:notation 'SDN:C48::MDG043'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG044/1/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG044/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG044/>;
+    dc:modified '2018-10-08T20:48:00'^^xsd:dateTime ;
+    skos:altLabel 'TIDE'^^xsd:string ;
+    skos:prefLabel 'Tidal elevation'@en ;
+    skos:definition 'MEDIN data guideline for tidal elevation data'@en ;
+    skos:notation 'SDN:C48::MDG044'^^xsd:string .

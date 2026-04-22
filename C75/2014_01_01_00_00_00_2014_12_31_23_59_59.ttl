@@ -1,0 +1,118 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C75/2014_01_01_00_00_00_2014_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C75/2013_01_01_00_00_00_2013_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2014-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/RTC/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/RTC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/RTC/>;
+    dc:modified '2014-12-05T08:06:55'^^xsd:dateTime ;
+    skos:altLabel 'RTC'^^xsd:string ;
+    skos:prefLabel 'Romberg Tiburon Center for Environmental Studies'@en ;
+    skos:definition 'Institute located in Tiburon, CA, USA. Part of San Francisco State University.'@en ;
+    skos:notation 'SDN:C75::RTC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/MOI/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/MOI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/MOI/>;
+    dc:modified '2014-09-30T12:30:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mauritius Oceanography Institute'@en ;
+    skos:definition 'Government lab located in Quatre Bornes.'@en ;
+    skos:notation 'SDN:C75::MOI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/VIF/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/VIF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/VIF/>;
+    dc:modified '2014-07-23T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Research Institute for Marine Fisheries, Viet Nam'@en ;
+    skos:definition 'Government research institute'@en ;
+    skos:notation 'SDN:C75::VIF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/RAN/2/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/RAN/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/RAN/>;
+    dc:modified '2014-06-07T11:13:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Royal Australian Navy Hydrographic Service'@en ;
+    skos:definition 'The naval bathymetric surveying and charting group based in Wollongong NSW'@en ;
+    skos:notation 'SDN:C75::RAN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/MCR/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/MCR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/MCR/>;
+    dc:modified '2014-05-20T08:05:30'^^xsd:dateTime ;
+    skos:altLabel 'MCRI'^^xsd:string ;
+    skos:prefLabel 'Marine Conservation Research International'@en ;
+    skos:definition 'Non-profit organisation investigating human impacts and conducting conservation projects on threatened marine wildlife and habitats.'@en ;
+    skos:notation 'SDN:C75::MCR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/IRM/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/IRM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/IRM/>;
+    dc:modified '2014-02-26T07:58:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'European Commission Joint Research Centre Institute for Reference Materials and Measurements'@en ;
+    skos:definition 'EC body based in Geel, Belgium.'@en ;
+    skos:notation 'SDN:C75::IRM'^^xsd:string .

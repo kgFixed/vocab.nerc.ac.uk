@@ -1,0 +1,100 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P29/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P29/2014_01_01_00_00_00_2015_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2016-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/CFA4MFSI/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/CFA4MFSI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/CFA4MFSI/>;
+    dc:modified '2016-05-17T15:31:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'melt_pond_free_sea_ice'@en ;
+    skos:definition 'The area occupied by type "sea_ice" is the sum of the areas of types "sea_ice_melt_pond" and "melt_pond_free_sea_ice".'@en ;
+    skos:notation 'SDN:P29::CFA4MFSI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/CFAT04MP/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/CFAT04MP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/CFAT04MP/>;
+    dc:modified '2016-05-17T15:31:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_ice_melt_pond'@en ;
+    skos:definition 'The area classified as type "sea_ice" within a grid cell is unaltered when an area of type "sea_ice_melt_pond" is also present because melt ponds occur on top of the existing sea ice.'@en ;
+    skos:notation 'SDN:P29::CFAT04MP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/sea/2/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/sea/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/sea/>;
+    dc:modified '2016-05-17T15:31:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea'@en ;
+    skos:definition 'The area occupied by type "sea" is equal to the sum of the areas of types "ice_free_sea" and "sea_ice".'@en ;
+    skos:notation 'SDN:P29::sea'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/sea_ice/2/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/sea_ice/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/sea_ice/>;
+    dc:modified '2016-05-17T15:31:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_ice'@en ;
+    skos:definition 'The area occupied by type "sea_ice" is the sum of the areas of types "sea_ice_melt_pond" and "melt_pond_free_sea_ice". The area occupied by type "sea" is equal to the sum of the areas of types "ice_free_sea" and "sea_ice".'@en ;
+    skos:notation 'SDN:P29::sea_ice'^^xsd:string .

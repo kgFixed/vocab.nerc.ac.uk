@@ -1,0 +1,370 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S13/2013_01_01_00_00_00_2014_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S13/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2014-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S193/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S193/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S193/>;
+    dc:modified '2014-11-19T12:35:38'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'pirus type'@en ;
+    skos:definition 'A recognised morphotype of the named organism. The term is usually associated with coccolithophores.'@en ;
+    skos:notation 'SDN:S13::S193'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S192/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S192/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S192/>;
+    dc:modified '2014-11-19T12:35:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'wettsteinii type'@en ;
+    skos:definition 'A recognised morphotype of the named organism. The term is usually associated with coccolithophores.'@en ;
+    skos:notation 'SDN:S13::S192'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S191/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S191/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S191/>;
+    dc:modified '2014-11-19T12:35:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'hellenica type'@en ;
+    skos:definition 'A recognised morphotype of the named organism. The term is usually associated with coccolithophores.'@en ;
+    skos:notation 'SDN:S13::S191'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S190/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S190/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S190/>;
+    dc:modified '2014-11-19T12:35:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'oblonga type'@en ;
+    skos:definition 'A recognised morphotype of the named organism. The term is usually associated with coccolithophores.'@en ;
+    skos:notation 'SDN:S13::S190'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S189/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S189/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S189/>;
+    dc:modified '2014-11-18T09:35:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '#1'@en ;
+    skos:definition 'Label used by the data originator to differentiate an unidentified subset of the named organism: only to be used if \'Type 1\' or \'sp. 1\' are not appropriate.'@en ;
+    skos:notation 'SDN:S13::S189'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S188/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S188/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S188/>;
+    dc:modified '2014-11-18T09:34:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Type D'@en ;
+    skos:definition 'A recognised morphotype of the named organism.'@en ;
+    skos:notation 'SDN:S13::S188'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S187/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S187/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S187/>;
+    dc:modified '2014-10-31T16:06:34'^^xsd:dateTime ;
+    skos:altLabel 'agg'^^xsd:string ;
+    skos:prefLabel 'species aggregate'@en ;
+    skos:definition 'A group of very closely related organisms similar to the species named but known to include multiple species which cannot be differentiated at the time of the analysis.'@en ;
+    skos:notation 'SDN:S13::S187'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S186/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S186/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S186/>;
+    dc:modified '2014-09-04T12:33:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sp. C colonial'@en ;
+    skos:definition 'Label used by the data originator to differentiate unidentified and presumed single species that has cells which associate together within a single sample or a batch of samples .'@en ;
+    skos:notation 'SDN:S13::S186'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S185/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S185/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S185/>;
+    dc:modified '2014-09-04T12:20:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sp. C heterotrophic'@en ;
+    skos:definition 'Label used by the data originator to differentiate unidentified and presumed single species belonging to a group of organisms with no visible chloroplasts within a single sample or a batch of samples.'@en ;
+    skos:notation 'SDN:S13::S185'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S184/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S184/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S184/>;
+    dc:modified '2014-09-04T12:18:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sp. B heterotrophic'@en ;
+    skos:definition 'Label used by the data originator to differentiate unidentified and presumed single species belonging to a group of organisms with no visible chloroplasts within a single sample or a batch of samples.'@en ;
+    skos:notation 'SDN:S13::S184'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S183/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S183/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S183/>;
+    dc:modified '2014-09-04T12:16:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sp. A heterotrophic'@en ;
+    skos:definition 'Label used by the data originator to differentiate unidentified and presumed single species belonging to a group of organisms with no visible chloroplasts within a single sample or a batch of samples.'@en ;
+    skos:notation 'SDN:S13::S183'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S182/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S182/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S182/>;
+    dc:modified '2014-09-04T12:14:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sp. D autotrophic'@en ;
+    skos:definition 'Label used by the data originator to differentiate unidentified and presumed single species belonging to a group of organisms with visible chloroplasts within a single sample or a batch of samples.'@en ;
+    skos:notation 'SDN:S13::S182'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S181/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S181/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S181/>;
+    dc:modified '2014-09-04T12:13:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sp. C autotrophic'@en ;
+    skos:definition 'Label used by the data originator to differentiate unidentified and presumed single species belonging to a group of organisms with visible chloroplasts within a single sample or a batch of samples.'@en ;
+    skos:notation 'SDN:S13::S181'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S180/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S180/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S180/>;
+    dc:modified '2014-09-04T12:11:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sp. B autotrophic'@en ;
+    skos:definition 'Label used by the data originator to differentiate unidentified and presumed single species belonging to a group of organisms with visible chloroplasts within a single sample or a batch of samples.'@en ;
+    skos:notation 'SDN:S13::S180'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S179/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S179/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S179/>;
+    dc:modified '2014-09-04T12:06:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sp. A autotrophic'@en ;
+    skos:definition 'Label used by the data originator to differentiate unidentified and presumed single species belonging to a group of organisms with visible chloroplasts within a single sample or a batch of samples.'@en ;
+    skos:notation 'SDN:S13::S179'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S165/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S165/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S165/>;
+    dc:modified '2014-09-02T14:22:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sp. 1'@en ;
+    skos:definition 'Label used by the data originator to differentiate unidentified and presumed single species belonging to a known group of organisms (generally a genus) within a single sample or a batch of samples.'@en ;
+    skos:notation 'SDN:S13::S165'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S166/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S166/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S166/>;
+    dc:modified '2014-09-02T14:22:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sp. 2'@en ;
+    skos:definition 'Label used by the data originator to differentiate unidentified and presumed single species belonging to a known group of organisms (generally a genus) within a single sample or a batch of samples.'@en ;
+    skos:notation 'SDN:S13::S166'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S167/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S167/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S167/>;
+    dc:modified '2014-09-02T14:22:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sp. 3'@en ;
+    skos:definition 'Label used by the data originator to differentiate unidentified and presumed single species belonging to a known group of organisms (generally a genus) within a single sample or a batch of samples.'@en ;
+    skos:notation 'SDN:S13::S167'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S168/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S168/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S168/>;
+    dc:modified '2014-09-02T14:22:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sp. 4'@en ;
+    skos:definition 'Label used by the data originator to differentiate unidentified and presumed single species belonging to a known group of organisms (generally a genus) within a single sample or a batch of samples.'@en ;
+    skos:notation 'SDN:S13::S168'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S169/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S169/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S169/>;
+    dc:modified '2014-09-02T14:22:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sp. 5'@en ;
+    skos:definition 'Label used by the data originator to differentiate unidentified and presumed single species belonging to a known group of organisms (generally a genus) within a single sample or a batch of samples.'@en ;
+    skos:notation 'SDN:S13::S169'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S170/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S170/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S170/>;
+    dc:modified '2014-09-02T14:22:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sp. 6'@en ;
+    skos:definition 'Label used by the data originator to differentiate unidentified and presumed single species belonging to a known group of organisms (generally a genus) within a single sample or a batch of samples.'@en ;
+    skos:notation 'SDN:S13::S170'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S171/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S171/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S171/>;
+    dc:modified '2014-09-02T14:22:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sp. 7'@en ;
+    skos:definition 'Label used by the data originator to differentiate unidentified and presumed single species belonging to a known group of organisms (generally a genus) within a single sample or a batch of samples.'@en ;
+    skos:notation 'SDN:S13::S171'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S172/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S172/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S172/>;
+    dc:modified '2014-09-02T14:22:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sp. 8'@en ;
+    skos:definition 'Label used by the data originator to differentiate unidentified and presumed single species belonging to a known group of organisms (generally a genus) within a single sample or a batch of samples.'@en ;
+    skos:notation 'SDN:S13::S172'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S173/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S173/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S173/>;
+    dc:modified '2014-09-02T14:22:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sp. 9'@en ;
+    skos:definition 'Label used by the data originator to differentiate unidentified and presumed single species belonging to a known group of organisms (generally a genus) within a single sample or a batch of samples.'@en ;
+    skos:notation 'SDN:S13::S173'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S174/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S174/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S174/>;
+    dc:modified '2014-09-02T14:22:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sp. 10'@en ;
+    skos:definition 'Label used by the data originator to differentiate unidentified and presumed single species belonging to a known group of organisms (generally a genus) within a single sample or a batch of samples.'@en ;
+    skos:notation 'SDN:S13::S174'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S175/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S175/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S175/>;
+    dc:modified '2014-09-02T14:22:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sp. A'@en ;
+    skos:definition 'Label used by the data originator to differentiate unidentified and presumed single species belonging to a known group of organisms (generally a genus) within a single sample or a batch of samples.'@en ;
+    skos:notation 'SDN:S13::S175'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S176/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S176/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S176/>;
+    dc:modified '2014-09-02T14:22:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sp. B'@en ;
+    skos:definition 'Label used by the data originator to differentiate unidentified and presumed single species belonging to a known group of organisms (generally a genus) within a single sample or a batch of samples.'@en ;
+    skos:notation 'SDN:S13::S176'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S177/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S177/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S177/>;
+    dc:modified '2014-09-02T14:22:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sp. C'@en ;
+    skos:definition 'Label used by the data originator to differentiate unidentified and presumed single species belonging to a known group of organisms (generally a genus) within a single sample or a batch of samples.'@en ;
+    skos:notation 'SDN:S13::S177'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S178/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S178/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S178/>;
+    dc:modified '2014-09-02T14:22:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sp. D'@en ;
+    skos:definition 'Label used by the data originator to differentiate unidentified and presumed single species belonging to a known group of organisms (generally a genus) within a single sample or a batch of samples.'@en ;
+    skos:notation 'SDN:S13::S178'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S164/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S164/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S164/>;
+    dc:modified '2014-08-21T12:47:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Type 4'@en ;
+    skos:definition 'A recognised morphotype of the named organism'@en ;
+    skos:notation 'SDN:S13::S164'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S163/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S163/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S163/>;
+    dc:modified '2014-08-21T12:47:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Type 3'@en ;
+    skos:definition 'A recognised morphotype of the named organism'@en ;
+    skos:notation 'SDN:S13::S163'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S162/1/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S162/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S162/>;
+    dc:modified '2014-08-21T12:46:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Type 2'@en ;
+    skos:definition 'A recognised morphotype of the named organism'@en ;
+    skos:notation 'SDN:S13::S162'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S1350/3/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S1350/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S1350/>;
+    dc:modified '2014-08-21T12:45:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Type 1'@en ;
+    skos:definition 'A recognised morphotype of the named organism'@en ;
+    skos:notation 'SDN:S13::S1350'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S1351/3/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S1351/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S1351/>;
+    dc:modified '2014-08-21T12:45:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Type 5'@en ;
+    skos:definition 'A recognised morphotype of the named organism'@en ;
+    skos:notation 'SDN:S13::S1351'^^xsd:string .

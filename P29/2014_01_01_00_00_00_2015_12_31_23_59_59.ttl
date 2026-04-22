@@ -1,0 +1,109 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P29/2014_01_01_00_00_00_2015_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P29/2013_01_01_00_00_00_2013_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2015-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/cfbmfire/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/cfbmfire/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/cfbmfire/>;
+    dc:modified '2015-07-08T15:41:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fire'@en ;
+    skos:definition 'An area_type of "fire" indicates that biomass fire, either smouldering, flaming or both, is present.'@en ;
+    skos:notation 'SDN:P29::cfbmfire'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/cfdustaa/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/cfdustaa/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/cfdustaa/>;
+    dc:modified '2015-07-08T15:41:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'dust_aerosol'@en ;
+    skos:definition 'An area_type of "dust_aerosol" indicates that dust aerosol is present at some level within the atmospheric column above an area of the surface of the Earth.'@en ;
+    skos:notation 'SDN:P29::cfdustaa'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/cfrainac/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/cfrainac/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/cfrainac/>;
+    dc:modified '2015-07-08T15:41:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'rain'@en ;
+    skos:definition 'An area_type of "rain" indicates that falling rain is present at some level within the atmospheric column above an area of the surface of the Earth.'@en ;
+    skos:notation 'SDN:P29::cfrainac'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/cfsmokes/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/cfsmokes/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/cfsmokes/>;
+    dc:modified '2015-07-08T15:41:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'smoke'@en ;
+    skos:definition 'An area_type of "smoke" indicates that smoke aerosol is present at some level within the atmospheric column above an area of the surface of the Earth.'@en ;
+    skos:notation 'SDN:P29::cfsmokes'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/cfvoascl/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/cfvoascl/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/cfvoascl/>;
+    dc:modified '2015-07-08T15:41:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'volcanic_ash_cloud'@en ;
+    skos:definition 'An area_type of "volcanic_ash_cloud" indicates that volcanic ash aerosol is present at some level within the atmospheric column above an area of the surface of the Earth.'@en ;
+    skos:notation 'SDN:P29::cfvoascl'^^xsd:string .

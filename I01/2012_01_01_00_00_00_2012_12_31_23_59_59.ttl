@@ -1,0 +1,192 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/I01/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I01/current/0.0.0/1/> .
+<http://vocab.nerc.ac.uk/collection/I01/current/0.0.0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I01/current/0.0.0/>;
+    dc:modified '2012-11-13T11:58:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Temperature'@en ;
+    skos:definition '{"discipline": "Meteorological products","category": "temperature","parameter": "Temperature","units": "K"}'@en ;
+    skos:notation 'SDN:I01::0.0.0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I01/current/0.1.1/1/> .
+<http://vocab.nerc.ac.uk/collection/I01/current/0.1.1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I01/current/0.1.1/>;
+    dc:modified '2012-11-13T11:58:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Relative humidity'@en ;
+    skos:definition '{"discipline": "Meteorological products","category": "moisture","parameter": "Relative humidity","units": "%"}'@en ;
+    skos:notation 'SDN:I01::0.1.1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I01/current/0.1.11/1/> .
+<http://vocab.nerc.ac.uk/collection/I01/current/0.1.11/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I01/current/0.1.11/>;
+    dc:modified '2012-11-13T11:58:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Snow depth'@en ;
+    skos:definition '{"discipline": "Meteorological products","category": "moisture","parameter": "Snow depth","units": "(Code table 4.201)"}'@en ;
+    skos:notation 'SDN:I01::0.1.11'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I01/current/0.1.19/1/> .
+<http://vocab.nerc.ac.uk/collection/I01/current/0.1.19/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I01/current/0.1.19/>;
+    dc:modified '2012-11-13T11:58:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Precipitation type'@en ;
+    skos:definition '{"discipline": "Meteorological products","category": "moisture","parameter": "Precipitation type","units": "Kg m-2"}'@en ;
+    skos:notation 'SDN:I01::0.1.19'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I01/current/0.1.52/1/> .
+<http://vocab.nerc.ac.uk/collection/I01/current/0.1.52/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I01/current/0.1.52/>;
+    dc:modified '2012-11-13T11:58:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Total precipitation rate'@en ;
+    skos:definition '{"discipline": "Meteorological products","category": "moisture","parameter": "Total precipitation rate","units": "Kg m-2 s-1", "note": "Total precipitation/snowfall rate stands for the sum of convective and large-scale precipitation/snowfall rate"}'@en ;
+    skos:notation 'SDN:I01::0.1.52'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I01/current/0.1.6/1/> .
+<http://vocab.nerc.ac.uk/collection/I01/current/0.1.6/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I01/current/0.1.6/>;
+    dc:modified '2012-11-13T11:58:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Evaporation'@en ;
+    skos:definition '{"discipline": "Meteorological products","category": "moisture","parameter": "Evaporation","units": "Kg m-2"}'@en ;
+    skos:notation 'SDN:I01::0.1.6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I01/current/0.19.0/1/> .
+<http://vocab.nerc.ac.uk/collection/I01/current/0.19.0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I01/current/0.19.0/>;
+    dc:modified '2012-11-13T11:58:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Visibility'@en ;
+    skos:definition '{"discipline": "Meteorological products","category": "physical atmospheric","parameter": "Visibility","units": "m"}'@en ;
+    skos:notation 'SDN:I01::0.19.0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I01/current/0.2.0/1/> .
+<http://vocab.nerc.ac.uk/collection/I01/current/0.2.0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I01/current/0.2.0/>;
+    dc:modified '2012-11-13T11:58:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Wind direction (from which blowing)'@en ;
+    skos:definition '{"discipline": "Meteorological products","category": "momentum","parameter": "Wind direction (from which blowing)","units": "degree true"}'@en ;
+    skos:notation 'SDN:I01::0.2.0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I01/current/0.2.1/1/> .
+<http://vocab.nerc.ac.uk/collection/I01/current/0.2.1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I01/current/0.2.1/>;
+    dc:modified '2012-11-13T11:58:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Wind speed'@en ;
+    skos:definition '{"discipline": "Meteorological products","category": "momentum","parameter": "Wind speed","units": "m s-1"}'@en ;
+    skos:notation 'SDN:I01::0.2.1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I01/current/0.2.22/1/> .
+<http://vocab.nerc.ac.uk/collection/I01/current/0.2.22/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I01/current/0.2.22/>;
+    dc:modified '2012-11-13T11:58:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Wind speed (gust)'@en ;
+    skos:definition '{"discipline": "Meteorological products","category": "momentum","parameter": "Wind speed (gust)","units": "m s-1"}'@en ;
+    skos:notation 'SDN:I01::0.2.22'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I01/current/0.3.1/1/> .
+<http://vocab.nerc.ac.uk/collection/I01/current/0.3.1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I01/current/0.3.1/>;
+    dc:modified '2012-11-13T11:58:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Pressure reduced to MSL'@en ;
+    skos:definition '{"discipline": "Meteorological products","category": "mass","parameter": "Pressure reduced to MSL","units": "Pa"}'@en ;
+    skos:notation 'SDN:I01::0.3.1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I01/current/0.4.3/1/> .
+<http://vocab.nerc.ac.uk/collection/I01/current/0.4.3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I01/current/0.4.3/>;
+    dc:modified '2012-11-13T11:58:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Global radiation flux'@en ;
+    skos:definition '{"discipline": "Meteorological products","category": "short-wave radiation","parameter": "Global radiation flux","units": "W m-2"}'@en ;
+    skos:notation 'SDN:I01::0.4.3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I01/current/0.4.9/1/> .
+<http://vocab.nerc.ac.uk/collection/I01/current/0.4.9/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I01/current/0.4.9/>;
+    dc:modified '2012-11-13T11:58:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Net short wave radiation flux'@en ;
+    skos:definition '{"discipline": "Meteorological products","category": "short-wave radiation","parameter": "Net short wave radiation flux","units": "W m-2"}'@en ;
+    skos:notation 'SDN:I01::0.4.9'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I01/current/0.5.5/1/> .
+<http://vocab.nerc.ac.uk/collection/I01/current/0.5.5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I01/current/0.5.5/>;
+    dc:modified '2012-11-13T11:58:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Net long wave radiation flux'@en ;
+    skos:definition '{"discipline": "Meteorological products","category": "long-wave radiation","parameter": "Net long wave radiation flux","units": "W m-2"}'@en ;
+    skos:notation 'SDN:I01::0.5.5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I01/current/0.6.1/1/> .
+<http://vocab.nerc.ac.uk/collection/I01/current/0.6.1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I01/current/0.6.1/>;
+    dc:modified '2012-11-13T11:58:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Total cloud cover'@en ;
+    skos:definition '{"discipline": "Meteorological products","category": "cloud","parameter": "Total cloud cover","units": "%"}'@en ;
+    skos:notation 'SDN:I01::0.6.1'^^xsd:string .

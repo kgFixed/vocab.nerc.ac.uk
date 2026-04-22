@@ -1,0 +1,271 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S12/2024_01_01_00_00_00_2026_04_22_15_37_35.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S12/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-22T15:37:35'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S12104/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S12104/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S12104/>;
+    dc:modified '2026-03-31T15:48:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'post-orbit to hypural plate'@en ;
+    skos:definition 'The section of the body from the rear of the eye opening to the end of the hypural plate, which is the last vertebrae, at the base of the tail.'@en ;
+    skos:notation 'SDN:S12::S12104'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S12103/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S12103/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S12103/>;
+    dc:modified '2026-03-31T15:47:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'interocular space'@en ;
+    skos:definition 'The space on the top or front of the head located between the inner edges of two compound eyes, in entomology this is also known as the vertex.'@en ;
+    skos:notation 'SDN:S12::S12103'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S12102/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S12102/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S12102/>;
+    dc:modified '2026-02-19T10:57:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'stomach'@en ;
+    skos:definition 'A muscular, internal organ within the digestive system that receives ingested food and begins its breakdown through mechanical processing and chemical digestion, typically using acids and enzymes.'@en ;
+    skos:notation 'SDN:S12::S12102'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S12101/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S12101/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S12101/>;
+    dc:modified '2025-12-19T11:46:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'proboscis mid-section'@en ;
+    skos:definition 'An elongated appendage from the head or mouth region of an organism. In invertebrates the proboscis is typically a tubular feeding or sucking organ but it can also be involved in the capture of prey or locomotion. In some invertebrates such as the Class Enteropneusta (acorn worms) the proboscis is the anteriormost of three body regions. In vertebrates the term typically refers to an elongated nose, snout, or trunk. This term refers specifically to observations made at the middle of the proboscis.'@en ;
+    skos:notation 'SDN:S12::S12101'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S12100/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S12100/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S12100/>;
+    dc:modified '2025-12-19T11:37:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'proboscis'@en ;
+    skos:definition 'An elongated appendage from the head or mouth region of an organism. In invertebrates the proboscis is typically a tubular feeding or sucking organ but it can also be involved in the capture of prey or locomotion. In some invertebrates such as the Class Enteropneusta (acorn worms) the proboscis is the anteriormost of three body regions. In vertebrates the term typically refers to an elongated nose, snout, or trunk.'@en ;
+    skos:notation 'SDN:S12::S12100'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1299/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1299/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1299/>;
+    dc:modified '2025-12-12T10:31:35'^^xsd:dateTime ;
+    skos:altLabel 'VRM'^^xsd:string ;
+    skos:prefLabel 'introvert'@en ;
+    skos:definition 'A retractable, tubular anterior body region found in several invertebrate phyla, typically bearing the mouth and associated feeding or sensory structures. The introvert can be extended for feeding or interaction with the environment and retracted into the main body for protection.'@en ;
+    skos:notation 'SDN:S12::S1299'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1298/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1298/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1298/>;
+    dc:modified '2025-12-12T10:28:05'^^xsd:dateTime ;
+    skos:altLabel 'VRM'^^xsd:string ;
+    skos:prefLabel 'ventral retractor muscle'@en ;
+    skos:definition 'A longitudinal muscle located along the ventral body wall of certain invertebrates, responsible for retracting anterior structures such as the introvert or proboscis toward the ventral side of the trunk. It typically originates on the ventral internal body wall and inserts on the anterior organ or structure it retracts.'@en ;
+    skos:notation 'SDN:S12::S1298'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1297/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1297/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1297/>;
+    dc:modified '2025-12-12T10:27:28'^^xsd:dateTime ;
+    skos:altLabel 'DRM'^^xsd:string ;
+    skos:prefLabel 'dorsal retractor muscle'@en ;
+    skos:definition 'A paired or singular longitudinal muscle located dorsally in the body cavity of various invertebrates, responsible for retracting anterior structures such as the introvert, proboscis, or feeding appendages toward the dorsal body wall. It typically originates on the dorsal internal body wall and inserts on the anterior organ or structure it retracts.'@en ;
+    skos:notation 'SDN:S12::S1297'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1296/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1296/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1296/>;
+    dc:modified '2025-12-12T10:26:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'pharyngeal region'@en ;
+    skos:definition 'A muscular, tubular structure located posterior to the mouth and anterior to the esophagus, functioning as a conduit for food, liquids, and in some taxa, air.'@en ;
+    skos:notation 'SDN:S12::S1296'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1295/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1295/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1295/>;
+    dc:modified '2025-12-12T10:25:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'trunk region'@en ;
+    skos:definition 'The main section of the body of an animal, excluding the head, neck, and limbs/tail. In Sipuncula this is the larger, unsegmented, and typically bulbous posterior portion of the worm\'s body into which its narrower anterior section, the introvert, can be fully retracted.'@en ;
+    skos:notation 'SDN:S12::S1295'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1294/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1294/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1294/>;
+    dc:modified '2025-12-08T15:27:09'^^xsd:dateTime ;
+    skos:altLabel 'jaw elements'^^xsd:string ;
+    skos:prefLabel 'jaw apparatus'@en ;
+    skos:definition 'A combination of hardened, articulated mouthparts typically used for grasping or manipulating food. Jaw configurations are found in varying complexities both in vertebrates and invertebrates and can include paired maxillae and mandibles, grasping fangs or stylets, and assorted teeth.'@en ;
+    skos:notation 'SDN:S12::S1294'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1293/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1293/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1293/>;
+    dc:modified '2025-11-07T10:39:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'abdomen'@en ;
+    skos:definition 'In invertebrates, the abdomen is the posterior body segment that contains most of the digestive and reproductive organs. The vertebrate abdomen is the body cavity located behind the ribcage and in front of the pelvic cavity, enclosed by muscles and the vertebral column. It contains vital organs from systems like the digestive (e.g. stomach, intestines), urinary, and others, which are protected by the abdominal muscles and separated from the thoracic cavity by the diaphragm.'@en ;
+    skos:notation 'SDN:S12::S1293'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1292/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1292/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1292/>;
+    dc:modified '2025-08-07T16:23:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tail'@en ;
+    skos:definition 'The posterior part of an animal\'s body, typically extending beyond the main trunk. In vertebrates, it may include vertebrae, musculature, and skin. In invertebrates, the tail may refer to a terminal body region or appendage with species-specific structure and function.'@en ;
+    skos:notation 'SDN:S12::S1292'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1291/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1291/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1291/>;
+    dc:modified '2025-08-07T14:12:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'prosoma'@en ;
+    skos:definition 'The fused head and thorax region of certain arthropods, primarily arachnids.'@en ;
+    skos:notation 'SDN:S12::S1291'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1290/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1290/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1290/>;
+    dc:modified '2025-08-07T11:06:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'claw'@en ;
+    skos:definition 'A sharp usually slender and curved nail or extension at the end of a toe or limb in some organisms, or one of the pincer-like organs on some limbs of arthropods.'@en ;
+    skos:notation 'SDN:S12::S1290'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1289/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1289/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1289/>;
+    dc:modified '2025-08-07T11:06:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'chela'@en ;
+    skos:definition 'A pincer-shaped organ at the end of certain limbs of some arthropods. It is typically formed by the articulation between the dactyl (movable finger) and the propodus (fixed finger), which together create a grasping structure.'@en ;
+    skos:notation 'SDN:S12::S1289'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1288/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1288/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1288/>;
+    dc:modified '2025-08-07T11:06:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'cephalothorax'@en ;
+    skos:definition 'The body region formed by the fusion of one or more thoracic segments with the head.'@en ;
+    skos:notation 'SDN:S12::S1288'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S122/3/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S122/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S122/>;
+    dc:modified '2025-01-24T07:51:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'bracts'@en ;
+    skos:definition 'Modified leaves growing at the base and in association with the reproductive organs of some plants (e.g. flower, inflorescence, cone scale), or large shield-like gelatinous structures found in the siphosome of some siphonophores.'@en ;
+    skos:notation 'SDN:S12::S122'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1225/4/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1225/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1225/>;
+    dc:modified '2024-12-11T11:29:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tissue'@en ;
+    skos:definition 'A group of specialised interconnected cells of similar type and function that plays a specific role in the body of a multicellular organism.'@en ;
+    skos:notation 'SDN:S12::S1225'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1228/4/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1228/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1228/>;
+    dc:modified '2024-12-11T11:29:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'nifH gene copies'@en ;
+    skos:definition 'Copies of the gene coding for the dinitrogenase reductase subunit of the nitrogenase enzyme complex in nitrogen-fixing bacteria.'@en ;
+    skos:notation 'SDN:S12::S1228'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S123/4/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S123/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S123/>;
+    dc:modified '2024-12-11T11:29:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'cells'@en ;
+    skos:definition 'Biological particles delimited by a selectively permeable membrane containing a salty protoplasm, genetic material and non-genetic biomolecules; cells can be present as free-living single-cell organisms or as constituents of multicellular organisms.'@en ;
+    skos:notation 'SDN:S12::S123'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1287/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1287/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1287/>;
+    dc:modified '2024-02-01T18:00:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'leaf sheath'@en ;
+    skos:definition 'The basal tubular part of a grass leaf that encircles the stem.'@en ;
+    skos:notation 'SDN:S12::S1287'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1286/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1286/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1286/>;
+    dc:modified '2024-02-01T16:38:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'stipe'@en ;
+    skos:definition 'The stalk or stem of plants (including macroalgae) and fungi.'@en ;
+    skos:notation 'SDN:S12::S1286'^^xsd:string .

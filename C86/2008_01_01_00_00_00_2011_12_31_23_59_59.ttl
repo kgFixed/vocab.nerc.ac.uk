@@ -1,0 +1,100 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C86/2008_01_01_00_00_00_2011_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C86/2007_01_01_00_00_00_2007_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2011-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C86/current/SDNPR008/1/> .
+<http://vocab.nerc.ac.uk/collection/C86/current/SDNPR008/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C86/current/SDNPR008/>;
+    dc:modified '2011-01-19T13:01:07'^^xsd:dateTime ;
+    skos:altLabel 'PrincipalInvestigator'^^xsd:string ;
+    skos:prefLabel 'principal investigator'@en ;
+    skos:definition 'Scientific lead of data collection within a programme'@en ;
+    skos:notation 'SDN:C86::SDNPR008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C86/current/SDNPR007/2/> .
+<http://vocab.nerc.ac.uk/collection/C86/current/SDNPR007/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C86/current/SDNPR007/>;
+    dc:modified '2011-01-13T15:45:52'^^xsd:dateTime ;
+    skos:altLabel 'ContributingFunder'^^xsd:string ;
+    skos:prefLabel 'contributing funder'@en ;
+    skos:definition 'Person or organisation that contributes to the funding of an activity.'@en ;
+    skos:notation 'SDN:C86::SDNPR007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C86/current/SDNPR006/2/> .
+<http://vocab.nerc.ac.uk/collection/C86/current/SDNPR006/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C86/current/SDNPR006/>;
+    dc:modified '2011-01-13T15:45:36'^^xsd:dateTime ;
+    skos:altLabel 'PrincipalFunder'^^xsd:string ;
+    skos:prefLabel 'principal funder'@en ;
+    skos:definition 'Person or organisation that funds the majority of an activity.'@en ;
+    skos:notation 'SDN:C86::SDNPR006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C86/current/SDNPR005/2/> .
+<http://vocab.nerc.ac.uk/collection/C86/current/SDNPR005/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C86/current/SDNPR005/>;
+    dc:modified '2011-01-13T15:45:16'^^xsd:dateTime ;
+    skos:altLabel 'ContactPoint'^^xsd:string ;
+    skos:prefLabel 'contact point'@en ;
+    skos:definition 'Person responsible for the provision of information in response to queries concerning the metadata or underlying data.'@en ;
+    skos:notation 'SDN:C86::SDNPR005'^^xsd:string .

@@ -1,0 +1,190 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2024_01_01_00_00_00_2026_04_22_15_36_48.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-22T15:36:48'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/SMMC/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/SMMC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/SMMC/>;
+    dc:modified '2026-04-13T16:38:16'^^xsd:dateTime ;
+    skos:altLabel 'mm^2/m^3'^^xsd:string ;
+    skos:prefLabel 'Square millimetres per cubic metre'@en ;
+    skos:definition 'The SI unit of area (scaled by 10^-9) per SI unit of volume.'@en ;
+    skos:notation 'SDN:P06::SMMC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MGGH/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MGGH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MGGH/>;
+    dc:modified '2026-03-25T11:13:32'^^xsd:dateTime ;
+    skos:altLabel 'mg/g/h'^^xsd:string ;
+    skos:prefLabel 'Milligrams per gram per hour'@en ;
+    skos:definition '10^-6 of the SI unit of mass (kilogram) per 10^-3 of the SI unit of mass over 3600 times one SI standard unit of time.'@en ;
+    skos:notation 'SDN:P06::MGGH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UMUB/3/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UMUB/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UMUB/>;
+    dc:modified '2026-03-09T13:42:35'^^xsd:dateTime ;
+    skos:altLabel 'umol/umol/d'^^xsd:string ;
+    skos:prefLabel 'Micromoles per micromole per day'@en ;
+    skos:definition 'A change of one part per 10^6 of the SI unit of quantity of matter in one part per 10^6 of the SI unit of quantity of matter over a period of 86400 seconds.'@en ;
+    skos:notation 'SDN:P06::UMUB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/KJPM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/KJPM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/KJPM/>;
+    dc:modified '2026-02-10T04:28:41'^^xsd:dateTime ;
+    skos:altLabel 'kJ/mol'^^xsd:string ;
+    skos:prefLabel 'Kilojoules per mole'@en ;
+    skos:definition 'A unit of molar energy a thousand times the derived SI unit of energy divided by the SI base unit of quantity of matter.'@en ;
+    skos:notation 'SDN:P06::KJPM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MMVY/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MMVY/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MMVY/>;
+    dc:modified '2025-11-23T16:28:37'^^xsd:dateTime ;
+    skos:altLabel 'mmol/m^3/yr'^^xsd:string ;
+    skos:prefLabel 'Millimoles per cubic metre per year'@en ;
+    skos:definition 'A rate of change of one part in 10^3 of the SI unit of quantity of matter per SI unit of volume in a period of an average calendar year (365.25 days).'@en ;
+    skos:notation 'SDN:P06::MMVY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MMPY/2/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MMPY/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MMPY/>;
+    dc:modified '2025-11-23T16:28:19'^^xsd:dateTime ;
+    skos:altLabel 'mm/yr'^^xsd:string ;
+    skos:prefLabel 'Millimetres per year'@en ;
+    skos:definition 'A rate of change in length of one thousandth (0.001) of a metre over a period of an average calendar year (365.25 days).'@en ;
+    skos:notation 'SDN:P06::MMPY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MMKY/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MMKY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MMKY/>;
+    dc:modified '2025-11-23T16:26:22'^^xsd:dateTime ;
+    skos:altLabel 'umol/kg/yr'^^xsd:string ;
+    skos:prefLabel 'Micromoles per kilogram per year'@en ;
+    skos:definition 'A rate of change of one part in 10^3 of the SI unit of quantity of matter (mole) in an SI unit of mass (kilogram) in a period of an average calendar year (365.25 days).'@en ;
+    skos:notation 'SDN:P06::MMKY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MM2H/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MM2H/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MM2H/>;
+    dc:modified '2025-08-11T16:57:46'^^xsd:dateTime ;
+    skos:altLabel 'mmol/m^2/h'^^xsd:string ;
+    skos:prefLabel 'Millimoles per square metre per hour'@en ;
+    skos:definition '10^-3 of the SI unit of quantity of matter per SI unit area over 3600 times one SI standard unit of time.'@en ;
+    skos:notation 'SDN:P06::MM2H'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MGPF/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MGPF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MGPF/>;
+    dc:modified '2025-07-15T10:09:54'^^xsd:dateTime ;
+    skos:altLabel 'mg/mg/h/(umol/m^2/s)'^^xsd:string ;
+    skos:prefLabel 'Milligrams per milligram per hour per (micromole per square metre per second)'@en ;
+    skos:definition '10^-6 of the SI unit of mass (kilogram) per 10^-6 of the SI unit of mass over 3600 times one SI standard unit of time per (one part per 10^6 of the SI unit of quantity of matter (the mole) per SI unit area per SI unit of time). The units in brackets are units for photosynthetic photon flux density (PPFD).'@en ;
+    skos:notation 'SDN:P06::MGPF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/MGMH/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/MGMH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/MGMH/>;
+    dc:modified '2025-07-15T10:06:20'^^xsd:dateTime ;
+    skos:altLabel 'mg/mg/h'^^xsd:string ;
+    skos:prefLabel 'Milligrams per milligram per hour'@en ;
+    skos:definition '10^-6 of the SI unit of mass (kilogram) per 10^-6 of the SI unit of mass over 3600 times one SI standard unit of time.'@en ;
+    skos:notation 'SDN:P06::MGMH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/KGVM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/KGVM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/KGVM/>;
+    dc:modified '2025-06-03T12:35:50'^^xsd:dateTime ;
+    skos:altLabel 'kg/m^3/m'^^xsd:string ;
+    skos:prefLabel 'Kilograms per cubic metre per metre'@en ;
+    skos:definition 'One SI standard unit of mass per SI standard unit of volume per SI standard unit of length.'@en ;
+    skos:notation 'SDN:P06::KGVM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/PSUX/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/PSUX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/PSUX/>;
+    dc:modified '2024-09-12T17:27:42'^^xsd:dateTime ;
+    skos:altLabel 'PSU'^^xsd:string ;
+    skos:prefLabel 'Practical salinity units'@en ;
+    skos:definition 'One PSU equals one gram (10^-3 of the SI unit of mass) of salt (Na+Cl-) per kilogram (SI standard unit of mass) of seawater.'@en ;
+    skos:notation 'SDN:P06::PSUX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UMKG/5/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UMKG/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UMKG/>;
+    dc:modified '2024-08-22T09:53:07'^^xsd:dateTime ;
+    skos:altLabel 'mg/kg'^^xsd:string ;
+    skos:prefLabel 'Milligrams per kilogram'@en ;
+    skos:definition '10^-6 of the SI unit of mass (kilogram) per the SI unit of mass (kilogram).'@en ;
+    skos:notation 'SDN:P06::UMKG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UWCN/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UWCN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UWCN/>;
+    dc:modified '2024-07-29T17:14:34'^^xsd:dateTime ;
+    skos:altLabel 'uW/cm^2/nm'^^xsd:string ;
+    skos:prefLabel 'Microwatts per square centimetre per nanometre'@en ;
+    skos:definition 'The power (scaled by 10^-6) per SI unit of area (scaled by 10^-4) produced per SI unit of length (scaled by 10^-9).'@en ;
+    skos:notation 'SDN:P06::UWCN'^^xsd:string .

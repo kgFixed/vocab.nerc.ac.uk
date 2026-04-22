@@ -1,0 +1,226 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L24/2022_01_01_00_00_00_2026_04_22_15_36_26.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L24/2021_01_01_00_00_00_2021_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-22T15:36:26'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/ASCII/2/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/ASCII/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/ASCII/>;
+    dc:modified '2026-03-19T11:16:00'^^xsd:dateTime ;
+    skos:altLabel 'ASCII'^^xsd:string ;
+    skos:prefLabel 'American Standard Code for Information Interchange'@en ;
+    skos:definition 'ASCII is a character encoding standard that uses unique binary codes to represent letters, numbers, punctuation, and other characters. ASCII codes represent text in a standardised way to minimise compatibility issues across different computers, telecommunications equipment, and other devices.'@en ;
+    skos:notation 'SDN:L24::ASCII'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/CSV/2/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/CSV/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/CSV/>;
+    dc:modified '2026-03-19T11:16:00'^^xsd:dateTime ;
+    skos:altLabel 'CSV'^^xsd:string ;
+    skos:prefLabel 'Comma-separated values'@en ;
+    skos:definition 'An ASCII plain text data format for storing tabular data. Each line is a record with fields that are separated by a comma.'@en ;
+    skos:notation 'SDN:L24::CSV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/EXCEL/2/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/EXCEL/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/EXCEL/>;
+    dc:modified '2026-03-19T11:16:00'^^xsd:dateTime ;
+    skos:altLabel 'Excel'^^xsd:string ;
+    skos:prefLabel 'Microsoft Excel'@en ;
+    skos:definition 'Excel is a spreadsheet developed by Microsoft for Windows, macOS, Android and iOS. These spreadsheets can handle data, formulas, charts, pivot tables, macros (Excel uses visual basic for applications (VBA)), and images. Excel refers to various proprietary file formats that are produced exclusively by Microsoft Windows, such as xlsx, xlsm, xlsb, and xls. Some file formats are based on XML (e.g. xlsx), whilst others are binary formats (e.g. xls).'@en ;
+    skos:notation 'SDN:L24::EXCEL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/GEOPACKAGE/2/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/GEOPACKAGE/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/GEOPACKAGE/>;
+    dc:modified '2026-03-19T11:16:00'^^xsd:dateTime ;
+    skos:altLabel 'GPKG'^^xsd:string ;
+    skos:prefLabel 'GeoPackage'@en ;
+    skos:definition 'GeoPackage (GPKG) is an open, non-proprietary, platform-independent and standards-based data format for geographic information system. It is an SQLite database file with a specific database schema. It stores vector features, tile matrix sets of imagery and raster maps, schema and metadata.'@en ;
+    skos:notation 'SDN:L24::GEOPACKAGE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/GEOJSON/2/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/GEOJSON/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/GEOJSON/>;
+    dc:modified '2026-03-19T11:16:00'^^xsd:dateTime ;
+    skos:altLabel 'GeoJSON'^^xsd:string ;
+    skos:prefLabel 'JavaScript Object Notation for Geographical Features'@en ;
+    skos:definition 'GeoJSON is an open, non-proprietary standard format designed for representing simple geographical features, along with their non-spatial attributes. It is a dialect based on the JavaScript Object Notation (JSON). The features include points, line strings, polygons, and multiple collections of these types. GeoJSON features can also be used to define and describe conceptual or abstract features, such as mobile service coverage or urban planning data.'@en ;
+    skos:notation 'SDN:L24::GEOJSON'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/HDF4/2/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/HDF4/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/HDF4/>;
+    dc:modified '2026-03-19T11:16:00'^^xsd:dateTime ;
+    skos:altLabel 'HDF4'^^xsd:string ;
+    skos:prefLabel 'Hierarchical Data Format Version 4'@en ;
+    skos:definition 'HDF4 is an open source file format which supports multidimensional arrays, raster images, and tables. It is self-describing and machine-independent, and is used to store complex, heterogeneous data and metadata. It has a maximum file size of 2 GB. It is still supported and used, however it is not the recommended HDF format.'@en ;
+    skos:notation 'SDN:L24::HDF4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/HDF5/2/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/HDF5/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/HDF5/>;
+    dc:modified '2026-03-19T11:16:00'^^xsd:dateTime ;
+    skos:altLabel 'HDF5'^^xsd:string ;
+    skos:prefLabel 'Hierarchical Data Format Version 5'@en ;
+    skos:definition 'HDF5 is an open source file format which supports multidimensional arrays, raster images, tables, and documents (e.g. PDF). It is self-describing and machine-independent, and is used to store complex, heterogeneous data and metadata. It is built for fast I/O processing and storage.'@en ;
+    skos:notation 'SDN:L24::HDF5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/JPEG-2000/2/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/JPEG-2000/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/JPEG-2000/>;
+    dc:modified '2026-03-19T11:16:00'^^xsd:dateTime ;
+    skos:altLabel 'JPEG_2000'^^xsd:string ;
+    skos:prefLabel 'JPEG 2000'@en ;
+    skos:definition 'JPEG 2000 (JP2) is an image compression standard and coding system that is based on a discrete wavelet transform. It is not supported on web pages as of 2024.'@en ;
+    skos:notation 'SDN:L24::JPEG-2000'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/JSON/2/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/JSON/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/JSON/>;
+    dc:modified '2026-03-19T11:16:00'^^xsd:dateTime ;
+    skos:altLabel 'JSON'^^xsd:string ;
+    skos:prefLabel 'JavaScript Object Notation'@en ;
+    skos:definition 'JSON, JavaScript Object Notation) is an open standard file format that is human-readable and used for exchanging data in text format. It stores and transmits key value pairs in objects and ordered lists in arrays which are human and machine readable. It is compatible across programming languages such as JavaScript, Python, and Java.'@en ;
+    skos:notation 'SDN:L24::JSON'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/KML/2/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/KML/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/KML/>;
+    dc:modified '2026-03-19T11:16:00'^^xsd:dateTime ;
+    skos:altLabel 'KML'^^xsd:string ;
+    skos:prefLabel 'Keyhole Markup Language'@en ;
+    skos:definition 'KML is an open standard file format designed to display geographic data on 2D and 3D maps using XML notation. The files are human and machine readable, and can describe pinpoint locations, polygons, images, 3D models, and add image overlays. It also contains display information for software applications.'@en ;
+    skos:notation 'SDN:L24::KML'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/KMZ/2/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/KMZ/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/KMZ/>;
+    dc:modified '2026-03-19T11:16:00'^^xsd:dateTime ;
+    skos:altLabel 'KMZ'^^xsd:string ;
+    skos:prefLabel 'Keyhole Markup Language Zipped'@en ;
+    skos:definition 'A KMZ file is a compressed archive that consists of a main KML file, plus any desired supporting files, which can be embedded imagery, icons or 3D models . It requires the use of a GIS tool for visualisation.'@en ;
+    skos:notation 'SDN:L24::KMZ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/NETCDF/2/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/NETCDF/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/NETCDF/>;
+    dc:modified '2026-03-19T11:16:00'^^xsd:dateTime ;
+    skos:altLabel 'NetCDF'^^xsd:string ;
+    skos:prefLabel 'Network Common Data Format'@en ;
+    skos:definition 'Network Common Data Form (netCDF) is a self-describing and machine-independent binary format. It bundles data arrays with metadata and is structured using dimensions, variables, and attributes. It is used for storing and sharing multidimensional scientific data.'@en ;
+    skos:notation 'SDN:L24::NETCDF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/NETCDF-3/2/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/NETCDF-3/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/NETCDF-3/>;
+    dc:modified '2026-03-19T11:16:00'^^xsd:dateTime ;
+    skos:altLabel 'NetCDF-3'^^xsd:string ;
+    skos:prefLabel 'Network Common Data Format Version 3'@en ;
+    skos:definition 'Network Common Data Form (netCDF) is a self-describing and machine-independent binary format. It bundles data arrays with metadata and is structured using dimensions, variables, and attributes. It is used for storing and sharing multidimensional scientific data. This version (3) can refer to the classic model (CDF-1), the CDF-2 which allows for more flexibility with variables and data sizes, or CDF-5 which allows for larger integer and unsigned integer data.'@en ;
+    skos:notation 'SDN:L24::NETCDF-3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/NETCDF-4/2/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/NETCDF-4/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/NETCDF-4/>;
+    dc:modified '2026-03-19T11:16:00'^^xsd:dateTime ;
+    skos:altLabel 'NetCDF-4'^^xsd:string ;
+    skos:prefLabel 'Network Common Data Format Version 4'@en ;
+    skos:definition 'Network Common Data Form (netCDF) is a self-describing and machine-independent binary format. It bundles data arrays with metadata and is structured using dimensions, variables, and attributes. It is used for storing and sharing multidimensional scientific data. This version (4) allows for larger file sizes, data compression, and nested groups.'@en ;
+    skos:notation 'SDN:L24::NETCDF-4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/PDF/2/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/PDF/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/PDF/>;
+    dc:modified '2026-03-19T11:16:00'^^xsd:dateTime ;
+    skos:altLabel 'PDF'^^xsd:string ;
+    skos:prefLabel 'Portable Document Format'@en ;
+    skos:definition 'PDF is an open standard file format (as of 2008) developed by Adobe to present documents, including text formatting and images, in a manner independent of application software, hardware, and operating systems. It is based on the PostScript language, where each file is self-contained, in that it contains all necessary elements such as text, fonts, vector graphics, raster images and other information needed to display it.'@en ;
+    skos:notation 'SDN:L24::PDF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/TSV/2/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/TSV/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/TSV/>;
+    dc:modified '2026-03-19T11:16:00'^^xsd:dateTime ;
+    skos:altLabel 'TSV'^^xsd:string ;
+    skos:prefLabel 'Tab-separated values'@en ;
+    skos:definition 'An ASCII plain text data format for storing tabular data. Each line is a record with fields that are separated by a tab.'@en ;
+    skos:notation 'SDN:L24::TSV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/GEODATABASE/2/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/GEODATABASE/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/GEODATABASE/>;
+    dc:modified '2026-03-19T11:16:00'^^xsd:dateTime ;
+    skos:altLabel 'geodatabase'^^xsd:string ;
+    skos:prefLabel 'Esri Geodatabase'@en ;
+    skos:definition 'Geodatabase is a proprietary GIS file format used by Esri ArcGIS. It physically stores geographic information using a database management system or file system. It has an information model, for representing and managing geographic information, software logic, for working with the geographic data and shapefiles, CAD files, TINs, grids, etc., and a transaction model, for managing GIS data workflows.'@en ;
+    skos:notation 'SDN:L24::GEODATABASE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/GRID/2/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/GRID/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/GRID/>;
+    dc:modified '2026-03-19T11:16:00'^^xsd:dateTime ;
+    skos:altLabel 'grid'^^xsd:string ;
+    skos:prefLabel 'Esri Grid'@en ;
+    skos:definition 'An Esri grid is a raster GIS file format developed by Esri. There are two file options, either a proprietary binary format, also known as an ARC/INFO GRID, ARC GRID and many other variations, or a non-proprietary ASCII format, also known as an ARC/INFO ASCII GRID.'@en ;
+    skos:notation 'SDN:L24::GRID'^^xsd:string .

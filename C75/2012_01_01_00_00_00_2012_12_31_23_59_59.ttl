@@ -1,0 +1,280 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C75/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C75/2011_01_01_00_00_00_2011_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2012-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/IGN/2/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/IGN/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/IGN/>;
+    dc:modified '2012-10-04T10:48:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Institute Geol. and Nuc. Sci., Wellington, New Zealand'@en ;
+    skos:definition 'Formerly 4 character lab code IGNS'@en ;
+    skos:notation 'SDN:C75::IGN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/IGV/2/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/IGV/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/IGV/>;
+    dc:modified '2012-10-04T10:48:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Institute Geo. de Venezuela Simon Bolivar'@en ;
+    skos:definition 'Instituto Geografico de Venezuela Simon Bolivar, Av. Este 6, Esquina de Camejo, Caracas 1010, Venezuela'@en ;
+    skos:notation 'SDN:C75::IGV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/NIE/2/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/NIE/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/NIE/>;
+    dc:modified '2012-10-04T10:48:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'National Institute for Environmental Studies, Japan'@en ;
+    skos:definition 'Formerly 4 character lab code NIES'@en ;
+    skos:notation 'SDN:C75::NIE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/NIP/2/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/NIP/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/NIP/>;
+    dc:modified '2012-10-04T10:48:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'National Institute of Polar Research, Japan'@en ;
+    skos:definition 'Formerly 4 character lab code NIPR'@en ;
+    skos:notation 'SDN:C75::NIP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/SMH/2/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/SMH/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/SMH/>;
+    dc:modified '2012-10-04T10:48:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Swedish Meteorological and Hydrological Institute'@en ;
+    skos:definition 'Formerly 4 character lab code SMHI'@en ;
+    skos:notation 'SDN:C75::SMH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/DEP/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/DEP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/DEP/>;
+    dc:modified '2012-10-03T08:44:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Department for Environment, Planning, Agriculture and Fisheries, Vitoria-Gasteiz'@en ;
+    skos:definition 'A Basque Government department. The Basque name is Ingurumen, Lurralde Plangintza, Nekazaritza eta Arrantza Saila. The Spanish name is Departamento de Medio Ambiente, Planificación Territorial, Agricultura y Pesca.'@en ;
+    skos:notation 'SDN:C75::DEP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/DSD/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/DSD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/DSD/>;
+    dc:modified '2012-10-02T15:06:55'^^xsd:dateTime ;
+    skos:altLabel 'DEFRA_SciDir'^^xsd:string ;
+    skos:prefLabel 'DEFRA Science Directorate, Management Support and Finance Team'@en ;
+    skos:definition 'Section of the UK Department of Food, Environment and Rural Affairs concerned with science funding.'@en ;
+    skos:notation 'SDN:C75::DSD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/EDE/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/EDE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/EDE/>;
+    dc:modified '2012-10-02T15:04:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ministère de l\'Ecologie, du Développement Durable et de l\'Energie, Paris'@en ;
+    skos:definition 'A French government department. Headquarters located in La Defense in the Paris metropolitan area. English name is Ministry of Ecology, Sustainable Development and Energy.'@en ;
+    skos:notation 'SDN:C75::EDE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/ENN/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/ENN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/ENN/>;
+    dc:modified '2012-10-02T15:03:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Federal Ministry for the Environment, Nature Conservation and Nuclear Safety, Berlin'@en ;
+    skos:definition 'A German government department. German name is Bundesministerium für Umweit, Naturschutz un Reaktorsicherheit.'@en ;
+    skos:notation 'SDN:C75::ENN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/MAS/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/MAS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/MAS/>;
+    dc:modified '2012-10-02T15:00:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ministry of Agriculture Food and Environment, Madrid'@en ;
+    skos:definition 'Spanish name is Ministerio de Agricultura, Alimentación y Medio Ambiente. A Spanish government department.'@en ;
+    skos:notation 'SDN:C75::MAS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/GMM/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/GMM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/GMM/>;
+    dc:modified '2012-10-01T16:16:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Marine Museum, Stralsund'@en ;
+    skos:definition 'German name is Deutsche Meeresmuseum, also known as the Museum for Oceanography and Fisheries (Museum für Meereskunde und Fischerei, Aquarium).'@en ;
+    skos:notation 'SDN:C75::GMM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/DAC/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/DAC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/DAC/>;
+    dc:modified '2012-10-01T16:08:02'^^xsd:dateTime ;
+    skos:altLabel 'Danbiu'^^xsd:string ;
+    skos:prefLabel 'Danbiu ApS.'@en ;
+    skos:definition 'A private sector Danish biological consultancy located in Charlottenlund.'@en ;
+    skos:notation 'SDN:C75::DAC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/ATN/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/ATN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/ATN/>;
+    dc:modified '2012-10-01T16:03:53'^^xsd:dateTime ;
+    skos:altLabel 'Alterra-Texel'^^xsd:string ;
+    skos:prefLabel 'Alterra-Texel'@en ;
+    skos:definition 'Texel-based branch of the Alterra research institute, which is concerned with the green living environment. Part of the Wageningen University and Research Centre (Wageningen UR).'@en ;
+    skos:notation 'SDN:C75::ATN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/ECL/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/ECL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/ECL/>;
+    dc:modified '2012-09-27T17:40:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Department of Environment, Community and Local Government, Wexford'@en ;
+    skos:definition 'An Irish government department. Gaelic name is Comhshaol, Pobal agus Rialtas Aitiuil..'@en ;
+    skos:notation 'SDN:C75::ECL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/LMM/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/LMM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/LMM/>;
+    dc:modified '2012-09-27T17:34:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'La Rochelle Maritime Museum'@en ;
+    skos:definition 'French name is Musée Maritime La Rochelle.'@en ;
+    skos:notation 'SDN:C75::LMM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/EAI/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/EAI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/EAI/>;
+    dc:modified '2012-09-27T09:24:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ministry of Economic Affairs, Agriculture and Innovation, The Netherlands'@en ;
+    skos:definition 'A Dutch government department. Dutch name is Ministerie van Economische Zaken, Landbouw en Innovatie. Located in Den Haag (The Hague).'@en ;
+    skos:notation 'SDN:C75::EAI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/SEP/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/SEP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/SEP/>;
+    dc:modified '2012-09-27T09:19:09'^^xsd:dateTime ;
+    skos:altLabel 'Swedish EPA'^^xsd:string ;
+    skos:prefLabel 'Swedish Environmental Protection Agency'@en ;
+    skos:definition 'Swedish name is Naturvardsverket. Main office of a Swedish public agency with an overview of environmental conditions and environmental policy, tasked with meeting Sweden\'s environmental objectives. Located in Stockholm: there is another office in Östersund.'@en ;
+    skos:notation 'SDN:C75::SEP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/WNS/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/WNS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/WNS/>;
+    dc:modified '2012-09-26T10:53:24'^^xsd:dateTime ;
+    skos:altLabel 'WWF Sweden'^^xsd:string ;
+    skos:prefLabel 'Worldwide Fund for Nature Sweden'@en ;
+    skos:definition 'Swedish branch of an international non-governmental organisation concerned with the conservation, research and restoration of the environment located in Solna. Formerly named the World Wildlife Fund.'@en ;
+    skos:notation 'SDN:C75::WNS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/IEV/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/IEV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/IEV/>;
+    dc:modified '2012-09-26T10:49:49'^^xsd:dateTime ;
+    skos:altLabel 'IEO Vigo'^^xsd:string ;
+    skos:prefLabel 'Instituto Espanol de Oceanografia Centro Oceanográfico de Vigo'@en ;
+    skos:definition 'English name is Spanish Institute of Oceanography Vigo Oceanographic Centre.'@en ;
+    skos:notation 'SDN:C75::IEV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/DNA/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/DNA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/DNA/>;
+    dc:modified '2012-09-26T10:12:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Danish Nature Agency'@en ;
+    skos:definition 'Danish name is Naturstyrelsen. Part of the Ministry of the Environment of Denmark. Located in Copenhagen.'@en ;
+    skos:notation 'SDN:C75::DNA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/CNS/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/CNS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/CNS/>;
+    dc:modified '2012-09-26T10:11:36'^^xsd:dateTime ;
+    skos:altLabel 'CNES'^^xsd:string ;
+    skos:prefLabel 'Centre National d\'Etudes Spatiales, Paris'@en ;
+    skos:definition 'A French goverment agency. English name is National Centre for Space Studies.'@en ;
+    skos:notation 'SDN:C75::CNS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/IPF/2/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/IPF/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/IPF/>;
+    dc:modified '2012-09-26T10:10:34'^^xsd:dateTime ;
+    skos:altLabel 'IPEV'^^xsd:string ;
+    skos:prefLabel 'Institut Polaire Français Paul-Emile Victor'@en ;
+    skos:definition 'English name is French Polar Institute. Located on the IFREMER site in Plouzane on the outskirts of Brest.'@en ;
+    skos:notation 'SDN:C75::IPF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/CRL/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/CRL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/CRL/>;
+    dc:modified '2012-09-20T15:31:37'^^xsd:dateTime ;
+    skos:altLabel 'ConRes'^^xsd:string ;
+    skos:prefLabel 'Conservation Research Limited'@en ;
+    skos:definition 'A UK company based in Great Shelford specialising in the automated individual recognition and matching of wildlife photo catalogues.'@en ;
+    skos:notation 'SDN:C75::CRL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/NPW/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/NPW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/NPW/>;
+    dc:modified '2012-09-20T15:24:57'^^xsd:dateTime ;
+    skos:altLabel 'NPWS'^^xsd:string ;
+    skos:prefLabel 'National Parks and Wildlife Service'@en ;
+    skos:definition 'A public agency that manages conservation in Ireland with the main office in Dublin.'@en ;
+    skos:notation 'SDN:C75::NPW'^^xsd:string .

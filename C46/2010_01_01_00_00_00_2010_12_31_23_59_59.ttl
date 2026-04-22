@@ -1,0 +1,318 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C46/2010_01_01_00_00_00_2010_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C10_1/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C10_1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C10_1/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Characteristics of litter'@en ;
+    skos:definition 'Characteristics of litter in the marine and coastal environment'@en ;
+    skos:notation 'SDN:C46::C10_1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C10_2/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C10_2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C10_2/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Impacts of litter on marine life'@en ;
+    skos:definition 'Impacts of litter on marine life'@en ;
+    skos:notation 'SDN:C46::C10_2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C11_1/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C11_1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C11_1/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Distribution of loud, low and mid frequency impulsive sounds'@en ;
+    skos:definition 'Distribution in time and place of loud, low and mid frequency impulsive sounds'@en ;
+    skos:notation 'SDN:C46::C11_1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C11_2/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C11_2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C11_2/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Continuous low frequency sound'@en ;
+    skos:definition 'Continuous low frequency sound'@en ;
+    skos:notation 'SDN:C46::C11_2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C1_1/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C1_1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C1_1/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Species distribution'@en ;
+    skos:definition 'Species distribution'@en ;
+    skos:notation 'SDN:C46::C1_1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C1_2/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C1_2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C1_2/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Population size'@en ;
+    skos:definition 'Population size'@en ;
+    skos:notation 'SDN:C46::C1_2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C1_3/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C1_3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C1_3/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Population condition'@en ;
+    skos:definition 'Population condition'@en ;
+    skos:notation 'SDN:C46::C1_3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C1_4/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C1_4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C1_4/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Habitat distribution'@en ;
+    skos:definition 'Habitat distribution'@en ;
+    skos:notation 'SDN:C46::C1_4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C1_5/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C1_5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C1_5/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Habitat extent'@en ;
+    skos:definition 'Habitat extent'@en ;
+    skos:notation 'SDN:C46::C1_5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C1_6/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C1_6/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C1_6/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Habitat condition'@en ;
+    skos:definition 'Habitat condition'@en ;
+    skos:notation 'SDN:C46::C1_6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C1_7/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C1_7/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C1_7/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ecosystem structure'@en ;
+    skos:definition 'Ecosystem structure'@en ;
+    skos:notation 'SDN:C46::C1_7'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C2_1/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C2_1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C2_1/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Abundance and state characterisation of non-indigenous species, in particular invasive species'@en ;
+    skos:definition 'Abundance and state characterisation of non-indigenous species, in particular invasive species'@en ;
+    skos:notation 'SDN:C46::C2_1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C2_2/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C2_2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C2_2/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Environmental impact of invasive non-indigenous species'@en ;
+    skos:definition 'Environmental impact of invasive non-indigenous species'@en ;
+    skos:notation 'SDN:C46::C2_2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C3_1/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C3_1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C3_1/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Level of pressure of the fishing activity'@en ;
+    skos:definition 'Level of pressure of the fishing activity'@en ;
+    skos:notation 'SDN:C46::C3_1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C3_2/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C3_2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C3_2/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Reproductive capacity of the stock'@en ;
+    skos:definition 'Reproductive capacity of the stock'@en ;
+    skos:notation 'SDN:C46::C3_2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C3_3/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C3_3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C3_3/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Population age and size distribution'@en ;
+    skos:definition 'Population age and size distribution'@en ;
+    skos:notation 'SDN:C46::C3_3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C4_1/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C4_1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C4_1/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Productivity of key species or trophic groups'@en ;
+    skos:definition 'Productivity (production per unit biomass) of key species or trophic groups'@en ;
+    skos:notation 'SDN:C46::C4_1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C4_2/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C4_2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C4_2/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Proportion of selected species at the top of food webs'@en ;
+    skos:definition 'Proportion of selected species at the top of food webs'@en ;
+    skos:notation 'SDN:C46::C4_2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C4_3/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C4_3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C4_3/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Abundance/distribution of key trophic groups/species'@en ;
+    skos:definition 'Abundance/distribution of key trophic groups/species'@en ;
+    skos:notation 'SDN:C46::C4_3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C5_1/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C5_1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C5_1/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Nutrients levels'@en ;
+    skos:definition 'Nutrients levels'@en ;
+    skos:notation 'SDN:C46::C5_1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C5_2/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C5_2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C5_2/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Direct effects of nutrient enrichment'@en ;
+    skos:definition 'Direct effects of nutrient enrichment'@en ;
+    skos:notation 'SDN:C46::C5_2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C5_3/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C5_3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C5_3/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Indirect effects of nutrient enrichment'@en ;
+    skos:definition 'Indirect effects of nutrient enrichment'@en ;
+    skos:notation 'SDN:C46::C5_3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C6_1/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C6_1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C6_1/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Physical damage'@en ;
+    skos:definition 'Physical damage, having regard to substrate characteristics'@en ;
+    skos:notation 'SDN:C46::C6_1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C6_2/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C6_2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C6_2/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Condition of benthic community'@en ;
+    skos:definition 'Condition of benthic community'@en ;
+    skos:notation 'SDN:C46::C6_2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C7_1/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C7_1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C7_1/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Spatial characterisation of permanent alterations'@en ;
+    skos:definition 'Spatial characterisation of permanent alterations'@en ;
+    skos:notation 'SDN:C46::C7_1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C7_2/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C7_2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C7_2/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Impact of permanent hydrographical changes'@en ;
+    skos:definition 'Impact of permanent hydrographical changes'@en ;
+    skos:notation 'SDN:C46::C7_2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C8_1/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C8_1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C8_1/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Concentration of contaminants'@en ;
+    skos:definition 'Concentration of contaminants'@en ;
+    skos:notation 'SDN:C46::C8_1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C8_2/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C8_2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C8_2/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Effects of contaminants'@en ;
+    skos:definition 'Effects of contaminants'@en ;
+    skos:notation 'SDN:C46::C8_2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C46/current/C9_1/1/> .
+<http://vocab.nerc.ac.uk/collection/C46/current/C9_1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C46/current/C9_1/>;
+    dc:modified '2010-11-10T15:42:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Levels, number and frequency of contaminants'@en ;
+    skos:definition 'Levels, number and frequency of contaminants'@en ;
+    skos:notation 'SDN:C46::C9_1'^^xsd:string .

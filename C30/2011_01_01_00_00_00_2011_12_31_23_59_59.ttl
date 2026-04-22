@@ -1,0 +1,91 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C30/2011_01_01_00_00_00_2011_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C30/2010_01_01_00_00_00_2010_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2011-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/NETMAR/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/NETMAR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/NETMAR/>;
+    dc:modified '2011-11-11T09:53:31'^^xsd:dateTime ;
+    skos:altLabel 'NETMAR'^^xsd:string ;
+    skos:prefLabel 'NETMAR Ontology Governance Group'@en ;
+    skos:definition 'A body established by the European Union Framework 7 NETMAR project for content management of semantic resources used in the project.'@en ;
+    skos:notation 'SDN:C30::NETMAR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/OCMP/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/OCMP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/OCMP/>;
+    dc:modified '2011-08-15T08:18:28'^^xsd:dateTime ;
+    skos:altLabel 'OCMP'^^xsd:string ;
+    skos:prefLabel 'Oregon State Coastal Management Program'@en ;
+    skos:definition 'State government authority for the Oregon Coastal Atlas.'@en ;
+    skos:notation 'SDN:C30::OCMP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/NERC/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/NERC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/NERC/>;
+    dc:modified '2011-04-12T11:09:09'^^xsd:dateTime ;
+    skos:altLabel 'NERC'^^xsd:string ;
+    skos:prefLabel 'Natural Environment Research Council'@en ;
+    skos:definition 'Governance for vocabularies used for cross-centre information infrastructure in NERC. Current (2011) manifestation is the NERC SIS metadata subgroup'@en ;
+    skos:notation 'SDN:C30::NERC'^^xsd:string .

@@ -1,0 +1,228 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P05/2005_01_01_00_00_00_2005_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P05/current/002/1/> .
+<http://vocab.nerc.ac.uk/collection/P05/current/002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P05/current/002/>;
+    dc:modified '2005-04-27T15:27:44'^^xsd:dateTime ;
+    skos:altLabel 'biota'^^xsd:string ;
+    skos:prefLabel 'biota'@en ;
+    skos:definition 'Flora and/or fauna in the natural environment.  Examples: wildlife; vegetation; biological sciences; ecology; wilderness; sealife; wetlands; habitat.'@en ;
+    skos:notation 'SDN:P05::002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P05/current/003/1/> .
+<http://vocab.nerc.ac.uk/collection/P05/current/003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P05/current/003/>;
+    dc:modified '2005-04-27T15:27:44'^^xsd:dateTime ;
+    skos:altLabel 'boundaries'^^xsd:string ;
+    skos:prefLabel 'boundaries'@en ;
+    skos:definition 'Legal land descriptions.  Examples: political and administrative boundaries.'@en ;
+    skos:notation 'SDN:P05::003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P05/current/004/1/> .
+<http://vocab.nerc.ac.uk/collection/P05/current/004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P05/current/004/>;
+    dc:modified '2005-04-27T15:27:44'^^xsd:dateTime ;
+    skos:altLabel 'climatologyMeteorologyAtmosphere'^^xsd:string ;
+    skos:prefLabel 'climatologyMeteorologyAtmosphere'@en ;
+    skos:definition 'Processes and phenomena of the atmosphere.  Examples: cloud cover; weather; climate; atmospheric conditions; climate change; precipitation.'@en ;
+    skos:notation 'SDN:P05::004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P05/current/005/1/> .
+<http://vocab.nerc.ac.uk/collection/P05/current/005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P05/current/005/>;
+    dc:modified '2005-04-27T15:27:44'^^xsd:dateTime ;
+    skos:altLabel 'economy'^^xsd:string ;
+    skos:prefLabel 'economy'@en ;
+    skos:definition 'Economic activities, conditions and employment.  Examples: production; labour; revenue; commerce; industry; tourism and ecotourism; forestry; fisheries; commercial or subsistence hunting; exploration and exploitation of resources such as minerals, oil and gas.'@en ;
+    skos:notation 'SDN:P05::005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P05/current/006/1/> .
+<http://vocab.nerc.ac.uk/collection/P05/current/006/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P05/current/006/>;
+    dc:modified '2005-04-27T15:27:44'^^xsd:dateTime ;
+    skos:altLabel 'elevation'^^xsd:string ;
+    skos:prefLabel 'elevation'@en ;
+    skos:definition 'Height above or below sea level.  Examples: altitude; bathymetry; digital elevation models; slope; derived products.'@en ;
+    skos:notation 'SDN:P05::006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P05/current/007/1/> .
+<http://vocab.nerc.ac.uk/collection/P05/current/007/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P05/current/007/>;
+    dc:modified '2005-04-27T15:27:44'^^xsd:dateTime ;
+    skos:altLabel 'environment'^^xsd:string ;
+    skos:prefLabel 'environment'@en ;
+    skos:definition 'Environmental resources, protection and conservation.  Examples: environmental pollution; waste storage and treatment; environmental impact assessment; monitoring environmental risk; nature reserves; landscape.'@en ;
+    skos:notation 'SDN:P05::007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P05/current/001/1/> .
+<http://vocab.nerc.ac.uk/collection/P05/current/001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P05/current/001/>;
+    dc:modified '2005-04-27T15:27:44'^^xsd:dateTime ;
+    skos:altLabel 'farming'^^xsd:string ;
+    skos:prefLabel 'farming'@en ;
+    skos:definition 'Rearing of animals and/or cultivation of plants.  Examples: agriculture; irrigation; aquaculture; plantations; herding; pests and diseases affecting crops and livestock.'@en ;
+    skos:notation 'SDN:P05::001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P05/current/008/1/> .
+<http://vocab.nerc.ac.uk/collection/P05/current/008/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P05/current/008/>;
+    dc:modified '2005-04-27T15:27:44'^^xsd:dateTime ;
+    skos:altLabel 'geoscientificInformation'^^xsd:string ;
+    skos:prefLabel 'geoscientificInformation'@en ;
+    skos:definition 'Information pertaining to Earth Sciences.  Examples: geophysical features and processes; geology; minerals; sciences dealing with the composition, structure and origin of the earth\'s rocks; risks of earthquakes; volcanic activity; landslides; gravity information; soils; permafrost; hydrogeology; erosion.'@en ;
+    skos:notation 'SDN:P05::008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P05/current/009/1/> .
+<http://vocab.nerc.ac.uk/collection/P05/current/009/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P05/current/009/>;
+    dc:modified '2005-04-27T15:27:44'^^xsd:dateTime ;
+    skos:altLabel 'health'^^xsd:string ;
+    skos:prefLabel 'health'@en ;
+    skos:definition 'Health, health services, human ecology, and safety.  Examples: disease and illness; factors affecting health; hygiene; substance abuse; mental and physical health; health services.'@en ;
+    skos:notation 'SDN:P05::009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P05/current/010/1/> .
+<http://vocab.nerc.ac.uk/collection/P05/current/010/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P05/current/010/>;
+    dc:modified '2005-04-27T15:27:44'^^xsd:dateTime ;
+    skos:altLabel 'imageryBaseMapsEarthCover'^^xsd:string ;
+    skos:prefLabel 'imageryBaseMapsEarthCover'@en ;
+    skos:definition 'Base maps.  Examples: land cover; topographic maps; imagery; unclassified images; annotations.'@en ;
+    skos:notation 'SDN:P05::010'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P05/current/012/1/> .
+<http://vocab.nerc.ac.uk/collection/P05/current/012/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P05/current/012/>;
+    dc:modified '2005-04-27T15:27:44'^^xsd:dateTime ;
+    skos:altLabel 'inlandWaters'^^xsd:string ;
+    skos:prefLabel 'inlandWaters'@en ;
+    skos:definition 'Inland water features, drainage systems and their characteristics.  Examples: rivers and glaciers; salt lakes; water utilization plans; dams; currents; floods; water quality; hydrographic charts.'@en ;
+    skos:notation 'SDN:P05::012'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P05/current/011/1/> .
+<http://vocab.nerc.ac.uk/collection/P05/current/011/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P05/current/011/>;
+    dc:modified '2005-04-27T15:27:44'^^xsd:dateTime ;
+    skos:altLabel 'intelligenceMilitary'^^xsd:string ;
+    skos:prefLabel 'intelligenceMilitary'@en ;
+    skos:definition 'Military bases, structures, activities.  Examples: barracks; training grounds; military transportation; information collection.'@en ;
+    skos:notation 'SDN:P05::011'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P05/current/013/1/> .
+<http://vocab.nerc.ac.uk/collection/P05/current/013/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P05/current/013/>;
+    dc:modified '2005-04-27T15:27:44'^^xsd:dateTime ;
+    skos:altLabel 'location'^^xsd:string ;
+    skos:prefLabel 'location'@en ;
+    skos:definition 'Positional information and services.  Examples: addresses; geodetic networks; control points; postal zones and services; place names.'@en ;
+    skos:notation 'SDN:P05::013'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P05/current/014/1/> .
+<http://vocab.nerc.ac.uk/collection/P05/current/014/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P05/current/014/>;
+    dc:modified '2005-04-27T15:27:44'^^xsd:dateTime ;
+    skos:altLabel 'oceans'^^xsd:string ;
+    skos:prefLabel 'oceans'@en ;
+    skos:definition 'Features and characteristics of salt water bodies (excluding inland waters).  Examples: tides; tidal waves; coastal information; reefs.'@en ;
+    skos:notation 'SDN:P05::014'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P05/current/015/1/> .
+<http://vocab.nerc.ac.uk/collection/P05/current/015/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P05/current/015/>;
+    dc:modified '2005-04-27T15:27:44'^^xsd:dateTime ;
+    skos:altLabel 'planningCadastre'^^xsd:string ;
+    skos:prefLabel 'planningCadastre'@en ;
+    skos:definition 'Information used for appropriate actions for future use of the land.  Examples: land use maps; zoning maps; cadastral surveys; land ownership.'@en ;
+    skos:notation 'SDN:P05::015'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P05/current/016/1/> .
+<http://vocab.nerc.ac.uk/collection/P05/current/016/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P05/current/016/>;
+    dc:modified '2005-04-27T15:27:44'^^xsd:dateTime ;
+    skos:altLabel 'society'^^xsd:string ;
+    skos:prefLabel 'society'@en ;
+    skos:definition 'Characteristics of society and cultures.  Examples: settlements; anthropology; archaeology; education; traditional beliefs; manners and customs; demographic data; recreational areas and activities; social impact assessments; crime and justice; census information.'@en ;
+    skos:notation 'SDN:P05::016'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P05/current/017/1/> .
+<http://vocab.nerc.ac.uk/collection/P05/current/017/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P05/current/017/>;
+    dc:modified '2005-04-27T15:27:44'^^xsd:dateTime ;
+    skos:altLabel 'structure'^^xsd:string ;
+    skos:prefLabel 'structure'@en ;
+    skos:definition 'Man-made construction.  Examples: buildings; museums; churches; factories; housing; monuments; shops; towers.'@en ;
+    skos:notation 'SDN:P05::017'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P05/current/018/1/> .
+<http://vocab.nerc.ac.uk/collection/P05/current/018/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P05/current/018/>;
+    dc:modified '2005-04-27T15:27:44'^^xsd:dateTime ;
+    skos:altLabel 'transportation'^^xsd:string ;
+    skos:prefLabel 'transportation'@en ;
+    skos:definition 'Means and aids for conveying persons and/or goods.  Examples: roads; airports/airstrips; shipping routes; tunnels; nautical charts; vehicle or vessel location; aeronautical charts; railways.'@en ;
+    skos:notation 'SDN:P05::018'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P05/current/019/1/> .
+<http://vocab.nerc.ac.uk/collection/P05/current/019/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P05/current/019/>;
+    dc:modified '2005-04-27T15:27:44'^^xsd:dateTime ;
+    skos:altLabel 'utilitiesCommunication'^^xsd:string ;
+    skos:prefLabel 'utilitiesCommunication'@en ;
+    skos:definition 'Energy, water and waste systems and communications infrastructure and services.  Examples: hydroelectricity; geothermal, solar and nuclear sources of energy; water purification and distribution; sewage collection and disposal; electricity and gas distribution; data communication; telecommunication; radio; communication networks.'@en ;
+    skos:notation 'SDN:P05::019'^^xsd:string .

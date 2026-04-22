@@ -1,0 +1,334 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2009_01_01_00_00_00_2009_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2008_01_01_00_00_00_2008_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2009-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0081/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0081/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0081/>;
+    dc:modified '2009-12-10T11:27:25'^^xsd:dateTime ;
+    skos:altLabel 'Vaisala HMP probe'^^xsd:string ;
+    skos:prefLabel 'Vaisala HMP temperature and humidity sensor'@en ;
+    skos:definition 'A family of sensors and instruments (sensors plus integral displays or loggers) for the measurement of air temperature and relative humidity. All are based on a probe containing a patent (HUMICAP) capacitive thin film polymer humidity sensor and a Pt100 platinum resistance thermometer. The probes are available with a wide range of packaging, cabling and interface options all of which have designations of the form HMPnn such as HMP45 and HMP75. Vaisala sensors are incorporated into weather stations and marketed by Campbell Scientific.'@en ;
+    skos:notation 'SDN:L22::TOOL0081'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0033/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0033/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0033/>;
+    dc:modified '2009-11-30T16:34:50'^^xsd:dateTime ;
+    skos:altLabel 'Neil Brown Smart CTD'^^xsd:string ;
+    skos:prefLabel 'Neil Brown Smart CTD'@en ;
+    skos:definition 'The Neil Brown Smart CTD consists of and integral unit containing pressure, temperature and conductivity sensors combined with an integral data logger'@en ;
+    skos:notation 'SDN:L22::TOOL0033'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0041/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0041/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0041/>;
+    dc:modified '2009-11-30T11:56:35'^^xsd:dateTime ;
+    skos:altLabel 'AML CTD-12'^^xsd:string ;
+    skos:prefLabel 'Applied Microsystems CTD-12'@en ;
+    skos:definition 'A self-contained CTD with platinized 4-electrode glass conductivity cell, pressure-protected thermistor temperature sensor and a semiconductor strain gauge pressure sensor plus integral data logger.'@en ;
+    skos:notation 'SDN:L22::TOOL0041'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0065/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0065/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0065/>;
+    dc:modified '2009-11-30T11:56:35'^^xsd:dateTime ;
+    skos:altLabel 'CTG Alphatracka transmissometer'^^xsd:string ;
+    skos:prefLabel 'Chelsea Technologies Group Alphatracka transmissometer'@en ;
+    skos:definition 'Dual beam, ratiometric digitally controlled transmissometer of titanium construction rated to 6000m. 5/10/25cm path lengths and 470/565/590/660nm wavelengths available.'@en ;
+    skos:notation 'SDN:L22::TOOL0065'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0048/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0048/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0048/>;
+    dc:modified '2009-11-30T11:56:35'^^xsd:dateTime ;
+    skos:altLabel 'CTG Aquapack CTD'^^xsd:string ;
+    skos:prefLabel 'Chelsea Technologies Group Aquapack CTD'@en ;
+    skos:definition 'Single titanium housing containing temperature, conductivity, depth and fluorescence sensors. Also contains internal batteries and a data logger. Spare analogous channels are available to interface a range of additional externally mounted sensors such as PAR and dissolved oxygen. Has a depth rating of 200m.'@en ;
+    skos:notation 'SDN:L22::TOOL0048'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0032/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0032/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0032/>;
+    dc:modified '2009-11-30T11:56:35'^^xsd:dateTime ;
+    skos:altLabel 'Guildline 8705 CTD'^^xsd:string ;
+    skos:prefLabel 'Guildline Model 8705 Digital CTD'@en ;
+    skos:definition 'A CTD unit designed for open ocean applications down to depths of 6000m. The probe was an anodised aluminium tube with a steel cage at one end protecting the temperature and conductivity sensors and a urethane cap at the other to protect the pressure sensor diaphragm. Conductivity cell was a Pyrex tube with four electrodes in an H configuration to allow free circulation of seawater. The thermometer was a fine copper wire enclosed in an oil-filled stainless steel capilliary. The pressure transducer was a 4-arm strain gauge bridge.'@en ;
+    skos:notation 'SDN:L22::TOOL0032'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0034/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0034/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0034/>;
+    dc:modified '2009-11-30T11:56:35'^^xsd:dateTime ;
+    skos:altLabel 'Guildline 8770 CTD'^^xsd:string ;
+    skos:prefLabel 'Guildline Model 8770 Digital CTD'@en ;
+    skos:definition 'CTD with conductivity electrode mounted in pyrex glass, copper resistance element in a stainless steel tube for temperature and a pressure sensor comprising a strain gauge element in a 4-arm resistance bridge network'@en ;
+    skos:notation 'SDN:L22::TOOL0034'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0080/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0080/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0080/>;
+    dc:modified '2009-11-30T11:56:35'^^xsd:dateTime ;
+    skos:altLabel 'IOS psychrometer'^^xsd:string ;
+    skos:prefLabel 'Institute of Oceanographic Sciences psychrometer'@en ;
+    skos:definition 'A psychrometer designed by Institute of Oceanographic Sciences (now National Oceanography Centre) to measure wet and dry bulb atmospheric temperature. The instrument consisted of two similar thermometers that were mounted side by side. The dry bulb has its bulb exposed to the air; the wet bulb was wrapped in an absorbent material (muslin), which was immersed in water and served as a wick.'@en ;
+    skos:notation 'SDN:L22::TOOL0080'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0045/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0045/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0045/>;
+    dc:modified '2009-11-30T11:56:35'^^xsd:dateTime ;
+    skos:altLabel 'Mar Elec 3D SRPLS'^^xsd:string ;
+    skos:prefLabel 'Marine Electronics 3D Sand Ripple Profiling Logging Sonar'@en ;
+    skos:definition 'A dual axis mechanically scanning sonar unit with a built in hard disk drive and associated controlling computer, powered by an external battery pack but is self-contained. The sonar has an oil-filled hemi-spherical plastic "boot" providing protection for its acoustic transducer which operates with a narrow conical beam pattern. Typically the sonar is mounted vertically, looking down at the sea-bed, and captures a sequence of profiles of the sea-bed over a pre-programmed sector and range. The sonar gathers a single swath of data in the horizontal plane and then rotates the transducer through a pre-programmed angle around the vertical axis and repeats the process until a circular area underneath the sonar has been scanned in a sequence of radial spokes. The raw data represents the signal amplitude of the envelope of the returned echoes. A suite of sensors to measure conductivity, temperature, depth, pitch and roll are also mounted on the instrument.'@en ;
+    skos:notation 'SDN:L22::TOOL0045'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0046/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0046/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0046/>;
+    dc:modified '2009-11-30T11:56:35'^^xsd:dateTime ;
+    skos:altLabel 'Mar Elec SRPS'^^xsd:string ;
+    skos:prefLabel 'Marine Electronics Sand Ripple Profiling Sonar'@en ;
+    skos:definition 'A single axis mechanically scanning sonar unit. The sonar has an oil-filled plastic "boot" providing protection for its acoustic transducer which operates with a narrow conical beam pattern.Typically the sonar is mounted vertically, looking down at the sea-bed, and captures a sequence of profiles of the sea-bed over a pre-programmed sector and range. The sonar gathers a single swath of data in the horizontal plane and then rotates the transducer through a pre-programmed angle around the vertical axis and repeats the process until a circular area underneath the sonar has been scanned in a sequence of radial spokes.'@en ;
+    skos:notation 'SDN:L22::TOOL0046'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0067/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0067/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0067/>;
+    dc:modified '2009-11-30T11:56:35'^^xsd:dateTime ;
+    skos:altLabel 'Marcel Kruse PAR Spectrometer'^^xsd:string ;
+    skos:prefLabel 'Marcel Kruse PAR Spectrometer'@en ;
+    skos:definition 'Self-contained spectral radiometer manufactured by Ingenieurburo Marcel Kruse. It has a cosine diffusor and records radiation in the range of 400-700nm using a diode array. Depending on light intensities integration time ranges between 15ms to 16s for one spectrum. Storage capacity is 90 spectra.'@en ;
+    skos:notation 'SDN:L22::TOOL0067'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0054/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0054/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0054/>;
+    dc:modified '2009-11-30T11:56:35'^^xsd:dateTime ;
+    skos:altLabel 'RBR TDR-2050'^^xsd:string ;
+    skos:prefLabel 'RBR TDR-2050 underwater temperature logger'@en ;
+    skos:definition 'The TDR-2050 is a small (235mm x 38mm OD), self-contained, submersible temperature and depth recorder (sensors and data logger). It can be deployed for a period of up to three years and can collect more than 1,200,000 sets of samples. Data can be retained in memory for 20 years (even without batteries). Available in two casings, plastic and titanium, with depth ratings of 740m and 6600m respectively. The temperature channel of the TDR-2050 is calibrated to an accuracy of ± 0.002°C (ITS-90) over the range -5 to +35°C.  Typical drift has been measured to be 0.002°C per year. The thermistor may be external (<3sec time constant) or internal (<20sec time constant). A fast thermistor probe (0.095sec) is also available. The depth channel is calibrated to an accuracy of 0.05%fs  Ranges from 10m to 6,600m are available.'@en ;
+    skos:notation 'SDN:L22::TOOL0054'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0029/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0029/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0029/>;
+    dc:modified '2009-11-30T11:56:35'^^xsd:dateTime ;
+    skos:altLabel 'RCM 9/11'^^xsd:string ;
+    skos:prefLabel 'Aanderaa RCM 9/11 Recording Current Meter'@en ;
+    skos:definition 'The RCM 9/11 a family of single-point doppler recording current meter with a different casing options to allow working at depths of up to 300 (RCM 9 LW), 2000 (RCM 9 IW) or 6000 (RCM 11) metres. Further information may be found on the BODC document server at URL http://www.bodc.ac.uk/data/documents/nodb/106028/'@en ;
+    skos:notation 'SDN:L22::TOOL0029'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0069/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0069/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0069/>;
+    dc:modified '2009-11-30T11:56:35'^^xsd:dateTime ;
+    skos:altLabel 'SBE 18 pH'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 18 pH Sensor'@en ;
+    skos:definition 'A pH sensor using a pressure-balanced glass-electrode Ag_AgCl-reference pH probe to provide in-situ measurements at depths up to 1200m. The replaceable pH probe is permanently sealed and is supplied with a soaker bottle attachment that prevents the reference electrode from drying out during storage.'@en ;
+    skos:notation 'SDN:L22::TOOL0069'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0036/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0036/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0036/>;
+    dc:modified '2009-11-30T11:56:35'^^xsd:dateTime ;
+    skos:altLabel 'SBE 43 DO'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 43 Dissolved Oxygen Sensor'@en ;
+    skos:definition 'High performance through-flow Clark polarographic membrane sensor designed to be plumbed in to a Sea-Bird underwater unit pumped water supply on a profiling CTD package. Designed specifically to give rapid temperature response and minimal pressure hysteresis. Signal output is voltage based to interface to a CTD deck unit.'@en ;
+    skos:notation 'SDN:L22::TOOL0036'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0037/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0037/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0037/>;
+    dc:modified '2009-11-30T11:56:35'^^xsd:dateTime ;
+    skos:altLabel 'SBE 43F DO'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 43F Dissolved Oxygen Sensor'@en ;
+    skos:definition 'High performance through-flow Clark polarographic membrane sensor designed to be interfaced to an SBE 52-MP profiling moored CTD or integrated into OEM moorings. Designed specifically to give rapid temperature response and minimal pressure hysteresis. Signal output is frequency based.'@en ;
+    skos:notation 'SDN:L22::TOOL0037'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0086/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0086/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0086/>;
+    dc:modified '2009-11-30T11:56:35'^^xsd:dateTime ;
+    skos:altLabel 'SD MotionPak accelerometer'^^xsd:string ;
+    skos:prefLabel 'Systron Donner MotionPak accelerometer'@en ;
+    skos:definition 'The Systron Donner Inertial MotionPak is a solid-state MEMS six Degree-of-Freedom inertial sensing system used for measuring angular rates and linear accelerations in instrumentation and control applications. These multi-axis packages allow a pre-combined solution, minimizing the customer burden of sensor integration. The multi-axis sensor assemblies sense roll, pitch and yaw inputs simultaneously on a moving platform.'@en ;
+    skos:notation 'SDN:L22::TOOL0086'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0059/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0059/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0059/>;
+    dc:modified '2009-11-30T11:56:35'^^xsd:dateTime ;
+    skos:altLabel 'TPA200 Altimeter'^^xsd:string ;
+    skos:prefLabel 'Tritech PA-200 Altimeter'@en ;
+    skos:definition 'Digital precision altimeter with 200kHz signal giving highly accurate height off seabed and subsea distance measurements. Operates effectively between -10°C and 40°C at heights up to 100m above the seabed. Standard depth rating 4000m.'@en ;
+    skos:notation 'SDN:L22::TOOL0059'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0030/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0030/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0030/>;
+    dc:modified '2009-11-30T11:56:35'^^xsd:dateTime ;
+    skos:altLabel 'WLR 8'^^xsd:string ;
+    skos:prefLabel 'Aanderaa WLR 8 Water Level Recorder'@en ;
+    skos:definition 'The WLR 8 is a bottom pressure recorder recording sea level with deployment depths of up to 6000 metres. Further information may be found on the BODC document server at URL http://www.bodc.ac.uk/data/documents/nodb/135903/'@en ;
+    skos:notation 'SDN:L22::TOOL0030'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0010/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0010/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0010/>;
+    dc:modified '2009-11-30T11:27:51'^^xsd:dateTime ;
+    skos:altLabel 'Lea gauge'^^xsd:string ;
+    skos:prefLabel 'Lea float tide gauge'@en ;
+    skos:definition 'The Lea gauge is a vertically mounted chart recording gauge which measures the sea level by means of a float in a stilling well. The float is connected to the large drum in the lower centre of the picture and the counter weight connected to the smaller drum on its right. This difference in drum size means the counter weight does not enter the seawater on every tide. The disadvantage is that the counter weight has to be proportionally heavier to counter balance the float. The pen arm is moved up and down the chart by means of a chain loop linked to a worm gear on the drum axle.'@en ;
+    skos:notation 'SDN:L22::TOOL0010'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0012/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0012/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0012/>;
+    dc:modified '2009-11-30T11:27:51'^^xsd:dateTime ;
+    skos:altLabel 'Mid-tide bubbler'^^xsd:string ;
+    skos:prefLabel 'Mid-tide bubbler tide gauge'@en ;
+    skos:definition 'The operation of the mid tide bubbler is similar to that of the full tide system, except that the measuring point is mounted at the mid tide height. This means that the pressure point is only immersed for half of the tidal cycle. The reason for this is that when the measuring point is exposed it can be accurately levelled into the geodetic network. Once this is accomplished the full tide pressure points can be fitted to match the tidal curve produced by the mid tide pressure point, thereby connecting them to the geodetic network.'@en ;
+    skos:notation 'SDN:L22::TOOL0012'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0016/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0016/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0016/>;
+    dc:modified '2009-11-30T11:27:51'^^xsd:dateTime ;
+    skos:altLabel 'Ott gauge'^^xsd:string ;
+    skos:prefLabel 'Ott pneumatic tide gauge'@en ;
+    skos:definition 'The Ott pneumatic gauge derives its measuring signal from the pressure produced in a bubbler system. The pressure is applied to one end of a pivoted beam. On the other side of the pivot is a weight which is moved up and down the beam by an electric motor in order to counter balance the pressure signal. At the far end of the beam are electrical contacts which operate the motor in the correct sense when the beam moves out of balance.   The motor is also geared to a double helix shaft with the pen arm attached. The position of the pen is therefore proportional to the applied air pressure.'@en ;
+    skos:notation 'SDN:L22::TOOL0016'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0009/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0009/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0009/>;
+    dc:modified '2009-11-30T11:27:51'^^xsd:dateTime ;
+    skos:altLabel 'Plessey 9400'^^xsd:string ;
+    skos:prefLabel 'Plessey 9400 CTD'@en ;
+    skos:definition 'The Plessey 9400 CTD system combines a Plessey 6500 inductive conductivity sensor, a Plessey 4500 platinum resistance temperature sensor and Plessey 4600 bonded strain gauge pressure sensor.'@en ;
+    skos:notation 'SDN:L22::TOOL0009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0024/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0024/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0024/>;
+    dc:modified '2009-11-30T11:27:51'^^xsd:dateTime ;
+    skos:altLabel 'SBE 26 SEAGAUGE'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 26 SEAGAUGE Wave and Tide Recorder'@en ;
+    skos:definition 'The SBE 26 SEAGAUGE is a water level recorder with a Digiquartz pressure sensor, accurate clock, precision thermometer and optional conductivity sensor. Pressure data are integrated to give sea level or are burst recorded at rates up to 4 Hz to measure characterise waves. Further information may be found on the BODC document server at URL http://www.bodc.ac.uk/data/documents/nodb/82441/.'@en ;
+    skos:notation 'SDN:L22::TOOL0024'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0025/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0025/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0025/>;
+    dc:modified '2009-11-30T11:27:51'^^xsd:dateTime ;
+    skos:altLabel 'SBE 53 BPR'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 53 BPR Bottom Pressure Recorder'@en ;
+    skos:definition 'The SBE 53 BPR is a water level recorder with a Digiquartz pressure sensor, precision thermometer and optional conductivity sensor. Pressure data are integrated to give sea level free from wave interference at frequencies of a minute to an hour.'@en ;
+    skos:notation 'SDN:L22::TOOL0025'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0015/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0015/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0015/>;
+    dc:modified '2009-11-30T11:27:51'^^xsd:dateTime ;
+    skos:altLabel 'Wellhead gauge'^^xsd:string ;
+    skos:prefLabel 'Wellhead tide gauge'@en ;
+    skos:definition 'The Wellhead gauge measures the sea level by means of a float in a stilling well. The float is usually of a smaller diameter than that used on a Munro gauge (about 45cm diameter), and has a counterweight attached to a smaller diameter pulley than that of the float so it is not immersed in the sea when the float rises. The Wellhead unit does not produce a chart but does give a readout of the height. It is interfaced to the data logger via a precision potentiometer.'@en ;
+    skos:notation 'SDN:L22::TOOL0015'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOLZZZ/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOLZZZ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOLZZZ/>;
+    dc:modified '2009-11-26T12:14:36'^^xsd:dateTime ;
+    skos:altLabel 'unknown'^^xsd:string ;
+    skos:prefLabel 'unknown'@en ;
+    skos:definition 'The correct value is not known to, and not computable by, the creator of this information. However, a correct value probably exists.'@en ;
+    skos:notation 'SDN:L22::TOOLZZZ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0097/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0097/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0097/>;
+    dc:modified '2009-04-28T11:30:37'^^xsd:dateTime ;
+    skos:altLabel 'Ott chart float gauge'^^xsd:string ;
+    skos:prefLabel 'Ott chart float tide gauge'@en ;
+    skos:definition 'Mechanical tide gauge with a float installed in a stilling well connected by wire through a set of pulleys that transmit the movement of the float to a continuous pen recorder.'@en ;
+    skos:notation 'SDN:L22::TOOL0097'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0099/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0099/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0099/>;
+    dc:modified '2009-04-28T11:30:37'^^xsd:dateTime ;
+    skos:altLabel 'Ott magnetic float gauge'^^xsd:string ;
+    skos:prefLabel 'Ott magnetic float tide gauge'@en ;
+    skos:definition 'Mechanical tide gauge with a float installed in a stilling well and a magnetic encoder that converts linear movement of the wire connected to the float into a digital value.'@en ;
+    skos:notation 'SDN:L22::TOOL0099'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0098/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0098/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0098/>;
+    dc:modified '2009-04-28T11:30:37'^^xsd:dateTime ;
+    skos:altLabel 'Ott optical float gauge'^^xsd:string ;
+    skos:prefLabel 'Ott optical float tide gauge'@en ;
+    skos:definition 'Mechanical tide gauge with a float installed in a stilling well and an optical encoder that converts linear movement of the wire connected to the float into a digital value.'@en ;
+    skos:notation 'SDN:L22::TOOL0098'^^xsd:string .

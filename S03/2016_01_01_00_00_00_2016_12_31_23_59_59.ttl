@@ -1,0 +1,91 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S03/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S03/2015_01_01_00_00_00_2015_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2016-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03449/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03449/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03449/>;
+    dc:modified '2016-10-03T17:59:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, denitrification to N2O by cultured bacteria'@en ;
+    skos:definition 'Physical removal of particulates by filtration followed by conversion of nitrate and nitrite to nitrous oxide using the \'Denitrifier Method\'.'@en ;
+    skos:notation 'SDN:S03::S03449'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03447/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03447/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03447/>;
+    dc:modified '2016-07-21T12:13:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'acid digestion of leached filter residue'@en ;
+    skos:definition 'The particulate phase was separated from the sample by filtration, treated with weak acid to remove labile elements then completely dissolved in a strong acid and analysed.'@en ;
+    skos:notation 'SDN:S03::S03447'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03448/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03448/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03448/>;
+    dc:modified '2016-07-21T12:13:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, acid leaching'@en ;
+    skos:definition 'Physical separation of the solid phase from a sample of air or water followed by treatment with weak acid to extract the acid-soluble component of that solid phase for analysis.'@en ;
+    skos:notation 'SDN:S03::S03448'^^xsd:string .

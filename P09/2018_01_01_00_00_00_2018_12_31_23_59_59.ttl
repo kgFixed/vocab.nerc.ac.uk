@@ -1,0 +1,127 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P09/2018_01_01_00_00_00_2018_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P09/2017_01_01_00_00_00_2017_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2018-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/OXDE/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/OXDE/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/OXDE/>;
+    dc:modified '2018-06-20T11:09:59'^^xsd:dateTime ;
+    skos:altLabel 'ISOTOPIC DEUTERIUM RATIO'^^xsd:string ;
+    skos:prefLabel 'The isotopic enrichment of 2H in the hydrogen of water molecules'@en ;
+    skos:definition 'The isotopic enrichment (1000*(sample 2/1 ratio - natural ratio)/(natural ratio)) of 2H in the hydrogen of water molecules in a body of salt or fresh water.'@en ;
+    skos:notation 'SDN:P09::OXDE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/VM01/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/VM01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/VM01/>;
+    dc:modified '2018-06-05T14:12:09'^^xsd:dateTime ;
+    skos:altLabel 'SPECTR. MOMENT(0,1) WAVE PERIOD'^^xsd:string ;
+    skos:prefLabel 'Period (at first spectral moment) of waves on the water body'@en ;
+    skos:definition 'Estimate of wave period (m0/m1) corresponding to the mean frequency of the spectrum'@en ;
+    skos:notation 'SDN:P09::VM01'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/VMDR/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/VMDR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/VMDR/>;
+    dc:modified '2018-06-05T09:56:17'^^xsd:dateTime ;
+    skos:altLabel 'WAVE SPECTRUM MEAN DIR.'^^xsd:string ;
+    skos:prefLabel 'Mean direction in spectrum of waves from which waves are coming relative to True North'@en ;
+    skos:definition 'Direction (from) mean of waves {mean wave direction} on the water body by computation from 1st order Fourier coefficients of directional distribution of energy, A1 and B1'@en ;
+    skos:notation 'SDN:P09::VMDR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/AACP/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/AACP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/AACP/>;
+    dc:modified '2018-01-15T16:34:39'^^xsd:dateTime ;
+    skos:altLabel 'AACP'^^xsd:string ;
+    skos:prefLabel 'ALPHA-CAROTENE'@en ;
+    skos:definition 'Concentration of ALPHA-CAROTENE {Alpha-carotene CAS 432-70-2} pigment per unit volume of the water column'@en ;
+    skos:notation 'SDN:P09::AACP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/BBCP/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/BBCP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/BBCP/>;
+    dc:modified '2018-01-15T16:34:39'^^xsd:dateTime ;
+    skos:altLabel 'BBCP'^^xsd:string ;
+    skos:prefLabel 'BETA-CAROTENE'@en ;
+    skos:definition 'Concentration of BETA-CAROTENE {Beta-carotene CAS 7235-40-7} pigment per unit volume of the water column'@en ;
+    skos:notation 'SDN:P09::BBCP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/CXAP/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/CXAP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/CXAP/>;
+    dc:modified '2018-01-15T16:34:39'^^xsd:dateTime ;
+    skos:altLabel 'CXAP'^^xsd:string ;
+    skos:prefLabel 'CROCOXANTHIN'@en ;
+    skos:definition 'Concentration of CROCOXANTHIN {Crocoxanthin CAS 21284-10-6} pigment per unit volume of the water column'@en ;
+    skos:notation 'SDN:P09::CXAP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/PHEP/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/PHEP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/PHEP/>;
+    dc:modified '2018-01-15T16:34:39'^^xsd:dateTime ;
+    skos:altLabel 'PHEP'^^xsd:string ;
+    skos:prefLabel 'PHEOPHORBIDE A'@en ;
+    skos:definition 'Concentration of PHEOPHORBIDE A {Pheophorbide A CAS 15664-29-6} pigment per unit volume of the water column'@en ;
+    skos:notation 'SDN:P09::PHEP'^^xsd:string .

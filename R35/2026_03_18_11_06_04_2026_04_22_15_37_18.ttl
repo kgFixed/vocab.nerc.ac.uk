@@ -1,0 +1,84 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/R35/2026_03_18_11_06_04_2026_04_22_15_37_18.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R35/current/BS00003/1/> .
+<http://vocab.nerc.ac.uk/collection/R35/current/BS00003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R35/current/BS00003/>;
+    dc:modified '2026-03-18T11:19:31'^^xsd:dateTime ;
+    skos:altLabel 'C'^^xsd:string ;
+    skos:prefLabel 'C'@en ;
+    skos:definition 'C cell battery.'@en ;
+    skos:notation 'SDN:R35::BS00003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R35/current/BS00002/1/> .
+<http://vocab.nerc.ac.uk/collection/R35/current/BS00002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R35/current/BS00002/>;
+    dc:modified '2026-03-18T11:19:31'^^xsd:dateTime ;
+    skos:altLabel 'D'^^xsd:string ;
+    skos:prefLabel 'D'@en ;
+    skos:definition 'D cell battery.'@en ;
+    skos:notation 'SDN:R35::BS00002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R35/current/BS00001/1/> .
+<http://vocab.nerc.ac.uk/collection/R35/current/BS00001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R35/current/BS00001/>;
+    dc:modified '2026-03-18T11:19:31'^^xsd:dateTime ;
+    skos:altLabel 'DD'^^xsd:string ;
+    skos:prefLabel 'DD'@en ;
+    skos:definition 'DD cell battery (larger capacity than D cell battery).'@en ;
+    skos:notation 'SDN:R35::BS00001'^^xsd:string .

@@ -1,0 +1,604 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C61/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C61/2007_01_01_00_00_00_2011_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2012-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/DNPT0005/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/DNPT0005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/DNPT0005/>;
+    dc:modified '2012-12-11T08:14:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Frederikshavn'@en ;
+    skos:definition 'Town in North Jutland (Nordjylland), Denmark.'@en ;
+    skos:notation 'SDN:C61::DNPT0005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/FRPT0030/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/FRPT0030/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/FRPT0030/>;
+    dc:modified '2012-12-11T08:14:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Issy-les-Moulineaux'@en ;
+    skos:definition 'Town in Île-de-France, France.'@en ;
+    skos:notation 'SDN:C61::FRPT0030'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY089/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY089/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY089/>;
+    dc:modified '2012-12-05T08:06:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Gloucester Point'@en ;
+    skos:definition 'Town in Virginia, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY089'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/BRPT0003/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/BRPT0003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/BRPT0003/>;
+    dc:modified '2012-11-30T07:52:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Rio Grande'@en ;
+    skos:definition 'City in Rio Grande do Sul, Brazil.'@en ;
+    skos:notation 'SDN:C61::BRPT0003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/FIPT0002/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/FIPT0002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/FIPT0002/>;
+    dc:modified '2012-11-30T07:52:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Joensuu'@en ;
+    skos:definition 'City in North Karelia, Finland.'@en ;
+    skos:notation 'SDN:C61::FIPT0002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/FIPT0003/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/FIPT0003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/FIPT0003/>;
+    dc:modified '2012-11-30T07:52:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Turku'@en ;
+    skos:definition 'City in Finland Proper, Finland.'@en ;
+    skos:notation 'SDN:C61::FIPT0003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/GRPT0002/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/GRPT0002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/GRPT0002/>;
+    dc:modified '2012-11-30T07:52:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Athens'@en ;
+    skos:definition 'City in Attica, Greece.'@en ;
+    skos:notation 'SDN:C61::GRPT0002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/OZPT0009/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/OZPT0009/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/OZPT0009/>;
+    dc:modified '2012-11-30T07:52:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'North Ryde'@en ;
+    skos:definition 'Town in New South Wales, Australia.'@en ;
+    skos:notation 'SDN:C61::OZPT0009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/OZPT0010/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/OZPT0010/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/OZPT0010/>;
+    dc:modified '2012-11-30T07:52:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'West Beach'@en ;
+    skos:definition 'City in South Australia, Australia.'@en ;
+    skos:notation 'SDN:C61::OZPT0010'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY084/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY084/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY084/>;
+    dc:modified '2012-11-30T07:52:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Anchorage'@en ;
+    skos:definition 'City in Alaska, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY084'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY085/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY085/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY085/>;
+    dc:modified '2012-11-30T07:52:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Pacific Grove'@en ;
+    skos:definition 'City in California, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY085'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY086/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY086/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY086/>;
+    dc:modified '2012-11-30T07:52:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Portland'@en ;
+    skos:definition 'City in Oregon, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY086'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY088/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY088/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY088/>;
+    dc:modified '2012-11-30T07:52:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'New York'@en ;
+    skos:definition 'City in New York, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY088'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/DUTPT012/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/DUTPT012/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/DUTPT012/>;
+    dc:modified '2012-11-10T09:39:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Scharendijke'@en ;
+    skos:definition 'Town in Zeeland, Netherlands.'@en ;
+    skos:notation 'SDN:C61::DUTPT012'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/FRPT0029/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/FRPT0029/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/FRPT0029/>;
+    dc:modified '2012-11-10T09:39:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Vannes'@en ;
+    skos:definition 'Town in Brittany (Bretagne), France.'@en ;
+    skos:notation 'SDN:C61::FRPT0029'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/GERPT025/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/GERPT025/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/GERPT025/>;
+    dc:modified '2012-10-25T08:06:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Stralsund'@en ;
+    skos:definition 'Town in Mecklenburg-West Pomerania, Germany.'@en ;
+    skos:notation 'SDN:C61::GERPT025'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/GERPT024/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/GERPT024/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/GERPT024/>;
+    dc:modified '2012-10-17T09:30:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Tübingen'@en ;
+    skos:definition 'Town in Baden-Wurttemberg, Germany. Alternative spelling Tuebingen.'@en ;
+    skos:notation 'SDN:C61::GERPT024'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/FRPT0028/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/FRPT0028/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/FRPT0028/>;
+    dc:modified '2012-10-04T16:52:58'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Villiers-en-Bois'@en ;
+    skos:definition 'Town in Poitou-Charentes, France.'@en ;
+    skos:notation 'SDN:C61::FRPT0028'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/GERPT023/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/GERPT023/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/GERPT023/>;
+    dc:modified '2012-10-04T16:52:58'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Büsum'@en ;
+    skos:definition 'Town in Schleswig-Holstein, Germany.'@en ;
+    skos:notation 'SDN:C61::GERPT023'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/PLPT0002/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/PLPT0002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/PLPT0002/>;
+    dc:modified '2012-10-04T16:52:58'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Hel'@en ;
+    skos:definition 'Town in Pomerania, Poland.'@en ;
+    skos:notation 'SDN:C61::PLPT0002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/SPPT0013/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/SPPT0013/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/SPPT0013/>;
+    dc:modified '2012-10-04T16:52:58'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Algeciras'@en ;
+    skos:definition 'City in Andalucia, Spain.'@en ;
+    skos:notation 'SDN:C61::SPPT0013'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/JPPT0007/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/JPPT0007/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/JPPT0007/>;
+    dc:modified '2012-10-04T08:55:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Uji'@en ;
+    skos:definition 'City in Kyoto Prefecture, Japan.'@en ;
+    skos:notation 'SDN:C61::JPPT0007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/JPPT0008/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/JPPT0008/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/JPPT0008/>;
+    dc:modified '2012-10-04T08:55:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Tokai'@en ;
+    skos:definition 'City in Ibaraki Prefecture, Japan.'@en ;
+    skos:notation 'SDN:C61::JPPT0008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/JPPT0009/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/JPPT0009/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/JPPT0009/>;
+    dc:modified '2012-10-04T08:55:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Hirosaki'@en ;
+    skos:definition 'City in Aomori Prefecture, Japan.'@en ;
+    skos:notation 'SDN:C61::JPPT0009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/JPPT0010/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/JPPT0010/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/JPPT0010/>;
+    dc:modified '2012-10-04T08:55:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Osaka'@en ;
+    skos:definition 'City in Osaka Prefecture, Japan.'@en ;
+    skos:notation 'SDN:C61::JPPT0010'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/JPPT0011/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/JPPT0011/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/JPPT0011/>;
+    dc:modified '2012-10-04T08:55:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Kochi'@en ;
+    skos:definition 'City in Kochi Prefecture, Japan.'@en ;
+    skos:notation 'SDN:C61::JPPT0011'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/JPPT0006/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/JPPT0006/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/JPPT0006/>;
+    dc:modified '2012-10-03T08:35:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Kashiwa'@en ;
+    skos:definition 'City in Chiba Prefecture, Japan.'@en ;
+    skos:notation 'SDN:C61::JPPT0006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/RUPT0005/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/RUPT0005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/RUPT0005/>;
+    dc:modified '2012-10-03T08:35:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'St Petersburg'@en ;
+    skos:definition 'City comprising St Petersburg region, Russian Federation.'@en ;
+    skos:notation 'SDN:C61::RUPT0005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY083/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY083/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY083/>;
+    dc:modified '2012-10-02T08:34:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Albany'@en ;
+    skos:definition 'City in New York, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY083'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/FRPT0024/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/FRPT0024/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/FRPT0024/>;
+    dc:modified '2012-09-29T07:57:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Cherbourg-Octeville'@en ;
+    skos:definition 'City in Lower Normandy (Basse-Normandie), France'@en ;
+    skos:notation 'SDN:C61::FRPT0024'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/FRPT0025/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/FRPT0025/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/FRPT0025/>;
+    dc:modified '2012-09-29T07:57:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Caen'@en ;
+    skos:definition 'Town in Lower Normandy (Basse-Normandie), France.'@en ;
+    skos:notation 'SDN:C61::FRPT0025'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/FRPT0026/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/FRPT0026/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/FRPT0026/>;
+    dc:modified '2012-09-29T07:57:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Wimereux'@en ;
+    skos:definition 'Town in Nord-Pas de Calais, France.'@en ;
+    skos:notation 'SDN:C61::FRPT0026'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/FRPT0027/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/FRPT0027/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/FRPT0027/>;
+    dc:modified '2012-09-29T07:57:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'La Rochelle'@en ;
+    skos:definition 'City in Poitou-Charentes, France.'@en ;
+    skos:notation 'SDN:C61::FRPT0027'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/RUPT0004/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/RUPT0004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/RUPT0004/>;
+    dc:modified '2012-09-29T07:57:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Murmansk'@en ;
+    skos:definition 'City in Murmansk Oblast, Russian Federation.'@en ;
+    skos:notation 'SDN:C61::RUPT0004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/FRPT0023/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/FRPT0023/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/FRPT0023/>;
+    dc:modified '2012-09-27T08:01:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Courtaboeuf'@en ;
+    skos:definition 'Town in Île-de-France, France.'@en ;
+    skos:notation 'SDN:C61::FRPT0023'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/CNPT0014/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/CNPT0014/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/CNPT0014/>;
+    dc:modified '2012-08-09T09:06:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Quebec City'@en ;
+    skos:definition 'City in Quebec, Canada.  French name is Ville de Québec.'@en ;
+    skos:notation 'SDN:C61::CNPT0014'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY082/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY082/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY082/>;
+    dc:modified '2012-07-31T15:59:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Windsor'@en ;
+    skos:definition 'Town in New Jersey, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY082'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY080/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY080/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY080/>;
+    dc:modified '2012-07-04T10:15:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Brookfield'@en ;
+    skos:definition 'Town in Connecticut, USA'@en ;
+    skos:notation 'SDN:C61::USCTY080'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY081/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY081/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY081/>;
+    dc:modified '2012-07-04T10:15:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Santa Clara'@en ;
+    skos:definition 'City in California, USA'@en ;
+    skos:notation 'SDN:C61::USCTY081'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/SIPT0001/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/SIPT0001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/SIPT0001/>;
+    dc:modified '2012-06-21T16:53:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ljubljana'@en ;
+    skos:definition 'City in Ljubljana municipality, Slovenia'@en ;
+    skos:notation 'SDN:C61::SIPT0001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/ZAFPT003/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/ZAFPT003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/ZAFPT003/>;
+    dc:modified '2012-06-21T16:53:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Stellenbosch'@en ;
+    skos:definition 'Town in Western Cape, South Africa.'@en ;
+    skos:notation 'SDN:C61::ZAFPT003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/INDPT004/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/INDPT004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/INDPT004/>;
+    dc:modified '2012-06-12T08:48:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Roorkee'@en ;
+    skos:definition 'City in Uttarakhand, India.'@en ;
+    skos:notation 'SDN:C61::INDPT004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/ITPT0010/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/ITPT0010/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/ITPT0010/>;
+    dc:modified '2012-05-31T16:52:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bologna'@en ;
+    skos:definition 'City in Emilia-Romagna, Italy.'@en ;
+    skos:notation 'SDN:C61::ITPT0010'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY079/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY079/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY079/>;
+    dc:modified '2012-05-24T09:15:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Charlotte'@en ;
+    skos:definition 'City in North Carolina, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY079'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/DNPT0004/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/DNPT0004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/DNPT0004/>;
+    dc:modified '2012-05-17T14:46:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Odense'@en ;
+    skos:definition 'City in South Denmark (Syddanmark), Denmark.'@en ;
+    skos:notation 'SDN:C61::DNPT0004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/MXPT0002/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/MXPT0002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/MXPT0002/>;
+    dc:modified '2012-05-17T14:46:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ensenada'@en ;
+    skos:definition 'City in Baja California, Mexico'@en ;
+    skos:notation 'SDN:C61::MXPT0002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY078/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY078/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY078/>;
+    dc:modified '2012-03-28T07:51:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Minneapolis'@en ;
+    skos:definition 'City in Minnesota, United States.'@en ;
+    skos:notation 'SDN:C61::USCTY078'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/BMPT0001/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/BMPT0001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/BMPT0001/>;
+    dc:modified '2012-03-17T13:26:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'St George\'s'@en ;
+    skos:definition 'Town in St George\'s municipality, Bermuda'@en ;
+    skos:notation 'SDN:C61::BMPT0001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/EICTY09/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/EICTY09/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/EICTY09/>;
+    dc:modified '2012-03-16T11:17:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Kilrush'@en ;
+    skos:definition 'Town in County Clare, Ireland.'@en ;
+    skos:notation 'SDN:C61::EICTY09'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY077/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY077/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY077/>;
+    dc:modified '2012-03-16T11:17:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Santa Barbara'@en ;
+    skos:definition 'City in California, United States'@en ;
+    skos:notation 'SDN:C61::USCTY077'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/CNPT0013/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/CNPT0013/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/CNPT0013/>;
+    dc:modified '2012-02-23T08:18:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Markham'@en ;
+    skos:definition 'Town in Ontario, Canada.'@en ;
+    skos:notation 'SDN:C61::CNPT0013'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/NZLPT004/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/NZLPT004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/NZLPT004/>;
+    dc:modified '2012-02-23T08:18:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Auckland'@en ;
+    skos:definition 'City in Auckland region, New Zealand'@en ;
+    skos:notation 'SDN:C61::NZLPT004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY076/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY076/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY076/>;
+    dc:modified '2012-02-22T08:15:38'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Vista'@en ;
+    skos:definition 'City in California, USA'@en ;
+    skos:notation 'SDN:C61::USCTY076'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/ZAFPT002/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/ZAFPT002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/ZAFPT002/>;
+    dc:modified '2012-02-18T17:48:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Pretoria'@en ;
+    skos:definition 'City in Gauteng Province, South Africa'@en ;
+    skos:notation 'SDN:C61::ZAFPT002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/GERPT022/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/GERPT022/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/GERPT022/>;
+    dc:modified '2012-02-15T16:55:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Rastede'@en ;
+    skos:definition 'Town in Lower Saxony, Germany'@en ;
+    skos:notation 'SDN:C61::GERPT022'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/DNPT0003/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/DNPT0003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/DNPT0003/>;
+    dc:modified '2012-02-10T07:31:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Aarhus'@en ;
+    skos:definition 'City in Midtjylland region of Denmark.'@en ;
+    skos:notation 'SDN:C61::DNPT0003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/GERPT021/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/GERPT021/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/GERPT021/>;
+    dc:modified '2012-02-07T08:59:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Berlin'@en ;
+    skos:definition 'City making up Berlin City State, Germany.'@en ;
+    skos:notation 'SDN:C61::GERPT021'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY075/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY075/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY075/>;
+    dc:modified '2012-02-07T08:59:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sarasota'@en ;
+    skos:definition 'City in Florida, United States.'@en ;
+    skos:notation 'SDN:C61::USCTY075'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/GERPT020/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/GERPT020/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/GERPT020/>;
+    dc:modified '2012-02-03T08:54:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Krefeld'@en ;
+    skos:definition 'Town in North Rhine-Westphalia, Germany'@en ;
+    skos:notation 'SDN:C61::GERPT020'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/KRPT0002/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/KRPT0002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/KRPT0002/>;
+    dc:modified '2012-01-10T08:29:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Seoul'@en ;
+    skos:definition 'City in Seoul-teukbyeolsi region, Republic of Korea'@en ;
+    skos:notation 'SDN:C61::KRPT0002'^^xsd:string .

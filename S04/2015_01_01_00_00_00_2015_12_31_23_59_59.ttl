@@ -1,0 +1,91 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S04/2015_01_01_00_00_00_2015_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S04/2014_01_01_00_00_00_2014_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2015-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041089/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041089/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041089/>;
+    dc:modified '2015-10-02T16:58:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'resistance thermometer'@en ;
+    skos:definition 'Any type of resistance thermometer'@en ;
+    skos:notation 'SDN:S04::S041089'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041088/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041088/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041088/>;
+    dc:modified '2015-10-02T16:56:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'pH sensor'@en ;
+    skos:definition 'Any type of pH measuring sensor (e.g. resistance, thermistor, electrode)'@en ;
+    skos:notation 'SDN:S04::S041088'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041087/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041087/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041087/>;
+    dc:modified '2015-03-24T09:14:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '210Pb dating'@en ;
+    skos:definition 'A technique in which the measured activity of 210Pb is corrected for the activity expected from the decay 226Ra (supported 210Pb) to give the activity resulting from atmospheric 222Rn decay (unsupported or excess 210Pb) which predictably decreases as a function of time.'@en ;
+    skos:notation 'SDN:S04::S041087'^^xsd:string .

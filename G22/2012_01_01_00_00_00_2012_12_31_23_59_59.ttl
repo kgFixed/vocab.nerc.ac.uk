@@ -1,0 +1,120 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/G22/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G22/current/001/1/> .
+<http://vocab.nerc.ac.uk/collection/G22/current/001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G22/current/001/>;
+    dc:modified '2012-07-04T11:27:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'completed'@en ;
+    skos:definition 'Production of the data has been completed'@en ;
+    skos:notation 'SDN:G22::001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G22/current/002/1/> .
+<http://vocab.nerc.ac.uk/collection/G22/current/002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G22/current/002/>;
+    dc:modified '2012-07-04T11:27:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'historicalArchive'@en ;
+    skos:definition 'Data have been stored in an offline storage facility'@en ;
+    skos:notation 'SDN:G22::002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G22/current/003/1/> .
+<http://vocab.nerc.ac.uk/collection/G22/current/003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G22/current/003/>;
+    dc:modified '2012-07-04T11:27:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'obsolete'@en ;
+    skos:definition 'Data are no longer relevant'@en ;
+    skos:notation 'SDN:G22::003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G22/current/004/1/> .
+<http://vocab.nerc.ac.uk/collection/G22/current/004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G22/current/004/>;
+    dc:modified '2012-07-04T11:27:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'onGoing'@en ;
+    skos:definition 'Data are continually being updated'@en ;
+    skos:notation 'SDN:G22::004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G22/current/005/1/> .
+<http://vocab.nerc.ac.uk/collection/G22/current/005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G22/current/005/>;
+    dc:modified '2012-07-04T11:27:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'planned'@en ;
+    skos:definition 'Fixed date has been established upon or by which the data will be created or updated'@en ;
+    skos:notation 'SDN:G22::005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G22/current/006/1/> .
+<http://vocab.nerc.ac.uk/collection/G22/current/006/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G22/current/006/>;
+    dc:modified '2012-07-04T11:27:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'required'@en ;
+    skos:definition 'Data need to be generated or updated'@en ;
+    skos:notation 'SDN:G22::006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G22/current/007/1/> .
+<http://vocab.nerc.ac.uk/collection/G22/current/007/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G22/current/007/>;
+    dc:modified '2012-07-04T11:27:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'underDevelopment'@en ;
+    skos:definition 'Data are currently in the process of being created'@en ;
+    skos:notation 'SDN:G22::007'^^xsd:string .

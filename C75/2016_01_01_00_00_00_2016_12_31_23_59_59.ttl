@@ -1,0 +1,172 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C75/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C75/2015_01_01_00_00_00_2015_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2016-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/CIN/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/CIN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/CIN/>;
+    dc:modified '2016-12-13T09:23:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Cajal Institute of Neurobiology'@en ;
+    skos:definition 'Spanish research institute, part of CSIC. Native name is Instituto de Neurobiologia Ramon y Cajal'@en ;
+    skos:notation 'SDN:C75::CIN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/IRN/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/IRN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/IRN/>;
+    dc:modified '2016-12-02T09:39:22'^^xsd:dateTime ;
+    skos:altLabel 'Iridium'^^xsd:string ;
+    skos:prefLabel 'Iridium Communications Inc.'@en ;
+    skos:definition 'Iridium Communications Inc. (formerly Iridium Satellite LLC) is a company based in McLean, Virginia, United States which operates the Iridium satellite constellation, a system of satellites used for worldwide voice and data communication from hand-held satellite phones and other transceiver units.'@en ;
+    skos:notation 'SDN:C75::IRN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/WTI/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/WTI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/WTI/>;
+    dc:modified '2016-08-31T08:06:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Water Insight'@en ;
+    skos:definition 'Commercial water quality management company based in Wageningen, Netherlands.'@en ;
+    skos:notation 'SDN:C75::WTI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/GSM/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/GSM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/GSM/>;
+    dc:modified '2016-08-10T08:35:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Global Sea Mineral Resources NV'@en ;
+    skos:definition 'Commercial dredging contractors. Part of the DEME group.'@en ;
+    skos:notation 'SDN:C75::GSM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/HNA/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/HNA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/HNA/>;
+    dc:modified '2016-08-05T08:43:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Hydronav Argentina'@en ;
+    skos:definition 'Based in Buenos Aires. Carries out oil industry surveys'@en ;
+    skos:notation 'SDN:C75::HNA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/IRD/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/IRD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/IRD/>;
+    dc:modified '2016-07-28T07:30:09'^^xsd:dateTime ;
+    skos:altLabel 'IMAGO'^^xsd:string ;
+    skos:prefLabel 'Instrumentation, Analytical Resources and Monitoring in Geophysics and Oceanography'@en ;
+    skos:definition 'IRD lab on IFREMER site. Native name is \'Instrumentation, Moyens Analytiques, Observatoires en Géophysique et Océanographie\''@en ;
+    skos:notation 'SDN:C75::IRD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/AWS/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/AWS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/AWS/>;
+    dc:modified '2016-06-11T08:22:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research, Sylt'@en ;
+    skos:definition 'Native name is Alfred-Wegener-Institut, Helmholtz-Zentrum für Polar- und Meeresforschung, List auf Sylt.'@en ;
+    skos:notation 'SDN:C75::AWS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/CZS/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/CZS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/CZS/>;
+    dc:modified '2016-06-11T08:22:16'^^xsd:dateTime ;
+    skos:altLabel 'CSIR Stellenbosch'^^xsd:string ;
+    skos:prefLabel 'Council for Scientific and Industrial Research, Stellenbosch'@en ;
+    skos:definition 'One of several CSIR locations in South Africa'@en ;
+    skos:notation 'SDN:C75::CZS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/UHS/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/UHS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/UHS/>;
+    dc:modified '2016-05-16T08:24:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'State Hydrographic Service of Ukraine'@en ;
+    skos:definition 'Ukranian national hydrographic office.'@en ;
+    skos:notation 'SDN:C75::UHS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/LPG/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/LPG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/LPG/>;
+    dc:modified '2016-04-06T08:15:39'^^xsd:dateTime ;
+    skos:altLabel 'LPG'^^xsd:string ;
+    skos:prefLabel 'University of Nantes Laboratory of Planetology and Geodynamics'@en ;
+    skos:definition 'CNRS research facility based at the University of Nantes.'@en ;
+    skos:notation 'SDN:C75::LPG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/HCM/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/HCM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/HCM/>;
+    dc:modified '2016-03-02T08:17:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Hellenic Centre for Marine Research, Institute of Oceanography'@en ;
+    skos:definition 'Greek oceanographic institute.'@en ;
+    skos:notation 'SDN:C75::HCM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/MNH/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/MNH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/MNH/>;
+    dc:modified '2016-01-08T09:02:54'^^xsd:dateTime ;
+    skos:altLabel 'MNHN Concarneau'^^xsd:string ;
+    skos:prefLabel 'National Natural History Museum - Concarneau Marine Biological Station'@en ;
+    skos:definition 'Marine biological research station in Brittany. Native name is Muséum national d\'Histoire naturelle - Station de Biologie Marine de Concarneau'@en ;
+    skos:notation 'SDN:C75::MNH'^^xsd:string .

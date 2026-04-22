@@ -1,0 +1,118 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S03/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S03/2020_01_01_00_00_00_2021_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2022-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03475/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03475/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03475/>;
+    dc:modified '2022-08-16T15:48:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'strong acid with HF acid digestion'@en ;
+    skos:definition 'The sample was totally dissolved in a solution of strong acid and hydrofluoric (HF) acid which completely digests silicate-based minerals.'@en ;
+    skos:notation 'SDN:S03::S03475'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03474/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03474/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03474/>;
+    dc:modified '2022-06-16T16:43:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'passive sampling'@en ;
+    skos:definition 'Sampling technique based on the free flow of analyte molecules or ions from the sampled medium to a receiving phase in a sampling device. Analytes concentrate on the collecting medium over time until they reach equilibrium with the surrounding medium. The use of passive sampling provides time-averaged concentrations of e.g. contaminants over the sampler\'s deployment period.'@en ;
+    skos:notation 'SDN:S03::S03474'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03455/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03455/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03455/>;
+    dc:modified '2022-05-13T08:17:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sieving, picking'@en ;
+    skos:definition 'The sediment was sieved followed by manual extraction of the targeted objects or organisms.'@en ;
+    skos:notation 'SDN:S03::S03455'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03445/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03445/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03445/>;
+    dc:modified '2022-04-27T17:00:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '15N2-enriched seawater addition, on-deck incubation at simulated in-situ light level, filtration'@en ;
+    skos:definition 'A 15N2-tracer addition method which uses 15N2-enriched seawater instead of injecting the tracer directly as a gas bubble; the sample is then held for a predetermined time, in a surface seawater bath and quantitatively shaded natural light (level usually designed to mimic collection depth and documented elsewhere) before filtration to collect the particulate phase.'@en ;
+    skos:notation 'SDN:S03::S03445'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03473/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03473/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03473/>;
+    dc:modified '2022-03-24T13:53:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'carbon-13 isotope-labelled tracer addition, dawn-to-dawn on-deck incubation at simulated in-situ light level, filtration'@en ;
+    skos:definition 'A Carbon-13 (13C) stable isotope tracer was added to the sample which was held for 24 hours from dawn to dawn, in an on-deck incubator with controlled light levels designed to mimic in-situ light levels at the collection depth and documented elsewhere before filtration to collect the particulate phase.'@en ;
+    skos:notation 'SDN:S03::S03473'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03472/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03472/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03472/>;
+    dc:modified '2022-02-28T13:27:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'drying, wet sieving <63um, dry sieving >63um'@en ;
+    skos:definition 'The sediment is dried, soaked in distilled water for 12 hours, then flushed with distilled water through a <63um sifter to remove particles smaller than 63um. The remaining sediment (>63um) is dried, then sieve analysis is performed.'@en ;
+    skos:notation 'SDN:S03::S03472'^^xsd:string .

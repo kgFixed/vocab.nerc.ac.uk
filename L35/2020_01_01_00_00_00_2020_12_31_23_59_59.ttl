@@ -1,0 +1,829 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L35/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L35/2019_01_01_00_00_00_2019_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2020-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0141/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0141/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0141/>;
+    dc:modified '2020-12-18T11:25:08'^^xsd:dateTime ;
+    skos:altLabel 'GURALP'^^xsd:string ;
+    skos:prefLabel 'Guralp Systems'@en ;
+    skos:definition 'A UK based company that manufactures force-feedback, broadband seismometers, accelerometers and data acquisition systems for a range of research and industrial applications. Founded in 1987.'@en ;
+    skos:notation 'SDN:L35::MAN0141'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0142/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0142/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0142/>;
+    dc:modified '2020-12-18T11:25:08'^^xsd:dateTime ;
+    skos:altLabel 'KISTLER'^^xsd:string ;
+    skos:prefLabel 'Kistler'@en ;
+    skos:definition 'A manufactuer of dynamic pressure, force, torque and acceleration technology for industry and scientific research. Their headquarters are based in Switzerland, but have other locations globally. Founded in the 1960s.'@en ;
+    skos:notation 'SDN:L35::MAN0142'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0143/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0143/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0143/>;
+    dc:modified '2020-12-18T11:25:08'^^xsd:dateTime ;
+    skos:altLabel 'LEMI'^^xsd:string ;
+    skos:prefLabel 'LEMI'@en ;
+    skos:definition 'A developer and manufacturer of high quality electromagnetic (EM) sensors for the geophysical industry. Since its foundation in 2008, the company has transferred into a joint venture by Houston, Texas based KMS Technologies in the US.'@en ;
+    skos:notation 'SDN:L35::MAN0143'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0144/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0144/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0144/>;
+    dc:modified '2020-12-18T11:25:08'^^xsd:dateTime ;
+    skos:altLabel 'NAXYS'^^xsd:string ;
+    skos:prefLabel 'Naxys'@en ;
+    skos:definition 'A developer of high-tech leak detection and condition monitoring systems for subsea installations within the oil and gas industry. Based in Norway, founded in 1999.'@en ;
+    skos:notation 'SDN:L35::MAN0144'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0145/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0145/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0145/>;
+    dc:modified '2020-12-18T11:25:08'^^xsd:dateTime ;
+    skos:altLabel 'REF TEK'^^xsd:string ;
+    skos:prefLabel 'Ref Tek'@en ;
+    skos:definition 'A developer of seismic monitoring products for the land, marine and oil exploration markets. Founded in 1975 as Refraction Technology Inc, the brand Ref Tek was acquired by Trimble Navigation in 2012. In 2020, it returned to its engineering and customer service roots when it was purchased by Ref Tek Systems Inc, a subsidiary of Xeos Technologies Inc.'@en ;
+    skos:notation 'SDN:L35::MAN0145'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0146/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0146/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0146/>;
+    dc:modified '2020-12-18T11:25:08'^^xsd:dateTime ;
+    skos:altLabel 'SA'^^xsd:string ;
+    skos:prefLabel 'Silicon Audio'@en ;
+    skos:definition 'A Texas, US based company focused on the development and application of advanced sound and vibration transducer technology. These include seismic sensors for energy exploration and scientific monitoring, microphones for consumer communication and hearing device applications, and sensors for measuring wind in extreme flow conditions.'@en ;
+    skos:notation 'SDN:L35::MAN0146'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0140/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0140/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0140/>;
+    dc:modified '2020-12-11T14:13:11'^^xsd:dateTime ;
+    skos:altLabel 'HYDRO'^^xsd:string ;
+    skos:prefLabel 'Hydroid'@en ;
+    skos:definition 'A manufacturer of Unmanned Underwater Vehicles (UUVs). It was established in 2001 by the inventors of the REMUS UUV. It became a subsidiary of Kongsberg Maritime in 2008. It has been part of the Huntington Ingalls Industries since 2020.'@en ;
+    skos:notation 'SDN:L35::MAN0140'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0139/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0139/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0139/>;
+    dc:modified '2020-12-08T15:51:50'^^xsd:dateTime ;
+    skos:altLabel 'ORLSPECM'^^xsd:string ;
+    skos:prefLabel 'Orolia Spectracom'@en ;
+    skos:definition 'A company of the Orolia group since 2007. Spectracom was originally founded in Rochester, New York USA in 1972. It is a manufacturer of precision time and frequency instruments and network-centric equipment used in a wide range of industries.'@en ;
+    skos:notation 'SDN:L35::MAN0139'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0138/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0138/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0138/>;
+    dc:modified '2020-12-08T11:42:20'^^xsd:dateTime ;
+    skos:altLabel 'SPERRYMAR'^^xsd:string ;
+    skos:prefLabel 'Northrop Grumman Sperry Marine'@en ;
+    skos:definition 'A provider of navigation solutions, including radars, compass systems, steering systems, speed logs, integrated bridge and control systems. Established in 1997 from three well-known names in the marine industry: Sperry Gyrocompass, C. Plath and Decca. Formed part of the Northrop Grumman group in 2001.'@en ;
+    skos:notation 'SDN:L35::MAN0138'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0137/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0137/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0137/>;
+    dc:modified '2020-11-18T17:44:14'^^xsd:dateTime ;
+    skos:altLabel 'ESE'^^xsd:string ;
+    skos:prefLabel 'ESE'@en ;
+    skos:definition 'A company founded in 1971 in California, USA. ESE specialises in digital clocks and timers, digital multi-meters, digital frequency counters, and more recently GPS master clocks, with applications in a variety of fields, including the broadcast, communication and military industries.'@en ;
+    skos:notation 'SDN:L35::MAN0137'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0136/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0136/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0136/>;
+    dc:modified '2020-11-18T17:18:08'^^xsd:dateTime ;
+    skos:altLabel 'OMEGA'^^xsd:string ;
+    skos:prefLabel 'OMEGA Engineering Inc.'@en ;
+    skos:definition 'An international engineering company based in Connecticut, USA, founded in 1962. The company specialises in instrumentation, primarily for the measurement of temperature, pressure, humidity, and flow and level. In addition to this the company designs and manufactures data loggers and recorders.'@en ;
+    skos:notation 'SDN:L35::MAN0136'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0135/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0135/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0135/>;
+    dc:modified '2020-11-18T17:09:08'^^xsd:dateTime ;
+    skos:altLabel 'CODA'^^xsd:string ;
+    skos:prefLabel 'Coda Octopus Products Ltd.'@en ;
+    skos:definition 'An underwater technology company headquartered in Florida, USA. The company specialises in creating innovative software and hardware solutions for subsea surveys, ROV operations, marine construction, port security, and dredging.'@en ;
+    skos:notation 'SDN:L35::MAN0135'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0134/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0134/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0134/>;
+    dc:modified '2020-11-18T16:16:42'^^xsd:dateTime ;
+    skos:altLabel 'SKIPPER'^^xsd:string ;
+    skos:prefLabel 'SKIPPER Electronics AS'@en ;
+    skos:definition 'A Norwegian manufacturer of navigation echosounders, speed logs and echosounders for merchant, fishing and navy purposes. The company was established in 1973 and is situated in Oslo.'@en ;
+    skos:notation 'SDN:L35::MAN0134'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0133/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0133/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0133/>;
+    dc:modified '2020-11-18T16:07:51'^^xsd:dateTime ;
+    skos:altLabel 'RAYTHEON'^^xsd:string ;
+    skos:prefLabel 'Raytheon Technologies Corporation'@en ;
+    skos:definition 'A US based global aerospace and defense contractor and industrial corporation. The company researches, develops and manufactures advanced technology products, and was founded in 1922.'@en ;
+    skos:notation 'SDN:L35::MAN0133'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0132/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0132/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0132/>;
+    dc:modified '2020-11-13T13:16:39'^^xsd:dateTime ;
+    skos:altLabel 'Anton Paar'^^xsd:string ;
+    skos:prefLabel 'Anton Paar'@en ;
+    skos:definition 'Austrian based Anton paar develops, produces and distributes laboratory instruments and process measuring systems, and provides custom-tailored automation and robotic solutions in the field of rheometry. Anton Paar GmbH is owned by the charitable Santner Foundation and was founded in 1932.'@en ;
+    skos:notation 'SDN:L35::MAN0132'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0129/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0129/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0129/>;
+    dc:modified '2020-11-13T13:16:39'^^xsd:dateTime ;
+    skos:altLabel 'BC'^^xsd:string ;
+    skos:prefLabel 'Beckman Coutler'@en ;
+    skos:definition 'A US based company providing healthcare systems, technologies and biomedical testing. An operating company of Danaher Corporation since 2011. Founded in 1935.'@en ;
+    skos:notation 'SDN:L35::MAN0129'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0131/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0131/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0131/>;
+    dc:modified '2020-11-13T13:16:39'^^xsd:dateTime ;
+    skos:altLabel 'CPS'^^xsd:string ;
+    skos:prefLabel 'CPS (Cilas)'@en ;
+    skos:definition 'A US based based company providing particle sizer instruments to scientific laboratories. Cilas now longer trades but CPS US now provide support for Cilas instruments.'@en ;
+    skos:notation 'SDN:L35::MAN0131'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0130/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0130/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0130/>;
+    dc:modified '2020-11-13T13:16:39'^^xsd:dateTime ;
+    skos:altLabel 'FRITSCH'^^xsd:string ;
+    skos:prefLabel 'Fritsch'@en ;
+    skos:definition 'A German based manufacturer of application-oriented laboratory instruments for sample preparation and particle sizing. Founded in 1920.'@en ;
+    skos:notation 'SDN:L35::MAN0130'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0127/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0127/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0127/>;
+    dc:modified '2020-11-13T13:16:39'^^xsd:dateTime ;
+    skos:altLabel 'HORIBA'^^xsd:string ;
+    skos:prefLabel 'HORIBA Instruments'@en ;
+    skos:definition 'The HORIBA Group of worldwide companies provides an extensive array of instruments and systems for applications ranging from automotive R and D, process and environmental monitoring, in-vitro medical diagnostics, semiconductor manufacturing and metrology, to a broad range of scientific R and D and QC measurements.'@en ;
+    skos:notation 'SDN:L35::MAN0127'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0128/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0128/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0128/>;
+    dc:modified '2020-11-13T13:16:39'^^xsd:dateTime ;
+    skos:altLabel 'MICROTRAC'^^xsd:string ;
+    skos:prefLabel 'Microtrac'@en ;
+    skos:definition 'Based in the USA, Microtrac is a pioneer and leading manufacturer of light scattering instruments for particle analysis. While Microtrac existed first as a business segment within a larger organization, the company Microtrac Inc. was ultimately founded in 1999.'@en ;
+    skos:notation 'SDN:L35::MAN0128'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0126/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0126/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0126/>;
+    dc:modified '2020-11-05T16:24:50'^^xsd:dateTime ;
+    skos:altLabel 'FORSBERG'^^xsd:string ;
+    skos:prefLabel 'Forsberg Services Ltd.'@en ;
+    skos:definition 'A UK based company providing products and bespoke or tailored solutions for positioning, navigation and timing applications. Established in 1987, the company is located in Heysham.'@en ;
+    skos:notation 'SDN:L35::MAN0126'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0124/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0124/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0124/>;
+    dc:modified '2020-10-26T14:00:27'^^xsd:dateTime ;
+    skos:altLabel 'DWELL'^^xsd:string ;
+    skos:prefLabel 'Datawell B.V.'@en ;
+    skos:definition 'A manufacturing company based in the Netherlands that manufactures the Waverider wave measurement sensor unit.'@en ;
+    skos:notation 'SDN:L35::MAN0124'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0123/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0123/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0123/>;
+    dc:modified '2020-10-15T16:07:45'^^xsd:dateTime ;
+    skos:altLabel 'BELLAMARE'^^xsd:string ;
+    skos:prefLabel 'Bellamare, LLC'@en ;
+    skos:definition 'Bellamare LLC is an engineering company that designs subsea instruments for the oceanographic, offshore, and aquaculture industries. They design underwater tools for subsea monitoring and intervention, and help marine scientists achieve their research goals by providing custom designed field and laboratory equipment, tailored to client specific demands.'@en ;
+    skos:notation 'SDN:L35::MAN0123'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0122/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0122/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0122/>;
+    dc:modified '2020-10-08T12:25:22'^^xsd:dateTime ;
+    skos:altLabel 'SIMRAD_YACHT'^^xsd:string ;
+    skos:prefLabel 'Navico Simrad Yachting'@en ;
+    skos:definition 'A subsidiary of the Navico group that specialises in that specialises in navigation products for marine vessels. It was established in 1946. In 2008 the company absorbed MX Marine - acquired as a result of the takeover by Navico of the marine electronics division of Brunswick New Technologies Inc in 2007.'@en ;
+    skos:notation 'SDN:L35::MAN0122'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0119/2/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0119/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0119/>;
+    dc:modified '2020-10-07T14:17:51'^^xsd:dateTime ;
+    skos:altLabel 'CWS'^^xsd:string ;
+    skos:prefLabel 'Columbia Weather Systems'@en ;
+    skos:definition 'A US-based company specialising in the manufacture and distribution of Orion, Pulsar, Magellan, and Capricorn weather station systems. Founded in 1998, initially as a subsidiary of Hinds Instruments, Inc.'@en ;
+    skos:notation 'SDN:L35::MAN0119'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0121/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0121/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0121/>;
+    dc:modified '2020-10-07T14:13:46'^^xsd:dateTime ;
+    skos:altLabel 'GILL'^^xsd:string ;
+    skos:prefLabel 'Gill Instruments'@en ;
+    skos:definition 'Based in Lymington, UK, Gill Instruments Ltd supplies ultrasonic anemometers for wind speed and direction measurement, along with wind accessories.'@en ;
+    skos:notation 'SDN:L35::MAN0121'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0115/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0115/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0115/>;
+    dc:modified '2020-10-07T13:46:12'^^xsd:dateTime ;
+    skos:altLabel 'FURUNO'^^xsd:string ;
+    skos:prefLabel 'Furuno Electric Co. Ltd'@en ;
+    skos:definition 'A Japanese electronics company specialising in the manufacture and distribution of marine electronics systems, radar systems, fish finders and navigational instruments. Founded in 1938.'@en ;
+    skos:notation 'SDN:L35::MAN0115'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0116/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0116/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0116/>;
+    dc:modified '2020-10-07T13:46:12'^^xsd:dateTime ;
+    skos:altLabel 'HOBI'^^xsd:string ;
+    skos:prefLabel 'HOBI Instrument Services'@en ;
+    skos:definition 'A US-based company providing calibration, maintenance and repair of oceanographic and radiometric equipment formerly made by HOBI Labs Inc., which ceased operations in 2014. They also offer select built-to-order products.'@en ;
+    skos:notation 'SDN:L35::MAN0116'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0117/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0117/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0117/>;
+    dc:modified '2020-10-07T13:46:12'^^xsd:dateTime ;
+    skos:altLabel 'JRC'^^xsd:string ;
+    skos:prefLabel 'Japan Radio Co.'@en ;
+    skos:definition 'A Japanese technology company that manufactures and distributes radio communication equipment. Founded in 1915.'@en ;
+    skos:notation 'SDN:L35::MAN0117'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0120/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0120/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0120/>;
+    dc:modified '2020-10-07T13:46:12'^^xsd:dateTime ;
+    skos:altLabel 'TSS'^^xsd:string ;
+    skos:prefLabel 'Teledyne TSS'@en ;
+    skos:definition 'Based in Aberdeen, UK, Teledyne TSS specialises in the design, manufacture and support of marine products for applications including navigation, motion compensation, platform stabilisation, and subsea pipe and cable survey. Founded in 1903 as S.G. Brown Ltd, it eventually merged with TSS to become TSS International. It was subsequently purchased by Teledyne in 2008.'@en ;
+    skos:notation 'SDN:L35::MAN0120'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0114/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0114/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0114/>;
+    dc:modified '2020-09-22T11:48:54'^^xsd:dateTime ;
+    skos:altLabel 'Panalytical'^^xsd:string ;
+    skos:prefLabel 'PANalytical B.V.'@en ;
+    skos:definition 'PANalytical was a manufacturer of analytical instrumentation and software for X-ray diffraction (XRD) and X-ray fluorescence spectrometry (XRF). The materials characterization equipment is used for scientific research and development, for industrial process control applications and for semiconductor metrology. PANalytical, formerly Philips Analytical, was founded in 1948 and merged with Malvern Instruments Ltd. On the 1st of January 2017 to form Malvern Panalytical. Its headquarters were in Almelo, The Netherlands, with application laboratories established in Japan, China, the USA and The Netherlands.'@en ;
+    skos:notation 'SDN:L35::MAN0114'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0113/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0113/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0113/>;
+    dc:modified '2020-09-15T12:12:55'^^xsd:dateTime ;
+    skos:altLabel 'BLUE ROBOTICS'^^xsd:string ;
+    skos:prefLabel 'Blue Robotics'@en ;
+    skos:definition 'A US based company specialising in the design and development of affordable marine robotics components and products. Founded in 2014 through Kickstarter.'@en ;
+    skos:notation 'SDN:L35::MAN0113'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0112/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0112/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0112/>;
+    dc:modified '2020-09-08T10:13:44'^^xsd:dateTime ;
+    skos:altLabel 'BRAINCON'^^xsd:string ;
+    skos:prefLabel 'Braincon Corp.'@en ;
+    skos:definition 'A company that designed and manufactured vehicles and instruments for measuring ocean proporties, based in Marion, Massachusetts. In operation between the 1960s and 1980s.'@en ;
+    skos:notation 'SDN:L35::MAN0112'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0111/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0111/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0111/>;
+    dc:modified '2020-08-27T17:46:36'^^xsd:dateTime ;
+    skos:altLabel 'OCEAN ECOLOGY'^^xsd:string ;
+    skos:prefLabel 'Ocean Ecology'@en ;
+    skos:definition 'A UK based company specialising in marine surveys, data analysis and consultancy. They also offer marine survey equipment for hire covering a wide spectrum of offshore marine, coastal and aerial applications. Founded in 2013.'@en ;
+    skos:notation 'SDN:L35::MAN0111'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0110/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0110/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0110/>;
+    dc:modified '2020-08-27T17:39:38'^^xsd:dateTime ;
+    skos:altLabel 'VAN WALT'^^xsd:string ;
+    skos:prefLabel 'Van Walt'@en ;
+    skos:definition 'A company providing equipment for groundwater, surface water, soil monitoring and data collection telemetry solutions. Founded in 1982, they have offices in the UK, New Zealand, Spain and South Africa.'@en ;
+    skos:notation 'SDN:L35::MAN0110'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0109/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0109/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0109/>;
+    dc:modified '2020-08-17T11:16:47'^^xsd:dateTime ;
+    skos:altLabel 'SMRU'^^xsd:string ;
+    skos:prefLabel 'Sea Mammal Research Unit'@en ;
+    skos:definition 'A marine science research organisation that was established in 1978 by the Natural Environment Research Council (NERC) when the Seals Research Division and Whale Research Unit merged. Originally based in Cambridge, SMRU moved to the University of St Andrews in 1996.'@en ;
+    skos:notation 'SDN:L35::MAN0109'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0106/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0106/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0106/>;
+    dc:modified '2020-08-17T09:32:00'^^xsd:dateTime ;
+    skos:altLabel 'FLOCAT'^^xsd:string ;
+    skos:prefLabel 'FloCat'@en ;
+    skos:definition 'A South Burlington, Vermont-based company that has been manufacturing specialty flow meters since 1998.'@en ;
+    skos:notation 'SDN:L35::MAN0106'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0107/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0107/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0107/>;
+    dc:modified '2020-08-17T09:32:00'^^xsd:dateTime ;
+    skos:altLabel 'HEITRONICS'^^xsd:string ;
+    skos:prefLabel 'Heitronics'@en ;
+    skos:definition 'A company that develops, manufactures and distributes industry-specific systems and solutions for contactless temperature measurement (infrared radiation thermometers) with long-term stability of temperatures ranging from -100 to 3000 degrees Celsius. The product range is complemented by display and networking devices, accessories for mounting, adapting and protecting the instruments, calibration certification as well as configuration and evaluation software. Founded in 1995.'@en ;
+    skos:notation 'SDN:L35::MAN0107'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0108/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0108/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0108/>;
+    dc:modified '2020-08-17T09:32:00'^^xsd:dateTime ;
+    skos:altLabel 'KC'^^xsd:string ;
+    skos:prefLabel 'KC Denmark A/S'@en ;
+    skos:definition 'A company specialising in development of various types of sampling equipment for oceanographic, environmental and pollution investigations. Supplying equipment to universities, research institutes, municipal authorities and consulting engineers specialising in environmental and pollution affairs. Founded in 1979.'@en ;
+    skos:notation 'SDN:L35::MAN0108'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0105/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0105/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0105/>;
+    dc:modified '2020-08-06T15:49:31'^^xsd:dateTime ;
+    skos:altLabel 'STR'^^xsd:string ;
+    skos:prefLabel 'Subsea Technology and Rentals Ltd.'@en ;
+    skos:definition 'A specialist technology company providing rental and sales services globally to the offshore marine sectors. Originally named Sonar Equipment Services (SES), the company re-branded to STR in February 2014 to better reflect the range of products and services supplied.'@en ;
+    skos:notation 'SDN:L35::MAN0105'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0101/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0101/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0101/>;
+    dc:modified '2020-08-03T09:32:32'^^xsd:dateTime ;
+    skos:altLabel 'AMT'^^xsd:string ;
+    skos:prefLabel 'AMT Analysenmesstechnik GmbH'@en ;
+    skos:definition 'A manufacturing company based in Germany that was founded in April 2004. It is a manufacturer of electrochemical measuring and calibration devices for the use in laboratories, industrial applications, research and development and for environmental monitoring in natural waters.'@en ;
+    skos:notation 'SDN:L35::MAN0101'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0102/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0102/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0102/>;
+    dc:modified '2020-08-03T09:32:32'^^xsd:dateTime ;
+    skos:altLabel 'DAVIS'^^xsd:string ;
+    skos:prefLabel 'Davis Instruments'@en ;
+    skos:definition 'A company that specialises in instruments that measure marine weather. The company was acquired by Jim Acquistapace and Bob Selig in 1969. In 2019, Davis Instruments became part of the Advanced Environmental Monitoring group.'@en ;
+    skos:notation 'SDN:L35::MAN0102'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0103/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0103/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0103/>;
+    dc:modified '2020-08-03T09:32:32'^^xsd:dateTime ;
+    skos:altLabel 'GEOS'^^xsd:string ;
+    skos:prefLabel 'GEOSense LLC'@en ;
+    skos:definition 'GEOSense is a developer and manufacturer of tools for professional geophysicists based in California. It was established in 1994.'@en ;
+    skos:notation 'SDN:L35::MAN0103'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0104/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0104/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0104/>;
+    dc:modified '2020-08-03T09:32:32'^^xsd:dateTime ;
+    skos:altLabel 'HemiGNSS'^^xsd:string ;
+    skos:prefLabel 'Hemisphere GNSS'@en ;
+    skos:definition 'A manufacturing company that specialises in satellite navigation and heading technology in the agricultural, marine, surveying, GIS mapping, and machine control markets. It was founded in 2013.'@en ;
+    skos:notation 'SDN:L35::MAN0104'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0100/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0100/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0100/>;
+    dc:modified '2020-07-28T17:47:09'^^xsd:dateTime ;
+    skos:altLabel 'OCEANSONICS'^^xsd:string ;
+    skos:prefLabel 'Ocean Sonics'@en ;
+    skos:definition 'An ocean technology company based in Nova Scotia, Canada. Ocean Sonics specialise in digital hydrophones for both discrete measurement and long term monitoring applications.'@en ;
+    skos:notation 'SDN:L35::MAN0100'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0099/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0099/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0099/>;
+    dc:modified '2020-07-20T16:29:04'^^xsd:dateTime ;
+    skos:altLabel 'HTI'^^xsd:string ;
+    skos:prefLabel 'High Tech Inc.'@en ;
+    skos:definition 'A company that specialises in manufacturing hydrophones and data acquisition instrumentation for use by the Navy and worldwide seismic community. High Tech products and systems have been selected to meet the stringent requirements of military applications including Anti-Submarine Warfare, Propulsion Noise Test Systems, Torpedo Testing, Marine Ambient Noise, Arctic Noise Monitoring and Surveillance. Founded and incorporated in the state of Mississippi in 1989.'@en ;
+    skos:notation 'SDN:L35::MAN0099'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0097/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0097/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0097/>;
+    dc:modified '2020-07-16T15:00:23'^^xsd:dateTime ;
+    skos:altLabel 'SUNBURST'^^xsd:string ;
+    skos:prefLabel 'Sunburst Sensors'@en ;
+    skos:definition 'A US-based company that specialises in the design and manufacture of autonomous instruments that measure marine and freshwater inorganic carbon parameters pCO2 (partial pressure of carbon dioxide) and pH using patented drift-free technology. It was founded in 1999.'@en ;
+    skos:notation 'SDN:L35::MAN0097'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0098/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0098/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0098/>;
+    dc:modified '2020-07-16T15:00:23'^^xsd:dateTime ;
+    skos:altLabel 'TURO'^^xsd:string ;
+    skos:prefLabel 'Turo Technology'@en ;
+    skos:definition 'A Tasmanian-based company providing specialised oceanographic and water quality instrumentation. It was founded in 1991.'@en ;
+    skos:notation 'SDN:L35::MAN0098'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0096/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0096/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0096/>;
+    dc:modified '2020-07-02T15:57:32'^^xsd:dateTime ;
+    skos:altLabel 'SEA'^^xsd:string ;
+    skos:prefLabel 'Systems Engineering and Assessment Ltd.'@en ;
+    skos:definition 'An engineering and software design company that provides a wide range of services for Government agencies, industry and academia, primarily in the defense, transport and energy sectors. Founded in 1969 in the UK.'@en ;
+    skos:notation 'SDN:L35::MAN0096'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0095/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0095/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0095/>;
+    dc:modified '2020-07-02T15:38:44'^^xsd:dateTime ;
+    skos:altLabel 'R2SONIC'^^xsd:string ;
+    skos:prefLabel 'R2Sonic'@en ;
+    skos:definition 'A company specialising in the design of multibeam echosounders. The company was founded in Texas, USA in 2006.'@en ;
+    skos:notation 'SDN:L35::MAN0095'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0094/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0094/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0094/>;
+    dc:modified '2020-06-24T10:15:44'^^xsd:dateTime ;
+    skos:altLabel 'Geo-Resources'^^xsd:string ;
+    skos:prefLabel 'Geo-Resources Instruments'@en ;
+    skos:definition 'A manufacturer of core sampling systems based in the Netherlands.'@en ;
+    skos:notation 'SDN:L35::MAN0094'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0093/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0093/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0093/>;
+    dc:modified '2020-06-11T13:05:47'^^xsd:dateTime ;
+    skos:altLabel 'YSI'^^xsd:string ;
+    skos:prefLabel 'Yellow Springs Instrument Inc.'@en ;
+    skos:definition 'A US-based company specialised in water sensing instrumentation for use in environmental monitoring. The company is a subsidiary of Xylem Inc. and was founded in Ohio, USA in 1948.'@en ;
+    skos:notation 'SDN:L35::MAN0093'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0092/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0092/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0092/>;
+    dc:modified '2020-06-11T12:20:12'^^xsd:dateTime ;
+    skos:altLabel 'HACH'^^xsd:string ;
+    skos:prefLabel 'Hach'@en ;
+    skos:definition 'A global company that specialises in the manufacture and distribution of analytical instruments and reagents for quality testing of water and other liquid solutions in both laboratory and field settings. The company was founded in Iowa, USA in 1947, and is now headquartered in Colorado, USA.'@en ;
+    skos:notation 'SDN:L35::MAN0092'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0091/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0091/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0091/>;
+    dc:modified '2020-06-10T10:40:56'^^xsd:dateTime ;
+    skos:altLabel 'DUNCASSOC'^^xsd:string ;
+    skos:prefLabel 'Duncan and Associates'@en ;
+    skos:definition 'Designers, manufacturers and suppliers of limnological, hydrobiological and oceanographic sampling and monitoring apparatus. They also supply sampling equipment for waste and industrial bi-products, discharges as well as active wastes.'@en ;
+    skos:notation 'SDN:L35::MAN0091'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0090/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0090/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0090/>;
+    dc:modified '2020-06-03T13:41:34'^^xsd:dateTime ;
+    skos:altLabel 'PANGEO'^^xsd:string ;
+    skos:prefLabel 'PanGeo Subsea Inc.'@en ;
+    skos:definition 'A Marine geophysical-geotechnical service delivery company specializing in high resolution 3D acoustic imaging solutions to mitigate risk in offshore installations by imaging and identifying geohazards in the seabed and providing detailed soil stratigraphy. PanGeo Subsea Inc. is a privately held Canadian company established in 2006.'@en ;
+    skos:notation 'SDN:L35::MAN0090'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0089/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0089/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0089/>;
+    dc:modified '2020-06-02T15:00:13'^^xsd:dateTime ;
+    skos:altLabel 'CSC'^^xsd:string ;
+    skos:prefLabel 'Campbell Scientific'@en ;
+    skos:definition 'A global manufacturer of environmental data loggers and data-acquisition systems, measurement and control products. It was founded in 1974 in Utah, U.S. by Eric and Evan Campbell. The first product marketed was the Model CA9 Path Averaging Laser Anemometer, which was developed for the U.S. Army, White Sands Missile Range, New Mexico.'@en ;
+    skos:notation 'SDN:L35::MAN0089'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0088/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0088/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0088/>;
+    dc:modified '2020-06-02T13:49:29'^^xsd:dateTime ;
+    skos:altLabel 'STRODI'^^xsd:string ;
+    skos:prefLabel 'Star-Oddi'@en ;
+    skos:definition 'An Icelandic company founded in 1985, responsible for the manufacture of miniature sensors and data loggers used in aquatic research.An Icelandic company founded in 1985, responsible for the manufacture of miniature sensors and data loggers used in aquatic research.'@en ;
+    skos:notation 'SDN:L35::MAN0088'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0087/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0087/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0087/>;
+    dc:modified '2020-06-02T13:28:57'^^xsd:dateTime ;
+    skos:altLabel 'CHELONIA'^^xsd:string ;
+    skos:prefLabel 'Chelonia'@en ;
+    skos:definition 'A UK based company founded in 2006. It specialises in the design and manufacture of automatic cetacean monitoring equipment for use in a wide range of projects and environments.'@en ;
+    skos:notation 'SDN:L35::MAN0087'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0086/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0086/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0086/>;
+    dc:modified '2020-06-02T13:28:57'^^xsd:dateTime ;
+    skos:altLabel 'TNO'^^xsd:string ;
+    skos:prefLabel 'Netherlands Organization for Applied Scientific Research'@en ;
+    skos:definition 'A Netherlands based independent research organisation founded in 1932. It specialises in providing solutions to major challenges facing societies. It was initially divided into fifteen institutions, including TNO-NITG, until a re-organisation in 2005.'@en ;
+    skos:notation 'SDN:L35::MAN0086'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0085/2/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0085/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0085/>;
+    dc:modified '2020-05-28T12:54:24'^^xsd:dateTime ;
+    skos:altLabel 'PRI'^^xsd:string ;
+    skos:prefLabel 'Photo Research Inc.'@en ;
+    skos:definition 'Manufacturer of measuring equipment and supplies, radiometers, and spectrometers. Founded in 1941. Combined with the Novanta company, JADAK, in 2016.'@en ;
+    skos:notation 'SDN:L35::MAN0085'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0084/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0084/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0084/>;
+    dc:modified '2020-05-28T12:53:16'^^xsd:dateTime ;
+    skos:altLabel 'SCHOTT'^^xsd:string ;
+    skos:prefLabel 'Schott AG'@en ;
+    skos:definition 'A company specialising in the manufacture of glass and glass-ceramics. It is headquartered in Mainz, Germany. Founded in founded in Jena, Germany in 1884.'@en ;
+    skos:notation 'SDN:L35::MAN0084'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0083/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0083/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0083/>;
+    dc:modified '2020-05-28T12:53:14'^^xsd:dateTime ;
+    skos:altLabel 'CORNING'^^xsd:string ;
+    skos:prefLabel 'Corning Inc.'@en ;
+    skos:definition 'An American multinational technology company that specialises in specialty glass, ceramics, and related materials and technologies including advanced optics, primarily for industrial and scientific applications. Founded in 1851, the company was named Corning Glass Works until 1989.'@en ;
+    skos:notation 'SDN:L35::MAN0083'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0082/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0082/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0082/>;
+    dc:modified '2020-05-22T13:57:06'^^xsd:dateTime ;
+    skos:altLabel 'KUM'^^xsd:string ;
+    skos:prefLabel 'K.U.M.'@en ;
+    skos:definition 'K.U.M. Umwelt- und Meerestechnik Kiel GmbH is a German engineering company specialising in marine services and equipment for research.'@en ;
+    skos:notation 'SDN:L35::MAN0082'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0081/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0081/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0081/>;
+    dc:modified '2020-05-22T13:56:05'^^xsd:dateTime ;
+    skos:altLabel 'IFM-GEOMAR'^^xsd:string ;
+    skos:prefLabel 'GEOMAR'@en ;
+    skos:definition 'GEOMAR - Helmholtz Centre for Ocean Research Kiel is a research institute in Kiel, Germany. It was formed in 2004 by merging the Institute for Marine Science with the Research Center for Marine Geosciences (GEOMAR).'@en ;
+    skos:notation 'SDN:L35::MAN0081'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0079/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0079/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0079/>;
+    dc:modified '2020-05-15T17:10:03'^^xsd:dateTime ;
+    skos:altLabel 'TOPCON'^^xsd:string ;
+    skos:prefLabel 'Topcon Positioning Systems'@en ;
+    skos:definition 'A company that specialises in developing global positioning products and technologies for geo-businesses and geospatial industries. It was founded in the 1980s in Japan.'@en ;
+    skos:notation 'SDN:L35::MAN0079'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0078/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0078/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0078/>;
+    dc:modified '2020-05-15T17:06:54'^^xsd:dateTime ;
+    skos:altLabel 'SCIFISH'^^xsd:string ;
+    skos:prefLabel 'Scientific Fishery Systems'@en ;
+    skos:definition 'A US company that specialises in developing products and technologies for fisheries. It was founded in 1992.'@en ;
+    skos:notation 'SDN:L35::MAN0078'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0077/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0077/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0077/>;
+    dc:modified '2020-05-06T08:44:54'^^xsd:dateTime ;
+    skos:altLabel 'TRMB'^^xsd:string ;
+    skos:prefLabel 'Trimble'@en ;
+    skos:definition 'A company that specialises in positioning, modeling, connectivity and data analytics technologies for agriculture, construction, geospatial and transportation and logistics applications. It was founded in 1978.'@en ;
+    skos:notation 'SDN:L35::MAN0077'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0076/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0076/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0076/>;
+    dc:modified '2020-05-05T15:26:40'^^xsd:dateTime ;
+    skos:altLabel 'ASL'^^xsd:string ;
+    skos:prefLabel 'Analytical Sciences'@en ;
+    skos:definition 'Analytical Sciences Ltd, based near Cheltenham, England, UK designs and manufactures laboratory instrumentation for the analysis and automated preparation and handling of liquid (aqueous) samples.'@en ;
+    skos:notation 'SDN:L35::MAN0076'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0075/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0075/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0075/>;
+    dc:modified '2020-04-28T14:36:56'^^xsd:dateTime ;
+    skos:altLabel 'HSE'^^xsd:string ;
+    skos:prefLabel 'HS Engineers'@en ;
+    skos:definition 'A German company that designs and manufacturs technologies for use in the aquatic environment: In lakes, rivers, oceans; for oceanography, limnology, hydrology, coastal protection, civil engineering, etc., including flow meters, multi-parameter probes, and directional sea-state probes. The company was founded in 2001.'@en ;
+    skos:notation 'SDN:L35::MAN0075'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0074/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0074/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0074/>;
+    dc:modified '2020-04-28T14:26:02'^^xsd:dateTime ;
+    skos:altLabel 'edgetech'^^xsd:string ;
+    skos:prefLabel 'EdgeTech Ltd.'@en ;
+    skos:definition 'EdgeTech is a manufacturer of underwater technology solutions. Its products include: side scan sonars, sub-bottom profilers, bathymetry systems, AUV and ROV-based sonar systems, combined and customized solutions. In addition to the full line of underwater survey products, EdgeTech provides reliable USBL systems, transponder beacons, deep sea acoustic releases, shallow water and long life acoustic releases, MRUs and customized underwater acoustic command and control systems. The company traces its history back to 1965 when it started out as a division of EG&G Marine Instruments. In 1995, EdgeTech became a private company. In 2012 ORE Offshore, a leading provider of acoustic releases, transponders and USBL systems, adopted the EdgeTech name after over ten years operating as an affiliate organization within the company. The company also has a comprehensive suite of in-house testing facilities including test pools, acoustic test tanks, pressure test chambers and two company research vessels used for testing and sea trials. These facilities allow the companies to fully test and calibrate every system.'@en ;
+    skos:notation 'SDN:L35::MAN0074'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0073/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0073/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0073/>;
+    dc:modified '2020-04-17T11:41:28'^^xsd:dateTime ;
+    skos:altLabel 'ZEISS'^^xsd:string ;
+    skos:prefLabel 'Carl Zeiss AG'@en ;
+    skos:definition 'Carl Zeiss AG, branded as ZEISS, is a German manufacturer of optical systems and optoelectronics, founded in Jena, Germany in 1846 by optician Carl Zeiss. ZEISS Group develops, produces and distributes measuring technology, microscopes, medical technology, eyeglass lenses, camera and cinema lenses, binoculars and semiconductor manufacturing equipment.'@en ;
+    skos:notation 'SDN:L35::MAN0073'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0072/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0072/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0072/>;
+    dc:modified '2020-04-16T12:39:44'^^xsd:dateTime ;
+    skos:altLabel 'ASL ES'^^xsd:string ;
+    skos:prefLabel 'ASL Environmental Sciences'@en ;
+    skos:definition 'A Canadian company providing oceanographic, acoustic, remote sensing and ice research products, equipment leasing, and scientific consulting services.'@en ;
+    skos:notation 'SDN:L35::MAN0072'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0071/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0071/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0071/>;
+    dc:modified '2020-04-16T12:31:52'^^xsd:dateTime ;
+    skos:altLabel 'Sound Metrics'^^xsd:string ;
+    skos:prefLabel 'Sound Metrics'@en ;
+    skos:definition 'A company based in Bellevue, Washington, US, that designs and manufactures imaging sonars. The companys line of products can be deployed from vessels, ROVs (remotely operated vehicles), AUVs (autonomous underwater vehicles) and by divers. Founded in 2002.'@en ;
+    skos:notation 'SDN:L35::MAN0071'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0070/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0070/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0070/>;
+    dc:modified '2020-04-16T12:23:07'^^xsd:dateTime ;
+    skos:altLabel 'IS'^^xsd:string ;
+    skos:prefLabel 'Impact Subsea Ltd.'@en ;
+    skos:definition 'A subsea technology company that designs and manufactures a range of high-performance sensor solutions designed for use on underwater vehicles (such as Remotely Operated and Autonomous Vehicles) and can also be used in a number of other underwater applications. Impact Subsea provides sensor solutions to the Oil and Gas, Renewables, Underwater Research and Defence markets. Established in 2015, the company has developed a portfolio of underwater technology encompassing Sonars; Altimeters; Depth Sensors; Attitude and Heading Reference Systems; Flooded Member Detection Systems and bespoke Pressure Housings.'@en ;
+    skos:notation 'SDN:L35::MAN0070'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0069/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0069/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0069/>;
+    dc:modified '2020-04-07T16:27:58'^^xsd:dateTime ;
+    skos:altLabel 'CUSTOM-MADE'^^xsd:string ;
+    skos:prefLabel 'Custom-made'@en ;
+    skos:definition 'The instrument, sensor or device has been developed and/or manufactured using bespoke materials and/or designs and is not traceable to a specific manufacturer or organisation.'@en ;
+    skos:notation 'SDN:L35::MAN0069'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0068/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0068/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0068/>;
+    dc:modified '2020-03-25T16:52:06'^^xsd:dateTime ;
+    skos:altLabel 'NORTEK'^^xsd:string ;
+    skos:prefLabel 'Nortek'@en ;
+    skos:definition 'Nortek designs, develops and produces scientific instruments that apply the Doppler principle to underwater acoustics in order to measure water in motion, such as currents and waves.'@en ;
+    skos:notation 'SDN:L35::MAN0068'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0066/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0066/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0066/>;
+    dc:modified '2020-03-19T11:00:07'^^xsd:dateTime ;
+    skos:altLabel 'HOBI Labs'^^xsd:string ;
+    skos:prefLabel 'Hydro-Optics, Biology and Instrumentation Laboratories, Inc.'@en ;
+    skos:definition 'A US-based company specialised in sponsored research and instrument manufacturing. HOBI Labs\' main products include spectral optical backscattering, fluorescence and attenuation sensors designed for natural water measurements, as well as hyperspectral radiometers. HOBI Labs was founded in 1997 and ceased operations in 2014; since then, a separate company called Hobi Instrument Services has been providing calibration, repair and limited sales of HOBI Labs instruments.'@en ;
+    skos:notation 'SDN:L35::MAN0066'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0067/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0067/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0067/>;
+    dc:modified '2020-03-16T14:49:34'^^xsd:dateTime ;
+    skos:altLabel 'BioSonics'^^xsd:string ;
+    skos:prefLabel 'BioSonics, Inc.'@en ;
+    skos:definition 'A US-based company specialised in hydroacoustic technologies for monitoring and assessing aquatic resources. BioSonics was founded in 1978 in Seattle, Washington (USA) by Bill Acker, a former Professor of Engineering at the University of Washington. BioSonics instruments were first utilised by the local scientific community for fisheries research; today, its technologies serve a wide range of costumers worldwide for the monitoring of biological and physical features in any aquatic environment.'@en ;
+    skos:notation 'SDN:L35::MAN0067'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0065/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0065/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0065/>;
+    dc:modified '2020-02-12T16:25:28'^^xsd:dateTime ;
+    skos:altLabel 'WHOI+STAR'^^xsd:string ;
+    skos:prefLabel 'Woods Hole Oceanographic Institution and Star Engineering'@en ;
+    skos:definition 'A developmental collaboration between WHOI and Star Engineering Inc., a provider of Printed Circuit Board Assemblies, Cable Assemblies and Mechanical Box Build Assemblies.'@en ;
+    skos:notation 'SDN:L35::MAN0065'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0064/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0064/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0064/>;
+    dc:modified '2020-02-12T16:22:37'^^xsd:dateTime ;
+    skos:altLabel 'WHOI'^^xsd:string ;
+    skos:prefLabel 'Woods Hole Oceanographic Institution'@en ;
+    skos:definition 'A US-based marine research and engineering institution founded in 1930.'@en ;
+    skos:notation 'SDN:L35::MAN0064'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0063/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0063/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0063/>;
+    dc:modified '2020-01-14T15:38:21'^^xsd:dateTime ;
+    skos:altLabel 'SIPPICAN'^^xsd:string ;
+    skos:prefLabel 'Lockheed Martin Sippican'@en ;
+    skos:definition 'A subsidiary company of Lockheed Martin that was formed in 2004 from a merger between Lockheed Martin and Sippican Holdings Inc. It specialises in oceanographic and meteorological instrumentation, underwater vehicles, countermeasure, sea-air, and data acquisition systems.'@en ;
+    skos:notation 'SDN:L35::MAN0063'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0062/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0062/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0062/>;
+    dc:modified '2020-01-14T15:38:21'^^xsd:dateTime ;
+    skos:altLabel 'SPAR_CAN'^^xsd:string ;
+    skos:prefLabel 'Sparton of Canada'@en ;
+    skos:definition 'A subsidiary company of the Sparton Corporation formed in 1930. At the time, the Sparton Corporation was formally known as Sparks-Withington.'@en ;
+    skos:notation 'SDN:L35::MAN0062'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0061/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0061/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0061/>;
+    dc:modified '2020-01-14T09:08:58'^^xsd:dateTime ;
+    skos:altLabel 'LP-RESEARCH'^^xsd:string ;
+    skos:prefLabel 'LP-Research'@en ;
+    skos:definition 'A company based in Tokyo, Japan specializing in the design and development of life science and research equipment including Inertial Measurement Unit (IMU) Devices.'@en ;
+    skos:notation 'SDN:L35::MAN0061'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0059/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0059/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0059/>;
+    dc:modified '2020-01-14T09:08:58'^^xsd:dateTime ;
+    skos:altLabel 'METEK'^^xsd:string ;
+    skos:prefLabel 'Metek'@en ;
+    skos:definition 'Metek Meteorologische Messtechnik, Germany, offers a wide range of high-end meteorological instrumentation starting with a family of sonic anemometers and variants of versatile data loggers. Ground based remote sensing techniques provide profiles of wind, temperature, rain rate and cloud droplets in continuous unattended operation. The company was founded in 1989.'@en ;
+    skos:notation 'SDN:L35::MAN0059'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0060/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0060/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0060/>;
+    dc:modified '2020-01-14T09:08:58'^^xsd:dateTime ;
+    skos:altLabel 'SD'^^xsd:string ;
+    skos:prefLabel 'Systron Donner Inertial'@en ;
+    skos:definition 'Systron Donner Inertial manufactures navigation products including quartz MEMS (Micro Electro Mechanical) Gyroscopes, Accelerometers, Inertial Measurement Units (IMU) and GPS/ Inertial Navigation System (INS) products. Divisions of Systron Donner became part BEI technologies in 1995 before evolving into Systron Donner Inertial in 2002. It was acquired by EMCORE in 2019.'@en ;
+    skos:notation 'SDN:L35::MAN0060'^^xsd:string .

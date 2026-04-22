@@ -1,0 +1,363 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P22/2009_01_01_00_00_00_2009_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/1/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/1/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Coordinate reference systems'@en ;
+    skos:definition 'Systems for uniquely referencing spatial information in space as a set of coordinates (x, y, z) and/or latitude and longitude and height, based on a geodetic horizontal and vertical datum.'@en ;
+    skos:notation 'SDN:P22::1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/10/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/10/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/10/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Elevation'@en ;
+    skos:definition 'Digital elevation models for land, ice and ocean surface. Includes terrestrial elevation, bathymetry and shoreline.'@en ;
+    skos:notation 'SDN:P22::10'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/11/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/11/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/11/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Land cover'@en ;
+    skos:definition 'Physical and biological cover of the earth\'s surface including artificial surfaces, agricultural areas, forests, (semi-)natural areas, wetlands, water bodies.'@en ;
+    skos:notation 'SDN:P22::11'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/12/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/12/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/12/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Orthoimagery'@en ;
+    skos:definition 'Geo-referenced image data of the Earth\'s surface, from either satellite or airborne sensors.'@en ;
+    skos:notation 'SDN:P22::12'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/13/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/13/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/13/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Geology'@en ;
+    skos:definition 'Geology characterised according to composition and structure. Includes bedrock, aquifers and geomorphology.'@en ;
+    skos:notation 'SDN:P22::13'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/14/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/14/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/14/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Statistical units'@en ;
+    skos:definition 'Units for dissemination or use of statistical information.'@en ;
+    skos:notation 'SDN:P22::14'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/15/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/15/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/15/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Buildings'@en ;
+    skos:definition 'Geographical location of buildings.'@en ;
+    skos:notation 'SDN:P22::15'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/156/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/156/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/156/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Administrative units'@en ;
+    skos:definition 'Units of administration, dividing areas where Member States have and/or exercise jurisdictional rights, for local, regional and national governance, separated by administrative boundaries.'@en ;
+    skos:notation 'SDN:P22::156'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/158/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/158/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/158/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Protected sites'@en ;
+    skos:definition 'Area designated or managed within a framework of international, Community and Member States\' legislation to achieve specific conservation objectives.'@en ;
+    skos:notation 'SDN:P22::158'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/159/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/159/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/159/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Geographical names'@en ;
+    skos:definition 'Names of areas, regions, localities, cities, suburbs, towns or settlements, or any geographical or topographical feature of public or historical interest.'@en ;
+    skos:notation 'SDN:P22::159'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/16/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/16/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/16/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Soil'@en ;
+    skos:definition 'Soils and subsoil characterised according to depth, texture, structure and content of particles and organic material, stoniness, erosion, where appropriate mean slope and anticipated water storage capacity.'@en ;
+    skos:notation 'SDN:P22::16'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/160/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/160/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/160/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Addresses'@en ;
+    skos:definition 'Location of properties based on address identifiers, usually by road name, house number, postal code.'@en ;
+    skos:notation 'SDN:P22::160'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/161/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/161/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/161/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Cadastral parcels'@en ;
+    skos:definition 'areas defined by cadastral registers or equivalent.'@en ;
+    skos:notation 'SDN:P22::161'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/162/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/162/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/162/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Transport networks'@en ;
+    skos:definition 'Road, rail, air and water transport networks and related infrastructure. Includes links between different networks. Also includes the trans-European transport network as defined in Decision No 1692/96/EC of the European Parliament and of the Council of 23 July 1996 on Community Guidelines for the development of the trans-European transport network (1) and future revisions of that Decision.  (1) OJ L 228, 9.9.1996, p. 1. Decision as last amended by Council Regulation (EC) No 1791/2006 (OJ L 363, 20.12.2006, p. 1).'@en ;
+    skos:notation 'SDN:P22::162'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/163/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/163/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/163/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Hydrography'@en ;
+    skos:definition 'Hydrographic elements, including marine areas and all other water bodies and items related to them, including river basins and sub-basins. Where appropriate, according to the definitions set out in Directive 2000/60/EC of the European Parliament and of the Council of 23 October 2000 establishing a framework for Community action in the field of water policy, and in the form of networks.'@en ;
+    skos:notation 'SDN:P22::163'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/17/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/17/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/17/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Land use'@en ;
+    skos:definition 'Territory characterised according to its current and future planned functional dimension or socio-economic purpose (e.g. residential, industrial, commercial, agricultural, forestry, recreational).'@en ;
+    skos:notation 'SDN:P22::17'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/18/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/18/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/18/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Human health and safety'@en ;
+    skos:definition 'Geographical distribution of dominance of pathologies (allergies, cancers, respiratory diseases, etc.), information indicating the effect on health (biomarkers, decline of fertility, epidemics) or well-being of humans (fatigue, stress, etc.) linked directly (air pollution, chemicals, depletion of the ozone layer, noise, etc.) or indirectly (food, genetically modified organisms, etc.) to the quality of the environment.'@en ;
+    skos:notation 'SDN:P22::18'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/19/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/19/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/19/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Utility and government services'@en ;
+    skos:definition 'Includes utility facilities such as sewage, waste management, energy supply and water supply, administrative and social governmental services such as public administrations, civil protection sites, schools and hospitals.'@en ;
+    skos:notation 'SDN:P22::19'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/2/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/2/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Geographical grid systems'@en ;
+    skos:definition 'Harmonised multi-resolution grid with a common point of origin and standardised location and size of grid cells.'@en ;
+    skos:notation 'SDN:P22::2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/20/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/20/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/20/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Environmental monitoring facilities'@en ;
+    skos:definition 'Location and operation of environmental monitoring facilities includes observation and measurement of emissions, of the state of environmental media and of other ecosystem parameters (biodiversity, ecological conditions of vegetation, etc.) by or on behalf of public authorities.'@en ;
+    skos:notation 'SDN:P22::20'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/21/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/21/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/21/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Production and industrial facilities'@en ;
+    skos:definition 'Industrial production sites, including installations covered by Council Directive 96/61/EC of 24 September 1996 concerning integrated pollution prevention and control (1) and water abstraction facilities, mining, storage sites.'@en ;
+    skos:notation 'SDN:P22::21'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/22/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/22/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/22/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Agriculture and aquaculture facilities'@en ;
+    skos:definition 'Farming equipment and production facilities (including irrigation systems, greenhouses and stables).'@en ;
+    skos:notation 'SDN:P22::22'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/23/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/23/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/23/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Population distribution - demography'@en ;
+    skos:definition 'Geographical distribution of people, including population characteristics and activity levels, aggregated by grid, region, administrative unit or other analytical unit.'@en ;
+    skos:notation 'SDN:P22::23'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/24/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/24/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/24/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Area management/restriction/regulation zones and reporting units'@en ;
+    skos:definition 'Areas managed, regulated or used for reporting at international, European, national, regional and local levels. Includes dumping sites, restricted areas around drinking water sources, nitrate-vulnerable zones, regulated fairways at sea or large inland waters, areas for the dumping of waste, noise restriction zones, prospecting and mining permit areas, river basin districts, relevant reporting units and coastal zone management areas.'@en ;
+    skos:notation 'SDN:P22::24'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/25/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/25/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/25/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Natural risk zones'@en ;
+    skos:definition 'Vulnerable areas characterised according to natural hazards (all atmospheric, hydrologic, seismic, volcanic and wildfire phenomena that, because of their location, severity, and frequency, have the potential to seriously affect society), e.g. floods, landslides and subsidence, avalanches, forest fires, earthquakes, volcanic eruptions.'@en ;
+    skos:notation 'SDN:P22::25'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/26/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/26/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/26/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Atmospheric conditions'@en ;
+    skos:definition 'Physical conditions in the atmosphere. Includes spatial data based on measurements, on models or on a combination thereof and includes measurement locations.'@en ;
+    skos:notation 'SDN:P22::26'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/27/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/27/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/27/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Meteorological geographical features'@en ;
+    skos:definition 'Weather conditions and their measurements; precipitation, temperature, evapotranspiration, wind speed and direction.'@en ;
+    skos:notation 'SDN:P22::27'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/28/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/28/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/28/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Oceanographic geographical features'@en ;
+    skos:definition 'Physical conditions of oceans (currents, salinity, wave heights, etc.).'@en ;
+    skos:notation 'SDN:P22::28'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/29/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/29/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/29/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sea regions'@en ;
+    skos:definition 'Physical conditions of seas and saline water bodies divided into regions and sub-regions with common characteristics.'@en ;
+    skos:notation 'SDN:P22::29'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/30/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/30/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/30/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bio-geographical regions'@en ;
+    skos:definition 'Areas of relatively homogeneous ecological conditions with common characteristics.'@en ;
+    skos:notation 'SDN:P22::30'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/31/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/31/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/31/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Habitats and biotopes'@en ;
+    skos:definition 'Geographical areas characterised by specific ecological conditions, processes, structure, and (life support) functions that physically support the organisms that live there. Includes terrestrial and aquatic areas distinguished by geographical, abiotic and biotic features, whether entirely natural or semi-natural.'@en ;
+    skos:notation 'SDN:P22::31'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/32/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/32/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/32/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Species distribution'@en ;
+    skos:definition 'Geographical distribution of occurrence of animal and plant species aggregated by grid, region, administrative unit or other analytical unit.'@en ;
+    skos:notation 'SDN:P22::32'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/33/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/33/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/33/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Energy resources'@en ;
+    skos:definition 'Energy resources including hydrocarbons, hydropower, bio-energy, solar, wind, etc., where relevant including depth/height information on the extent of the resource.'@en ;
+    skos:notation 'SDN:P22::33'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P22/current/34/1/> .
+<http://vocab.nerc.ac.uk/collection/P22/current/34/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P22/current/34/>;
+    dc:modified '2009-07-30T13:25:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mineral resources'@en ;
+    skos:definition 'Mineral resources including metal ores, industrial minerals, etc., where relevant including depth/height information on the extent of the resource.'@en ;
+    skos:notation 'SDN:P22::34'^^xsd:string .

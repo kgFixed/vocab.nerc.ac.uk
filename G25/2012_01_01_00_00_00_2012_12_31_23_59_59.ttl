@@ -1,0 +1,138 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/G25/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G25/current/001/1/> .
+<http://vocab.nerc.ac.uk/collection/G25/current/001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G25/current/001/>;
+    dc:modified '2012-07-04T11:36:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'attribute'@en ;
+    skos:definition 'Information applies to the attribute class'@en ;
+    skos:notation 'SDN:G25::001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G25/current/002/1/> .
+<http://vocab.nerc.ac.uk/collection/G25/current/002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G25/current/002/>;
+    dc:modified '2012-07-04T11:36:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'attributeType'@en ;
+    skos:definition 'Information applies to the characteristic of a feature'@en ;
+    skos:notation 'SDN:G25::002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G25/current/005/1/> .
+<http://vocab.nerc.ac.uk/collection/G25/current/005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G25/current/005/>;
+    dc:modified '2012-07-04T11:36:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'dataset'@en ;
+    skos:definition 'Information applies to the dataset'@en ;
+    skos:notation 'SDN:G25::005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G25/current/006/1/> .
+<http://vocab.nerc.ac.uk/collection/G25/current/006/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G25/current/006/>;
+    dc:modified '2012-07-04T11:36:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'series'@en ;
+    skos:definition 'Information applies to the series'@en ;
+    skos:notation 'SDN:G25::006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G25/current/007/1/> .
+<http://vocab.nerc.ac.uk/collection/G25/current/007/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G25/current/007/>;
+    dc:modified '2012-07-04T11:36:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'nonGeographicDataset'@en ;
+    skos:definition 'Information applies to non-geographic data'@en ;
+    skos:notation 'SDN:G25::007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G25/current/009/1/> .
+<http://vocab.nerc.ac.uk/collection/G25/current/009/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G25/current/009/>;
+    dc:modified '2012-07-04T11:36:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'feature'@en ;
+    skos:definition 'Information applies to a feature'@en ;
+    skos:notation 'SDN:G25::009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G25/current/010/1/> .
+<http://vocab.nerc.ac.uk/collection/G25/current/010/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G25/current/010/>;
+    dc:modified '2012-07-04T11:36:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'featureType'@en ;
+    skos:definition 'Information applies to a feature type'@en ;
+    skos:notation 'SDN:G25::010'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G25/current/011/1/> .
+<http://vocab.nerc.ac.uk/collection/G25/current/011/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G25/current/011/>;
+    dc:modified '2012-07-04T11:36:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'propertyType'@en ;
+    skos:definition 'Information applies to a property type'@en ;
+    skos:notation 'SDN:G25::011'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G25/current/016/1/> .
+<http://vocab.nerc.ac.uk/collection/G25/current/016/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G25/current/016/>;
+    dc:modified '2012-07-04T11:36:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tile'@en ;
+    skos:definition 'Information applies to a tile, a spatial subset of geographic data'@en ;
+    skos:notation 'SDN:G25::016'^^xsd:string .

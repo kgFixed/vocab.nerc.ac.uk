@@ -1,0 +1,120 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S09/2006_01_01_00_00_00_2006_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S09/current/S09146/1/> .
+<http://vocab.nerc.ac.uk/collection/S09/current/S09146/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S09/current/S09146/>;
+    dc:modified '2006-08-08T16:27:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '>3.5um'@en ;
+    skos:definition 'Specimens caught by a 3.5 micron pore filter.'@en ;
+    skos:notation 'SDN:S09::S09146'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S09/current/S09145/1/> .
+<http://vocab.nerc.ac.uk/collection/S09/current/S09145/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S09/current/S09145/>;
+    dc:modified '2006-08-08T16:26:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '<3.5um'@en ;
+    skos:definition 'Specimens that would pass through a 3.5 micron pore filter.'@en ;
+    skos:notation 'SDN:S09::S09145'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S09/current/S09118/2/> .
+<http://vocab.nerc.ac.uk/collection/S09/current/S09118/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S09/current/S09118/>;
+    dc:modified '2006-07-24T08:27:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'externally-defined OPC size class'@en ;
+    skos:definition 'The size, expressed as a range of sizes, is held in a metadata field (possibly part of a vector in the data) that does not form a part of the parameter description.'@en ;
+    skos:notation 'SDN:S09::S09118'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S09/current/S0994/2/> .
+<http://vocab.nerc.ac.uk/collection/S09/current/S0994/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S09/current/S0994/>;
+    dc:modified '2006-07-24T08:25:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '<4000um'@en ;
+    skos:definition 'Specimens that would pass through a 4000 micron mesh screen.'@en ;
+    skos:notation 'SDN:S09::S0994'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S09/current/S0995/2/> .
+<http://vocab.nerc.ac.uk/collection/S09/current/S0995/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S09/current/S0995/>;
+    dc:modified '2006-07-24T08:23:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '<500um'@en ;
+    skos:definition 'Specimens that would pass through a 500 micron mesh screen.'@en ;
+    skos:notation 'SDN:S09::S0995'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S09/current/S09144/2/> .
+<http://vocab.nerc.ac.uk/collection/S09/current/S09144/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S09/current/S09144/>;
+    dc:modified '2006-07-24T08:23:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '1000-5000um'@en ;
+    skos:definition 'Specimens that would pass through a 5000 micron mesh screen, but be trapped by a 1000 micron mesh screen.'@en ;
+    skos:notation 'SDN:S09::S09144'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S09/current/S0997/2/> .
+<http://vocab.nerc.ac.uk/collection/S09/current/S0997/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S09/current/S0997/>;
+    dc:modified '2006-07-24T08:22:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '<5um'@en ;
+    skos:definition 'Specimens that would pass through a 5 micron pore size filter.'@en ;
+    skos:notation 'SDN:S09::S0997'^^xsd:string .

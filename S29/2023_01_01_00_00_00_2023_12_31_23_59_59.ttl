@@ -1,0 +1,145 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S29/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S29/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2023-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001508/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001508/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001508/>;
+    dc:modified '2023-08-30T11:47:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'river water relative to ground surface'@en ;
+    skos:definition 'The liquid phase plus any dissolved material and suspended solids making up the body of rivers or streams, relative to the ground surface. Rivers and streams are defined as being upstream of the tidal limit.'@en ;
+    skos:notation 'SDN:S29::PE001508'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001507/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001507/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001507/>;
+    dc:modified '2023-06-28T14:01:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'geomorphological feature'@en ;
+    skos:definition 'A topographic or bathymetric feature of the seafloor, coastline or terrestrial land surface created by physical, chemical or biological processes, such as beaches, dunes, bedforms, seamounts and ridges.'@en ;
+    skos:notation 'SDN:S29::PE001507'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001506/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001506/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001506/>;
+    dc:modified '2023-04-21T13:28:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'acoustic signal emissions (per ensemble)'@en ;
+    skos:definition 'Sounds transmitted by an instrument organised into groups.'@en ;
+    skos:notation 'SDN:S29::PE001506'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001505/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001505/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001505/>;
+    dc:modified '2023-04-03T12:34:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'electromagnetic radiation (700nm wavelength at 142 degree incidence)'@en ;
+    skos:definition 'The waves of the electromagnetic field with a spatial period of 700 nm that propagate through space carrying energy at a 142 degree angle of ray incidence on a surface.'@en ;
+    skos:notation 'SDN:S29::PE001505'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001504/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001504/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001504/>;
+    dc:modified '2023-02-24T13:01:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'waves relative to True North'@en ;
+    skos:definition 'Refers to waves observed at the surface of water bodies where the measurement has been defined relative to the direction towards the geographic North Pole (true north).'@en ;
+    skos:notation 'SDN:S29::PE001504'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001503/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001503/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001503/>;
+    dc:modified '2023-02-17T18:15:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sample (filtered)'@en ;
+    skos:definition 'Term to be used when the property reported quantifies or qualifies a filtered sample.'@en ;
+    skos:notation 'SDN:S29::PE001503'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001502/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001502/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001502/>;
+    dc:modified '2023-02-16T22:30:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'representative sample'@en ;
+    skos:definition 'Term to be used when the property reported is a characteristic of what a sample needs to be in order to be considered representative like e.g. a size threshold below which a sample is no longer representative.'@en ;
+    skos:notation 'SDN:S29::PE001502'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001500/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001500/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001500/>;
+    dc:modified '2023-01-11T10:03:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sample'@en ;
+    skos:definition 'Term to be used when the property reported is a characteristic of a sample (for example its volume, its wet weight, its dry weight). A sample is a representative part of a larger whole or group.'@en ;
+    skos:notation 'SDN:S29::PE001500'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001501/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001501/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001501/>;
+    dc:modified '2023-01-11T10:03:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'survey'@en ;
+    skos:definition 'Term to be used when the property reported is a characteristic of a survey (for example its area, its duration). A survey is a sampling activity which can be made up of a single or multiple sampling events.'@en ;
+    skos:notation 'SDN:S29::PE001501'^^xsd:string .

@@ -1,0 +1,84 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/M28/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M28/current/HMW/1/> .
+<http://vocab.nerc.ac.uk/collection/M28/current/HMW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M28/current/HMW/>;
+    dc:modified '2022-08-18T11:48:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Human-Made Wetlands'@en ;
+    skos:definition 'Term used to group wetland habitat types, specified by the Ramsar Convention\'s Classification for Wetland Type, approved by Recommendation 4.7 and amended by Resolutions VI.5 and VII.11 of the Conference of the Contracting Parties.'@en ;
+    skos:notation 'SDN:M28::HMW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M28/current/IW/1/> .
+<http://vocab.nerc.ac.uk/collection/M28/current/IW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M28/current/IW/>;
+    dc:modified '2022-08-18T11:48:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Inland Wetlands'@en ;
+    skos:definition 'Term used to group wetland habitat types, specified by the Ramsar Convention\'s Classification for Wetland Type, approved by Recommendation 4.7 and amended by Resolutions VI.5 and VII.11 of the Conference of the Contracting Parties.'@en ;
+    skos:notation 'SDN:M28::IW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M28/current/MCW/1/> .
+<http://vocab.nerc.ac.uk/collection/M28/current/MCW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M28/current/MCW/>;
+    dc:modified '2022-08-18T11:48:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Marine/Coastal Wetlands'@en ;
+    skos:definition 'Term used to group wetland habitat types, specified by the Ramsar Convention\'s Classification for Wetland Type, approved by Recommendation 4.7 and amended by Resolutions VI.5 and VII.11 of the Conference of the Contracting Parties.'@en ;
+    skos:notation 'SDN:M28::MCW'^^xsd:string .

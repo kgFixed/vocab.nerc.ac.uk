@@ -1,0 +1,577 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P07/2011_01_01_00_00_00_2011_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P07/2010_01_01_00_00_00_2010_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2011-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0031/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0031/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0031/>;
+    dc:modified '2011-07-21T17:23:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water_vapor_content_of_atmosphere_layer'@en ;
+    skos:definition '\'Content\' indicates a quantity per unit area. \'Layer\' means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well.'@en ;
+    skos:notation 'SDN:P07::CFSN0031'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0047/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0047/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0047/>;
+    dc:modified '2011-07-21T17:23:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water_content_of_atmosphere_layer'@en ;
+    skos:definition '\'Content\' indicates a quantity per unit area. \'Layer\' means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well. \'Water\' means water in all phases.'@en ;
+    skos:notation 'SDN:P07::CFSN0047'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0133/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0133/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0133/>;
+    dc:modified '2011-07-21T17:23:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_water_vapor_content_of_atmosphere_layer_due_to_convection'@en ;
+    skos:definition 'The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. \'tendency_of_X\' means derivative of X with respect to time. \'Content\' indicates a quantity per unit area. \'Layer\' means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well.'@en ;
+    skos:notation 'SDN:P07::CFSN0133'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0134/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0134/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0134/>;
+    dc:modified '2011-07-21T17:23:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_water_vapor_content_of_atmosphere_layer_due_to_deep_convection'@en ;
+    skos:definition 'The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. \'tendency_of_X\' means derivative of X with respect to time. \'Content\' indicates a quantity per unit area. \'Layer\' means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well.'@en ;
+    skos:notation 'SDN:P07::CFSN0134'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0135/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0135/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0135/>;
+    dc:modified '2011-07-21T17:23:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_water_vapor_content_of_atmosphere_layer_due_to_shallow_convection'@en ;
+    skos:definition 'The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. \'tendency_of_X\' means derivative of X with respect to time. \'Content\' indicates a quantity per unit area. \'Layer\' means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well.'@en ;
+    skos:notation 'SDN:P07::CFSN0135'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0136/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0136/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0136/>;
+    dc:modified '2011-07-21T17:23:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_water_vapor_content_of_atmosphere_layer_due_to_turbulence'@en ;
+    skos:definition 'The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. \'tendency_of_X\' means derivative of X with respect to time. \'Content\' indicates a quantity per unit area. \'Layer\' means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary variable) as well.'@en ;
+    skos:notation 'SDN:P07::CFSN0136'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0174/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0174/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0174/>;
+    dc:modified '2011-07-21T17:23:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_water_vapor_content_due_to_convection'@en ;
+    skos:definition 'The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. \'tendency_of_X\' means derivative of X with respect to time. \'Content\' indicates a quantity per unit area. The \'atmosphere content\' of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used. Atmosphere water vapor content is sometimes referred to as \'precipitable water\', although this term does not imply the water could all be precipitated.'@en ;
+    skos:notation 'SDN:P07::CFSN0174'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0175/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0175/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0175/>;
+    dc:modified '2011-07-21T17:23:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_water_vapor_content_due_to_deep_convection'@en ;
+    skos:definition 'The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. \'tendency_of_X\' means derivative of X with respect to time. \'Content\' indicates a quantity per unit area. The \'atmosphere content\' of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used. Atmosphere water vapor content is sometimes referred to as \'precipitable water\', although this term does not imply the water could all be precipitated.'@en ;
+    skos:notation 'SDN:P07::CFSN0175'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0176/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0176/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0176/>;
+    dc:modified '2011-07-21T17:23:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_water_vapor_content_due_to_shallow_convection'@en ;
+    skos:definition 'The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. \'tendency_of_X\' means derivative of X with respect to time. \'Content\' indicates a quantity per unit area. The \'atmosphere content\' of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used. Atmosphere water vapor content is sometimes referred to as \'precipitable water\', although this term does not imply the water could all be precipitated.'@en ;
+    skos:notation 'SDN:P07::CFSN0176'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0177/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0177/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0177/>;
+    dc:modified '2011-07-21T17:23:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_water_vapor_content_due_to_turbulence'@en ;
+    skos:definition 'The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. \'tendency_of_X\' means derivative of X with respect to time. \'Content\' indicates a quantity per unit area. The \'atmosphere content\' of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used. Atmosphere water vapor content is sometimes referred to as \'precipitable water\', although this term does not imply the water could all be precipitated.'@en ;
+    skos:notation 'SDN:P07::CFSN0177'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0193/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0193/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0193/>;
+    dc:modified '2011-07-21T17:23:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_water_content_due_to_advection'@en ;
+    skos:definition 'The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. \'tendency_of_X\' means derivative of X with respect to time. \'Content\' indicates a quantity per unit area. The \'atmosphere content\' of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used. \'Water\' means water in all phases.'@en ;
+    skos:notation 'SDN:P07::CFSN0193'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0194/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0194/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0194/>;
+    dc:modified '2011-07-21T17:23:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_water_vapor_content'@en ;
+    skos:definition '\'tendency_of_X\' means derivative of X with respect to time. \'Content\' indicates a quantity per unit area. The \'atmosphere content\' of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used. Atmosphere water vapor content is sometimes referred to as \'precipitable water\', although this term does not imply the water could all be precipitated.'@en ;
+    skos:notation 'SDN:P07::CFSN0194'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0561/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0561/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0561/>;
+    dc:modified '2011-07-21T17:23:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'lwe_thickness_of_atmosphere_water_vapor_content'@en ;
+    skos:definition '\'lwe\' means liquid water equivalent. The construction lwe_thickness_of_X_amount or _content means the vertical extent of a layer of liquid water having the same mass per unit area. \'Content\' indicates a quantity per unit area. The \'atmosphere content\' of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used. Atmosphere water vapor content is sometimes referred to as \'precipitable water\', although this term does not imply the water could all be precipitated.'@en ;
+    skos:notation 'SDN:P07::CFSN0561'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0701/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0701/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0701/>;
+    dc:modified '2011-07-21T17:23:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'cloud_condensed_water_content_of_atmosphere_layer'@en ;
+    skos:definition '\'condensed_water\' means liquid and ice. \'Content\' indicates a quantity per unit area. \'Layer\' means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well.'@en ;
+    skos:notation 'SDN:P07::CFSN0701'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0702/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0702/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0702/>;
+    dc:modified '2011-07-21T17:23:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'cloud_ice_content_of_atmosphere_layer'@en ;
+    skos:definition '\'Content\' indicates a quantity per unit area. \'Layer\' means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well.'@en ;
+    skos:notation 'SDN:P07::CFSN0702'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0703/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0703/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0703/>;
+    dc:modified '2011-07-21T17:23:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'cloud_liquid_water_content_of_atmosphere_layer'@en ;
+    skos:definition '\'Content\' indicates a quantity per unit area. \'Layer\' means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well.'@en ;
+    skos:notation 'SDN:P07::CFSN0703'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0769/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0769/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0769/>;
+    dc:modified '2011-07-21T17:23:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_sulfate_content'@en ;
+    skos:definition '\'Content\' indicates a quantity per unit area. The \'atmosphere content\' of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.'@en ;
+    skos:notation 'SDN:P07::CFSN0769'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0770/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0770/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0770/>;
+    dc:modified '2011-07-21T17:23:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_water_content'@en ;
+    skos:definition '\'Content\' indicates a quantity per unit area. The \'atmosphere content\' of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used. \'Water\' means water in all phases.'@en ;
+    skos:notation 'SDN:P07::CFSN0770'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV13A3/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV13A3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV13A3/>;
+    dc:modified '2011-07-21T17:23:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'change_over_time_in_atmosphere_water_content_due_to_advection'@en ;
+    skos:definition '"change_over_time_in_X" means change in a quantity X over a time-interval, which should be defined by the bounds of the time coordinate.  "Content" indicates a quantity per unit area.  The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  "Water" means water in all phases.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity  named by omitting the phrase.'@en ;
+    skos:notation 'SDN:P07::CFV13A3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0132/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0132/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0132/>;
+    dc:modified '2011-07-21T17:23:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_water_vapor_content_of_atmosphere_layer'@en ;
+    skos:definition '\'tendency_of_X\' means derivative of X with respect to time. \'Content\' indicates a quantity per unit area. \'Layer\' means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well.'@en ;
+    skos:notation 'SDN:P07::CFSN0132'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAD2117/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAD2117/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAD2117/>;
+    dc:modified '2011-07-21T17:19:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_drizzle_in_air'@en ;
+    skos:definition 'Mass concentration means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". "Drizzle" means drops of water falling through the atmosphere that have a diameter typically in the range 0.2-0.5 mm.'@en ;
+    skos:notation 'SDN:P07::BBAD2117'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF12N107/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF12N107/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF12N107/>;
+    dc:modified '2011-07-21T17:19:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_mass_content_of_water_vapor'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used. Atmosphere water vapor content is sometimes referred to as "precipitable water", although this term does not imply the water could all be precipitated.'@en ;
+    skos:notation 'SDN:P07::CF12N107'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2104/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAH2104/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2104/>;
+    dc:modified '2011-07-21T17:13:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'change_over_time_in_sea_water_neutral_density'@en ;
+    skos:definition '"change_over_time_in_X" means change in a quantity X over a time-interval, which should be defined by the bounds of the time coordinate. "Neutral density" is a variable designed so that a surface of constant neutral density everywhere has a local slope that is close to the local slope of the neutral tangent plane. At the sea surface in the equatorial Pacific neutral density is very close to the potential density anomaly. At other locations, this is not the case. For example, along a neutral density surface there is a difference of up to 0.14 kg/m^3 in the potential density anomaly at the outcrops in the Southern and Northern hemispheres. Refer to Jackett &amp; McDougall (1997; Journal of Physical Oceanography, Vol 27, doi: 10.1175/1520-0485(1997)027&lt;0237:ANDVFT&gt;2.0.CO;2) for more information.'@en ;
+    skos:notation 'SDN:P07::BBAH2104'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2105/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAH2105/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2105/>;
+    dc:modified '2011-07-21T17:13:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_water_neutral_density'@en ;
+    skos:definition '"Neutral density" is a variable designed so that a surface of constant neutral density everywhere has a local slope that is close to the local slope of the neutral tangent plane. At the sea surface in the equatorial Pacific neutral density is very close to the potential density anomaly. At other locations, this is not the case. For example, along a neutral density surface there is a difference of up to 0.14 kg/m^3 in the potential density anomaly at the outcrops in the Southern and Northern hemispheres. Refer to Jackett &amp; McDougall (1997; Journal of Physical Oceanography, Vol 27, doi: 10.1175/1520-0485(1997)027&lt;0237:ANDVFT&gt;2.0.CO;2) for more information.'@en ;
+    skos:notation 'SDN:P07::BBAH2105'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2107/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAH2107/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2107/>;
+    dc:modified '2011-07-21T17:13:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'change_over_time_in_sea_water_density'@en ;
+    skos:definition 'Sea water density is the in-situ density (not the potential density). If 1000 kg m-3 is subtracted, the standard name "sea_water_sigma_t" should be chosen instead. "change_over_time_in_X" means change in a quantity X over a time-interval, which should be defined by the bounds of the time coordinate.'@en ;
+    skos:notation 'SDN:P07::BBAH2107'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2113/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAH2113/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2113/>;
+    dc:modified '2011-07-21T17:13:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface_frozen_carbon_dioxide_amount'@en ;
+    skos:definition '"Amount" means mass per unit area. The surface called "surface" means the lower boundary of the atmosphere. The chemical formula for carbon dioxide is CO2. Frozen carbon dioxide is found on the surface of Mars.'@en ;
+    skos:notation 'SDN:P07::BBAH2113'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2116/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAH2116/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2116/>;
+    dc:modified '2011-07-21T17:13:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'thickness_of_liquid_water_cloud'@en ;
+    skos:definition '"Thickness" means the vertical extent of a layer.'@en ;
+    skos:notation 'SDN:P07::BBAH2116'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2120/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAH2120/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2120/>;
+    dc:modified '2011-07-21T17:13:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_content_of_water_vapor_in_atmosphere_layer'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. "Layer" means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well.'@en ;
+    skos:notation 'SDN:P07::BBAH2120'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2121/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAH2121/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2121/>;
+    dc:modified '2011-07-21T17:13:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_content_of_water_in_atmosphere_layer'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. "Layer" means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well. "Water" means water in all phases.'@en ;
+    skos:notation 'SDN:P07::BBAH2121'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2123/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAH2123/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2123/>;
+    dc:modified '2011-07-21T17:13:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_mass_content_of_water_vapor_in_atmosphere_layer_due_to_turbulence'@en ;
+    skos:definition 'The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. "Layer" means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary variable) as well.'@en ;
+    skos:notation 'SDN:P07::BBAH2123'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2128/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAH2128/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2128/>;
+    dc:modified '2011-07-21T17:13:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_mass_content_of_water_vapor_in_atmosphere_layer_due_to_shallow_convection'@en ;
+    skos:definition 'The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. "Layer" means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well.'@en ;
+    skos:notation 'SDN:P07::BBAH2128'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2129/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAH2129/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2129/>;
+    dc:modified '2011-07-21T17:13:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_mass_content_of_water_vapor_in_atmosphere_layer_due_to_deep_convection'@en ;
+    skos:definition 'The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. "Layer" means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well.'@en ;
+    skos:notation 'SDN:P07::BBAH2129'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2131/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAH2131/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2131/>;
+    dc:modified '2011-07-21T17:13:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_mass_content_of_water_vapor_in_atmosphere_layer_due_to_convection'@en ;
+    skos:definition 'The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. "Layer" means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well.'@en ;
+    skos:notation 'SDN:P07::BBAH2131'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2132/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAH2132/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2132/>;
+    dc:modified '2011-07-21T17:13:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_mass_content_of_water_vapor_in_atmosphere_layer'@en ;
+    skos:definition '"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. "Layer" means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well.'@en ;
+    skos:notation 'SDN:P07::BBAH2132'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2134/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAH2134/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2134/>;
+    dc:modified '2011-07-21T17:13:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_water_vapor_due_to_turbulence'@en ;
+    skos:definition 'The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used. Atmosphere water vapor content is sometimes referred to as "precipitable water", although this term does not imply the water could all be precipitated.'@en ;
+    skos:notation 'SDN:P07::BBAH2134'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2135/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAH2135/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2135/>;
+    dc:modified '2011-07-21T17:13:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_water_vapor_due_to_shallow_convection'@en ;
+    skos:definition 'The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used. Atmosphere water vapor content is sometimes referred to as "precipitable water", although this term does not imply the water could all be precipitated.'@en ;
+    skos:notation 'SDN:P07::BBAH2135'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2137/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAH2137/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2137/>;
+    dc:modified '2011-07-21T17:13:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_water_vapor_due_to_deep_convection'@en ;
+    skos:definition 'The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used. Atmosphere water vapor content is sometimes referred to as "precipitable water", although this term does not imply the water could all be precipitated.'@en ;
+    skos:notation 'SDN:P07::BBAH2137'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2139/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAH2139/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2139/>;
+    dc:modified '2011-07-21T17:13:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_water_vapor_due_to_convection'@en ;
+    skos:definition 'The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used. Atmosphere water vapor content is sometimes referred to as "precipitable water", although this term does not imply the water could all be precipitated.'@en ;
+    skos:notation 'SDN:P07::BBAH2139'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2141/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAH2141/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2141/>;
+    dc:modified '2011-07-21T17:13:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_water_vapor'@en ;
+    skos:definition '"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used. Atmosphere water vapor content is sometimes referred to as "precipitable water", although this term does not imply the water could all be precipitated.'@en ;
+    skos:notation 'SDN:P07::BBAH2141'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2142/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAH2142/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2142/>;
+    dc:modified '2011-07-21T17:13:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_water_due_to_advection'@en ;
+    skos:definition 'The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used. "Water" means water in all phases.'@en ;
+    skos:notation 'SDN:P07::BBAH2142'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2146/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAH2146/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2146/>;
+    dc:modified '2011-07-21T17:13:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'lwe_thickness_of_atmosphere_mass_content_of_water_vapor'@en ;
+    skos:definition '"lwe" means liquid water equivalent. The construction lwe_thickness_of_X_amount or _content means the vertical extent of a layer of liquid water having the same mass per unit area. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used. Atmosphere water vapor content is sometimes referred to as "precipitable water", although this term does not imply the water could all be precipitated.'@en ;
+    skos:notation 'SDN:P07::BBAH2146'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2149/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAH2149/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2149/>;
+    dc:modified '2011-07-21T17:13:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_content_of_cloud_ice_in_atmosphere_layer'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. "Layer" means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well.'@en ;
+    skos:notation 'SDN:P07::BBAH2149'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2150/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAH2150/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2150/>;
+    dc:modified '2011-07-21T17:13:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_content_of_cloud_condensed_water_in_atmosphere_layer'@en ;
+    skos:definition '"condensed_water" means liquid and ice. "Content" indicates a quantity per unit area. "Layer" means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well.'@en ;
+    skos:notation 'SDN:P07::BBAH2150'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2152/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAH2152/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2152/>;
+    dc:modified '2011-07-21T17:13:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'change_over_time_in_atmosphere_mass_content_of_water_due_to_advection'@en ;
+    skos:definition '"change_over_time_in_X" means change in a quantity X over a time-interval, which should be defined by the bounds of the time coordinate.  "Content" indicates a quantity per unit area.  The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.  "Water" means water in all phases.  The specification of a physical process by the phrase due_to_process means that the quantity named is a  single term in a sum of terms which together compose the general quantity named by omitting the phrase.'@en ;
+    skos:notation 'SDN:P07::BBAH2152'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2153/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAH2153/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2153/>;
+    dc:modified '2011-07-21T17:13:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_mass_content_of_water'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used. "Water" means water in all phases.'@en ;
+    skos:notation 'SDN:P07::BBAH2153'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2155/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAH2155/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAH2155/>;
+    dc:modified '2011-07-21T17:13:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_mass_content_of_sulfate'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.'@en ;
+    skos:notation 'SDN:P07::BBAH2155'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0006/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0006/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0006/>;
+    dc:modified '2011-03-23T08:11:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_cloud_ice_content'@en ;
+    skos:definition '\'Content\' indicates a quantity per unit area. The \'atmosphere content\' of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.'@en ;
+    skos:notation 'SDN:P07::CFSN0006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0007/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0007/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0007/>;
+    dc:modified '2011-03-23T08:11:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_cloud_liquid_water_content'@en ;
+    skos:definition '\'Content\' indicates a quantity per unit area. The \'atmosphere content\' of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.'@en ;
+    skos:notation 'SDN:P07::CFSN0007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0771/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0771/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0771/>;
+    dc:modified '2011-03-23T08:11:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_water_vapor_content'@en ;
+    skos:definition '\'Content\' indicates a quantity per unit area. The \'atmosphere content\' of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used. Atmosphere water vapor content is sometimes referred to as \'precipitable water\', although this term does not imply the water could all be precipitated.'@en ;
+    skos:notation 'SDN:P07::CFSN0771'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV8N2/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV8N2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV8N2/>;
+    dc:modified '2011-03-23T08:11:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_convective_cloud_condensed_water_content'@en ;
+    skos:definition '"condensed_water" means liquid and ice. Convective cloud is that produced by the convection schemes in an atmosphere model.  "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.'@en ;
+    skos:notation 'SDN:P07::CFV8N2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV8N3/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV8N3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV8N3/>;
+    dc:modified '2011-03-23T08:11:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_convective_cloud_liquid_water_content'@en ;
+    skos:definition 'Convective cloud is that produced by the convection schemes in an atmosphere model.  "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.'@en ;
+    skos:notation 'SDN:P07::CFV8N3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0005/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0005/>;
+    dc:modified '2011-03-23T08:11:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_cloud_condensed_water_content'@en ;
+    skos:definition '\'condensed_water\' means liquid and ice. \'Content\' indicates a quantity per unit area. The \'atmosphere content\' of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.'@en ;
+    skos:notation 'SDN:P07::CFSN0005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAD2100/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAD2100/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAD2100/>;
+    dc:modified '2011-03-23T08:07:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_mass_content_of_convective_cloud_condensed_water'@en ;
+    skos:definition '"condensed_water" means liquid and ice. Convective cloud is that produced by the convection schemes in an atmosphere model.  "Content" indicates a quan tity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.'@en ;
+    skos:notation 'SDN:P07::BBAD2100'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAD2111/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAD2111/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAD2111/>;
+    dc:modified '2011-03-23T08:07:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_rain_in_air'@en ;
+    skos:definition 'Mass concentration means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". "Rain" means drops of water falling through the atmosphere that  have a diameter greater than 0.5 mm.'@en ;
+    skos:notation 'SDN:P07::BBAD2111'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAD2114/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAD2114/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAD2114/>;
+    dc:modified '2011-03-23T08:07:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_liquid_water_in_air'@en ;
+    skos:definition 'Mass concentration means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The mass concentration of liquid water takes into account all c loud droplets and liquid precipitation regardless of drop size or fall speed.'@en ;
+    skos:notation 'SDN:P07::BBAD2114'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAD2149/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAD2149/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAD2149/>;
+    dc:modified '2011-03-23T08:07:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_mass_content_of_cloud_condensed_water'@en ;
+    skos:definition '"condensed_water" means liquid and ice. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical int egral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.'@en ;
+    skos:notation 'SDN:P07::BBAD2149'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BBAD2158/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BBAD2158/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BBAD2158/>;
+    dc:modified '2011-03-23T08:07:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_mass_content_of_cloud_ice'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the  atmosphere. For the content between specified levels in the atmosphere, standard names including content_of_atmosphere_layer are used.'@en ;
+    skos:notation 'SDN:P07::BBAD2158'^^xsd:string .

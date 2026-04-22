@@ -1,0 +1,291 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C38/2009_01_01_00_00_00_2009_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C38/2008_01_01_00_00_00_2008_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2009-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6153/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6153/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6153/>;
+    dc:modified '2009-06-15T14:28:21'^^xsd:dateTime ;
+    skos:altLabel 'Cabo de Palos'^^xsd:string ;
+    skos:prefLabel 'Cabo de Palos'@en ;
+    skos:definition '''{"node": {
+    "country": "Spain",
+    "latitude": 37.6334,
+    "longitude": -0.6833
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6153'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6152/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6152/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6152/>;
+    dc:modified '2009-06-15T14:21:18'^^xsd:dateTime ;
+    skos:altLabel 'Peniche'^^xsd:string ;
+    skos:prefLabel 'Peniche'@en ;
+    skos:definition '''{"node": {
+    "country": "Portugal",
+    "latitude": 39.351913,
+    "longitude": -9.373908
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6152'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH5792/3/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH5792/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH5792/>;
+    dc:modified '2009-03-20T14:00:39'^^xsd:dateTime ;
+    skos:altLabel 'Muuga'^^xsd:string ;
+    skos:prefLabel 'Muuga'@en ;
+    skos:definition '''{"node": {
+    "country": "Estonia",
+    "latitude": 59.5,
+    "longitude": 23.0333
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH5792'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH5889/2/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH5889/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH5889/>;
+    dc:modified '2009-03-16T17:02:46'^^xsd:dateTime ;
+    skos:altLabel 'Askö'^^xsd:string ;
+    skos:prefLabel 'Askö'@en ;
+    skos:definition '''{"node": {
+    "country": "Sweden",
+    "latitude": 58.81667,
+    "longitude": 17.64972
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH5889'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH5888/2/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH5888/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH5888/>;
+    dc:modified '2009-03-16T17:02:46'^^xsd:dateTime ;
+    skos:altLabel 'Gainsborough'^^xsd:string ;
+    skos:prefLabel 'Gainsborough'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "latitude": 53.40223,
+    "longitude": -0.77553
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH5888'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH5890/2/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH5890/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH5890/>;
+    dc:modified '2009-03-16T17:02:46'^^xsd:dateTime ;
+    skos:altLabel 'Muskö'^^xsd:string ;
+    skos:prefLabel 'Muskö'@en ;
+    skos:definition '''{"node": {
+    "country": "Sweden",
+    "latitude": 58.98,
+    "longitude": 18.13
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH5890'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH5891/2/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH5891/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH5891/>;
+    dc:modified '2009-03-16T17:02:46'^^xsd:dateTime ;
+    skos:altLabel 'Norrbyn'^^xsd:string ;
+    skos:prefLabel 'Norrbyn'@en ;
+    skos:definition '''{"node": {
+    "country": "Sweden",
+    "latitude": 63.5664,
+    "longitude": 19.82351
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH5891'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH74/4/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH74/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH74/>;
+    dc:modified '2009-03-16T16:58:15'^^xsd:dateTime ;
+    skos:altLabel 'Funchal'^^xsd:string ;
+    skos:prefLabel 'Funchal'@en ;
+    skos:definition '''{"node": {
+    "country": "Portugal",
+    "notes": "Madeira",
+    "latitude": 32.633333333333,
+    "longitude": -16.9
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH74'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH5/4/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH5/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH5/>;
+    dc:modified '2009-03-16T16:58:09'^^xsd:dateTime ;
+    skos:altLabel 'Aengus Dock'^^xsd:string ;
+    skos:prefLabel 'Aengus Dock'@en ;
+    skos:definition '''{"node": {
+    "country": "Ireland",
+    "notes": "Local name for a dock in Galway"
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH2834/4/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH2834/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH2834/>;
+    dc:modified '2009-03-16T16:58:09'^^xsd:dateTime ;
+    skos:altLabel 'Funchal'^^xsd:string ;
+    skos:prefLabel 'Funchal'@en ;
+    skos:definition '''{"node": {
+    "country": "Portugal",
+    "notes": "Exact duplicate of BSH74",
+    "latitude": 32.633333,
+    "longitude": -16.916667
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH2834'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH4566/4/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH4566/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH4566/>;
+    dc:modified '2009-03-16T16:58:09'^^xsd:dateTime ;
+    skos:altLabel 'Hoek Van Holland'^^xsd:string ;
+    skos:prefLabel 'Hoek Van Holland'@en ;
+    skos:definition '''{"node": {
+    "country": "Netherlands",
+    "notes": "Exact duplicate of BSH5659",
+    "latitude": 51.95,
+    "longitude": 4.133333
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH4566'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH3243/4/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH3243/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH3243/>;
+    dc:modified '2009-03-16T16:58:09'^^xsd:dateTime ;
+    skos:altLabel 'Ormos Vathi'^^xsd:string ;
+    skos:prefLabel 'Ormos Vathi'@en ;
+    skos:definition '''{"node": {
+    "country": "Greece",
+    "notes": "Unable to reconcile name and location",
+    "latitude": 38.433333,
+    "longitude": 23.6
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH3243'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH2169/4/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH2169/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH2169/>;
+    dc:modified '2009-03-16T16:58:09'^^xsd:dateTime ;
+    skos:altLabel 'Pandan'^^xsd:string ;
+    skos:prefLabel 'Pandan'@en ;
+    skos:definition '''{"node": {
+    "country": "Philippines",
+    "notes": "Unable to reconcile name and location",
+    "latitude": 11.716667,
+    "longitude": 122.1
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH2169'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH2348/4/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH2348/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH2348/>;
+    dc:modified '2009-03-16T16:58:09'^^xsd:dateTime ;
+    skos:altLabel 'Pandan'^^xsd:string ;
+    skos:prefLabel 'Pandan'@en ;
+    skos:definition '''{"node": {
+    "country": "Philippines",
+    "notes": "Unable to reconcile name and location",
+    "latitude": 17.533333,
+    "longitude": 120.366667
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH2348'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH1663/4/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH1663/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH1663/>;
+    dc:modified '2009-03-16T16:58:09'^^xsd:dateTime ;
+    skos:altLabel 'Wewak Harbor'^^xsd:string ;
+    skos:prefLabel 'Wewak Harbor'@en ;
+    skos:definition '''{"node": {
+    "country": "Papua New Guinea",
+    "notes": "Exact duplicate of BSH1662",
+    "latitude": -3.566667,
+    "longitude": 143.633333
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH1663'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6133/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6133/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6133/>;
+    dc:modified '2009-01-08T08:12:21'^^xsd:dateTime ;
+    skos:altLabel 'Arzal'^^xsd:string ;
+    skos:prefLabel 'Arzal'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "latitude": 47.512,
+    "longitude": -2.375
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6133'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6132/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6132/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6132/>;
+    dc:modified '2009-01-08T08:10:24'^^xsd:dateTime ;
+    skos:altLabel 'Mare Harbour'^^xsd:string ;
+    skos:prefLabel 'Mare Harbour'@en ;
+    skos:definition '''{"node": {
+    "country": "Falkland Islands (Malvinas)",
+    "latitude": -51.9,
+    "longitude": -58.44
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6132'^^xsd:string .

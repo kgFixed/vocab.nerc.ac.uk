@@ -1,0 +1,82 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/F02/2018_01_01_00_00_00_2021_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/F02/2017_01_01_00_00_00_2017_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2021-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/F02/current/F0200009/2/> .
+<http://vocab.nerc.ac.uk/collection/F02/current/F0200009/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/F02/current/F0200009/>;
+    dc:modified '2021-03-08T17:25:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Heterotrophic prokaryotes'@en ;
+    skos:definition 'Heterotrophic prokaryotes include both bacteria and Archea. They do not contain any photosynthetic pigments and thus do not have any autofluorescence properties exploitable by flow cytometry. Thus, they require a staining with some fluorescent dye to be resolved by flow cytometry. In most studies a nucleic acid dye is used. Staining of nucleic acids by a dye emitting in the green when excited by a blue laser enables heterotrophic prokaryotes to be distinguished in various groups thanks to sideward scatter (or FWS) and FLG signatures : Cells with a lower FLG correspond to heterotrophic prokaryotes with a Lower Nucleic Acid content (LNA) and cells with a higher FLG correspond to a Higher Nucleic Acid content (HNA). Their scatter signals (FWS, SWS) are lower than those of Synechoccocus and eukaryotic picophytoplankton, and may overlap those of Prochlorococcus.'@en ;
+    skos:notation 'SDN:F02::F0200009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/F02/current/F0200012/2/> .
+<http://vocab.nerc.ac.uk/collection/F02/current/F0200012/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/F02/current/F0200012/>;
+    dc:modified '2021-03-08T17:25:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Heterotrophic prokaryotes - MNA'@en ;
+    skos:definition 'Heterotrophic prokaryote cells with a Medium Nucleic Acid (MNA) content as defined by flow cytometry, based on the intensity of their fluorescence signal induced by a nucleic acid dye.'@en ;
+    skos:notation 'SDN:F02::F0200012'^^xsd:string .

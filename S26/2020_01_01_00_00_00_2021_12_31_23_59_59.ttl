@@ -1,0 +1,109 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S26/2020_01_01_00_00_00_2021_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S26/2019_01_01_00_00_00_2019_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2021-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT01992/1/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT01992/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT01992/>;
+    dc:modified '2021-12-04T17:03:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water body [particulate >3um phase]'@en ;
+    skos:definition 'Solids contained in a sample from any body of water from a puddle to an ocean that have been collected by filtration through a 3 micrometer pore-size filter. This term is used for measurements on the solid expressed in the context of the water body (e.g. Analyte concentration multiplied by SPM concentration).'@en ;
+    skos:notation 'SDN:S26::MAT01992'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT01993/1/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT01993/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT01993/>;
+    dc:modified '2021-12-04T17:03:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water body [particulate GF/F-1um phase]'@en ;
+    skos:definition 'Solids contained in a sample from any body of water from a puddle to an ocean that have been collected by filtration through a GF/F filter (nominal pore size 0.7um) after filtration through a 1um pore filter. This term is used for measurements on the solid expressed in the context of the water body (e.g. Analyte concentration multiplied by SPM concentration).'@en ;
+    skos:notation 'SDN:S26::MAT01993'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT01989/1/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT01989/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT01989/>;
+    dc:modified '2021-06-18T11:47:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'suspended particulate material 1.25-250um'@en ;
+    skos:definition 'Solids contained in a sample from any body of water from a puddle to an ocean that have been collected by filtration through a 1.25um pore filter after passing through a 250um screen. This term is used for measurments on the solid in isolation from the water body.'@en ;
+    skos:notation 'SDN:S26::MAT01989'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT01990/1/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT01990/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT01990/>;
+    dc:modified '2021-06-18T11:47:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'suspended particulate material 1.0-500um'@en ;
+    skos:definition 'Solids contained in a sample from any body of water from a puddle to an ocean that have been collected by filtration through a 1.0um pore filter after passing through a 500um screen. This term is used for measurments on the solid in isolation from the water body.'@en ;
+    skos:notation 'SDN:S26::MAT01990'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT01991/1/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT01991/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT01991/>;
+    dc:modified '2021-06-18T11:47:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'suspended particulate material 2.5-500um'@en ;
+    skos:definition 'Solids contained in a sample from any body of water from a puddle to an ocean that have been collected by filtration through a 2.5um pore filter after passing through a 500um screen. This term is used for measurments on the solid in isolation from the water body.'@en ;
+    skos:notation 'SDN:S26::MAT01991'^^xsd:string .

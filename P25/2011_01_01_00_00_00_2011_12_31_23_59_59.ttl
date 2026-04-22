@@ -1,0 +1,237 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P25/2011_01_01_00_00_00_2011_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/ATEMP/2/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/ATEMP/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/ATEMP/>;
+    dc:modified '2011-11-24T11:34:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Air temperature'@en ;
+    skos:definition 'The degree of hotness at any location within the atmosphere'@en ;
+    skos:notation 'SDN:P25::ATEMP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/CHLA/2/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/CHLA/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/CHLA/>;
+    dc:modified '2011-11-24T11:34:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Chlorophyll-a concentration'@en ;
+    skos:definition 'The amount (mass or quantity of matter) of the pigment chlorophyll-a per amount (volume or mass) of a body of water'@en ;
+    skos:notation 'SDN:P25::CHLA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/ICEBERG/2/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/ICEBERG/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/ICEBERG/>;
+    dc:modified '2011-11-24T11:34:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Iceberg abundance'@en ;
+    skos:definition 'The number of discrete drifting bodies of frozen water per unit of sea surface area'@en ;
+    skos:notation 'SDN:P25::ICEBERG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/ICECOV/2/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/ICECOV/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/ICECOV/>;
+    dc:modified '2011-11-24T11:34:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ice coverage'@en ;
+    skos:definition 'The extent to which the Earth\'s surface is covered by frozen water'@en ;
+    skos:notation 'SDN:P25::ICECOV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/ICEDIR/2/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/ICEDIR/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/ICEDIR/>;
+    dc:modified '2011-11-24T11:34:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ice motion direction'@en ;
+    skos:definition 'The compass bearing towards which frozen water on the Earth\'s surface is moving'@en ;
+    skos:notation 'SDN:P25::ICEDIR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/ICEDISP/2/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/ICEDISP/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/ICEDISP/>;
+    dc:modified '2011-11-24T11:34:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ice displacement'@en ;
+    skos:definition 'The distance moved in a period of time by frozen water covering the Earth\'s surface'@en ;
+    skos:notation 'SDN:P25::ICEDISP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/ICESPD/2/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/ICESPD/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/ICESPD/>;
+    dc:modified '2011-11-24T11:34:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ice speed'@en ;
+    skos:definition 'The distance moved per unit time by frozen water covering the Earth\'s surface'@en ;
+    skos:notation 'SDN:P25::ICESPD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/ICESSALIN/2/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/ICESSALIN/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/ICESSALIN/>;
+    dc:modified '2011-11-24T11:34:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ice salinity'@en ;
+    skos:definition 'The amount (mass or quantity of matter) of salt per amount (volume or mass) of frozen water on the Earth\'s surface'@en ;
+    skos:notation 'SDN:P25::ICESSALIN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/ICETEMP/2/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/ICETEMP/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/ICETEMP/>;
+    dc:modified '2011-11-24T11:34:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ice temperature'@en ;
+    skos:definition 'The degree of hotness of frozen water on the Earth\'s surface'@en ;
+    skos:notation 'SDN:P25::ICETEMP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/ICETHICK/2/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/ICETHICK/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/ICETHICK/>;
+    dc:modified '2011-11-24T11:34:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ice thickness'@en ;
+    skos:definition 'The vertical extent of frozen water on the Earth\'s surface'@en ;
+    skos:notation 'SDN:P25::ICETHICK'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/ICETYPE/2/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/ICETYPE/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/ICETYPE/>;
+    dc:modified '2011-11-24T11:34:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ice type'@en ;
+    skos:definition 'The physical nature of frozen water on the Earth\'s surface'@en ;
+    skos:notation 'SDN:P25::ICETYPE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/NO2/2/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/NO2/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/NO2/>;
+    dc:modified '2011-11-24T11:34:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Nitrite concentration'@en ;
+    skos:definition 'The amount (mass or quantity of matter) of nitrite per amount (volume or mass) of a body of water'@en ;
+    skos:notation 'SDN:P25::NO2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/NO3/2/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/NO3/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/NO3/>;
+    dc:modified '2011-11-24T11:34:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Nitrate concentration'@en ;
+    skos:definition 'The amount (mass or quantity of matter) of nitrate per amount (volume or mass) of a body of water'@en ;
+    skos:notation 'SDN:P25::NO3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/NO3NO2/2/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/NO3NO2/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/NO3NO2/>;
+    dc:modified '2011-11-24T11:34:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Nitrate+nitrite concentration'@en ;
+    skos:definition 'The amount (mass or quantity of matter) of both nitrate and nitrite per amount (volume or mass) of a body of water'@en ;
+    skos:notation 'SDN:P25::NO3NO2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/PHAEO/2/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/PHAEO/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/PHAEO/>;
+    dc:modified '2011-11-24T11:34:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Phaeopigment concentration'@en ;
+    skos:definition 'The amount (mass or quantity of matter) of the undifferntiated chlorophyll-a degradation products per amount (volume or mass) of a body of water'@en ;
+    skos:notation 'SDN:P25::PHAEO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/PHYTABUND/2/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/PHYTABUND/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/PHYTABUND/>;
+    dc:modified '2011-11-24T11:34:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Phytoplankton amount'@en ;
+    skos:definition 'The amount (numbers or mass) of free-floating generally unicellular plants per amount (volume, mass, area or sample) of a water body'@en ;
+    skos:notation 'SDN:P25::PHYTABUND'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/PO4/2/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/PO4/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/PO4/>;
+    dc:modified '2011-11-24T11:34:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Phosphate concentration'@en ;
+    skos:definition 'The amount (mass or quantity of matter) of orthophosphate per amount (volume or mass) of a body of water'@en ;
+    skos:notation 'SDN:P25::PO4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/SALIN/2/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/SALIN/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/SALIN/>;
+    dc:modified '2011-11-24T11:34:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Water salinity'@en ;
+    skos:definition 'The amount (mass or quantity of matter) of salt per amount (volume or mass) of a body of water'@en ;
+    skos:notation 'SDN:P25::SALIN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/SLCA/2/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/SLCA/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/SLCA/>;
+    dc:modified '2011-11-24T11:34:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Silicate concentration'@en ;
+    skos:definition 'The amount (mass or quantity of matter) of silicate per amount (volume or mass) of a body of water'@en ;
+    skos:notation 'SDN:P25::SLCA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/WTEMP/2/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/WTEMP/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/WTEMP/>;
+    dc:modified '2011-11-24T11:34:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Water temperature'@en ;
+    skos:definition 'The degree of hotness at any location within any body of fresh or salt water'@en ;
+    skos:notation 'SDN:P25::WTEMP'^^xsd:string .

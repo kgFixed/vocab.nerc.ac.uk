@@ -1,0 +1,75 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/M25/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M25/current/EAMP/2/> .
+<http://vocab.nerc.ac.uk/collection/M25/current/EAMP/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M25/current/EAMP/>;
+    dc:modified '2020-04-19T10:43:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'EAMP'@en ;
+    skos:definition '{"metadataProfile": "The Environment Agency (EA) Metadata Profile (EAMP) extends UK GEMINI for the Environment Agency, including two additional elements: Approval for Access(AfA) status, which is an additional access constraint element using a controlled vocabulary to define the outcome of an EA legal process decision as to whether data and information within the data source are legally safe to share; and Approval for Access(AfA) code, which is an additional element required alongside AfA Status to indicate the process derived unique identifier associated with the data source. Version information on the EAMP is available at https: //github.com/AstunTechnology/iso19139.eamp/wiki/Version-History and more details on the most recent version can be seen at https: //github.com/AstunTechnology/iso19139.eamp","profileCurrentVersion": "1.1 "}'@en ;
+    skos:notation 'SDN:M25::EAMP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M25/current/ISO19115/2/> .
+<http://vocab.nerc.ac.uk/collection/M25/current/ISO19115/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M25/current/ISO19115/>;
+    dc:modified '2020-04-19T10:43:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ISO 19115'@en ;
+    skos:definition 'Standard published by the International Organisation for Standardisation (ISO) to provide a structure for describing digital geographic data. ISO 19115 was published in May 2003. This concept also accounts for all subsequent iterations of this standard.'@en ;
+    skos:notation 'SDN:M25::ISO19115'^^xsd:string .

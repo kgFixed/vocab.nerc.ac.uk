@@ -1,0 +1,172 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/OD1/2024_01_01_00_00_00_2026_04_22_15_36_40.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/OD1/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-22T15:36:40'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/ACOUST/2/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/ACOUST/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/ACOUST/>;
+    dc:modified '2026-02-02T15:05:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ocean Acoustics'@en ;
+    skos:definition 'Scientific field of study pertaining to sound emission and propagation in the marine environment. This topic includes the measurement of sound characteristics and the information they provide in the fields of telluric and hydroclimatic risk, biodiversity inventory and evolution, and anthropic impact. It includes also acoustic backscatter in the water column.'@en ;
+    skos:notation 'SDN:OD1::ACOUST'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/DENS/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/DENS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/DENS/>;
+    dc:modified '2024-06-06T16:49:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Density'@en ;
+    skos:definition 'The mass per unit volume of a substance.'@en ;
+    skos:notation 'SDN:OD1::DENS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/FISH/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/FISH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/FISH/>;
+    dc:modified '2024-06-06T16:49:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Fish'@en ;
+    skos:definition 'This group incorporates all state variables pertaining to fish, such as abundance, biomass and fisheries data.'@en ;
+    skos:notation 'SDN:OD1::FISH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/FLUO/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/FLUO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/FLUO/>;
+    dc:modified '2024-06-06T16:49:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Fluorescence'@en ;
+    skos:definition 'The emission of radiation, especially of visible light, by a substance during exposure to external radiation, as light or x-rays.'@en ;
+    skos:notation 'SDN:OD1::FLUO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/GEOL/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/GEOL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/GEOL/>;
+    dc:modified '2024-06-06T16:49:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Geology'@en ;
+    skos:definition 'The marine geological science domain.'@en ;
+    skos:notation 'SDN:OD1::GEOL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/HCORAL/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/HCORAL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/HCORAL/>;
+    dc:modified '2024-06-06T16:49:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Hard coral'@en ;
+    skos:definition 'Cover and composition of hard coral.'@en ;
+    skos:notation 'SDN:OD1::HCORAL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/HUMACT/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/HUMACT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/HUMACT/>;
+    dc:modified '2024-06-06T16:49:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Human activities'@en ;
+    skos:definition 'The domain documenting the activities of man that have an effect on the Earth System.'@en ;
+    skos:notation 'SDN:OD1::HUMACT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/MACALG/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/MACALG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/MACALG/>;
+    dc:modified '2024-06-06T16:49:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Macroalgal'@en ;
+    skos:definition 'Parameters pertaining to macroalgal.'@en ;
+    skos:notation 'SDN:OD1::MACALG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/MANG/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/MANG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/MANG/>;
+    dc:modified '2024-06-06T16:49:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mangrove'@en ;
+    skos:definition 'Cover and composition of mangrove.'@en ;
+    skos:notation 'SDN:OD1::MANG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/MTBM/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/MTBM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/MTBM/>;
+    dc:modified '2024-06-06T16:49:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Marine turtles, birds, mammals'@en ;
+    skos:definition 'This group incorporates all variables pertaining to marine turtles, birds,and mammals, including abundance, biomass, biological function and state of health.'@en ;
+    skos:notation 'SDN:OD1::MTBM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/SEISM/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/SEISM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/SEISM/>;
+    dc:modified '2024-06-06T16:49:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Seismic'@en ;
+    skos:definition 'Parameters associated with determination of sub-floor structure based on the propogation of acoustic energy and acoustic imaging of the sea floor.'@en ;
+    skos:notation 'SDN:OD1::SEISM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/SGRAS/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/SGRAS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/SGRAS/>;
+    dc:modified '2024-06-06T16:49:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Seagrass'@en ;
+    skos:definition 'Parameters pertaining to seagrass.'@en ;
+    skos:notation 'SDN:OD1::SGRAS'^^xsd:string .

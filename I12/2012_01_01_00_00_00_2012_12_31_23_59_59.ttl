@@ -1,0 +1,147 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/I12/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I12/current/friday/1/> .
+<http://vocab.nerc.ac.uk/collection/I12/current/friday/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I12/current/friday/>;
+    dc:modified '2012-05-03T14:56:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Friday'@en ;
+    skos:definition 'The day of the week between Thursday and Saturday.'@en ;
+    skos:notation 'SDN:I12::friday'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I12/current/monday/1/> .
+<http://vocab.nerc.ac.uk/collection/I12/current/monday/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I12/current/monday/>;
+    dc:modified '2012-05-03T14:56:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Monday'@en ;
+    skos:definition 'The day of the week between Sunday and Tuesday.'@en ;
+    skos:notation 'SDN:I12::monday'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I12/current/publicHoliday/1/> .
+<http://vocab.nerc.ac.uk/collection/I12/current/publicHoliday/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I12/current/publicHoliday/>;
+    dc:modified '2012-05-03T14:56:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Public holiday'@en ;
+    skos:definition 'Any day that is a public holiday.'@en ;
+    skos:notation 'SDN:I12::publicHoliday'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I12/current/saturday/1/> .
+<http://vocab.nerc.ac.uk/collection/I12/current/saturday/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I12/current/saturday/>;
+    dc:modified '2012-05-03T14:56:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Saturday'@en ;
+    skos:definition 'The day of the week between Friday and Sunday.'@en ;
+    skos:notation 'SDN:I12::saturday'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I12/current/sunday/1/> .
+<http://vocab.nerc.ac.uk/collection/I12/current/sunday/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I12/current/sunday/>;
+    dc:modified '2012-05-03T14:56:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sunday'@en ;
+    skos:definition 'The day of the week between Saturday and Monday.'@en ;
+    skos:notation 'SDN:I12::sunday'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I12/current/thursday/1/> .
+<http://vocab.nerc.ac.uk/collection/I12/current/thursday/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I12/current/thursday/>;
+    dc:modified '2012-05-03T14:56:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Thursday'@en ;
+    skos:definition 'The day of the week between Wednesday and Friday.'@en ;
+    skos:notation 'SDN:I12::thursday'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I12/current/tuesday/1/> .
+<http://vocab.nerc.ac.uk/collection/I12/current/tuesday/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I12/current/tuesday/>;
+    dc:modified '2012-05-03T14:56:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Tuesday'@en ;
+    skos:definition 'The day of the week between Monday and Wednesday.'@en ;
+    skos:notation 'SDN:I12::tuesday'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I12/current/wednesday/1/> .
+<http://vocab.nerc.ac.uk/collection/I12/current/wednesday/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I12/current/wednesday/>;
+    dc:modified '2012-05-03T14:56:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Wednesday'@en ;
+    skos:definition 'The day of the week between Tuesday and Thursday.'@en ;
+    skos:notation 'SDN:I12::wednesday'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I12/current/weekdays/1/> .
+<http://vocab.nerc.ac.uk/collection/I12/current/weekdays/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I12/current/weekdays/>;
+    dc:modified '2012-05-03T14:56:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Weekdays'@en ;
+    skos:definition 'Weekdays refers to all days contained within a typical working week: Monday, Tuesday, Wednesday, Thursday and Friday.'@en ;
+    skos:notation 'SDN:I12::weekdays'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I12/current/weekends/1/> .
+<http://vocab.nerc.ac.uk/collection/I12/current/weekends/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I12/current/weekends/>;
+    dc:modified '2012-05-03T14:56:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Weekends'@en ;
+    skos:definition 'Weekends refers to those days contained within a typical weekend: Saturday and Sunday.'@en ;
+    skos:notation 'SDN:I12::weekends'^^xsd:string .

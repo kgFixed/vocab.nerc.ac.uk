@@ -1,0 +1,156 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/G15/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G15/current/001/1/> .
+<http://vocab.nerc.ac.uk/collection/G15/current/001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G15/current/001/>;
+    dc:modified '2012-07-04T11:04:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'blurredImage'@en ;
+    skos:definition 'Portion of the image is blurred'@en ;
+    skos:notation 'SDN:G15::001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G15/current/002/1/> .
+<http://vocab.nerc.ac.uk/collection/G15/current/002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G15/current/002/>;
+    dc:modified '2012-07-04T11:04:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'cloud'@en ;
+    skos:definition 'Portion of the image is partially obscured by cloud cover'@en ;
+    skos:notation 'SDN:G15::002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G15/current/003/1/> .
+<http://vocab.nerc.ac.uk/collection/G15/current/003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G15/current/003/>;
+    dc:modified '2012-07-04T11:04:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'degradingObliquity'@en ;
+    skos:definition 'Acute angle between the plane of the ecliptic (the plane of the Earth s orbit) and the plane of the celestial equator'@en ;
+    skos:notation 'SDN:G15::003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G15/current/004/1/> .
+<http://vocab.nerc.ac.uk/collection/G15/current/004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G15/current/004/>;
+    dc:modified '2012-07-04T11:04:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fog'@en ;
+    skos:definition 'Portion of the image is partially obscured by fog'@en ;
+    skos:notation 'SDN:G15::004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G15/current/005/1/> .
+<http://vocab.nerc.ac.uk/collection/G15/current/005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G15/current/005/>;
+    dc:modified '2012-07-04T11:04:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'heavySmokeOrDust'@en ;
+    skos:definition 'Portion of the image is partially obscured by heavy smoke or dust'@en ;
+    skos:notation 'SDN:G15::005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G15/current/006/1/> .
+<http://vocab.nerc.ac.uk/collection/G15/current/006/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G15/current/006/>;
+    dc:modified '2012-07-04T11:04:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'night'@en ;
+    skos:definition 'Image was taken at night'@en ;
+    skos:notation 'SDN:G15::006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G15/current/007/1/> .
+<http://vocab.nerc.ac.uk/collection/G15/current/007/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G15/current/007/>;
+    dc:modified '2012-07-04T11:04:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'rain'@en ;
+    skos:definition 'Image was taken during rainfall'@en ;
+    skos:notation 'SDN:G15::007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G15/current/008/1/> .
+<http://vocab.nerc.ac.uk/collection/G15/current/008/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G15/current/008/>;
+    dc:modified '2012-07-04T11:04:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'semiDarkness'@en ;
+    skos:definition 'Image was taken during semi-dark conditions -- twilight conditions'@en ;
+    skos:notation 'SDN:G15::008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G15/current/009/1/> .
+<http://vocab.nerc.ac.uk/collection/G15/current/009/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G15/current/009/>;
+    dc:modified '2012-07-04T11:04:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'shadow'@en ;
+    skos:definition 'Portion of the image is obscured by shadow'@en ;
+    skos:notation 'SDN:G15::009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G15/current/010/1/> .
+<http://vocab.nerc.ac.uk/collection/G15/current/010/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G15/current/010/>;
+    dc:modified '2012-07-04T11:04:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'snow'@en ;
+    skos:definition 'Portion of the image is obscured by snow'@en ;
+    skos:notation 'SDN:G15::010'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G15/current/011/1/> .
+<http://vocab.nerc.ac.uk/collection/G15/current/011/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G15/current/011/>;
+    dc:modified '2012-07-04T11:04:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'terrainMasking'@en ;
+    skos:definition 'The absence of collection data of a given point or area caused by the relative location of topographic features which obstruct the collection path between the collector(s) and the subject(s) of interest'@en ;
+    skos:notation 'SDN:G15::011'^^xsd:string .

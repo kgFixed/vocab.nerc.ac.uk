@@ -1,0 +1,210 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S21/2009_01_01_00_00_00_2009_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S21/current/S21S034/2/> .
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S034/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S21/current/S21S034/>;
+    dc:modified '2009-11-04T11:30:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'stalactite'@en ;
+    skos:definition 'A secondary mineral deposit within a cave (speleothem) which hangs from the roof of the cave'@en ;
+    skos:notation 'SDN:S21::S21S034'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S21/current/S21S033/1/> .
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S033/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S21/current/S21S033/>;
+    dc:modified '2009-11-03T16:09:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'cave atmosphere'@en ;
+    skos:definition 'The gas mixture contained inside an underground cavity large enough for human access.'@en ;
+    skos:notation 'SDN:S21::S21S033'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S21/current/S21S001/1/> .
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S21/current/S21S001/>;
+    dc:modified '2009-11-03T15:42:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere'@en ;
+    skos:definition 'Layer of gases surrounding the planet Earth that is retained by the Earth\'s gravity.'@en ;
+    skos:notation 'SDN:S21::S21S001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S21/current/S21S003/1/> .
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S21/current/S21S003/>;
+    dc:modified '2009-11-03T15:42:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'bed'@en ;
+    skos:definition 'The solid material at the base of a body of water, including all material accessible to sampling techniques from its interface with that water body.'@en ;
+    skos:notation 'SDN:S21::S21S003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S21/current/S21S005/1/> .
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S21/current/S21S005/>;
+    dc:modified '2009-11-03T15:42:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'groundwater'@en ;
+    skos:definition 'Water occupying pores in soil or rock with direct connection to the atmosphere or flowing through underground plumbing systems such as fissures in limestone.'@en ;
+    skos:notation 'SDN:S21::S21S005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S21/current/S21S006/1/> .
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S006/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S21/current/S21S006/>;
+    dc:modified '2009-11-03T15:42:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Earth'@en ;
+    skos:definition 'The third planet away from the sun in our solar system.'@en ;
+    skos:notation 'SDN:S21::S21S006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S21/current/S21S009/1/> .
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S009/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S21/current/S21S009/>;
+    dc:modified '2009-11-03T15:42:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface ice'@en ;
+    skos:definition 'A significant volume of frozen water possibly containing a variety of inclusions (rock particles, bubbles etc.) located above land or a water body.'@en ;
+    skos:notation 'SDN:S21::S21S009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S21/current/S21S017/1/> .
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S017/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S21/current/S21S017/>;
+    dc:modified '2009-11-03T15:42:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'not applicable'@en ;
+    skos:definition 'There is no appropriate value to populate the field.'@en ;
+    skos:notation 'SDN:S21::S21S017'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S21/current/S21S019/1/> .
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S019/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S21/current/S21S019/>;
+    dc:modified '2009-11-03T15:42:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'peat'@en ;
+    skos:definition 'A type of terrestrial sediment comprising an accumulation of partially decayed vegetable matter, usually moss.'@en ;
+    skos:notation 'SDN:S21::S21S019'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S21/current/S21S020/1/> .
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S020/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S21/current/S21S020/>;
+    dc:modified '2009-11-03T15:42:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'rainwater'@en ;
+    skos:definition 'Liquid precipitation.'@en ;
+    skos:notation 'SDN:S21::S21S020'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S21/current/S21S023/1/> .
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S023/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S21/current/S21S023/>;
+    dc:modified '2009-11-03T15:42:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sediment pore water'@en ;
+    skos:definition 'Water occupying the spaces between grains in an unlithified sample of unconsolidated sediment collected from the bed of a water body.'@en ;
+    skos:notation 'SDN:S21::S21S023'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S21/current/S21S024/1/> .
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S024/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S21/current/S21S024/>;
+    dc:modified '2009-11-03T15:42:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'snow'@en ;
+    skos:definition 'Crystalline water ice precipitation.'@en ;
+    skos:notation 'SDN:S21::S21S024'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S21/current/S21S025/1/> .
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S025/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S21/current/S21S025/>;
+    dc:modified '2009-11-03T15:42:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'stalagmite'@en ;
+    skos:definition 'A secondary mineral deposit within a cave (speleothem) which rises from the floor of the cave'@en ;
+    skos:notation 'SDN:S21::S21S025'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S21/current/S21S026/1/> .
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S026/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S21/current/S21S026/>;
+    dc:modified '2009-11-03T15:42:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'suspended particulate material'@en ;
+    skos:definition 'Solid material, including flora and fauna, that is distributed throughout a water body.'@en ;
+    skos:notation 'SDN:S21::S21S026'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S21/current/S21S027/1/> .
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S027/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S21/current/S21S027/>;
+    dc:modified '2009-11-03T15:42:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water body'@en ;
+    skos:definition 'A distinct and significant volume of fresh or salt water on the Earth\'s surface.  Includes oceans, seas, estuaries, rivers, ponds and lakes.'@en ;
+    skos:notation 'SDN:S21::S21S027'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S21/current/S21S028/1/> .
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S028/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S21/current/S21S028/>;
+    dc:modified '2009-11-03T15:42:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water body plus atmosphere'@en ;
+    skos:definition 'A distinct and significant volume of fresh or salt water on the Earth\'s surface plus the layer of gases retained by gravity overlying it.'@en ;
+    skos:notation 'SDN:S21::S21S028'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S21/current/S21S031/1/> .
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S031/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S21/current/S21S031/>;
+    dc:modified '2009-11-03T15:42:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'wet sediment'@en ;
+    skos:definition 'An aliquot of the bed containing both solid material and its interstitial pore water.'@en ;
+    skos:notation 'SDN:S21::S21S031'^^xsd:string .

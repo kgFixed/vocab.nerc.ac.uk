@@ -1,0 +1,1405 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P07/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P07/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2023-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0637/3/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0637/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0637/>;
+    dc:modified '2023-10-16T17:27:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'heat_flux_correction'@en ;
+    skos:definition 'Flux correction is also called \'flux adjustment\'. A positive flux correction is downward i.e. added to the ocean. In accordance with common usage in geophysical disciplines, \'flux\' implies per unit area, called \'flux density\' in physics.'@en ;
+    skos:notation 'SDN:P07::CFSN0637'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0055/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0055/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0055/>;
+    dc:modified '2023-10-16T17:23:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water_flux_correction'@en ;
+    skos:definition '\'Water\' means water in all phases. Flux correction is also called \'flux adjustment\'. A positive flux correction is downward i.e. added to the ocean. In accordance with common usage in geophysical disciplines, \'flux\' implies per unit area, called \'flux density\' in physics.'@en ;
+    skos:notation 'SDN:P07::CFSN0055'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/0D56ZL18/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/0D56ZL18/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/0D56ZL18/>;
+    dc:modified '2023-10-16T17:23:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'moles_of_dissolved_nitrogen_per_unit_mass_in_sea_water'@en ;
+    skos:definition 'The construction "moles_of_X_per_unit_mass_in_Y" is also called "molality" of X in Y, where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". "Dissolved nitrogen" means the sum of all nitrogen in solution: inorganic nitrogen (nitrite, nitrate and ammonium) plus nitrogen in carbon compounds.'@en ;
+    skos:notation 'SDN:P07::0D56ZL18'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/2NMYVULV/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/2NMYVULV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/2NMYVULV/>;
+    dc:modified '2023-10-16T17:23:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'moles_of_dissolved_phosphorus_per_unit_mass_in_sea_water'@en ;
+    skos:definition 'The construction "moles_of_X_per_unit_mass_in_Y" is also called "molality" of X in Y, where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". "Phosphorus" means phosphorus in all chemical forms, commonly referred to as "total phosphorus". The equivalent term in the NERC P01 Parameter Usage Vocabulary may be found at http://vocab.nerc.ac.uk/collection/P01/current/TPHSDSZZ/6/.'@en ;
+    skos:notation 'SDN:P07::2NMYVULV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/3719FJJR/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/3719FJJR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/3719FJJR/>;
+    dc:modified '2023-10-16T17:23:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'northward_sea_water_velocity_due_to_ekman_drift'@en ;
+    skos:definition 'A velocity is a vector quantity. "Northward" indicates a vector component which is positive when directed northward (negative southward). The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.'@en ;
+    skos:notation 'SDN:P07::3719FJJR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/397I6G5S/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/397I6G5S/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/397I6G5S/>;
+    dc:modified '2023-10-16T17:23:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'moles_of_guanosine_triphosphate_per_unit_mass_in_sea_water'@en ;
+    skos:definition 'The construction "moles_of_X_per_unit_mass_in_Y" is also called "molality" of X in Y, where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The chemical formula of guanosine triphosphate is C10H16N5O14P3.'@en ;
+    skos:notation 'SDN:P07::397I6G5S'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/5K9B4N9L/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/5K9B4N9L/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/5K9B4N9L/>;
+    dc:modified '2023-10-16T17:23:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'heat_flux_into_sea_water_due_to_flux_adjustment'@en ;
+    skos:definition 'A positive flux adjustment is downward i.e. added to the ocean. In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.'@en ;
+    skos:notation 'SDN:P07::5K9B4N9L'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/5RB7GBXQ/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/5RB7GBXQ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/5RB7GBXQ/>;
+    dc:modified '2023-10-16T17:23:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'moles_of_adenosine_triphosphate_per_unit_mass_in_sea_water'@en ;
+    skos:definition 'The construction "moles_of_X_per_unit_mass_in_Y" is also called "molality" of X in Y, where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The equivalent term in the NERC P01 Parameter Usage Vocabulary may be found at http://vocab.nerc.ac.uk/collection/P01/current/ATPXZZDZ/2/.'@en ;
+    skos:notation 'SDN:P07::5RB7GBXQ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/827N8JJT/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/827N8JJT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/827N8JJT/>;
+    dc:modified '2023-10-16T17:23:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'moles_of_particulate_organic_matter_expressed_as_phosphorus_per_unit_mass_in_sea_water'@en ;
+    skos:definition 'The construction "moles_of_X_per_unit_mass_in_Y" is also called "molality" of X in Y, where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The phrase "expressed_as" is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. Particulate means suspended solids of all sizes. Phosphorus means phosphorus in all chemical forms, commonly referred to as "total phosphorus". The equivalent term in the NERC P01 Parameter Usage Vocabulary may be found at http://vocab.nerc.ac.uk/collection/P01/current/OPHSVLPT/6/.'@en ;
+    skos:notation 'SDN:P07::827N8JJT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/A14TB3JS/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/A14TB3JS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/A14TB3JS/>;
+    dc:modified '2023-10-16T17:23:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'moles_of_particulate_organic_matter_expressed_as_carbon_per_unit_mass_in_sea_water'@en ;
+    skos:definition 'The construction "moles_of_X_per_unit_mass_in_Y" is also called "molality" of X in Y, where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The phrase "expressed_as" is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. Particulate means suspended solids of all sizes.'@en ;
+    skos:notation 'SDN:P07::A14TB3JS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BOLKQRRO/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BOLKQRRO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BOLKQRRO/>;
+    dc:modified '2023-10-16T17:23:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'moles_of_particulate_matter_expressed_as_phosphorus_per_unit_mass_in_sea_water'@en ;
+    skos:definition 'The construction "moles_of_X_per_unit_mass_in_Y" is also called "molality" of X in Y, where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The phrase "expressed_as" is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. Particulate means suspended solids of all sizes. Phosphorus means phosphorus in all chemical forms, commonly referred to as "total phosphorus". The equivalent term in the NERC P01 Parameter Usage Vocabulary may be found at http://vocab.nerc.ac.uk/collection/P01/current/TPHSVLPT/5/.'@en ;
+    skos:notation 'SDN:P07::BOLKQRRO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/G882GYEQ/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/G882GYEQ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/G882GYEQ/>;
+    dc:modified '2023-10-16T17:23:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water_flux_into_sea_water_due_to_flux_adjustment'@en ;
+    skos:definition '"Water" means water in all phases. Flux correction is also called "flux adjustment". A positive flux correction is downward i.e. added to the ocean. In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.'@en ;
+    skos:notation 'SDN:P07::G882GYEQ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/KTNC31AC/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/KTNC31AC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/KTNC31AC/>;
+    dc:modified '2023-10-16T17:23:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'moles_of_ammonium_per_unit_mass_in_sea_water'@en ;
+    skos:definition 'The construction "moles_of_X_per_unit_mass_in_Y" is also called "molality" of X in Y, where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The chemical formula of ammonium is NH4. The equivalent term in the NERC P01 Parameter Usage Vocabulary may be found at http://vocab.nerc.ac.uk/collection/P01/current/MDMAP004/3/.'@en ;
+    skos:notation 'SDN:P07::KTNC31AC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/NV9RKL0Z/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/NV9RKL0Z/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/NV9RKL0Z/>;
+    dc:modified '2023-10-16T17:23:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'moles_of_particulate_matter_expressed_as_carbon_per_unit_mass_in_sea_water'@en ;
+    skos:definition 'The construction "moles_of_X_per_unit_mass_in_Y" is also called "molality" of X in Y, where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The phrase "expressed_as" is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. Particulate means suspended solids of all sizes. The equivalent term in the NERC P01 Parameter Usage Vocabulary may be found at http://vocab.nerc.ac.uk/collection/P01/current/MDMAP011/4/.'@en ;
+    skos:notation 'SDN:P07::NV9RKL0Z'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/PJLQXZRK/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/PJLQXZRK/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/PJLQXZRK/>;
+    dc:modified '2023-10-16T17:23:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'moles_of_dissolved_organic_phosphorus_per_unit_mass_in_sea_water'@en ;
+    skos:definition 'The construction "moles_of_X_per_unit_mass_in_Y" is also called "molality" of X in Y, where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". "Organic phosphorus" means phosphorus in carbon compounds. The equivalent term in the NERC P01 Parameter Usage Vocabulary may be found at http://vocab.nerc.ac.uk/collection/P01/current/ORGPMSZZ/4/.'@en ;
+    skos:notation 'SDN:P07::PJLQXZRK'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/QMZP5V9M/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/QMZP5V9M/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/QMZP5V9M/>;
+    dc:modified '2023-10-16T17:23:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'moles_of_particulate_matter_expressed_as_nitrogen_per_unit_mass_in_sea_water'@en ;
+    skos:definition 'The construction "moles_of_X_per_unit_mass_in_Y" is also called "molality" of X in Y, where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The phrase "expressed_as" is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. Particulate means suspended solids of all sizes. The equivalent term in the NERC P01 Parameter Usage Vocabulary may be found at http://vocab.nerc.ac.uk/collection/P01/current/MDMAP013/4/.'@en ;
+    skos:notation 'SDN:P07::QMZP5V9M'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/QO4DM915/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/QO4DM915/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/QO4DM915/>;
+    dc:modified '2023-10-16T17:23:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'moles_of_particulate_organic_matter_expressed_as_nitrogen_per_unit_mass_in_sea_water'@en ;
+    skos:definition 'The construction "moles_of_X_per_unit_mass_in_Y" is also called "molality" of X in Y, where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The phrase "expressed_as" is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. Particulate means suspended solids of all sizes.'@en ;
+    skos:notation 'SDN:P07::QO4DM915'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/QVPPPWEN/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/QVPPPWEN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/QVPPPWEN/>;
+    dc:modified '2023-10-16T17:23:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'moles_of_dissolved_organic_carbon_per_unit_mass_in_sea_water'@en ;
+    skos:definition 'The construction "moles_of_X_per_unit_mass_in_Y" is also called "molality" of X in Y, where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". "Organic carbon" describes a family of chemical species and is the term used in standard names for all species belonging to the family that are represented within a given model. The list of individual species that are included in a quantity having a group chemical standard name can vary between models. Where possible, the data variable should be accompanied by a complete description of the species represented, for example, by using a comment attribute. The equivalent term in the NERC P01 Parameter Usage Vocabulary may be found at http://vocab.nerc.ac.uk/collection/P01/current/CORGZZKG/1/.'@en ;
+    skos:notation 'SDN:P07::QVPPPWEN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/S4CS642P/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/S4CS642P/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/S4CS642P/>;
+    dc:modified '2023-10-16T17:23:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'moles_of_sulfur_hexafluoride_per_unit_mass_in_sea_water'@en ;
+    skos:definition 'The construction "moles_of_X_per_unit_mass_in_Y" is also called "molality" of X in Y, where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The chemical formula of sulfur hexafluoride is SF6.'@en ;
+    skos:notation 'SDN:P07::S4CS642P'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/TU0A9UA8/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/TU0A9UA8/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/TU0A9UA8/>;
+    dc:modified '2023-10-16T17:23:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'moles_of_dissolved_organic_nitrogen_per_unit_mass_in_sea_water'@en ;
+    skos:definition 'The construction "moles_of_X_per_unit_mass_in_Y" is also called "molality" of X in Y, where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". "Dissolved organic nitrogen" describes the nitrogen held in carbon compounds in solution. These are mostly generated by plankton excretion and decay. The equivalent term in the NERC P01 Parameter Usage Vocabulary may be found at http://vocab.nerc.ac.uk/collection/P01/current/MDMAP008/3/.'@en ;
+    skos:notation 'SDN:P07::TU0A9UA8'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/TZPEWAT3/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/TZPEWAT3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/TZPEWAT3/>;
+    dc:modified '2023-10-16T17:23:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_water_alkalinity_per_unit_mass_expressed_as_mole_equivalent'@en ;
+    skos:definition 'The standard name sea_water_alkalinity_per_unit_mass_expressed_as_mole_equivalent is the total alkalinity equivalent concentration (including carbonate, nitrogen, silicate, and borate components) expressed as the number of moles of alkalinity per unit mass of seawater. The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. The equivalent term in the NERC P01 Parameter Usage Vocabulary may be found at http://vocab.nerc.ac.uk/collection/P01/current/MDMAP014/1/.'@en ;
+    skos:notation 'SDN:P07::TZPEWAT3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/W2YRLZ9N/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/W2YRLZ9N/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/W2YRLZ9N/>;
+    dc:modified '2023-10-16T17:23:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'eastward_sea_water_velocity_due_to_ekman_drift'@en ;
+    skos:definition 'A velocity is a vector quantity. "Eastward" indicates a vector component which is positive when directed eastward (negative westward).The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.'@en ;
+    skos:notation 'SDN:P07::W2YRLZ9N'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/03ABEUPC/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/03ABEUPC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/03ABEUPC/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_concentration_of_particulate_matter_expressed_as_iron_in_sea_water'@en ;
+    skos:definition '"Mole concentration" means number of moles per unit volume, also called "molarity", and is used in the construction "mole_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. Particulate means suspended solids of all sizes.'@en ;
+    skos:notation 'SDN:P07::03ABEUPC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/1F90YEDV/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/1F90YEDV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/1F90YEDV/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'wind_speed_of_gust_due_to_turbulence'@en ;
+    skos:definition 'Speed is the magnitude of velocity. Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.) The wind speed is the magnitude of the wind velocity. A gust is a sudden brief period of high wind speed. In an observed timeseries of wind speed, the gust wind speed can be indicated by a cell_methods of maximum for the time-interval. In an atmospheric model which has a parametrised calculation of gustiness, the gust wind speed may be separately diagnosed from the wind speed. The specification of a physical process by the phrase "due_to" process means that the quantity named is a single term in a list of terms, the maximum of which composes the general quantity named by omitting the phrase.'@en ;
+    skos:notation 'SDN:P07::1F90YEDV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/1J3O1KPX/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/1J3O1KPX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/1J3O1KPX/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_concentration_of_prokaryotes_expressed_as_carbon_in_sea_water'@en ;
+    skos:definition '"Mole concentration" means number of moles per unit volume, also called "molarity", and is used in the construction "mole_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. "Prokaryotes" means all Bacteria and Archaea excluding photosynthetic cyanobacteria such as Synechococcus and Prochlorococcus or other separately named components of the prokaryotic population.'@en ;
+    skos:notation 'SDN:P07::1J3O1KPX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/3UF7EP0Z/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/3UF7EP0Z/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/3UF7EP0Z/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'gross_mole_production_of_biomass_expressed_as_carbon_by_prokaryotes_in_sea_water'@en ;
+    skos:definition '"Gross mole production" means the rate of creation of biomass per unit volume with no correction for respiration loss in terms of quantity of matter (moles). The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. "Prokaryotes" means all Bacteria and Archaea excluding photosynthetic cyanobacteria such as Synechococcus and Prochlorococcus or other separately named components of the prokaryotic population.'@en ;
+    skos:notation 'SDN:P07::3UF7EP0Z'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/69B2DPBP/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/69B2DPBP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/69B2DPBP/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'deployment_longitude'@en ;
+    skos:definition 'The longitude of deployment of a station or instrument. The term can be used whenever the deployment position of a station or instrument needs to be supplied along with other types of positions. If a data variable has only one longitude coordinate variable, the standard name of longitude should generally be preferred to deployment_longitude, because longitude is recognised by generic software. If the deployment longitude is also the nominal longitude for a discrete geometry (as in Section 9.5 of the CF convention), the deployment longitude should also, or instead, be recorded in a coordinate variable with the standard name of longitude and axis="X". Longitude is positive eastward; its units of "degree_east" (or equivalent) indicate this explicitly.'@en ;
+    skos:notation 'SDN:P07::69B2DPBP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/6E9SGKVA/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/6E9SGKVA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/6E9SGKVA/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_water_speed_shear'@en ;
+    skos:definition 'Speed is the magnitude of velocity. Sea water speed shear is the derivative of sea water speed with respect to depth.'@en ;
+    skos:notation 'SDN:P07::6E9SGKVA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/7J5A4SLU/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/7J5A4SLU/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/7J5A4SLU/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_concentration_of_particulate_matter_expressed_as_sulfur_in_sea_water'@en ;
+    skos:definition '"Mole concentration" means number of moles per unit volume, also called "molarity", and is used in the construction "mole_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. Particulate means suspended solids of all sizes.'@en ;
+    skos:notation 'SDN:P07::7J5A4SLU'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/8U3C3SPG/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/8U3C3SPG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/8U3C3SPG/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_concentration_of_particulate_matter_expressed_as_manganese_in_sea_water'@en ;
+    skos:definition '"Mole concentration" means number of moles per unit volume, also called "molarity", and is used in the construction "mole_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. Particulate means suspended solids of all sizes.'@en ;
+    skos:notation 'SDN:P07::8U3C3SPG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/8ZFKVO3X/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/8ZFKVO3X/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/8ZFKVO3X/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'gross_production_of_biomass_expressed_as_carbon_by_prokaryotes_in_sea_water'@en ;
+    skos:definition '"Gross production" means the rate of creation of biomass per unit volume with no correction for respiration. The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. "Prokaryotes" means all Bacteria and Archaea excluding photosynthetic cyanobacteria such as Synechococcus and Prochlorococcus or other separately named components of the prokaryotic population.'@en ;
+    skos:notation 'SDN:P07::8ZFKVO3X'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/9ANNFYKT/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/9ANNFYKT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/9ANNFYKT/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_floor_sediment_age_before_1950'@en ;
+    skos:definition '"Sea floor sediment" is sediment deposited at the sea bed. "Sediment age" means the length of time elapsed since the sediment was deposited. The phrase "before_1950" is a transparent representation of the phrase "before_present", often used in the geological and archaeological domains to refer to time elapsed between an event and 1950 AD.'@en ;
+    skos:notation 'SDN:P07::9ANNFYKT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/9JRK7MPS/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/9JRK7MPS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/9JRK7MPS/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'deployment_latitude'@en ;
+    skos:definition 'The latitude of deployment of a station or instrument. The term can be used whenever the deployment position of a station or instrument needs to be supplied along with other types of positions. If a data variable has only one latitude coordinate variable, the standard name of latitude should generally be preferred to deployment_latitude, because latitude is recognised by generic software. If the deployment latitude is also the nominal latitude for a discrete geometry (as in Section 9.5 of the CF convention), the deployment latitude should also, or instead, be recorded in a coordinate variable with the standard name of latitude and axis="Y". Latitude is positive northward; its units of "degree_north" (or equivalent) indicate this explicitly.'@en ;
+    skos:notation 'SDN:P07::9JRK7MPS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/9T7YW0UY/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/9T7YW0UY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/9T7YW0UY/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_concentration_of_particulate_matter_expressed_as_potassium_in_sea_water'@en ;
+    skos:definition '"Mole concentration" means number of moles per unit volume, also called "molarity", and is used in the construction "mole_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. Particulate means suspended solids of all sizes.'@en ;
+    skos:notation 'SDN:P07::9T7YW0UY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/E16D9FIK/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/E16D9FIK/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/E16D9FIK/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_prokaryotes_expressed_as_carbon_in_sea_water'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. "Prokaryotes" means all Bacteria and Archaea excluding photosynthetic cyanobacteria such as Synechococcus and Prochlorococcus or other separately named components of the prokaryotic population.'@en ;
+    skos:notation 'SDN:P07::E16D9FIK'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/FK6NPY5L/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/FK6NPY5L/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/FK6NPY5L/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'universal_thermal_climate_index'@en ;
+    skos:definition 'Universal Thermal Comfort Index (UTCI) is an equivalent temperature of the actual thermal condition. Reference: utci.org. It is the air temperature of a reference condition causing the same dynamic physiological response in a human body considering its energy budget, physiology and clothing adaptation.'@en ;
+    skos:notation 'SDN:P07::FK6NPY5L'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/G0WQ5UB7/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/G0WQ5UB7/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/G0WQ5UB7/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'specific_enthalpy_of_air'@en ;
+    skos:definition 'The specific_enthalpy_of_air is the enthalpy of air per unit mass, which can be computed for an air sample as the sum of the enthalpy of the dry air and the enthalpy of the water vapor in that air, divided by the mass of dry air.'@en ;
+    skos:notation 'SDN:P07::G0WQ5UB7'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/H4NYWUZ1/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/H4NYWUZ1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/H4NYWUZ1/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'specific_turbulent_kinetic_energy_of_air'@en ;
+    skos:definition 'Specific means per unit mass. "Turbulent kinetic energy" is the kinetic energy of all eddy-induced motion that is not resolved on the grid scale of the model.'@en ;
+    skos:notation 'SDN:P07::H4NYWUZ1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/L7HK0CKS/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/L7HK0CKS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/L7HK0CKS/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_concentration_of_particulate_matter_expressed_as_sodium_in_sea_water'@en ;
+    skos:definition '"Mole concentration" means number of moles per unit volume, also called "molarity", and is used in the construction "mole_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. Particulate means suspended solids of all sizes.'@en ;
+    skos:notation 'SDN:P07::L7HK0CKS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/MOM01WTJ/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/MOM01WTJ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/MOM01WTJ/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_phaeopigments_in_sea_ice'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". Phaeopigments are non-photosynthetic pigments that are the degradation product of algal chlorophyll pigments. It is commonly formed during and after marine phytoplankton blooms. "Sea ice" means all ice floating in the sea which has formed from freezing sea water, rather than by other processes such as calving of land ice to form icebergs.'@en ;
+    skos:notation 'SDN:P07::MOM01WTJ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/PE61H7XY/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/PE61H7XY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/PE61H7XY/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'wind_speed_of_gust_due_to_convection'@en ;
+    skos:definition 'Speed is the magnitude of velocity. Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.) The wind speed is the magnitude of the wind velocity. A gust is a sudden brief period of high wind speed. In an observed timeseries of wind speed, the gust wind speed can be indicated by a cell_methods of maximum for the time-interval. In an atmospheric model which has a parametrised calculation of gustiness, the gust wind speed may be separately diagnosed from the wind speed. The specification of a physical process by the phrase "due_to" process means that the quantity named is a single term in a list of terms, the maximum of which composes the general quantity named by omitting the phrase.'@en ;
+    skos:notation 'SDN:P07::PE61H7XY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/PEBB78VW/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/PEBB78VW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/PEBB78VW/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_chlorophyll_a_in_sea_ice'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". Chlorophylls are the green pigments found in most plants, algae and cyanobacteria; their presence is essential for photosynthesis to take place. There are several different forms of chlorophyll that occur naturally. All contain a chlorin ring (chemical formula C20H16N4) which gives the green pigment and a side chain whose structure varies. The naturally occurring forms of chlorophyll contain between 35 and 55 carbon atoms. Chlorophyll-a is the most commonly occurring form of natural chlorophyll. The chemical formula of chlorophyll-a is C55H72O5N4Mg. "Sea ice" means all ice floating in the sea which has formed from freezing sea water, rather than by other processes such as calving of land ice to form icebergs.'@en ;
+    skos:notation 'SDN:P07::PEBB78VW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/ROMMVJ45/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/ROMMVJ45/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/ROMMVJ45/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_concentration_of_particulate_matter_expressed_as_calcium_in_sea_water'@en ;
+    skos:definition '"Mole concentration" means number of moles per unit volume, also called "molarity", and is used in the construction "mole_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. Particulate means suspended solids of all sizes.'@en ;
+    skos:notation 'SDN:P07::ROMMVJ45'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/UDS3QBKR/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/UDS3QBKR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/UDS3QBKR/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_concentration_of_particulate_matter_expressed_as_magnesium_in_sea_water'@en ;
+    skos:definition '"Mole concentration" means number of moles per unit volume, also called "molarity", and is used in the construction "mole_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. Particulate means suspended solids of all sizes.'@en ;
+    skos:notation 'SDN:P07::UDS3QBKR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/UGHJFA2T/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/UGHJFA2T/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/UGHJFA2T/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_concentration_of_particulate_matter_expressed_as_zinc_in_sea_water'@en ;
+    skos:definition '"Mole concentration" means number of moles per unit volume, also called "molarity", and is used in the construction "mole_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. Particulate means suspended solids of all sizes.'@en ;
+    skos:notation 'SDN:P07::UGHJFA2T'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/VXY9YFQO/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/VXY9YFQO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/VXY9YFQO/>;
+    dc:modified '2023-07-05T16:51:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_concentration_of_particulate_matter_expressed_as_phosphorus_in_sea_water'@en ;
+    skos:definition '"Mole concentration" means number of moles per unit volume, also called "molarity", and is used in the construction "mole_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. Particulate means suspended solids of all sizes. Phosphorus means phosphorus in all chemical forms, commonly referred to as "total phosphorus".'@en ;
+    skos:notation 'SDN:P07::VXY9YFQO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/0FXZI8O8/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/0FXZI8O8/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/0FXZI8O8/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'altitude_at_top_of_atmosphere_mixed_layer_defined_by_ambient_aerosol_particles_backwards_scattering_by_ranging_instrument'@en ;
+    skos:definition 'The altitude at top of atmosphere mixed layer is the elevation above sea level of the top of the (atmosphere) mixed layer or convective boundary layer. "defined_by" provides the information of the tracer used for identifying the atmospheric boundary layer top. "Ambient_aerosol" means that the aerosol is measured or modelled at the ambient state of pressure, temperature and relative humidity that exists in its immediate environment. "Ambient aerosol particles" are aerosol particles that have taken up ambient water through hygroscopic growth. The extent of hygroscopic growth depends on the relative humidity and the composition of the particles. "By ranging instrument" means that the volume backscattering coefficient is obtained through ranging techniques like lidar and radar.'@en ;
+    skos:notation 'SDN:P07::0FXZI8O8'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/0RYYN1L4/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/0RYYN1L4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/0RYYN1L4/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'acoustic_volume_backscattering_strength_in_sea_water'@en ;
+    skos:definition 'Acoustic volume backscattering strength is 10 times the log10 of the ratio of the volume backscattering coefficient to the reference value, 1 m-1. Volume backscattering coefficient is the integral of the backscattering cross-section divided by the volume sampled. Backscattering cross-section is a parameter computed from the intensity of the backscattered sound wave relative to the intensity of the incident sound wave. The parameter is computed to provide a measurement that is proportional to biomass density per unit volume in the field of fisheries acoustics. For further details see MacLennan et. al (2002) doi:10.1006/jmsc.2001.1158.'@en ;
+    skos:notation 'SDN:P07::0RYYN1L4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/0Z6W11MB/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/0Z6W11MB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/0Z6W11MB/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ground_slope_direction'@en ;
+    skos:definition 'Commonly known as aspect, it is the azimuth (in degrees) of a terrain slope, taken as the direction with the greatest downslope change in elevation on the ground (earth) surface. The direction is a bearing in the usual geographical sense, measured positive clockwise from due north.'@en ;
+    skos:notation 'SDN:P07::0Z6W11MB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/175O0TDR/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/175O0TDR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/175O0TDR/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'number_size_distribution_of_aerosol_particles_at_stp_in_air'@en ;
+    skos:definition 'The aerosol particle number size distribution is the number concentration of aerosol particles as a function of particle diameter. A coordinate variable with the standard name of electrical_mobility_particle_diameter, aerodynamic_particle_diameter, or optical_particle_diameter should be specified to indicate that the property applies at specific particle sizes selected by the indicated method. To specify the relative humidity at which the particle sizes were selected, provide a scalar coordinate variable with the standard name of relative_humidity_for_aerosol_particle_size_selection. "log10_X" means common logarithm (i.e. base 10) of X. "stp" means standard temperature (0 degC) and pressure (101325 Pa).'@en ;
+    skos:notation 'SDN:P07::175O0TDR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/1SLC8V4I/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/1SLC8V4I/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/1SLC8V4I/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'shear_strength_of_frozen_soil'@en ;
+    skos:definition 'Shear strength is the amount of force applied to a normal plane required to bring a frozen soil to failure along a tangential plane. Shear strength depends on the angle of friction and cohesion of the soil.'@en ;
+    skos:notation 'SDN:P07::1SLC8V4I'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/1Z5MX55T/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/1Z5MX55T/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/1Z5MX55T/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface_upward_mass_flux_of_methane_due_to_emission_from_termites'@en ;
+    skos:definition 'The surface called "surface" means the lower boundary of the atmosphere. "Upward" indicates a vector component which is positive when directed upward (negative downward). In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. The chemical formula for methane is CH4. The mass is the total mass of the molecules. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. the surface of the earth). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. Termites belong to any of a group of cellulose-eating insects, the social system of which shows remarkable parallels with those of ants and bees, although it has evolved independently. The precise conditions under which termites produce and consume methane can vary between models.'@en ;
+    skos:notation 'SDN:P07::1Z5MX55T'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/1ZSEWIZU/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/1ZSEWIZU/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/1ZSEWIZU/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'moles_of_particulate_inorganic_carbon_per_unit_mass_of_sea_water'@en ;
+    skos:definition 'The construction "moles_of_X_per_unit_mass_in_Y" is also called "molality" of X in Y, where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". Particulate means suspended solids of all sizes. Particulate inorganic carbon is carbon bound in molecules ionically that may be liberated from the particles as carbon dioxide by acidification.'@en ;
+    skos:notation 'SDN:P07::1ZSEWIZU'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/25SUENIW/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/25SUENIW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/25SUENIW/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'thickness_of_soil_surface_organic_layer'@en ;
+    skos:definition 'Depth or height of the organic soil horizon (O or H horizons per the World Reference Base soil classification system), measured from the soil surface down to the mineral horizon. Organic layers are commonly composed of a succession of litter of recognizable origin, of partly decomposed litter, and of highly decomposed (humic) organic material.'@en ;
+    skos:notation 'SDN:P07::25SUENIW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/4NPZATWY/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/4NPZATWY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/4NPZATWY/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'moles_of_particulate_inorganic_carbon_per_unit_mass_in_sea_water'@en ;
+    skos:definition 'The construction "moles_of_X_per_unit_mass_in_Y" is also called "molality" of X in Y, where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". Particulate means suspended solids of all sizes. Particulate inorganic carbon is carbon bound in molecules ionically that may be liberated from the particles as carbon dioxide by acidification.'@en ;
+    skos:notation 'SDN:P07::4NPZATWY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/5DLI2III/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/5DLI2III/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/5DLI2III/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'compressive_strength_of_unconfined_soil'@en ;
+    skos:definition 'The maximum force applied as axial strain to an unconfined soil sample before failure.'@en ;
+    skos:notation 'SDN:P07::5DLI2III'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/5L1T2OVM/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/5L1T2OVM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/5L1T2OVM/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'minimum_mass_ratio_of_water_to_dry_soil_for_soil_plastic_behavior'@en ;
+    skos:definition 'The phrase "ratio_of_X_to_Y" means X/Y. It may be expressed as a fraction, a percentage, or any other dimensionless representation of a fraction. It is the lower limit of the water content at which a 3 mm diameter cylindrical soil sample will break in 3 to 10 mm pieces. It is the lower limit of the plastic state, which has the liquid limit as the upper bound. Known as the plastic limit.'@en ;
+    skos:notation 'SDN:P07::5L1T2OVM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/6B3KYNGV/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/6B3KYNGV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/6B3KYNGV/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'modified_fosberg_fire_weather_index'@en ;
+    skos:definition 'The modified Fosberg Fire Weather Index (mFFWI) is a measure of the potential effect of weather conditions on wildland fire. The Fosberg Fire Weather Index is a function of temperature, wind, and humidity. It is modified with a fuel availability factor based on the Keetch Byram Drought Index.'@en ;
+    skos:notation 'SDN:P07::6B3KYNGV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/6GN00U5J/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/6GN00U5J/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/6GN00U5J/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'altitude_at_top_of_atmosphere_boundary_layer_defined_by_ambient_aerosol_particles_backwards_scattering_by_ranging_instrument'@en ;
+    skos:definition 'The altitude at top of atmosphere boundary layer is the elevation above sea level of the top of the (atmosphere) planetary boundary layer. "defined_by" provides the information of the tracer used for identifying the atmospheric boundary layer top. "Ambient_aerosol" means that the aerosol is measured or modelled at the ambient state of pressure, temperature and relative humidity that exists in its immediate environment. "Ambient aerosol particles" are aerosol particles that have taken up ambient water through hygroscopic growth. The extent of hygroscopic growth depends on the relative humidity and the composition of the particles. "By ranging instrument" means that the backscattering is obtained through ranging techniques like lidar and radar.'@en ;
+    skos:notation 'SDN:P07::6GN00U5J'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/7CUMJMNV/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/7CUMJMNV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/7CUMJMNV/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'aerosol_type_in_atmosphere_layer_in_air'@en ;
+    skos:definition 'A variable with the standard_name of aerosol_type_in_atmosphere_layer_in_air contains either strings which indicate the type of the aerosol determined following a certain aerosol typing schema, or flags which can be translated to strings using flag_values and flag_meanings attributes. "Layer" means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s).'@en ;
+    skos:notation 'SDN:P07::7CUMJMNV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/7JEAQGYH/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/7JEAQGYH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/7JEAQGYH/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'nfdrs_1000_hour_fuel_moisture'@en ;
+    skos:definition '1000 hour fuel moisture (FM1000) represents the modelled moisture content in the dead fuels in the 3 to 8 inch diameter class and the layer of the forest floor about 4 inches below the surface. The value is based on a running 7-day average. The 1000-hour time lag fuel moisture is a function of length of day (as influenced by latitude and calendar date), daily temperature and relative humidity extremes (maximum and minimum values) and the 24-hour precipitation duration values for a 7-day period. It is a component in the US National Fire Danger Rating System. The US National Fire Danger Rating System comprises several numeric indexes that rate the potential over a large area for wildland fires to ignite, spread, and require action to suppress or manage. It was designed for use in the continental United States, and all its components are relative, not absolute.'@en ;
+    skos:notation 'SDN:P07::7JEAQGYH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/7V274BWB/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/7V274BWB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/7V274BWB/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface_upward_mass_flux_of_methane_due_to_emission_from_herbivorous_mammals'@en ;
+    skos:definition 'The surface called "surface" means the lower boundary of the atmosphere. "Upward" indicates a vector component which is positive when directed upward (negative downward). In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. The chemical formula for methane is CH4. The mass is the total mass of the molecules. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. the surface of the earth). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. Herbivores are animals that feed on vegetation. Mammals are any vertebrates within the class Mammalia. Examples of large herbivorous mammals include cows, elks, and buffalos. These animals eat grass, tree bark, aquatic vegetation, and shrubby growth. Herbivores can also be medium-sized animals such as sheep and goats, which eat shrubby vegetation and grasses. Small herbivores include rabbits, chipmunks, squirrels, and mice. The precise conditions under which herbivorous mammals produce and consume methane can vary between models.'@en ;
+    skos:notation 'SDN:P07::7V274BWB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/A21Q8WTV/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/A21Q8WTV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/A21Q8WTV/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'number_size_distribution_of_cloud_condensation_nuclei_at_stp_in_air'@en ;
+    skos:definition 'The cloud condensation nuclei number size distribution is the number concentration of aerosol particles as a function of particle diameter, where the particle acts as condensation nucleus for liquid-phase clouds. A coordinate variable with the standard name of relative_humidity should be specified to indicate that the property refers to a specific supersaturation with respect to liquid water. A coordinate variable with the standard name of electrical_mobility_particle_diameter should be specified to indicate that the property applies at specific mobility particle sizes. To specify the relative humidity at which the particle sizes were selected, provide a scalar coordinate variable with the standard name of relative_humidity_for_aerosol_particle_size_selection. The ability of a particle to act as a condensation nucleus is determined by its size, chemical composition, and morphology. "stp" means standard temperature (0 degC) and pressure (101325 Pa).'@en ;
+    skos:notation 'SDN:P07::A21Q8WTV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/AXDBCNBI/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/AXDBCNBI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/AXDBCNBI/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'volume_backwards_scattering_coefficient_of_radiative_flux_by_ranging_instrument_in_air_due_to_ambient_aerosol_particles'@en ;
+    skos:definition 'Volume backwards scattering coefficient by ranging instrument is the fraction of radiative flux, per unit path length and per unit solid angle, scattered at 180 degrees angle respect to the incident radiation and obtained through ranging techniques like lidar and radar. Backwards scattering coefficient is assumed to be related to the same wavelength of incident radiation. "Ambient_aerosol" means that the aerosol is measured or modelled at the ambient state of pressure, temperature and relative humidity that exists in its immediate environment. "Ambient aerosol particles" are aerosol particles that have taken up ambient water through hygroscopic growth. The extent of hygroscopic growth depends on the relative humidity and the composition of the particles. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.'@en ;
+    skos:notation 'SDN:P07::AXDBCNBI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BD5S9CCR/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BD5S9CCR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BD5S9CCR/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'number_size_distribution_of_aerosol_particles_in_air'@en ;
+    skos:definition 'The aerosol particle number size distribution is the number concentration of aerosol particles as a function of particle diameter. A coordinate variable with the standard name of electrical_mobility_particle_diameter, aerodynamic_particle_diameter, or optical_particle_diameter should be specified to indicate that the property applies at specific particle sizes selected by the indicated method. To specify the relative humidity at which the particle sizes were selected, provide a scalar coordinate variable with the standard name of relative_humidity_for_aerosol_particle_size_selection.'@en ;
+    skos:notation 'SDN:P07::BD5S9CCR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BJ3ONH9W/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BJ3ONH9W/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BJ3ONH9W/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'keetch_byram_drought_index'@en ;
+    skos:definition 'The Keetch Byram Drought Index (KBDI) is a numerical drought index ranging from 0 to 800 that estimates the cumulative moisture deficiency in soil. It is a cumulative index. It is a function of maximum temperature and precipitation over the previous 24 hours.'@en ;
+    skos:notation 'SDN:P07::BJ3ONH9W'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BP5UJG3V/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BP5UJG3V/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BP5UJG3V/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'log10_size_interval_based_number_size_distribution_of_aerosol_particles_in_air'@en ;
+    skos:definition 'The aerosol particle number size distribution is the number concentration of aerosol particles, normalised to the decadal logarithmic size interval the concentration applies to, as a function of particle diameter. A coordinate variable with the standard name of electrical_mobility_particle_diameter, aerodynamic_particle_diameter, or optical_particle_diameter should be specified to indicate that the property applies at specific particle sizes selected by the indicated method. To specify the relative humidity at which the particle sizes were selected, provide a scalar coordinate variable with the standard name of relative_humidity_for_aerosol_particle_size_selection. "log10_X" means common logarithm (i.e. base 10) of X.'@en ;
+    skos:notation 'SDN:P07::BP5UJG3V'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BU0DQDLA/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BU0DQDLA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BU0DQDLA/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface_upward_mass_flux_of_methane_due_to_emission_from_fires'@en ;
+    skos:definition 'Methane emitted from the surface, generated by biomass burning (fires). Positive direction upwards. The surface called "surface" means the lower boundary of the atmosphere. "Upward" indicates a vector component which is positive when directed upward (negative downward). In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. The chemical formula for methane is CH4. The mass is the total mass of the molecules. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. the surface of the earth). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. The term "fires" means all biomass fires, whether naturally occurring or ignited by humans. The precise conditions under which fires produce and consume methane can vary between models.'@en ;
+    skos:notation 'SDN:P07::BU0DQDLA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/DZ5R0U8Y/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/DZ5R0U8Y/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/DZ5R0U8Y/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'log10_size_interval_based_number_size_distribution_of_aerosol_particles_at_stp_in_air'@en ;
+    skos:definition 'The aerosol particle number size distribution is the number concentration of aerosol particles, normalised to the decadal logarithmic size interval the concentration applies to, as a function of particle diameter. A coordinate variable with the standard name of electrical_mobility_particle_diameter, aerodynamic_particle_diameter, or optical_particle_diameter should be specified to indicate that the property applies at specific particle sizes selected by the indicated method. To specify the relative humidity at which the particle sizes were selected, provide a scalar coordinate variable with the standard name of relative_humidity_for_aerosol_particle_size_selection. "log10_X" means common logarithm (i.e. base 10) of X. "stp" means standard temperature (0 degC) and pressure (101325 Pa).'@en ;
+    skos:notation 'SDN:P07::DZ5R0U8Y'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/ECFAHXEC/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/ECFAHXEC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/ECFAHXEC/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'canadian_fire_weather_index'@en ;
+    skos:definition 'The Canadian Fire Weather Index (CFWI) is a numerical rating of potential frontal fire intensity from the Canadian Forest Fire Index System. It indicates fire intensity by combining the rate of spread with the amount of fuel being consumed and is also used for general public information about fire danger conditions. It is a function of wind speed, temperature, relative humidity, and precipitation. The calculation accounts for multiple layers of flammable material on the ground as well as fine fuels above the surface, combined with the expected rate of spread of fire. The index is open ended.'@en ;
+    skos:notation 'SDN:P07::ECFAHXEC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/FCEXO7DJ/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/FCEXO7DJ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/FCEXO7DJ/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'nfdrs_100_hour_fuel_moisture'@en ;
+    skos:definition '100 hour fuel moisture (FM100) represents the modeled moisture content of dead fuels in the 1 to 3 inch diameter class. It can also be used as a very rough estimate of the average moisture content of the forest floor from three-fourths inch to 4 inches below the surface. The 100-hour timelag fuel moisture is a function of length of day (as influenced by latitude and calendar date), maximum and minimum temperature and relative humidity, and precipitation duration in the previous 24 hours. It is a component in the US National Fire Danger Rating System. The US National Fire Danger Rating System comprises several numeric indexes that rate the potential over a large area for wildland fires to ignite, spread, and require action to suppress or manage. It was designed for use in the continental United States, and all its components are relative, not absolute.'@en ;
+    skos:notation 'SDN:P07::FCEXO7DJ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/GBBLMM7I/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/GBBLMM7I/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/GBBLMM7I/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_concentration_of_dissolved_organic_13C_in_sea_water'@en ;
+    skos:definition 'Sum of dissolved organic carbon-13 component concentrations. "Mole concentration" means number of moles per unit volume, also called "molarity", and is used in the construction "mole_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical or biological species denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". "Organic carbon" describes a family of chemical species and is the term used in standard names for all species belonging to the family that are represented within a given model. The list of individual species that are included in a quantity having a group chemical standard name can vary between models. Where possible, the data variable should be accompanied by a complete description of the species represented, for example, by using a comment attribute. "C" means the element carbon and "13C" is the stable isotope "carbon-13", having six protons and seven neutrons.'@en ;
+    skos:notation 'SDN:P07::GBBLMM7I'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/GWEZRUTL/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/GWEZRUTL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/GWEZRUTL/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'cloud_type'@en ;
+    skos:definition 'A variable with the standard_name of cloud_type contains either strings which indicate the cloud type, or flags which can be translated to strings using flag_values and flag_meanings attributes.'@en ;
+    skos:notation 'SDN:P07::GWEZRUTL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/GZCFTK5R/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/GZCFTK5R/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/GZCFTK5R/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ground_slope_angle'@en ;
+    skos:definition 'The slope angle is the angle (in degrees) measured between the ground (earth) surface plane and a flat, horizontal surface.'@en ;
+    skos:notation 'SDN:P07::GZCFTK5R'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/HWVJLD32/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/HWVJLD32/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/HWVJLD32/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'volume_extinction_angstrom_exponent_in_air_due_to_ambient_aerosol_particles'@en ;
+    skos:definition 'The volume extinction Angstrom exponent is the Angstrom exponent obtained for the aerosol extinction instead that for the aerosol optical thickness. It is alpha in the following equation relating aerosol extinction (ext) at the wavelength lambda to aerosol extinction at a different wavelength lambda0: ext(lambda) = ext(lambda0) * [lambda/lambda0] ** (-1 * alpha). "Ambient_aerosol" means that the aerosol is measured or modelled at the ambient state of pressure, temperature and relative humidity that exists in its immediate environment. "Ambient aerosol particles" are aerosol particles that have taken up ambient water through hygroscopic growth. The extent of hygroscopic growth depends on the relative humidity and the composition of the particles. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.'@en ;
+    skos:notation 'SDN:P07::HWVJLD32'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/K88UQGUS/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/K88UQGUS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/K88UQGUS/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'dry_soil_density'@en ;
+    skos:definition 'The density of the soil after oven drying until constant mass is reached. Volume is determined from the field sample volume. The density of a substance is its mass per unit volume.'@en ;
+    skos:notation 'SDN:P07::K88UQGUS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/KPMSIGCX/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/KPMSIGCX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/KPMSIGCX/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'nfdrs_energy_release_component'@en ;
+    skos:definition 'The Energy Release Component (ERC) is a number related to the available energy per unit area within the flaming front at the head of a fire. It is usually given in BTU ft-2. Daily variations in ERC are due to changes in moisture content of the various fuels present, both live and dead. It may also be considered a composite fuel moisture value as it reflects the contribution that all live and dead fuels have to potential fire intensity. Energy Release Component is a cumulative index. The scale is open-ended and relative. Energy Release Component values depend on the fuel model input into the calculations and interpretation of precise values varies with ecology and region. It is an index in the US National Fire Danger Rating System. The US National Fire Danger Rating System comprises several numeric indexes that rate the potential over a large area for wildland fires to ignite, spread, and require action to suppress or manage. It was designed for use in the continental United States, and all its components are relative, not absolute.'@en ;
+    skos:notation 'SDN:P07::KPMSIGCX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/LKV9NXIH/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/LKV9NXIH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/LKV9NXIH/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'angstrom_exponent_of_volume_backwards_scattering_in_air_due_to_ambient_aerosol_particles'@en ;
+    skos:definition 'The Angstrom exponent of volume backwards scattering is the Angstrom exponent related only to the aerosol backwards scattering component. It is alpha in the following equation relating volume backwards scattering (back) at the wavelength lambda to volume backwards scattering at a different wavelength lambda0: back(lambda) = back(lambda0) * [lambda/lambda0] ** (-1 * alpha). "Ambient_aerosol" means that the aerosol is measured or modelled at the ambient state of pressure, temperature and relative humidity that exists in its immediate environment. "Ambient aerosol particles" are aerosol particles that have taken up ambient water through hygroscopic growth. The extent of hygroscopic growth depends on the relative humidity and the composition of the particles. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.'@en ;
+    skos:notation 'SDN:P07::LKV9NXIH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/LLJZQQZR/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/LLJZQQZR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/LLJZQQZR/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'shear_strength_of_soil'@en ;
+    skos:definition 'Shear strength is the amount of force applied to a normal plane required to bring the soil to failure along a tangential plane. Shear strength depends on the angle of friction and cohesion of the soil.'@en ;
+    skos:notation 'SDN:P07::LLJZQQZR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/M3RBLOZY/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/M3RBLOZY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/M3RBLOZY/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'vertical_drainage_amount_in_soil'@en ;
+    skos:definition '"Drainage" is the process of removal of excess water from soil by gravitational flow. "Amount" means mass per unit area. The vertical drainage amount in soil is the amount of water that drains through the bottom of a soil column extending from the surface to a specified depth.'@en ;
+    skos:notation 'SDN:P07::M3RBLOZY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/MF725BHN/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/MF725BHN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/MF725BHN/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_water_electrical_conductivity_at_reference_temperature'@en ;
+    skos:definition 'The electrical conductivity of sea water in a sample measured at a defined reference temperature. The reference temperature should be recorded in a scalar coordinate variable, or a coordinate variable with a single dimension of size one, and the standard name of temperature_of_analysis_of_sea_water. This quantity is sometimes called \'specific conductivity\' when the reference temperature 25 degrees Celsius.'@en ;
+    skos:notation 'SDN:P07::MF725BHN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/MM3VZ038/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/MM3VZ038/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/MM3VZ038/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'acoustic_target_strength_in_sea_water'@en ;
+    skos:definition 'Target strength is 10 times the log10 of the ratio of backscattering cross-section to the reference value, 1 m2. Backscattering cross-section is a parameter computed from the intensity of the backscattered sound wave relative to the intensity of the incident sound wave. For further details see MacLennan et. al (2002) doi:10.1006/jmsc.2001.1158.'@en ;
+    skos:notation 'SDN:P07::MM3VZ038'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/NEMEHBFJ/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/NEMEHBFJ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/NEMEHBFJ/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'log10_size_interval_based_number_size_distribution_of_cloud_condensation_nuclei_in_air'@en ;
+    skos:definition 'The cloud condensation nuclei number size distribution is the number concentration of aerosol particles, normalised to the decadal logarithmic size interval the concentration applies to, as a function of particle diameter, where the particle acts as condensation nucleus for liquid-phase clouds. A coordinate variable with the standard name of relative_humidity should be specified to indicate that the property refers to a specific supersaturation with respect to liquid water. A coordinate variable with the standard name of electrical_mobility_particle_diameter should be specified to indicate that the property applies at specific mobility particle sizes. To specify the relative humidity at which the particle sizes were selected, provide a scalar coordinate variable with the standard name of relative_humidity_for_aerosol_particle_size_selection. The ability of a particle to act as a condensation nucleus is determined by its size, chemical composition, and morphology. "log10_X" means common logarithm (i.e. base 10) of X.'@en ;
+    skos:notation 'SDN:P07::NEMEHBFJ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/OJUDV53W/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/OJUDV53W/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/OJUDV53W/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ratio_of_volume_extinction_coefficient_to_volume_backwards_scattering_coefficient_by_ranging_instrument_in_air_due_to_ambient_aerosol_particles'@en ;
+    skos:definition 'The ratio of volume extinction coefficient to volume backwards scattering coefficient by ranging instrument in air due to ambient aerosol particles (often called "lidar ratio") is the ratio of the "volume extinction coefficient" and the "volume backwards scattering coefficient of radiative flux by ranging instrument in air due to ambient aerosol particles". The ratio is assumed to be related to the same wavelength of incident radiation. "Ambient_aerosol" means that the aerosol is measured or modelled at the ambient state of pressure, temperature and relative humidity that exists in its immediate environment. "Ambient aerosol particles" are aerosol particles that have taken up ambient water through hygroscopic growth. The extent of hygroscopic growth depends on the relative humidity and the composition of the particles. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.'@en ;
+    skos:notation 'SDN:P07::OJUDV53W'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/OK7Z6IG0/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/OK7Z6IG0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/OK7Z6IG0/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'nfdrs_burning_index'@en ;
+    skos:definition 'The Burning Index (BI) is a numeric value closely related to the flame length in feet multiplied by 10, which is related to the contribution of fire behaviour to the effort of containing a fire. The BI is a function of fire spread and fire intensity and is derived from a combination of Spread and Energy Release Components. The Spread Component is a rating of the forward rate of spread of a head fire and wind is a key input. The scale is open ended which allows the range of numbers to adequately define fire problems, even in time of low to moderate fire danger. Computed BI values represent the near upper limit to be expected on the rating area. In other words, if a fire occurs in the worst fuel, weather and topography conditions of the rating area, these numbers indicate its expected fire line intensities and flame length. It is an index in the US National Fire Danger Rating System. The US National Fire Danger Rating System comprises several numeric indexes that rate the potential over a large area for wildland fires to ignite, spread, and require action to suppress or manage. It was designed for use in the continental United States, and all its components are relative, not absolute.'@en ;
+    skos:notation 'SDN:P07::OK7Z6IG0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/OOAZZFEW/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/OOAZZFEW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/OOAZZFEW/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'compressive_strength_of_unconfined_frozen_soil'@en ;
+    skos:definition 'The maximum force applied as axial strain to an unconfined frozen soil sample before failure.'@en ;
+    skos:notation 'SDN:P07::OOAZZFEW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/R081FSL7/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/R081FSL7/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/R081FSL7/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'soil_density'@en ;
+    skos:definition 'The density of the soil in its natural condition. Also known as bulk density. The density of a substance is its mass per unit volume.'@en ;
+    skos:notation 'SDN:P07::R081FSL7'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/UZARDE0R/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/UZARDE0R/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/UZARDE0R/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'number_size_distribution_of_cloud_condensation_nuclei_in_air'@en ;
+    skos:definition 'The cloud condensation nuclei number size distribution is the number concentration of aerosol particles as a function of particle diameter, where the particle acts as condensation nucleus for liquid-phase clouds. A coordinate variable with the standard name of relative_humidity should be specified to indicate that the property refers to a specific supersaturation with respect to liquid water. A coordinate variable with the standard name of electrical_mobility_particle_diameter should be specified to indicate that the property applies at specific mobility particle sizes. To specify the relative humidity at which the particle sizes were selected, provide a scalar coordinate variable with the standard name of relative_humidity_for_aerosol_particle_size_selection. The ability of a particle to act as a condensation nucleus is determined by its size, chemical composition, and morphology.'@en ;
+    skos:notation 'SDN:P07::UZARDE0R'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/WMDR89AT/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/WMDR89AT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/WMDR89AT/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'nfdrs_severe_fire_danger_index'@en ;
+    skos:definition 'Severe Fire Danger Index (SFDI) is the normalized product of normalized Energy Release Component (ERC) and normalized Burning Index (BI) from the United States National Fire Danger Rating System (NFDRS). While SFDI is not officially part of the National Fire Danger Rating System, it is related to and intended to supplement NFDRS. It is commonly categorized into five classes based on percentile: low (0-60), moderate (60-80), high (80-90), very high (90-97), and extreme (97-100). It can be extended to future conditions by introducing an unprecedented category for values above the historical 100th percentile. As it is locally normalized, its interpretation remains the same across space.'@en ;
+    skos:notation 'SDN:P07::WMDR89AT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/WO8GKMFX/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/WO8GKMFX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/WO8GKMFX/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'soil_water_salinity'@en ;
+    skos:definition 'soil_water_salinity is the salt content of soil water, often on the Practical Salinity Scale of 1978. However, the unqualified term \'salinity\' is generic and does not necessarily imply any particular method of calculation. The units of salinity are dimensionless and normally given as 1e-3 or 0.001 i.e. parts per thousand.'@en ;
+    skos:notation 'SDN:P07::WO8GKMFX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/Y04WKCLC/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/Y04WKCLC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/Y04WKCLC/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface_downward_mass_flux_of_methane_due_to_non_wetland_soil_biological_consumption'@en ;
+    skos:definition 'The surface called "surface" means the lower boundary of the atmosphere. "Downward" indicates a vector component which is positive when directed downward (negative upward). In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. The chemical formula for methane is CH4. The mass is the total mass of the molecules. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. Non-wetland soils are all soils except for wetlands. Wetlands are areas where water covers the soil, or is present either at or near the surface of the soil all year or for varying periods of time during the year, including during the growing season. The precise conditions under which non-wetland soils produce and consume methane can vary between models.'@en ;
+    skos:notation 'SDN:P07::Y04WKCLC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/Y7NOULT3/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/Y7NOULT3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/Y7NOULT3/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_ratio_of_moisture_to_dry_soil'@en ;
+    skos:definition 'The quantity with standard name mass_ratio_of_moisture_to_dry_soil is also known as the water content of a soil or the wet-basis gravimetric moisture content. It is the ratio of the mass of water (liquid and solid) to the mass of the dried sample.The phrase "ratio_of_X_to_Y" means X/Y. It may be expressed as a fraction, a percentage, or any other dimensionless representation of a fraction.'@en ;
+    skos:notation 'SDN:P07::Y7NOULT3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/YNRILV6V/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/YNRILV6V/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/YNRILV6V/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'frozen_soil_density'@en ;
+    skos:definition 'The density of the soil in its naturally frozen condition. Also known as frozen bulk density. The density of a substance is its mass per unit volume.'@en ;
+    skos:notation 'SDN:P07::YNRILV6V'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/Z6JKE6RA/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/Z6JKE6RA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/Z6JKE6RA/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'density_ratio_of_dry_soil_to_water'@en ;
+    skos:definition 'The phrase "ratio_of_X_to_Y" means X/Y. It may be expressed as a fraction, a percentage, or any other dimensionless representation of a fraction. Also known as specific gravity, where soil represents a dry soil sample. The density of a substance is its mass per unit volume.'@en ;
+    skos:notation 'SDN:P07::Z6JKE6RA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/ZM49JDO0/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/ZM49JDO0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/ZM49JDO0/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'acoustic_area_backscattering_strength_in_sea_water'@en ;
+    skos:definition 'Acoustic area backscattering strength is 10 times the log10 of the ratio of the area backscattering coefficient to the reference value, 1 (m2 m-2). Area backscattering coefficient is the integral of the volume backscattering coefficient over a defined distance. Volume backscattering coefficient is the linear form of acoustic_volume_backscattering_strength_in_sea_water. For further details see MacLennan et. al (2002) doi:10.1006/jmsc.2001.1158.'@en ;
+    skos:notation 'SDN:P07::ZM49JDO0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/ZVTMSND1/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/ZVTMSND1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/ZVTMSND1/>;
+    dc:modified '2023-04-24T17:39:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'minimum_mass_ratio_of_water_to_dry_soil_for_soil_viscous_flow'@en ;
+    skos:definition 'The phrase "ratio_of_X_to_Y" means X/Y. It may be expressed as a fraction, a percentage, or any other dimensionless representation of a fraction. It is the lower limit of the water content at which a soil sample will flow in a viscous manner. Known as the liquid limit.'@en ;
+    skos:notation 'SDN:P07::ZVTMSND1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/05YLQ0LQ/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/05YLQ0LQ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/05YLQ0LQ/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_surface_wave_mean_wavelength_from_variance_spectral_density_inverse_wavenumber_moment'@en ;
+    skos:definition 'The wave directional spectrum can be written as a five dimensional function S(t,x,y,k,theta) where t is time, x and y are horizontal coordinates (such as longitude and latitude), k is wavenumber and theta is direction. S has the standard name sea_surface_wave_directional_variance_spectral_density. S can be integrated over direction to give S1= integral(S dtheta) and this quantity has the standard name sea_surface_wave_variance_spectral_density. Wavenumber is the number of oscillations of a wave per unit distance. Wavenumber moments, M(n) of S1 can then be calculated as follows: M(n) = integral(S1 k^n dk), where k^n is k to the power of n. The inverse wave wavenumber, k(m-1), is calculated as the ratio M(-1)/M(0). The wavelength is the horizontal distance between repeated features on the waveform such as crests, troughs or upward passes through the mean level.'@en ;
+    skos:notation 'SDN:P07::05YLQ0LQ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/15A7IU51/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/15A7IU51/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/15A7IU51/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water_potential_evapotranspiration_amount'@en ;
+    skos:definition 'Potential evapotranspiration is the rate at which evapotranspiration would occur under ambient conditions from a uniformly vegetated area when the water supply is not limiting. "Evapotranspiration" means all water vapor fluxes into the atmosphere from the surface: liquid evaporation, sublimation and transpiration. Transpiration is the process by which liquid water in plant stomata is transferred as water vapor into the atmosphere. Evaporation is the conversion of liquid or solid into vapor. (The conversion of solid alone into vapor is called "sublimation"). Amount means mass per unit area.'@en ;
+    skos:notation 'SDN:P07::15A7IU51'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/2CRNGV5T/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/2CRNGV5T/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/2CRNGV5T/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_elemental_carbon_in_pm1_dry_aerosol_particles_in_air'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". "Aerosol" means the system of suspended liquid or solid particles in air (except cloud droplets) and their carrier gas, the air itself. Aerosol particles take up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the particles. "Dry aerosol particles" means aerosol particles without any water uptake. "Pm1 aerosol" means atmospheric particulate compounds with an aerodynamic diameter of less than or equal to 1 micrometer. Chemically, "elemental carbon" is the carbonaceous fraction of particulate matter that is thermally stable in an inert atmosphere to high temperatures near 4000K and can only be gasified by oxidation starting at temperatures above 340 C. It is assumed to be inert and non-volatile under atmospheric conditions and insoluble in any solvent (Ogren and Charlson, 1983). In measurements of carbonaceous aerosols, elemental carbon samples may also include some inorganic carbon compounds, whose mass is neglected and assumed to be distributed between the elemental and organic carbon components of the aerosol particles. Reference: Petzold, A., Ogren, J. A., Fiebig, M., Laj, P., Li, S.-M., Baltensperger, U., Holzer-Popp, T., Kinne, S., Pappalardo, G., Sugimoto, N., Wehrli, C., Wiedensohler, A., and Zhang, X.-Y.: Recommendations for reporting "black carbon" measurements, Atmos. Chem. Phys., 13, 8365-8379, https://doi.org/10.5194/acp-13-8365-2013, 2013.'@en ;
+    skos:notation 'SDN:P07::2CRNGV5T'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/371JBG85/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/371JBG85/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/371JBG85/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sinking_mass_flux_of_particulate_inorganic_carbon_in_sea_water'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. "Sinking" is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid. Particulate means suspended solids of all sizes. Particulate inorganic carbon is carbon bound in molecules ionically that may be liberated from the particles as carbon dioxide by acidification.'@en ;
+    skos:notation 'SDN:P07::371JBG85'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/43Y3TCV2/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/43Y3TCV2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/43Y3TCV2/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_absorption_equivalent_black_carbon_of_pm2p5_dry_aerosol_particles_in_air'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". "Aerosol" means the system of suspended liquid or solid particles in air (except cloud droplets) and their carrier gas, the air itself. Aerosol particles take up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the particles. "Dry aerosol particles" means aerosol particles without any water uptake. "Pm2p5 aerosol" means atmospheric particulate compounds with an aerodynamic diameter of less than or equal to 2.5 micrometers. The absorption equivalent black carbon mass concentration is obtained by conversion from the particle light absorption coefficient with a suitable mass absorption cross-section. Reference: Petzold, A., Ogren, J. A., Fiebig, M., Laj, P., Li, S.-M., Baltensperger, U., Holzer-Popp, T., Kinne, S., Pappalardo, G., Sugimoto, N., Wehrli, C., Wiedensohler, A., and Zhang, X.-Y.: Recommendations for reporting "black carbon" measurements, Atmos. Chem. Phys., 13, 8365-8379, https://doi.org/10.5194/acp-13-8365-2013, 2013.'@en ;
+    skos:notation 'SDN:P07::43Y3TCV2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/50QMCEC1/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/50QMCEC1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/50QMCEC1/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface_sea_water_x_velocity'@en ;
+    skos:definition 'A velocity is a vector quantity. "x" indicates a vector component along the grid x-axis, positive with increasing x. Ocean currents are related to phenomena of different nature and processes, such as density currents, currents raised by the wind, tide, wave propagation, mass flow in estuaries, etc. This standard name refers to the sum of currents of all origins.'@en ;
+    skos:notation 'SDN:P07::50QMCEC1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/5E2BOV5V/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/5E2BOV5V/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/5E2BOV5V/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'upward_latent_heat_flux_into_air_due_to_transpiration'@en ;
+    skos:definition '"Upward" indicates a vector component which is positive when directed upward (negative downward). In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. Transpiration is the process by which liquid water in plant stomata is transferred as water vapor into the atmosphere. The latent heat flux due to transpiration is the release of latent heat from plant surfaces to the air due to the release of water vapor.'@en ;
+    skos:notation 'SDN:P07::5E2BOV5V'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/5UUAWMX7/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/5UUAWMX7/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/5UUAWMX7/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'enrichment_of_15N_in_particulate_nitrogen_in_sea_water_expressed_as_lowercase_delta_15N_relative_to_atmospheric_nitrogen'@en ;
+    skos:definition 'Isotopic enrichment of 15N, often called delta 15N, is a measure of the ratio of stable isotopes 15N:14N. It is a parameterisation of the 15N/14N isotopic ratio in the sample with respect to the isotopic ratio in a reference standard (in this case atmospheric nitrogen). It is computed using the formula (((15N/14N)sample / (15N/14N)standard) - 1) * 1000. Particulate means suspended solids of all sizes.'@en ;
+    skos:notation 'SDN:P07::5UUAWMX7'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/6TLT0W2W/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/6TLT0W2W/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/6TLT0W2W/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_tribromomethane_in_air'@en ;
+    skos:definition '"Mole fraction" is used in the construction "mole_fraction_of_X_in_Y", where X is a material constituent of Y. A chemical or biological species denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The chemical formula for tribromomethane is CHBr3. The IUPAC name is tribromomethane.'@en ;
+    skos:notation 'SDN:P07::6TLT0W2W'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/6XFKWZYA/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/6XFKWZYA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/6XFKWZYA/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_organic_carbon_in_dry_aerosol_particles_in_air'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". "Aerosol" means the system of suspended liquid or solid particles in air (except cloud droplets) and their carrier gas, the air itself. Aerosol particles take up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the particles. "Dry aerosol particles" means aerosol particles without any water uptake. Chemically, "organic carbon aerosol" refers to the carbonaceous fraction of particulate matter contained in any of the vast number of compounds where carbon is chemically combined with hydrogen and other elements like O, S, N, P, Cl, etc. In measurements of carbonaceous aerosols, organic carbon samples may also include some inorganic carbon compounds, whose mass is neglected and assumed to be distributed between the elemental and organic carbon components of the aerosol particles. Reference: Petzold, A., Ogren, J. A., Fiebig, M., Laj, P., Li, S.-M., Baltensperger, U., Holzer-Popp, T., Kinne, S., Pappalardo, G., Sugimoto, N., Wehrli, C., Wiedensohler, A., and Zhang, X.-Y.: Recommendations for reporting "black carbon" measurements, Atmos. Chem. Phys., 13, 8365-8379, https://doi.org/10.5194/acp-13-8365-2013, 2013.'@en ;
+    skos:notation 'SDN:P07::6XFKWZYA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/7MOAR9ZU/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/7MOAR9ZU/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/7MOAR9ZU/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'number_concentration_of_cloud_condensation_nuclei_in_air'@en ;
+    skos:definition '"Number concentration" means the number of particles or other specified objects per unit volume. The cloud condensation nuclei number concentration is the total number of aerosol particles per unit volume independent of and integrated over particle size that act as condensation nuclei for liquid-phase clouds. A coordinate variable with the standard name of relative_humidity should be specified to indicate that the property refers to a specific supersaturation with respect to liquid water. The ability of a particle to act as a condensation nucleus is determined by its size, chemical composition, and morphology.'@en ;
+    skos:notation 'SDN:P07::7MOAR9ZU'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/8296VWVP/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/8296VWVP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/8296VWVP/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'number_concentration_of_biological_taxon_pollen_grains_in_air'@en ;
+    skos:definition '"Number concentration" means the number of particles or other specified objects per unit volume. "Pollen grain" refers to the male gametophyte of seed plants (either angiosperms or gymnosperms). The number concentration of pollen grains refers to the number of individual pollen grains per unit volume. "Biological taxon" is a name or other label identifying an organism or a group of organisms as belonging to a unit of classification in a hierarchical taxonomy. There must be an auxiliary coordinate variable with standard name biological_taxon_name to identify the taxon in human readable format and optionally an auxiliary coordinate variable with standard name biological_taxon_identifier to provide a machine-readable identifier. See Section 6.1.2 of the CF convention (version 1.8 or later) for information about biological taxon auxiliary coordinate variables.'@en ;
+    skos:notation 'SDN:P07::8296VWVP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/9UYOFIKP/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/9UYOFIKP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/9UYOFIKP/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'moles_of_hydrogen_peroxide_per_unit_mass_in_sea_water'@en ;
+    skos:definition 'The construction "moles_of_X_per_unit_mass_in_Y" is also called "molality" of X in Y, where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The chemical formula for hydrogen peroxide is H2O2.'@en ;
+    skos:notation 'SDN:P07::9UYOFIKP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/A11O6XFX/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/A11O6XFX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/A11O6XFX/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_bromochloromethane_in_air'@en ;
+    skos:definition '"Mole fraction" is used in the construction "mole_fraction_of_X_in_Y", where X is a material constituent of Y. A chemical or biological species denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The chemical formula for bromochloromethane is CH2BrCl. The IUPAC name is bromochloromethane.'@en ;
+    skos:notation 'SDN:P07::A11O6XFX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/A11Z9FG9/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/A11Z9FG9/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/A11Z9FG9/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_chlorophyll_c4_in_sea_water'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". Chlorophylls are the green pigments found in most plants, algae and cyanobacteria; their presence is essential for photosynthesis to take place. There are several different forms of chlorophyll that occur naturally. All contain a chlorin ring (chemical formula C20H16N4) which gives the green pigment and a side chain whose structure varies. The naturally occurring forms of chlorophyll contain between 35 and 55 carbon atoms.'@en ;
+    skos:notation 'SDN:P07::A11Z9FG9'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CDRAIE77/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CDRAIE77/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CDRAIE77/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_concentration_of_guanosine_triphosphate_in_sea_water'@en ;
+    skos:definition '"Mole concentration" means number of moles per unit volume, also called "molarity", and is used in the construction "mole_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The chemical formula of guanosine triphosphate is C10H16N5O14P3.'@en ;
+    skos:notation 'SDN:P07::CDRAIE77'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0094/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0094/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0094/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'transpiration_amount'@en ;
+    skos:definition '"Amount" means mass per unit area. Transpiration is the process by which liquid water in plant stomata is transferred as water vapor into the atmosphere.'@en ;
+    skos:notation 'SDN:P07::CFSN0094'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0095/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0095/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0095/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'transpiration_flux'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. Transpiration is the process by which liquid water in plant stomata is transferred as water vapor into the atmosphere.'@en ;
+    skos:notation 'SDN:P07::CFSN0095'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV13N31/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV13N31/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV13N31/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_surface_wave_period_at_variance_spectral_density_maximum'@en ;
+    skos:definition 'A period is an interval of time, or the time-period of an oscillation. Wave period is the interval of time between repeated features on the waveform such as crests, troughs or upward passes through the mean level. The sea_surface_wave_period_at_variance_spectral_density_maximum, sometimes called peak wave period, is the period of the most energetic waves in the total wave spectrum at a specific location. The wave directional spectrum can be written as a five dimensional function S(t,x,y,f,theta) where t is time, x and y are horizontal coordinates (such as longitude and latitude), f is frequency and theta is direction. S has the standard name sea_surface_wave_directional_variance_spectral_density. S can be integrated over direction to give S1= integral(S dtheta) and this quantity has the standard name sea_surface_wave_variance_spectral_density.'@en ;
+    skos:notation 'SDN:P07::CFV13N31'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/DIOHC0YE/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/DIOHC0YE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/DIOHC0YE/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface_sea_water_y_velocity_due_to_tides'@en ;
+    skos:definition 'A velocity is a vector quantity. "y" indicates a vector component along the grid y-axis, positive with increasing y. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. Tides are the rise and fall of sea levels caused by the combined effects of the gravitational forces exerted by the Moon and the Sun, and the rotation of the Earth. This rise in water level is accompanied by a horizontal movement of water called the tidal current.'@en ;
+    skos:notation 'SDN:P07::DIOHC0YE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/DTWH7S08/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/DTWH7S08/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/DTWH7S08/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sinking_mass_flux_of_particulate_carbon_in_sea_water'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. \'Sinking\' is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid. Particulate means suspended solids of all sizes.'@en ;
+    skos:notation 'SDN:P07::DTWH7S08'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/E1FDB8H6/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/E1FDB8H6/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/E1FDB8H6/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_elemental_carbon_in_dry_aerosol_particles_in_air'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". "Aerosol" means the system of suspended liquid or solid particles in air (except cloud droplets) and their carrier gas, the air itself. Aerosol particles take up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the particles. "Dry aerosol particles" means aerosol particles without any water uptake. Chemically, "elemental carbon" is the carbonaceous fraction of particulate matter that is thermally stable in an inert atmosphere to high temperatures near 4000K and can only be gasified by oxidation starting at temperatures above 340 C. It is assumed to be inert and non-volatile under atmospheric conditions and insoluble in any solvent (Ogren and Charlson, 1983). In measurements of carbonaceous aerosols, elemental carbon samples may also include some inorganic carbon compounds, whose mass is neglected and assumed to be distributed between the elemental and organic carbon components of the aerosol particles. Reference: Petzold, A., Ogren, J. A., Fiebig, M., Laj, P., Li, S.-M., Baltensperger, U., Holzer-Popp, T., Kinne, S., Pappalardo, G., Sugimoto, N., Wehrli, C., Wiedensohler, A., and Zhang, X.-Y.: Recommendations for reporting "black carbon" measurements, Atmos. Chem. Phys., 13, 8365-8379, https://doi.org/10.5194/acp-13-8365-2013, 2013.'@en ;
+    skos:notation 'SDN:P07::E1FDB8H6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/GGUEVS8B/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/GGUEVS8B/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/GGUEVS8B/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_dibromomethane_in_air'@en ;
+    skos:definition '"Mole fraction" is used in the construction "mole_fraction_of_X_in_Y", where X is a material constituent of Y. A chemical or biological species denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The chemical formula for dibromomethane is CH2Br2. The IUPAC name is dibromomethane.'@en ;
+    skos:notation 'SDN:P07::GGUEVS8B'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/H9I7YER6/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/H9I7YER6/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/H9I7YER6/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_carbon_in_dry_aerosol_particles_in_air'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". "Aerosol" means the system of suspended liquid or solid particles in air (except cloud droplets) and their carrier gas, the air itself. Aerosol particles take up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the particles. "Dry aerosol particles" means aerosol particles without any water uptake. Chemically, "carbon" is the total sum of elemental, organic, and inorganic carbon. In measurements of carbonaceous aerosols, inorganic carbon is neglected and its mass is assumed to be distributed between the elemental and organic carbon components of the aerosol particles. Reference: Petzold, A., Ogren, J. A., Fiebig, M., Laj, P., Li, S.-M., Baltensperger, U., Holzer-Popp, T., Kinne, S., Pappalardo, G., Sugimoto, N., Wehrli, C., Wiedensohler, A., and Zhang, X.-Y.: Recommendations for reporting "black carbon" measurements, Atmos. Chem. Phys., 13, 8365-8379, https://doi.org/10.5194/acp-13-8365-2013, 2013.'@en ;
+    skos:notation 'SDN:P07::H9I7YER6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/HEWYK2XY/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/HEWYK2XY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/HEWYK2XY/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_dibromochloromethane_in_air'@en ;
+    skos:definition '"Mole fraction" is used in the construction "mole_fraction_of_X_in_Y", where X is a material constituent of Y. A chemical or biological species denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The chemical formula for dibromochloromethane is CHBr2Cl. The IUPAC name is dibromochloromethane.'@en ;
+    skos:notation 'SDN:P07::HEWYK2XY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/HMZSV9F1/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/HMZSV9F1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/HMZSV9F1/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'moles_of_nitrous_oxide_per_unit_mass_in_sea_water'@en ;
+    skos:definition 'The construction "moles_of_X_per_unit_mass_in_Y" is also called "molality" of X in Y, where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The chemical formula for nitrous oxide is N2O. The chemical formula for nitrous oxide is N2O. The equivalent term in the NERC P01 Parameter Usage Vocabulary may be found at http://vocab.nerc.ac.uk/collection/P01/current/DN2OZZ01/.'@en ;
+    skos:notation 'SDN:P07::HMZSV9F1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/J02A9ORC/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/J02A9ORC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/J02A9ORC/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_bromodichloromethane_in_air'@en ;
+    skos:definition '"Mole fraction" is used in the construction "mole_fraction_of_X_in_Y", where X is a material constituent of Y. A chemical or biological species denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The chemical formula for bromodichloromethane is CHBrCl2. The IUPAC name is bromodichloromethane.'@en ;
+    skos:notation 'SDN:P07::J02A9ORC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/K9SH6P4Z/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/K9SH6P4Z/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/K9SH6P4Z/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sinking_mass_flux_of_particulate_matter_in_sea_water'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. "Sinking" is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid.'@en ;
+    skos:notation 'SDN:P07::K9SH6P4Z'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/KMQ44QVB/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/KMQ44QVB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/KMQ44QVB/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'moles_of_particulate_biogenic_silica_per_unit_mass_in_sea_water'@en ;
+    skos:definition 'The construction "moles_of_X_per_unit_mass_in_Y" is also called "molality" of X in Y, where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". Particulate means suspended solids of all sizes. Biogenic silica is a hydrated form of silica (silicon dioxide) with the chemical formula SiO2.nH2O sometimes referred to as opaline silica or opal. It is created by biological processes and in sea water it is predominantly the skeletal material of diatoms.'@en ;
+    skos:notation 'SDN:P07::KMQ44QVB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/KQ6S1BDW/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/KQ6S1BDW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/KQ6S1BDW/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_organic_carbon_in_pm2p5_dry_aerosol_particles_in_air'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". "Aerosol" means the system of suspended liquid or solid particles in air (except cloud droplets) and their carrier gas, the air itself. Aerosol particles take up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the particles. "Dry aerosol particles" means aerosol particles without any water uptake. "Pm2p5 aerosol" means atmospheric particulate compounds with an aerodynamic diameter of less than or equal to 2.5 micrometers. Chemically, "organic carbon aerosol" refers to the carbonaceous fraction of particulate matter contained in any of the vast number of compounds where carbon is chemically combined with hydrogen and other elements like O, S, N, P, Cl, etc. In measurements of carbonaceous aerosols, organic carbon samples may also include some inorganic carbon compounds, whose mass is neglected and assumed to be distributed between the elemental and organic carbon components of the aerosol particles. Reference: Petzold, A., Ogren, J. A., Fiebig, M., Laj, P., Li, S.-M., Baltensperger, U., Holzer-Popp, T., Kinne, S., Pappalardo, G., Sugimoto, N., Wehrli, C., Wiedensohler, A., and Zhang, X.-Y.: Recommendations for reporting "black carbon" measurements, Atmos. Chem. Phys., 13, 8365-8379, https://doi.org/10.5194/acp-13-8365-2013, 2013.'@en ;
+    skos:notation 'SDN:P07::KQ6S1BDW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/LF3VE3LQ/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/LF3VE3LQ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/LF3VE3LQ/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_carbon_in_pm2p5_dry_aerosol_particles_in_air'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". "Aerosol" means the system of suspended liquid or solid particles in air (except cloud droplets) and their carrier gas, the air itself. Aerosol particles take up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the particles. "Dry aerosol particles" means aerosol particles without any water uptake. "Pm2p5 aerosol" means atmospheric particulate compounds with an aerodynamic diameter of less than or equal to 2.5 micrometers. Chemically, "carbon" is the total sum of elemental, organic, and inorganic carbon. In measurements of carbonaceous aerosols, inorganic carbon is neglected and its mass is assumed to be distributed between the elemental and organic carbon components of the aerosol particles. Reference: Petzold, A., Ogren, J. A., Fiebig, M., Laj, P., Li, S.-M., Baltensperger, U., Holzer-Popp, T., Kinne, S., Pappalardo, G., Sugimoto, N., Wehrli, C., Wiedensohler, A., and Zhang, X.-Y.: Recommendations for reporting "black carbon" measurements, Atmos. Chem. Phys., 13, 8365-8379, https://doi.org/10.5194/acp-13-8365-2013, 2013.'@en ;
+    skos:notation 'SDN:P07::LF3VE3LQ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/LMTQZUG9/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/LMTQZUG9/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/LMTQZUG9/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_surface_infragravity_wave_significant_height'@en ;
+    skos:definition 'Significant wave height is a statistic computed from wave measurements and corresponds to the average height of the highest one third of the waves, where the height is defined as the vertical distance from a wave trough to the following wave crest. Infragravity waves are waves occurring in the frequency range 0.04 to 0.004 s^-1 (wave periods of 25 to 250 seconds).'@en ;
+    skos:notation 'SDN:P07::LMTQZUG9'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/M1O8Y5W6/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/M1O8Y5W6/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/M1O8Y5W6/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water_evapotranspiration_amount'@en ;
+    skos:definition '"Evapotranspiration" means all water vapor fluxes into the atmosphere from the surface: liquid evaporation, sublimation, and transpiration. "Amount" means mass per unit area. Evaporation is the conversion of liquid or solid into vapor. (The conversion of solid alone into vapor is called "sublimation".) Transpiration is the process by which liquid water in plant stomata is transferred as water vapor into the atmosphere. Unless indicated in the cell_methods attribute, a quantity is assumed to apply to the whole area of each horizontal grid box.'@en ;
+    skos:notation 'SDN:P07::M1O8Y5W6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/MHPR3DJ1/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/MHPR3DJ1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/MHPR3DJ1/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_elemental_carbon_in_pm2p5_dry_aerosol_particles_in_air'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". "Aerosol" means the system of suspended liquid or solid particles in air (except cloud droplets) and their carrier gas, the air itself. Aerosol particles take up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the particles. "Dry aerosol particles" means aerosol particles without any water uptake. "Pm2p5 aerosol" means atmospheric particulate compounds with an aerodynamic diameter of less than or equal to 2.5 micrometers. Chemically, "elemental carbon" is the carbonaceous fraction of particulate matter that is thermally stable in an inert atmosphere to high temperatures near 4000K and can only be gasified by oxidation starting at temperatures above 340 C. It is assumed to be inert and non-volatile under atmospheric conditions and insoluble in any solvent (Ogren and Charlson, 1983). In measurements of carbonaceous aerosols, elemental carbon samples may also include some inorganic carbon compounds, whose mass is neglected and assumed to be distributed between the elemental and organic carbon components of the aerosol particles. Reference: Petzold, A., Ogren, J. A., Fiebig, M., Laj, P., Li, S.-M., Baltensperger, U., Holzer-Popp, T., Kinne, S., Pappalardo, G., Sugimoto, N., Wehrli, C., Wiedensohler, A., and Zhang, X.-Y.: Recommendations for reporting "black carbon" measurements, Atmos. Chem. Phys., 13, 8365-8379, https://doi.org/10.5194/acp-13-8365-2013, 2013.'@en ;
+    skos:notation 'SDN:P07::MHPR3DJ1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/N3MV667S/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/N3MV667S/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/N3MV667S/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_elemental_carbon_in_pm10_dry_aerosol_particles_in_air'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". "Aerosol" means the system of suspended liquid or solid particles in air (except cloud droplets) and their carrier gas, the air itself. Aerosol particles take up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the particles. "Dry aerosol particles" means aerosol particles without any water uptake. "Pm10 aerosol" means atmospheric particulate compounds with an aerodynamic diameter of less than or equal to 10 micrometers. Chemically, "elemental carbon" is the carbonaceous fraction of particulate matter that is thermally stable in an inert atmosphere to high temperatures near 4000K and can only be gasified by oxidation starting at temperatures above 340 C. It is assumed to be inert and non-volatile under atmospheric conditions and insoluble in any solvent (Ogren and Charlson, 1983). In measurements of carbonaceous aerosols, elemental carbon samples may also include some inorganic carbon compounds, whose mass is neglected and assumed to be distributed between the elemental and organic carbon components of the aerosol particles. Reference: Petzold, A., Ogren, J. A., Fiebig, M., Laj, P., Li, S.-M., Baltensperger, U., Holzer-Popp, T., Kinne, S., Pappalardo, G., Sugimoto, N., Wehrli, C., Wiedensohler, A., and Zhang, X.-Y.: Recommendations for reporting "black carbon" measurements, Atmos. Chem. Phys., 13, 8365-8379, https://doi.org/10.5194/acp-13-8365-2013, 2013.'@en ;
+    skos:notation 'SDN:P07::N3MV667S'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/NAI0G6DC/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/NAI0G6DC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/NAI0G6DC/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'drainage_amount_through_base_of_soil_model'@en ;
+    skos:definition 'The quantity with standard name drainage_amount_through_base_of_soil_model is the amount of water that drains through the bottom of a soil column extending from the surface to a specified depth. "Drainage" is the process of removal of excess water from soil by gravitational flow. "Amount" means mass per unit area. A vertical coordinate variable or scalar coordinate with standard name "depth" should be used to specify the depth to which the soil column extends.'@en ;
+    skos:notation 'SDN:P07::NAI0G6DC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/NBIPXJHT/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/NBIPXJHT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/NBIPXJHT/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sinking_mass_flux_of_particulate_nitrogen_in_sea_water'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. "Sinking" is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid. Particulate means suspended solids of all sizes.'@en ;
+    skos:notation 'SDN:P07::NBIPXJHT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/NLC8RC9D/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/NLC8RC9D/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/NLC8RC9D/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sinking_mass_flux_of_particulate_biogenic_silica_in_sea_water'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. "Sinking" is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid. Particulate means suspended solids of all sizes. Biogenic silica is a hydrated form of silica (silicon dioxide) with the chemical formula SiO2.nH2O sometimes referred to as opaline silica or opal. It is created by biological processes and in sea water it is predominantly the skeletal material of diatoms.'@en ;
+    skos:notation 'SDN:P07::NLC8RC9D'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/OLT1W3WD/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/OLT1W3WD/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/OLT1W3WD/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water_evapotranspiration_flux'@en ;
+    skos:definition 'Water means water in all phases. "Evapotranspiration" means all water vapor fluxes into the atmosphere from the surface: liquid evaporation, sublimation and transpiration. Evaporation is the conversion of liquid or solid into vapor. Transpiration is the process by which liquid water in plant stomata is transferred as water vapor into the atmosphere. (The conversion of solid alone into vapor is called "sublimation".) In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. Unless indicated in the cell_methods attribute, a quantity is assumed to apply to the whole area of each horizontal grid box.'@en ;
+    skos:notation 'SDN:P07::OLT1W3WD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/ONATPADA/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/ONATPADA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/ONATPADA/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_absorption_equivalent_black_carbon_of_dry_aerosol_particles_in_air'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". "Aerosol" means the system of suspended liquid or solid particles in air (except cloud droplets) and their carrier gas, the air itself. Aerosol particles take up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the particles. "Dry aerosol particles" means aerosol particles without any water uptake. The absorption equivalent black carbon mass concentration is obtained by conversion from the particle light absorption coefficient with a suitable mass absorption cross-section. Reference: Petzold, A., Ogren, J. A., Fiebig, M., Laj, P., Li, S.-M., Baltensperger, U., Holzer-Popp, T., Kinne, S., Pappalardo, G., Sugimoto, N., Wehrli, C., Wiedensohler, A., and Zhang, X.-Y.: Recommendations for reporting "black carbon" measurements, Atmos. Chem. Phys., 13, 8365-8379, https://doi.org/10.5194/acp-13-8365-2013, 2013.'@en ;
+    skos:notation 'SDN:P07::ONATPADA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/OZFG3W2A/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/OZFG3W2A/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/OZFG3W2A/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_organic_carbon_in_pm1_dry_aerosol_particles_in_air'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". Aerosol particles take up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the particles. "Dry aerosol particles" means aerosol particles without any water uptake. "Pm1 aerosol" means atmospheric particulate compounds with an aerodynamic diameter of less than or equal to 1 micrometer. Chemically, "organic carbon aerosol" refers to the carbonaceous fraction of particulate matter contained in any of the vast number of compounds where carbon is chemically combined with hydrogen and other elements like O, S, N, P, Cl, etc. In measurements of carbonaceous aerosols, organic carbon samples may also include some inorganic carbon compounds, whose mass is neglected and assumed to be distributed between the elemental and organic carbon components of the aerosol particles. Reference: Petzold, A., Ogren, J. A., Fiebig, M., Laj, P., Li, S.-M., Baltensperger, U., Holzer-Popp, T., Kinne, S., Pappalardo, G., Sugimoto, N., Wehrli, C., Wiedensohler, A., and Zhang, X.-Y.: Recommendations for reporting "black carbon" measurements, Atmos. Chem. Phys., 13, 8365-8379, https://doi.org/10.5194/acp-13-8365-2013, 2013.'@en ;
+    skos:notation 'SDN:P07::OZFG3W2A'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/P96OYQAT/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/P96OYQAT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/P96OYQAT/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sinking_mass_flux_of_particulate_phosphorus_in_sea_water'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. \'Sinking\' is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid. Particulate means suspended solids of all sizes.'@en ;
+    skos:notation 'SDN:P07::P96OYQAT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/QJVR8C23/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/QJVR8C23/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/QJVR8C23/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_surface_wave_frequency_at_variance_spectral_density_maximum'@en ;
+    skos:definition 'Frequency is the number of oscillations of a wave per unit time. The sea_surface_wave_frequency_at_variance_spectral_density_maximum is the frequency of the most energetic waves in the total wave spectrum at a specific location. The wave directional spectrum can be written as a five dimensional function S(t,x,y,f,theta) where t is time, x and y are horizontal coordinates (such as longitude and latitude), f is frequency and theta is direction. S has the standard name sea_surface_wave_directional_variance_spectral_density. S can be integrated over direction to give S1= integral(S dtheta) and this quantity has the standard name sea_surface_wave_variance_spectral_density.'@en ;
+    skos:notation 'SDN:P07::QJVR8C23'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/SCHD3F89/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/SCHD3F89/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/SCHD3F89/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface_sea_water_x_velocity_due_to_tides'@en ;
+    skos:definition 'A velocity is a vector quantity. "x" indicates a vector component along the grid x-axis, positive with increasing x. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. Tides are the rise and fall of sea levels caused by the combined effects of the gravitational forces exerted by the Moon and the Sun, and the rotation of the Earth. This rise in water level is accompanied by a horizontal movement of water called the tidal current.'@en ;
+    skos:notation 'SDN:P07::SCHD3F89'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/T4NL95LO/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/T4NL95LO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/T4NL95LO/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface_sea_water_y_velocity'@en ;
+    skos:definition 'A velocity is a vector quantity. "y" indicates a vector component along the grid y-axis, positive with increasing y. Ocean currents are related to phenomena of different nature and processes, such as density currents, currents raised by the wind, tide, wave propagation, mass flow in estuaries, etc. This Standard Name refers to the sum of currents of all origins.'@en ;
+    skos:notation 'SDN:P07::T4NL95LO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/TEHBIMF8/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/TEHBIMF8/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/TEHBIMF8/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'number_concentration_of_aerosol_particles_in_air'@en ;
+    skos:definition '"Number concentration" means the number of particles or other specified objects per unit volume. "Aerosol" means the system of suspended liquid or solid particles in air (except cloud droplets) and their carrier gas, the air itself.'@en ;
+    skos:notation 'SDN:P07::TEHBIMF8'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/U7NO90LV/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/U7NO90LV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/U7NO90LV/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_carbon_in_pm10_dry_aerosol_particles_in_air'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". "Aerosol" means the system of suspended liquid or solid particles in air (except cloud droplets) and their carrier gas, the air itself. Aerosol particles take up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the particles. "Dry aerosol particles" means aerosol particles without any water uptake. "Pm10 aerosol" means atmospheric particulate compounds with an aerodynamic diameter of less than or equal to 10 micrometers. Chemically, "carbon" is the total sum of elemental, organic, and inorganic carbon. In measurements of carbonaceous aerosols, inorganic carbon is neglected and its mass is assumed to be distributed between the elemental and organic carbon components of the aerosol particles. Reference: Petzold, A., Ogren, J. A., Fiebig, M., Laj, P., Li, S.-M., Baltensperger, U., Holzer-Popp, T., Kinne, S., Pappalardo, G., Sugimoto, N., Wehrli, C., Wiedensohler, A., and Zhang, X.-Y.: Recommendations for reporting "black carbon" measurements, Atmos. Chem. Phys., 13, 8365-8379, https://doi.org/10.5194/acp-13-8365-2013, 2013.'@en ;
+    skos:notation 'SDN:P07::U7NO90LV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/W44Q0ZJC/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/W44Q0ZJC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/W44Q0ZJC/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_absorption_equivalent_black_carbon_of_pm10_dry_aerosol_particles_in_air'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". "Aerosol" means the system of suspended liquid or solid particles in air (except cloud droplets) and their carrier gas, the air itself. Aerosol particles take up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the particles. "Dry aerosol particles" means aerosol particles without any water uptake. "Pm10 aerosol" means atmospheric particulate compounds with an aerodynamic diameter of less than or equal to 10 micrometers. The absorption equivalent black carbon mass concentration is obtained by conversion from the particle light absorption coefficient with a suitable mass absorption cross-section. Reference: Petzold, A., Ogren, J. A., Fiebig, M., Laj, P., Li, S.-M., Baltensperger, U., Holzer-Popp, T., Kinne, S., Pappalardo, G., Sugimoto, N., Wehrli, C., Wiedensohler, A., and Zhang, X.-Y.: Recommendations for reporting "black carbon" measurements, Atmos. Chem. Phys., 13, 8365-8379, https://doi.org/10.5194/acp-13-8365-2013, 2013.'@en ;
+    skos:notation 'SDN:P07::W44Q0ZJC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/WMXFNS12/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/WMXFNS12/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/WMXFNS12/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_carbon_in_pm1_dry_aerosol_particles_in_air'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". "Aerosol" means the system of suspended liquid or solid particles in air (except cloud droplets) and their carrier gas, the air itself. Aerosol particles take up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the particles. "Dry aerosol particles" means aerosol particles without any water uptake. "Pm1 aerosol" means atmospheric particulate compounds with an aerodynamic diameter of less than or equal to 1 micrometer. Chemically, "carbon" is the total sum of elemental, organic, and inorganic carbon. In measurements of carbonaceous aerosols, inorganic carbon is neglected and its mass is assumed to be distributed between the elemental and organic carbon components of the aerosol particles. Reference: Petzold, A., Ogren, J. A., Fiebig, M., Laj, P., Li, S.-M., Baltensperger, U., Holzer-Popp, T., Kinne, S., Pappalardo, G., Sugimoto, N., Wehrli, C., Wiedensohler, A., and Zhang, X.-Y.: Recommendations for reporting "black carbon" measurements, Atmos. Chem. Phys., 13, 8365-8379, https://doi.org/10.5194/acp-13-8365-2013, 2013.'@en ;
+    skos:notation 'SDN:P07::WMXFNS12'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/WUZ4LQRA/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/WUZ4LQRA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/WUZ4LQRA/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_organic_carbon_in_pm10_dry_aerosol_particles_in_air'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". "Aerosol" means the system of suspended liquid or solid particles in air (except cloud droplets) and their carrier gas, the air itself. Aerosol particles take up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the particles. "Dry aerosol particles" means aerosol particles without any water uptake. "Pm10 aerosol" means atmospheric particulate compounds with an aerodynamic diameter of less than or equal to 10 micrometers. Chemically, "organic carbon aerosol" refers to the carbonaceous fraction of particulate matter contained in any of the vast number of compounds where carbon is chemically combined with hydrogen and other elements like O, S, N, P, Cl, etc. In measurements of carbonaceous aerosols, organic carbon samples may also include some inorganic carbon compounds, whose mass is neglected and assumed to be distributed between the elemental and organic carbon components of the aerosol particles. Reference: Petzold, A., Ogren, J. A., Fiebig, M., Laj, P., Li, S.-M., Baltensperger, U., Holzer-Popp, T., Kinne, S., Pappalardo, G., Sugimoto, N., Wehrli, C., Wiedensohler, A., and Zhang, X.-Y.: Recommendations for reporting "black carbon" measurements, Atmos. Chem. Phys., 13, 8365-8379, https://doi.org/10.5194/acp-13-8365-2013, 2013.'@en ;
+    skos:notation 'SDN:P07::WUZ4LQRA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/XFANJ2GN/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/XFANJ2GN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/XFANJ2GN/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_absorption_equivalent_black_carbon_of_pm1_dry_aerosol_particles_in_air'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". "Aerosol" means the system of suspended liquid or solid particles in air (except cloud droplets) and their carrier gas, the air itself. Aerosol particles take up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the particles. "Dry aerosol particles" means aerosol particles without any water uptake. "Pm1 aerosol" means atmospheric particulate compounds with an aerodynamic diameter of less than or equal to 1 micrometer. The absorption equivalent black carbon mass concentration is obtained by conversion from the particle light absorption coefficient with a suitable mass absorption cross-section. Reference: Petzold, A., Ogren, J. A., Fiebig, M., Laj, P., Li, S.-M., Baltensperger, U., Holzer-Popp, T., Kinne, S., Pappalardo, G., Sugimoto, N., Wehrli, C., Wiedensohler, A., and Zhang, X.-Y.: Recommendations for reporting "black carbon" measurements, Atmos. Chem. Phys., 13, 8365-8379, https://doi.org/10.5194/acp-13-8365-2013, 2013.'@en ;
+    skos:notation 'SDN:P07::XFANJ2GN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/Y7RLJ6Z3/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/Y7RLJ6Z3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/Y7RLJ6Z3/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'enrichment_of_13C_in_particulate_carbon_in_sea_water_expressed_as_lowercase_delta_13C_relative_to_VPDB'@en ;
+    skos:definition 'Isotopic enrichment of 13C, often called delta 13C, is a measure of the ratio of stable isotopes 13C:12C. It is a parameterisation of the 13C/12C isotopic ratio in the sample with respect to the isotopic ratio in a reference standard (in this case Vienna Pee Dee Belemnite). It is computed using the formula (((13C/12C)sample / (13C/12C)standard) - 1) * 1000. Particulate means suspended solids of all sizes.'@en ;
+    skos:notation 'SDN:P07::Y7RLJ6Z3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/ZEDO43GZ/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/ZEDO43GZ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/ZEDO43GZ/>;
+    dc:modified '2023-02-06T17:17:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface_upward_latent_heat_flux_due_to_evaporation'@en ;
+    skos:definition 'The quantity with standard name surface_upward_latent_heat_flux_due_to_evaporation does not include transpiration from vegetation. The surface called "surface" means the lower boundary of the atmosphere. "Upward" indicates a vector component which is positive when directed upward (negative downward). In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. Evaporation is the conversion of liquid or solid into vapor. (The conversion of solid alone into vapor is called "sublimation"). The surface latent heat flux is the exchange of heat between the surface and the air on account of evaporation (including sublimation).'@en ;
+    skos:notation 'SDN:P07::ZEDO43GZ'^^xsd:string .

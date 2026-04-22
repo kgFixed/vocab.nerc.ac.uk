@@ -1,0 +1,253 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C75/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C75/2019_01_01_00_00_00_2019_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2020-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/INN/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/INN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/INN/>;
+    dc:modified '2020-12-18T10:07:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Innoflair UG'@en ;
+    skos:definition 'Software development company specialising in the space industry.'@en ;
+    skos:notation 'SDN:C75::INN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/ULG/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/ULG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/ULG/>;
+    dc:modified '2020-09-28T17:13:28'^^xsd:dateTime ;
+    skos:altLabel 'DGES'^^xsd:string ;
+    skos:prefLabel 'Free University of Brussels, Department of Geosciences, Environment and Society'@en ;
+    skos:definition 'Native name is Université libre de Bruxelles, Département Géosciences, Environnement et Société'@en ;
+    skos:notation 'SDN:C75::ULG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/LUQ/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/LUQ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/LUQ/>;
+    dc:modified '2020-08-21T09:37:38'^^xsd:dateTime ;
+    skos:altLabel 'ULAVAL Biology'^^xsd:string ;
+    skos:prefLabel 'Laval University, Department of Biology'@en ;
+    skos:definition 'Native name is Université Laval, Département de biologie'@en ;
+    skos:notation 'SDN:C75::LUQ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/DEL/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/DEL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/DEL/>;
+    dc:modified '2020-07-15T10:19:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Delft University, Department of Bionanoscience'@en ;
+    skos:definition 'University department. Native name of the university is TU Delft.'@en ;
+    skos:notation 'SDN:C75::DEL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/ETP/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/ETP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/ETP/>;
+    dc:modified '2020-04-29T16:08:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Swiss Federal Institute of Technology, Department of Physics'@en ;
+    skos:definition 'Native name is Eidgenossische Technische Hochschule, Institut fur Physik'@en ;
+    skos:notation 'SDN:C75::ETP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/CUC/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/CUC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/CUC/>;
+    dc:modified '2020-04-28T05:35:39'^^xsd:dateTime ;
+    skos:altLabel 'UCSC'^^xsd:string ;
+    skos:prefLabel 'Catholic University of the Most Holy Conception, Department of Ecology'@en ;
+    skos:definition 'Native name is Universidad Catolica de la Santisima Concepcion, Departamento de Ecologia'@en ;
+    skos:notation 'SDN:C75::CUC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/MNF/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/MNF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/MNF/>;
+    dc:modified '2020-04-23T15:43:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CSIRO Marine National Facility'@en ;
+    skos:definition 'Australian research facility, owned and operated by CSIRO.'@en ;
+    skos:notation 'SDN:C75::MNF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/AAD/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/AAD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/AAD/>;
+    dc:modified '2020-04-22T07:52:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Australian Antarctic Division'@en ;
+    skos:definition 'The AAD is part of the Australian Government Department of Agriculture, Water and the Environment and is responsible for Australia\'s presence and activities in the Australian Antarctic Territory and Southern Ocean.'@en ;
+    skos:notation 'SDN:C75::AAD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/SBD/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/SBD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/SBD/>;
+    dc:modified '2020-03-26T17:42:20'^^xsd:dateTime ;
+    skos:altLabel 'Seabed 2030'^^xsd:string ;
+    skos:prefLabel 'Nippon Foundation-GEBCO Seabed 2030 Project'@en ;
+    skos:definition 'Collaboration between the Nippon Foundation and the General Bathymetric Chart of the Oceans (GEBCO). It aims to compile all available bathymetric data to produce the definitive map of the world ocean floor by 2030 and make it available to all.'@en ;
+    skos:notation 'SDN:C75::SBD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/GEO/6/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/GEO/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/GEO/>;
+    dc:modified '2020-03-10T09:04:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEOMAR Helmholtz Centre for Ocean Research, Kiel (East Shore Campus)'@en ;
+    skos:definition 'HISTORY: Research Center for Marine Geosciences, Kiel(1972-01-01 to 2003-12-31); GEOMAR Helmholtz Centre for Ocean Research, Kiel (East Shore Campus)(2004-01-01 to present)'@en ;
+    skos:notation 'SDN:C75::GEO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/IFM/6/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/IFM/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/IFM/>;
+    dc:modified '2020-03-10T09:04:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEOMAR Helmholtz Centre for Ocean Research, Kiel (West Shore Campus)'@en ;
+    skos:definition 'HISTORY: Institute of Marine Sciences, Kiel(1972-01-01 to 2003-12-31); GEOMAR Helmholtz Centre for Ocean Research, Kiel (West Shore Campus)(2004-01-01 to present)'@en ;
+    skos:notation 'SDN:C75::IFM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/SPR/3/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/SPR/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/SPR/>;
+    dc:modified '2020-03-09T15:43:26'^^xsd:dateTime ;
+    skos:altLabel 'SPRI'^^xsd:string ;
+    skos:prefLabel 'University of Cambridge, Scott Polar Research Institute'@en ;
+    skos:definition 'HISTORY: Scott Polar Research Institute(1920-01-01 to present)'@en ;
+    skos:notation 'SDN:C75::SPR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/SKE/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/SKE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/SKE/>;
+    dc:modified '2020-02-11T10:40:47'^^xsd:dateTime ;
+    skos:altLabel 'ACES'^^xsd:string ;
+    skos:prefLabel 'Stockholm University, Department of Environmental Science'@en ;
+    skos:definition 'Native name is Stockholms universitet, Institutionen för miljövetenskap'@en ;
+    skos:notation 'SDN:C75::SKE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/SKC/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/SKC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/SKC/>;
+    dc:modified '2020-02-01T10:34:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Skidmore College, Chemistry Department'@en ;
+    skos:definition 'Department of the private liberal arts college based in New York state, USA.'@en ;
+    skos:notation 'SDN:C75::SKC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/SKD/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/SKD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/SKD/>;
+    dc:modified '2020-02-01T10:34:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Skidmore College, Geosciences Department'@en ;
+    skos:definition 'Department of the private liberal arts college based in New York state, USA.'@en ;
+    skos:notation 'SDN:C75::SKD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/PAE/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/PAE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/PAE/>;
+    dc:modified '2020-01-10T12:39:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Spanish Port Authority'@en ;
+    skos:definition 'Native name is Puertos del Estado.'@en ;
+    skos:notation 'SDN:C75::PAE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/TOF/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/TOF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/TOF/>;
+    dc:modified '2020-01-08T17:21:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Tara Ocean Foundation'@en ;
+    skos:definition 'Paris-based organisation carrying out marine environmental research. Native name is Fondation Tara Ocean.'@en ;
+    skos:notation 'SDN:C75::TOF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/APC/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/APC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/APC/>;
+    dc:modified '2020-01-06T23:31:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CONICET Technological Scientific Centre, National Patagonian Center'@en ;
+    skos:definition 'Native name is CONICET Centro Científico Tecnológico, Centro Nacional Patagónico'@en ;
+    skos:notation 'SDN:C75::APC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/FIN/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/FIN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/FIN/>;
+    dc:modified '2020-01-06T23:31:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Smartfin'@en ;
+    skos:definition 'Collaborative institute led by The Lost Bird Project, New York, and involving Scripps Institution of Oceanography, California.'@en ;
+    skos:notation 'SDN:C75::FIN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/STR/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/STR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/STR/>;
+    dc:modified '2020-01-06T23:31:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'NOAA Center for Satellite Applications and Research'@en ;
+    skos:definition 'Lab in College Park, Maryland. Part of NOAA\'s National Environmental Satellite, Data, and Information Service (NESDIS).'@en ;
+    skos:notation 'SDN:C75::STR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/WSI/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/WSI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/WSI/>;
+    dc:modified '2020-01-06T23:31:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Wellcome Sanger Institute'@en ;
+    skos:definition 'Genome research institute.'@en ;
+    skos:notation 'SDN:C75::WSI'^^xsd:string .

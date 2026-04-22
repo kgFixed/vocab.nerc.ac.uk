@@ -1,0 +1,199 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S12/2013_01_01_00_00_00_2014_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S12/2011_01_01_00_00_00_2012_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2014-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/41/2/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/41/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/41/>;
+    dc:modified '2014-10-31T16:11:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '16S ribosomal RNA molecules'@en ;
+    skos:definition 'Ribonucleic acid (RNA) molecules belonging to the smaller (30S) subunit of the ribosome of prokaryotic organisms.'@en ;
+    skos:notation 'SDN:S12::41'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1210/2/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1210/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1210/>;
+    dc:modified '2014-10-31T16:11:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ellipsoidal faecal pellets'@en ;
+    skos:definition 'Small rounded particles excreted by animals with the shape of an ellipse.'@en ;
+    skos:notation 'SDN:S12::S1210'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1211/2/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1211/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1211/>;
+    dc:modified '2014-10-31T16:11:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'empty frustules'@en ;
+    skos:definition 'The empty siliceous cell walls of diatoms.'@en ;
+    skos:notation 'SDN:S12::S1211'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1212/2/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1212/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1212/>;
+    dc:modified '2014-10-31T16:11:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'exuvia'@en ;
+    skos:definition 'The cast-off outer skin of an organism after a moult (plural: exuviae).'@en ;
+    skos:notation 'SDN:S12::S1212'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1213/2/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1213/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1213/>;
+    dc:modified '2014-10-31T16:11:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'faecal pellets'@en ;
+    skos:definition 'Small rounded particles excreted by animals.'@en ;
+    skos:notation 'SDN:S12::S1213'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1217/2/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1217/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1217/>;
+    dc:modified '2014-10-31T16:11:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'loricae'@en ;
+    skos:definition 'The protective outer envelopes of some groups of protozoans ciliates and rotifers (singular: lorica).'@en ;
+    skos:notation 'SDN:S12::S1217'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1220/2/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1220/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1220/>;
+    dc:modified '2014-10-31T16:11:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'pollen'@en ;
+    skos:definition 'Microscopic particles and male fertilizing agent produced by flowering plants, trees, grasses and weeds in the course of their sexual reproduction cycle.'@en ;
+    skos:notation 'SDN:S12::S1220'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1221/2/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1221/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1221/>;
+    dc:modified '2014-10-31T16:11:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'remains'@en ;
+    skos:definition 'Body parts of a dead organism.'@en ;
+    skos:notation 'SDN:S12::S1221'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1223/2/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1223/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1223/>;
+    dc:modified '2014-10-31T16:11:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'spherical faecal pellets'@en ;
+    skos:definition 'Small rounded particles excreted by animals with the shape of a sphere.'@en ;
+    skos:notation 'SDN:S12::S1223'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1226/2/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1226/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1226/>;
+    dc:modified '2014-10-31T16:11:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'trichomes'@en ;
+    skos:definition 'Elongated hair-like structures formed by a single line of cells in filamentous cyanobacteria colonies; the term can also refer to fine extensions from a single single or extensions made of multiple cells found in some species of plants, algae, lichen or protists.'@en ;
+    skos:notation 'SDN:S12::S1226'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S125/2/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S125/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S125/>;
+    dc:modified '2014-10-31T16:11:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'cylindrical faecal pellets 25-40um diameter'@en ;
+    skos:definition 'Small rounded particles excreted by animals with the shape of a cylinder with diameter of 25 to 40 micron.'@en ;
+    skos:notation 'SDN:S12::S125'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S126/2/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S126/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S126/>;
+    dc:modified '2014-10-31T16:11:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'cylindrical faecal pellets 40-60um diameter'@en ;
+    skos:definition 'Small rounded particles excreted by animals with the shape of a cylinder with diameter of 40 to 60 micron.'@en ;
+    skos:notation 'SDN:S12::S126'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S127/2/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S127/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S127/>;
+    dc:modified '2014-10-31T16:11:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'cylindrical faecal pellets 60-100um diameter'@en ;
+    skos:definition 'Small rounded particles excreted by animals with the shape of a cylinder with diameter of 60 to 100 micron.'@en ;
+    skos:notation 'SDN:S12::S127'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S128/2/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S128/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S128/>;
+    dc:modified '2014-10-31T16:11:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'cylindrical faecal pellets <25um diameter'@en ;
+    skos:definition 'Small rounded particles excreted by animals with the shape of a cylinder with diameter lesser than 25 micron.'@en ;
+    skos:notation 'SDN:S12::S128'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S129/2/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S129/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S129/>;
+    dc:modified '2014-10-31T16:11:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'cylindrical faecal pellets >100um diameter'@en ;
+    skos:definition 'Small rounded particles excreted by animals with the shape of a cylinder with diameter greater than 100 micron.'@en ;
+    skos:notation 'SDN:S12::S129'^^xsd:string .

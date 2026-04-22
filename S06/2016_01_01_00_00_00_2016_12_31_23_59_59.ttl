@@ -1,0 +1,127 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S06/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S06/2007_01_01_00_00_00_2015_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2016-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600056/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600056/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600056/>;
+    dc:modified '2016-11-09T15:30:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Concentration recalculated to zero salinity'@en ;
+    skos:definition 'The concentration of a substance in solution calculated as the equivalent in a zero salinity solution.'@en ;
+    skos:notation 'SDN:S06::S0600056'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600054/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600054/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600054/>;
+    dc:modified '2016-05-20T11:23:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Apparent utilisation'@en ;
+    skos:definition 'The difference between the measured chemical susbtance concentration and its equilibrium saturation concentration in a matrix with the same physical and chemical properties.'@en ;
+    skos:notation 'SDN:S06::S0600054'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600050/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600050/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600050/>;
+    dc:modified '2016-05-01T17:55:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Concentration as carbon'@en ;
+    skos:definition 'Concentration expressed in terms of carbon.'@en ;
+    skos:notation 'SDN:S06::S0600050'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600051/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600051/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600051/>;
+    dc:modified '2016-05-01T17:55:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Saturation'@en ;
+    skos:definition 'A ratio of the measured concentration of a dissolved element or compund in the water to the maximum amount of that element or compound that will dissolve in the water at that temperature and pressure under stable equilibrium.'@en ;
+    skos:notation 'SDN:S06::S0600051'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600052/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600052/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600052/>;
+    dc:modified '2016-05-01T17:55:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Riverine discharge'@en ;
+    skos:definition 'Mass or volume of a substance passing from a river into the sea usually stated over a period of time.'@en ;
+    skos:notation 'SDN:S06::S0600052'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600053/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600053/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600053/>;
+    dc:modified '2016-05-01T17:55:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Enrichment with respect to Vienna Pee Dee Belemnite (VPDB)'@en ;
+    skos:definition 'The change in the relative abundance of an isotope of a given element relative to the reference abundance measured in Vienna Pee Dee Belemnite.'@en ;
+    skos:notation 'SDN:S06::S0600053'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600048/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600048/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600048/>;
+    dc:modified '2016-02-01T18:52:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Enrichment with respect to 143Nd/144Nd in the CHondritic Uniform Reservoir (CHUR)'@en ;
+    skos:definition 'Departure of the isotope ratio 143Nd/144Nd from the CHondritic Uniform Reservoir (CHUR) evolution line.'@en ;
+    skos:notation 'SDN:S06::S0600048'^^xsd:string .

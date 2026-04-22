@@ -1,0 +1,118 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C32/2009_01_01_00_00_00_2011_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C32/2008_01_01_00_00_00_2008_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2011-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C32/current/SX/1/> .
+<http://vocab.nerc.ac.uk/collection/C32/current/SX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C32/current/SX/>;
+    dc:modified '2011-12-14T12:38:30'^^xsd:dateTime ;
+    skos:altLabel 'SXM'^^xsd:string ;
+    skos:prefLabel 'Sint Maarten (Dutch part)'@en ;
+    skos:definition 'Added in ISO 3166-1 Newsletter VI-8 (2010-12-15)).'@en ;
+    skos:notation 'SDN:C32::SX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C32/current/BQ/2/> .
+<http://vocab.nerc.ac.uk/collection/C32/current/BQ/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C32/current/BQ/>;
+    dc:modified '2011-12-14T12:14:01'^^xsd:dateTime ;
+    skos:altLabel 'BES'^^xsd:string ;
+    skos:prefLabel 'Bonaire, Sint Eustatius and Saba'@en ;
+    skos:definition 'Added in ISO 3166-1 Newsletter VI-8 (2010-12-15)). Code was formerly used for the British Antarctic Territory'@en ;
+    skos:notation 'SDN:C32::BQ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C32/current/CW/1/> .
+<http://vocab.nerc.ac.uk/collection/C32/current/CW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C32/current/CW/>;
+    dc:modified '2011-12-14T12:13:10'^^xsd:dateTime ;
+    skos:altLabel 'CUW'^^xsd:string ;
+    skos:prefLabel 'Curaçao'@en ;
+    skos:definition 'Added in ISO 3166-1 Newsletter VI-8 (2010-12-15)).'@en ;
+    skos:notation 'SDN:C32::CW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C32/current/ANHH/1/> .
+<http://vocab.nerc.ac.uk/collection/C32/current/ANHH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C32/current/ANHH/>;
+    dc:modified '2011-12-14T11:54:01'^^xsd:dateTime ;
+    skos:altLabel 'AN'^^xsd:string ;
+    skos:prefLabel 'Netherlands Antilles'@en ;
+    skos:definition 'Split into Bonaire, Sint Eustatius and Saba BQ and Curaçao CW (ISO 3166-1 Newsletter VI-8 (2010-12-15))'@en ;
+    skos:notation 'SDN:C32::ANHH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C32/current/9X/2/> .
+<http://vocab.nerc.ac.uk/collection/C32/current/9X/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C32/current/9X/>;
+    dc:modified '2011-08-26T10:26:06'^^xsd:dateTime ;
+    skos:altLabel 'Inapplicable'^^xsd:string ;
+    skos:prefLabel 'inapplicable'@en ;
+    skos:definition 'There is no appropriate value'@en ;
+    skos:notation 'SDN:C32::9X'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C32/current/SS/1/> .
+<http://vocab.nerc.ac.uk/collection/C32/current/SS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C32/current/SS/>;
+    dc:modified '2011-08-19T16:04:18'^^xsd:dateTime ;
+    skos:altLabel 'SSD'^^xsd:string ;
+    skos:prefLabel 'South Sudan'@en ;
+    skos:definition 'Added in ISO Newsletter published 2011-08-16'@en ;
+    skos:notation 'SDN:C32::SS'^^xsd:string .

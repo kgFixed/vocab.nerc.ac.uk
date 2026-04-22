@@ -1,0 +1,388 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C61/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C61/2019_01_01_00_00_00_2019_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2020-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/CNPT0024/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/CNPT0024/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/CNPT0024/>;
+    dc:modified '2020-12-18T16:32:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Hammonds Plains'@en ;
+    skos:definition 'Town in Nova Scotia, Canada.'@en ;
+    skos:notation 'SDN:C61::CNPT0024'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/FRPT0041/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/FRPT0041/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/FRPT0041/>;
+    dc:modified '2020-12-18T16:32:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'L\'Isle-Jourdain'@en ;
+    skos:definition 'Commune in Occitanie, France. Also known as l\'Isla de Baish/l\'Isla de Bax'@en ;
+    skos:notation 'SDN:C61::FRPT0041'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/UAPT0002/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/UAPT0002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/UAPT0002/>;
+    dc:modified '2020-12-18T16:32:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Lviv'@en ;
+    skos:definition 'City in Lviv Oblast, Ukraine.'@en ;
+    skos:notation 'SDN:C61::UAPT0002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY176/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY176/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY176/>;
+    dc:modified '2020-12-18T16:32:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Pflugerville'@en ;
+    skos:definition 'City in Texas, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY176'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY177/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY177/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY177/>;
+    dc:modified '2020-12-18T16:32:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Elma'@en ;
+    skos:definition 'Town in New York, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY177'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY178/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY178/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY178/>;
+    dc:modified '2020-12-18T16:32:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Houston'@en ;
+    skos:definition 'City in Texas, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY178'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY179/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY179/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY179/>;
+    dc:modified '2020-12-18T16:32:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Plymouth'@en ;
+    skos:definition 'City in Minnesota, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY179'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/GERPT048/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/GERPT048/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/GERPT048/>;
+    dc:modified '2020-12-18T10:07:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Darmstadt'@en ;
+    skos:definition 'City in Hesse, Germany.'@en ;
+    skos:notation 'SDN:C61::GERPT048'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY174/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY174/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY174/>;
+    dc:modified '2020-12-16T15:15:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Henrietta'@en ;
+    skos:definition 'Town in New York, USA. Contains the hamlets of East Henrietta and West Henrietta.'@en ;
+    skos:notation 'SDN:C61::USCTY174'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY175/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY175/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY175/>;
+    dc:modified '2020-12-16T15:15:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bourne'@en ;
+    skos:definition 'Town in Massachusetts, USA. Contains the suburb of Pocasset.'@en ;
+    skos:notation 'SDN:C61::USCTY175'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY173/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY173/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY173/>;
+    dc:modified '2020-11-17T17:07:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'El Segundo'@en ;
+    skos:definition 'City in California, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY173'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/GERPT047/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/GERPT047/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/GERPT047/>;
+    dc:modified '2020-11-05T16:56:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Idar-Oberstein'@en ;
+    skos:definition 'Town in Rhineland-Palatinate, Germany.'@en ;
+    skos:notation 'SDN:C61::GERPT047'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY171/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY171/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY171/>;
+    dc:modified '2020-11-05T16:56:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Montgomeryville'@en ;
+    skos:definition 'Town in Pennsylvania, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY171'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY172/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY172/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY172/>;
+    dc:modified '2020-11-05T16:56:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Fitchburg'@en ;
+    skos:definition 'City in Wisconsin, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY172'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY170/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY170/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY170/>;
+    dc:modified '2020-10-27T18:16:38'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bedford'@en ;
+    skos:definition 'Town in Massachusetts, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY170'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY169/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY169/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY169/>;
+    dc:modified '2020-10-08T17:36:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Hillsboro'@en ;
+    skos:definition 'City in Oregon, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY169'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY168/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY168/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY168/>;
+    dc:modified '2020-09-15T17:08:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Torrance'@en ;
+    skos:definition 'City in California, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY168'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY165/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY165/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY165/>;
+    dc:modified '2020-07-30T06:45:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Hayward'@en ;
+    skos:definition 'City in California, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY165'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY166/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY166/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY166/>;
+    dc:modified '2020-07-30T06:45:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Redondo Beach'@en ;
+    skos:definition 'City in California, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY166'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY167/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY167/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY167/>;
+    dc:modified '2020-07-30T06:45:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Scottsdale'@en ;
+    skos:definition 'City in Arizona, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY167'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY164/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY164/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY164/>;
+    dc:modified '2020-07-21T15:29:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Long Beach'@en ;
+    skos:definition 'City in Mississippi, USA. Not to be confused with Long Beach, California.'@en ;
+    skos:notation 'SDN:C61::USCTY164'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/DUTPT019/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/DUTPT019/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/DUTPT019/>;
+    dc:modified '2020-07-15T10:19:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Delft'@en ;
+    skos:definition 'City in South Holland, Netherlands.'@en ;
+    skos:notation 'SDN:C61::DUTPT019'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/GERPT046/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/GERPT046/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/GERPT046/>;
+    dc:modified '2020-05-29T16:07:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Wiesbaden'@en ;
+    skos:definition 'City in Hesse, Germany.'@en ;
+    skos:notation 'SDN:C61::GERPT046'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/OZPT0014/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/OZPT0014/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/OZPT0014/>;
+    dc:modified '2020-04-23T15:43:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Kingston'@en ;
+    skos:definition 'Town in Tasmania, Australia'@en ;
+    skos:notation 'SDN:C61::OZPT0014'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/OZPT0013/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/OZPT0013/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/OZPT0013/>;
+    dc:modified '2020-04-16T16:09:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Brisbane'@en ;
+    skos:definition 'City in Queensland, Australia.'@en ;
+    skos:notation 'SDN:C61::OZPT0013'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/CHNPT007/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/CHNPT007/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/CHNPT007/>;
+    dc:modified '2020-02-20T17:24:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Hangzhou'@en ;
+    skos:definition 'City in Zhejiang Province, China. Alternative spelling is Hangchow.'@en ;
+    skos:notation 'SDN:C61::CHNPT007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/FRPT0040/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/FRPT0040/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/FRPT0040/>;
+    dc:modified '2020-02-20T17:24:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sauvigny-les-Bois'@en ;
+    skos:definition 'Commune in Bourgogne-Franche-Comte, France.'@en ;
+    skos:notation 'SDN:C61::FRPT0040'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/RUPT0006/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/RUPT0006/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/RUPT0006/>;
+    dc:modified '2020-02-20T17:24:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Tomsk'@en ;
+    skos:definition 'City in Tomsk Oblast, Russian Federation.'@en ;
+    skos:notation 'SDN:C61::RUPT0006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY163/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY163/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY163/>;
+    dc:modified '2020-02-20T17:24:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Leesburg'@en ;
+    skos:definition 'Town in Virginia, United States.'@en ;
+    skos:notation 'SDN:C61::USCTY163'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/INPT0008/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/INPT0008/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/INPT0008/>;
+    dc:modified '2020-02-13T13:40:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Thrissur'@en ;
+    skos:definition 'City in Kerala, India. Also known as Trichur.'@en ;
+    skos:notation 'SDN:C61::INPT0008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY162/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY162/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY162/>;
+    dc:modified '2020-02-13T13:40:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'North Attleborough'@en ;
+    skos:definition 'Town in Massachusetts, United States. Alternative spelling is North Attleboro.'@en ;
+    skos:notation 'SDN:C61::USCTY162'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY161/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY161/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY161/>;
+    dc:modified '2020-02-01T10:34:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Saratoga Springs'@en ;
+    skos:definition 'City in New York, United States.'@en ;
+    skos:notation 'SDN:C61::USCTY161'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY160/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY160/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY160/>;
+    dc:modified '2020-01-16T15:22:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Schaumburg'@en ;
+    skos:definition 'Described as a village but actually a large town in Illinois, United States.'@en ;
+    skos:notation 'SDN:C61::USCTY160'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/GERPT045/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/GERPT045/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/GERPT045/>;
+    dc:modified '2020-01-14T09:08:58'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Elmshorn'@en ;
+    skos:definition 'Town in Schleswig-Holstein, Germany.'@en ;
+    skos:notation 'SDN:C61::GERPT045'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY159/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY159/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY159/>;
+    dc:modified '2020-01-10T12:39:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'San Luis Obispo'@en ;
+    skos:definition 'City in California, United States.'@en ;
+    skos:notation 'SDN:C61::USCTY159'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/ARPT0002/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/ARPT0002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/ARPT0002/>;
+    dc:modified '2020-01-06T23:31:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Puerto Madryn'@en ;
+    skos:definition 'City in Chubut Province, Argentina. Also known as Porth Madryn.'@en ;
+    skos:notation 'SDN:C61::ARPT0002'^^xsd:string .
