@@ -1,0 +1,163 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S18/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S18/2021_01_01_00_00_00_2021_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2022-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800107/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800107/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800107/>;
+    dc:modified '2022-11-28T10:03:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sampling track'@en ;
+    skos:definition 'The route along which a sample was collected or an observation was made, such as a beach transect, the track of a sampling net through water, or the track of a benthic sampler along the seafloor. It can also include the passage or transit between sampling or observation locations.'@en ;
+    skos:notation 'SDN:S18::S1800107'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800106/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800106/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800106/>;
+    dc:modified '2022-11-23T16:16:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument\'s profile'@en ;
+    skos:definition 'The property relates to the vertical trajectory of a measuring instrument.'@en ;
+    skos:notation 'SDN:S18::S1800106'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800105/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800105/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800105/>;
+    dc:modified '2022-11-04T16:37:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'analysis'@en ;
+    skos:definition 'A measurement or set of measurements on a sample or sub-sample.'@en ;
+    skos:notation 'SDN:S18::S1800105'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800104/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800104/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800104/>;
+    dc:modified '2022-09-09T13:40:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'conductivity cell'@en ;
+    skos:definition 'A glass cell containing electrodes, usually platinum, used to measure the electrical conductivity of the liquid occupying the cell.'@en ;
+    skos:notation 'SDN:S18::S1800104'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800103/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800103/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800103/>;
+    dc:modified '2022-09-09T11:08:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water vapour'@en ;
+    skos:definition 'The property relates to water molecules suspended in air.'@en ;
+    skos:notation 'SDN:S18::S1800103'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800102/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800102/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800102/>;
+    dc:modified '2022-09-09T11:08:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'analysed gas stream'@en ;
+    skos:definition 'The property relates to the continuous flow of gas that passes through one or more sensors.'@en ;
+    skos:notation 'SDN:S18::S1800102'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800101/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800101/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800101/>;
+    dc:modified '2022-06-13T15:02:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'heat'@en ;
+    skos:definition 'Energy transferred to or from a thermodynamic system, by means of convection, conduction, radiation or friction.'@en ;
+    skos:notation 'SDN:S18::S1800101'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800100/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800100/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800100/>;
+    dc:modified '2022-05-11T07:05:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'single particle'@en ;
+    skos:definition 'The property relates to a single particle.'@en ;
+    skos:notation 'SDN:S18::S1800100'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800004/2/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800004/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800004/>;
+    dc:modified '2022-04-27T17:01:14'^^xsd:dateTime ;
+    skos:altLabel 'EM'^^xsd:string ;
+    skos:prefLabel 'electromagnetic radiation'@en ;
+    skos:definition 'The waves or particles (photons) of the electromagnetic field that propagate through space carrying energy; it includes radio waves, microwaves, infrared, (visible) light, ultraviolet, X-radiation and gamma radiation.'@en ;
+    skos:notation 'SDN:S18::S1800004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800099/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800099/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800099/>;
+    dc:modified '2022-03-22T14:47:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Secchi disk'@en ;
+    skos:definition 'A disk, divided into black and white quarters, used to gauge water clarity by measuring the depth at which it is no longer visible from the surface.'@en ;
+    skos:notation 'SDN:S18::S1800099'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800098/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800098/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800098/>;
+    dc:modified '2022-02-25T20:12:01'^^xsd:dateTime ;
+    skos:altLabel 'C:N'^^xsd:string ;
+    skos:prefLabel 'carbon/nitrogen'@en ;
+    skos:definition 'Ratio of elemental carbon to elemental nitrogen.'@en ;
+    skos:notation 'SDN:S18::S1800098'^^xsd:string .

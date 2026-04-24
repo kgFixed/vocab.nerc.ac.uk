@@ -1,0 +1,100 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S04/2014_01_01_00_00_00_2014_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S04/2013_01_01_00_00_00_2013_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2014-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041086/2/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041086/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041086/>;
+    dc:modified '2014-07-30T08:43:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'chitobiase assay'@en ;
+    skos:definition 'Method for determining the activity and kinetic properties of the chitin-degrading enzyme chitobiase.'@en ;
+    skos:notation 'SDN:S04::S041086'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041085/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041085/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041085/>;
+    dc:modified '2014-06-17T09:36:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'strain gauge'@en ;
+    skos:definition 'A sensor used to measure the strain in an object'@en ;
+    skos:notation 'SDN:S04::S041085'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041084/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041084/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041084/>;
+    dc:modified '2014-06-10T13:14:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'upwelling radiance spectral radiometer'@en ;
+    skos:definition 'An instrument to measure the intensity of the electromagnetic radiation travelling vertically upwards to give a spectrum of intensity versus wavelength.'@en ;
+    skos:notation 'SDN:S04::S041084'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041083/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041083/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041083/>;
+    dc:modified '2014-06-10T13:13:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'cosine-collector downwelling spectral radiometer'@en ;
+    skos:definition 'An instrument to measure the intensity of the component of electromagnetic radiation travelling vertically downwards to give a spectrum of intensity versus wavelength.'@en ;
+    skos:notation 'SDN:S04::S041083'^^xsd:string .

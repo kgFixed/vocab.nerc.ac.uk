@@ -1,0 +1,687 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P17/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P17/2015_01_01_00_00_00_2015_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2016-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/58D4/4/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/58D4/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/58D4/>;
+    dc:modified '2016-12-09T14:11:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Dr. Fridtjof Nansen'@en ;
+    skos:definition '''{"node": {
+    "country": "Norway",
+    "decommissioned": 2016,
+    "platformclass": "research vessel",
+    "notes": "Refitted and renamed Kristine Bonnevie in 2016.",
+    "built": "1993-10",
+    "callsign": "LGWS",
+    "IMO": 9062934,
+    "commissioned": "1993-10"
+}}'''@en ;
+    skos:notation 'SDN:P17::58D4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/09SS/5/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/09SS/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/09SS/>;
+    dc:modified '2016-05-09T07:48:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Southern Surveyor'@en ;
+    skos:definition '''{"node": {
+    "country": "Australia",
+    "decommissioned": "2014-07",
+    "platformclass": "research vessel",
+    "notes": "Originally the Ranger Callisto (Norway), then became the UK registered Kurd 1982-01-01, then renamed Kurdeen 1982-01-02. Renamed Southern Surveyor 1982-12-31 and registered in Australia from 1988-11-15. Renamed Jupiter in July 2014, registered in St Kitts and Nevis.",
+    "built": 1972,
+    "callsign": "VLHJ",
+    "length": 66.15,
+    "previous_name": "Kurderen",
+    "IMO": 7113002,
+    "title": "RV",
+    "commissioned": "1988-11-15"
+}}'''@en ;
+    skos:notation 'SDN:P17::09SS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/32P0/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/32P0/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/32P0/>;
+    dc:modified '2016-05-04T13:37:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Point Sur'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "platformclass": "research vessel",
+    "notes": "University of Southern Mississippi research vessel.",
+    "built": 1980,
+    "callsign": "WSC2276",
+    "length": 41,
+    "IMO": 8023539,
+    "title": "RV",
+    "WOD": 3205,
+    "commissioned": 1980
+}}'''@en ;
+    skos:notation 'SDN:P17::32P0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/096U/1/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/096U/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/096U/>;
+    dc:modified '2016-05-01T16:28:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Investigator'@en ;
+    skos:definition '''{"node": {
+    "country": "Australia",
+    "MMSI": 503791000,
+    "platformclass": "research vessel",
+    "built": "2014-08",
+    "pennant": "Australia",
+    "callsign": "VLMJ",
+    "length": 94,
+    "IMO": 9616888,
+    "title": "RV",
+    "commissioned": "2014-09-09"
+}}'''@en ;
+    skos:notation 'SDN:P17::096U'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/35PK/4/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/35PK/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/35PK/>;
+    dc:modified '2016-04-13T14:06:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Pourquoi pas?'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "platformclass": "research vessel",
+    "notes": "Research vessel jointly owned by IFREMER and the French Navy.  Operated by GIE Genavir.  Built 2005.  Active as at mar 07, length 107.6m.",
+    "pennant": "BR 925 375",
+    "callsign": "FMCY",
+    "IMO": 9285548,
+    "commissioned": 2005
+}}'''@en ;
+    skos:notation 'SDN:P17::35PK'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/29AH/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/29AH/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/29AH/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sarmiento de Gamboa'@en ;
+    skos:definition '''{"node": {
+    "country": "Spain",
+    "platformclass": "research vessel",
+    "notes": "CSIC Research vessel, built 2006.  Operated by CSIC UTM (Marine Technology Unit).  Active as at Jun 2007, length 70.5m.",
+    "IMO": 9335238,
+    "commissioned": 2006
+}}'''@en ;
+    skos:notation 'SDN:P17::29AH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/29VE/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/29VE/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/29VE/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Vizconde de Eza'@en ;
+    skos:definition '''{"node": {
+    "country": "Spain",
+    "platformclass": "research vessel",
+    "notes": "IEO research vessel built in 2000.  Active as at Jun 07, callsign EAXB, length 53m.",
+    "callsign": "EAXB",
+    "IMO": 9206308,
+    "commissioned": 2000
+}}'''@en ;
+    skos:notation 'SDN:P17::29VE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/316N/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/316N/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/316N/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Knorr'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "platformclass": "research vessel",
+    "notes": "Oceanographic research vessel, owned by US Navy, under charter to Woods Hole Oceanographic Institution.  Built 1970, underwent overhaul 89-91.  Active as at Mar 07, length 85m.",
+    "callsign": "KCEJ",
+    "IMO": 7738618,
+    "title": "RV",
+    "commissioned": 1970
+}}'''@en ;
+    skos:notation 'SDN:P17::316N'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/32EV/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/32EV/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/32EV/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Endeavor'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "platformclass": "research vessel",
+    "notes": "Research vessel owned by the National Science Foundation and operated by the Graduate School of Oceanography at the University of Rhode Island.  Built in 1975.  She underwent a major refit in 1993.  Active as at Jul 2007, callsign WCE5063, length 56.38m.",
+    "callsign": "WCE5063",
+    "IMO": 7604300,
+    "title": "RV",
+    "commissioned": 1976
+}}'''@en ;
+    skos:notation 'SDN:P17::32EV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/32KZ/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/32KZ/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/32KZ/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Cape Hatteras'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "platformclass": "research vessel",
+    "notes": "National Science Facility research vessel operated by Duke University Marine Labs.  Built in 1981, active as at Jul 2007, length 37.8m, callsign WRZ8934",
+    "callsign": "WRZ8934",
+    "IMO": 8023541,
+    "title": "RV",
+    "commissioned": 1981
+}}'''@en ;
+    skos:notation 'SDN:P17::32KZ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/33AT/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/33AT/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/33AT/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Atlantis'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "platformclass": "research vessel",
+    "notes": "WHOI research vessel owned by the US Navy, operated under charget agreement with the Office of Naval Research.  Built 1997, active as at Mar 07, callsign KAQP, length 83.27m.",
+    "callsign": "KAQP",
+    "IMO": 9105798,
+    "title": "RV",
+    "commissioned": 1997
+}}'''@en ;
+    skos:notation 'SDN:P17::33AT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/33B1/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/33B1/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/33B1/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Blue Heron'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "platformclass": "research vessel",
+    "notes": "Research vessel of the University of Minnesota Duluth, Large Lakes Observatory.  Built in 1985, purchased in 1997.   Active as at Jul 2007, callsign WCX7521, length 26.28m.",
+    "callsign": "WCX7521",
+    "IMO": 8511897,
+    "title": "RV",
+    "commissioned": 1997
+}}'''@en ;
+    skos:notation 'SDN:P17::33B1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/33H3/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/33H3/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/33H3/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Marcus G. Langseth'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "platformclass": "research vessel",
+    "notes": "Research vessel built 1991 as the Seismic vessel Western Legend and subsequently modified as a research vessel.  Sold to Lamont-Doherty Earth Observatory of Columbia University in 2005, and renamed Marcus G. Langseth 11 Feb 2005.  Active as at Mar 07, callsign WDC6698.  Length 71.5m.",
+    "previous_name": "Western Legend",
+    "IMO": 9010137,
+    "title": "RV",
+    "commissioned": "2005-02-11"
+}}'''@en ;
+    skos:notation 'SDN:P17::33H3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/33H5/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/33H5/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/33H5/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Hugh R. Sharp'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "platformclass": "research vessel",
+    "notes": "Research vessel of the University of Delaware (College of Marine and Earth Studies).  Commissioned in 2006 to replace RV Cape Henlopen.  Active as at Jul 2007, length 44.5m.",
+    "IMO": 9388443,
+    "title": "RV",
+    "commissioned": 2006
+}}'''@en ;
+    skos:notation 'SDN:P17::33H5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/33KB/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/33KB/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/33KB/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Kilo Moana'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "platformclass": "research vessel",
+    "notes": "Research vessel of the University of Hawaii Marine Center.  Built 2002, active as at Jul 2007, callsign WDA7827, length 56m.",
+    "callsign": "WDA7827",
+    "IMO": 9229037,
+    "title": "RV",
+    "commissioned": 2002
+}}'''@en ;
+    skos:notation 'SDN:P17::33KB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/33WA/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/33WA/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/33WA/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'F.G. Walton Smith'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "platformclass": "research vessel",
+    "notes": "Rosentiel School of Marine and Atmospheric Science (RSMAS) research vessel.  Built in 1999, active as at Jul 2007, callsign WCZ6292, length 29m.",
+    "callsign": "WCZ6292",
+    "IMO": 8964501,
+    "title": "RV",
+    "commissioned": 1999
+}}'''@en ;
+    skos:notation 'SDN:P17::33WA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/35A3/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/35A3/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/35A3/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'L\'Atalante'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "platformclass": "research vessel",
+    "notes": "IFREMER research vessel built 1989, active as at Mar 07, length 84.6m",
+    "pennant": "BR 732 996 K",
+    "callsign": "FNCM",
+    "IMO": 8716071,
+    "commissioned": 1989
+}}'''@en ;
+    skos:notation 'SDN:P17::35A3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/35B5/2/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/35B5/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/35B5/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Beautemps-Beaupre'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "platformclass": "research vessel",
+    "notes": "Research vessel funded by the French Navy Hydrographic Service (SHOM) (95%) and IFREMER (5%).",
+    "built": 2003,
+    "pennant": "A758",
+    "callsign": "FABB",
+    "length": 80.65,
+    "IMO": 9098361,
+    "commissioned": 2003
+}}'''@en ;
+    skos:notation 'SDN:P17::35B5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/35HT/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/35HT/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/35HT/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Thalassa'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "platformclass": "research vessel",
+    "notes": "Research vessel built 1995, commissioned 1996. Joint French and Spanish ship operated by IFREMER. Active as at Dec 2006, callsign FNFP",
+    "callsign": "FNFP",
+    "IMO": 9070307,
+    "commissioned": 1996
+}}'''@en ;
+    skos:notation 'SDN:P17::35HT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/35LU/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/35LU/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/35LU/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Le Suroit'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "platformclass": "research vessel",
+    "notes": "Ifremer oceanographic research vessel built 1975, active as at Dec 2006, callsign FZVN, length 56m.",
+    "callsign": "FZVN",
+    "IMO": 7360368,
+    "commissioned": 1975
+}}'''@en ;
+    skos:notation 'SDN:P17::35LU'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/36AE/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/36AE/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/36AE/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Aegaeo'@en ;
+    skos:definition '''{"node": {
+    "country": "Greece",
+    "platformclass": "research vessel",
+    "notes": "Research vessel owned by the Hellenic Centre for Marine Research.  Built 1985, active as at Jun 2007, callsign SXYY, length 62m. Renamed from Aegaio in October 1994",
+    "callsign": "SXYY",
+    "previous_name": "Aegaio",
+    "IMO": 8412429,
+    "commissioned": "1994-10"
+}}'''@en ;
+    skos:notation 'SDN:P17::36AE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/49NZ/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/49NZ/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/49NZ/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mirai'@en ;
+    skos:definition '''{"node": {
+    "country": "Japan",
+    "platformclass": "research vessel",
+    "notes": "Japan Agency for Marine-Earth Science and Technology (JAMSTEC) research vessel built 1972 as Mutsu, renamed Mirai on 2 Dec 1996.  Operated by Global Ocean Development Inc.  Active as at Mar 07, callsign JNSR, length 128.58m.",
+    "callsign": "JNSR",
+    "previous_name": "Mutsu",
+    "IMO": 6919423,
+    "title": "RV",
+    "commissioned": "1996-12-02"
+}}'''@en ;
+    skos:notation 'SDN:P17::49NZ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/49Q2/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/49Q2/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/49Q2/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Kaiyo'@en ;
+    skos:definition '''{"node": {
+    "country": "Japan",
+    "platformclass": "research vessel",
+    "notes": "JAMSTEC research vessel length 62m active as of 2007-06",
+    "callsign": "JRPG",
+    "IMO": 8223684,
+    "commissioned": "1985-05"
+}}'''@en ;
+    skos:notation 'SDN:P17::49Q2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/49Y9/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/49Y9/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/49Y9/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Chikyu'@en ;
+    skos:definition '''{"node": {
+    "country": "Japan",
+    "platformclass": "research vessel",
+    "notes": "Japan Agency for Marine-Earth Science and Technology research drill ship.  Built in 2005, active as at Mar 07, callsign JRAJ.  Operated by Global Ocean Development Inc. Length 210m.",
+    "callsign": "JRAJ",
+    "IMO": 9234044,
+    "title": "RV",
+    "commissioned": 2005
+}}'''@en ;
+    skos:notation 'SDN:P17::49Y9'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/49ZR/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/49ZR/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/49ZR/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Kairei'@en ;
+    skos:definition '''{"node": {
+    "country": "Japan",
+    "platformclass": "research vessel",
+    "notes": "Japan Agency for Marine-Earth Science and Technology (JAMSTEC) research vessel built 1997, active as at Apr 2007, callsign JRZH, length 105m.",
+    "callsign": "JRZH",
+    "IMO": 9165920,
+    "title": "RV",
+    "commissioned": 1997
+}}'''@en ;
+    skos:notation 'SDN:P17::49ZR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/58LA/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/58LA/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/58LA/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Lance'@en ;
+    skos:definition '''{"node": {
+    "country": "Norway",
+    "platformclass": "research vessel",
+    "notes": "Research and expedition vessel of the Norwegian Polar Institute.  Built in 1978 as fishing/sealing vessel for arctic waters.  Sold to the Norwegian Hydrographic Service in 1981.  Rebuilt in 1991 to upgrade her for research in antarctic and arctic.  Handed over to  Norwegian Polar Institute in 1994, operated by Troms Fylkes Dampskibsselskap.  Active as at Apr 07, callsign LGKI, length 60.7m.",
+    "callsign": "LGKI",
+    "IMO": 7638351,
+    "commissioned": 1994
+}}'''@en ;
+    skos:notation 'SDN:P17::58LA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/64PE/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/64PE/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/64PE/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Pelagia'@en ;
+    skos:definition '''{"node": {
+    "country": "Netherlands",
+    "platformclass": "research vessel",
+    "notes": "NIOZ multi-purpose research vessel built 1991, active as at Mar 07, length 66.07m.",
+    "callsign": "PGRQ",
+    "IMO": 9001461,
+    "title": "RV",
+    "commissioned": 1991
+}}'''@en ;
+    skos:notation 'SDN:P17::64PE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/64TM/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/64TM/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/64TM/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Tydeman'@en ;
+    skos:definition '''{"node": {
+    "country": "Netherlands",
+    "platformclass": "naval vessel",
+    "notes": "HRMS Tideman (A906), vessel of the Royal Netherlands Navy Hydrographic Service RNLN.  Built 1976, active as at Mar 07, callsign not available, length 90.19m",
+    "pennant": "A906",
+    "callsign": "PAUA",
+    "IMO": 7432044,
+    "title": "HRMS",
+    "commissioned": 1976
+}}'''@en ;
+    skos:notation 'SDN:P17::64TM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/64ZF/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/64ZF/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/64ZF/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Zirfaea'@en ;
+    skos:definition '''{"node": {
+    "country": "Netherlands",
+    "platformclass": "research vessel",
+    "notes": "Multipurpose research vessel owned by North Sea Directorate, part of the Ministry of Transport, Public Works and Water Management.  Built in 1993, length 63m.  Active as at Mar 07.",
+    "callsign": "PBZV",
+    "IMO": 9046497,
+    "title": "RV",
+    "commissioned": 1993
+}}'''@en ;
+    skos:notation 'SDN:P17::64ZF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/73AA/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/73AA/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/73AA/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mare Nigrum'@en ;
+    skos:definition '''{"node": {
+    "country": "Romania",
+    "platformclass": "research vessel",
+    "notes": "Geo Ecomar research vessel built 1971 as Somes.  Renamed Mare Nigrum 1 Jan 02, active as at Feb 07, callsign YQPT, length 82m",
+    "callsign": "YQPT",
+    "previous_name": "Somes",
+    "IMO": 7119408,
+    "commissioned": "2002-01-01"
+}}'''@en ;
+    skos:notation 'SDN:P17::73AA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/74EE/11/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/74EE/11/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/74EE/>;
+    dc:modified '2016-04-13T13:57:41'^^xsd:dateTime ;
+    skos:altLabel 'ES'^^xsd:string ;
+    skos:prefLabel 'Ernest Shackleton'@en ;
+    skos:definition '''{"node": {
+    "country": "Falkland Islands (Malvinas)",
+    "platformclass": "research vessel",
+    "notes": "Built in Norway as the MV Polar Queen for a Norwegian shipping company in 1995.  British Antarctic Survey acquired the ship in August 1999 and it was renamed RRS Ernest Shackleton and re-registered in the Falkland Islands.",
+    "built": 1995,
+    "callsign": "ZDLS1",
+    "previous_name": "Polar Queen",
+    "IMO": 9114256,
+    "title": "RRS",
+    "commissioned": "1999-08"
+}}'''@en ;
+    skos:notation 'SDN:P17::74EE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/06AQ/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/06AQ/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/06AQ/>;
+    dc:modified '2016-04-13T13:57:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Polarstern'@en ;
+    skos:definition '''{"node": {
+    "country": "Germany",
+    "platformclass": "research vessel",
+    "notes": "Alfred-Wegener-Institut fur Polar und Meeresforschung research vessel.  Built 1982, active as at Mar 07, callsign DBLK, length 118m.",
+    "callsign": "DBLK",
+    "IMO": 8013132,
+    "title": "FS",
+    "commissioned": 1982
+}}'''@en ;
+    skos:notation 'SDN:P17::06AQ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/06NI/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/06NI/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/06NI/>;
+    dc:modified '2016-04-13T13:57:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Walther Herwig III'@en ;
+    skos:definition '''{"node": {
+    "country": "Germany",
+    "platformclass": "research vessel",
+    "notes": "Built 1993, active as at Aug 2007. Length 64.5m. Owned by the Federal Ministry for Consumer Protection, Food and Agriculture. Operated by the Federal Agency of Agriculture and Food (BLE), Hamburg. From Lloyds: IMO 9048392.",
+    "callsign": "DBFR",
+    "IMO": 9048392,
+    "title": "FFS",
+    "commissioned": 1993
+}}'''@en ;
+    skos:notation 'SDN:P17::06NI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/09AR/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/09AR/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/09AR/>;
+    dc:modified '2016-04-13T13:57:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Aurora Australis'@en ;
+    skos:definition '''{"node": {
+    "country": "Australia",
+    "platformclass": "research vessel",
+    "notes": "Research vessel owned by P and O Polar, length 94.91m.  Active as at Mar 2007.",
+    "callsign": "VNAA",
+    "IMO": 8717283,
+    "commissioned": 1990
+}}'''@en ;
+    skos:notation 'SDN:P17::09AR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/06M3/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/06M3/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/06M3/>;
+    dc:modified '2016-04-13T13:57:40'^^xsd:dateTime ;
+    skos:altLabel 'M'^^xsd:string ;
+    skos:prefLabel 'Meteor'@en ;
+    skos:definition '''{"node": {
+    "country": "Germany",
+    "platformclass": "research vessel",
+    "callsign": "DBBH",
+    "IMO": 8411279,
+    "title": "FS",
+    "commissioned": "1986-03-15"
+}}'''@en ;
+    skos:notation 'SDN:P17::06M3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/48AZ/4/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/48AZ/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/48AZ/>;
+    dc:modified '2016-02-08T16:48:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'OGS Explora'@en ;
+    skos:definition '''{"node": {
+    "country": "Italy",
+    "MMSI": 247028700,
+    "synonym": "OGS-Explora",
+    "platformclass": "research vessel",
+    "notes": "Built as \\"Explora\\" by Elsflether Werft in Germany for Prakla-Seismos Hannover (Length 72.28). 1978 - 1982 three cruises to the Antarctic by BGR Hannover since 1987 by OGS-Trieste (Length 65,42 after refit). 1988 - more then ten cruises to the Antarctic as OGS-Explora",
+    "built": "1973-04-01",
+    "callsign": "IXWQ",
+    "length": 65.42,
+    "previous_name": "Explora",
+    "IMO": 7310868,
+    "commissioned": "1987-01-01"
+}}'''@en ;
+    skos:notation 'SDN:P17::48AZ'^^xsd:string .

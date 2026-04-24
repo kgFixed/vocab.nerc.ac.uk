@@ -1,0 +1,91 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C30/2017_01_01_00_00_00_2018_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C30/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2018-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/HELCOM/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/HELCOM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/HELCOM/>;
+    dc:modified '2018-11-20T14:37:42'^^xsd:dateTime ;
+    skos:altLabel 'HELCOM'^^xsd:string ;
+    skos:prefLabel 'Baltic Marine Environment Protection Commission'@en ;
+    skos:definition 'Governance for vocabularies and list of terms published and maintained by HELCOM (Baltic Marine Environment Protection Commission - Helsinki Commission) and hosted on the NERC Vocabulary Server. HELCOM is the governing body of the Convention on the Protection of the Marine Environment of the Baltic Sea Area, known as the Helsinki Convention. The Contracting Parties are Denmark, Estonia, the European Union, Finland, Germany, Latvia, Lithuania, Poland, Russia and Sweden.'@en ;
+    skos:notation 'SDN:C30::HELCOM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/OSPAR/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/OSPAR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/OSPAR/>;
+    dc:modified '2018-07-12T12:45:34'^^xsd:dateTime ;
+    skos:altLabel 'OSPAR'^^xsd:string ;
+    skos:prefLabel 'OSPAR Commission'@en ;
+    skos:definition 'Governance for vocabularies and list of terms published and maintained by the OSPAR Commission, an intergovernmental organisation of 15 governments and the European Union who have agreed to cooperate to protect the marine environment of the North-East Atlantic.'@en ;
+    skos:notation 'SDN:C30::OSPAR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/JNCC/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/JNCC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/JNCC/>;
+    dc:modified '2018-01-15T14:11:52'^^xsd:dateTime ;
+    skos:altLabel 'JNCC'^^xsd:string ;
+    skos:prefLabel 'Joint Nature Conservation Committee'@en ;
+    skos:definition 'A public body that advises the UK Government and devolved administrations on UK-wide and international nature conservation.'@en ;
+    skos:notation 'SDN:C30::JNCC'^^xsd:string .

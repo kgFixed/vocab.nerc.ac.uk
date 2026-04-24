@@ -1,0 +1,111 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/N07/2026_04_13_12_19_36_2026_04_24_15_34_24.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/N07/current/EMBG/1/> .
+<http://vocab.nerc.ac.uk/collection/N07/current/EMBG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/N07/current/EMBG/>;
+    dc:modified '2026-04-13T12:27:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'embargo'@en ;
+    skos:definition 'Access to the resource is restricted until a specified date or the occurrence of a defined condition, after which access may be granted in accordance with applicable policies or licensing conditions.'@en ;
+    skos:notation 'SDN:N07::EMBG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/N07/current/PUNA/1/> .
+<http://vocab.nerc.ac.uk/collection/N07/current/PUNA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/N07/current/PUNA/>;
+    dc:modified '2026-04-13T12:27:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'permanently unavailable'@en ;
+    skos:definition 'The resource has been permanently removed and is no longer available. The metadata record is retained as a tombstone or historical record.'@en ;
+    skos:notation 'SDN:N07::PUNA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/N07/current/RACC/1/> .
+<http://vocab.nerc.ac.uk/collection/N07/current/RACC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/N07/current/RACC/>;
+    dc:modified '2026-04-13T12:27:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'registered access'@en ;
+    skos:definition 'Access to the resource is limited to users who have created a user account or registered with the service providing access to the resource.'@en ;
+    skos:notation 'SDN:N07::RACC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/N07/current/RAUT/1/> .
+<http://vocab.nerc.ac.uk/collection/N07/current/RAUT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/N07/current/RAUT/>;
+    dc:modified '2026-04-13T12:27:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'restricted to authorised users'@en ;
+    skos:definition 'Access to the resource is limited to users who have been authorised by the data custodian or data owner in accordance with applicable policies, agreements, or licensing conditions.'@en ;
+    skos:notation 'SDN:N07::RAUT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/N07/current/REQA/1/> .
+<http://vocab.nerc.ac.uk/collection/N07/current/REQA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/N07/current/REQA/>;
+    dc:modified '2026-04-13T12:27:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'access by request'@en ;
+    skos:definition 'The resource is not directly accessible and may only be obtained by submitting a request to the data centre or through a mediated access process.'@en ;
+    skos:notation 'SDN:N07::REQA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/N07/current/UNRS/1/> .
+<http://vocab.nerc.ac.uk/collection/N07/current/UNRS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/N07/current/UNRS/>;
+    dc:modified '2026-04-13T12:27:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'unrestricted access'@en ;
+    skos:definition 'Access to the resource is not subject to any access limitations and is available to all users without restriction.'@en ;
+    skos:notation 'SDN:N07::UNRS'^^xsd:string .

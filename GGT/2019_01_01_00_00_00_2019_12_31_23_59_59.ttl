@@ -1,0 +1,210 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/GGT/2019_01_01_00_00_00_2019_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGT/current/TIN0/1/> .
+<http://vocab.nerc.ac.uk/collection/GGT/current/TIN0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGT/current/TIN0/>;
+    dc:modified '2019-11-14T15:29:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_type_identifier_0'@en ;
+    skos:definition 'Land'@en ;
+    skos:notation 'SDN:GGT::TIN0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGT/current/TIN10/1/> .
+<http://vocab.nerc.ac.uk/collection/GGT/current/TIN10/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGT/current/TIN10/>;
+    dc:modified '2019-11-14T15:29:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_type_identifier_10'@en ;
+    skos:definition 'Singlebeam - depth value collected by a single beam echo-sounder'@en ;
+    skos:notation 'SDN:GGT::TIN10'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGT/current/TIN11/1/> .
+<http://vocab.nerc.ac.uk/collection/GGT/current/TIN11/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGT/current/TIN11/>;
+    dc:modified '2019-11-14T15:29:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_type_identifier_11'@en ;
+    skos:definition 'Multibeam - depth value collected by a multibeam echo-sounder'@en ;
+    skos:notation 'SDN:GGT::TIN11'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGT/current/TIN12/1/> .
+<http://vocab.nerc.ac.uk/collection/GGT/current/TIN12/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGT/current/TIN12/>;
+    dc:modified '2019-11-14T15:29:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_type_identifier_12'@en ;
+    skos:definition 'Seismic - depth value collected by seismic methods'@en ;
+    skos:notation 'SDN:GGT::TIN12'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGT/current/TIN13/1/> .
+<http://vocab.nerc.ac.uk/collection/GGT/current/TIN13/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGT/current/TIN13/>;
+    dc:modified '2019-11-14T15:29:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_type_identifier_13'@en ;
+    skos:definition 'Isolated sounding - depth value that is not part of a regular survey or trackline'@en ;
+    skos:notation 'SDN:GGT::TIN13'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGT/current/TIN14/1/> .
+<http://vocab.nerc.ac.uk/collection/GGT/current/TIN14/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGT/current/TIN14/>;
+    dc:modified '2019-11-14T15:29:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_type_identifier_14'@en ;
+    skos:definition 'ENC sounding - depth value extracted from an Electronic Navigation Chart (ENC)'@en ;
+    skos:notation 'SDN:GGT::TIN14'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGT/current/TIN15/1/> .
+<http://vocab.nerc.ac.uk/collection/GGT/current/TIN15/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGT/current/TIN15/>;
+    dc:modified '2019-11-14T15:29:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_type_identifier_15'@en ;
+    skos:definition 'Lidar - depth derived from a bathymetric lidar sensor'@en ;
+    skos:notation 'SDN:GGT::TIN15'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGT/current/TIN16/1/> .
+<http://vocab.nerc.ac.uk/collection/GGT/current/TIN16/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGT/current/TIN16/>;
+    dc:modified '2019-11-14T15:29:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_type_identifier_16'@en ;
+    skos:definition 'Depth measured by optical light sensor'@en ;
+    skos:notation 'SDN:GGT::TIN16'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGT/current/TIN17/1/> .
+<http://vocab.nerc.ac.uk/collection/GGT/current/TIN17/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGT/current/TIN17/>;
+    dc:modified '2019-11-14T15:29:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_type_identifier_17'@en ;
+    skos:definition 'Combination of direct measurement methods'@en ;
+    skos:notation 'SDN:GGT::TIN17'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGT/current/TIN40/1/> .
+<http://vocab.nerc.ac.uk/collection/GGT/current/TIN40/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGT/current/TIN40/>;
+    dc:modified '2019-11-14T15:29:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_type_identifier_40'@en ;
+    skos:definition 'Predicted based on satellite-derived gravity data - depth value is an interpolated value guided by satellite-derived gravity data'@en ;
+    skos:notation 'SDN:GGT::TIN40'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGT/current/TIN41/1/> .
+<http://vocab.nerc.ac.uk/collection/GGT/current/TIN41/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGT/current/TIN41/>;
+    dc:modified '2019-11-14T15:29:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_type_identifier_41'@en ;
+    skos:definition 'Interpolated based on a computer algorithm - depth value is an interpolated value based on a computer algorithm (e.g. Generic Mapping Tools)'@en ;
+    skos:notation 'SDN:GGT::TIN41'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGT/current/TIN42/1/> .
+<http://vocab.nerc.ac.uk/collection/GGT/current/TIN42/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGT/current/TIN42/>;
+    dc:modified '2019-11-14T15:29:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_type_identifier_42'@en ;
+    skos:definition 'Digital bathymetric contours from charts - depth value taken from a bathymetric contour data set'@en ;
+    skos:notation 'SDN:GGT::TIN42'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGT/current/TIN43/1/> .
+<http://vocab.nerc.ac.uk/collection/GGT/current/TIN43/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGT/current/TIN43/>;
+    dc:modified '2019-11-14T15:29:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_type_identifier_43'@en ;
+    skos:definition 'Digital bathymetric contours from ENCs - depth value taken from bathymetric contours from an Electronic Navigation Chart (ENC)'@en ;
+    skos:notation 'SDN:GGT::TIN43'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGT/current/TIN45/1/> .
+<http://vocab.nerc.ac.uk/collection/GGT/current/TIN45/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGT/current/TIN45/>;
+    dc:modified '2019-11-14T15:29:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_type_identifier_45'@en ;
+    skos:definition 'Predicted based on helicopter/flight-derived gravity data'@en ;
+    skos:notation 'SDN:GGT::TIN45'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGT/current/TIN70/1/> .
+<http://vocab.nerc.ac.uk/collection/GGT/current/TIN70/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGT/current/TIN70/>;
+    dc:modified '2019-11-14T15:29:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_type_identifier_70'@en ;
+    skos:definition 'Pre-generated grid - depth value is taken from a pre-generated grid that is based on mixed source data types, e.g. single beam, multibeam, interpolation etc.'@en ;
+    skos:notation 'SDN:GGT::TIN70'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGT/current/TIN71/1/> .
+<http://vocab.nerc.ac.uk/collection/GGT/current/TIN71/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGT/current/TIN71/>;
+    dc:modified '2019-11-14T15:29:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_type_identifier_71'@en ;
+    skos:definition 'Unknown source - depth value from an unknown source'@en ;
+    skos:notation 'SDN:GGT::TIN71'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGT/current/TIN72/1/> .
+<http://vocab.nerc.ac.uk/collection/GGT/current/TIN72/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGT/current/TIN72/>;
+    dc:modified '2019-11-14T15:29:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_type_identifier_72'@en ;
+    skos:definition 'Steering points - depth value used to constrain the grid in areas of poor data coverage'@en ;
+    skos:notation 'SDN:GGT::TIN72'^^xsd:string .

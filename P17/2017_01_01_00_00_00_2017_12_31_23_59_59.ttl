@@ -1,0 +1,124 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P17/2017_01_01_00_00_00_2017_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P17/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2017-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/06BE/4/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/06BE/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/06BE/>;
+    dc:modified '2017-11-22T11:32:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sonne'@en ;
+    skos:definition '''{"node": {
+    "country": "Germany",
+    "decommissioned": "2014-08",
+    "platformclass": "research vessel",
+    "notes": "Port of registry Bremen. Built 1969 as factory trawler Sonne BX 722, converted to a research vessel in 1977, elongated by 10.8 m in 1991. Became Austral under Argentine flag in 2015",
+    "built": "1969-01-01",
+    "callsign": "DFCG",
+    "length": 97.61,
+    "previous_name": "Sonne",
+    "IMO": 6909777,
+    "title": "FS",
+    "commissioned": "1977-01-01"
+}}'''@en ;
+    skos:notation 'SDN:P17::06BE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/58UO/2/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/58UO/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/58UO/>;
+    dc:modified '2017-08-10T15:01:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Kristine Bonnevie'@en ;
+    skos:definition '''{"node": {
+    "country": "Norway",
+    "MMSI": 258523000,
+    "platformclass": "research vessel",
+    "notes": "Formerly Dr. Fridtjof Nansen. Renamed and modified 2016 for North Atlantic and Arctic work.",
+    "built": "1993-10",
+    "callsign": "LGWS",
+    "length": 56.75,
+    "previous_name": "Dr. Fridtjof Nansen",
+    "IMO": 9062934,
+    "commissioned": "2016-07-01"
+}}'''@en ;
+    skos:notation 'SDN:P17::58UO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/74EQ/4/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/74EQ/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/74EQ/>;
+    dc:modified '2017-02-22T17:49:21'^^xsd:dateTime ;
+    skos:altLabel 'DY'^^xsd:string ;
+    skos:prefLabel 'Discovery'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "platformclass": "research vessel",
+    "notes": "Replacement NERC research vessel for the ship of the same name(ICES code 74E3). First trials cruise commenced 18/07/2013 with the formal commissioning ceremony on 10/10/2013. First science cruise scheduled for 04/01/2014.",
+    "built": 2013,
+    "callsign": "2FGX5",
+    "length": 99.7,
+    "IMO": 9588029,
+    "title": "RRS",
+    "commissioned": "2013-10-10"
+}}'''@en ;
+    skos:notation 'SDN:P17::74EQ'^^xsd:string .

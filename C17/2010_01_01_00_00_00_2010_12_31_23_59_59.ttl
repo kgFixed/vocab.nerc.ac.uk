@@ -1,0 +1,393 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C17/2010_01_01_00_00_00_2010_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C17/2009_01_01_00_00_00_2009_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2010-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/74KJ/2/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/74KJ/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/74KJ/>;
+    dc:modified '2010-09-21T17:09:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Keila'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "platformclass": "fishing vessel",
+    "notes": "UK fishing vessel K121, chartered by FRS Aberdeen. Active as at 2007-11.",
+    "pennant": "K121",
+    "callsign": "MHUW5",
+    "IMO": 8908296,
+    "title": "MFV",
+    "commissioned": 1989
+}}'''@en ;
+    skos:notation 'SDN:C17::74KJ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/74RI/2/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/74RI/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/74RI/>;
+    dc:modified '2010-09-21T17:09:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Resilient'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "platformclass": "fishing vessel",
+    "notes": "Twin rig trawler, breadth 7.63m, draft 2.88m, used by FRS (on cruise 1509H)",
+    "pennant": "LK 195",
+    "callsign": "MXRN5",
+    "previous_name": "Solan",
+    "IMO": 9171797,
+    "commissioned": "2004-01-01"
+}}'''@en ;
+    skos:notation 'SDN:C17::74RI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/746V/7/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/746V/7/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/746V/>;
+    dc:modified '2010-09-21T16:37:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Velazquez'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "platformclass": "vessel of opportunity",
+    "notes": "Built in 2003, registered in London.",
+    "callsign": "MCHT4",
+    "IMO": 9287699,
+    "commissioned": 2003
+}}'''@en ;
+    skos:notation 'SDN:C17::746V'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/74KW/7/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/74KW/7/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/74KW/>;
+    dc:modified '2010-09-21T16:37:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Geestbay'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "decommissioned": "1993-03-05",
+    "platformclass": "vessel of opportunity on fixed route",
+    "notes": "UK General cargo ship built in 1981 and used as vessel of opportunity to collect CPR data for SAHFOS. Re-registered in Bahamas 5 Mar 1993 and re-named Magellan Reefer on 28 Oct 1994 (Panama). Subsequently re-named Nafsica 19 Mar 2003 and then Estia I on 21 Sep 206. Active as at Oct 2007. Length 159m.",
+    "callsign": "GBVV",
+    "IMO": 8003761,
+    "commissioned": "1981-07-16"
+}}'''@en ;
+    skos:notation 'SDN:C17::74KW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/74L2/7/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/74L2/7/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/74L2/>;
+    dc:modified '2010-09-21T16:37:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Lord Nelson'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "platformclass": "vessel of opportunity",
+    "notes": "Tall Ship built in 1986, registered in Southampton.  Gross tonnage 386: MMSI 232003690.",
+    "callsign": "GHJV",
+    "IMO": 1002495,
+    "commissioned": 1986
+}}'''@en ;
+    skos:notation 'SDN:C17::74L2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/74VD/7/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/74VD/7/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/74VD/>;
+    dc:modified '2010-09-21T16:37:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Booker Vanguard'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "decommissioned": "1979-10-01",
+    "platformclass": "vessel of opportunity on fixed route",
+    "notes": "Cargo vessel built in 1963 as UK vessel Booker Vanguard, re-registred in Greece (1 Oct 1979) and renamed Katy (25 Nov 1979) and then Franky (13 Feb 1981). Vessel now dead. Used by SAHFOS for CPR project.",
+    "IMO": 5419098,
+    "commissioned": 1963
+}}'''@en ;
+    skos:notation 'SDN:C17::74VD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/74VE/7/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/74VE/7/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/74VE/>;
+    dc:modified '2010-09-21T16:37:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Booker Viking'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "decommissioned": "1980-10-29",
+    "platformclass": "vessel of opportunity on fixed route",
+    "notes": "Cargo vessel built 1967 as UK vessel Booker Viking, re-registered in Qatar and renamed as Al Amirah (29 Oct 1980). Vessel now dead. Used by SAHFOS for CPR project.",
+    "IMO": 6713922,
+    "commissioned": 1967
+}}'''@en ;
+    skos:notation 'SDN:C17::74VE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/74VH/7/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/74VH/7/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/74VH/>;
+    dc:modified '2010-09-21T16:37:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Commodore Enterprise'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "decommissioned": "1987-09-08",
+    "platformclass": "vessel of opportunity on fixed route",
+    "notes": "UK General cargo ship built in 1977 and used as vessel of opportunity to collect CPR data for SAHFOS. Sold an re-registered in Norway as Scott Survivor 8 Sep 1987. Subsequently re-registered and renamed numerous times. As at Oct 2007 she still is active as the vessel Wilson Fjord registered in Barbados. Length 95m.",
+    "IMO": 7631042,
+    "commissioned": 1977
+}}'''@en ;
+    skos:notation 'SDN:C17::74VH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/74VJ/7/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/74VJ/7/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/74VJ/>;
+    dc:modified '2010-09-21T16:37:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Booker Challenge'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "decommissioned": "1983-05-24",
+    "platformclass": "vessel of opportunity on fixed route",
+    "notes": "General cargo ship built in 1972 and used as vessel of opportunity to collect CPR data for SAHFOS. Built as the vessel Sol Michel (Norway), renamed Lloyd.",
+    "IMO": 7221354,
+    "commissioned": "1979-09-15"
+}}'''@en ;
+    skos:notation 'SDN:C17::74VJ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/74VU/7/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/74VU/7/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/74VU/>;
+    dc:modified '2010-09-21T16:37:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sugar Producer'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "decommissioned": "1978-12-15",
+    "platformclass": "vessel of opportunity",
+    "notes": "Bulk carrier used as vessel of opportunity. Built in 1968, registered by Lloyds as UK vessel Sugar Producer 15 Sep 1975. Re-registered in Geece and renamed Capa Avanti 17 Oct 1979. Subsequently re-registered and renamed on numerous occasions. Broken in Taiwan on 6 Nov 1987 as the vessel Delta Port Said (Egypt).",
+    "IMO": 6810938,
+    "commissioned": "1975-09-15"
+}}'''@en ;
+    skos:notation 'SDN:C17::74VU'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/74VX/8/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/74VX/8/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/74VX/>;
+    dc:modified '2010-09-21T16:37:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Destro'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "decommissioned": "1978-12-03",
+    "platformclass": "vessel of opportunity on fixed route",
+    "notes": "Ro-ro vessel used as vessel of opportunity to collect CPR data for SAHFOS. Built in 1970 as the UK vessel Destro. Renamed Jolly Azzurro 11 Dec 1978. Re-registered in Italy 28 Feb 1982 as Jolly Celeste. Subsequently re-registered and renamed, broken in India 23 Mar 2000 as the Bulgarian registered vessel Presalav. Length 130m.",
+    "IMO": 7024110,
+    "commissioned": "1975-11-21"
+}}'''@en ;
+    skos:notation 'SDN:C17::74VX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/74VY/7/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/74VY/7/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/74VY/>;
+    dc:modified '2010-09-21T16:37:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'City of Plymouth'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "decommissioned": "1993-05-06",
+    "platformclass": "vessel of opportunity on fixed route",
+    "notes": "Container vessel used as vessel of opportunity to collect CPR data for SAHFOS. Built in 1978 as the UK registered City of Plymouth. Renamed Cervantes 7 May 1993 and re-registered in the Isle of Man. She was subsequently renamed City of Lisbon (9 May 1996) then Pacheco (8 Apr 1998) before re-registering in Tuvalu (on 2 Oct 2007) as Pacheco 1. Active as at Oct 2007, length 104m.",
+    "IMO": 7702542,
+    "commissioned": "1978-11-18"
+}}'''@en ;
+    skos:notation 'SDN:C17::74VY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/74VZ/7/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/74VZ/7/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/74VZ/>;
+    dc:modified '2010-09-21T16:37:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'City of Lisbon'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "decommissioned": "1998-04-07",
+    "platformclass": "vessel of opportunity on fixed route",
+    "notes": "Container vessel used as vessel of opportunity to collect CPR data for SAHFOS. Built in 1978 as the UK registered City of Plymouth. Renamed Cervantes 7 May 1993 and re-registered in the Isle of Man. She was subsequently renamed City of Lisbon (9 May 1996) then Pacheco (8 Apr 1998) before re-registering in Tuvalu (on 2 Oct 2007) as Pacheco 1. Active as at Oct 2007, length 104m.",
+    "previous_name": "Cervantes",
+    "IMO": 7702542,
+    "commissioned": "1996-05-09"
+}}'''@en ;
+    skos:notation 'SDN:C17::74VZ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/7440/7/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/7440/7/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/7440/>;
+    dc:modified '2010-08-27T10:12:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Newton'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "platformclass": "naval vessel",
+    "notes": "Ministry of Defence, Royal Maritime Auxiliary Service vessel, underwent major conversion in 1993 and 2000.  In service.",
+    "built": 1976,
+    "pennant": "A367",
+    "callsign": "GURN",
+    "IMO": 7342940,
+    "title": "RMAS"
+}}'''@en ;
+    skos:notation 'SDN:C17::7440'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/74C0/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/74C0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/74C0/>;
+    dc:modified '2010-08-13T15:02:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Coastal Surveyor'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "platformclass": "research vessel",
+    "notes": "Small coastal survey vessel operated by Gardline Surveys.",
+    "length": 12.2
+}}'''@en ;
+    skos:notation 'SDN:C17::74C0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/74N1/2/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/74N1/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/74N1/>;
+    dc:modified '2010-03-12T16:22:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ardlamont'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "platformclass": "vessel of opportunity",
+    "notes": "Type: tug, draught: 1.75m, active in 2009, owner: James Lamont and Co Ltd 1986-1987, W and J Grant, Loch Ewe from 2006-10.",
+    "built": 1986,
+    "length": 12,
+    "commissioned": "1986-03-13"
+}}'''@en ;
+    skos:notation 'SDN:C17::74N1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/74N2/2/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/74N2/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/74N2/>;
+    dc:modified '2010-03-12T16:22:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Shaunette'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "platformclass": "fishing vessel",
+    "notes": "Type: Potter, RSS no. B12145, Gross tonnage: 20.39t, owner: John David Harcus, Orkney.",
+    "built": 1991,
+    "pennant": "K157",
+    "length": 13.4
+}}'''@en ;
+    skos:notation 'SDN:C17::74N2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/74N4/2/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/74N4/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/74N4/>;
+    dc:modified '2010-03-12T16:22:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Rambling Rose'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "platformclass": "fishing vessel",
+    "notes": "Gross tonnage: 48t, trawler chartered for research, owner: Hugh MacLachlan, Achafear, Cullipool, Oban PA34 4UB",
+    "built": 1979,
+    "pennant": "OB 780",
+    "callsign": "2XOT",
+    "previous_name": "Evening Twilight",
+    "length": 16.81
+}}'''@en ;
+    skos:notation 'SDN:C17::74N4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/74R0/2/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/74R0/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/74R0/>;
+    dc:modified '2010-03-12T16:22:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sir Claude Inglis'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "decommissioned": 2006,
+    "platformclass": "research vessel",
+    "notes": "Coastal survey vessel owned by Hydraulics Research, Wallingford until sold in 2006. Gross tonnage 33.85.",
+    "length": 15.7,
+    "title": "MV",
+    "commissioned": 1969
+}}'''@en ;
+    skos:notation 'SDN:C17::74R0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/74RG/2/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/74RG/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/74RG/>;
+    dc:modified '2010-02-09T16:06:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Scarba'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "platformclass": "research vessel",
+    "notes": "Former Aberdeen Marine Laboratory research vessel Scotia until she was sold and renamed in 1971. Chartered by Marine Laboratory for a few cruises under her new name.",
+    "previous_name": "Scotia",
+    "title": "FRV",
+    "commissioned": 1971
+}}'''@en ;
+    skos:notation 'SDN:C17::74RG'^^xsd:string .

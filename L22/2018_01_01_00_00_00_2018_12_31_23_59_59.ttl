@@ -1,0 +1,1054 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2018_01_01_00_00_00_2018_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2017_01_01_00_00_00_2017_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2018-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1301/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1301/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1301/>;
+    dc:modified '2018-12-14T15:16:24'^^xsd:dateTime ;
+    skos:altLabel 'Axys Watchman500'^^xsd:string ;
+    skos:prefLabel 'Axys Technologies Watchman500 data logger'@en ;
+    skos:definition 'A scientific sensor logging system that can be deployed on a diverse range of environmental long-term monitoring platforms. Scientific sensors are integrated into the system. In addition to sensor data, sensor configuration are logged and the system allows two-way communication. The logger connects to a PC based system via telemetry, which displays and archive real time data, provide system configuration and enables sensors to be controlled remotely. Supports analog, digital, RS-232, RS-422, RS-485, CANBUS, SDI-12, and PUCK sensor interfaces. Supported telemetry options include VHF, cellular (GPRS/CDMA) and satellite transmission, landline phone, serial interface, and TCP/IP Ethernet.'@en ;
+    skos:notation 'SDN:L22::TOOL1301'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1299/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1299/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1299/>;
+    dc:modified '2018-12-06T12:31:34'^^xsd:dateTime ;
+    skos:altLabel 'Garmin 19X GPS'^^xsd:string ;
+    skos:prefLabel 'Garmin 19X global positioning system receiver series'@en ;
+    skos:definition 'A series of a 32-channel GPS receivers. They are designed for marine applications. Receivers track and use multiple GLONASS satellites in addition to GPS satellites to provide positioning and velocity. Also supports differential capability using real-time WAAS corrections. Standard models consist of an embedded antenna and receiver that operates at 10 Hz. Optional models have a NMEA 2000 interface. Update-rate can be configured at 10 times per second at 38400bps and 1 times per second at 4800bps. They are capable of positional accuracies of less than 15 m (GPS) or less than 3 m (DGPS).'@en ;
+    skos:notation 'SDN:L22::TOOL1299'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/NETT0189/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/NETT0189/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/NETT0189/>;
+    dc:modified '2018-12-04T10:13:26'^^xsd:dateTime ;
+    skos:altLabel 'HypBenthos sledge'^^xsd:string ;
+    skos:prefLabel 'Unspecified hyperbenthic sledge'@en ;
+    skos:definition 'A benthic sledge used for sampling benthic organisms that live just above the sediment (hyperbenthos). They are typically designed to measure the lower 1 m of the water column and normally consist of a heavy, metal frame with two or more nets on top of each other that are 0.5 or 1 mm mesh size. They are equipped with an opening-closing device to prevent contamination with organisms from the upper water column and are towed from a large vessel such as a research ship. Most variations incorporate some space between the bottom and the nets, so the nets float in the water column and don\'t catch any sediment.'@en ;
+    skos:notation 'SDN:L22::NETT0189'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1297/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1297/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1297/>;
+    dc:modified '2018-11-22T16:18:08'^^xsd:dateTime ;
+    skos:altLabel 'Mastersizer 2000'^^xsd:string ;
+    skos:prefLabel 'Malvern Mastersizer 2000 laser diffraction particle size analyser'@en ;
+    skos:definition 'Laser diffraction particle analyser measures the distribution of different particles sizes in both dry and wet samples. A laser beam passes through a dispersed particulate sample and the angular variation in intensity of the scattered light is measured. The angular scattering intensity data is then analysed to calculate the size of the particles that created the scattering pattern using the Mie theory of light scattering. The instrument has a particle size range of 0.02 to 2000 microns.'@en ;
+    skos:notation 'SDN:L22::TOOL1297'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1294/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1294/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1294/>;
+    dc:modified '2018-11-19T15:13:55'^^xsd:dateTime ;
+    skos:altLabel 'JFE Rinko III'^^xsd:string ;
+    skos:prefLabel 'JFE Advantech Rinko III {ARO-CAV} oxygen sensor'@en ;
+    skos:definition 'A fast-response optical dissolved oxygen and temperature sensor. The DO sensor is coated with photostimulable phosphor (PSP) on the outside of the pressure-resistant acrylic optical window, measuring phosphorescence quenching phase shift. The excitation blue LED pulse generates a red phosphorescence pulse, which in turn has an inverse correlation with the oxygen partial pressure in the water. It is an analogue output version. It has a response time of less than 1 second in air, enabling dissolved oxygen measurements with continuous profiling at high speeds. The dissolved oxygen sensor has a non-linear accuracy of +/-2% of full scale (at 1atm, 25 deg C) and the temperature sensor +/-0.02 deg C. It has a pressure rating of 7000 m.'@en ;
+    skos:notation 'SDN:L22::TOOL1294'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1296/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1296/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1296/>;
+    dc:modified '2018-11-19T15:04:09'^^xsd:dateTime ;
+    skos:altLabel 'KVH C100 compass'^^xsd:string ;
+    skos:prefLabel 'KVH Industries C100 {Compass Engine} fluxgate compass'@en ;
+    skos:definition 'An industrial grade, micro-processor fluxgate compass module. It outputs heading data at rates up to 10Hz. The compass consists of a toroidal fluxgate sensor element and a small electronics board. Each instance has a saturable ring core in a Lexan cylinder, free floating in an inert fluid to keep it horizontal with respect to the earth. Windings surround the Lexan housing, electrically driving the ring core into saturation and measuring the amplitude of induced pulses which are proportional to the earth\'s magnetic field. This data is then sent to the microprocessor, which compensates for the hard and soft iron magnetic interference of the host platform. The compass will operate as far as 80 degrees north or south magnetic latitude. It offers both analog and digital outputs with a range of operating tilt angles (+/- 16, 30 and 45 degrees). In digital, several variations of RS-232 and NMEA 0183 are available. The typical accuracy after calibration is +/- 0.5 degrees. It can operate in temperatures raning from -40 deg C to +65 deg C.'@en ;
+    skos:notation 'SDN:L22::TOOL1296'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1295/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1295/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1295/>;
+    dc:modified '2018-11-19T15:04:09'^^xsd:dateTime ;
+    skos:altLabel 'Sea-Bird SeaKeeper'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SeaKeeper thermosalinograph'@en ;
+    skos:definition 'A themosalinograph. It is designed for shipboard determination of sea surface pumped-water conductivity and temperature. It can measure temperature in a range from -5 deg C to +35 deg C and conductivity from 0 S/m to 7 S/m. The SeaKeeper uses the same same temperature conductivity sensors used in the SBE 21 Thermosalinograph, but has improved acquisition electronics that increase accuracy and resolution, and lower power consumption. The initial acuracy of the temperature sensor is 0.002 deg C and 0.0003 S/m for conductivity.'@en ;
+    skos:notation 'SDN:L22::TOOL1295'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0100/3/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0100/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0100/>;
+    dc:modified '2018-11-14T15:29:00'^^xsd:dateTime ;
+    skos:altLabel 'SBE 16+ SEACAT'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 16plus SEACAT C-T Recorder'@en ;
+    skos:definition 'The SBE 16plus is a high accuracy conductivity and temperature recorder (pressure optional) with RS232 or RS485 interfaces. It is designed for moorings and other long-duration, fixed-site deployments. The SBE 16plus has 6 amplified A/D input channels and conditioned power of 500 ma is avaliable for auxiliary sensors, dissolved oxygen, turbidity, fluorescence, PAR etc.'@en ;
+    skos:notation 'SDN:L22::TOOL0100'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1291/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1291/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1291/>;
+    dc:modified '2018-10-24T15:21:23'^^xsd:dateTime ;
+    skos:altLabel 'Unspec XBT'^^xsd:string ;
+    skos:prefLabel 'Unspecified (XBT) expendable bathythermograph'@en ;
+    skos:definition 'A term to describe a generic expendable bathythermograph (XBT), a disposable, free-fall temperature probe that provides a profile of measured temperature against depth calculated from a fall-rate model.'@en ;
+    skos:notation 'SDN:L22::TOOL1291'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1290/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1290/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1290/>;
+    dc:modified '2018-10-24T13:57:27'^^xsd:dateTime ;
+    skos:altLabel 'Fast Deep XBT'^^xsd:string ;
+    skos:prefLabel 'Lockheed Martin Sippican Fast Deep XBT probe'@en ;
+    skos:definition 'An expendable free-fall temperature probe that provides a profile of measured temperature against depth calculated from a fall-rate model. The Fast Deep Probe can be used within a maximum depth of 1000m, may be deployed at a ship speed of up to 20 knots and has a vertical resolution of 65cm.'@en ;
+    skos:notation 'SDN:L22::TOOL1290'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1289/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1289/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1289/>;
+    dc:modified '2018-10-15T15:10:34'^^xsd:dateTime ;
+    skos:altLabel 'Partrac Voyager II flume'^^xsd:string ;
+    skos:prefLabel 'Partrac Voyager II Benthic Annular Flume'@en ;
+    skos:definition 'A benthic flume designed for in-situ studies of sediment mobilisation and transport, based on the designs and dimensions of Amos et al. (1992b). It primarily measures transport parameters such as the critical erosion threshold. It consists of an aluminium channel 0.3 m high and 0.15 m wide, with a total diameter of 2.2 m. Eight equidistantly spaced paddles induce a current via drive train, driven by a 0.6 hp, 24 V DC submarine motor and gearbox. This casues water to be re-circulated over, and oscillatory stress to be imposed upon, exposed bottom sediments. On-board optical backscatter sensors (Seapoint OBS) measure turbidity to determine suspended particulate matter concentrations at 3 different heights. An on-board Nortek Vectrino Velocimeter measures velocity in the along-channel (u), across-channel (v) and vertical (w) directions 0.15 m above the nominal bed level. An on-board 12 × 50 ml syringe sampling system collects water samples of the flume waters and a submarine video records vertical photographic profiles of the erosion processes in the upper 0.05 m. Sediment cores can also be collected concurrent with deployment. The Voyager II is depth-rated to 200 m and can impose maximum shear stresses up to ~3 Pa on bottom sediments.'@en ;
+    skos:notation 'SDN:L22::TOOL1289'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1287/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1287/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1287/>;
+    dc:modified '2018-10-05T10:40:30'^^xsd:dateTime ;
+    skos:altLabel 'Unspec MBT'^^xsd:string ;
+    skos:prefLabel 'Unspecified {MBT} mechanical bathythermograph'@en ;
+    skos:definition 'A term to describe a generic mechanical bathythermograph (MBT). A small torpedo-shaped device that records water temperature in relation to depth. MBTs traditionally use a liquid-in-metal thermometer (toluene and copper tube) to measure temperature and Bourdon tube sensor to measure pressure. Temperature readings are recorded by a mechanical stylus, which scratches a thin line on a coated glass slide. Depth is then calculated as a function of pressure. MBTs are lowered into the water by a winch and dropped free-falling to a specified depth before being retrieved. It is capable of measuring temperature to depths of 300 m.'@en ;
+    skos:notation 'SDN:L22::TOOL1287'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/NETT0188/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/NETT0188/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/NETT0188/>;
+    dc:modified '2018-10-04T10:12:44'^^xsd:dateTime ;
+    skos:altLabel 'BAS NEMO net'^^xsd:string ;
+    skos:prefLabel 'British Antarctic Survey NEuston MOdified {NEMO} microplastics net'@en ;
+    skos:definition 'A HydroBios microplastic sampling net of mesh size 0.3 mm mounted in a neuston sledge. The 70 cm x 40 cm rectangular net mouth is equipped with a flowmeter. A modified design comprises of two microplastic nets, a 0.1mm mesh size net outside of a 0.3mm mesh size net. The system is designed for sea surface sampling in the maximum sea state of Beaufort 5.'@en ;
+    skos:notation 'SDN:L22::NETT0188'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1286/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1286/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1286/>;
+    dc:modified '2018-09-27T16:12:19'^^xsd:dateTime ;
+    skos:altLabel 'Nortek Vector 3D'^^xsd:string ;
+    skos:prefLabel 'Nortek Vector 3D Acoustic Velocimeter'@en ;
+    skos:definition 'An acoustic current meter designed to measure high-resolution water velocity and pressure data in marine environments. It is used for studies of turbulence, waves, bottom boundary layers, ocean engineering, coasts and rivers. The Vector 3D outputs Doppler velocity, temperature, pressure, tilt, and heading measurements, and uses the principle of Doppler shift to measure current velocity. It supports real-time or burst sampling methods to preserve battery power. An optional motion sensor (Attitude and Heading Reference System, AHRS) with a faster response time can be used in place of the standard magentometer, heading and tilt sensors. The AHRS is useful for studying the motion of the Vector itself, allowing improved separation of Vector motion from velocity measurements. The Vector 3D measures veolcity over the range +/- 0.01 to 7 m/s with an accuracy +/- 0.5 % of measured value +/- 1 mm/s. It measures temperature over the range -4 to +40 degC with an accuracy of 0.1 degC and resolution of 0.01 degC. It has a sampling rate of 1 to 64 Hz, a battery capacity of 100 Wh and is depth-rated to 300 m.'@en ;
+    skos:notation 'SDN:L22::TOOL1286'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1285/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1285/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1285/>;
+    dc:modified '2018-09-26T14:55:49'^^xsd:dateTime ;
+    skos:altLabel 'GEMAX corer'^^xsd:string ;
+    skos:prefLabel 'GEMAX gravity corer'@en ;
+    skos:definition 'A gravity corer with an internal tube diameter of 90mm, designed for undisturbed sampling of soft sediment from the sea floor. The GEMAX corer is an evolution of the GEMINI corer (itself a development from the Niemistö corer, 1974); both consist of twin steel core barrels, though the GEMAX has a larger core-barrel diameter and an added peeler facility in the slicer unit, implemented to limit sample contamination without loss in sample volume. Optimum penetration of 50-60 cm into the seabed can be achieved in soft muddy sediments at wire speed of 1 m/s and two standard weights.'@en ;
+    skos:notation 'SDN:L22::TOOL1285'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0241/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0241/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0241/>;
+    dc:modified '2018-09-20T11:11:50'^^xsd:dateTime ;
+    skos:altLabel 'Plessey 6230N salinometer'^^xsd:string ;
+    skos:prefLabel 'Plessey Environmental Systems 6230N bench salinometer'@en ;
+    skos:definition 'A laboratory instrument that determines salinity of a water sample by comparison of its electrical conductivity with a standard solution.'@en ;
+    skos:notation 'SDN:L22::TOOL0241'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1278/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1278/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1278/>;
+    dc:modified '2018-09-10T16:23:45'^^xsd:dateTime ;
+    skos:altLabel 'GP1 Data Logger'^^xsd:string ;
+    skos:prefLabel 'Delta-T Devices GP1 Data Logger'@en ;
+    skos:definition 'A seven channel general purpose data logger designed for applications in soil science, plant physiology, agronomy, climate research and meteorology, horticulture, agriculture, turf and gardens-amenity landscaping. It primarily measures water content, moisture, temperature and electrical conductivity. Operation is by initial installation of software and data logging of the sensor readings. Key characteristics are high accuracy with logging capability up to 600,000 readings and use of the DeltaLINK-Cloud data viewing and sharing service. The GP1 can record to two differential analogue voltages, two temperature channels, two pulse counters and a Plus 1 Delta-T WET sensor. The GP1 provides the logging engine for the WS-GP1 Weather Station. The logging frequency is 1 second to 24 hours. Typical voltage accuracy is +/- 0.3 mV + 0.01% reading. Temperature accuracy is +/- 0.07 degC. Soil moisture accuracy is +/-0.06% (+/-0.0006 m3.m‐3).'@en ;
+    skos:notation 'SDN:L22::TOOL1278'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1280/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1280/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1280/>;
+    dc:modified '2018-09-10T16:23:45'^^xsd:dateTime ;
+    skos:altLabel 'Trimble 5800 GPS'^^xsd:string ;
+    skos:prefLabel 'Trimble 5800 GPS System'@en ;
+    skos:definition 'An integrated 24-channel dual-frequency GPS receiver scalable from L1 postprocessing to full real-time kinematic (RTK) configurations. The instrument is designed for use in surveying, construction and asset management and it primarily measures geographic position and elevation. Key characteristics include the instrument\'s integration on a cable-free rover, allowing flexibility and ease of operation in the field. The GPS also utilises Trimble\'s proven Maxwell technology for robust GPS tracking, and the four-point antenna feed provides sub-millimeter phase center stability. The position of the UHF radio antenna mounting increases accuracy by being out of the GPS line-of-sight, reducing multipath and avoiding interference with the GPS antenna. Two additional channels for WAAS and EGNOS tracking enables performance of real-time differential surveys to GIS grade without a base station. The instrument exhibits low noise L1 and L2 carrier phase measurements at <1 mm precision in a 1 Hz bandwidth. The instrument has a code differential resolution of +/- 0.25 m (horizontal) and +/- 0.5 m (vertical), and a kinematic resolution of +/- 10 mm (horizontal) and +/- 20 mm (vertical). It can operate in temperatures ranging from -40 to +65 degC.'@en ;
+    skos:notation 'SDN:L22::TOOL1280'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1279/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1279/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1279/>;
+    dc:modified '2018-09-10T16:23:45'^^xsd:dateTime ;
+    skos:altLabel 'WS-GP1 Weather Station'^^xsd:string ;
+    skos:prefLabel 'Delta-T Devices WS-GP1 Weather Station'@en ;
+    skos:definition 'A compact Weather Station supplied as a ready to use package with sensors, two-metre tripod mast and GPRS modem download options. The instrument is designed for use in meteorology, climate change monitoring, environmental compliance, eco‐physiology, water resource studies, waste management, crop trials and agro-meteorology. It primarily measures rainfall, solar radiation, wind speed and direction, relative humidity and air temperature. Operation is by connecting to a PC and ensuring correct sensor set up. The sensors and logger are ready assembled and pre‐wired on the cross‐arm. Key characterists include its portability, it is pre-wired for rapid set up, and comes with the use of DeltaLINK-Cloud data viewing and sharing service. The typical air temperature accuracy is +/- 0.3 degC. Humidity accuacy is +/- 2% RH. Wind direction accuracy is +/-4 degrees with 0.5 degrees resolution, and wind speed accuracy is +/- 0.1m.s‐1.'@en ;
+    skos:notation 'SDN:L22::TOOL1279'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1258/3/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1258/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1258/>;
+    dc:modified '2018-08-20T14:30:58'^^xsd:dateTime ;
+    skos:altLabel 'BAS Sonic sonobuoy'^^xsd:string ;
+    skos:prefLabel 'British Antarctic Survey prototype re-usable Sonic sonobuoy'@en ;
+    skos:definition 'A British Antarctic Survey-built prototype of a free-floating re-usable sonobuoy, designed to record low frequency acoustic information generated by remote marine seismic sources. The instrument is used in conjunction with a towed airgun array, or other remote marine seismic sources. Further details can be found in section 10.10 of JR18 cruise report.'@en ;
+    skos:notation 'SDN:L22::TOOL1258'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1274/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1274/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1274/>;
+    dc:modified '2018-08-02T15:26:57'^^xsd:dateTime ;
+    skos:altLabel 'BAS Net Traps'^^xsd:string ;
+    skos:prefLabel 'British Antarctic Survey Net Traps'@en ;
+    skos:definition 'A pair of nets composed by an upward-looking bongo net, composed by two conjoined rings, and a downward-looking net with lead weights on the net-ring. The net traps are connected to a brass jawed mechanism, which uses brass messengers sent down the wires to sequentially open them at the desired depth, and close them at the end of the sampling period before for recovery. They are designed to catch plankton swimming into them from both directions.'@en ;
+    skos:notation 'SDN:L22::TOOL1274'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1262/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1262/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1262/>;
+    dc:modified '2018-08-02T15:26:57'^^xsd:dateTime ;
+    skos:altLabel 'BGS DTB'^^xsd:string ;
+    skos:prefLabel 'British Geological Survey Deep Tow Boomer'@en ;
+    skos:definition 'A British Geological Survey-built seismic tool, designed to be towed behind a ship within a water depth range of 100m - 2000m. The DTB has a vertical resolution of 1m, and acoustic penetrations of up to 150m.'@en ;
+    skos:notation 'SDN:L22::TOOL1262'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1269/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1269/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1269/>;
+    dc:modified '2018-08-02T15:26:57'^^xsd:dateTime ;
+    skos:altLabel 'Bowtech Aqua Vision L3C-550'^^xsd:string ;
+    skos:prefLabel 'Bowtech Aqua Vision L3C-550 colour camera'@en ;
+    skos:definition 'A miniature colour charge-couple device (CCD) camera with fixed focus (100mm to infinity), designed for underwater viewing. The camera’s sensor type is a Sony 1/3” EX-View Hole-Accumulation Diode (HAD) CCD sensor with 10 bit digital processing; its horizontal resolution is 550 Television lines (TVL) and its light sensitivity limit is 0.1 lux at aperture size f2.0. The camera is enveloped in a titanium housing with a 4000m rating, with a 6000m option.'@en ;
+    skos:notation 'SDN:L22::TOOL1269'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1266/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1266/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1266/>;
+    dc:modified '2018-08-02T15:26:57'^^xsd:dateTime ;
+    skos:altLabel 'FSI MicroCTD'^^xsd:string ;
+    skos:prefLabel 'Falmouth Scientific Instruments MicroCTD'@en ;
+    skos:definition 'A miniature integrated sensor and communication system, developed by Falmouth Scientific Instruments. The MicroCTD includes a conductivity sensor (range: 0 to 65 mmho/cm, resolution: 0.0002 mmho/cm, accuracy: +/- 0.005 mmho/cm), a temperature sensor (range: -2 to 32 degC, resolution: 0.0001 degC, accuracy: +/- 0.005 degC), and a depth sensor (range: 0 to 7000 dbar, resolution: 0.02 dbar, accuracy: +/- 0.12 dbar). This instrument was fitted on TOBI, a deep-towed multi-sensor sonar system deployed in 1999 during cruise JR39b.'@en ;
+    skos:notation 'SDN:L22::TOOL1266'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1257/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1257/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1257/>;
+    dc:modified '2018-08-02T15:26:57'^^xsd:dateTime ;
+    skos:altLabel 'GSC OBS'^^xsd:string ;
+    skos:prefLabel 'Geological Survey of Canada Ocean Bottom Seismometer'@en ;
+    skos:definition 'An instrument designed to measure movements in the earth\'s crust while lying on the seabed. The OBS consists of a pressure cylinder containing a seismometer instrument package, glass buoyancy spheres mounted on a floatation assembly, a hydrophone, and recovery aids. This instrument was designed to withstand pressures and temperatures experienced at up to 6000 m depth in the oceanic environment. The OBS sensors include a 2-component gimballed geophone package (Geospace - Model HS1) operating at 4.5 Hz, with a sensitivity of 1.14 v/in/sec and a fixed amplifier gain of +100 db, and a hydrophone (OAS - Model ES2D), operating between 3 - 20 Hz, with a sensitivity of 87 db re 1V/ubar, and a fixed amplifier gain of +71 db.'@en ;
+    skos:notation 'SDN:L22::TOOL1257'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1265/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1265/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1265/>;
+    dc:modified '2018-08-02T15:26:57'^^xsd:dateTime ;
+    skos:altLabel 'IOS 7.5 kHz profiling sonar'^^xsd:string ;
+    skos:prefLabel 'Institute of Oceanographic Sciences 7.5 kHz profiling sonar'@en ;
+    skos:definition 'A sub-bottom profiling sonar operating at 7.5 kHz, designed to detect soft sediment thickness and layering beneath the sea bed. The instrument was manufactured by the Institute of Oceanographic Sciences, Deacon Laboratory (now National Oceanography Centre, Southampton). It has a pulse length of 0.26 ms, and a penetration range of up to 70 m over soft sediment at a resolution of less than 1 m. The instrument has a transducer which operates with a conical beam pattern of 25 degrees. This instrument was fitted on TOBI, a deep-towed multi-sensor sonar system deployed in 1999 during cruise JR39b.'@en ;
+    skos:notation 'SDN:L22::TOOL1265'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1267/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1267/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1267/>;
+    dc:modified '2018-08-02T15:26:57'^^xsd:dateTime ;
+    skos:altLabel 'SiS RPM'^^xsd:string ;
+    skos:prefLabel 'Sensoren Instrumente Systeme Digital Reversing Pressure Meter'@en ;
+    skos:definition 'First generation of digital reversing pressure meters manufactured by Sensoren Instrumente Systeme (SiS). These include instruments P6132H and P6394H, which were fitted on the CTD frame during some cruises from the 1990s.'@en ;
+    skos:notation 'SDN:L22::TOOL1267'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1268/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1268/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1268/>;
+    dc:modified '2018-08-02T15:26:57'^^xsd:dateTime ;
+    skos:altLabel 'SiS RTM'^^xsd:string ;
+    skos:prefLabel 'Sensoren Instrumente Systeme Digital Reversing Thermometer'@en ;
+    skos:definition 'First generation of digital reversing thermometers manufactured by Sensoren Instrumente Systeme (SiS). These include instruments T401, T714 and T746 among others, which were attached to Niskin bottles of a CTD frame during some cruises from the 1990s.'@en ;
+    skos:notation 'SDN:L22::TOOL1268'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1255/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1255/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1255/>;
+    dc:modified '2018-08-02T15:26:57'^^xsd:dateTime ;
+    skos:altLabel 'UnSpec 3.5 kHz profiler'^^xsd:string ;
+    skos:prefLabel 'Unspecified 3.5 kHz sub-bottom profiler'@en ;
+    skos:definition 'A 3.5 kHz sub-bottom profiler system, designed to identify and characterise layers of sediment or rock. The system is fitted with acoustic transmitters and receivers, and operates by emitting acoustic pulses downward and detecting the reflected signals. The system can penetrate between 10 m and 50 m.'@en ;
+    skos:notation 'SDN:L22::TOOL1255'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1252/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1252/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1252/>;
+    dc:modified '2018-08-02T15:26:57'^^xsd:dateTime ;
+    skos:altLabel 'UnSpec Agassiz'^^xsd:string ;
+    skos:prefLabel 'Unspecified Agassiz trawl'@en ;
+    skos:definition 'A sledge composed of a metal frame with a net attached, designed to be towed along the seabed at a maximum of approximately 4000 m depth. Mouth width can vary.'@en ;
+    skos:notation 'SDN:L22::TOOL1252'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1256/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1256/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1256/>;
+    dc:modified '2018-08-02T15:26:57'^^xsd:dateTime ;
+    skos:altLabel 'UnSpec IOS 10 kHz echosounder'^^xsd:string ;
+    skos:prefLabel 'Unspecified Institute of Oceanographic Sciences 10 kHz echosounder'@en ;
+    skos:definition 'A bathymetric echosounder manufactured by the Institute of Oceanographic Sciences (now National Oceanography Centre), operating at 10 kHz. The instrument is mounted with a 12 kHz acoustic transceiver unit. The equipment is located in the main instrument control room with a display computer.'@en ;
+    skos:notation 'SDN:L22::TOOL1256'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1253/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1253/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1253/>;
+    dc:modified '2018-08-02T15:26:57'^^xsd:dateTime ;
+    skos:altLabel 'UnSpec MSC'^^xsd:string ;
+    skos:prefLabel 'Unspecified Marine Snow Catcher'@en ;
+    skos:definition 'A large water bottle (volume of approximately 100 litres) designed to collect marine snow particles. The device is deployed open, and closed at a chosen depth. Once recovered, it is usually rested upright for typically 2 hours, to allow the formation of three distinct carbon pools: suspended, slow-sinking and fast-sinking.'@en ;
+    skos:notation 'SDN:L22::TOOL1253'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1270/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1270/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1270/>;
+    dc:modified '2018-08-02T15:26:57'^^xsd:dateTime ;
+    skos:altLabel 'UnSpec Panasonic 3-chip camcorder'^^xsd:string ;
+    skos:prefLabel 'Unspecified Panasonic 3-chip camcorder'@en ;
+    skos:definition 'Domestic photographic equipment, recording primary colour readings to three separate chips.'@en ;
+    skos:notation 'SDN:L22::TOOL1270'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1263/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1263/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1263/>;
+    dc:modified '2018-08-02T15:26:57'^^xsd:dateTime ;
+    skos:altLabel 'UnSpec TDR'^^xsd:string ;
+    skos:prefLabel 'Unspecified time depth recorder'@en ;
+    skos:definition 'A detachable device providing detailed depth information relative to time. Often tagged to marine species to monitor their diving behaviour. The data collected by the instrument is stored in an internal memory, and can be downloaded on recovery.'@en ;
+    skos:notation 'SDN:L22::TOOL1263'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1272/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1272/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1272/>;
+    dc:modified '2018-08-02T15:26:57'^^xsd:dateTime ;
+    skos:altLabel 'UnSpec conductivity sensor'^^xsd:string ;
+    skos:prefLabel 'Unspecified conductivity sensor'@en ;
+    skos:definition 'Instrument that measures the electrical conductivity of the water body.'@en ;
+    skos:notation 'SDN:L22::TOOL1272'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1260/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1260/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1260/>;
+    dc:modified '2018-08-02T15:26:57'^^xsd:dateTime ;
+    skos:altLabel 'UnSpec gravity corer'^^xsd:string ;
+    skos:prefLabel 'Unspecified gravity corer'@en ;
+    skos:definition 'Marine geological coring device that uses a lead weight system to penetrate the seabed and collect sediment samples.'@en ;
+    skos:notation 'SDN:L22::TOOL1260'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1276/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1276/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1276/>;
+    dc:modified '2018-08-02T15:26:57'^^xsd:dateTime ;
+    skos:altLabel 'UnSpec orientation sensor'^^xsd:string ;
+    skos:prefLabel 'Unspecified orientation sensor'@en ;
+    skos:definition 'An instrument designed to measure pitch, roll and heading of a platform.'@en ;
+    skos:notation 'SDN:L22::TOOL1276'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1261/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1261/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1261/>;
+    dc:modified '2018-08-02T15:26:57'^^xsd:dateTime ;
+    skos:altLabel 'UnSpec sonobuoy'^^xsd:string ;
+    skos:prefLabel 'Unspecified sonobuoy'@en ;
+    skos:definition 'An expendable underwater listening device designed to be dropped from an aircraft or a ship and deploy upon water impact. Sonobuoys include hydrophone sensors which descend underwater and send detected signals to a radio transmitter mounted on an inflatable float which stays at the surface. The transmitter subsequently sends the signals to a monitoring unit for processing, analysis and classification.'@en ;
+    skos:notation 'SDN:L22::TOOL1261'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1259/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1259/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1259/>;
+    dc:modified '2018-08-02T15:26:57'^^xsd:dateTime ;
+    skos:altLabel 'UnSpec trammel net'^^xsd:string ;
+    skos:prefLabel 'Unspecified trammel net'@en ;
+    skos:definition 'A net consisting of a sheet of fine-meshed net sandwiched between two outer sheets of large-meshed nets. All three net walls are attached to a weighted foot rope and a floating headline, so that they hang vertically in the water. The height of the inner net is double that of the outer nets, so that fish swim through the larger outer net wall and become entangled in the loose pockets of the inner net.'@en ;
+    skos:notation 'SDN:L22::TOOL1259'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1273/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1273/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1273/>;
+    dc:modified '2018-08-02T15:26:57'^^xsd:dateTime ;
+    skos:altLabel 'ZLS LaCoste and Romberg S83 gravity meter'^^xsd:string ;
+    skos:prefLabel 'LaCoste and Romberg S83 gravity meter modified by Zero Length Spring corporation'@en ;
+    skos:definition 'A gravity meter modified by the Zero Length Spring (ZLS) corporation for shipborne and aircraft use, designed to measure the gravitational field.'@en ;
+    skos:notation 'SDN:L22::TOOL1273'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1250/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1250/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1250/>;
+    dc:modified '2018-07-31T10:42:08'^^xsd:dateTime ;
+    skos:altLabel 'ASL SWIP'^^xsd:string ;
+    skos:prefLabel 'ASL Environmental Sciences Shallow Water Ice Profiler'@en ;
+    skos:definition 'An upward-looking sonar device which can be mounted on lake, river or ocean floors to measure ice draft for monitoring of ice dynamics in shallow water environments. Ice thickness is measured in real-time using an acoustic transducer, tilt sensor, high-precision pressure sensor and temperature sensor, all providing suitably high resolution for shallow water measurements. The instrument can be operated in an internal recording mode with a connection to an underwater battery pack for power, or with RS-422 serial output for real-time operation using an underwater cable which also allows for external power. The SWIP has a storage capacity up to 16 Gb, an operating frequency of either 542 kHz (standard) or 235 kHz (optional), a half-beam width of 3 degrees (standard) or 5.5 degrees (optional), a sampling rate of up to 2 Hz, and a maximum range of 20 metres. The tilt sensor has a range -20 to +20 degrees, an accuracy -0.5 to +0.5 and a precision of 0.01 degrees.'@en ;
+    skos:notation 'SDN:L22::TOOL1250'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1249/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1249/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1249/>;
+    dc:modified '2018-07-30T16:30:34'^^xsd:dateTime ;
+    skos:altLabel 'KOVACS ice coring systems'^^xsd:string ;
+    skos:prefLabel 'KOVACS ice coring systems'@en ;
+    skos:definition 'A series of hand auger systems designed for the retrieval of ice cores. Each KOVACS ice coring system includes a light weight core barrel made of a filament composite tube with plastic fitting, an aluminium cutting shoe, heat-treated steel cutting teeth, a stainless steel and aluminium drive head, as well as two extension rods of 1m in length each. Different core diameters and lengths are delivered by the four coring systems available: MARK II (9cm x 1m), MARK III (7.25cm x 1m), MARK V (14cm x 1m), and MARK VI (9cm x 1.5m).'@en ;
+    skos:notation 'SDN:L22::TOOL1249'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1246/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1246/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1246/>;
+    dc:modified '2018-07-19T16:56:32'^^xsd:dateTime ;
+    skos:altLabel 'Song Meter SM2M'^^xsd:string ;
+    skos:prefLabel 'Wildlife Acoustics Song Meter SM2M Marine Recorder'@en ;
+    skos:definition 'A submersible 16-bit digital acoustic recorder used to detect, record and monitor marine bioacoustic and ambient noise in fresh or salt water. The SM2M consists of a single hydrophone, recorder and an arrangement of 32 D cell batteries, and offers a flexible recording scheduling system. The device can also accept 1.5V alkaline batteries, 1.2V NiMH batteries or 3V (or 3.3V) lithium batteries. The instrument is designed for short-term deployments and is depth rated to 150 metres. Its sample rate ranges from 4 to 96 kHz, allowing recording frequencies up to 48 kHz. The SM2M hydrophone sensitivity is -165 dB re: 1V/uPa. Storage is available on up to four 32 Gb SDHC cards, or on up to four 128 Gb SDCX cards. Since 2015, the SM2M has been superseded by the third and fourth generation SM3M and SM4M marine recorder families, with some models able to record ultrasonic frequencies.'@en ;
+    skos:notation 'SDN:L22::TOOL1246'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1245/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1245/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1245/>;
+    dc:modified '2018-07-17T14:42:27'^^xsd:dateTime ;
+    skos:altLabel 'Metrohm 665 Dosimat'^^xsd:string ;
+    skos:prefLabel 'Metrohm 665 Dosimat Burette'@en ;
+    skos:definition 'A dispensing instrument for titrating and dosing operations in the laboratory. It is fitted with microprocessor control, for titrating and dosing operations, digital display, automatic stopcock changeover, built-in RS 232C interface for printer connection and remote control of all functions; including push-button cable for manual dispensing control; without exchange unit. Dispensing rates of between 0.001 mL/min and 150 mL/min can be selected alongside pippetting volumes of between 0.001 mL/min and 150 mL/min.'@en ;
+    skos:notation 'SDN:L22::TOOL1245'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1244/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1244/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1244/>;
+    dc:modified '2018-06-29T11:47:22'^^xsd:dateTime ;
+    skos:altLabel 'Franatech METS Methane Sensor'^^xsd:string ;
+    skos:prefLabel 'Franatech METS Methane Sensor'@en ;
+    skos:definition 'An underwater sensor for detecting dissolved methane concentration. The instrument operates according to the Law of Henry, whereby partial pressure gradients between the detector and surrounding water causes gas molecules to diffuse through the detector room\'s protective silicone membrane. The dissolved methane concentration in the outside water is directly correlated to that in the detector room, and can thus be calculated through a calibration formula. Concentration ranges vary with model version, and if the optional ranges are also included, they span: 10 nanomol/l - 100 micromol/l in the Classic METS (for long-term monitoring or low-speed profiling), 10 micromol/l - 2 millimol/l in IR-METS (for high concentrations and anoxic environments), 2 - 150 millimol/l in W-METS (for work at over-saturation), 100 nanomol/l - 150 millimol/l in K-METS (for mobile deployment, e.g. profiling, ROVs, AUVs). Standard temperature range is 2 - 20 degC; optional is 10 - 30 degC, but can be extended if required.'@en ;
+    skos:notation 'SDN:L22::TOOL1244'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1243/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1243/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1243/>;
+    dc:modified '2018-06-13T11:40:45'^^xsd:dateTime ;
+    skos:altLabel 'RaDeCC'^^xsd:string ;
+    skos:prefLabel 'Scientific Computer Instruments RaDeCC delayed coincidence counting system'@en ;
+    skos:definition 'A delayed coincidence counting system originally developed by Giffin et al. (1963), and modified by Moore and Arnold (1996). Measures radium isotopes (224Ra, 223Ra and 226Ra) in water samples. The system records decay events in three different channels, depending on the time elapsed between two subsequent signals, which reflect the half-lives of decay products in radium decay chains. It consists of a scintillation cell connected to a photomultiplier to detect radioactive decay events, an electronic gateway system, which registers counts and splits the registered events into different channels, depending on the time elapsed until the next event happens, and a pump, which continuously pumps helium through the sample (on an acrylic fibre coated with manganese dioxide, Mn fibre), and subsequently through the scintillation chamber. Further description can be found in https://doi.org/10.4319/lom.2013.11.594.'@en ;
+    skos:notation 'SDN:L22::TOOL1243'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1241/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1241/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1241/>;
+    dc:modified '2018-06-04T14:45:48'^^xsd:dateTime ;
+    skos:altLabel 'Nortek Signature55 ADCP'^^xsd:string ;
+    skos:prefLabel 'Nortek Signature55 Acoustic Doppler Current Profiler'@en ;
+    skos:definition 'An Acoustic Doppler Current Profiler (ADCP) for use in in ocean circulation, turbulence, numerical model verification and transport studies. The instrument consists of three piezo-composite transducers which are 25 cm in diameter. The beams operate at long-range (1000 m) and in dual-frequency (55 / 75 kHz) modes. The instrument contains integrated pressure and temperature sensors measuring in the range of  0-1500m (pressure) and -4 - 40 degC (temperature). Data communication is available via Ethernet cable and the instrument has an internal storage capacity of 16 Gb, with an option to increase this to 64 Gb.'@en ;
+    skos:notation 'SDN:L22::TOOL1241'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1240/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1240/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1240/>;
+    dc:modified '2018-05-30T13:36:38'^^xsd:dateTime ;
+    skos:altLabel 'AA optode 4831F'^^xsd:string ;
+    skos:prefLabel 'Aanderaa 4831F oxygen optode'@en ;
+    skos:definition 'A dissolved oxygen sensor which provides analogue (0-5V) and digital output (RS-232) to third party data loggers, gliders and floats. Measurement based on the ability of selected substances to act as dynamic fluorescence quenchers. The fluorescent indicator is a special platinum porphyrin complex embedded in a gas permeable foil that is exposed to the surrounding water. This sub-model is not equipped with a black optical isolation coating that protects the complex from sunlight and fluorescent particles in the water. This sensing foil is attached to a window providing optical access for the measuring system from inside a watertight housing. The foil is excited by modulated blue light, and the phase of a returned red light is measured. For improved stability the 4831 optode also performs a reference phase reading by use of a red LED that does not produce fluorescence in the foil. This sub-model is fitted with a fast response (transparent) sensing foil (response time <8 secs). By linearizing and temperature compensating, with an incorporated temperature sensor, the absolute O2 concentration can be determined. Accuracy +/- 1.5% or 2uM; precision +/- 0.2 uM.'@en ;
+    skos:notation 'SDN:L22::TOOL1240'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1238/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1238/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1238/>;
+    dc:modified '2018-05-29T15:25:51'^^xsd:dateTime ;
+    skos:altLabel 'SBE 61 CTD'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 61 Deep Argo CTD'@en ;
+    skos:definition 'A self-contained unit comprising the MicroCAT temperature, conductivity and pressure sensors and a pump that is designed specifically for deployment on profiling floats deployed to 7000 m, particularly Deep Argo. The unit is designed to provide stable conductivity data accurate to 0.0002 S/m with stability accurate to 0.002 S/m for periods in excess of ten years without any form of maintenance. Temperature accuracy is within 0.001 C (stability 0.0002 C/year) and pressure within 4.5 dbar (stability 0.8 dbar/year). The SBE 61 Deep Argo CTD is a redesign of the SBE 41/41CP.'@en ;
+    skos:notation 'SDN:L22::TOOL1238'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1237/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1237/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1237/>;
+    dc:modified '2018-05-23T11:22:21'^^xsd:dateTime ;
+    skos:altLabel 'Ohaus Adventurer balance'^^xsd:string ;
+    skos:prefLabel 'Ohaus Adventurer Analytical and Precision balances'@en ;
+    skos:definition 'A series of laboratory instruments used to measure sample mass over the range 0-8200 g dependant on the model used. The up-to 320g range has a readability of 0.0001 g, a reproducibility standard deviation of 0.0001 g and a typical stabilisation time of 3 sec. Models with a capacity of between 220 and 520 g have a readability of 0.001 g, reproducibility standard devation of 0.001 g and typical stabilisation time of 2 sec. Models with a capacity of between 620 and 5200 g have a readability of 0.01 g, reproducibility standard devation of 0.01 g and typical stabilisation time of 1.5 sec. Models with a capacity of between 5200 and 8200 g have a readability of 0.1 g, reproducibility standard devation of 0.1 g and typical stabilisation time of 1.5 sec. All models have a temperature range of 10-30 degC.'@en ;
+    skos:notation 'SDN:L22::TOOL1237'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1236/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1236/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1236/>;
+    dc:modified '2018-05-21T15:34:02'^^xsd:dateTime ;
+    skos:altLabel 'Shimadzu GC-2010 series'^^xsd:string ;
+    skos:prefLabel 'Shimadzu GC-2010 (capillary) gas chromatograph series'@en ;
+    skos:definition 'Bench-top gas chromatographs. They separate and analyse gas mixtures using a capillary column. Features a temperature controlled oven, up to 3 temperature controlled injection units, up to 4 detectors and a flow control unit. Detectors used are Flame Ionization (FID), Thermal Conductivity (TCD), Electron Capture (ECD), Flame Photometric (FPD) and Flame Thermionic (FTD). The standard GC-2010 was developed in 2000 while the GC-2010 Plus was developed in 2009 and features improved noise reduction and detector capability to improve sensitivity. For example, the minimum detected quantity for flame photometric detection is 0.2 pg P/s, 4 pg S/s (std) and 55 fg P/s, 3 fg S/s (Plus). Maximum operating pressure: 970 kPa. Maximum flow rate: 1200mL/min.'@en ;
+    skos:notation 'SDN:L22::TOOL1236'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1235/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1235/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1235/>;
+    dc:modified '2018-05-04T16:14:17'^^xsd:dateTime ;
+    skos:altLabel 'Vibrocorer'^^xsd:string ;
+    skos:prefLabel 'Unspecified vibrocorer'@en ;
+    skos:definition 'A corer designed to collect sediment samples from unconsolidated, waterlogged, heterogeneous sediments and soils. Typically, samples are collected in a core tube that is driven into sediment by the force of gravity, enhanced by vibration energy from a viration motor.'@en ;
+    skos:notation 'SDN:L22::TOOL1235'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1234/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1234/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1234/>;
+    dc:modified '2018-04-27T15:09:09'^^xsd:dateTime ;
+    skos:altLabel 'Metrohm 776 Dosimat'^^xsd:string ;
+    skos:prefLabel 'Metrohm 776 Dosimat Burette'@en ;
+    skos:definition 'A dispensing instrument for titrating and dosing operations in the laboratory. The instrument includes the following functions: pipetting, diluting and dispensing; calculation of results. Dispensing rates of between 0.001 mL/min and 150 mL/min can be selected alongside pippetting volumes of between 0.001 mL/min and 150 mL/min.'@en ;
+    skos:notation 'SDN:L22::TOOL1234'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1233/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1233/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1233/>;
+    dc:modified '2018-04-26T15:12:13'^^xsd:dateTime ;
+    skos:altLabel 'SBE 43I DO'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 43 I (integral) dissolved oxygen sensor'@en ;
+    skos:definition 'High performance through-flow Clark polarographic membrane sensor designed to be interfaced to a SBE 41 or 41CP Argo float CTD. Designed specifically to give rapid temperature response and minimal pressure hysteresis. Signal output is frequency based and sensor power and signal conditioning circuits are relocated to the CTD electronics board. Measurement range: 0-120 % of saturation (minimum). Initial accuracy: 1 % of saturation. Observed stability: less than 1 micro-molar/year. Depth rating: 2000 dbar.'@en ;
+    skos:notation 'SDN:L22::TOOL1233'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1230/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1230/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1230/>;
+    dc:modified '2018-04-24T12:57:00'^^xsd:dateTime ;
+    skos:altLabel 'Oregon OMG ChiPod'^^xsd:string ;
+    skos:prefLabel 'Oregon State University Ocean Mixing Group ChiPod temperature microstructure profiler'@en ;
+    skos:definition 'A self-contained device designed to measure small-scale temperature variability using fast response FP07 thermistors connected to a small pressure case with a cable. The sensing unit is continuously recording as long as the thermistor cable is connected.'@en ;
+    skos:notation 'SDN:L22::TOOL1230'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1231/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1231/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1231/>;
+    dc:modified '2018-04-24T11:20:40'^^xsd:dateTime ;
+    skos:altLabel 'SBE 52-MP CTD'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 52-MP moored profiler CTD'@en ;
+    skos:definition 'A light and compact instrument intended as a modular component of moored profiling platforms. Measures conductivity, temperature, pressure and optionally oxygen at 1 Hz. Operates with integral pump to depths up to 600 m (plastic housing) or 7000 m (titanium housing). It can be fitted with an optional auxilliary SBE 43F oxygen sensor. Accuracy: +/- 0.0003 S/m (conductivity), +/- 0.002 deg C (temperature) and +/- 0.1 % full scale (pressure).'@en ;
+    skos:notation 'SDN:L22::TOOL1231'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1150/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1150/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1150/>;
+    dc:modified '2018-04-23T16:44:15'^^xsd:dateTime ;
+    skos:altLabel 'Rockland VMP 6000'^^xsd:string ;
+    skos:prefLabel 'Rockland Scientific Vertical Microstructure Profiler (VMP) 6000'@en ;
+    skos:definition 'A full ocean-depth untethered vertical microstructure turbulence profiler for the measurement of dissipation-scale turbulence along with fine-scale temperature and conductivity for up to 6000 m depth. The instrument is fitted with pressure, temperature (SBE-3F) and conductivity (SBE-4C) sensors, three high grade accelerometers, an internal data acquisition system with 1 Gb solid state disk (Linux OS), and a standard suite of up to 6 microstructure turbulence sensors in any combination of SPM-38-5 velocity shear probes, FP07-38-5 fast thermistors or optional SBE7 microstructure conductivity probes. There is also a geo-electro magnetic current meter for fine-scale shear measurements. The instrument has an aluminium frame with syntactic foam attached for flotation. Data is collected on the downcast and after reaching a pre-defined depth the profiler releases ballast weights so that the instrument becomes positively buoyant. As back-up there is a triple redundancy emergency ballast release system. The VMP 6000 has an RF beacon, ARGO transmitter and Xenon flasher attached for locating purposes. This instrument replaced the VMP 5500 in 2010.'@en ;
+    skos:notation 'SDN:L22::TOOL1150'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0864/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0864/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0864/>;
+    dc:modified '2018-04-23T16:44:14'^^xsd:dateTime ;
+    skos:altLabel 'Rockland VMP 2000'^^xsd:string ;
+    skos:prefLabel 'Rockland Scientific Vertical Microstructure Profiler (VMP) 2000'@en ;
+    skos:definition 'A deep sea tethered microstructure profiler for the measurement of dissipation-scale turbulence in coastal and continental shelf regions in depths of 2000m (note a VMP 750 model is also available). The profiler is equipped with 2x microstructure velocity shear probe, high-resolution temperature sensors (2x FP07 fast thermistors) and an optional Seabird CTD sensors.'@en ;
+    skos:notation 'SDN:L22::TOOL0864'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0643/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0643/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0643/>;
+    dc:modified '2018-04-23T16:44:13'^^xsd:dateTime ;
+    skos:altLabel 'Rockland GEMCM'^^xsd:string ;
+    skos:prefLabel 'Rockland Scientific Geo-electro magnetic current meter (GEMCM)'@en ;
+    skos:definition 'A geo-electromagnetic current meter based upon Stanford et al. (1978). The instrument measures the variations of horizontal velocity between the sea surface and bottom, based on the measurement of electric currents generated by the motion of the seawater through the Earth\'s magnetic field. The GEMCM supports a completely isolated measurement of the battery voltage in an instrument system and 2-component signals from a geo-electro-magnetic current meter. The instrument carries a 3-axis magnetometer that can be used as a compass. All outputs are digital and connect to the serial instrument bus.'@en ;
+    skos:notation 'SDN:L22::TOOL0643'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0642/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0642/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0642/>;
+    dc:modified '2018-04-23T16:44:12'^^xsd:dateTime ;
+    skos:altLabel 'Rockland SPM-38'^^xsd:string ;
+    skos:prefLabel 'Rockland Scientific SPM-38 velocity shear probe'@en ;
+    skos:definition 'A velocity shear probe measuring microstructure velocity fluctuations in oceans and lakes. The instrument measures a single spatial component of turbulent velocity fluctuations, in a direction perpendicular to the probes main axis. The sensing head is based upon the design by Osborn (1974) and the sensing element consists of a parabolic, flexible rubber tip. The oncoming flow produces a hydrodynamic lift force proportional to the fluctuating cross-stream velocity component u. A piezo-ceramic beam embedded in the rubber tip translates the lift force into an electric signal that is proportional to u. The length of the sensing tip (10 mm) determines the maximum wavenumber resolution of the sensor which is approximately 48 cycles per meter. The measurements can be corrected to include wavenumbers up to 150 cpm. The sensor operates over the range 0 to 10 s^-1, has a sensitivity of 0.04 to 0.09 V m s^-2 and resolution of approximately 10 to 4 s.'@en ;
+    skos:notation 'SDN:L22::TOOL0642'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0641/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0641/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0641/>;
+    dc:modified '2018-04-23T16:44:11'^^xsd:dateTime ;
+    skos:altLabel 'Rockland FP07-38'^^xsd:string ;
+    skos:prefLabel 'Rockland Scientific FP07-38 microstructure thermistor'@en ;
+    skos:definition 'A fast-response temperature sensor for oceanographic applications. The sensing tip is a microbead thermistor (manufactured by GE Thermometics), mounted on a 9.525 mm diameter stainless steel string which can be attached to ocean microstructure instruments. The instrument has a frequency response of approximately 23 Hz and a response time of 0.007 s. The sensor operates over the range -2 to +32 degC and has a resolution of 0.0001 degC.'@en ;
+    skos:notation 'SDN:L22::TOOL0641'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0639/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0639/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0639/>;
+    dc:modified '2018-04-23T16:44:10'^^xsd:dateTime ;
+    skos:altLabel 'Rockland VMP 5500'^^xsd:string ;
+    skos:prefLabel 'Rockland Scientific Vertical Microstructure Profiler (VMP) 5500'@en ;
+    skos:definition 'A full ocean-depth untethered vertical microstructure turbulence profiler for the measurement of dissipation-scale turbulence along with fine-scale temperature and conductivity for up to 5500 m depth. The instrument is fitted with pressure, temperature (SBE-3F) and conductivity (SBE-4C) sensors, three acceleration sensors, a PC104 computer data acquisition and communication system, anti-aliasing filters and a standard suite of microstructure sensors which includes two SPM-38-5 velocity shear probes, two FP07-38-5 fast thermistors and an optional microstructure conductivity probe (SBE7). The instrument has an aluminium frame with syntactic foam attached for flotation. Data is collected on the downcast and after reaching a pre-defined depth the profiler releases ballast weights so that the instrument becomes positively buoyant. The VMP 5500 has a strobe light and a radio beacon and can also be fitted with an Argos transmitter for locating purposes. The instrument was replaced by the VMP 6000 in 2010.'@en ;
+    skos:notation 'SDN:L22::TOOL0639'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0576/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0576/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0576/>;
+    dc:modified '2018-04-23T16:44:08'^^xsd:dateTime ;
+    skos:altLabel 'Rockland VMP 500'^^xsd:string ;
+    skos:prefLabel 'Rockland Scientific Vertical Microstructure Profiler VMP 500'@en ;
+    skos:definition 'A vertical microstructure turbulence profiler for the measurement of dissipation-scale turbulence in oceans and lakes up to 500 m depth. It is equipped with microstructure velocity probes (shear probes), high-resolution temperature sensors (fast thermistors), pressure sensor and three-axis high accuracy accelerometers. The instrument includes a bottom landing guard and a deck unit for data communication. Optional extras include high-accuracy CTD sensors either a SBE7-38 microstructure conductivity sensor or SBE-3F/SBE-4C temperature and conductivity sensors. The VMP 500 is suitable for deployment from small vessels and can be powered by a 12 V car battery (using an inverter).'@en ;
+    skos:notation 'SDN:L22::TOOL0576'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1225/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1225/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1225/>;
+    dc:modified '2018-04-20T17:20:46'^^xsd:dateTime ;
+    skos:altLabel 'Airmar CS4500'^^xsd:string ;
+    skos:prefLabel 'Airmar CS4500 (ultrasonic) water speed sensor'@en ;
+    skos:definition 'A speed sensor that is used on all types and sizes of sailboats and powerboats It measures boat speed using ultrasonic pulses to collect echoes from small particles in the water as they pass under two transducers embeded in the sensor. The time taken for particles to travel between transducers is used to calculate vessel speed. It has a transmit frequency of 4.5 MHz and pulse repetetion frequency of 5.5 kHz. Low-profile, plastic, or bronze housings available. Speed range: 0.1-40 knots. Speed accuracy: 0.1 knots.'@en ;
+    skos:notation 'SDN:L22::TOOL1225'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1224/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1224/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1224/>;
+    dc:modified '2018-04-20T17:20:46'^^xsd:dateTime ;
+    skos:altLabel 'Airmar WS PB200'^^xsd:string ;
+    skos:prefLabel 'Airmar Ultrasonic WeatherStation PB200 weather station'@en ;
+    skos:definition 'An integrated, multi-parameter meteorological sensor that is used on marine vessels. It measures wind speed and direction, air temperature, barometric pressure and navigation. It comprises an ultrasonic anemometer, thermistor, piezoresistive pressure sensor, magnetoinductive XYZ sensors, 3-axis MEMS accelerometer, MEMS rate gyro and WAAS/EGNOS GPS receiver. The PB200 WeatherStation has two separate communication interfaces: one compliant with the NMEA 2000 protocol, and the other with the NMEA 0183 protocol. GPS positioning accuracy: <3 m; wind speed accuracy: 1-5 knots; wind direction accuracy: 2-8 degrees; air temperature accuracy: +/- 1 degrees C; barometric pressure accuracy: +/- 2 mbar.'@en ;
+    skos:notation 'SDN:L22::TOOL1224'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1229/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1229/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1229/>;
+    dc:modified '2018-04-20T17:20:46'^^xsd:dateTime ;
+    skos:altLabel 'Brinno TLC200'^^xsd:string ;
+    skos:prefLabel 'Brinno TLC200 time-lapse camera'@en ;
+    skos:definition 'A portable, time-lapse video and still photo camera. It is typically used in domestic applications. It outputs AVI (video) and JPG (still photo) formats with resolutions of 1280x720 or 640x480. It is 64 x 64 x 106 mm (DxWxH) in size, weighs 120 g and has up to 32 GB memory storage (SD card). It can be fitted with a wide-angle lens (0.45x) and weather resistent housing. Captures up to 270,000 frames in 2.2 days at up to 2 frames per second. Custom frame time interval: 1 sec to 24 hours. Field of view: 59 degrees. Focal length: 36 mm (35 mm equivalent). Focus distance 75 cm (minimum).'@en ;
+    skos:notation 'SDN:L22::TOOL1229'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1227/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1227/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1227/>;
+    dc:modified '2018-04-20T17:20:46'^^xsd:dateTime ;
+    skos:altLabel 'Septentrio AsteRx-m'^^xsd:string ;
+    skos:prefLabel 'Septentrio AsteRx-m global positioning system'@en ;
+    skos:definition 'Low-power, compact GPS and GLONASS RTK receiver. Integrates into hand-held devices, mobile computing platforms and other space constrained applications requiring low power consumption. Measures 70 x 47.5 mm and weighs 40 g. Dual-frequency L1/L2 positioning and 132 channels for simultaneous tracking of satellite signals. Positional accuracy : 0.5-1.3 m (horizontal), 0.9-1.9 m (vertical).'@en ;
+    skos:notation 'SDN:L22::TOOL1227'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1228/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1228/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1228/>;
+    dc:modified '2018-04-20T17:20:46'^^xsd:dateTime ;
+    skos:altLabel 'Septentrio AsteRx-m UAS'^^xsd:string ;
+    skos:prefLabel 'Septentrio AsteRx-m UAS global positioning system'@en ;
+    skos:definition 'Low-power, compact GPS and GLONASS RTK receiver. Integrates into unmanned aircraft systems (UAS) requiring low power consumption. Measures 70 x 47.5 mm and weighs 50 g. Dual-frequency L1/L2 positioning and 132 channels for simultaneous tracking of satellite signals. Positional accuracy: 0.4-1.2 m (horizontal), 0.9-1.9 m (vertical).'@en ;
+    skos:notation 'SDN:L22::TOOL1228'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1226/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1226/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1226/>;
+    dc:modified '2018-04-20T17:20:46'^^xsd:dateTime ;
+    skos:altLabel 'SignalQuest SQ-SI-360DA'^^xsd:string ;
+    skos:prefLabel 'SignalQuest SQ-SI-360DA inclinometer'@en ;
+    skos:definition 'A solid-state MEMS inclinometer module. It is used for platform and vehicle leveling but can also be used for a variety of other applications including computer input, head tracking and mouse pointing. The sensor uses two factory calibrated accelerometers to measure and compute angles made between its axes and the gravity vector. The trigonometric conversions between acceleration and angle are made by an onboard processor. Digital filtering reduces the impact of spurious acceleration and vibration on the reported angle. It features UART serial output and analog output. It is capable of +/- 70 degrees dual axis angle measurement and 360 degrees single axis angle measurement. Accuracy: +/- 1-2 degrees (differential).'@en ;
+    skos:notation 'SDN:L22::TOOL1226'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1222/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1222/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1222/>;
+    dc:modified '2018-04-10T17:26:52'^^xsd:dateTime ;
+    skos:altLabel 'Agilent Cary Eclipse'^^xsd:string ;
+    skos:prefLabel 'Agilent Cary Eclipse fluorescence spectrophotometer'@en ;
+    skos:definition 'A laboratory instrument that measures the amount of light at discrete pre-determined wavelengths that is transmitted or emitted by a sample. It can be operated with measurement modes for fluorescence, phosphorescence, chemiluminescence and bioluminescence. The instrument uses Czerny-Turner 0.125 m monochromators with a 190-1100 nm wavelength range and a fixed selectable spectral bandwidth from 1.5 to 20 nm. It uses a full spectrum Xe pulse lamp single source and dual R928 photomultiplier tubes. The instrument has scan rates from 0.01 to 24000 nm/min, and a maximum measurement rate of 80 data points per second. It also has room light immunity when in fluorescence mode.'@en ;
+    skos:notation 'SDN:L22::TOOL1222'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1223/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1223/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1223/>;
+    dc:modified '2018-04-10T17:26:52'^^xsd:dateTime ;
+    skos:altLabel 'PU FI-CL photon counting system with H8259'^^xsd:string ;
+    skos:prefLabel 'Plymouth University Flow Injection Chemiluminescence system with Hamamatsu H8259 photon counting head'@en ;
+    skos:definition 'An analytical system manufactured by Plymouth University and used by Birchill et al. (2017) to determine concentrations of chemical species in a sample based on the luminescence of the species of interest. The system is normally uniquely assembled for each analysis, and comprises pumps, injection and autosampler valves, preconcentration columns and a Hamamatsu H8259 photon counting head for chemiluminescence detection. The H8259 device includes a side-on photomultiplier tube with a diameter of 28 mm, a high-speed photon counting circuit, and a high-voltage power supply circuit. Depending on the product type number used, the photon counting head device has a spectral response range of 185 nm to 680 nm, 850 nm or 900 nm, and a low dark count in UV to visible or near IR range.'@en ;
+    skos:notation 'SDN:L22::TOOL1223'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1219/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1219/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1219/>;
+    dc:modified '2018-03-05T16:13:15'^^xsd:dateTime ;
+    skos:altLabel 'Mettler Delta 350 pH'^^xsd:string ;
+    skos:prefLabel 'Mettler Toledo Delta 350 pH meter'@en ;
+    skos:definition 'The Delta 350 meter is a laboratory instrument designed to meaure pH, mV, and temperature in acqueous samples. A range of electrodes can be used with the meter. Typical operating range specifications for pH are -1.999 to 19.999 with 0.001/0.01/0.1 resolution and +/-0.001 accuracy. Operating ranges for mV are +/- 1999.9 with 0.1 resolution and +/- 0.2 accuracy, and operating ranges for temperature -30 to 130 degC with resolution 0.1 degC and accuracy between +/- 1 percent.'@en ;
+    skos:notation 'SDN:L22::TOOL1219'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1220/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1220/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1220/>;
+    dc:modified '2018-03-05T16:13:15'^^xsd:dateTime ;
+    skos:altLabel 'Mettler InLab Expert Pro'^^xsd:string ;
+    skos:prefLabel 'Mettler Toledo InLab Expert Pro electrode'@en ;
+    skos:definition 'An electrochemical pH electrode for use with a variety of Mettler Toledo pH meters. It uses an ARGENTHAL reference system with Ag ion trap, and  a XEROLYTE polymer reference electrolyte. It measures a pH range of 0-14 within a temperature range of 0-100 degC. Its membrane resistance at 25 degC is <250 mega-ohms.'@en ;
+    skos:notation 'SDN:L22::TOOL1220'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1218/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1218/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1218/>;
+    dc:modified '2018-03-05T16:13:15'^^xsd:dateTime ;
+    skos:altLabel 'Mettler Toledo FiveGo'^^xsd:string ;
+    skos:prefLabel 'Mettler Toledo FiveGo Portable Instruments'@en ;
+    skos:definition 'The Mettler Toledo FiveGo meters are portable instruments used for pH, conductivity and dissolved oxygen determination in aqueous samples. The FiveGo meters are split into three categories: FiveGO pH, FiveGo Conductivity and FiveGo DO. The models vary between single and dual channels for both basic and professional use. The basic single channel instruments measure pH/mV or conductivity, whereas the basic dual channel instruments measure pH/mV and conductivity in parallel. The pro single channel instruments determine pH/mV/ion, conductivity or dissolved oxygen discretely, whereas the pro dual models determine pH/mV/ion in parallel with conductivity or dissolved oxygen. pH measurements range from 0-14 pH, conductivity measurements range from 0-200mS/cm and dissolved oxygen measurements range from 0.01-45 mg/l.'@en ;
+    skos:notation 'SDN:L22::TOOL1218'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1217/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1217/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1217/>;
+    dc:modified '2018-03-05T16:13:15'^^xsd:dateTime ;
+    skos:altLabel 'YSI EXO sondes'^^xsd:string ;
+    skos:prefLabel 'YSI EXO multiparameter water quality sondes'@en ;
+    skos:definition 'Comprehensive multi-parameter, water-quality monitoring sondes designed for long-term monitoring, profiling and spot sampling. The EXO sondes are split into several categories: EXO1 Sonde, EXO2 Sonde, EXO3 Sonde. Each category has a slightly different design purpose with the the EXO2 and EXO3 containing more sensor ports than the EXO1. Data are collected using up to four user-replaceable sensors and an integral pressure transducer. Users communicate with the sonde via a field cable to an EXO Handheld, via Bluetooth wireless connection to a PC, or a USB connection to a PC. Typical parameter specifications for relevant sensors include dissolved oxygen with ranges of 0-50 mg/l, with a resolution of +/- 0.1 mg/l, an accuracy of 1 percent of reading for values between 0-20 mg/l and an accuracy of +/- 5 percent of reading for values 20-50 mg/l. Temp ranges are from-5 to +50 degC, with an accuracy of +/- 0.001 degC. Conductivity has a range of 0-200 mS/cm, with an accuracy of +/-0.5 percent of reading + 0.001 mS/cm and a resolution of 0.0001 - 0.01 mS/cm.'@en ;
+    skos:notation 'SDN:L22::TOOL1217'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1216/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1216/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1216/>;
+    dc:modified '2018-02-27T12:21:14'^^xsd:dateTime ;
+    skos:altLabel 'Petite ponar grab'^^xsd:string ;
+    skos:prefLabel 'Unspecified Petite ponar grab'@en ;
+    skos:definition 'Developed in the mid-1960s (Powers and Robertson 1967), ponar grabs are used to sample coarse or fine, undisturbed sediment from the sea floor. It consists of a pair of weighted, tapered jaws held open by a catch bar across the top of the sampler. On touching the bottom, the tension bar is released, allowing the jaws to move and close. The device is activated by the release of the cable tension on the lifting mechanism when the sampler reaches the sediment. During retrieval, the tension on the cable keeps the jaws closed. It has a pair of metal side plates which prevents the sampler from falling over after the jaws\' closure. Its jaws overlap to minimise sample washout during ascent. Smaller than the standard ponar grab, it is typically used in hand line operations. The sampled area is approx. 15 cm sq. (approx. 1000 cubic metres).'@en ;
+    skos:notation 'SDN:L22::TOOL1216'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1214/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1214/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1214/>;
+    dc:modified '2018-02-27T12:21:14'^^xsd:dateTime ;
+    skos:altLabel 'Ponar grab'^^xsd:string ;
+    skos:prefLabel 'Unspecified ponar grab'@en ;
+    skos:definition 'Developed in the mid-1960s (Powers and Robertson 1967), ponar grabs are used to sample coarse or fine, undisturbed sediment from the sea floor. It consists of a pair of weighted, tapered jaws held open by a catch bar across the top of the sampler. On touching the bottom, the tension bar is released, allowing the jaws to move and close. The device is activated by the release of the cable tension on the lifting mechanism when the sampler reaches the sediment. During retrieval, the tension on the cable keeps the jaws closed. It has a pair of metal side plates which prevents the sampler from falling over after the jaws\' closure. Its jaws overlap to minimise sample washout during ascent. Depending on the variant (standard or petite), the sampled area can be between approx. 15-23 cm sq. (approx. 1000 - 7250 cubic metres).'@en ;
+    skos:notation 'SDN:L22::TOOL1214'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1215/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1215/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1215/>;
+    dc:modified '2018-02-27T12:21:14'^^xsd:dateTime ;
+    skos:altLabel 'Standard ponar grab'^^xsd:string ;
+    skos:prefLabel 'Unspecified Standard ponar grab'@en ;
+    skos:definition 'Developed in the mid-1960s (Powers and Robertson 1967), ponar grabs are used to sample coarse or fine, undisturbed sediment from the sea floor. It consists of a pair of weighted, tapered jaws held open by a catch bar across the top of the sampler. On touching the bottom, the tension bar is released, allowing the jaws to move and close. The device is activated by the release of the cable tension on the lifting mechanism when the sampler reaches the sediment. During retrieval, the tension on the cable keeps the jaws closed. It has a pair of metal side plates which prevents the sampler from falling over after the jaws\' closure. Its jaws overlap to minimise sample washout during ascent. It is typically used with a winch or crane hoist. The sampled area is approx. 23 cm sq. (approx. 7250 cubic metres).'@en ;
+    skos:notation 'SDN:L22::TOOL1215'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1211/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1211/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1211/>;
+    dc:modified '2018-02-02T14:35:00'^^xsd:dateTime ;
+    skos:altLabel 'SeaFAST S2 Pico'^^xsd:string ;
+    skos:prefLabel 'SeaFAST S2 Pico Automated Preconcentration System'@en ;
+    skos:definition 'An automated sample introduction system for the analysis of trace elements in seawater and other high matrix samples by ICPMS (Inductively Coupled Plasma Mass Spectrometry). Three modes of operation are available: fully-automated Direct Mode where the sample is diluted inline; Preconcentration Mode where a chelation column binds rare earth elements and transition metals but allows matrix ions to be rinsed out; and Offline mode. Both Direct and Preconcentration modes reduce procedural blanks associated with offline sample preparation, and Preconcentration mode dramatically improves detection limits by eliminating matrix effects and increasing sensitivity. The system offers detection limits better than 1ppt  and operates in less than 8 minutes inline.'@en ;
+    skos:notation 'SDN:L22::TOOL1211'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1210/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1210/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1210/>;
+    dc:modified '2018-02-02T12:39:33'^^xsd:dateTime ;
+    skos:altLabel 'BD FACSCalibur Flow Cytometer'^^xsd:string ;
+    skos:prefLabel 'BD Biosciences FACSCalibur Flow Cytometry System'@en ;
+    skos:definition 'The FACSCalibur flow cytometer is an autonomous benchtop flow cytometer designed for routine cell analysis, assay development, verification and identification of cellular populations. It is equipped with a blue (488 nm) air-cooled argon laser and a red (635 nm) diode laser. For each particle (cell), five optical parameters can be recorded from the 488 nm laser beam excitation: two light scatter signals, namely forward and right angle, and three fluorescences corresponding to emissions in green (530/30 nm BP), orange (585/42 nm BP) and red (670 nm LP) wavelength ranges. A far red fluorescence (661/16 nm BP) induced by the red diode can also be recorded. Data are analysed using BD Biosciences CellQuest software. Optional features include a cell sorting option, allowing users to identify and isolate a population of interest and a HTS option (High-throughput (HT) or Standard (STD) mode), where sample volumes range from 2-10 microlitres in HT mode and 2-200 microlitres in STD mode. An optional BD FACS Loader tube-lifter can be used to verify tube position and rack identification. The instrument has a capture rate of 300 cells per second, supports 40 (12 x 75 mm) tubes per rack, and has an operating temperature ranging from 16-29 degC.'@en ;
+    skos:notation 'SDN:L22::TOOL1210'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1209/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1209/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1209/>;
+    dc:modified '2018-02-02T09:09:47'^^xsd:dateTime ;
+    skos:altLabel 'CytoSense flow cytometer'^^xsd:string ;
+    skos:prefLabel 'CytoBuoy CytoSense flow cytometer'@en ;
+    skos:definition 'The CytoSense is a portable, benchtop autonomous flow cytometer designed for phytoplankton species classification and analysis of filamentous algae. It can also be used in situ to reveal temporal and spatial phytoplankton variability. It can be remotely controlled, and has been specifically designed to record the optical pulse shapes of suspended particles between <1 and 800 micrometres in diameter and up to 4 millimetres in length (for chain-forming cells recording) in relatively large volumes of water (several centimetres cubed per sample). The instrument combines high sensitivity with an extremely wide particle size range (from sub-micron up to 1.5 millimetres in diameter) and acquires multiple data points per particle, which distinguishes the CytoSense from conventional flow cytometers. The CytoSense has a modular design, with various upgrades and accessories available to suit user requirements. These include additional lasers, optional cameras to take pictures of particles and a widened flow cell. The sample intake speed ranges from 0.07 - 17 microlitres per second, allowing high particle loads (thousands of particles per second) as well as very low concentrations.'@en ;
+    skos:notation 'SDN:L22::TOOL1209'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1198/3/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1198/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1198/>;
+    dc:modified '2018-01-30T17:24:04'^^xsd:dateTime ;
+    skos:altLabel 'NMFSS Single-Channel Airgun'^^xsd:string ;
+    skos:prefLabel 'National Marine Facilities Sea Systems (NMFSS) Single-Channel Airgun Seismic Reflection System'@en ;
+    skos:definition 'A NMFSS-built single-channel seismic reflection profiling system. The system uses a Bolt 1500C airgun as sound source, and a short hydrophone streamer.'@en ;
+    skos:notation 'SDN:L22::TOOL1198'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1197/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1197/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1197/>;
+    dc:modified '2018-01-30T17:21:33'^^xsd:dateTime ;
+    skos:altLabel 'NMFSS Multi-Channel Airgun'^^xsd:string ;
+    skos:prefLabel 'National Marine Facilities Sea Systems (NMFSS) Multi-Channel Airgun Seismic Reflection System'@en ;
+    skos:definition 'A NMFSS-built multi-channel seismic reflection profiling system. The system uses a Bolt 1500C airgun as sound source, and a hydrophone streamer of 1 km in length.'@en ;
+    skos:notation 'SDN:L22::TOOL1197'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1207/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1207/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1207/>;
+    dc:modified '2018-01-30T16:59:47'^^xsd:dateTime ;
+    skos:altLabel '4117/4117R'^^xsd:string ;
+    skos:prefLabel 'Aanderaa Pressure Sensor 4117/4117R'@en ;
+    skos:definition 'An integrated pressure and temperature sensor designed to either be connected to an Aanderaa SmartGuard data logger, to be mounted on to the Aanderaa SeaGuard platform, or to operate as a stand-alone sensor using RS-232. The instrument can operate down to 6000 m depth, and has a selectable interval of 1 second to 255 minutes. The pressure range varies between the six sensor models, from 0-1000 kPa for the 4117A/4117AR model, to 0-60000 kPa for the 4117F/4117FR model; for all models, the pressure resolution is <0.0001 % full scale output (FSO) and the pressure accuracy is +/- 0.2% FSO. All models have a temperature range of 0 degC to 36 degC, a resolution of <0.001 degC, and an accuracy of 0.05 degC.'@en ;
+    skos:notation 'SDN:L22::TOOL1207'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1193/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1193/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1193/>;
+    dc:modified '2018-01-30T16:59:47'^^xsd:dateTime ;
+    skos:altLabel 'AutoFlux system'^^xsd:string ;
+    skos:prefLabel 'AutoFlux Logging System'@en ;
+    skos:definition 'An autonomous system designed to produce continuous measurements of turbulent air-sea flux estimates of wind stress, buoyancy, heat, water vapour and carbon dioxide from ship-mounted instrumentation using the inertial dissipation method (Yelland et al., 1994). [AutoFlux Group - MAST project MAS3-CT97-0108; Yelland et al., 1998; Yelland, Pascal, Taylor, Moat, 2009].'@en ;
+    skos:notation 'SDN:L22::TOOL1193'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1202/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1202/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1202/>;
+    dc:modified '2018-01-30T16:59:47'^^xsd:dateTime ;
+    skos:altLabel 'BAS Acoustic Towfish'^^xsd:string ;
+    skos:prefLabel 'British Antarctic Survey Acoustic Towfish'@en ;
+    skos:definition 'An acoustic towfish developed by the British Antarctic Survey, built to carry a set of transducers (38 kHz split beam, 120 kHz split beam, 200 kHz single beam) and to be towed in 20 m to 30 m depth. This instrument was design to sample in the \'blanking zone\' of ship-mounted echosounders, an area in the water column where air bubbles and acoustic noise corrupt the echosounder\'s measurements.'@en ;
+    skos:notation 'SDN:L22::TOOL1202'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/NETT0184/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/NETT0184/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/NETT0184/>;
+    dc:modified '2018-01-30T16:59:47'^^xsd:dateTime ;
+    skos:altLabel 'BAS CPR'^^xsd:string ;
+    skos:prefLabel 'British Antarctic Survey Continuous Plankton Recorder'@en ;
+    skos:definition 'A British Antarctic Survey-built plankton sampling instrument, designed to be towed from a ship at a depth of approximately 10 m. Water passes through the CPR, and plankton are filtered onto a slow-moving band of silk with a mesh size of 270 um, covered by a second band of silk.'@en ;
+    skos:notation 'SDN:L22::NETT0184'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/NETT0182/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/NETT0182/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/NETT0182/>;
+    dc:modified '2018-01-30T16:59:47'^^xsd:dateTime ;
+    skos:altLabel 'BAS EBS'^^xsd:string ;
+    skos:prefLabel 'British Antarctic Survey Epi-benthic Sledge'@en ;
+    skos:definition 'A British Antarctic Survey-built sledge, designed to be towed along the seabed to stir up the top layer of sediment and collect organisms living just above the seafloor. The EBS has a stainless steel metal frame with two nets built in, and two doors at the front, which are operated by a mechanical leaver to ensure accurate sampling.'@en ;
+    skos:notation 'SDN:L22::NETT0182'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/NETT0185/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/NETT0185/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/NETT0185/>;
+    dc:modified '2018-01-30T16:59:47'^^xsd:dateTime ;
+    skos:altLabel 'BAS MOCNESS'^^xsd:string ;
+    skos:prefLabel 'British Antarctic Survey multiple plankton net system based on MOCNESS'@en ;
+    skos:definition 'A British Antarctic Survey-built version of the Multiple Opening and Closing Net with an Environmental Sensing System (MOCNESS) originally designed by Wiebe et al. (1976) for capturing zooplankton. This version consists of nine nets, which can be towed to a maximum depth of 1000 m. A live data stream allows an operator on the ship to close a net, thus triggering the opening of the next one. The first net is open when the system goes in the water; when the maximum depth is reached, the operator triggers it to close, thus automatically prompting the next one to open. This mode of operation is repeated until all nets have collected samples. This system allows for accurate control over timing and location of samples, which are collected sequentially through the nine nets. The frame also carries a current meter and a CTD system.'@en ;
+    skos:notation 'SDN:L22::NETT0185'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/NETT0178/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/NETT0178/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/NETT0178/>;
+    dc:modified '2018-01-30T16:59:47'^^xsd:dateTime ;
+    skos:altLabel 'BAS RMT1'^^xsd:string ;
+    skos:prefLabel 'British Antarctic Survey Rectangular Midwater Trawl 1'@en ;
+    skos:definition 'A British Antarctic Survey-built pelagic trawl system, mainly used to catch zooplankton. The RMT system is operated in combination with the down-wire net monitor, a custom-built electronic system that enables two-way communications between the net and controllers aboard the ship. The net has a mouth opening of 1 m^2.'@en ;
+    skos:notation 'SDN:L22::NETT0178'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/NETT0179/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/NETT0179/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/NETT0179/>;
+    dc:modified '2018-01-30T16:59:47'^^xsd:dateTime ;
+    skos:altLabel 'BAS RMT1+8'^^xsd:string ;
+    skos:prefLabel 'British Antarctic Survey Rectangular Midwater Trawl 1+8'@en ;
+    skos:definition 'A British Antarctic Survey-built pelagic trawl system, composed of a combination of RMT1 and RMT8 nets. The RMT1 net is best suited to catch zooplankton, while the RMT8 net is used to catch krill. The RMT system is operated in combination with the down-wire net monitor, a custom-built electronic system that enables two-way communications between the net and controllers aboard the ship. The nets have mouth openings of 1 m^2 (RMT1) and 8 m^2 (RMT8).'@en ;
+    skos:notation 'SDN:L22::NETT0179'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/NETT0181/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/NETT0181/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/NETT0181/>;
+    dc:modified '2018-01-30T16:59:47'^^xsd:dateTime ;
+    skos:altLabel 'BAS RMT25'^^xsd:string ;
+    skos:prefLabel 'British Antarctic Survey Rectangular Midwater Trawl 25'@en ;
+    skos:definition 'A British Antarctic Survey-built pelagic trawl system, best suited to catch fish. For targeted sampling in specific swarms or water layers, two nets can be used independently. The RMT system is operated in combination with the down-wire net monitor, a custom-built electronic system that enables two-way communications between the net and controllers aboard the ship. The net has a mouth opening of 25 m^2, and weighs around 1000 kg.'@en ;
+    skos:notation 'SDN:L22::NETT0181'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/NETT0180/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/NETT0180/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/NETT0180/>;
+    dc:modified '2018-01-30T16:59:47'^^xsd:dateTime ;
+    skos:altLabel 'BAS RMT8'^^xsd:string ;
+    skos:prefLabel 'British Antarctic Survey Rectangular Midwater Trawl 8'@en ;
+    skos:definition 'A British Antarctic Survey-built pelagic trawl system, mainly used to catch krill. The RMT system is operated in combination with the down-wire net monitor, a custom-built electronic system that enables two-way communications between the net and controllers aboard the ship. The net has a mouth opening of 8 m^2.'@en ;
+    skos:notation 'SDN:L22::NETT0180'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1195/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1195/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1195/>;
+    dc:modified '2018-01-30T16:59:47'^^xsd:dateTime ;
+    skos:altLabel 'BGS Airgun System'^^xsd:string ;
+    skos:prefLabel 'British Geological Survey Airgun Profiling System'@en ;
+    skos:definition 'A British Geological Survey-built airgun profiling system composed of: a Bolt 600B gun array of five guns as sound source, each fitted with 655 cm^3 (i.e. 40 cubic inches) firing chambers; a hydrophone streamer; a compressor container; a BGS/CODA digital acquisition and processing system; and a Waverley thermal recorder.'@en ;
+    skos:notation 'SDN:L22::TOOL1195'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1196/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1196/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1196/>;
+    dc:modified '2018-01-30T16:59:47'^^xsd:dateTime ;
+    skos:altLabel 'BGS Sparker System'^^xsd:string ;
+    skos:prefLabel 'British Geological Survey Sparker Profiling System'@en ;
+    skos:definition 'A British Geological Survey-built sparker profiling system composed of: either a EG&G, nine candle or a BGS, four candle sparker array as sound source; a Teledyne hydrophone; a high voltage power supply with up to 2 KJ output; a high voltage generator (optional); a BGS/CODA digital acquisition and processing system; and a Waverley thermal recorder.'@en ;
+    skos:notation 'SDN:L22::TOOL1196'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1204/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1204/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1204/>;
+    dc:modified '2018-01-30T16:59:47'^^xsd:dateTime ;
+    skos:altLabel 'BX-650'^^xsd:string ;
+    skos:prefLabel 'BX-650 box corer'@en ;
+    skos:definition 'A box corer designed for sediment surface sampling, also referred to as \'MK-III box (spade) corer\'. The unit includes a stainless steel sample box of 50 cm x 50 cm in dimension, an automatic door-closing device, a pretrip preventer bar, quick release spade latches, and jacking dolly for mounting and removing sample box and spade. The corer can penetrate to a maximum of 60 cm into the sediment. Its weight is of approximately 740 kg, and its height is 212 cm with a deck footprint of 165 cm x 192 cm.'@en ;
+    skos:notation 'SDN:L22::TOOL1204'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1205/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1205/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1205/>;
+    dc:modified '2018-01-30T16:59:47'^^xsd:dateTime ;
+    skos:altLabel 'EK80'^^xsd:string ;
+    skos:prefLabel 'Simrad EK80 echo sounder'@en ;
+    skos:definition 'A high precision scientific echo sounder, designed to simultaneously operate frequencies ranging from 10 to 500 kHz. EK80 is a modular echo sounder system, and can operate with a combination of split and single beam transducers facilitated by a built-in calibration application. This system was built in succession to the EK60 echo sounder.'@en ;
+    skos:notation 'SDN:L22::TOOL1205'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1200/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1200/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1200/>;
+    dc:modified '2018-01-30T16:59:47'^^xsd:dateTime ;
+    skos:altLabel 'GEOMAR OBH-System'^^xsd:string ;
+    skos:prefLabel 'GEOMAR Ocean Bottom Hydrophone System'@en ;
+    skos:definition 'An observation and registration system designed to monitor acoustic and seismic events. The OBH is composed of a buoyant body, a flasher, a radio beacon, a data logger with batteries, and a hydrophone mounted between an acoustic release (iXSea or KUMQUAT) and a pressure cylinder. All metal parts are made from titanium, whilst the buoyant bodies are made of syntactic foam. The system is designed to float at approximately 1 m above the sea floor, and can operate down to 6000 m water depth.  The descent and ascent speeds are approximately 1 m/s to 1.2 m/s.'@en ;
+    skos:notation 'SDN:L22::TOOL1200'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1206/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1206/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1206/>;
+    dc:modified '2018-01-30T16:59:47'^^xsd:dateTime ;
+    skos:altLabel 'Manta G-609'^^xsd:string ;
+    skos:prefLabel 'Manta G-609 camera'@en ;
+    skos:definition 'A Gigabit Ethernet (GigE) camera including a Sony ICX694 sensor with Exview HAD II technology. It has a resolution of 2752 x 2206 (approximately 6 Megapixels), and has a maximum frame rate of 15 frames per second. The Manta G-609 camera is suitable for various applications, including high-resolution surveillance, metrology and inspection systems, scientific measurements and microscopy, and is suited for low light conditions and is sensitive to near infrared (NIR) radiation.'@en ;
+    skos:notation 'SDN:L22::TOOL1206'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1201/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1201/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1201/>;
+    dc:modified '2018-01-30T16:59:47'^^xsd:dateTime ;
+    skos:altLabel 'NOC SHRIMP'^^xsd:string ;
+    skos:prefLabel 'National Oceanography Centre Seafloor High Resolution Imaging Platform'@en ;
+    skos:definition 'A high resolution deep-towed camera platform developed by the National Oceanography Centre (NOC). It can take photographs and downward videos at depths of up to 5000 m, sending live images to the ship via fibre optics.'@en ;
+    skos:notation 'SDN:L22::TOOL1201'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/NETT0183/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/NETT0183/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/NETT0183/>;
+    dc:modified '2018-01-30T16:59:47'^^xsd:dateTime ;
+    skos:altLabel 'RBOT'^^xsd:string ;
+    skos:prefLabel 'Rough Bottom Otter Trawl'@en ;
+    skos:definition 'A cone-shaped net kept opened horizontally by two otter boards, and vertically by floats on the upper edge (floatline) and weights on the groundrope. The groundrope is also equipped with bobbins to prevent the leading margin of the trawl from being damaged; on particularly rough grounds, special rock hopper gears are used. Codend mesh size varies depending on species of fish sampled. The net is connected to the ship by a steel cable.'@en ;
+    skos:notation 'SDN:L22::NETT0183'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/NETT0186/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/NETT0186/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/NETT0186/>;
+    dc:modified '2018-01-30T16:59:47'^^xsd:dateTime ;
+    skos:altLabel 'Rauschert dredge'^^xsd:string ;
+    skos:prefLabel 'Rauschert dredge'@en ;
+    skos:definition 'A fine-mesh dredge composed of a symmetrical metal frame attached to two nets: an inner one with mesh size of 500 um, and an outer one to protect it, with mesh size of 10 mm. This dredge was designed by Dr. Martin Rauschert (Alfred Wegener Institute Helmholtz Centre for Polar and Marine Research) to collect organisms that live on the seabed.'@en ;
+    skos:notation 'SDN:L22::NETT0186'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1199/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1199/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1199/>;
+    dc:modified '2018-01-30T16:59:47'^^xsd:dateTime ;
+    skos:altLabel 'UnSpec kasten'^^xsd:string ;
+    skos:prefLabel 'Unspecified kasten corer'@en ;
+    skos:definition 'A marine geological coring device designed to sample large volumes of soft sediments. The kasten corer may come in four different lengths (2 m, 3 m, or 4 m), and uses a stainless steel box with a rectangular section of 15 cm^2 to push into the sediment with the help of a weight on top and a trap at the bottom. To deploy and retrieve the corer, the track and tilt system is used. After retrieval, a removable side of the core barrel can provide immediate access to the sampled sediment. The kasten corer is a variation of the gravity corer.'@en ;
+    skos:notation 'SDN:L22::TOOL1199'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1194/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1194/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1194/>;
+    dc:modified '2018-01-30T16:59:47'^^xsd:dateTime ;
+    skos:altLabel 'UoH Seismic Reflection System'^^xsd:string ;
+    skos:prefLabel 'University of Hamburg Airgun Seismic Reflection System'@en ;
+    skos:definition 'A single-channel seismic reflection profiling system developed by the Institute of Geophysics, University of Hamburg (UoH). The system uses a generator injector airgun as sound source, and a short hydrophone streamer.'@en ;
+    skos:notation 'SDN:L22::TOOL1194'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1208/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1208/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1208/>;
+    dc:modified '2018-01-30T16:59:47'^^xsd:dateTime ;
+    skos:altLabel 'WBAT'^^xsd:string ;
+    skos:prefLabel 'Simrad Wideband Autonomous Transceiver (WBAT)'@en ;
+    skos:definition 'An autonomous, self-contained echo-sounder, designed to be submerged to a maximum of 1500 m depth for up to 15 months at a time. The instrument operates within a frequency range of 30 kHz to 500 kHz; it is composed of four channels, each with a maximum transmit power of 250 W.'@en ;
+    skos:notation 'SDN:L22::TOOL1208'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1192/4/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1192/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1192/>;
+    dc:modified '2018-01-17T17:42:55'^^xsd:dateTime ;
+    skos:altLabel 'ORTEC GMX HPGe Coaxial Detector series'^^xsd:string ;
+    skos:prefLabel 'ORTEC Gamma-X (GMX) N-type High Purity Germanium (HPGe) Coaxial Radiation Detector series'@en ;
+    skos:definition 'The Gamma-X series detectors are fabricated from N-type germanium with an inner contact of diffused lithium and an outer, 0.3um-thick contact of ion-implanted boron. All Gamma-X series detectors feature the following options: user self-repair neutron damage; SMART bias; Harsh Environment (-HE); aluminium or carbon fiber window; low-background carbon fiber endcap; PLUS preamplifier; as well as configuration flexibility between PopTop, Streamline, and mechanical cooling systems. Endcap diameter sizes range from 70mm to 95mm, and determine the detector\'s relative efficiency, from 10% for the smaller endcap up to 110% for the largest one. The spectrometers may detect energy between 3keV and 10MeV.'@en ;
+    skos:notation 'SDN:L22::TOOL1192'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1191/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1191/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1191/>;
+    dc:modified '2018-01-17T13:39:30'^^xsd:dateTime ;
+    skos:altLabel 'Oktopus MC8-12'^^xsd:string ;
+    skos:prefLabel 'Oktopus MC8-12 multicorer'@en ;
+    skos:definition 'An oceanographic sediment core sampling device. Collects multiple cores of undisturbed samples of the upper boundary layers between sea floor and the water column. Consists of a 2.1 m (dia.) x 1.2-1.7 m (H) stainless steel frame and between 8-12 polycarbonate coring tubes (610 mm length). Tube material is optional. The tube diameter used can range between 60-110 mm. The frame can be fitted with external equipment such as cameras and sensors systems. It is capable of full ocean depth deployments and a penetration depth of ca. 300 mm.'@en ;
+    skos:notation 'SDN:L22::TOOL1191'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1190/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1190/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1190/>;
+    dc:modified '2018-01-16T13:39:27'^^xsd:dateTime ;
+    skos:altLabel 'Digitron TM-22 thermometer'^^xsd:string ;
+    skos:prefLabel 'Digitron TM-22 Differential Digital Thermometer'@en ;
+    skos:definition 'The Digitron TM-22 is a water-resistant, hand-held digital thermometer. It complements Digitron\'s PM series of pressure instruments. Its typical battery life is 500 hours from two AA or equivalent cells. Temperature measurements are available in Celsius or Fahrenheit with a temperature range of -200 degC to +1350 degC/ -328 degF to +2462 degF.'@en ;
+    skos:notation 'SDN:L22::TOOL1190'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/NETT0176/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/NETT0176/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/NETT0176/>;
+    dc:modified '2018-01-09T13:29:51'^^xsd:dateTime ;
+    skos:altLabel 'Bongo'^^xsd:string ;
+    skos:prefLabel 'Bongo net'@en ;
+    skos:definition 'A generic term for a plankton net designed with double circular (ring, hoop or drum) mouth pieces; with further specifications either unknown or described elsewhere in the supporting metadata.'@en ;
+    skos:notation 'SDN:L22::NETT0176'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/NETT0177/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/NETT0177/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/NETT0177/>;
+    dc:modified '2018-01-09T13:29:51'^^xsd:dateTime ;
+    skos:altLabel 'Manta trawl'^^xsd:string ;
+    skos:prefLabel 'Manta net'@en ;
+    skos:definition 'A generic term for a net system designed for sampling the surface of the ocean. Based on the original design by Brown and Cheng 1981, it has a single rectangular mouth piece and a pair of wings that ride the sea surface; further specifications are either unknown or described elsewhere in the supporting metadata.'@en ;
+    skos:notation 'SDN:L22::NETT0177'^^xsd:string .

@@ -1,0 +1,217 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S20/2022_01_01_00_00_00_2026_04_24_15_35_27.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S20/2020_01_01_00_00_00_2021_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-24T15:35:27'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000039/2/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000039/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000039/>;
+    dc:modified '2025-12-19T15:25:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument zero'@en ;
+    skos:definition 'The measurement is given relative to the instrument\'s zero.'@en ;
+    skos:notation 'SDN:S20::S2000039'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000042/1/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000042/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000042/>;
+    dc:modified '2024-11-05T12:50:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument frame'@en ;
+    skos:definition 'The reference is the rigid structure of a physical object that is a tool, an implement or a sampling/measuring device.'@en ;
+    skos:notation 'SDN:S20::S2000042'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000033/2/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000033/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000033/>;
+    dc:modified '2024-11-01T16:21:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'unspecified datum'@en ;
+    skos:definition 'A datum that has not been specified.'@en ;
+    skos:notation 'SDN:S20::S2000033'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000036/2/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000036/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000036/>;
+    dc:modified '2024-11-01T16:19:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Chart Datum'@en ;
+    skos:definition 'An unspecified chart datum.'@en ;
+    skos:notation 'SDN:S20::S2000036'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000010/2/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000010/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000010/>;
+    dc:modified '2024-11-01T16:15:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instantaneous sea level'@en ;
+    skos:definition 'The sea surface elevation at the time of the observation.'@en ;
+    skos:notation 'SDN:S20::S2000010'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000041/2/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000041/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000041/>;
+    dc:modified '2024-11-01T16:11:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'datum specified elsewhere'@en ;
+    skos:definition 'A datum provided elsewhere in the data model.'@en ;
+    skos:notation 'SDN:S20::S2000041'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000040/1/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000040/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000040/>;
+    dc:modified '2024-11-01T14:40:51'^^xsd:dateTime ;
+    skos:altLabel 'NMMA'^^xsd:string ;
+    skos:prefLabel 'Alicante Mean Sea Level datum'@en ;
+    skos:definition 'A vertical datum based on the mean sea level at Alicante, Spain (Nivel Medio del Mar en Alicante NMMA)'@en ;
+    skos:notation 'SDN:S20::S2000040'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000027/1/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000027/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000027/>;
+    dc:modified '2024-04-23T15:38:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Lowest Astronomical Tide datum'@en ;
+    skos:definition 'A vertical datum based on the arithmetic mean of hourly heights observed over the National Tidal Datum Epoch. Shorter series are specified in the name; e.g. monthly mean sea level and yearly mean sea level. Adapted from https://tidesandcurrents.noaa.gov/datum_options.html'@en ;
+    skos:notation 'SDN:S20::S2000027'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000028/1/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000028/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000028/>;
+    dc:modified '2024-04-23T15:38:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ordnance Datum Malin'@en ;
+    skos:definition 'A vertical datum based on the mean sea level of the tide gauge at Malin Head, County Donegal. It was adopted as the national datum in 1970 from readings taken between 1960 and 1969 and all heights on national grid maps are measured above this datum.'@en ;
+    skos:notation 'SDN:S20::S2000028'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000029/1/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000029/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000029/>;
+    dc:modified '2024-04-23T15:38:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Rijkswaterstaat Mean Sea Level'@en ;
+    skos:definition 'A vertical datum based on the mean sea level for a period of minimal 2 days converted to a many-year average based on measurements taken at the specified location.'@en ;
+    skos:notation 'SDN:S20::S2000029'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000030/1/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000030/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000030/>;
+    dc:modified '2024-04-23T15:38:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'UK Admiralty Chart Datum'@en ;
+    skos:definition 'A vertical datum based on the low water plane specified by UK Admiralty. This approximates to Lowest Astonomical Tide but the two are not exactly the same in some geographical areas.'@en ;
+    skos:notation 'SDN:S20::S2000030'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000031/1/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000031/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000031/>;
+    dc:modified '2024-04-23T15:38:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Normal Low Water datum'@en ;
+    skos:definition 'Not available'@en ;
+    skos:notation 'SDN:S20::S2000031'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000032/1/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000032/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000032/>;
+    dc:modified '2024-04-23T15:38:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Okioc Reference Level datum'@en ;
+    skos:definition 'Not available'@en ;
+    skos:notation 'SDN:S20::S2000032'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000034/1/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000034/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000034/>;
+    dc:modified '2024-04-23T15:38:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mean Water Height'@en ;
+    skos:definition 'Not available'@en ;
+    skos:notation 'SDN:S20::S2000034'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000035/1/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000035/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000035/>;
+    dc:modified '2024-04-23T15:38:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'NAP datum'@en ;
+    skos:definition 'A vertical datum used in large parts of Western Europe. Also known as Amsterdam Ordnance Datum. NAP stands for Normaal Amsterdams Peil.'@en ;
+    skos:notation 'SDN:S20::S2000035'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000037/1/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000037/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000037/>;
+    dc:modified '2024-04-23T15:38:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ordnance Datum Newlyn'@en ;
+    skos:definition 'A vertical datum based on the mean sea level at Newlyn in Cornwall averaged between 1915 and 1921 used for the elevation of the zero metres contour on UK Ordnance Survey maps.'@en ;
+    skos:notation 'SDN:S20::S2000037'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000038/1/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000038/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000038/>;
+    dc:modified '2024-04-23T15:38:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mean Sea Level datum'@en ;
+    skos:definition 'A vertical datum based on the arithmetic mean of hourly heights observed over the National Tidal Datum Epoch. Shorter series are specified in the name; e.g. monthly mean sea level and yearly mean sea level. Adapted from https://tidesandcurrents.noaa.gov/datum_options.html'@en ;
+    skos:notation 'SDN:S20::S2000038'^^xsd:string .

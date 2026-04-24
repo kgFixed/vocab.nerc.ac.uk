@@ -1,0 +1,127 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P03/2008_01_01_00_00_00_2008_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P03/2007_01_01_00_00_00_2007_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2008-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P03/current/B055/1/> .
+<http://vocab.nerc.ac.uk/collection/P03/current/B055/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P03/current/B055/>;
+    dc:modified '2008-12-09T10:13:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Macroalgae and seagrass'@en ;
+    skos:definition 'Parameters pertaining to plants in the taxonomic groups Rhodophycota, Chromphycota and Chlorophycota (seaweeds/macroalgae) and Charophyta plus Anthophyta (seagrass)'@en ;
+    skos:notation 'SDN:P03::B055'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P03/current/B060/1/> .
+<http://vocab.nerc.ac.uk/collection/P03/current/B060/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P03/current/B060/>;
+    dc:modified '2008-12-09T10:13:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Disease, damage and mortality'@en ;
+    skos:definition 'Parameters pertaining to all types of diseases, infections, poisonings and physical damage in any type of biota.'@en ;
+    skos:notation 'SDN:P03::B060'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P03/current/H004/1/> .
+<http://vocab.nerc.ac.uk/collection/P03/current/H004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P03/current/H004/>;
+    dc:modified '2008-12-09T10:13:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Fisheries'@en ;
+    skos:definition 'Parameters related to any aspect of the taking of water-living fauna from the wild'@en ;
+    skos:notation 'SDN:P03::H004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P03/current/C035/2/> .
+<http://vocab.nerc.ac.uk/collection/P03/current/C035/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P03/current/C035/>;
+    dc:modified '2008-09-12T10:02:59'^^xsd:dateTime ;
+    skos:altLabel 'Metal(loid)_cct'^^xsd:string ;
+    skos:prefLabel 'Metal and metalloid concentrations'@en ;
+    skos:definition 'Parameters pertaining to metal and trace metalloid (i.e. excluding Si) concentrations in any material.'@en ;
+    skos:notation 'SDN:P03::C035'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P03/current/H003/1/> .
+<http://vocab.nerc.ac.uk/collection/P03/current/H003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P03/current/H003/>;
+    dc:modified '2008-06-30T15:02:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Palaeoclimate'@en ;
+    skos:definition 'Measurements and parameterisations from which the climatic conditions in the recent or geological past may be determined or described.'@en ;
+    skos:notation 'SDN:P03::H003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P03/current/B050/1/> .
+<http://vocab.nerc.ac.uk/collection/P03/current/B050/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P03/current/B050/>;
+    dc:modified '2008-02-20T08:38:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Habitat'@en ;
+    skos:definition 'Grouping of parameters that characterise, spatially define, label or classify places where organisms are found.'@en ;
+    skos:notation 'SDN:P03::B050'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P03/current/H002/1/> .
+<http://vocab.nerc.ac.uk/collection/P03/current/H002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P03/current/H002/>;
+    dc:modified '2008-01-30T08:08:35'^^xsd:dateTime ;
+    skos:altLabel 'Cons+Struct'^^xsd:string ;
+    skos:prefLabel 'Construction and structures'@en ;
+    skos:definition 'Parameters describing the nature and impact of coastal and offshore man-made objects and the process of creating them.'@en ;
+    skos:notation 'SDN:P03::H002'^^xsd:string .

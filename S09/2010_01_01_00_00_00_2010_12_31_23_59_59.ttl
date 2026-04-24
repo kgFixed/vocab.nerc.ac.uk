@@ -1,0 +1,91 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S09/2010_01_01_00_00_00_2010_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S09/2007_01_01_00_00_00_2009_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2010-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S09/current/S09193/3/> .
+<http://vocab.nerc.ac.uk/collection/S09/current/S09193/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S09/current/S09193/>;
+    dc:modified '2010-10-21T10:35:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '>1800um**3'@en ;
+    skos:definition 'Cells having a volume exceeding 1800 cubic microns (equivalent to an approximate spherical diameter exceeding 15um)'@en ;
+    skos:notation 'SDN:S09::S09193'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S09/current/S09192/2/> .
+<http://vocab.nerc.ac.uk/collection/S09/current/S09192/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S09/current/S09192/>;
+    dc:modified '2010-10-21T10:34:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '4-1800um**3'@en ;
+    skos:definition 'Cells having a volume between 4 and 1800 cubic microns (equivalent to an approximate spherical diameter between 2 and 15um)'@en ;
+    skos:notation 'SDN:S09::S09192'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S09/current/S09191/1/> .
+<http://vocab.nerc.ac.uk/collection/S09/current/S09191/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S09/current/S09191/>;
+    dc:modified '2010-03-03T07:49:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '<200um'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:S09::S09191'^^xsd:string .

@@ -1,0 +1,109 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L30/2009_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L30/2008_01_01_00_00_00_2008_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2012-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L30/current/IS/1/> .
+<http://vocab.nerc.ac.uk/collection/L30/current/IS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L30/current/IS/>;
+    dc:modified '2012-06-19T15:59:02'^^xsd:dateTime ;
+    skos:altLabel 'EDMO149'^^xsd:string ;
+    skos:prefLabel 'CNR, Institute of Atmospheric Sciences and Climate (ISAC) - Sezione ROMA 2'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:L30::IS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L30/current/SB/2/> .
+<http://vocab.nerc.ac.uk/collection/L30/current/SB/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L30/current/SB/>;
+    dc:modified '2012-06-19T15:57:07'^^xsd:dateTime ;
+    skos:altLabel 'EDMO2146'^^xsd:string ;
+    skos:prefLabel 'Balearic Islands University, UIB'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:L30::SB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L30/current/CM/2/> .
+<http://vocab.nerc.ac.uk/collection/L30/current/CM/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L30/current/CM/>;
+    dc:modified '2012-06-19T15:56:54'^^xsd:dateTime ;
+    skos:altLabel 'EDMO1979'^^xsd:string ;
+    skos:prefLabel 'Department of Fisheries and Oceans - Ministère des pêches et Océans (DFO-MPO)'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:L30::CM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L30/current/WA/2/> .
+<http://vocab.nerc.ac.uk/collection/L30/current/WA/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L30/current/WA/>;
+    dc:modified '2012-06-19T15:56:39'^^xsd:dateTime ;
+    skos:altLabel 'EDMO1977'^^xsd:string ;
+    skos:prefLabel 'NOAA - WDCA'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:L30::WA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L30/current/BG/3/> .
+<http://vocab.nerc.ac.uk/collection/L30/current/BG/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L30/current/BG/>;
+    dc:modified '2012-06-19T15:56:27'^^xsd:dateTime ;
+    skos:altLabel 'EDMO1579'^^xsd:string ;
+    skos:prefLabel 'Universite de Liege, GHER'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:L30::BG'^^xsd:string .

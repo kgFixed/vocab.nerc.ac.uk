@@ -1,0 +1,271 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/GBX/2013_01_01_00_00_00_2013_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/GBX/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2013-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T6000067/1/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T6000067/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T6000067/>;
+    dc:modified '2013-09-03T08:06:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Generic - unplanned database outage'@en ;
+    skos:definition 'Unfortunately, our database server is currently unavailable to service your request. This is an unplanned outage. Our web team has been informed and resolution of the problem will be given the highest priority.'@en ;
+    skos:notation 'SDN:GBX::T6000067'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T6000062/1/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T6000062/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T6000062/>;
+    dc:modified '2013-08-20T08:32:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Generic - pagination - First'@en ;
+    skos:definition 'First'@en ;
+    skos:notation 'SDN:GBX::T6000062'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T6000063/1/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T6000063/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T6000063/>;
+    dc:modified '2013-08-20T08:32:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Generic - pagination - Last'@en ;
+    skos:definition 'Last'@en ;
+    skos:notation 'SDN:GBX::T6000063'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T6000064/1/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T6000064/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T6000064/>;
+    dc:modified '2013-08-20T08:32:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Generic - pagination - Next'@en ;
+    skos:definition 'Next'@en ;
+    skos:notation 'SDN:GBX::T6000064'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T6000065/1/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T6000065/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T6000065/>;
+    dc:modified '2013-08-20T08:32:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Generic - pagination - Previous'@en ;
+    skos:definition 'Prev'@en ;
+    skos:notation 'SDN:GBX::T6000065'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/B6000005/1/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/B6000005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/B6000005/>;
+    dc:modified '2013-08-14T14:43:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Generic - button - Download'@en ;
+    skos:definition 'Download'@en ;
+    skos:notation 'SDN:GBX::B6000005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T6000061/1/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T6000061/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T6000061/>;
+    dc:modified '2013-08-14T14:43:35'^^xsd:dateTime ;
+    skos:altLabel 'Status file preparation - cannot be delivered'^^xsd:string ;
+    skos:prefLabel 'Generic text - file generation status - file not able to be delivered'@en ;
+    skos:definition 'Apologies, the file preparation failed. Our web team has been informed. Please try later.'@en ;
+    skos:notation 'SDN:GBX::T6000061'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T6000060/1/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T6000060/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T6000060/>;
+    dc:modified '2013-08-14T14:43:35'^^xsd:dateTime ;
+    skos:altLabel 'Status file preparation - delivered'^^xsd:string ;
+    skos:prefLabel 'Generic text - file generation status - file delivered'@en ;
+    skos:definition 'The file has been delivered to your browser.'@en ;
+    skos:notation 'SDN:GBX::T6000060'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T6000058/1/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T6000058/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T6000058/>;
+    dc:modified '2013-08-14T14:43:35'^^xsd:dateTime ;
+    skos:altLabel 'Status file preparation - please wait part 1'^^xsd:string ;
+    skos:prefLabel 'Generic text - file generation status - please wait sentence part 1'@en ;
+    skos:definition 'Preparing file. Elapsed time is'@en ;
+    skos:notation 'SDN:GBX::T6000058'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T6000059/1/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T6000059/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T6000059/>;
+    dc:modified '2013-08-14T14:43:35'^^xsd:dateTime ;
+    skos:altLabel 'Status file preparation - please wait part 2'^^xsd:string ;
+    skos:prefLabel 'Generic text - file generation status - please wait sentence part 2'@en ;
+    skos:definition 'seconds.'@en ;
+    skos:notation 'SDN:GBX::T6000059'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T6000056/1/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T6000056/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T6000056/>;
+    dc:modified '2013-08-07T08:13:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Generic text - to'@en ;
+    skos:definition 'to'@en ;
+    skos:notation 'SDN:GBX::T6000056'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T6000057/1/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T6000057/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T6000057/>;
+    dc:modified '2013-08-07T08:13:12'^^xsd:dateTime ;
+    skos:altLabel 'PDL LP table header short doi'^^xsd:string ;
+    skos:prefLabel 'Published Data Library - PDL - landing page (LP) table header - Dataset short DOI'@en ;
+    skos:definition 'Short DOI'@en ;
+    skos:notation 'SDN:GBX::T6000057'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T6000029/2/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T6000029/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T6000029/>;
+    dc:modified '2013-08-01T08:40:24'^^xsd:dateTime ;
+    skos:altLabel 'PDL results header Title'^^xsd:string ;
+    skos:prefLabel 'Published Data Library - PDL - results column header - Title'@en ;
+    skos:definition 'Summary title'@en ;
+    skos:notation 'SDN:GBX::T6000029'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T6000025/2/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T6000025/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T6000025/>;
+    dc:modified '2013-08-01T08:40:24'^^xsd:dateTime ;
+    skos:altLabel 'PDL tab title'^^xsd:string ;
+    skos:prefLabel 'Published Data Library - PDL - search tab - Title'@en ;
+    skos:definition 'Summary title'@en ;
+    skos:notation 'SDN:GBX::T6000025'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T6000032/1/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T6000032/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T6000032/>;
+    dc:modified '2013-07-13T07:26:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Generic - heading (tagged) - Results table'@en ;
+    skos:definition '{"node": {"h2": "Results table"}}'@en ;
+    skos:notation 'SDN:GBX::T6000032'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T6000052/1/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T6000052/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T6000052/>;
+    dc:modified '2013-07-13T07:26:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Generic text - View'@en ;
+    skos:definition 'View'@en ;
+    skos:notation 'SDN:GBX::T6000052'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T6000030/1/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T6000030/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T6000030/>;
+    dc:modified '2013-07-13T07:26:06'^^xsd:dateTime ;
+    skos:altLabel 'PDL results header Author(s)'^^xsd:string ;
+    skos:prefLabel 'Published Data Library - PDL - results column header - Author(s)'@en ;
+    skos:definition 'Author(s)'@en ;
+    skos:notation 'SDN:GBX::T6000030'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T6000031/1/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T6000031/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T6000031/>;
+    dc:modified '2013-07-13T07:26:06'^^xsd:dateTime ;
+    skos:altLabel 'PDL results header DOI'^^xsd:string ;
+    skos:prefLabel 'Published Data Library - PDL - results column header - DOI'@en ;
+    skos:definition 'Digital Object Identifier (DOI)'@en ;
+    skos:notation 'SDN:GBX::T6000031'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T6000024/1/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T6000024/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T6000024/>;
+    dc:modified '2013-07-13T07:26:06'^^xsd:dateTime ;
+    skos:altLabel 'PDL tab author'^^xsd:string ;
+    skos:prefLabel 'Published Data Library - PDL - search tab - Author'@en ;
+    skos:definition 'Author'@en ;
+    skos:notation 'SDN:GBX::T6000024'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T6000028/1/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T6000028/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T6000028/>;
+    dc:modified '2013-07-13T07:26:06'^^xsd:dateTime ;
+    skos:altLabel 'PDL tab discovery metadata'^^xsd:string ;
+    skos:prefLabel 'Published Data Library - PDL - search tab - Discovery metadata'@en ;
+    skos:definition 'Discovery metadata record'@en ;
+    skos:notation 'SDN:GBX::T6000028'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T6000026/1/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T6000026/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T6000026/>;
+    dc:modified '2013-07-13T07:26:06'^^xsd:dateTime ;
+    skos:altLabel 'PDL tab publication year'^^xsd:string ;
+    skos:prefLabel 'Published Data Library - PDL - search tab - Publication year'@en ;
+    skos:definition 'Publication date'@en ;
+    skos:notation 'SDN:GBX::T6000026'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T6000014/2/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T6000014/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T6000014/>;
+    dc:modified '2013-02-08T08:13:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'SMRU - Animal platform - heading (tagged) - Profiles table'@en ;
+    skos:definition '{"node": {"h2": "Profiles table"}}'@en ;
+    skos:notation 'SDN:GBX::T6000014'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T5000034/2/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T5000034/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T5000034/>;
+    dc:modified '2013-01-26T15:25:58'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Results table derived parameter note'@en ;
+    skos:definition '*Parameter derived for visualisation purposes only. Line indicates flow direction from centre of cell.'@en ;
+    skos:notation 'SDN:GBX::T5000034'^^xsd:string .

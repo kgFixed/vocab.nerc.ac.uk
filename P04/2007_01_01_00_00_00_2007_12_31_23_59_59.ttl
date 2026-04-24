@@ -1,0 +1,127 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P04/2007_01_01_00_00_00_2007_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P04/2005_01_01_00_00_00_2006_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2007-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P04/current/G182/2/> .
+<http://vocab.nerc.ac.uk/collection/P04/current/G182/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P04/current/G182/>;
+    dc:modified '2007-04-18T14:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'EARTH SCIENCE > Atmosphere > Atmospheric Phenomena > Tornadoes'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P04::G182'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P04/current/H435/1/> .
+<http://vocab.nerc.ac.uk/collection/P04/current/H435/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P04/current/H435/>;
+    dc:modified '2007-04-18T14:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'EARTH SCIENCE > Atmosphere > Clouds > Cloud Midlayer Temperature'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P04::H435'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P04/current/H436/1/> .
+<http://vocab.nerc.ac.uk/collection/P04/current/H436/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P04/current/H436/>;
+    dc:modified '2007-04-18T14:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'EARTH SCIENCE > Spectral/Engineering > Lidar > Lidar Backscatter'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P04::H436'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P04/current/H437/1/> .
+<http://vocab.nerc.ac.uk/collection/P04/current/H437/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P04/current/H437/>;
+    dc:modified '2007-04-18T14:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'EARTH SCIENCE > Spectral/Engineering > Lidar > Lidar Depolarization Ratio'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P04::H437'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P04/current/H438/1/> .
+<http://vocab.nerc.ac.uk/collection/P04/current/H438/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P04/current/H438/>;
+    dc:modified '2007-04-18T14:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'EARTH SCIENCE > Spectral/Engineering > Lidar'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P04::H438'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P04/current/H433/1/> .
+<http://vocab.nerc.ac.uk/collection/P04/current/H433/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P04/current/H433/>;
+    dc:modified '2007-01-22T15:28:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'EARTH SCIENCE > Paleoclimate > Ocean/Lake Records > Pollen'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P04::H433'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P04/current/H434/1/> .
+<http://vocab.nerc.ac.uk/collection/P04/current/H434/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P04/current/H434/>;
+    dc:modified '2007-01-22T15:28:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'EARTH SCIENCE > Sun-earth Interactions > Solar Energetic Particle Flux > X-ray Flux'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P04::H434'^^xsd:string .

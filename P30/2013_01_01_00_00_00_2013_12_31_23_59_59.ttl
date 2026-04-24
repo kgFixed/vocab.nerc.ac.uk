@@ -1,0 +1,660 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P30/2013_01_01_00_00_00_2013_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/cfbarope/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/cfbarope/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/cfbarope/>;
+    dc:modified '2013-07-11T09:54:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'barents_opening'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::cfbarope'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/cfberstr/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/cfberstr/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/cfberstr/>;
+    dc:modified '2013-07-11T09:54:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'bering_strait'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::cfberstr'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/cfcanarc/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/cfcanarc/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/cfcanarc/>;
+    dc:modified '2013-07-11T09:54:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'canadian_archipelago'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::cfcanarc'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/cfcounst/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/cfcounst/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/cfcounst/>;
+    dc:modified '2013-07-11T09:54:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'contiguous_united_states'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::cfcounst'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/cfdenstr/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/cfdenstr/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/cfdenstr/>;
+    dc:modified '2013-07-11T09:54:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'denmark_strait'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::cfdenstr'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/cfdrapas/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/cfdrapas/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/cfdrapas/>;
+    dc:modified '2013-07-11T09:54:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'drake_passage'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::cfdrapas'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/cfengcha/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/cfengcha/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/cfengcha/>;
+    dc:modified '2013-07-11T09:54:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'english_channel'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::cfengcha'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/cffascch/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/cffascch/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/cffascch/>;
+    dc:modified '2013-07-11T09:54:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'faroe_scotland_channel'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::cffascch'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/cfflbast/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/cfflbast/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/cfflbast/>;
+    dc:modified '2013-07-11T09:54:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'florida_bahamas_strait'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::cfflbast'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/cffrastr/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/cffrastr/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/cffrastr/>;
+    dc:modified '2013-07-11T09:54:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fram_strait'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::cffrastr'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/cficfach/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/cficfach/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/cficfach/>;
+    dc:modified '2013-07-11T09:54:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'iceland_faroe_channel'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::cficfach'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/cfindthr/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/cfindthr/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/cfindthr/>;
+    dc:modified '2013-07-11T09:54:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'indonesian_throughflow'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::cfindthr'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/cfmozcha/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/cfmozcha/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/cfmozcha/>;
+    dc:modified '2013-07-11T09:54:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mozambique_channel'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::cfmozcha'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/cfpaequn/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/cfpaequn/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/cfpaequn/>;
+    dc:modified '2013-07-11T09:54:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'pacific_equatorial_undercurrent'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::cfpaequn'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/cftalust/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/cftalust/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/cftalust/>;
+    dc:modified '2013-07-11T09:54:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'taiwan_luzon_straits'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::cftalust'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/cfwinpas/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/cfwinpas/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/cfwinpas/>;
+    dc:modified '2013-07-11T09:54:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'windward_passage'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::cfwinpas'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/africa/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/africa/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/africa/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'africa'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::africa'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/antarctica/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/antarctica/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/antarctica/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'antarctica'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::antarctica'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/arabian_sea/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/arabian_sea/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/arabian_sea/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'arabian_sea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::arabian_sea'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/aral_sea/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/aral_sea/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/aral_sea/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'aral_sea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::aral_sea'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/arctic_ocean/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/arctic_ocean/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/arctic_ocean/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'arctic_ocean'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::arctic_ocean'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/asia/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/asia/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/asia/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'asia'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::asia'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/atlantic_ocean/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/atlantic_ocean/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/atlantic_ocean/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atlantic_ocean'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::atlantic_ocean'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/australia/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/australia/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/australia/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'australia'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::australia'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/baltic_sea/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/baltic_sea/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/baltic_sea/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'baltic_sea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::baltic_sea'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/barents_sea/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/barents_sea/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/barents_sea/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'barents_sea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::barents_sea'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/beaufort_sea/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/beaufort_sea/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/beaufort_sea/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'beaufort_sea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::beaufort_sea'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/bellingshausen_sea/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/bellingshausen_sea/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/bellingshausen_sea/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'bellingshausen_sea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::bellingshausen_sea'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/bering_sea/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/bering_sea/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/bering_sea/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'bering_sea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::bering_sea'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/black_sea/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/black_sea/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/black_sea/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'black_sea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::black_sea'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/caribbean_sea/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/caribbean_sea/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/caribbean_sea/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'caribbean_sea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::caribbean_sea'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/caspian_sea/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/caspian_sea/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/caspian_sea/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'caspian_sea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::caspian_sea'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/central_america/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/central_america/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/central_america/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'central_america'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::central_america'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/chukchi_sea/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/chukchi_sea/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/chukchi_sea/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'chukchi_sea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::chukchi_sea'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/east_china_sea/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/east_china_sea/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/east_china_sea/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'east_china_sea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::east_china_sea'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/eurasia/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/eurasia/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/eurasia/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'eurasia'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::eurasia'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/europe/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/europe/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/europe/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'europe'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::europe'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/global/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/global/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/global/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'global'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::global'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/global_land/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/global_land/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/global_land/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'global_land'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::global_land'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/global_ocean/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/global_ocean/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/global_ocean/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'global_ocean'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::global_ocean'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/great_lakes/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/great_lakes/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/great_lakes/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'great_lakes'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::great_lakes'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/greenland/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/greenland/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/greenland/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'greenland'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::greenland'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/gulf_of_alaska/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/gulf_of_alaska/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/gulf_of_alaska/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'gulf_of_alaska'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::gulf_of_alaska'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/gulf_of_mexico/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/gulf_of_mexico/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/gulf_of_mexico/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'gulf_of_mexico'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::gulf_of_mexico'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/hudson_bay/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/hudson_bay/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/hudson_bay/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'hudson_bay'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::hudson_bay'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/indian_ocean/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/indian_ocean/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/indian_ocean/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'indian_ocean'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::indian_ocean'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/irish_sea/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/irish_sea/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/irish_sea/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'irish_sea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::irish_sea'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/lake_baykal/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/lake_baykal/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/lake_baykal/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'lake_baykal'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::lake_baykal'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/lake_chad/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/lake_chad/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/lake_chad/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'lake_chad'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::lake_chad'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/lake_malawi/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/lake_malawi/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/lake_malawi/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'lake_malawi'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::lake_malawi'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/lake_tanganyika/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/lake_tanganyika/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/lake_tanganyika/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'lake_tanganyika'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::lake_tanganyika'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/lake_victoria/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/lake_victoria/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/lake_victoria/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'lake_victoria'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::lake_victoria'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/mediterranean_sea/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/mediterranean_sea/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/mediterranean_sea/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mediterranean_sea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::mediterranean_sea'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/north_america/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/north_america/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/north_america/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'north_america'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::north_america'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/north_sea/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/north_sea/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/north_sea/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'north_sea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::north_sea'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/norwegian_sea/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/norwegian_sea/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/norwegian_sea/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'norwegian_sea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::norwegian_sea'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/pacific_ocean/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/pacific_ocean/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/pacific_ocean/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'pacific_ocean'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::pacific_ocean'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/persian_gulf/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/persian_gulf/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/persian_gulf/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'persian_gulf'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::persian_gulf'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/red_sea/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/red_sea/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/red_sea/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'red_sea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::red_sea'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/ross_sea/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/ross_sea/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/ross_sea/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ross_sea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::ross_sea'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/sea_of_japan/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/sea_of_japan/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/sea_of_japan/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_of_japan'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::sea_of_japan'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/sea_of_okhotsk/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/sea_of_okhotsk/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/sea_of_okhotsk/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_of_okhotsk'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::sea_of_okhotsk'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/south_america/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/south_america/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/south_america/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'south_america'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::south_america'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/south_china_sea/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/south_china_sea/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/south_china_sea/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'south_china_sea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::south_china_sea'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/southern_ocean/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/southern_ocean/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/southern_ocean/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'southern_ocean'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::southern_ocean'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/weddell_sea/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/weddell_sea/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/weddell_sea/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'weddell_sea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::weddell_sea'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P30/current/yellow_sea/1/> .
+<http://vocab.nerc.ac.uk/collection/P30/current/yellow_sea/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P30/current/yellow_sea/>;
+    dc:modified '2013-01-08T12:53:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'yellow_sea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:P30::yellow_sea'^^xsd:string .

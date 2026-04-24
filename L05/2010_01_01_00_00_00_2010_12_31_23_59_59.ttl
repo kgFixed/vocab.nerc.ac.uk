@@ -1,0 +1,496 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L05/2010_01_01_00_00_00_2010_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L05/2009_01_01_00_00_00_2009_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2010-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/302/3/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/302/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/302/>;
+    dc:modified '2010-11-19T14:27:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water body temperature sensor'@en ;
+    skos:definition 'Sensors that measure the intensity and nature of electromagnetic radiation emitted from the Earth in a manner optimised for the determination of water body surface temperature.'@en ;
+    skos:notation 'SDN:L05::302'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/370/3/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/370/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/370/>;
+    dc:modified '2010-11-18T11:35:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'geothermometers'@en ;
+    skos:definition 'Instruments carrying a sensor that determines the temperature (degree of hotness) within geological units.'@en ;
+    skos:notation 'SDN:L05::370'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/367/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/367/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/367/>;
+    dc:modified '2010-11-18T11:16:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '>2000 Hz top-bandwidth sub-bottom penetrator and mud profiler systems'@en ;
+    skos:definition 'Devices that provide information on unconsolidated sediment structure through transmission and reception of an energy source with a frequency corresponding to a sampling interval lower than 0.25 msec.'@en ;
+    skos:notation 'SDN:L05::367'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/AQPL/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/AQPL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/AQPL/>;
+    dc:modified '2010-10-18T13:23:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Aquapulse'@en ;
+    skos:definition 'A marine seismic source where a propane-oxygen mixture is exploded inside a steel cylinder.'@en ;
+    skos:notation 'SDN:L05::AQPL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/ARAG/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/ARAG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/ARAG/>;
+    dc:modified '2010-10-18T13:23:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'airgun array'@en ;
+    skos:definition 'A marine seismic source where multiple airguns of different sizes are tuned so that  a broader frequency spectrum will be generated.'@en ;
+    skos:notation 'SDN:L05::ARAG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/ERTQ/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/ERTQ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/ERTQ/>;
+    dc:modified '2010-10-18T13:23:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'earthquake'@en ;
+    skos:definition 'A sudden release of stress in the Earth\'s crust that creates energy in the form of seimic waves.'@en ;
+    skos:notation 'SDN:L05::ERTQ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/FLXS/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/FLXS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/FLXS/>;
+    dc:modified '2010-10-18T13:23:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Flexichoc'@en ;
+    skos:definition 'An implosive energy source for marine shooting. Two plates are separated by compressed air until they lock into position. The air between them is then pumped out creating a vacuum. On the signal the plates are unlocked and the water pressure forces them together creating a shock wave in the water.'@en ;
+    skos:notation 'SDN:L05::FLXS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/GIAG/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/GIAG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/GIAG/>;
+    dc:modified '2010-10-18T13:23:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GI-gun'@en ;
+    skos:definition 'A marine seismic source where a pair of conventional airguns (one, the generator, fires in the conventional manner; the second, known as the injector) fires some milliseconds later to prevent bubble from collapsing. Could be used in true GI mode (volume of injector twice of volume of generator), harmonic mode (same volume of generator and injector) or true airgun (no delay between generator and injector).'@en ;
+    skos:notation 'SDN:L05::GIAG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/MVBR/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/MVBR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/MVBR/>;
+    dc:modified '2010-10-18T13:23:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'marine vibroseis'@en ;
+    skos:definition 'A marine seismic source generating sweeps of controlled varying frequency (from a few Hz to hundreds of Hz) and duration.'@en ;
+    skos:notation 'SDN:L05::MVBR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/SNAG/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/SNAG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/SNAG/>;
+    dc:modified '2010-10-18T13:23:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'airgun'@en ;
+    skos:definition 'A marine seismic source which injects a bubble of highly compressed air into the water. Oscillations of the bubble as it alternatively expands and contracts generate a sonic wave whose frequency depends on the amount of air in the bubble, its pressure, and the water depth.'@en ;
+    skos:notation 'SDN:L05::SNAG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/SNWG/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/SNWG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/SNWG/>;
+    dc:modified '2010-10-18T13:23:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'watergun'@en ;
+    skos:definition 'A marine seismic energy source divided into two chambers, the firing chamber, which contains compressed air, and the other chamber, which is filled with water. When the gun is fired, the compressed air forces the shuttle downward and this expels the water from the lower chamber. The shot of water leaving the gun creates a void behind it and the collapse of water into this void creates an acoustic wave.'@en ;
+    skos:notation 'SDN:L05::SNWG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/VSHC/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/VSHC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/VSHC/>;
+    dc:modified '2010-10-18T13:23:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Vaporchoc'@en ;
+    skos:definition 'A marine seismic energy source in which a quantity of superheated steam under high pressure is iniected into water. Subsequent condensation of the steam attenuates bubble oscillation.'@en ;
+    skos:notation 'SDN:L05::VSHC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/386/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/386/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/386/>;
+    dc:modified '2010-10-01T10:36:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Aerosol physical characterisers'@en ;
+    skos:definition 'Instruments that determine physical attributes such as size and abundance of atmospheric aerosols.'@en ;
+    skos:notation 'SDN:L05::386'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/387/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/387/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/387/>;
+    dc:modified '2010-10-01T10:29:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Aethalometers'@en ;
+    skos:definition 'Instruments that quantify atmospheric particulate carbon (\'black carbon\') concentrations.'@en ;
+    skos:notation 'SDN:L05::387'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/385/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/385/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/385/>;
+    dc:modified '2010-09-15T11:00:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'platform attitude sensors'@en ;
+    skos:definition 'Instruments that measure platform orientation or rates of platform motion or acceleration in any direction or along any axis. Excludes inertial navigation systems that are designed to determine platform location with respect to an external co-ordinate reference system.'@en ;
+    skos:notation 'SDN:L05::385'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/384/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/384/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/384/>;
+    dc:modified '2010-09-15T10:51:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ADVs and turbulence probes'@en ;
+    skos:definition 'ADV is the acronym for acoustic doppler velocimeter. The group includes all in-situ instruments that make high frequency measurements of three-dimensional current velocity in order to determine the extent of turbulence within a water body.'@en ;
+    skos:notation 'SDN:L05::384'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/383/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/383/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/383/>;
+    dc:modified '2010-09-15T10:41:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'metal analysers'@en ;
+    skos:definition 'In-situ instruments that can determine the total, dissolved or particulate concentration of one or more metallic elements (including trace metalloids like arsenic) in a water body.'@en ;
+    skos:notation 'SDN:L05::383'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/382/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/382/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/382/>;
+    dc:modified '2010-09-15T10:38:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmospheric gas analysers'@en ;
+    skos:definition 'In-situ instruments that can determine the proportion of one or more gaseous components of the atmosphere.'@en ;
+    skos:notation 'SDN:L05::382'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/381/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/381/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/381/>;
+    dc:modified '2010-09-15T10:35:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'precipitation gauges'@en ;
+    skos:definition 'Instruments that measure either the rate of fall or integrated amount of rain, snow, sleet, hail or graupel.'@en ;
+    skos:notation 'SDN:L05::381'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/380/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/380/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/380/>;
+    dc:modified '2010-09-15T10:32:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'submarine cables'@en ;
+    skos:definition 'Electrical conductors routed beneath the sea and connecting land stations.  Oceanographic interest focuses on changes in electrical resistance that may be related to the magnitude of Lagrangian currents.'@en ;
+    skos:notation 'SDN:L05::380'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/64/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/64/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/64/>;
+    dc:modified '2010-07-30T10:24:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'active fishing gear'@en ;
+    skos:definition 'Apparatus where capture is based on chasing the target species (e.g. a trawl).'@en ;
+    skos:notation 'SDN:L05::64'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/63/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/63/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/63/>;
+    dc:modified '2010-07-30T10:22:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'passive fishing gear'@en ;
+    skos:definition 'Apparatus where capture is based on the movement of the target species towards the gear (e.g. creels and fish traps).'@en ;
+    skos:notation 'SDN:L05::63'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/62/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/62/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/62/>;
+    dc:modified '2010-07-30T10:19:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'beam trawls'@en ;
+    skos:definition 'Nets towed over the sea floor having the horizontal net opening provided by a wooden or metal beam that disrupts the surface of the bed.'@en ;
+    skos:notation 'SDN:L05::62'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/61/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/61/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/61/>;
+    dc:modified '2010-07-30T10:16:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'demersal trawl nets'@en ;
+    skos:definition 'Nets towed over the sea floor designed to sample species living on or near the bottom.'@en ;
+    skos:notation 'SDN:L05::61'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/60/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/60/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/60/>;
+    dc:modified '2010-07-20T08:06:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sediment dredges'@en ;
+    skos:definition 'Bucket-like containers hauled over the sea bed collecting integrated samples of surface sediment along a segment of ship track.'@en ;
+    skos:notation 'SDN:L05::60'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB13/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB13/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB13/>;
+    dc:modified '2010-07-02T14:19:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'balances and scales'@en ;
+    skos:definition 'Devices that determine the mass or weight of a sample.'@en ;
+    skos:notation 'SDN:L05::LAB13'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/378/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/378/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/378/>;
+    dc:modified '2010-04-22T15:18:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sediment profile imagers'@en ;
+    skos:definition 'Devices that provide in-situ still or video images of a section including bottom water, the undisturbed sediment-water interface and the upper sediment layers.'@en ;
+    skos:notation 'SDN:L05::378'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/377/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/377/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/377/>;
+    dc:modified '2010-04-22T15:16:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water level markers'@en ;
+    skos:definition 'Fixed physical markers that allow changes in the position of the boundary between a water body and the atmosphere by visible comparison against marked graduations in units of measurement of dimension length.'@en ;
+    skos:notation 'SDN:L05::377'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/376/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/376/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/376/>;
+    dc:modified '2010-04-22T15:13:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sediment surface markers'@en ;
+    skos:definition 'Physical markers that allow changes in the position of the boundary between sediment and air or water by visible comparison against marked graduations in units of measurement of dimension length.'@en ;
+    skos:notation 'SDN:L05::376'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB29/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB29/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB29/>;
+    dc:modified '2010-04-22T15:04:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'rulers'@en ;
+    skos:definition 'Devices that allow one or more physical dimensions of a sample or specimen to be determined by visible comparison against marked graduations in units of measurement of dimension length.'@en ;
+    skos:notation 'SDN:L05::LAB29'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/359/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/359/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/359/>;
+    dc:modified '2010-02-19T12:00:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'plummets'@en ;
+    skos:definition 'Devices comprising a weight attached to the end of a graduated rope used to measure point water depths.'@en ;
+    skos:notation 'SDN:L05::359'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/154/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/154/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/154/>;
+    dc:modified '2010-02-19T11:59:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'multi-channel seismic reflection systems'@en ;
+    skos:definition 'An energy source of unspecified frequency plus a multiple strings of towed hydrophones (streamers) that determine geologic structure by detecting waves reflected by subsurface layers.'@en ;
+    skos:notation 'SDN:L05::154'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/153/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/153/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/153/>;
+    dc:modified '2010-02-19T11:58:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'single-channel seismic reflection systems'@en ;
+    skos:definition 'An energy source of unspecified frequency plus a single string of towed hydrophones (streamer) that determine geologic structure by detecting waves reflected by subsurface layers.'@en ;
+    skos:notation 'SDN:L05::153'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/360/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/360/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/360/>;
+    dc:modified '2010-02-19T11:52:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'piezometers'@en ;
+    skos:definition 'Devices that measure fluid  (air, gas, water, or oil) pressure within soil, sediment, rock or concrete providing information such as water table level in an aquifer system.'@en ;
+    skos:notation 'SDN:L05::360'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/361/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/361/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/361/>;
+    dc:modified '2010-02-19T11:52:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'penetrometers'@en ;
+    skos:definition 'Dynamic or passive devices that determine the consistency or hardness of soil or sediment by measuring the depth or rate of penetration of a needle or cone rig into it when a known force is applied.'@en ;
+    skos:notation 'SDN:L05::361'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/362/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/362/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/362/>;
+    dc:modified '2010-02-19T11:52:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '250 Hz top-bandwidth single-channel seismic reflection systems'@en ;
+    skos:definition 'An energy source with a frequency up to 250 Hz (sampling interval ranging from 2-8 msec) plus a single string of towed hydrophones (streamer) that determine geologic structure by detecting waves reflected by subsurface layers.'@en ;
+    skos:notation 'SDN:L05::362'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/363/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/363/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/363/>;
+    dc:modified '2010-02-19T11:52:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '1000 Hz top-bandwidth single-channel seismic reflection systems'@en ;
+    skos:definition 'An energy source with a frequency up to 1000 Hz (sampling interval ranging from 2-0.5 msec) plus a single string of towed hydrophones (streamer) that determine geologic structure by detecting waves reflected by subsurface layers.'@en ;
+    skos:notation 'SDN:L05::363'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/364/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/364/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/364/>;
+    dc:modified '2010-02-19T11:52:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '1000 Hz top-bandwidth multi-channel seismic reflection systems'@en ;
+    skos:definition 'An energy source with a frequency up to 1000 Hz (sampling interval ranging from 2-0.5 msec) plus a multiple strings of towed hydrophones (streamers) that determine geologic structure by detecting waves reflected by subsurface layers.'@en ;
+    skos:notation 'SDN:L05::364'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/365/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/365/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/365/>;
+    dc:modified '2010-02-19T11:52:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '2000 Hz top-bandwidth multi-channel seismic reflection systems'@en ;
+    skos:definition 'An energy source with a frequency up to 2000 Hz (sampling interval ranging from 0.5-0.25 msec) plus a multiple strings of towed hydrophones (streamers) that determine geologic structure by detecting waves reflected by subsurface layers.'@en ;
+    skos:notation 'SDN:L05::365'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/366/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/366/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/366/>;
+    dc:modified '2010-02-19T11:52:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '>2000 Hz top-bandwidth multi-channel seismic reflection systems'@en ;
+    skos:definition 'An energy source with a frequency up to >2000 Hz (sampling interval lower than 0.25 msec) plus a multiple strings of towed hydrophones (streamers) that determine geologic structure by detecting waves reflected by subsurface layers.'@en ;
+    skos:notation 'SDN:L05::366'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/368/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/368/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/368/>;
+    dc:modified '2010-02-19T11:52:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'seismometers'@en ;
+    skos:definition 'Devices placed on the ground or seabed to measure physical movement of that substrate.'@en ;
+    skos:notation 'SDN:L05::368'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/369/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/369/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/369/>;
+    dc:modified '2010-02-19T11:52:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'hydrophones'@en ;
+    skos:definition 'Devices containing transducers that convert underwater sound waves into electrical signals.'@en ;
+    skos:notation 'SDN:L05::369'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/371/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/371/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/371/>;
+    dc:modified '2010-02-19T11:52:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '60 Hz top-bandwidth single-channel seismic reflection systems'@en ;
+    skos:definition 'An energy source with a frequency up to 60 Hz (sampling interval higher than 8 msec) plus a single string of towed hydrophones (streamer) that determine geologic structure by detecting waves reflected by subsurface layers.'@en ;
+    skos:notation 'SDN:L05::371'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/372/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/372/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/372/>;
+    dc:modified '2010-02-19T11:52:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '2000 Hz top-bandwidth single-channel seismic reflection systems'@en ;
+    skos:definition 'An energy source with a frequency up to 2000 Hz (sampling interval ranging from 0.5-0.25 msec) plus a single string of towed hydrophones (streamer) that determine geologic structure by detecting waves reflected by subsurface layers.'@en ;
+    skos:notation 'SDN:L05::372'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/373/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/373/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/373/>;
+    dc:modified '2010-02-19T11:52:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '>2000 Hz top-bandwidth single-channel seismic reflection systems'@en ;
+    skos:definition 'An energy source with a frequency up to >2000 Hz (sampling interval lower than 0.25 msec) plus a single string of towed hydrophones (streamer) that determine geologic structure by detecting waves reflected by subsurface layers.'@en ;
+    skos:notation 'SDN:L05::373'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/374/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/374/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/374/>;
+    dc:modified '2010-02-19T11:52:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '60 Hz top-bandwidth multi-channel seismic reflection systems'@en ;
+    skos:definition 'An energy source with a frequency up to 60 Hz (sampling interval higher than 8 msec) plus a multiple strings of towed hydrophones (streamers) that determine geologic structure by detecting waves reflected by subsurface layers.'@en ;
+    skos:notation 'SDN:L05::374'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/375/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/375/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/375/>;
+    dc:modified '2010-02-19T11:52:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '250 Hz top-bandwidth multi-channel seismic reflection systems'@en ;
+    skos:definition 'An energy source with a frequency up to 250 Hz (sampling interval ranging from 2-8 msec) plus a multiple strings of towed hydrophones (streamers) that determine geologic structure by detecting waves reflected by subsurface layers.'@en ;
+    skos:notation 'SDN:L05::375'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB28/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB28/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB28/>;
+    dc:modified '2010-02-19T11:52:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'thermal conductivimeters'@en ;
+    skos:definition 'Laboratory instruments that determine the thermal conductivity of rock or sediment samples (including unopened cores).'@en ;
+    skos:notation 'SDN:L05::LAB28'^^xsd:string .

@@ -1,0 +1,100 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/B06/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/B06/2015_01_01_00_00_00_2015_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2016-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dFormatOK/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dFormatOK/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dFormatOK/>;
+    dc:modified '2016-05-09T11:54:07'^^xsd:dateTime ;
+    skos:altLabel 'Check for QXF conformance'^^xsd:string ;
+    skos:prefLabel 'dFormatOK'@en ;
+    skos:definition 'This CHECKNQXF checks that the file conforms to the definition of QXF.'@en ;
+    skos:notation 'SDN:B06::dFormatOK'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dParamNamesDepr/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dParamNamesDepr/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dParamNamesDepr/>;
+    dc:modified '2016-05-09T11:54:07'^^xsd:dateTime ;
+    skos:altLabel 'Check for deprecated parameter codes'^^xsd:string ;
+    skos:prefLabel 'dParamNamesDepr'@en ;
+    skos:definition 'This CHECKNQXF check identifies deprecated parameter codes.'@en ;
+    skos:notation 'SDN:B06::dParamNamesDepr'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/qSize/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/qSize/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/qSize/>;
+    dc:modified '2016-05-09T11:54:07'^^xsd:dateTime ;
+    skos:altLabel 'Check for files exceeding the 20MB limit'^^xsd:string ;
+    skos:prefLabel 'qSize'@en ;
+    skos:definition 'This CHECKNQXF identifies oversize files (> 20MB).'@en ;
+    skos:notation 'SDN:B06::qSize'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dChanNamesJGOF/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dChanNamesJGOF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dChanNamesJGOF/>;
+    dc:modified '2016-05-09T11:54:07'^^xsd:dateTime ;
+    skos:altLabel 'Parameter code check  for JGOF'^^xsd:string ;
+    skos:prefLabel 'dChanNamesJGOF'@en ;
+    skos:definition 'CHECKNQXF integrity check that the parameter codes used in the data file are valid JGOFS Parameter Dictionary codes.'@en ;
+    skos:notation 'SDN:B06::dChanNamesJGOF'^^xsd:string .

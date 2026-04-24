@@ -1,0 +1,264 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/R27/2019_01_01_00_00_00_2019_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41/2/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41/>;
+    dc:modified '2019-10-16T06:35:48'^^xsd:dateTime ;
+    skos:altLabel 'SBE41'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41 CTD'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. The unit is designed for deployment on profiling floats. During float ascent, spot samples are taken and transmitted to the float controller.'@en ;
+    skos:notation 'SDN:R27::SBE41'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP/2/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP/>;
+    dc:modified '2019-10-16T06:35:48'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface.'@en ;
+    skos:notation 'SDN:R27::SBE41CP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41N/2/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41N/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41N/>;
+    dc:modified '2019-10-16T06:35:48'^^xsd:dateTime ;
+    skos:altLabel 'SBE41N'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41N CTD'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. The unit is designed for deployment on profiling floats hosting multiple biogeochemical (BGC) sensors. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent. Data from all the float\'s sensors, including the optional bolt-on ones, are integrated in the data stream and transmitted to the float controller when the float reaches the surface.'@en ;
+    skos:notation 'SDN:R27::SBE41N'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE61/2/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE61/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE61/>;
+    dc:modified '2019-10-16T06:35:48'^^xsd:dateTime ;
+    skos:altLabel 'SBE61'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 61 CTD'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. The unit is designed for deployment on Deep Argo profiling floats reaching 7000 m depth.'@en ;
+    skos:notation 'SDN:R27::SBE61'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/AMETEK/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/AMETEK/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/AMETEK/>;
+    dc:modified '2019-10-11T14:49:00'^^xsd:dateTime ;
+    skos:altLabel 'AMETEK'^^xsd:string ;
+    skos:prefLabel 'Ametek pressure sensor with unknown pressure rating'@en ;
+    skos:definition 'A strain gauge pressure sensor manufactured by Ametek with unknown pressure rating.'@en ;
+    skos:notation 'SDN:R27::AMETEK'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/AMETEK_3000PSIA/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/AMETEK_3000PSIA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/AMETEK_3000PSIA/>;
+    dc:modified '2019-10-11T14:49:00'^^xsd:dateTime ;
+    skos:altLabel 'AMETEK_3000PSIA'^^xsd:string ;
+    skos:prefLabel 'Ametek pressure sensor with 3000 PSIA rating'@en ;
+    skos:definition 'A strain gauge pressure sensor rated to a maximum pressure of 3000 pounds per square inch absolute manufactured by Ametek.'@en ;
+    skos:notation 'SDN:R27::AMETEK_3000PSIA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/DRUCK/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/DRUCK/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/DRUCK/>;
+    dc:modified '2019-10-11T14:49:00'^^xsd:dateTime ;
+    skos:altLabel 'DRUCK'^^xsd:string ;
+    skos:prefLabel 'Druck pressure sensor with unknown pressure rating'@en ;
+    skos:definition 'A strain gauge pressure sensor manufactured by Druck with unknown pressure rating.'@en ;
+    skos:notation 'SDN:R27::DRUCK'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/DRUCK_2900PSIA/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/DRUCK_2900PSIA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/DRUCK_2900PSIA/>;
+    dc:modified '2019-10-11T14:49:00'^^xsd:dateTime ;
+    skos:altLabel 'DRUCK_2900PSIA'^^xsd:string ;
+    skos:prefLabel 'Druck pressure sensor with 2900 PSIA rating'@en ;
+    skos:definition 'A strain gauge pressure sensor rated to a maximum pressure of 2900 pounds per square inch absolute manufactured by Druck.'@en ;
+    skos:notation 'SDN:R27::DRUCK_2900PSIA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/FSI/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/FSI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/FSI/>;
+    dc:modified '2019-10-11T14:49:00'^^xsd:dateTime ;
+    skos:altLabel 'FSI'^^xsd:string ;
+    skos:prefLabel 'Falmouth Scientific, Inc (FSI) unknown CTD model'@en ;
+    skos:definition 'Unknown CTD sensor model manufactured by Falmouth Scientific, Inc (FSI).'@en ;
+    skos:notation 'SDN:R27::FSI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/KISTLER/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/KISTLER/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/KISTLER/>;
+    dc:modified '2019-10-11T14:49:00'^^xsd:dateTime ;
+    skos:altLabel 'KISTLER'^^xsd:string ;
+    skos:prefLabel 'Kistler pressure sensor with unknown pressure rating'@en ;
+    skos:definition 'A strain gauge pressure sensor manufactured by Kistler with unknown pressure rating.'@en ;
+    skos:notation 'SDN:R27::KISTLER'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/KISTLER_10153PSIA/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/KISTLER_10153PSIA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/KISTLER_10153PSIA/>;
+    dc:modified '2019-10-11T14:49:00'^^xsd:dateTime ;
+    skos:altLabel 'KISTLER_10153PSIA'^^xsd:string ;
+    skos:prefLabel 'Kistler pressure sensor with 10153 PSIA rating'@en ;
+    skos:definition 'A strain gauge pressure sensor rated to a maximum pressure of 10153 pounds per square inch absolute manufactured by Kistler.'@en ;
+    skos:notation 'SDN:R27::KISTLER_10153PSIA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/KISTLER_2900PSIA/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/KISTLER_2900PSIA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/KISTLER_2900PSIA/>;
+    dc:modified '2019-10-11T14:49:00'^^xsd:dateTime ;
+    skos:altLabel 'KISTLER_2900PSIA'^^xsd:string ;
+    skos:prefLabel 'Kistler pressure sensor with 2900 PSIA rating'@en ;
+    skos:definition 'A strain gauge pressure sensor rated to a maximum pressure of 2900 pounds per square inch absolute manufactured by Kistler.'@en ;
+    skos:notation 'SDN:R27::KISTLER_2900PSIA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/PAINE/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/PAINE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/PAINE/>;
+    dc:modified '2019-10-11T14:49:00'^^xsd:dateTime ;
+    skos:altLabel 'PAINE'^^xsd:string ;
+    skos:prefLabel 'Paine pressure sensor with unknown pressure rating'@en ;
+    skos:definition 'A strain gauge pressure sensor manufactured by Paine with unknown pressure rating.'@en ;
+    skos:notation 'SDN:R27::PAINE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/PAINE_1500PSIA/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/PAINE_1500PSIA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/PAINE_1500PSIA/>;
+    dc:modified '2019-10-11T14:49:00'^^xsd:dateTime ;
+    skos:altLabel 'PAINE_1500PSIA'^^xsd:string ;
+    skos:prefLabel 'Paine pressure sensor with 1500 PSIA rating'@en ;
+    skos:definition 'A strain gauge pressure sensor rated to a maximum pressure of 1500 pounds per square inch absolute manufactured by Paine.'@en ;
+    skos:notation 'SDN:R27::PAINE_1500PSIA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/PAINE_1600PSIA/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/PAINE_1600PSIA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/PAINE_1600PSIA/>;
+    dc:modified '2019-10-11T14:49:00'^^xsd:dateTime ;
+    skos:altLabel 'PAINE_1600PSIA'^^xsd:string ;
+    skos:prefLabel 'Paine pressure sensor with 1600 PSIA rating'@en ;
+    skos:definition 'A strain gauge pressure sensor rated to a maximum pressure of 1600 pounds per square inch absolute manufactured by Paine.'@en ;
+    skos:notation 'SDN:R27::PAINE_1600PSIA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/PAINE_2000PSIA/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/PAINE_2000PSIA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/PAINE_2000PSIA/>;
+    dc:modified '2019-10-11T14:49:00'^^xsd:dateTime ;
+    skos:altLabel 'PAINE_2000PSIA'^^xsd:string ;
+    skos:prefLabel 'Paine pressure sensor with 2000 PSIA rating'@en ;
+    skos:definition 'A strain gauge pressure sensor rated to a maximum pressure of 2000 pounds per square inch absolute manufactured by Paine.'@en ;
+    skos:notation 'SDN:R27::PAINE_2000PSIA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/PAINE_2900PSIA/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/PAINE_2900PSIA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/PAINE_2900PSIA/>;
+    dc:modified '2019-10-11T14:49:00'^^xsd:dateTime ;
+    skos:altLabel 'PAINE_2900PSIA'^^xsd:string ;
+    skos:prefLabel 'Paine pressure sensor with 2900 PSIA rating'@en ;
+    skos:definition 'A strain gauge pressure sensor rated to a maximum pressure of 2900 pounds per square inch absolute manufactured by Paine.'@en ;
+    skos:notation 'SDN:R27::PAINE_2900PSIA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/PAINE_3000PSIA/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/PAINE_3000PSIA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/PAINE_3000PSIA/>;
+    dc:modified '2019-10-11T14:49:00'^^xsd:dateTime ;
+    skos:altLabel 'PAINE_3000PSIA'^^xsd:string ;
+    skos:prefLabel 'Paine pressure sensor with 3000 PSIA rating'@en ;
+    skos:definition 'A strain gauge pressure sensor rated to a maximum pressure of 3000 pounds per square inch absolute manufactured by Paine.'@en ;
+    skos:notation 'SDN:R27::PAINE_3000PSIA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/RBR/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/RBR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/RBR/>;
+    dc:modified '2019-10-11T14:49:00'^^xsd:dateTime ;
+    skos:altLabel 'RBR'^^xsd:string ;
+    skos:prefLabel 'RBR unknown CTD model'@en ;
+    skos:definition 'Unknown CTD sensor model manufactured by RBR.'@en ;
+    skos:notation 'SDN:R27::RBR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE/>;
+    dc:modified '2019-10-11T14:49:00'^^xsd:dateTime ;
+    skos:altLabel 'SBE'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific (SBE) unknown CTD model'@en ;
+    skos:definition 'Unknown CTD sensor model manufactured by Sea-Bird Scientific (SBE).'@en ;
+    skos:notation 'SDN:R27::SBE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE37/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE37/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE37/>;
+    dc:modified '2019-10-11T14:49:00'^^xsd:dateTime ;
+    skos:altLabel 'SBE37'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 37 MicroCAT'@en ;
+    skos:definition 'A high accuracy conductivity and temperature recorder with an optional pressure sensor.'@en ;
+    skos:notation 'SDN:R27::SBE37'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE_STS/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE_STS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE_STS/>;
+    dc:modified '2019-10-11T14:49:00'^^xsd:dateTime ;
+    skos:altLabel 'SBE_STS'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE Surface Temperature and Salinity sensor'@en ;
+    skos:definition 'The SBE Surface Temperature and Salinity (STS) sensor is designed to make near-surface temperature and conductivity measurements from profiling floats. As its conductivity sensor is free-flushed, the SBE STS is designed to be used in conjunction with an SBE 41CP sensor for calibration purposes.'@en ;
+    skos:notation 'SDN:R27::SBE_STS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/UNKNOWN/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/UNKNOWN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/UNKNOWN/>;
+    dc:modified '2019-10-11T14:49:00'^^xsd:dateTime ;
+    skos:altLabel 'UNKNOWN'^^xsd:string ;
+    skos:prefLabel 'Unknown sensor model'@en ;
+    skos:definition 'Sensor model is unknown.'@en ;
+    skos:notation 'SDN:R27::UNKNOWN'^^xsd:string .

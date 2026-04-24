@@ -1,0 +1,91 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C30/2015_01_01_00_00_00_2015_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C30/2014_01_01_00_00_00_2014_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2015-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/PURE/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/PURE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/PURE/>;
+    dc:modified '2015-08-19T16:48:55'^^xsd:dateTime ;
+    skos:altLabel 'BGS PURE project management'^^xsd:string ;
+    skos:prefLabel 'BGS Probability, Uncertainty and Risk in the Environment project management'@en ;
+    skos:definition 'Governance for vocabularies used to support drop-down lists in the BGS PURE portal and its metadata input tools.'@en ;
+    skos:notation 'SDN:C30::PURE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/BODC/2/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/BODC/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/BODC/>;
+    dc:modified '2015-06-01T13:55:53'^^xsd:dateTime ;
+    skos:altLabel 'BODC'^^xsd:string ;
+    skos:prefLabel 'British Oceanographic Data Centre'@en ;
+    skos:definition 'Governance for vocabularies used within the data centre'@en ;
+    skos:notation 'SDN:C30::BODC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/CMRC/2/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/CMRC/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/CMRC/>;
+    dc:modified '2015-06-01T13:52:52'^^xsd:dateTime ;
+    skos:altLabel 'CMRC'^^xsd:string ;
+    skos:prefLabel 'Coastal and Marine resources Centre'@en ;
+    skos:definition 'Unit within University College Cork in Ireland involved in several geospatially-related projects and responsible for several products, including the Marine Irish Data Atlas (MIDA)'@en ;
+    skos:notation 'SDN:C30::CMRC'^^xsd:string .

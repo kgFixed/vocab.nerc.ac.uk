@@ -1,0 +1,154 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C30/2010_01_01_00_00_00_2010_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C30/2009_01_01_00_00_00_2009_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2010-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/GEOSEA/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/GEOSEA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/GEOSEA/>;
+    dc:modified '2010-09-16T09:57:31'^^xsd:dateTime ;
+    skos:altLabel 'Geo-Seas'^^xsd:string ;
+    skos:prefLabel 'Geo-Seas'@en ;
+    skos:definition 'Governance for vocabularies used in the EU Geo-Seas project implemented as consultation between BODC and a designated group of Geo-Seas project paticipants'@en ;
+    skos:notation 'SDN:C30::GEOSEA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/GCMD/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/GCMD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/GCMD/>;
+    dc:modified '2010-08-10T14:43:31'^^xsd:dateTime ;
+    skos:altLabel 'GCMD'^^xsd:string ;
+    skos:prefLabel 'Global Change Master Directory'@en ;
+    skos:definition 'NASA environmental discovery metadata development and portal management group.'@en ;
+    skos:notation 'SDN:C30::GCMD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/CF/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/CF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/CF/>;
+    dc:modified '2010-08-10T14:40:40'^^xsd:dateTime ;
+    skos:altLabel 'CF Standard Names'^^xsd:string ;
+    skos:prefLabel 'Climate and Forecast Standard Names Committee'@en ;
+    skos:definition 'Formal vocabulary specialist group within the governance of the Climate and Forecast Community Metadata Standard.'@en ;
+    skos:notation 'SDN:C30::CF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/ISO/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/ISO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/ISO/>;
+    dc:modified '2010-08-10T14:07:13'^^xsd:dateTime ;
+    skos:altLabel 'ISO'^^xsd:string ;
+    skos:prefLabel 'International Organization for Standardization'@en ;
+    skos:definition 'International governance for standards covering many domains within science and beyond.'@en ;
+    skos:notation 'SDN:C30::ISO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/POGO/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/POGO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/POGO/>;
+    dc:modified '2010-08-10T14:03:04'^^xsd:dateTime ;
+    skos:altLabel 'POGO'^^xsd:string ;
+    skos:prefLabel 'Partnership for Observation of the Global Oceans'@en ;
+    skos:definition 'International collaboration of the senior management of oceanographic research organisations worldwide.'@en ;
+    skos:notation 'SDN:C30::POGO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/SVX/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/SVX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/SVX/>;
+    dc:modified '2010-08-10T13:12:30'^^xsd:dateTime ;
+    skos:altLabel 'SeaVoX'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet and MarineXML Vocabulary Content Governance Group'@en ;
+    skos:definition 'Group set up under the joint auspices of the SeaDataNet project and the Intergovernmental Oceanographic Commission MarineXML Steering Group for controlled vocabulary governance in the marine domain'@en ;
+    skos:notation 'SDN:C30::SVX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/ICES/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/ICES/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/ICES/>;
+    dc:modified '2010-08-10T12:52:37'^^xsd:dateTime ;
+    skos:altLabel 'ICES'^^xsd:string ;
+    skos:prefLabel 'International Council for the Exploration of the Sea'@en ;
+    skos:definition 'International organisation with a mission to advance the scientific capacity to give advice on human activities affecting, and affected by, marine ecosystems. Secretariat is located in Copenhagen.'@en ;
+    skos:notation 'SDN:C30::ICES'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/IHO/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/IHO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/IHO/>;
+    dc:modified '2010-08-10T12:40:32'^^xsd:dateTime ;
+    skos:altLabel 'IHO'^^xsd:string ;
+    skos:prefLabel 'International Hydrographic Organisation'@en ;
+    skos:definition 'Intergovernmental organisation formed to advance navigational safety and the protection of the marine environment. Its secretariat is the International Hydrographic Bureau (IHB) based in Monaco.'@en ;
+    skos:notation 'SDN:C30::IHO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/EEA/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/EEA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/EEA/>;
+    dc:modified '2010-02-18T14:54:37'^^xsd:dateTime ;
+    skos:altLabel 'EEA'^^xsd:string ;
+    skos:prefLabel 'European Environment Agency'@en ;
+    skos:definition 'Governance for vocabularies used in EEA data'@en ;
+    skos:notation 'SDN:C30::EEA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/SDN/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/SDN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/SDN/>;
+    dc:modified '2010-02-18T11:14:15'^^xsd:dateTime ;
+    skos:altLabel 'SeaDataNet'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet'@en ;
+    skos:definition 'Governance for vocabularies used in the EU SeaDataNet project implemented as consultation between BODC and the members of the SeaDataNet Technical Task Team'@en ;
+    skos:notation 'SDN:C30::SDN'^^xsd:string .

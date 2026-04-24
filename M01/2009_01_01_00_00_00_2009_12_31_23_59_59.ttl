@@ -1,0 +1,147 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/M01/2009_01_01_00_00_00_2009_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M01/current/DB/1/> .
+<http://vocab.nerc.ac.uk/collection/M01/current/DB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M01/current/DB/>;
+    dc:modified '2009-07-29T13:41:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Database'@en ;
+    skos:definition 'Files that are used to store data in database applications such as Oracle or MS Access'@en ;
+    skos:notation 'SDN:M01::DB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M01/current/DEL/1/> .
+<http://vocab.nerc.ac.uk/collection/M01/current/DEL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M01/current/DEL/>;
+    dc:modified '2009-07-29T13:41:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Delimited'@en ;
+    skos:definition 'File formats that are delimited by commas, tabs, semi colons that can be opened using software packages such as MS Excel'@en ;
+    skos:notation 'SDN:M01::DEL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M01/current/DOC/1/> .
+<http://vocab.nerc.ac.uk/collection/M01/current/DOC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M01/current/DOC/>;
+    dc:modified '2009-07-29T13:41:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Documents'@en ;
+    skos:definition 'Files that hold written information such as pdf, doc,'@en ;
+    skos:notation 'SDN:M01::DOC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M01/current/IMG/1/> .
+<http://vocab.nerc.ac.uk/collection/M01/current/IMG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M01/current/IMG/>;
+    dc:modified '2009-07-29T13:41:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Image'@en ;
+    skos:definition 'Still image files such as jpeg, tiff, png that may be opened by applications such as PhotoShop'@en ;
+    skos:notation 'SDN:M01::IMG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M01/current/KMX/1/> .
+<http://vocab.nerc.ac.uk/collection/M01/current/KMX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M01/current/KMX/>;
+    dc:modified '2009-07-29T13:41:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Google Earth and Oceans'@en ;
+    skos:definition 'Files (e.g. kml, kmg) used to display data and images using Google applications Earth and Oceans.'@en ;
+    skos:notation 'SDN:M01::KMX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M01/current/MOV/1/> .
+<http://vocab.nerc.ac.uk/collection/M01/current/MOV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M01/current/MOV/>;
+    dc:modified '2009-07-29T13:41:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Movie'@en ;
+    skos:definition 'Files that capture moving images such as avi, mpeg, mov, wmv'@en ;
+    skos:notation 'SDN:M01::MOV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M01/current/GIS/1/> .
+<http://vocab.nerc.ac.uk/collection/M01/current/GIS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M01/current/GIS/>;
+    dc:modified '2009-07-29T13:41:37'^^xsd:dateTime ;
+    skos:altLabel 'GIS'^^xsd:string ;
+    skos:prefLabel 'Geographic Information System'@en ;
+    skos:definition 'Files that are geographic in scope and can be opened by MapInfo or ESRI'@en ;
+    skos:notation 'SDN:M01::GIS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M01/current/NC/1/> .
+<http://vocab.nerc.ac.uk/collection/M01/current/NC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M01/current/NC/>;
+    dc:modified '2009-07-29T13:41:37'^^xsd:dateTime ;
+    skos:altLabel 'NetCDF'^^xsd:string ;
+    skos:prefLabel 'Network Common Data Form'@en ;
+    skos:definition 'Binary data files conforming to a set of conventions allowing them to be manipulated through the NetCDF API and tools built using that API'@en ;
+    skos:notation 'SDN:M01::NC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M01/current/ODV/1/> .
+<http://vocab.nerc.ac.uk/collection/M01/current/ODV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M01/current/ODV/>;
+    dc:modified '2009-07-29T13:41:37'^^xsd:dateTime ;
+    skos:altLabel 'ODV'^^xsd:string ;
+    skos:prefLabel 'Ocean Data View'@en ;
+    skos:definition 'Delimited files conforming to a set of conventions that allow them to be opened and interrogated using the OCEAN Data View application'@en ;
+    skos:notation 'SDN:M01::ODV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M01/current/TXT/1/> .
+<http://vocab.nerc.ac.uk/collection/M01/current/TXT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M01/current/TXT/>;
+    dc:modified '2009-07-29T13:41:37'^^xsd:dateTime ;
+    skos:altLabel 'Text'^^xsd:string ;
+    skos:prefLabel 'Text or Plaintext'@en ;
+    skos:definition 'Files encoded in a character convention, usually ASCII, that need to be handled with a generic text editor such as Vi or Notepad or bespoke software'@en ;
+    skos:notation 'SDN:M01::TXT'^^xsd:string .

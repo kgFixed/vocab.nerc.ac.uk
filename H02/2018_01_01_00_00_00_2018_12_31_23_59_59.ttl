@@ -1,0 +1,147 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/H02/2018_01_01_00_00_00_2018_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/H02/current/H0200004/2/> .
+<http://vocab.nerc.ac.uk/collection/H02/current/H0200004/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/H02/current/H0200004/>;
+    dc:modified '2018-02-13T11:40:23'^^xsd:dateTime ;
+    skos:altLabel 'angular'^^xsd:string ;
+    skos:prefLabel 'angular'@en ;
+    skos:definition 'Micro-litter particles with sharp angle edges.'@en ;
+    skos:notation 'SDN:H02::H0200004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/H02/current/H0200006/2/> .
+<http://vocab.nerc.ac.uk/collection/H02/current/H0200006/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/H02/current/H0200006/>;
+    dc:modified '2018-02-13T11:40:23'^^xsd:dateTime ;
+    skos:altLabel 'cylindrical'^^xsd:string ;
+    skos:prefLabel 'cylindrical'@en ;
+    skos:definition 'Micro-litter particles with a regular cylinder-like shape.'@en ;
+    skos:notation 'SDN:H02::H0200006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/H02/current/H0200007/2/> .
+<http://vocab.nerc.ac.uk/collection/H02/current/H0200007/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/H02/current/H0200007/>;
+    dc:modified '2018-02-13T11:40:23'^^xsd:dateTime ;
+    skos:altLabel 'discoid'^^xsd:string ;
+    skos:prefLabel 'discoid'@en ;
+    skos:definition 'Micro-litter particles with a regular disc-like shape.'@en ;
+    skos:notation 'SDN:H02::H0200007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/H02/current/H0200005/2/> .
+<http://vocab.nerc.ac.uk/collection/H02/current/H0200005/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/H02/current/H0200005/>;
+    dc:modified '2018-02-13T11:40:23'^^xsd:dateTime ;
+    skos:altLabel 'flat'^^xsd:string ;
+    skos:prefLabel 'flat'@en ;
+    skos:definition 'Micro-litter particles with a broad level or regular surface that is wider than it is high.'@en ;
+    skos:notation 'SDN:H02::H0200005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/H02/current/H0200010/2/> .
+<http://vocab.nerc.ac.uk/collection/H02/current/H0200010/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/H02/current/H0200010/>;
+    dc:modified '2018-02-13T11:40:23'^^xsd:dateTime ;
+    skos:altLabel 'other/unclassified'^^xsd:string ;
+    skos:prefLabel 'Other/unclassified'@en ;
+    skos:definition 'Micro-litter particles with an undertermined or unclassified shape.'@en ;
+    skos:notation 'SDN:H02::H0200010'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/H02/current/H0200008/2/> .
+<http://vocab.nerc.ac.uk/collection/H02/current/H0200008/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/H02/current/H0200008/>;
+    dc:modified '2018-02-13T11:40:23'^^xsd:dateTime ;
+    skos:altLabel 'ovoid'^^xsd:string ;
+    skos:prefLabel 'ovoid'@en ;
+    skos:definition 'Micro-litter particles with a regular oval-like shape.'@en ;
+    skos:notation 'SDN:H02::H0200008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/H02/current/H0200001/2/> .
+<http://vocab.nerc.ac.uk/collection/H02/current/H0200001/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/H02/current/H0200001/>;
+    dc:modified '2018-02-13T11:40:23'^^xsd:dateTime ;
+    skos:altLabel 'rounded'^^xsd:string ;
+    skos:prefLabel 'rounded'@en ;
+    skos:definition 'Micro-litter particles with rounded off edges (e.g. by erosion).'@en ;
+    skos:notation 'SDN:H02::H0200001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/H02/current/H0200009/2/> .
+<http://vocab.nerc.ac.uk/collection/H02/current/H0200009/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/H02/current/H0200009/>;
+    dc:modified '2018-02-13T11:40:23'^^xsd:dateTime ;
+    skos:altLabel 'spheroid'^^xsd:string ;
+    skos:prefLabel 'spheroid'@en ;
+    skos:definition 'Micro-litter particles with a regular sphere-like shape.'@en ;
+    skos:notation 'SDN:H02::H0200009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/H02/current/H0200003/2/> .
+<http://vocab.nerc.ac.uk/collection/H02/current/H0200003/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/H02/current/H0200003/>;
+    dc:modified '2018-02-13T11:40:23'^^xsd:dateTime ;
+    skos:altLabel 'subangular'^^xsd:string ;
+    skos:prefLabel 'subangular'@en ;
+    skos:definition 'Micro-litter particles with smooth angle edges.'@en ;
+    skos:notation 'SDN:H02::H0200003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/H02/current/H0200002/2/> .
+<http://vocab.nerc.ac.uk/collection/H02/current/H0200002/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/H02/current/H0200002/>;
+    dc:modified '2018-02-13T11:40:23'^^xsd:dateTime ;
+    skos:altLabel 'subrounded'^^xsd:string ;
+    skos:prefLabel 'subrounded'@en ;
+    skos:definition 'Micro-litter particles with partly rounded off edges.'@en ;
+    skos:notation 'SDN:H02::H0200002'^^xsd:string .

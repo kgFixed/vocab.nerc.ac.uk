@@ -1,0 +1,208 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P25/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P25/2011_01_01_00_00_00_2011_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2012-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/VOL/1/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/VOL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/VOL/>;
+    dc:modified '2012-07-25T12:36:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Volume'@en ;
+    skos:definition 'The quantity of three-dimensional space enclosed by some closed boundary.'@en ;
+    skos:notation 'SDN:P25::VOL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/ARCOV/1/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/ARCOV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/ARCOV/>;
+    dc:modified '2012-07-25T12:35:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Areal coverage'@en ;
+    skos:definition 'A proportion by area of a bounded space.'@en ;
+    skos:notation 'SDN:P25::ARCOV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/WCONT/1/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/WCONT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/WCONT/>;
+    dc:modified '2012-07-25T12:32:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Water content'@en ;
+    skos:definition 'The proportion of an object that is made up of water.'@en ;
+    skos:notation 'SDN:P25::WCONT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/KVISC/1/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/KVISC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/KVISC/>;
+    dc:modified '2012-07-25T12:30:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Kinematic viscosity'@en ;
+    skos:definition 'The resistance of a liquid to movement expressed as the absolute viscosity divided by density.'@en ;
+    skos:notation 'SDN:P25::KVISC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/LTHICK/1/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/LTHICK/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/LTHICK/>;
+    dc:modified '2012-07-25T12:27:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Layer thickness'@en ;
+    skos:definition 'The distance between the top and bottom of a layer.'@en ;
+    skos:notation 'SDN:P25::LTHICK'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/CDIAM/1/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/CDIAM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/CDIAM/>;
+    dc:modified '2012-07-25T12:24:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Circle diameter'@en ;
+    skos:definition 'The length of a line connecting two points on the circumference of a circle that also passes through the centre of the circle'@en ;
+    skos:notation 'SDN:P25::CDIAM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/ELEV/1/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/ELEV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/ELEV/>;
+    dc:modified '2012-07-25T09:06:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Elevation'@en ;
+    skos:definition 'The vertical separation from a specified datum.'@en ;
+    skos:notation 'SDN:P25::ELEV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/TURB/1/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/TURB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/TURB/>;
+    dc:modified '2012-06-12T11:22:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Turbidity'@en ;
+    skos:definition 'The amount (volume or mass) of suspended particule material per amount (volume or mass) of a body of water.'@en ;
+    skos:notation 'SDN:P25::TURB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/OXYS/1/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/OXYS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/OXYS/>;
+    dc:modified '2012-06-12T11:19:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Oxygen saturation'@en ;
+    skos:definition 'The proportion of the amount (volume, mass or quantity of matter) of dissolved oxygen per amount (volume or mass) of a body of water relative to the amount in a water body in equilibrium with the atmosphere.'@en ;
+    skos:notation 'SDN:P25::OXYS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/DOXY/1/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/DOXY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/DOXY/>;
+    dc:modified '2012-06-12T11:04:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Oxygen concentration'@en ;
+    skos:definition 'The amount (volume, mass or quantity of matter) of dissolved oxygen per amount (volume or mass) of a body of water.'@en ;
+    skos:notation 'SDN:P25::DOXY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/SNWLR/1/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/SNWLR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/SNWLR/>;
+    dc:modified '2012-06-12T11:01:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Spectral normalised water-leaving radiance'@en ;
+    skos:definition 'The upwelling radiance of light of a designated wavelength just above the sea surface.'@en ;
+    skos:notation 'SDN:P25::SNWLR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/WINDT/1/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/WINDT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/WINDT/>;
+    dc:modified '2012-05-29T11:54:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Wind to direction'@en ;
+    skos:definition 'The direction towards which air is moving relative to the ground or sea surface.'@en ;
+    skos:notation 'SDN:P25::WINDT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/WINDF/1/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/WINDF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/WINDF/>;
+    dc:modified '2012-05-29T11:54:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Wind from direction'@en ;
+    skos:definition 'The direction from which air is moving relative to the ground or sea surface.'@en ;
+    skos:notation 'SDN:P25::WINDF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/WINDS/1/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/WINDS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/WINDS/>;
+    dc:modified '2012-05-29T11:53:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Wind speed'@en ;
+    skos:definition 'The speed of air relative to the ground or sea surface.'@en ;
+    skos:notation 'SDN:P25::WINDS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/WINDY/1/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/WINDY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/WINDY/>;
+    dc:modified '2012-05-29T11:51:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Wind y velocity'@en ;
+    skos:definition 'The velocity of air resolved along the y-axis of a co-ordinate system (possibly northwards).'@en ;
+    skos:notation 'SDN:P25::WINDY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P25/current/WINDX/1/> .
+<http://vocab.nerc.ac.uk/collection/P25/current/WINDX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P25/current/WINDX/>;
+    dc:modified '2012-05-29T11:51:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Wind x velocity'@en ;
+    skos:definition 'The velocity of air resolved along the x-axis of a co-ordinate system (possibly eastwards).'@en ;
+    skos:notation 'SDN:P25::WINDX'^^xsd:string .

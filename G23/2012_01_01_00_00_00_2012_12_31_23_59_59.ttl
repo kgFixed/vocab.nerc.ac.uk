@@ -1,0 +1,129 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/G23/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G23/current/001/1/> .
+<http://vocab.nerc.ac.uk/collection/G23/current/001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G23/current/001/>;
+    dc:modified '2012-07-04T11:28:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'copyright'@en ;
+    skos:definition 'Exclusive right to the publication, production, or sale of the rights to a literary, dramatic, musical, or artistic work, or to the use of a commercial print or label, granted by law for a specified period of time to an author, composer, artist, distributor'@en ;
+    skos:notation 'SDN:G23::001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G23/current/002/1/> .
+<http://vocab.nerc.ac.uk/collection/G23/current/002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G23/current/002/>;
+    dc:modified '2012-07-04T11:28:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'patent'@en ;
+    skos:definition 'Government has granted exclusive right to make, sell, use or license an invention or discovery'@en ;
+    skos:notation 'SDN:G23::002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G23/current/003/1/> .
+<http://vocab.nerc.ac.uk/collection/G23/current/003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G23/current/003/>;
+    dc:modified '2012-07-04T11:28:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'patentPending'@en ;
+    skos:definition 'Produced or sold information awaiting a patent'@en ;
+    skos:notation 'SDN:G23::003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G23/current/004/1/> .
+<http://vocab.nerc.ac.uk/collection/G23/current/004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G23/current/004/>;
+    dc:modified '2012-07-04T11:28:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'trademark'@en ;
+    skos:definition 'A name, symbol, or other device identifying a product, officially registered and legally restricted to the use of the owner or manufacturer'@en ;
+    skos:notation 'SDN:G23::004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G23/current/005/1/> .
+<http://vocab.nerc.ac.uk/collection/G23/current/005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G23/current/005/>;
+    dc:modified '2012-07-04T11:28:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'license'@en ;
+    skos:definition 'Formal permission to do something'@en ;
+    skos:notation 'SDN:G23::005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G23/current/006/1/> .
+<http://vocab.nerc.ac.uk/collection/G23/current/006/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G23/current/006/>;
+    dc:modified '2012-07-04T11:28:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'intellectualPropertyRights'@en ;
+    skos:definition 'Rights to financial benefit from and control of distribution of non-tangible property that is a result of creativity'@en ;
+    skos:notation 'SDN:G23::006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G23/current/007/1/> .
+<http://vocab.nerc.ac.uk/collection/G23/current/007/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G23/current/007/>;
+    dc:modified '2012-07-04T11:28:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'restricted'@en ;
+    skos:definition 'Withheld from general circulation or disclosure'@en ;
+    skos:notation 'SDN:G23::007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G23/current/008/1/> .
+<http://vocab.nerc.ac.uk/collection/G23/current/008/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G23/current/008/>;
+    dc:modified '2012-07-04T11:28:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'otherRestrictions'@en ;
+    skos:definition 'Limitation not listed'@en ;
+    skos:notation 'SDN:G23::008'^^xsd:string .

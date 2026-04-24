@@ -1,0 +1,138 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/R05/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R05/current/0/1/> .
+<http://vocab.nerc.ac.uk/collection/R05/current/0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R05/current/0/>;
+    dc:modified '2020-04-04T15:05:33'^^xsd:dateTime ;
+    skos:altLabel '0'^^xsd:string ;
+    skos:prefLabel 'Argos location accuracy >1500m radius'@en ;
+    skos:definition 'Estimated location accuracy radius from Argos positioning system of over 1500m'@en ;
+    skos:notation 'SDN:R05::0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R05/current/1/1/> .
+<http://vocab.nerc.ac.uk/collection/R05/current/1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R05/current/1/>;
+    dc:modified '2020-04-04T15:05:33'^^xsd:dateTime ;
+    skos:altLabel '1'^^xsd:string ;
+    skos:prefLabel 'Argos location accuracy <1500m radius'@en ;
+    skos:definition 'Estimated location accuracy radius from Argos positioning system of less than 1500m'@en ;
+    skos:notation 'SDN:R05::1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R05/current/2/1/> .
+<http://vocab.nerc.ac.uk/collection/R05/current/2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R05/current/2/>;
+    dc:modified '2020-04-04T15:05:33'^^xsd:dateTime ;
+    skos:altLabel '2'^^xsd:string ;
+    skos:prefLabel 'Argos location accuracy <500m radius'@en ;
+    skos:definition 'Estimated location accuracy radius from Argos positioning system of less than 500m'@en ;
+    skos:notation 'SDN:R05::2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R05/current/3/1/> .
+<http://vocab.nerc.ac.uk/collection/R05/current/3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R05/current/3/>;
+    dc:modified '2020-04-04T15:05:33'^^xsd:dateTime ;
+    skos:altLabel '3'^^xsd:string ;
+    skos:prefLabel 'Argos location accuracy <250m radius'@en ;
+    skos:definition 'Estimated location accuracy radius from Argos positioning system of less than 250m'@en ;
+    skos:notation 'SDN:R05::3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R05/current/A/1/> .
+<http://vocab.nerc.ac.uk/collection/R05/current/A/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R05/current/A/>;
+    dc:modified '2020-04-04T15:05:33'^^xsd:dateTime ;
+    skos:altLabel 'A'^^xsd:string ;
+    skos:prefLabel 'Argos no location accuracy estimation (three messages received)'@en ;
+    skos:definition 'The location accuracy radius from Argos positioning system cannot be estimated as only three messages were received.'@en ;
+    skos:notation 'SDN:R05::A'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R05/current/B/1/> .
+<http://vocab.nerc.ac.uk/collection/R05/current/B/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R05/current/B/>;
+    dc:modified '2020-04-04T15:05:33'^^xsd:dateTime ;
+    skos:altLabel 'B'^^xsd:string ;
+    skos:prefLabel 'Argos no location accuracy estimation (one or two messages received)'@en ;
+    skos:definition 'The location accuracy radius from Argos positioning system cannot be estimated as only one or two messages were received.'@en ;
+    skos:notation 'SDN:R05::B'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R05/current/R/1/> .
+<http://vocab.nerc.ac.uk/collection/R05/current/R/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R05/current/R/>;
+    dc:modified '2020-04-04T15:05:33'^^xsd:dateTime ;
+    skos:altLabel 'R'^^xsd:string ;
+    skos:prefLabel 'RAFOS location accuracy'@en ;
+    skos:definition 'Estimated location accuracy radius from RAFOS positioning system'@en ;
+    skos:notation 'SDN:R05::R'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R05/current/U/1/> .
+<http://vocab.nerc.ac.uk/collection/R05/current/U/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R05/current/U/>;
+    dc:modified '2020-04-04T15:05:33'^^xsd:dateTime ;
+    skos:altLabel 'U'^^xsd:string ;
+    skos:prefLabel 'Estimated location accuracy'@en ;
+    skos:definition 'Estimated location accuracy radius from manual computation as not received by the float.'@en ;
+    skos:notation 'SDN:R05::U'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R05/current/Z/1/> .
+<http://vocab.nerc.ac.uk/collection/R05/current/Z/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R05/current/Z/>;
+    dc:modified '2020-04-04T15:05:33'^^xsd:dateTime ;
+    skos:altLabel 'Z'^^xsd:string ;
+    skos:prefLabel 'Argos invalid location'@en ;
+    skos:definition 'The location accuracy radius from Argos positioning system cannot be estimated due to invalid location measurements.'@en ;
+    skos:notation 'SDN:R05::Z'^^xsd:string .

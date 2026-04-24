@@ -1,0 +1,91 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/A05/2017_01_01_00_00_00_2017_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/A05/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2017-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/A05/current/EV_TTRACE/2/> .
+<http://vocab.nerc.ac.uk/collection/A05/current/EV_TTRACE/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/A05/current/EV_TTRACE/>;
+    dc:modified '2017-01-13T17:15:10'^^xsd:dateTime ;
+    skos:altLabel 'T tracers'^^xsd:string ;
+    skos:prefLabel 'Transient tracers'@en ;
+    skos:definition 'The amount of transient tracers (CFC-12, CFC-11, SF6, tritium, 3He, 14C) in seawater using water column measurements.'@en ;
+    skos:notation 'SDN:A05::EV_TTRACE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/A05/current/EV_WAVES/2/> .
+<http://vocab.nerc.ac.uk/collection/A05/current/EV_WAVES/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/A05/current/EV_WAVES/>;
+    dc:modified '2017-01-13T17:14:23'^^xsd:dateTime ;
+    skos:altLabel 'Sea waves'^^xsd:string ;
+    skos:prefLabel 'Waves'@en ;
+    skos:definition 'The properties (wave height, maximum wave height, significant wave height, wave period, wave direction, wave steepness and wave spectrum energy) of sea waves.'@en ;
+    skos:notation 'SDN:A05::EV_WAVES'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/A05/current/EV_CURR/2/> .
+<http://vocab.nerc.ac.uk/collection/A05/current/EV_CURR/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/A05/current/EV_CURR/>;
+    dc:modified '2017-01-13T17:13:18'^^xsd:dateTime ;
+    skos:altLabel 'Sea currents'^^xsd:string ;
+    skos:prefLabel 'Currents'@en ;
+    skos:definition 'The velocity (Eulerian, upward and Stokes Drift) of sea water (includes scalar speeds and directions).'@en ;
+    skos:notation 'SDN:A05::EV_CURR'^^xsd:string .

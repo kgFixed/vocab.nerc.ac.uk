@@ -1,0 +1,91 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L24/2011_01_01_00_00_00_2013_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L24/2008_01_01_00_00_00_2010_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2013-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/SHP/1/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/SHP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/SHP/>;
+    dc:modified '2013-11-26T09:01:43'^^xsd:dateTime ;
+    skos:altLabel 'Shapefile'^^xsd:string ;
+    skos:prefLabel 'ESRI Shapefile Format'@en ;
+    skos:definition 'A popular geospatial vector data format for geographic information system software developed and regulated by ESRI.'@en ;
+    skos:notation 'SDN:L24::SHP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/CFPOINT/1/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/CFPOINT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/CFPOINT/>;
+    dc:modified '2013-07-16T12:27:20'^^xsd:dateTime ;
+    skos:altLabel 'CF1.6_NetCDF'^^xsd:string ;
+    skos:prefLabel 'Climate and Forecast Point Data NetCDF'@en ;
+    skos:definition 'SeaDataNet extension of the Climate and Forecast (http://www.cfconventions.org/) version 1.6 standard binary format for point data with additional semantics embedded.  Designed for profiles, time series and trajectories.'@en ;
+    skos:notation 'SDN:L24::CFPOINT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/CF/3/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/CF/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/CF/>;
+    dc:modified '2013-07-16T12:27:17'^^xsd:dateTime ;
+    skos:altLabel 'CF_NetCDF'^^xsd:string ;
+    skos:prefLabel 'Climate and Forecast NetCDF'@en ;
+    skos:definition 'SeaDataNet extension of the Climate and Forecast (http://www.cfconventions.org/) version 1.5 standard binary format with additional semantics embedded.  Designed for gridded data.'@en ;
+    skos:notation 'SDN:L24::CF'^^xsd:string .

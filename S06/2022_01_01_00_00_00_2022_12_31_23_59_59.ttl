@@ -1,0 +1,361 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S06/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S06/2021_01_01_00_00_00_2021_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2022-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600302/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600302/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600302/>;
+    dc:modified '2022-11-29T13:17:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Horizontal visibility (ESAS code)'@en ;
+    skos:definition 'A one-character string used by European Seabirds At Sea (ESAS) to classify ranges of horizontal visibility.'@en ;
+    skos:notation 'SDN:S06::S0600302'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600301/2/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600301/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600301/>;
+    dc:modified '2022-11-27T09:32:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Colour (Pt/Co scale)'@en ;
+    skos:definition 'Also called APHA-Hazen scale or APHA-Hazen color or colour, the Platinum-Cobalt scale is a method of measuring the colour of water samples that is specific to the colour yellow. One unit of colour on the scale is defined as the colour produced by 1 milligram of platinum cobalt dissolved in 1 litre of water.'@en ;
+    skos:notation 'SDN:S06::S0600301'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600299/2/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600299/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600299/>;
+    dc:modified '2022-11-22T06:15:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Density (dry bulk)'@en ;
+    skos:definition 'Mass of dry matter contained in a sample of soil or sediment divided by the volume of the sample before drying. The total volume includes particle volume, inter-particle void volume, and internal pore volume.'@en ;
+    skos:notation 'SDN:S06::S0600299'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600300/2/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600300/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600300/>;
+    dc:modified '2022-11-22T06:15:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Density (wet bulk)'@en ;
+    skos:definition 'Total mass of a fresh sample of soil or sediment (solid plus water) divided by its total volume. The total volume includes particle volume, inter-particle void volume, and internal pore volume.'@en ;
+    skos:notation 'SDN:S06::S0600300'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600298/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600298/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600298/>;
+    dc:modified '2022-10-19T17:05:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Electrical conductivity'@en ;
+    skos:definition 'The measure of a body of water\'s capability to pass electrical current. It is directly related to the concentration of dissolved ions in the water, such as chlorides, sulfides and carbonate compounds. The more ions that are present, the higher the conductivity of the water. It can be used to calculate practical salinity.'@en ;
+    skos:notation 'SDN:S06::S0600298'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600297/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600297/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600297/>;
+    dc:modified '2022-10-17T14:17:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Relative humidity'@en ;
+    skos:definition 'The ratio of the amount of water vapour in the air compared to the maximum amount of water vapour that can theoretically be held at the air\'s temperature.'@en ;
+    skos:notation 'SDN:S06::S0600297'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600296/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600296/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600296/>;
+    dc:modified '2022-10-17T14:13:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Dew point temperature'@en ;
+    skos:definition 'The temperature to which air must cool to become saturated with water vapour.'@en ;
+    skos:notation 'SDN:S06::S0600296'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600295/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600295/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600295/>;
+    dc:modified '2022-10-10T14:39:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'POC/Th-234 ratio'@en ;
+    skos:definition 'The ratio of particulate organic carbon (POC) concentration to thorium-234 activity. Thorium is insoluble in seawater and is scavenged by particles as they form and/or sink through the water column. This causes a radioactive disequilibrium between 238U and 234Th in the upper water column, which is proportional to the numbers of particles exported. The POC/Th-234 ratio is hence used to estimate particle and elemental export fluxes.'@en ;
+    skos:notation 'SDN:S06::S0600295'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600097/2/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600097/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600097/>;
+    dc:modified '2022-07-18T07:22:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Length (culmen)'@en ;
+    skos:definition 'Code deprecated on 2022/07/18; use the term defined in the S12 vocabulary to identify sub-components or body parts of biological entities. Previous description was: A standard measurement in bird biometrics referring to the distance along the main axis of the upper margin of the beak or bill.'@en ;
+    skos:notation 'SDN:S06::S0600097'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600099/2/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600099/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600099/>;
+    dc:modified '2022-07-18T07:05:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Length (tarsus)'@en ;
+    skos:definition 'Code deprecated on 2022/07/18; use the term defined in the S12 vocabulary to identify sub-components or body parts of biological entities. Previous description was: A standard measurement used in biometric science, in particular bird biometrics.'@en ;
+    skos:notation 'SDN:S06::S0600099'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600098/2/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600098/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600098/>;
+    dc:modified '2022-07-18T07:00:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Length (head)'@en ;
+    skos:definition 'Code deprecated on 2022/07/18; use the term defined in the S12 vocabulary to identify sub-components or body parts of biological entities. Previous description was: A standard measurement used in biometric science, in particular bird biometrics.'@en ;
+    skos:notation 'SDN:S06::S0600098'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600100/2/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600100/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600100/>;
+    dc:modified '2022-07-18T06:44:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Length (wing)'@en ;
+    skos:definition 'Code deprecated on 2022/07/18; use the term defined in the S12 vocabulary to identify sub-components or body parts of biological entities. Previous description was: A standard measurement used in biometric science, in particular bird or insect biometrics.'@en ;
+    skos:notation 'SDN:S06::S0600100'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600294/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600294/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600294/>;
+    dc:modified '2022-07-11T15:05:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Net upward flux (into atmosphere)'@en ;
+    skos:definition 'Rate of transfer through a surface in contact with the atmosphere in an upward direction, positive values indicating a net upward flow into the atmosphere and negative values indicating a net downward flow from the atmosphere.'@en ;
+    skos:notation 'SDN:S06::S0600294'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600293/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600293/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600293/>;
+    dc:modified '2022-06-13T16:02:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Relative loss rate'@en ;
+    skos:definition 'The amount of an entity lost from a system divided by the initial amount of that entity in the system relative to time.'@en ;
+    skos:notation 'SDN:S06::S0600293'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600292/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600292/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600292/>;
+    dc:modified '2022-06-13T15:41:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Vertical attenuation'@en ;
+    skos:definition 'The proportion of any kind of flux or signal that is lost when absorbed or scattered by a medium along the vertical Z axis.'@en ;
+    skos:notation 'SDN:S06::S0600292'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600291/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600291/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600291/>;
+    dc:modified '2022-06-13T12:27:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Net upward flux'@en ;
+    skos:definition 'Rate of transfer through a surface or a substance in an upward direction, positive values indicating a net upward flow and negative values indicating a net downward flow.'@en ;
+    skos:notation 'SDN:S06::S0600291'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600290/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600290/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600290/>;
+    dc:modified '2022-06-01T13:23:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Density'@en ;
+    skos:definition 'The density of a substance or consituent is defined as its mass per unit volume. In some cases, density is also defined as weight per unit volume, although this quantity is referred to as specific weight.'@en ;
+    skos:notation 'SDN:S06::S0600290'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600287/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600287/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600287/>;
+    dc:modified '2022-05-23T22:47:40'^^xsd:dateTime ;
+    skos:altLabel 'BOD'^^xsd:string ;
+    skos:prefLabel 'Biochemical oxygen demand'@en ;
+    skos:definition 'The amount of oxygen needed by aerobic biological organisms to break down organic material present in a water sample at certain temperature over a specific time period.'@en ;
+    skos:notation 'SDN:S06::S0600287'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600288/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600288/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600288/>;
+    dc:modified '2022-05-23T22:47:40'^^xsd:dateTime ;
+    skos:altLabel 'COD'^^xsd:string ;
+    skos:prefLabel 'Chemical oxygen demand'@en ;
+    skos:definition 'The amount of oxygen required to oxidise all dissolved oxidisable chemical material contained in water sample.'@en ;
+    skos:notation 'SDN:S06::S0600288'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600289/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600289/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600289/>;
+    dc:modified '2022-05-23T22:47:40'^^xsd:dateTime ;
+    skos:altLabel 'POD'^^xsd:string ;
+    skos:prefLabel 'Photochemical oxygen demand'@en ;
+    skos:definition 'The amount of oxygen that is needed to oxidise, under the influence of radiant energy (such as light), all dissolved oxidisable chemical material in a water sample.'@en ;
+    skos:notation 'SDN:S06::S0600289'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600286/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600286/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600286/>;
+    dc:modified '2022-05-20T13:30:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mass concentration'@en ;
+    skos:definition 'The mass of a substance or consituent divided by the volume of the mixture, expressed as mass per unit volume.'@en ;
+    skos:notation 'SDN:S06::S0600286'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600044/3/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600044/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600044/>;
+    dc:modified '2022-05-17T08:00:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Lipid-normalised concentration'@en ;
+    skos:definition 'Term deprecated on 17May2022; the property "Concentration" should be used instead and combined with new S02 for lipid-normalised concentrations. Original description was: The amount of a specified substance in a unit amount of another substance or matrix corrected for variation in lipid content.'@en ;
+    skos:notation 'SDN:S06::S0600044'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600049/2/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600049/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600049/>;
+    dc:modified '2022-04-27T17:00:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Excess activity'@en ;
+    skos:definition 'Difference between the measured activity of a radioactive isotope and the activity of that isotope predicted from equilibrium in-situ decay of its parent in a decay scheme.  This difference is used as the basis for radiometric dating.'@en ;
+    skos:notation 'SDN:S06::S0600049'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600062/3/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600062/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600062/>;
+    dc:modified '2022-04-27T17:00:33'^^xsd:dateTime ;
+    skos:altLabel 'delta(66/64ZnIRMM-3702)'^^xsd:string ;
+    skos:prefLabel 'Enrichment with respect to 66Zn/64Zn in IRMM-3702'@en ;
+    skos:definition 'Deviation of the isotope ratio zinc-66/zinc-64 relative to the Institute for Reference Materials and Measurements, Belgium (IRMM) 3702 standard. It is defined as delta(66Zn/64Zn)IRMM-3702 =([66Zn/64Zn]sample/[66Zn/64Zn]IRMM-3702)-1)×1000. One delta unit represents a one part per 1,000 deviation from the IRMM-3702 standard composition.'@en ;
+    skos:notation 'SDN:S06::S0600062'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600060/3/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600060/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600060/>;
+    dc:modified '2022-04-27T17:00:33'^^xsd:dateTime ;
+    skos:altLabel 'delta(66/64ZnLyon-JMC)'^^xsd:string ;
+    skos:prefLabel 'Enrichment with respect to 66Zn/64Zn in Lyon JMC 3-0749'@en ;
+    skos:definition 'Deviation of the isotope ratio zinc-66/zinc-64 relative to the Lyon standard JMC 3-0749, a reference material for zinc developed at the Ecole Normale Supérieure of Lyon using Johnson-Matthey Company (JMC) metal stock 3-0749. It is defined as delta(66Zn/64Zn)Lyon-JMC =([66Zn/64Zn]sample/[66Zn/64Zn]Lyon-JMC)-1)×1000. One delta unit represents a one part per 1,000 deviation from the Lyon-JMC standard composition.'@en ;
+    skos:notation 'SDN:S06::S0600060'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600228/3/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600228/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600228/>;
+    dc:modified '2022-04-27T08:58:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Likelihood category of death from natural causes'@en ;
+    skos:definition 'Term indicating the probability (for example: not/impossible, possible, probable, likely, definitely, unknown) that a biological organism died of natural causes.'@en ;
+    skos:notation 'SDN:S06::S0600228'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600229/2/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600229/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600229/>;
+    dc:modified '2022-04-27T08:58:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Likelihood category of death from fishing by-catch'@en ;
+    skos:definition 'Term indicating the probability (for example: not/impossible, possible, probable, likely, definitely, unknown) that a biological organism died of accidental by-catch from fishing activities.'@en ;
+    skos:notation 'SDN:S06::S0600229'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600230/2/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600230/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600230/>;
+    dc:modified '2022-04-27T08:58:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Likelihood category of death from ship strike'@en ;
+    skos:definition 'Term indicating the probability (for example: not/impossible, possible, probable, likely, definitely, unknown) that a biological organism died following a collision with a ship.'@en ;
+    skos:notation 'SDN:S06::S0600230'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600231/2/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600231/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600231/>;
+    dc:modified '2022-04-27T08:58:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Likelihood category of death from predation'@en ;
+    skos:definition 'Term indicating the probability (for example: not/impossible, possible, probable, likely, definitely, unknown) that a biological organism died following a predatory attack.'@en ;
+    skos:notation 'SDN:S06::S0600231'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600285/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600285/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600285/>;
+    dc:modified '2022-04-26T11:21:58'^^xsd:dateTime ;
+    skos:altLabel 'Rrs'^^xsd:string ;
+    skos:prefLabel 'Remote sensing reflectance'@en ;
+    skos:definition 'The water-leaving radiance at a given wavelength, Lw(λ), corrected for bidirectional effects of the air-sea interface and sub-surface light field, and normalised by downwelling solar irradiance, Ed(λ), just above the sea surface (Franz, NASA Goddard Space Flight Center).'@en ;
+    skos:notation 'SDN:S06::S0600285'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600284/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600284/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600284/>;
+    dc:modified '2022-03-28T16:25:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Saturation state'@en ;
+    skos:definition 'A measure of the thermodynamic potential for a mineral to form or to dissolve.'@en ;
+    skos:notation 'SDN:S06::S0600284'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600283/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600283/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600283/>;
+    dc:modified '2022-03-22T13:32:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Total alkalinity'@en ;
+    skos:definition 'The acid-neutralising capacity of solutes in an aqueous system or sample.'@en ;
+    skos:notation 'SDN:S06::S0600283'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600282/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600282/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600282/>;
+    dc:modified '2022-02-17T21:04:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Enrichment with respect to VCDT'@en ;
+    skos:definition 'The change in the relative abundance of an isotope of a given element relative to its relative abundance in the Vienna Canyon Diablo Troilite (VCDT) international measurement standard, also known as IAEA-S-1 and formerly known as NZ-1 (NIST 8554), a reference material for relative sulfur isotope ratio measurements.'@en ;
+    skos:notation 'SDN:S06::S0600282'^^xsd:string .

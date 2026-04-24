@@ -1,0 +1,163 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C61/2019_01_01_00_00_00_2019_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C61/2018_01_01_00_00_00_2018_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2019-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/GERPT044/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/GERPT044/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/GERPT044/>;
+    dc:modified '2019-12-04T08:09:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Siegen'@en ;
+    skos:definition 'City in North Rhine-Westphalia, Germany.'@en ;
+    skos:notation 'SDN:C61::GERPT044'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/GERPT043/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/GERPT043/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/GERPT043/>;
+    dc:modified '2019-10-17T10:04:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Fellbach'@en ;
+    skos:definition 'Town in Baden-Wurttemberg, Germany.'@en ;
+    skos:notation 'SDN:C61::GERPT043'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/ZAFPT004/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/ZAFPT004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/ZAFPT004/>;
+    dc:modified '2019-10-03T10:10:38'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Port Elizabeth'@en ;
+    skos:definition 'City in Eastern Cape, South Africa. Also known as The Bay (Die Baai) and PE.'@en ;
+    skos:notation 'SDN:C61::ZAFPT004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/GERPT042/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/GERPT042/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/GERPT042/>;
+    dc:modified '2019-09-17T07:06:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bonn'@en ;
+    skos:definition 'City in North Rhine-Westphalia, Germany.'@en ;
+    skos:notation 'SDN:C61::GERPT042'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/TTPT0001/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/TTPT0001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/TTPT0001/>;
+    dc:modified '2019-08-08T17:44:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Port of Spain'@en ;
+    skos:definition 'Capital city of Trinidad & Tobago, officially the City of Port of Spain. Sometimes written Port-of-Spain.'@en ;
+    skos:notation 'SDN:C61::TTPT0001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY157/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY157/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY157/>;
+    dc:modified '2019-04-04T15:57:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Providence'@en ;
+    skos:definition 'State capital city of Rhode Island, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY157'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY158/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY158/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY158/>;
+    dc:modified '2019-04-04T15:57:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Newark'@en ;
+    skos:definition 'City in New Jersey, USA. Not to be confused with Newark, Delaware (USCTY090)'@en ;
+    skos:notation 'SDN:C61::USCTY158'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY156/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY156/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY156/>;
+    dc:modified '2019-03-18T23:48:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mystic'@en ;
+    skos:definition 'Small seaport in Connecticut, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY156'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY155/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY155/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY155/>;
+    dc:modified '2019-01-30T09:19:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Saint Teresa'@en ;
+    skos:definition 'Small town in Florida, USA. Location of Florida State University\'s Coastal and Marine Laboratory.'@en ;
+    skos:notation 'SDN:C61::USCTY155'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/FRPT0039/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/FRPT0039/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/FRPT0039/>;
+    dc:modified '2019-01-24T15:06:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'La Turbie'@en ;
+    skos:definition 'Town in the Provence-Alpes-Côte d\'Azur region, France.'@en ;
+    skos:notation 'SDN:C61::FRPT0039'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/CHNPT006/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/CHNPT006/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/CHNPT006/>;
+    dc:modified '2019-01-14T15:51:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Chengdu'@en ;
+    skos:definition 'Capital city of Sichuan province, China.'@en ;
+    skos:notation 'SDN:C61::CHNPT006'^^xsd:string .

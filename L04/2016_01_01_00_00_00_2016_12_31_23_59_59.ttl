@@ -1,0 +1,111 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L04/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L04/current/L04001/1/> .
+<http://vocab.nerc.ac.uk/collection/L04/current/L04001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L04/current/L04001/>;
+    dc:modified '2016-04-08T14:50:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water body'@en ;
+    skos:definition 'A distinct and significant volume of fresh or salt water on the Earth\'s surface.  Includes oceans, seas, estuaries, rivers, ponds and lakes.'@en ;
+    skos:notation 'SDN:L04::L04001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L04/current/L04002/1/> .
+<http://vocab.nerc.ac.uk/collection/L04/current/L04002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L04/current/L04002/>;
+    dc:modified '2016-04-08T14:50:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'suspended particulate material'@en ;
+    skos:definition 'Solid material, including flora and fauna, that is distributed throughout a water body.'@en ;
+    skos:notation 'SDN:L04::L04002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L04/current/L04003/1/> .
+<http://vocab.nerc.ac.uk/collection/L04/current/L04003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L04/current/L04003/>;
+    dc:modified '2016-04-08T14:50:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere'@en ;
+    skos:definition 'Layer of gases surrounding the planet Earth that is retained by the Earth\'s gravity.'@en ;
+    skos:notation 'SDN:L04::L04003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L04/current/L04004/1/> .
+<http://vocab.nerc.ac.uk/collection/L04/current/L04004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L04/current/L04004/>;
+    dc:modified '2016-04-08T14:50:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'biota'@en ;
+    skos:definition 'A living organism (or part thereof) or the body or body part of an organism that was once alive.'@en ;
+    skos:notation 'SDN:L04::L04004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L04/current/L04005/1/> .
+<http://vocab.nerc.ac.uk/collection/L04/current/L04005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L04/current/L04005/>;
+    dc:modified '2016-04-08T14:50:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sediment'@en ;
+    skos:definition 'Unconsolidated solid material removed from a geological unit in the bed.'@en ;
+    skos:notation 'SDN:L04::L04005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L04/current/L04006/1/> .
+<http://vocab.nerc.ac.uk/collection/L04/current/L04006/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L04/current/L04006/>;
+    dc:modified '2016-04-08T14:50:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'not applicable'@en ;
+    skos:definition 'There is no appropriate value.'@en ;
+    skos:notation 'SDN:L04::L04006'^^xsd:string .

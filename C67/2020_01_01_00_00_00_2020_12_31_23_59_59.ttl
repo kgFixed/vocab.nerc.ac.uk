@@ -1,0 +1,156 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C67/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C67/current/TMXX/3/> .
+<http://vocab.nerc.ac.uk/collection/C67/current/TMXX/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C67/current/TMXX/>;
+    dc:modified '2020-03-19T11:44:18'^^xsd:dateTime ;
+    skos:altLabel 'TM'^^xsd:string ;
+    skos:prefLabel 'trace metals'@en ;
+    skos:definition 'This term encompasses parameters quantifying metals and predominantly metallic metalloids characteristically occurring at low concentrations in water bodies (Fe, Al, Zn, Mn, Cd, Cu, Ni, Pb, Co, Ti, Cr, Ga, As, Ba, Mo, Ag, Hg). Includes all phases (total, dissolved + reactive particulate, particulate, colloidal) of the water body.'@en ;
+    skos:notation 'SDN:C67::TMXX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C67/current/AFCX/4/> .
+<http://vocab.nerc.ac.uk/collection/C67/current/AFCX/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C67/current/AFCX/>;
+    dc:modified '2020-03-19T11:44:18'^^xsd:dateTime ;
+    skos:altLabel 'afc'^^xsd:string ;
+    skos:prefLabel 'flow cytometry plankton analysis parameters'@en ;
+    skos:definition 'This term encompasses parameters quantifying planktonic organisms in water bodies using analytical flow cytometry.'@en ;
+    skos:notation 'SDN:C67::AFCX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C67/current/CH4X/3/> .
+<http://vocab.nerc.ac.uk/collection/C67/current/CH4X/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C67/current/CH4X/>;
+    dc:modified '2020-03-19T11:44:18'^^xsd:dateTime ;
+    skos:altLabel 'ch4'^^xsd:string ;
+    skos:prefLabel 'methane'@en ;
+    skos:definition 'This term encompasses parameters quantifying dissolved methane in water bodies.'@en ;
+    skos:notation 'SDN:C67::CH4X'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C67/current/CO2X/3/> .
+<http://vocab.nerc.ac.uk/collection/C67/current/CO2X/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C67/current/CO2X/>;
+    dc:modified '2020-03-19T11:44:18'^^xsd:dateTime ;
+    skos:altLabel 'co2'^^xsd:string ;
+    skos:prefLabel 'CO2 parameters'@en ;
+    skos:definition 'This term encompasses parameters quantifying properties of the carbonate system in water bodies including pCO2, tCO2, alkalinity and pH.'@en ;
+    skos:notation 'SDN:C67::CO2X'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C67/current/NMHC/3/> .
+<http://vocab.nerc.ac.uk/collection/C67/current/NMHC/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C67/current/NMHC/>;
+    dc:modified '2020-03-19T11:44:18'^^xsd:dateTime ;
+    skos:altLabel 'nmhc'^^xsd:string ;
+    skos:prefLabel 'non-methane hydrocarbons'@en ;
+    skos:definition 'This term encompasses parameters quantifying non-methane hydrocarbons in water bodies.'@en ;
+    skos:notation 'SDN:C67::NMHC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C67/current/NUTS/3/> .
+<http://vocab.nerc.ac.uk/collection/C67/current/NUTS/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C67/current/NUTS/>;
+    dc:modified '2020-03-19T11:44:18'^^xsd:dateTime ;
+    skos:altLabel 'nuts'^^xsd:string ;
+    skos:prefLabel 'nutrients'@en ;
+    skos:definition 'This term encompasses parameters quantifying inorganic nitrogen compounds (nitrate, nitrite and ammonium), urea, phosphate and silicate dissolved in water bodies.'@en ;
+    skos:notation 'SDN:C67::NUTS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C67/current/DOXY/3/> .
+<http://vocab.nerc.ac.uk/collection/C67/current/DOXY/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C67/current/DOXY/>;
+    dc:modified '2020-03-19T11:44:18'^^xsd:dateTime ;
+    skos:altLabel 'oxy'^^xsd:string ;
+    skos:prefLabel 'dissolved oxygen'@en ;
+    skos:definition 'This term encompasses parameters quantifying dissolved oxygen in water bodies measured on water sample but not by in-situ sensors. Includes all types of concentration (v/v, mass/v, mass/mass, mol/v, mol/mass) and oxygen saturation.'@en ;
+    skos:notation 'SDN:C67::DOXY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C67/current/PCPN/3/> .
+<http://vocab.nerc.ac.uk/collection/C67/current/PCPN/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C67/current/PCPN/>;
+    dc:modified '2020-03-19T11:44:18'^^xsd:dateTime ;
+    skos:altLabel 'partCNSi'^^xsd:string ;
+    skos:prefLabel 'particulate carbon, nitrogen and silica'@en ;
+    skos:definition 'This term encompasses parameters quantifying particulate carbon, nitrogen and silica held per unit volume or unit mass of water bodies.  Excludes parameters that specify SPM composition such as amount of carbon per unit mass of SPM.'@en ;
+    skos:notation 'SDN:C67::PCPN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C67/current/PIGX/3/> .
+<http://vocab.nerc.ac.uk/collection/C67/current/PIGX/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C67/current/PIGX/>;
+    dc:modified '2020-03-19T11:44:18'^^xsd:dateTime ;
+    skos:altLabel 'pigs'^^xsd:string ;
+    skos:prefLabel 'pigments'@en ;
+    skos:definition 'This term encompasses parameters quantifying photosynthetic pigments (including chlorophyll-a) in water bodies following extraction and analysis by any analytical methods. Includes size-fractionated analyses but excludes calibrated in-situ fluorometer data.'@en ;
+    skos:notation 'SDN:C67::PIGX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C67/current/STAB/4/> .
+<http://vocab.nerc.ac.uk/collection/C67/current/STAB/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C67/current/STAB/>;
+    dc:modified '2020-03-19T11:44:18'^^xsd:dateTime ;
+    skos:altLabel 'stab_iso'^^xsd:string ;
+    skos:prefLabel 'stable isotopes'@en ;
+    skos:definition 'This term encompasses parameters quantifying stable isotopes concentrations, ratios or natural enrichments in water bodies.'@en ;
+    skos:notation 'SDN:C67::STAB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C67/current/DCDN/2/> .
+<http://vocab.nerc.ac.uk/collection/C67/current/DCDN/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C67/current/DCDN/>;
+    dc:modified '2020-03-19T11:05:45'^^xsd:dateTime ;
+    skos:altLabel 'dcnp'^^xsd:string ;
+    skos:prefLabel 'dissolved carbon, nitrogen, phosphorus'@en ;
+    skos:definition 'This term encompasses parameters quantifying dissolved organic carbon, total or organic dissolved nitrogen, total or organic dissolved phosphorus in water bodies. It also includes parameters quantifying "total phosphorus" and "total nitrogen" in water bodies.'@en ;
+    skos:notation 'SDN:C67::DCDN'^^xsd:string .

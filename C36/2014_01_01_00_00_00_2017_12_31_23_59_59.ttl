@@ -1,0 +1,208 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C36/2014_01_01_00_00_00_2017_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C36/2012_01_01_00_00_00_2013_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2017-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0079/1/> .
+<http://vocab.nerc.ac.uk/collection/C36/current/LEGL0079/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0079/>;
+    dc:modified '2017-06-20T11:44:28'^^xsd:dateTime ;
+    skos:altLabel 'AIE'^^xsd:string ;
+    skos:prefLabel 'EC Access to Information on the Environment (AIE) Regulations'@en ;
+    skos:definition 'The European Communities (Access to Information on the Environment) Regulations 2007 (S.I. 133 of 2007), give legal rights to those seeking access to information on the environment from public authorities.'@en ;
+    skos:notation 'SDN:C36::LEGL0079'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0080/1/> .
+<http://vocab.nerc.ac.uk/collection/C36/current/LEGL0080/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0080/>;
+    dc:modified '2017-06-20T11:44:28'^^xsd:dateTime ;
+    skos:altLabel 'DCF'^^xsd:string ;
+    skos:prefLabel 'EU Data Collection Framework'@en ;
+    skos:definition 'EU fisheries management relies on data collected, managed and supplied by EU countries under the Data Collection Framework.'@en ;
+    skos:notation 'SDN:C36::LEGL0080'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0076/1/> .
+<http://vocab.nerc.ac.uk/collection/C36/current/LEGL0076/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0076/>;
+    dc:modified '2017-06-20T11:44:28'^^xsd:dateTime ;
+    skos:altLabel 'Dumping at Sea'^^xsd:string ;
+    skos:prefLabel 'FORESHORE AND DUMPING AT SEA (AMENDMENT) ACT 2009 (ROI)'@en ;
+    skos:definition 'An act to provide for the transfer of certain functions relating to the foreshore from the minister for agriculture, fisheries and food to the minister for the environment, heritage and local government and for that and other purposes to amend and extend the foreshore acts 1933 to 2005 and to provide for the transfer of other functions relating to the foreshore to the minister for the environment, heritage and local government, to provide for the transfer of certain functions relating to dumping at sea from the minister for agriculture, fisheries and food to the environmental protection agency and for that and other purposes to amend and extend the dumping at sea acts 1996 to 2006, and to provide for connected matters.'@en ;
+    skos:notation 'SDN:C36::LEGL0076'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0083/1/> .
+<http://vocab.nerc.ac.uk/collection/C36/current/LEGL0083/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0083/>;
+    dc:modified '2017-06-20T11:44:28'^^xsd:dateTime ;
+    skos:altLabel 'EMFF'^^xsd:string ;
+    skos:prefLabel 'EU European Maritime Fisheries Fund'@en ;
+    skos:definition 'The EMFF is the fund for the EU\'s maritime and fisheries policies for 2014-2020.'@en ;
+    skos:notation 'SDN:C36::LEGL0083'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0084/1/> .
+<http://vocab.nerc.ac.uk/collection/C36/current/LEGL0084/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0084/>;
+    dc:modified '2017-06-20T11:44:28'^^xsd:dateTime ;
+    skos:altLabel 'FHD'^^xsd:string ;
+    skos:prefLabel 'EC Fish Health Directive'@en ;
+    skos:definition 'EU Directive 2006/88/EC on animal health requirements for aquaculture animals and products thereof, and on the prevention and control of certain diseases in aquatic animals.'@en ;
+    skos:notation 'SDN:C36::LEGL0084'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0077/1/> .
+<http://vocab.nerc.ac.uk/collection/C36/current/LEGL0077/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0077/>;
+    dc:modified '2017-06-20T11:44:28'^^xsd:dateTime ;
+    skos:altLabel 'FOI'^^xsd:string ;
+    skos:prefLabel 'Freedom of Information Act 1997 (ROI)'@en ;
+    skos:definition 'An act to enable members of the public to obtain access, to the greatest extent possible consistent with the public interest and the right to privacy, to information in the possession of public bodies and to enable persons to have personal information relating to them in the possession of such bodies corrected and, accordingly, to provide for a right of access to records held by such bodies, for necessary exceptions to that right and for assistance to persons to enable them to exercise it, to provide for the independent review both of decisions of such bodies relating to that right and of the operation of this act generally (including the proceedings of such bodies pursuant to this act) and, for those purposes, to provide for the establishment of the office of information commissioner and to define its functions, to provide for the publication by such bodies of certain information about them relevant to the purposes of this act, to amend the official secrets act, 1963 , and to provide for related matters.'@en ;
+    skos:notation 'SDN:C36::LEGL0077'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0078/1/> .
+<http://vocab.nerc.ac.uk/collection/C36/current/LEGL0078/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0078/>;
+    dc:modified '2017-06-20T11:44:28'^^xsd:dateTime ;
+    skos:altLabel 'FisheriesAct'^^xsd:string ;
+    skos:prefLabel 'Fisheries (Amendment) Act, 1999 (ROI)'@en ;
+    skos:definition 'An act to amend the fisheries act, 1980, in relation to the composition and functions of the central fisheries board and regional fisheries boards, to make certain changes to their procedures, to provide for the establishment of their committees, to provide for the transfer of assets between the boards, to provide for the establishment of a national salmon commission to advise the minister on matters relating to the national salmon resource, to provide for a scheme for the tagging of wild salmon and sea trout, to amend the fisheries (amendment) act, 1991, to provide for the appointment of management committees of fisheries co-operative societies and for related purposes, to make consequential amendments to the fisheries (consolidation) act, 1959, to amend the marine institute act, 1991, to waive the payment of accrued interest on certain waived advances of an bord iascaigh mhara, and to provide for related matters.'@en ;
+    skos:notation 'SDN:C36::LEGL0078'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0090/1/> .
+<http://vocab.nerc.ac.uk/collection/C36/current/LEGL0090/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0090/>;
+    dc:modified '2017-06-20T11:44:28'^^xsd:dateTime ;
+    skos:altLabel 'FoodSafety'^^xsd:string ;
+    skos:prefLabel 'EC Food Safety Directive'@en ;
+    skos:definition 'REGULATION (EC) No 853/2004 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 29 April 2004 laying down specific hygiene rules for food of animal origin.'@en ;
+    skos:notation 'SDN:C36::LEGL0090'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0085/1/> .
+<http://vocab.nerc.ac.uk/collection/C36/current/LEGL0085/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0085/>;
+    dc:modified '2017-06-20T11:44:28'^^xsd:dateTime ;
+    skos:altLabel 'INSPIRE'^^xsd:string ;
+    skos:prefLabel 'EC INSPIRE Directive'@en ;
+    skos:definition 'DIRECTIVE 2007/2/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE).'@en ;
+    skos:notation 'SDN:C36::LEGL0085'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0075/1/> .
+<http://vocab.nerc.ac.uk/collection/C36/current/LEGL0075/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0075/>;
+    dc:modified '2017-06-20T11:44:28'^^xsd:dateTime ;
+    skos:altLabel 'MI'^^xsd:string ;
+    skos:prefLabel 'Marine Institute Act 1991 (ROI)'@en ;
+    skos:definition 'An act to make provision for the carrying out of marine research and development and related services, to secure the co-ordination of the resources of the state used for marine research and for these purposes to establish a body to be known as the marine institute, to define its functions and to provide for other matters connected with the matters aforesaid.'@en ;
+    skos:notation 'SDN:C36::LEGL0075'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0082/1/> .
+<http://vocab.nerc.ac.uk/collection/C36/current/LEGL0082/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0082/>;
+    dc:modified '2017-06-20T11:44:28'^^xsd:dateTime ;
+    skos:altLabel 'MSPD'^^xsd:string ;
+    skos:prefLabel 'EC Maritime Spatial Planning Directive'@en ;
+    skos:definition 'DIRECTIVE 2014/89/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 23 July 2014 establishing a framework for maritime spatial planning.'@en ;
+    skos:notation 'SDN:C36::LEGL0082'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0086/1/> .
+<http://vocab.nerc.ac.uk/collection/C36/current/LEGL0086/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0086/>;
+    dc:modified '2017-06-20T11:44:28'^^xsd:dateTime ;
+    skos:altLabel 'PSI'^^xsd:string ;
+    skos:prefLabel 'EC Public Sector Information Directive'@en ;
+    skos:definition 'DIRECTIVE 2013/37/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 June 2013 amending Directive 2003/98/EC on the re-use of public sector information.'@en ;
+    skos:notation 'SDN:C36::LEGL0086'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0087/1/> .
+<http://vocab.nerc.ac.uk/collection/C36/current/LEGL0087/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0087/>;
+    dc:modified '2017-06-20T11:44:28'^^xsd:dateTime ;
+    skos:altLabel 'Residues'^^xsd:string ;
+    skos:prefLabel 'EC Residues Directive'@en ;
+    skos:definition 'COUNCIL DIRECTIVE 96/23/EC of 29 April 1996 on measures to monitor certain substances and residues thereof in live animals and animal products and repealing Directives 85/358/EEC and 86/469/EEC and Decisions 89/187/EEC and 91/664/EEC.'@en ;
+    skos:notation 'SDN:C36::LEGL0087'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0089/1/> .
+<http://vocab.nerc.ac.uk/collection/C36/current/LEGL0089/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0089/>;
+    dc:modified '2017-06-20T11:44:28'^^xsd:dateTime ;
+    skos:altLabel 'VetChecks'^^xsd:string ;
+    skos:prefLabel 'EC Veterinary Checks at Community Border'@en ;
+    skos:definition 'Commission Regulation (EC) No 136/2004 of 22 January 2004 laying down procedures for veterinary checks at Community border inspection posts on products imported from third countries (Text with EEA relevance).'@en ;
+    skos:notation 'SDN:C36::LEGL0089'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0091/1/> .
+<http://vocab.nerc.ac.uk/collection/C36/current/LEGL0091/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0091/>;
+    dc:modified '2017-06-20T11:44:28'^^xsd:dateTime ;
+    skos:altLabel 'WebAccessibility'^^xsd:string ;
+    skos:prefLabel 'EC Web Accessibility Directive'@en ;
+    skos:definition 'DIRECTIVE (EU) 2016/2102 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 October 2016 on the accessibility of the websites and mobile applications of public sector bodies.'@en ;
+    skos:notation 'SDN:C36::LEGL0091'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0088/1/> .
+<http://vocab.nerc.ac.uk/collection/C36/current/LEGL0088/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C36/current/LEGL0088/>;
+    dc:modified '2017-06-20T11:44:28'^^xsd:dateTime ;
+    skos:altLabel 'eel'^^xsd:string ;
+    skos:prefLabel 'EC European Eels Directive'@en ;
+    skos:definition 'COUNCIL REGULATION (EC) No 1100/2007 of 18 September 2007 establishing measures for the recovery of the stock of European eel.'@en ;
+    skos:notation 'SDN:C36::LEGL0088'^^xsd:string .

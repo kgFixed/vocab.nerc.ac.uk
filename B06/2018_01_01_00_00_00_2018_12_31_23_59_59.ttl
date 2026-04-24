@@ -1,0 +1,154 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/B06/2018_01_01_00_00_00_2018_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/B06/2017_01_01_00_00_00_2017_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2018-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kSinglePointSFTHasNullFintrvCiunit/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kSinglePointSFTHasNullFintrvCiunit/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kSinglePointSFTHasNullFintrvCiunit/>;
+    dc:modified '2018-12-18T12:59:10'^^xsd:dateTime ;
+    skos:altLabel 'Single Point SFT FINTRV/CIUNIT check'^^xsd:string ;
+    skos:prefLabel 'kSinglePointSFTHasNullFintrvCiunit'@en ;
+    skos:definition 'ZESHXREF integrity check that Single Point SFT have null FINTRV and CIUNIT'@en ;
+    skos:notation 'SDN:B06::kSinglePointSFTHasNullFintrvCiunit'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kSFTProfHasCorrectCiunit/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kSFTProfHasCorrectCiunit/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kSFTProfHasCorrectCiunit/>;
+    dc:modified '2018-12-18T12:58:48'^^xsd:dateTime ;
+    skos:altLabel 'SFT Profile CIUNIT check'^^xsd:string ;
+    skos:prefLabel 'kSFTProfHasCorrectCiunit'@en ;
+    skos:definition 'ZESHXREF integrity check that SFT=PPROF,DPROF,PDPROF have appropriate CIUNIT'@en ;
+    skos:notation 'SDN:B06::kSFTProfHasCorrectCiunit'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/sBottleDepth/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/sBottleDepth/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/sBottleDepth/>;
+    dc:modified '2018-09-12T13:22:30'^^xsd:dateTime ;
+    skos:altLabel 'BOTTLE Depth Check'^^xsd:string ;
+    skos:prefLabel 'sBottleDepth'@en ;
+    skos:definition 'SAMPXREF integrity check to compare the depths in Bottle to ensure that they are not constant'@en ;
+    skos:notation 'SDN:B06::sBottleDepth'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/sMACONRestriction/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/sMACONRestriction/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/sMACONRestriction/>;
+    dc:modified '2018-09-12T13:22:28'^^xsd:dateTime ;
+    skos:altLabel 'MACON Restriction check'^^xsd:string ;
+    skos:prefLabel 'sMACONRestriction'@en ;
+    skos:definition 'SAMPXREF integrity check to list the Dataset Restrictions'@en ;
+    skos:notation 'SDN:B06::sMACONRestriction'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/sMACONOriginator/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/sMACONOriginator/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/sMACONOriginator/>;
+    dc:modified '2018-09-12T13:22:26'^^xsd:dateTime ;
+    skos:altLabel 'MACON Originator check'^^xsd:string ;
+    skos:prefLabel 'sMACONOriginator'@en ;
+    skos:definition 'SAMPXREF integrity check to list the Dataset Originator'@en ;
+    skos:notation 'SDN:B06::sMACONOriginator'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/sGcodeSftLink/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/sGcodeSftLink/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/sGcodeSftLink/>;
+    dc:modified '2018-06-08T15:01:49'^^xsd:dateTime ;
+    skos:altLabel 'GCODE SFT created'^^xsd:string ;
+    skos:prefLabel 'sGcodeSftLink'@en ;
+    skos:definition 'SAMPXREF integrity check to check whether the GCODE has a SFT created to allow for S2S Migration'@en ;
+    skos:notation 'SDN:B06::sGcodeSftLink'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/sEventSpeedChk/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/sEventSpeedChk/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/sEventSpeedChk/>;
+    dc:modified '2018-06-08T15:01:36'^^xsd:dateTime ;
+    skos:altLabel 'Cruise Speed Check'^^xsd:string ;
+    skos:prefLabel 'sEventSpeedChk'@en ;
+    skos:definition 'SAMPXREF integrity check to make sure the events latitudes, longitudes and times are consistent with the speed of the ship'@en ;
+    skos:notation 'SDN:B06::sEventSpeedChk'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/sCruiseCSRFeat/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/sCruiseCSRFeat/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/sCruiseCSRFeat/>;
+    dc:modified '2018-06-08T15:01:10'^^xsd:dateTime ;
+    skos:altLabel 'Cruise Feature Check'^^xsd:string ;
+    skos:prefLabel 'sCruiseCSRFeat'@en ;
+    skos:definition 'SAMPXREF integrity check to make sure the cruise has a Spatial Feature Type in csr_feature'@en ;
+    skos:notation 'SDN:B06::sCruiseCSRFeat'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/sMACONDpt/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/sMACONDpt/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/sMACONDpt/>;
+    dc:modified '2018-06-08T15:00:55'^^xsd:dateTime ;
+    skos:altLabel 'DPT and Parameter code check'^^xsd:string ;
+    skos:prefLabel 'sMACONDpt'@en ;
+    skos:definition 'SAMPXREF integrity check to compare the DPT and Parameter Code'@en ;
+    skos:notation 'SDN:B06::sMACONDpt'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zNullValues/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zNullValues/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zNullValues/>;
+    dc:modified '2018-04-25T10:03:27'^^xsd:dateTime ;
+    skos:altLabel 'Mandatory columns are all populated check'^^xsd:string ;
+    skos:prefLabel 'zNullValues'@en ;
+    skos:definition 'ZESHXREF integrity check that the mandatory columns are all populated'@en ;
+    skos:notation 'SDN:B06::zNullValues'^^xsd:string .

@@ -1,0 +1,73 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L35/2018_01_01_00_00_00_2018_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L35/2017_01_01_00_00_00_2017_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2018-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0027/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0027/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0027/>;
+    dc:modified '2018-07-05T08:11:48'^^xsd:dateTime ;
+    skos:altLabel 'SATLC'^^xsd:string ;
+    skos:prefLabel 'Satlantic'@en ;
+    skos:definition 'An ocean technology company and brand of Sea-Bird Scientific that develops optical sensors for aquatic research and water quality monitoring. The company was initially founded in 1990. Danaher acquired three ocean science instrumentation companies, Sea-Bird Electronics (2008), WET Labs (2010), and Satlantic (2011), which were then combined to form Sea-Bird Scientific.'@en ;
+    skos:notation 'SDN:L35::MAN0027'^^xsd:string .

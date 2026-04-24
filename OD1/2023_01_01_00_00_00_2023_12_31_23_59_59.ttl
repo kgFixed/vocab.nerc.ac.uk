@@ -1,0 +1,399 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/OD1/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/TIDES/2/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/TIDES/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/TIDES/>;
+    dc:modified '2023-10-22T17:27:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Tides'@en ;
+    skos:definition 'Multi-period movement of sea level, the main part of which is the astronomical tide, due to the gravitational attraction of the sun and moon on the rotating earth.'@en ;
+    skos:notation 'SDN:OD1::TIDES'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/HUMI/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/HUMI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/HUMI/>;
+    dc:modified '2023-10-16T17:23:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Humidity'@en ;
+    skos:definition 'The amount of water vapour (relative humidity, dew point temperature) in the atmosphere.'@en ;
+    skos:notation 'SDN:OD1::HUMI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/AIRPRES/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/AIRPRES/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/AIRPRES/>;
+    dc:modified '2023-10-10T14:51:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Atmospheric pressure'@en ;
+    skos:definition 'Variables associated with the determination of the atmospheric pressure near the Earth\'s surface.'@en ;
+    skos:notation 'SDN:OD1::AIRPRES'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/AIRTEMP/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/AIRTEMP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/AIRTEMP/>;
+    dc:modified '2023-10-10T14:51:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Air temperature'@en ;
+    skos:definition 'Variables associated with the determination of the air temperature near the Earth\'s surface.'@en ;
+    skos:notation 'SDN:OD1::AIRTEMP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/BIOTOX/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/BIOTOX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/BIOTOX/>;
+    dc:modified '2023-10-10T14:51:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Biotoxins'@en ;
+    skos:definition 'Toxins are contaminants secreted by certain algae or phytoplankton; they are called phycotoxins or marine biotoxins.'@en ;
+    skos:notation 'SDN:OD1::BIOTOX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/CURR/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/CURR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/CURR/>;
+    dc:modified '2023-10-10T14:51:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Currents'@en ;
+    skos:definition 'Variables associated with the determination of the speed and direction of surface and subsuface seawater currents.'@en ;
+    skos:notation 'SDN:OD1::CURR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/DOXY/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/DOXY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/DOXY/>;
+    dc:modified '2023-10-10T14:51:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Dissolved oxygen'@en ;
+    skos:definition 'Variables associated with the determination of the amount of oxygen dissolved in seawater using water column measurements.'@en ;
+    skos:notation 'SDN:OD1::DOXY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/N2O/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/N2O/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/N2O/>;
+    dc:modified '2023-10-10T14:51:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Nitrous oxide'@en ;
+    skos:definition 'Variables associated with the determination of the amount of nitrous oxide in seawater using water column and atmospheric measurements.'@en ;
+    skos:notation 'SDN:OD1::N2O'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/NUTS/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/NUTS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/NUTS/>;
+    dc:modified '2023-10-10T14:51:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Nutrients'@en ;
+    skos:definition 'Variables associated with the determination of the amount of dissolved inorganic macronutrients (nitrate (NO3), phosphate (PO4), silicic acid (Si(OH)4), ammonium (NH4), nitrite (NO2)) in seawater using water column measurements.'@en ;
+    skos:notation 'SDN:OD1::NUTS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/PRESS/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/PRESS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/PRESS/>;
+    dc:modified '2023-10-10T14:51:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Pressure'@en ;
+    skos:definition 'Depth below surface of the water body.'@en ;
+    skos:notation 'SDN:OD1::PRESS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/RADFLX/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/RADFLX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/RADFLX/>;
+    dc:modified '2023-10-10T14:51:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Radiative flux'@en ;
+    skos:definition 'Variables associated with the determination of fluxes of radiation (downwelling and upwelling irradiance) in the atmosphere to and from the sea surface.'@en ;
+    skos:notation 'SDN:OD1::RADFLX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/RAIN/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/RAIN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/RAIN/>;
+    dc:modified '2023-10-10T14:51:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Rain'@en ;
+    skos:definition 'Variables associated with the determination of the amount of liquid and solid precipitations on the Earth\'s surface'@en ;
+    skos:notation 'SDN:OD1::RAIN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/SAL/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/SAL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/SAL/>;
+    dc:modified '2023-10-10T14:51:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Salinity'@en ;
+    skos:definition 'Variables associated with the determination of seawater salinity.'@en ;
+    skos:notation 'SDN:OD1::SAL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/SEAICE/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/SEAICE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/SEAICE/>;
+    dc:modified '2023-10-10T14:51:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sea ice'@en ;
+    skos:definition 'Variables associated with the determination of the amount and characterisation of sea ice.'@en ;
+    skos:notation 'SDN:OD1::SEAICE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/SEALVL/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/SEALVL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/SEALVL/>;
+    dc:modified '2023-10-10T14:51:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sea surface height'@en ;
+    skos:definition 'The displacement of the water column surface from a fixed, stable reference, expressed as metres or pressure.'@en ;
+    skos:notation 'SDN:OD1::SEALVL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/SEATEMP/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/SEATEMP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/SEATEMP/>;
+    dc:modified '2023-10-10T14:51:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sea temperature'@en ;
+    skos:definition 'Variables associated with the determination of seawater temperature.'@en ;
+    skos:notation 'SDN:OD1::SEATEMP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/WAVES/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/WAVES/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/WAVES/>;
+    dc:modified '2023-10-10T14:51:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Waves'@en ;
+    skos:definition 'Variables associated with the determination of surface waves on water bodies.'@en ;
+    skos:notation 'SDN:OD1::WAVES'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/WIND/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/WIND/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/WIND/>;
+    dc:modified '2023-10-10T14:51:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Wind'@en ;
+    skos:definition 'Variables associated with the determination of the wind speed and direction near the Earth\'s surface.'@en ;
+    skos:notation 'SDN:OD1::WIND'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/PIGM/2/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/PIGM/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/PIGM/>;
+    dc:modified '2023-10-03T16:46:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Pigments'@en ;
+    skos:definition 'Amount of photosynthetic pigments (chlorophyll, carotenoids, ...) in seawater using water column measurements.'@en ;
+    skos:notation 'SDN:OD1::PIGM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/SEDFLUX/2/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/SEDFLUX/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/SEDFLUX/>;
+    dc:modified '2023-10-03T16:46:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sedimentary fluxes'@en ;
+    skos:definition 'Settling flux of particles (inorganic species, biological detritus, pigments, carbon, ...) in the water column.'@en ;
+    skos:notation 'SDN:OD1::SEDFLUX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/AERO/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/AERO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/AERO/>;
+    dc:modified '2023-09-28T13:57:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Aerosols'@en ;
+    skos:definition 'Suspension of particles of condensed matter (liquid, solid, or mixed) in a carrier gas (usually air). Aerosols are important in the atmosphere as nuclei for the condensation of water droplets and ice crystals, as participants in various chemical cycles, and as absorbers and scatterers of solar radiation, thereby influencing the radiation budget of the earth-atmosphere system, which in turn influences the climate on the surface of the Earth.'@en ;
+    skos:notation 'SDN:OD1::AERO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/BATHY/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/BATHY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/BATHY/>;
+    dc:modified '2023-09-28T13:57:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bathymetry'@en ;
+    skos:definition 'Science and technology of measuring or estimating depth. Its aim is to determine the relief of the deep or coastal ocean.'@en ;
+    skos:notation 'SDN:OD1::BATHY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/BENTHA/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/BENTHA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/BENTHA/>;
+    dc:modified '2023-09-28T13:57:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Benthic habitats'@en ;
+    skos:definition 'Marine benthic habitats are the bed of seas directly connected to the oceans, i.e. part of the continuous body of water which covers the greater part of the earth.'@en ;
+    skos:notation 'SDN:OD1::BENTHA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/BIOINFO/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/BIOINFO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/BIOINFO/>;
+    dc:modified '2023-09-28T13:57:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bioinformatics'@en ;
+    skos:definition 'Interdisciplinary field of science that develops methods and software tools for understanding biological data, especially when the data sets are large and complex.'@en ;
+    skos:notation 'SDN:OD1::BIOINFO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/C02/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/C02/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/C02/>;
+    dc:modified '2023-09-28T13:57:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CO2 Carbonate system'@en ;
+    skos:definition 'The chemistry of carbon dioxide (DIC, TA, pCO2 and pH) in seawater where pH is expressed against Total, Seawater or Free scales. Includes water column and atmospheric measurements.'@en ;
+    skos:notation 'SDN:OD1::C02'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/COLOUR/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/COLOUR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/COLOUR/>;
+    dc:modified '2023-09-28T13:57:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ocean colour'@en ;
+    skos:definition 'Spectral radiance emanating from the sun that is backscattered off the upper part of the oceanic water column, and which contains information on the properties of the water and its constituents.'@en ;
+    skos:notation 'SDN:OD1::COLOUR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/CONT/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/CONT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/CONT/>;
+    dc:modified '2023-09-28T13:57:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Contaminants'@en ;
+    skos:definition 'Pollutants coming from human activities on land and in the sea, including antifoulants (Organometallic spicies concentration); Hydrocarbons (Concentration of polycyclic aromatic hydrocarbons); Polychlorinated biphenyls (Concentration of polychlorobiphenyls); Pesticides and biocides (Pesticide concentrations); Heavy metals (Metal concentrations, Inorganic chemical composition).'@en ;
+    skos:notation 'SDN:OD1::CONT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/DOM/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/DOM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/DOM/>;
+    dc:modified '2023-09-28T13:57:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Dissolved Organic Matter'@en ;
+    skos:definition 'The amount of dissolved organic matter (DOC, DON and CDOM) in seawater using water column measurements.'@en ;
+    skos:notation 'SDN:OD1::DOM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/HEATCON/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/HEATCON/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/HEATCON/>;
+    dc:modified '2023-09-28T13:57:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ocean heat content'@en ;
+    skos:definition 'Study of the ocean content change from which the Earth Energy Imbalance can be inferred. Variables include the terms in the sea level budget equation. Different types of calculation based on absolute budgets or trends.'@en ;
+    skos:notation 'SDN:OD1::HEATCON'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/INVER/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/INVER/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/INVER/>;
+    dc:modified '2023-09-28T13:57:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Invertebrates'@en ;
+    skos:definition 'An animal lacking a vertebral column.'@en ;
+    skos:notation 'SDN:OD1::INVER'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/PATHOGEN/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/PATHOGEN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/PATHOGEN/>;
+    dc:modified '2023-09-28T13:57:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Pathogenic organisms'@en ;
+    skos:definition 'Infectious agents (viruses, bacteria, parasites) considered as harmful, that could interact with the evolution of farming performances or cause enzootic disease.'@en ;
+    skos:notation 'SDN:OD1::PATHOGEN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/PHYTO/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/PHYTO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/PHYTO/>;
+    dc:modified '2023-09-28T13:57:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Phytoplankton'@en ;
+    skos:definition 'Photosynthesizing microscopic protists and bacteria that inhabit the upper sunlit layer of marine and fresh water bodies.'@en ;
+    skos:notation 'SDN:OD1::PHYTO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/SHORE/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/SHORE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/SHORE/>;
+    dc:modified '2023-09-28T13:57:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Shoreline'@en ;
+    skos:definition 'The distance over which the coast has moved due to a combination of factors; i.e., sea level rise, erosion, or sedimentation.'@en ;
+    skos:notation 'SDN:OD1::SHORE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/SUSPMA/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/SUSPMA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/SUSPMA/>;
+    dc:modified '2023-09-28T13:57:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Suspended matter'@en ;
+    skos:definition 'Amount of particulate organic matter (turbidity) in seawater using water column measurements.'@en ;
+    skos:notation 'SDN:OD1::SUSPMA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/TRACELE/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/TRACELE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/TRACELE/>;
+    dc:modified '2023-09-28T13:57:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Trace elements and their isotopes'@en ;
+    skos:definition 'An element whose dissolved concentration is between 50 and 0.05 micromoles per kilogram. Most are metals and can be referred to as trace metals. Specific names of trace elements may be entered as Detailed Variables'@en ;
+    skos:notation 'SDN:OD1::TRACELE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/TRANST/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/TRANST/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/TRANST/>;
+    dc:modified '2023-09-28T13:57:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Transient tracers'@en ;
+    skos:definition 'Transient tracers are man-made chemical compounds released to the atmosphere at known quantities that can be used in the ocean to quantify ventilation, transit time distribution and transport time-scales. Measurement of transient tracers in the subsurface ocean thus provides information on the time-scales since the ocean was ventilated, i.e. in contact with the atmosphere. A combination of these tracers provide the means to constrain the transit time distribution (TTD) of a water-mass that allows inference of concentrations or fates of other transient compounds, such as anthropogenic carbon or nitrous oxide'@en ;
+    skos:notation 'SDN:OD1::TRANST'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/TURBID/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/TURBID/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/TURBID/>;
+    dc:modified '2023-09-28T13:57:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Turbidity'@en ;
+    skos:definition 'Measurement of the degree of scattering of light in water, related to the amount of suspended material in the water.'@en ;
+    skos:notation 'SDN:OD1::TURBID'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OD1/current/ZOO/1/> .
+<http://vocab.nerc.ac.uk/collection/OD1/current/ZOO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OD1/current/ZOO/>;
+    dc:modified '2023-09-28T13:57:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Zooplankton'@en ;
+    skos:definition 'Zooplankton is the animal portion of the plankton; the animal community in marine and freshwater situations that floats free in the water, independent of the shore and the bottom, incapable of overcoming the speed of the surrounding currents and therefore moving with them.'@en ;
+    skos:notation 'SDN:OD1::ZOO'^^xsd:string .

@@ -1,0 +1,120 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/GXM/2015_01_01_00_00_00_2015_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GXM/current/GBX6/1/> .
+<http://vocab.nerc.ac.uk/collection/GXM/current/GBX6/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GXM/current/GBX6/>;
+    dc:modified '2015-08-20T14:39:02'^^xsd:dateTime ;
+    skos:altLabel 'I18n English (UK) DATADISCOVERY'^^xsd:string ;
+    skos:prefLabel '18n English (UK) language DATADISCOVERY web interface application terms'@en ;
+    skos:definition 'UK English terms for web text display available to the new data discovery \'traffic controller approach\' data delivery application and its filtered subprojects.'@en ;
+    skos:notation 'SDN:GXM::GBX6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GXM/current/GBX5/1/> .
+<http://vocab.nerc.ac.uk/collection/GXM/current/GBX5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GXM/current/GBX5/>;
+    dc:modified '2015-08-20T14:39:02'^^xsd:dateTime ;
+    skos:altLabel 'I18n English (UK) MODSDEL'^^xsd:string ;
+    skos:prefLabel 'I18n English (UK) language MODSDEL web interface application terms'@en ;
+    skos:definition 'UK English terms for web text display available to the numerical model data delivery (MODSDEL) application.'@en ;
+    skos:notation 'SDN:GXM::GBX5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GXM/current/GBX2/1/> .
+<http://vocab.nerc.ac.uk/collection/GXM/current/GBX2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GXM/current/GBX2/>;
+    dc:modified '2015-08-20T14:39:02'^^xsd:dateTime ;
+    skos:altLabel 'I18n English (UK) MTSIWEB'^^xsd:string ;
+    skos:prefLabel 'I18n English (United Kingdom) language MTSI web interface application terms'@en ;
+    skos:definition 'UK English terms for web text display available to the MTSI web interface application.'@en ;
+    skos:notation 'SDN:GXM::GBX2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GXM/current/GBX3/1/> .
+<http://vocab.nerc.ac.uk/collection/GXM/current/GBX3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GXM/current/GBX3/>;
+    dc:modified '2015-08-20T14:39:02'^^xsd:dateTime ;
+    skos:altLabel 'I18n English (UK) VocabEditor'^^xsd:string ;
+    skos:prefLabel 'I18n English (UK) language vocabulary editor client application terms'@en ;
+    skos:definition 'UK English terms for web text display available to the vocabulary editor client application.'@en ;
+    skos:notation 'SDN:GXM::GBX3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GXM/current/GBX1/1/> .
+<http://vocab.nerc.ac.uk/collection/GXM/current/GBX1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GXM/current/GBX1/>;
+    dc:modified '2015-08-20T14:39:02'^^xsd:dateTime ;
+    skos:altLabel 'I18n English (UK) ZESHWEB'^^xsd:string ;
+    skos:prefLabel 'I18n English (United Kingdom) language ZESH web interface application terms'@en ;
+    skos:definition 'UK English terms for web text display available to the ZESH web interface application.'@en ;
+    skos:notation 'SDN:GXM::GBX1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GXM/current/GBX0/1/> .
+<http://vocab.nerc.ac.uk/collection/GXM/current/GBX0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GXM/current/GBX0/>;
+    dc:modified '2015-08-20T14:39:02'^^xsd:dateTime ;
+    skos:altLabel 'I18n English (UK) generic'^^xsd:string ;
+    skos:prefLabel 'I18n English (United Kingdom) language generic terms'@en ;
+    skos:definition 'General-purpose UK English terms for web text display available to all BODC dynamic web applications.'@en ;
+    skos:notation 'SDN:GXM::GBX0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GXM/current/GBX4/1/> .
+<http://vocab.nerc.ac.uk/collection/GXM/current/GBX4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GXM/current/GBX4/>;
+    dc:modified '2015-08-20T14:39:02'^^xsd:dateTime ;
+    skos:altLabel 'I18n SingleSeriesURL'^^xsd:string ;
+    skos:prefLabel 'I18n English (UK) language single series URL download application terms'@en ;
+    skos:definition 'UK English terms for web text display available to the single series URL download application.'@en ;
+    skos:notation 'SDN:GXM::GBX4'^^xsd:string .

@@ -1,0 +1,102 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L07/2007_01_01_00_00_00_2007_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L07/current/CDIMTH05/1/> .
+<http://vocab.nerc.ac.uk/collection/L07/current/CDIMTH05/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L07/current/CDIMTH05/>;
+    dc:modified '2007-02-16T16:58:36'^^xsd:dateTime ;
+    skos:altLabel 'URL'^^xsd:string ;
+    skos:prefLabel 'universal resource locator'@en ;
+    skos:definition 'The data object may be accessed as a URL over the internet.'@en ;
+    skos:notation 'SDN:L07::CDIMTH05'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L07/current/CDIMTH01/1/> .
+<http://vocab.nerc.ac.uk/collection/L07/current/CDIMTH01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L07/current/CDIMTH01/>;
+    dc:modified '2007-02-16T16:58:36'^^xsd:dateTime ;
+    skos:altLabel 'download'^^xsd:string ;
+    skos:prefLabel 'web data access'@en ;
+    skos:definition 'The data object may be downloaded through manual interaction with an on-line system.'@en ;
+    skos:notation 'SDN:L07::CDIMTH01'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L07/current/CDIMTH02/1/> .
+<http://vocab.nerc.ac.uk/collection/L07/current/CDIMTH02/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L07/current/CDIMTH02/>;
+    dc:modified '2007-02-16T16:58:36'^^xsd:dateTime ;
+    skos:altLabel 'downloadRegistration'^^xsd:string ;
+    skos:prefLabel 'web data access with registration'@en ;
+    skos:definition 'The data object may be downloaded through manual interaction with an on-line system by registered users following successful authentication and authorisation.'@en ;
+    skos:notation 'SDN:L07::CDIMTH02'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L07/current/CDIMTH04/1/> .
+<http://vocab.nerc.ac.uk/collection/L07/current/CDIMTH04/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L07/current/CDIMTH04/>;
+    dc:modified '2007-02-16T16:58:36'^^xsd:dateTime ;
+    skos:altLabel 'offlineAccess'^^xsd:string ;
+    skos:prefLabel 'delayed online access'@en ;
+    skos:definition 'The data object may be obtained through an automated ordering process from the holding data centre.'@en ;
+    skos:notation 'SDN:L07::CDIMTH04'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L07/current/CDIMTH03/1/> .
+<http://vocab.nerc.ac.uk/collection/L07/current/CDIMTH03/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L07/current/CDIMTH03/>;
+    dc:modified '2007-02-16T16:58:36'^^xsd:dateTime ;
+    skos:altLabel 'order'^^xsd:string ;
+    skos:prefLabel 'data request order'@en ;
+    skos:definition 'The data object may be obtained though a manual ordering process from the holding data centre.'@en ;
+    skos:notation 'SDN:L07::CDIMTH03'^^xsd:string .

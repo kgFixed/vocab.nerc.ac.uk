@@ -1,0 +1,91 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/B06/2015_01_01_00_00_00_2015_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/B06/2014_01_01_00_00_00_2014_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2015-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/iProfile/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/iProfile/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/iProfile/>;
+    dc:modified '2015-06-23T12:51:50'^^xsd:dateTime ;
+    skos:altLabel 'Profile monotonicity check'^^xsd:string ;
+    skos:prefLabel 'iProfile'@en ;
+    skos:definition 'CHECKNQXF integrity check that the profile is monotonic, ie: depth increases with increasing cycle number.'@en ;
+    skos:notation 'SDN:B06::iProfile'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zTimeSpanApproxInstant/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zTimeSpanApproxInstant/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zTimeSpanApproxInstant/>;
+    dc:modified '2015-05-29T07:48:01'^^xsd:dateTime ;
+    skos:altLabel 'Series time span should be nearly instantaneous'^^xsd:string ;
+    skos:prefLabel 'zTimeSpanApproxInstant'@en ;
+    skos:definition 'ZESHXREF integrity check that, where end time is populated, the series time span is within tolerance of being instaneous'@en ;
+    skos:notation 'SDN:B06::zTimeSpanApproxInstant'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zGebcoDeeperThanSeries/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zGebcoDeeperThanSeries/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zGebcoDeeperThanSeries/>;
+    dc:modified '2015-01-28T16:03:08'^^xsd:dateTime ;
+    skos:altLabel 'Series depth within Gebco depth plus 5 percent'^^xsd:string ;
+    skos:prefLabel 'zGebcoDeeperThanSeries'@en ;
+    skos:definition 'ZESHXREF integrity check that the CTD series depth is less than the Gebco sea floor depth plus 5 percent tolerance'@en ;
+    skos:notation 'SDN:B06::zGebcoDeeperThanSeries'^^xsd:string .

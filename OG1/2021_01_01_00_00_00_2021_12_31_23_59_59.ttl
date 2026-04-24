@@ -1,0 +1,127 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/OG1/2021_01_01_00_00_00_2021_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/OG1/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2021-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/C1PHDOXY/3/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/C1PHDOXY/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/C1PHDOXY/>;
+    dc:modified '2021-06-28T13:17:52'^^xsd:dateTime ;
+    skos:altLabel 'C1PHASE_DOXY'^^xsd:string ;
+    skos:prefLabel 'Uncalibrated phase shift reported by oxygen sensor'@en ;
+    skos:definition 'Deprecated on 25-Jun-2021 because the parameter concept was identical to an existing one. Uncalibrated phase shift reported by oxygen sensor.'@en ;
+    skos:notation 'SDN:OG1::C1PHDOXY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/C2PHDOXY/3/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/C2PHDOXY/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/C2PHDOXY/>;
+    dc:modified '2021-06-28T13:17:52'^^xsd:dateTime ;
+    skos:altLabel 'C2PHASE_DOXY'^^xsd:string ;
+    skos:prefLabel 'Uncalibrated phase shift reported by oxygen sensor'@en ;
+    skos:definition 'Deprecated on 25-Jun-2021 because the parameter concept was identical to an existing one. Uncalibrated phase shift reported by oxygen sensor.'@en ;
+    skos:notation 'SDN:OG1::C2PHDOXY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/BPHDOXY/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/BPHDOXY/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/BPHDOXY/>;
+    dc:modified '2021-06-25T14:27:02'^^xsd:dateTime ;
+    skos:altLabel 'BPHASE_DOXY'^^xsd:string ;
+    skos:prefLabel 'Uncalibrated blue excitation light phase shift reported by oxygen sensor'@en ;
+    skos:definition 'Uncalibrated blue excitation light phase shift reported by oxygen sensor.'@en ;
+    skos:notation 'SDN:OG1::BPHDOXY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/DPHDOXY/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/DPHDOXY/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/DPHDOXY/>;
+    dc:modified '2021-06-25T14:27:02'^^xsd:dateTime ;
+    skos:altLabel 'DPHASE_DOXY'^^xsd:string ;
+    skos:prefLabel 'Calibrated phase shift reported by oxygen sensor'@en ;
+    skos:definition 'D phase is calculated as a third degree polynomial of (the phase angle measured by blue excitation light minus the phase angle measured by red excitation light).'@en ;
+    skos:notation 'SDN:OG1::DPHDOXY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/RPHDOXY/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/RPHDOXY/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/RPHDOXY/>;
+    dc:modified '2021-06-25T14:27:02'^^xsd:dateTime ;
+    skos:altLabel 'RPHASE_DOXY'^^xsd:string ;
+    skos:prefLabel 'Uncalibrated red excitation light phase shift reported by oxygen sensor'@en ;
+    skos:definition 'Uncalibrated red excitation light phase shift reported by oxygen sensor.'@en ;
+    skos:notation 'SDN:OG1::RPHDOXY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/TPHDOXY/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/TPHDOXY/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/TPHDOXY/>;
+    dc:modified '2021-06-25T14:27:02'^^xsd:dateTime ;
+    skos:altLabel 'TPHASE_DOXY'^^xsd:string ;
+    skos:prefLabel 'Uncalibrated (temperature compensated) phase shift reported by oxygen sensor'@en ;
+    skos:definition 'Uncalibrated (temperature compensated) phase shift reported by oxygen sensor.'@en ;
+    skos:notation 'SDN:OG1::TPHDOXY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/BBP650/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/BBP650/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/BBP650/>;
+    dc:modified '2021-06-24T15:50:19'^^xsd:dateTime ;
+    skos:altLabel 'BBP650'^^xsd:string ;
+    skos:prefLabel 'Particle backscattering at 650 nanometers'@en ;
+    skos:definition 'Particle backscattering at 650 nanometers.'@en ;
+    skos:notation 'SDN:OG1::BBP650'^^xsd:string .

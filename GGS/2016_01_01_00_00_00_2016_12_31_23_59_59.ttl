@@ -1,0 +1,2301 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/GGS/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/1/5/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/1/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/1/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_1'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "survey_id": "DI60",
+    "date_included": "2009-09-10",
+    "metadata": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=DI60&t=102697&s=6&d=7",
+    "contributor": "US Naval Oceanographic Office (NAVO)",
+    "source_data": "http://www.ngdc.noaa.gov/mgg/gdas/gd_sys.html",
+    "contributor_contact": "https://www.navo.navy.mil/",
+    "survey_type": "single beam"
+}}'''@en ;
+    skos:notation 'SDN:GGS::1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/2/5/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/2/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/2/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_2'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "survey_id": "DI60",
+    "date_included": "2009-09-10",
+    "metadata": "",
+    "contributor": "Centre for Coastal and Ocean Mapping (CCOM)",
+    "source_data": "http://www.omg.unb.ca/Projects/Arctic/basemaps/about.html",
+    "contributor_contact": "http://www.ccom-jhc.unh.edu/",
+    "survey_type": "single beam"
+}}'''@en ;
+    skos:notation 'SDN:GGS::2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/3/5/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/3/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/3/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_3'@en ;
+    skos:definition '''{"node": {
+    "country": "UK",
+    "survey_id": "CD143",
+    "date_included": "2009-09-10",
+    "metadata": "http://eprints.soton.ac.uk/8039/",
+    "contributor": "National Oceanography Centre, Southampton (NOCS)",
+    "source_data": "http://www.ngdc.noaa.gov/mgg/gdas/gd_sys.html",
+    "contributor_contact": "Dr. Colin Jacobs clj@nocs.soton.ac.uk",
+    "survey_type": "single beam"
+}}'''@en ;
+    skos:notation 'SDN:GGS::3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49192/4/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49192/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49192/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49192'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Lamont-Doherty_Geological_Observatory",
+    "cruise_ID": "RC1104",
+    "year": 1967,
+    "cruise_end_date": "03/04/1967",
+    "chief_scientist": "G. DICKSON",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "06-3.5 AND 12 KHZ WIDE BEAM (60 DEG)",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=RC1104&t=102697&s=6&d=7",
+    "cruise_start_date": "02/03/1967",
+    "platform": "Robert_D._Conrad",
+    "SID": 49192
+}}'''@en ;
+    skos:notation 'SDN:GGS::49192'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49215/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49215/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49215/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49215'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Lamont-Doherty_Geological_Observatory",
+    "cruise_ID": "RC1215",
+    "year": 1969,
+    "cruise_end_date": "05/05/1969",
+    "chief_scientist": "R. LEYDEN",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "(SEE ADD DOC / 18)",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=RC1215&t=102697&s=6&d=7",
+    "cruise_start_date": "31/03/1969",
+    "platform": "Robert_D._Conrad",
+    "SID": 49215
+}}'''@en ;
+    skos:notation 'SDN:GGS::49215'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49236/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49236/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49236/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49236'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Lamont-Doherty_Geological_Observatory",
+    "cruise_ID": "RC1402",
+    "year": 1971,
+    "cruise_end_date": "02/04/1971",
+    "chief_scientist": "S. EITTREIM",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "(SEE ADD DOC / 18)",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=RC1402&t=102697&s=6&d=7",
+    "cruise_start_date": "03/03/1971",
+    "platform": "Robert_D._Conrad",
+    "SID": 49236
+}}'''@en ;
+    skos:notation 'SDN:GGS::49236'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49270/4/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49270/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49270/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49270'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Lamont-Doherty_Geological_Observatory",
+    "cruise_ID": "RC1706",
+    "year": 1974,
+    "cruise_end_date": "14/05/1974",
+    "chief_scientist": "BE\' ALLAN",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": 3.5,
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=RC1706&t=102697&s=6&d=7",
+    "cruise_start_date": "17/04/1974",
+    "platform": "Robert_D._Conrad",
+    "SID": 49270
+}}'''@en ;
+    skos:notation 'SDN:GGS::49270'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49271/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49271/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49271/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49271'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Lamont-Doherty_Geological_Observatory",
+    "cruise_ID": "RC1707",
+    "year": 1974,
+    "cruise_end_date": "17/06/1974",
+    "chief_scientist": "Thomas Aitken",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "3.5 khz PDR and 12 khz PDR",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=RC1707&t=102697&s=6&d=7",
+    "cruise_start_date": "17/05/1974",
+    "platform": "Robert_D._Conrad",
+    "SID": 49271
+}}'''@en ;
+    skos:notation 'SDN:GGS::49271'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49514/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49514/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49514/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49514'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Lamont-Doherty_Geological_Observatory",
+    "cruise_ID": "V1911",
+    "year": 1963,
+    "cruise_end_date": "16/09/1963",
+    "chief_scientist": "M. LANGSETH",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "(SEE ADD. DOC./18)",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=V1911&t=102697&s=6&d=7",
+    "cruise_start_date": "28/08/1963",
+    "platform": "Vema",
+    "SID": 49514
+}}'''@en ;
+    skos:notation 'SDN:GGS::49514'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49615/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49615/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49615/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49615'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Lamont-Doherty_Geological_Observatory",
+    "cruise_ID": "V2902",
+    "year": 1971,
+    "cruise_end_date": "17/01/1972",
+    "chief_scientist": "DR. O. ELDHOLM",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "(SEE ADD. DOC./ 18)",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=V2902&t=102697&s=6&d=7",
+    "cruise_start_date": "18/12/1971",
+    "platform": "Vema",
+    "SID": 49615
+}}'''@en ;
+    skos:notation 'SDN:GGS::49615'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49617/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49617/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49617/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49617'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Lamont-Doherty_Geological_Observatory",
+    "cruise_ID": "V2904",
+    "year": 1972,
+    "cruise_end_date": "16/03/1972",
+    "chief_scientist": "H. KAHLE",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "(SEE ADD. DOC./ 18)",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=V2904&t=102697&s=6&d=7",
+    "cruise_start_date": "18/02/1972",
+    "platform": "Vema",
+    "SID": 49617
+}}'''@en ;
+    skos:notation 'SDN:GGS::49617'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49671/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49671/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49671/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49671'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Lamont-Doherty_Geological_Observatory",
+    "cruise_ID": "V2410",
+    "year": 1967,
+    "cruise_end_date": "14/09/1967",
+    "chief_scientist": "THOMAS AITKEN",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "(SEE ADD. DOC./18)",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=V2410&t=102697&s=6&d=7",
+    "cruise_start_date": "22/08/1967",
+    "platform": "Vema",
+    "SID": 49671
+}}'''@en ;
+    skos:notation 'SDN:GGS::49671'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49686/4/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49686/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49686/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49686'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Lamont-Doherty_Geological_Observatory",
+    "cruise_ID": "V3406",
+    "year": 1977,
+    "cruise_end_date": "27/08/1977",
+    "chief_scientist": "DAMUTH JOHN  HOLLAND MICHAEL",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": 3.5,
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=V3406&t=102697&s=6&d=7",
+    "cruise_start_date": "01/08/1977",
+    "platform": "Vema",
+    "SID": 49686
+}}'''@en ;
+    skos:notation 'SDN:GGS::49686'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49689/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49689/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49689/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49689'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Lamont-Doherty_Geological_Observatory",
+    "cruise_ID": "V3409",
+    "year": 1977,
+    "cruise_end_date": "29/11/1977",
+    "chief_scientist": "R. N. ANDERSON",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "(SEE ADD. DOC./ 18)",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=V3409&t=102697&s=6&d=7",
+    "cruise_start_date": "02/11/1977",
+    "platform": "Vema",
+    "SID": 49689
+}}'''@en ;
+    skos:notation 'SDN:GGS::49689'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49692/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49692/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49692/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49692'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Lamont-Doherty_Geological_Observatory",
+    "cruise_ID": "V3501",
+    "year": 1978,
+    "cruise_end_date": "05/03/1978",
+    "chief_scientist": "JAMES R. COCHRAN",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "(SEE ADD. DOC./ 18)",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=V3501&t=102697&s=6&d=7",
+    "cruise_start_date": "18/02/1978",
+    "platform": "Vema",
+    "SID": 49692
+}}'''@en ;
+    skos:notation 'SDN:GGS::49692'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49715/4/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49715/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49715/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49715'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Lamont-Doherty_Geological_Observatory",
+    "cruise_ID": "V3618",
+    "year": 1980,
+    "cruise_end_date": "17/12/1980",
+    "chief_scientist": "P. RABINOWITZ M.COFFIN",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": 3.5,
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=V3618&t=102697&s=6&d=7",
+    "cruise_start_date": "17/11/1980",
+    "platform": "Vema",
+    "SID": 49715
+}}'''@en ;
+    skos:notation 'SDN:GGS::49715'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49716/4/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49716/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49716/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49716'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Lamont-Doherty_Geological_Observatory",
+    "cruise_ID": "V3619",
+    "year": 1980,
+    "cruise_end_date": "14/01/1981",
+    "chief_scientist": "A.D.FALVEY G.I.PRASAD M.COFFIN",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": 3.5,
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=V3619&t=102697&s=6&d=7",
+    "cruise_start_date": "20/12/1980",
+    "platform": "Vema",
+    "SID": 49716
+}}'''@en ;
+    skos:notation 'SDN:GGS::49716'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49728/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49728/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49728/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49728'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Lamont-Doherty_Geological_Observatory",
+    "cruise_ID": "V1411",
+    "year": 1958,
+    "cruise_end_date": "08/05/1958",
+    "chief_scientist": "Dr. John Nafe",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "12 khz PDR",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=V1411&t=102697&s=6&d=7",
+    "cruise_start_date": "23/04/1958",
+    "platform": "Vema",
+    "SID": 49728
+}}'''@en ;
+    skos:notation 'SDN:GGS::49728'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49729/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49729/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49729/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49729'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Lamont-Doherty_Geological_Observatory",
+    "cruise_ID": "V1412",
+    "year": 1958,
+    "cruise_end_date": "07/06/1958",
+    "chief_scientist": "J. Nafe",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "12 khz PDR",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=V1412&t=102697&s=6&d=7",
+    "cruise_start_date": "11/05/1958",
+    "platform": "Vema",
+    "SID": 49729
+}}'''@en ;
+    skos:notation 'SDN:GGS::49729'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49796/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49796/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49796/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49796'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Woods_Hole_Oceanographic_Institution",
+    "cruise_ID": "CH043L02",
+    "year": 1964,
+    "cruise_end_date": "04/06/1964",
+    "chief_scientist": "",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=CH043L02&t=102697&s=6&d=7",
+    "cruise_start_date": "30/03/1964",
+    "platform": "Chain",
+    "SID": 49796
+}}'''@en ;
+    skos:notation 'SDN:GGS::49796'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49820/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49820/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49820/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49820'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Woods_Hole_Oceanographic_Institution",
+    "cruise_ID": "CH099L08",
+    "year": 1970,
+    "cruise_end_date": "16/12/1970",
+    "chief_scientist": "",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=CH099L08&t=102697&s=6&d=7",
+    "cruise_start_date": "24/11/1970",
+    "platform": "Chain",
+    "SID": 49820
+}}'''@en ;
+    skos:notation 'SDN:GGS::49820'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49841/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49841/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49841/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49841'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Woods_Hole_Oceanographic_Institution",
+    "cruise_ID": "A2015L03",
+    "year": 1965,
+    "cruise_end_date": "21/06/1965",
+    "chief_scientist": "DR. EARL HAYES",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "12 KHZ PGR WIDE BEAM",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=A2015L03&t=102697&s=6&d=7",
+    "cruise_start_date": "12/04/1965",
+    "platform": "Atlantis_II",
+    "SID": 49841
+}}'''@en ;
+    skos:notation 'SDN:GGS::49841'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49884/4/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49884/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49884/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49884'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Woods_Hole_Oceanographic_Institution",
+    "cruise_ID": "A2093L07",
+    "year": 1976,
+    "cruise_end_date": "06/05/1976",
+    "chief_scientist": "DR.ELIZABETH BUNCE",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "PRIM-3.5 SEC-12 WIDE BEAM 1 SEC.SWEEP",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=A2093L07&t=102697&s=6&d=7",
+    "cruise_start_date": "08/04/1976",
+    "platform": "Atlantis_II",
+    "SID": 49884
+}}'''@en ;
+    skos:notation 'SDN:GGS::49884'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49887/4/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49887/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49887/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49887'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Woods_Hole_Oceanographic_Institution",
+    "cruise_ID": "A2093L10",
+    "year": 1976,
+    "cruise_end_date": "20/07/1976",
+    "chief_scientist": "DR.BRUCE WARREN",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "PRIM-3.5 SEC-12 WIDE BEAM 1 SEC.SWEEP",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=A2093L10&t=102697&s=6&d=7",
+    "cruise_start_date": "01/07/1976",
+    "platform": "Atlantis_II",
+    "SID": 49887
+}}'''@en ;
+    skos:notation 'SDN:GGS::49887'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49888/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49888/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49888/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49888'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Woods_Hole_Oceanographic_Institution",
+    "cruise_ID": "A2093L11",
+    "year": 1976,
+    "cruise_end_date": "26/08/1976",
+    "chief_scientist": "WARREN",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=A2093L11&t=102697&s=6&d=7",
+    "cruise_start_date": "23/07/1976",
+    "platform": "Atlantis_II",
+    "SID": 49888
+}}'''@en ;
+    skos:notation 'SDN:GGS::49888'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49962/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49962/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49962/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49962'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Woods_Hole_Oceanographic_Institution",
+    "cruise_ID": "KN145L9",
+    "year": 1995,
+    "cruise_end_date": "13/07/1995",
+    "chief_scientist": "TOOLE",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "12 KHZ RAYTHEON PDR",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=KN145L9&t=102697&s=6&d=7",
+    "cruise_start_date": "11/06/1995",
+    "platform": "Knorr",
+    "SID": 49962
+}}'''@en ;
+    skos:notation 'SDN:GGS::49962'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49963/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49963/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49963/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49963'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "University_of_Miami_RSMAS",
+    "cruise_ID": "KN145L10",
+    "year": 1995,
+    "cruise_end_date": "23/08/1995",
+    "chief_scientist": "OLSON",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "12 KHZ RAYTHEON PDR",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=KN145L10&t=102697&s=6&d=7",
+    "cruise_start_date": "14/07/1995",
+    "platform": "Knorr",
+    "SID": 49963
+}}'''@en ;
+    skos:notation 'SDN:GGS::49963'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/49965/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/49965/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/49965/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_49965'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "NOAA_Pacific_Marine_Environmental_Lab",
+    "cruise_ID": "KN145L14",
+    "year": 1995,
+    "cruise_end_date": "21/01/1996",
+    "chief_scientist": "JOHNSON",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "12 KHZ PDR",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=KN145L14&t=102697&s=6&d=7",
+    "cruise_start_date": "04/12/1995",
+    "platform": "Knorr",
+    "SID": 49965
+}}'''@en ;
+    skos:notation 'SDN:GGS::49965'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/51303/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/51303/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/51303/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_51303'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "US_Navy_Naval_Oceanographic_Office",
+    "cruise_ID": "WI343728",
+    "year": 1977,
+    "cruise_end_date": "31/08/1977",
+    "chief_scientist": "NAVOCEANO CODE 7220",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "HARRIS 853-D-2/3 BEAM 12KHZ 1-SEC SW",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=WI343728&t=102697&s=6&d=7",
+    "cruise_start_date": "03/06/1977",
+    "platform": "Wilkes",
+    "SID": 51303
+}}'''@en ;
+    skos:notation 'SDN:GGS::51303'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/51304/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/51304/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/51304/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_51304'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "US_Navy_Naval_Oceanographic_Office",
+    "cruise_ID": "WI343731",
+    "year": 1977,
+    "cruise_end_date": "30/10/1977",
+    "chief_scientist": "NAVOCEANO CODE 7220",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "HARRIS 853-D-2/3 BEAM 12KHZ 1-SEC SW",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=WI343731&t=102697&s=6&d=7",
+    "cruise_start_date": "05/09/1977",
+    "platform": "Wilkes",
+    "SID": 51304
+}}'''@en ;
+    skos:notation 'SDN:GGS::51304'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/51307/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/51307/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/51307/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_51307'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "US_Navy_Naval_Oceanographic_Office",
+    "cruise_ID": "WI343719",
+    "year": 1977,
+    "cruise_end_date": "29/05/1977",
+    "chief_scientist": "NAVOCEANO CODE 7220",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "HARRIS 853-D-2/3 BEAM 12KHZ 1-SEC SW",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=WI343719&t=102697&s=6&d=7",
+    "cruise_start_date": "11/04/1977",
+    "platform": "Wilkes",
+    "SID": 51307
+}}'''@en ;
+    skos:notation 'SDN:GGS::51307'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/51605/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/51605/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/51605/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_51605'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Scripps_Institution_of_Oceanography",
+    "cruise_ID": "CIRC06AR",
+    "year": 1968,
+    "cruise_end_date": "01/09/1968",
+    "chief_scientist": "FISHER R.L.",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "12KHZ/GIFFT RECORDER/WIDE(60DEG)BEAM",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=CIRC06AR&t=102697&s=6&d=7",
+    "cruise_start_date": "04/08/1968",
+    "platform": "Argo",
+    "SID": 51605
+}}'''@en ;
+    skos:notation 'SDN:GGS::51605'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/51606/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/51606/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/51606/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_51606'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Scripps_Institution_of_Oceanography",
+    "cruise_ID": "CIRC07AR",
+    "year": 1968,
+    "cruise_end_date": "03/10/1968",
+    "chief_scientist": "FISHER R.L.",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "12KHZ/GIFFT RECORDER/WIDE(60DEG)BEAM",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=CIRC07AR&t=102697&s=6&d=7",
+    "cruise_start_date": "05/09/1968",
+    "platform": "Argo",
+    "SID": 51606
+}}'''@en ;
+    skos:notation 'SDN:GGS::51606'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/51614/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/51614/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/51614/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_51614'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Scripps_Institution_of_Oceanography",
+    "cruise_ID": "LUSI6AAR",
+    "year": 1962,
+    "cruise_end_date": "26/10/1962",
+    "chief_scientist": "RAKESTRAW N.",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "12KHZ/PDR RECORDER/WIDE(60DEG)BEAM",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=LUS16AAR&t=102697&s=6&d=7",
+    "cruise_start_date": "04/10/1962",
+    "platform": "Argo",
+    "SID": 51614
+}}'''@en ;
+    skos:notation 'SDN:GGS::51614'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/51622/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/51622/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/51622/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_51622'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Scripps_Institution_of_Oceanography",
+    "cruise_ID": "LUSI7DAR",
+    "year": 1963,
+    "cruise_end_date": "29/05/1963",
+    "chief_scientist": "KEELING D.",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "12KHZ/PDR RECORDER/WIDE(60DEG)BEAM",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=LUS17DAR&t=102697&s=6&d=7",
+    "cruise_start_date": "18/05/1963",
+    "platform": "Argo",
+    "SID": 51622
+}}'''@en ;
+    skos:notation 'SDN:GGS::51622'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/51627/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/51627/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/51627/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_51627'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Scripps_Institution_of_Oceanography",
+    "cruise_ID": "MONS03AR",
+    "year": 1960,
+    "cruise_end_date": "07/12/1960",
+    "chief_scientist": "FISHER R.L.",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "12KHZ/PDR RECORDER/WIDE(60DEG)BEAM",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=MONS03AR&t=102697&s=6&d=7",
+    "cruise_start_date": "18/11/1960",
+    "platform": "Argo",
+    "SID": 51627
+}}'''@en ;
+    skos:notation 'SDN:GGS::51627'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/51667/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/51667/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/51667/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_51667'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Scripps_Institution_of_Oceanography",
+    "cruise_ID": "ANTP05MV",
+    "year": 1970,
+    "cruise_end_date": "17/10/1970",
+    "chief_scientist": "FISHER R.L.",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "3.5-12KHZ/GIFFT RECORDERS/WIDE BEAM",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=ANTP05MV&t=102697&s=6&d=7",
+    "cruise_start_date": "24/09/1970",
+    "platform": "Melville",
+    "SID": 51667
+}}'''@en ;
+    skos:notation 'SDN:GGS::51667'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/51710/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/51710/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/51710/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_51710'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Scripps_Institution_of_Oceanography",
+    "cruise_ID": "INMD04MV",
+    "year": 1977,
+    "cruise_end_date": "22/01/1978",
+    "chief_scientist": "CRAIG H.",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "3.5-12KHZ/EDO GIFFT RECORDERS/WIDE BEAM",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=INMD04MV&t=102697&s=6&d=7",
+    "cruise_start_date": "16/12/1977",
+    "platform": "Melville",
+    "SID": 51710
+}}'''@en ;
+    skos:notation 'SDN:GGS::51710'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/51722/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/51722/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/51722/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_51722'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Scripps_Institution_of_Oceanography",
+    "cruise_ID": "ANTP06MV",
+    "year": 1970,
+    "cruise_end_date": "24/11/1970",
+    "chief_scientist": "FISHER R.L.",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "3.5KHZ/GIFFT RECORDER/WIDE BEAM",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=ANTP06MV&t=102697&s=6&d=7",
+    "cruise_start_date": "26/10/1970",
+    "platform": "Melville",
+    "SID": 51722
+}}'''@en ;
+    skos:notation 'SDN:GGS::51722'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/51724/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/51724/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/51724/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_51724'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Scripps_Institution_of_Oceanography",
+    "cruise_ID": "ANTP08MV",
+    "year": 1971,
+    "cruise_end_date": "16/02/1971",
+    "chief_scientist": "FISHER R.L.",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "3.5KHZ/GIFFT RECORDER/WIDE BEAM",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=ANTP08MV&t=102697&s=6&d=7",
+    "cruise_start_date": "07/01/1971",
+    "platform": "Melville",
+    "SID": 51724
+}}'''@en ;
+    skos:notation 'SDN:GGS::51724'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/51726/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/51726/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/51726/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_51726'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Scripps_Institution_of_Oceanography",
+    "cruise_ID": "INMD09MV",
+    "year": 1978,
+    "cruise_end_date": "05/07/1978",
+    "chief_scientist": "LONSDALE P. MACDONALD K.",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "3.5KHZ/EDO550A RECORDER/WIDE BEAM",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=INMD09MV&t=102697&s=6&d=7",
+    "cruise_start_date": "02/06/1978",
+    "platform": "Melville",
+    "SID": 51726
+}}'''@en ;
+    skos:notation 'SDN:GGS::51726'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/51789/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/51789/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/51789/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_51789'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Scripps_Institution_of_Oceanography",
+    "cruise_ID": "SOJN04MV",
+    "year": 1997,
+    "cruise_end_date": "14/02/1997",
+    "chief_scientist": "T.WHITWORTH (TAMU)",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "SEABEAM 2000 w/SIDESCAN",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=SOJN04MV&t=102697&s=6&d=7",
+    "cruise_start_date": "08/01/1997",
+    "platform": "Melville",
+    "SID": 51789
+}}'''@en ;
+    skos:notation 'SDN:GGS::51789'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/52206/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/52206/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/52206/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_52206'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Scripps_Institution_of_Oceanography",
+    "cruise_ID": "LUSI01HO",
+    "year": 1962,
+    "cruise_end_date": "26/10/1962",
+    "chief_scientist": "SHOR G.",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "12KHZ/PDR RECORDER/WIDE(60DEG)BEAM",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=LUSI01HO&t=102697&s=6&d=7",
+    "cruise_start_date": "04/10/1962",
+    "platform": "Horizon",
+    "SID": 52206
+}}'''@en ;
+    skos:notation 'SDN:GGS::52206'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/52349/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/52349/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/52349/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_52349'@en ;
+    skos:definition '''{"node": {
+    "country": "United_Kingdom",
+    "contributing_organization": "United_Kingdom/LDEO",
+    "cruise_ID": "OWEN61",
+    "year": 1961,
+    "cruise_end_date": "25/01/1962",
+    "chief_scientist": "D.H. MATTHEWS",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=OWEN61&t=102697&s=6&d=7",
+    "cruise_start_date": "08/11/1961",
+    "platform": "Owen",
+    "SID": 52349
+}}'''@en ;
+    skos:notation 'SDN:GGS::52349'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/52389/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/52389/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/52389/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_52389'@en ;
+    skos:definition '''{"node": {
+    "country": "United_Kingdom",
+    "contributing_organization": "Institute_of_Oceanographic_Sciences__UK",
+    "cruise_ID": "DI101",
+    "year": 1979,
+    "cruise_end_date": "06/05/1979",
+    "chief_scientist": "D. ROBERTS",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "PRECISION ECHO SOUNDER - IOS MK 3",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=DI101&t=102697&s=6&d=7",
+    "cruise_start_date": "10/04/1979",
+    "platform": "Discovery",
+    "SID": 52389
+}}'''@en ;
+    skos:notation 'SDN:GGS::52389'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/52533/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/52533/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/52533/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_52533'@en ;
+    skos:definition '''{"node": {
+    "country": "United_Kingdom",
+    "contributing_organization": "Institute_of_Oceanographic_Sciences__UK",
+    "cruise_ID": "CD2387",
+    "year": 1987,
+    "cruise_end_date": "09/06/1987",
+    "chief_scientist": "L. M PARSON",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "PRECISION ECHO SOUNDER - IOS MK 3",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=CD2387&t=102697&s=6&d=7",
+    "cruise_start_date": "14/05/1987",
+    "platform": "Charles_Darwin",
+    "SID": 52533
+}}'''@en ;
+    skos:notation 'SDN:GGS::52533'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/52604/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/52604/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/52604/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_52604'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "contributing_organization": "United_Kingdom_Hydrographic_Office",
+    "cruise_ID": 19910034,
+    "year": 1985,
+    "cruise_end_date": "18/01/1986",
+    "chief_scientist": "NOT KNOWN",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "EDO AN/UQN HM",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=19910034&t=102697&s=6&d=7",
+    "cruise_start_date": "29/12/1985",
+    "platform": "Jeanne_D\'Arc",
+    "SID": 52604
+}}'''@en ;
+    skos:notation 'SDN:GGS::52604'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/52606/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/52606/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/52606/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_52606'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "contributing_organization": "United_Kingdom_Hydrographic_Office",
+    "cruise_ID": 19920058,
+    "year": 1986,
+    "cruise_end_date": "09/02/1986",
+    "chief_scientist": "NOT KNOWN",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "EDO AN/UQN HM",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=19920058&t=102697&s=6&d=7",
+    "cruise_start_date": "20/01/1986",
+    "platform": "Jeanne_D\'Arc",
+    "SID": 52606
+}}'''@en ;
+    skos:notation 'SDN:GGS::52606'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/52674/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/52674/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/52674/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_52674'@en ;
+    skos:definition '''{"node": {
+    "country": "United_Kingdom",
+    "contributing_organization": "United_Kingdom_Hydrographic_Office",
+    "cruise_ID": 19920149,
+    "year": 1992,
+    "cruise_end_date": "18/06/1992",
+    "chief_scientist": "HYDROGRAPHER OF THE NAVY",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "KELVIN HUGHES TYPE 778 GSDR",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=19920149&t=102697&s=6&d=7",
+    "cruise_start_date": "16/06/1992",
+    "platform": "Norfolk",
+    "SID": 52674
+}}'''@en ;
+    skos:notation 'SDN:GGS::52674'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/52708/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/52708/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/52708/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_52708'@en ;
+    skos:definition '''{"node": {
+    "country": "United_Kingdom",
+    "contributing_organization": "United_Kingdom_Hydrographic_Office",
+    "cruise_ID": "M3215",
+    "year": 1999,
+    "cruise_end_date": "10/05/1999",
+    "chief_scientist": "HYDROGRAPHER OF THE NAVY",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "ATLAS DESO 25 790 & 778 GEN & PRECISION",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=M3215&t=102697&s=6&d=7",
+    "cruise_start_date": "28/02/1999",
+    "platform": "Beagle",
+    "SID": 52708
+}}'''@en ;
+    skos:notation 'SDN:GGS::52708'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/52854/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/52854/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/52854/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_52854'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "University_of_Washington",
+    "cruise_ID": "TN056",
+    "year": 1996,
+    "cruise_end_date": "26/01/1996",
+    "chief_scientist": "Neil Bogue",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "ODEC 3.5khz 30degree conical beam",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=TN056&t=102697&s=6&d=7",
+    "cruise_start_date": "18/01/1996",
+    "platform": "Thomas_G._Thompson",
+    "SID": 52854
+}}'''@en ;
+    skos:notation 'SDN:GGS::52854'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/52888/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/52888/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/52888/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_52888'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Texas_A_and_M_University",
+    "cruise_ID": "ODP115JR",
+    "year": 1987,
+    "cruise_end_date": "02/07/1987",
+    "chief_scientist": "J.BACKMAN R.DUNCAN A.MACDONALD",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "3.5&12KHZ PDR",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=ODP115JR&t=102697&s=6&d=7",
+    "cruise_start_date": "19/05/1987",
+    "platform": "JOIDES_Resolution",
+    "SID": 52888
+}}'''@en ;
+    skos:notation 'SDN:GGS::52888'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/52987/4/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/52987/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/52987/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_52987'@en ;
+    skos:definition '''{"node": {
+    "country": "USA",
+    "contributing_organization": "Texas_A_and_M_University",
+    "cruise_ID": "WOCE-I3",
+    "year": 1995,
+    "cruise_end_date": "03/06/1995",
+    "chief_scientist": "Worth D. Nowlin Jr.",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "12KHZ RAYTHEON PDR",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=WOCE-13&t=102697&s=6&d=7",
+    "cruise_start_date": "26/04/1995",
+    "platform": "Knorr",
+    "SID": 52987
+}}'''@en ;
+    skos:notation 'SDN:GGS::52987'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/53026/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/53026/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/53026/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_53026'@en ;
+    skos:definition '''{"node": {
+    "country": "USSR",
+    "contributing_organization": "VNIIGEOPHIZICS_AN_USSR",
+    "cruise_ID": "DME07",
+    "year": 1971,
+    "cruise_end_date": "14/04/1972",
+    "chief_scientist": "GRAVITY CHIEF BAGRAMIJNC",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "SOUNDER",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=DME07&t=102697&s=6&d=7",
+    "cruise_start_date": "29/12/1971",
+    "platform": "Dmitry_Mendeleev",
+    "SID": 53026
+}}'''@en ;
+    skos:notation 'SDN:GGS::53026'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/53028/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/53028/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/53028/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_53028'@en ;
+    skos:definition '''{"node": {
+    "country": "USSR",
+    "contributing_organization": "IFZ_AN_SSSR",
+    "cruise_ID": "DME10",
+    "year": 1973,
+    "cruise_end_date": "10/10/1973",
+    "chief_scientist": "GRAVITY CHIEF KORENFELD V.",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=DME10&t=102697&s=6&d=7",
+    "cruise_start_date": "27/06/1973",
+    "platform": "Dmitry_Mendeleev",
+    "SID": 53028
+}}'''@en ;
+    skos:notation 'SDN:GGS::53028'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/53412/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/53412/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/53412/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_53412'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "contributing_organization": "Universite_Francaise_Pacifique__Tahiti",
+    "cruise_ID": "MD72",
+    "year": 1992,
+    "cruise_end_date": "04/06/1992",
+    "chief_scientist": "A.BONNEVILLE",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "12/18 KHZ E/S",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=MD72&t=102697&s=6&d=7",
+    "cruise_start_date": "11/05/1992",
+    "platform": "Marion_Dufresne",
+    "SID": 53412
+}}'''@en ;
+    skos:notation 'SDN:GGS::53412'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/53424/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/53424/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/53424/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_53424'@en ;
+    skos:definition '''{"node": {
+    "country": "South_Africa",
+    "contributing_organization": "University_of_Cape_Town__Geology",
+    "cruise_ID": "TD267",
+    "year": 1971,
+    "cruise_end_date": "03/11/1971",
+    "chief_scientist": "E S W SIMPSON",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "ELAC PDR 12KH2",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=TD267&t=102697&s=6&d=7",
+    "cruise_start_date": "18/10/1971",
+    "platform": "Thomas_B._Davie",
+    "SID": 53424
+}}'''@en ;
+    skos:notation 'SDN:GGS::53424'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/53425/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/53425/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/53425/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_53425'@en ;
+    skos:definition '''{"node": {
+    "country": "South_Africa",
+    "contributing_organization": "University_of_Cape_Town__Geology",
+    "cruise_ID": "TD277",
+    "year": 1972,
+    "cruise_end_date": "10/11/1972",
+    "chief_scientist": "E S W SIMPSON",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "ELAC PDR 12KH2",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=TD277&t=102697&s=6&d=7",
+    "cruise_start_date": "16/10/1972",
+    "platform": "Thomas_B._Davie",
+    "SID": 53425
+}}'''@en ;
+    skos:notation 'SDN:GGS::53425'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/53854/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/53854/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/53854/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_53854'@en ;
+    skos:definition '''{"node": {
+    "country": "Japan",
+    "contributing_organization": "University_of_Tokyo",
+    "cruise_ID": "UM68",
+    "year": 1968,
+    "cruise_end_date": "04/02/1969",
+    "chief_scientist": "",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=UM68&t=102697&s=6&d=7",
+    "cruise_start_date": "16/10/1968",
+    "platform": "Umitaka_Maru",
+    "SID": 53854
+}}'''@en ;
+    skos:notation 'SDN:GGS::53854'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/53873/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/53873/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/53873/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_53873'@en ;
+    skos:definition '''{"node": {
+    "country": "Japan",
+    "contributing_organization": "Japan_Oceanographic_Data_Center",
+    "cruise_ID": "ANTAC10",
+    "year": 1968,
+    "cruise_end_date": 1969,
+    "chief_scientist": "",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=ANTAC10&t=102697&s=6&d=7",
+    "cruise_start_date": 1968,
+    "platform": "Fuji",
+    "SID": 53873
+}}'''@en ;
+    skos:notation 'SDN:GGS::53873'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/53882/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/53882/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/53882/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_53882'@en ;
+    skos:definition '''{"node": {
+    "country": "Japan",
+    "contributing_organization": "Japan_Oceanographic_Data_Center",
+    "cruise_ID": "ANTAC8B",
+    "year": 1966,
+    "cruise_end_date": 1967,
+    "chief_scientist": "",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=ANTAC8B&t=102697&s=6&d=7",
+    "cruise_start_date": 1966,
+    "platform": "Fuji",
+    "SID": 53882
+}}'''@en ;
+    skos:notation 'SDN:GGS::53882'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/53884/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/53884/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/53884/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_53884'@en ;
+    skos:definition '''{"node": {
+    "country": "Japan",
+    "contributing_organization": "Japan_Oceanographic_Data_Center",
+    "cruise_ID": "ANTAC21B",
+    "year": 1979,
+    "cruise_end_date": 1980,
+    "chief_scientist": "",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=ANTAC21B4&t=102697&s=6&d=7",
+    "cruise_start_date": 1979,
+    "platform": "Fuji",
+    "SID": 53884
+}}'''@en ;
+    skos:notation 'SDN:GGS::53884'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/53885/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/53885/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/53885/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_53885'@en ;
+    skos:definition '''{"node": {
+    "country": "Japan",
+    "contributing_organization": "Japan_Oceanographic_Data_Center",
+    "cruise_ID": "ANTAC9A",
+    "year": 1967,
+    "cruise_end_date": 1968,
+    "chief_scientist": "",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=ANTAC9A&t=102697&s=6&d=7",
+    "cruise_start_date": 1967,
+    "platform": "Fuji",
+    "SID": 53885
+}}'''@en ;
+    skos:notation 'SDN:GGS::53885'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/53894/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/53894/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/53894/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_53894'@en ;
+    skos:definition '''{"node": {
+    "country": "Japan",
+    "contributing_organization": "National_Institute_of_Polar_Research",
+    "cruise_ID": "JARE27L4",
+    "year": 1986,
+    "cruise_end_date": "02/04/1986",
+    "chief_scientist": "",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "NEC CO. LTD. PDR",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=JARE27L4&t=102697&s=6&d=7",
+    "cruise_start_date": "21/03/1986",
+    "platform": "Shirase",
+    "SID": 53894
+}}'''@en ;
+    skos:notation 'SDN:GGS::53894'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/53897/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/53897/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/53897/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_53897'@en ;
+    skos:definition '''{"node": {
+    "country": "Japan",
+    "contributing_organization": "National_Institute_of_Polar_Research",
+    "cruise_ID": "JARE28L3",
+    "year": 1987,
+    "cruise_end_date": "18/04/1987",
+    "chief_scientist": "",
+    "data_download_link": "http://www.ngdc.noaa.gov/cgi-bin/mgg/gdas_tsea/",
+    "device_type": "NEC CO. LTD. PDR",
+    "metadata_information_link": "http://www.ngdc.noaa.gov/idb/struts/results?op_0=eq&v_0=JARE28L3&t=102697&s=6&d=7",
+    "cruise_start_date": "04/02/1987",
+    "platform": "Shirase",
+    "SID": 53897
+}}'''@en ;
+    skos:notation 'SDN:GGS::53897'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/54289/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/54289/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/54289/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_54289'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "contributing_organization": "REEFGIS",
+    "cruise_ID": "",
+    "year": 2000,
+    "cruise_end_date": "",
+    "chief_scientist": "",
+    "data_download_link": "http://reefgis.reefbase.org/",
+    "device_type": "",
+    "metadata_information_link": "",
+    "cruise_start_date": "",
+    "platform": "",
+    "SID": 54289
+}}'''@en ;
+    skos:notation 'SDN:GGS::54289'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/54646/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/54646/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/54646/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_54646'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "contributing_organization": "IFREMER",
+    "cruise_ID": "",
+    "year": "",
+    "cruise_end_date": "",
+    "chief_scientist": "",
+    "data_download_link": "http://www.ifremer.fr/sismer/UK/donnees_UK.htm",
+    "device_type": "",
+    "metadata_information_link": "",
+    "cruise_start_date": "",
+    "platform": "",
+    "SID": 54646
+}}'''@en ;
+    skos:notation 'SDN:GGS::54646'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/54647/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/54647/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/54647/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_54647'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "contributing_organization": "IFREMER",
+    "cruise_ID": "",
+    "year": "",
+    "cruise_end_date": "",
+    "chief_scientist": "",
+    "data_download_link": "http://www.ifremer.fr/sismer/UK/donnees_UK.htm",
+    "device_type": "",
+    "metadata_information_link": "",
+    "cruise_start_date": "",
+    "platform": "",
+    "SID": 54647
+}}'''@en ;
+    skos:notation 'SDN:GGS::54647'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/54649/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/54649/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/54649/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_54649'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "contributing_organization": "IFREMER",
+    "cruise_ID": "",
+    "year": "",
+    "cruise_end_date": "",
+    "chief_scientist": "",
+    "data_download_link": "http://www.ifremer.fr/sismer/UK/donnees_UK.htm",
+    "device_type": "",
+    "metadata_information_link": "",
+    "cruise_start_date": "",
+    "platform": "",
+    "SID": 54649
+}}'''@en ;
+    skos:notation 'SDN:GGS::54649'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/54650/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/54650/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/54650/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_54650'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "contributing_organization": "IFREMER",
+    "cruise_ID": "",
+    "year": "",
+    "cruise_end_date": "",
+    "chief_scientist": "",
+    "data_download_link": "http://www.ifremer.fr/sismer/UK/donnees_UK.htm",
+    "device_type": "",
+    "metadata_information_link": "",
+    "cruise_start_date": "",
+    "platform": "",
+    "SID": 54650
+}}'''@en ;
+    skos:notation 'SDN:GGS::54650'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/54653/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/54653/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/54653/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_54653'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "contributing_organization": "IFREMER",
+    "cruise_ID": "",
+    "year": "",
+    "cruise_end_date": "",
+    "chief_scientist": "",
+    "data_download_link": "http://www.ifremer.fr/sismer/UK/donnees_UK.htm",
+    "device_type": "",
+    "metadata_information_link": "",
+    "cruise_start_date": "",
+    "platform": "",
+    "SID": 54653
+}}'''@en ;
+    skos:notation 'SDN:GGS::54653'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/54655/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/54655/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/54655/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_54655'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "contributing_organization": "IFREMER",
+    "cruise_ID": "",
+    "year": "",
+    "cruise_end_date": "",
+    "chief_scientist": "",
+    "data_download_link": "http://www.ifremer.fr/sismer/UK/donnees_UK.htm",
+    "device_type": "",
+    "metadata_information_link": "",
+    "cruise_start_date": "",
+    "platform": "",
+    "SID": 54655
+}}'''@en ;
+    skos:notation 'SDN:GGS::54655'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/54658/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/54658/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/54658/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_54658'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "contributing_organization": "IFREMER",
+    "cruise_ID": "",
+    "year": "",
+    "cruise_end_date": "",
+    "chief_scientist": "",
+    "data_download_link": "http://www.ifremer.fr/sismer/UK/donnees_UK.htm",
+    "device_type": "",
+    "metadata_information_link": "",
+    "cruise_start_date": "",
+    "platform": "",
+    "SID": 54658
+}}'''@en ;
+    skos:notation 'SDN:GGS::54658'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/54659/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/54659/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/54659/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_54659'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "contributing_organization": "IFREMER",
+    "cruise_ID": "",
+    "year": "",
+    "cruise_end_date": "",
+    "chief_scientist": "",
+    "data_download_link": "http://www.ifremer.fr/sismer/UK/donnees_UK.htm",
+    "device_type": "",
+    "metadata_information_link": "",
+    "cruise_start_date": "",
+    "platform": "",
+    "SID": 54659
+}}'''@en ;
+    skos:notation 'SDN:GGS::54659'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/54661/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/54661/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/54661/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_54661'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "contributing_organization": "IFREMER",
+    "cruise_ID": "",
+    "year": "",
+    "cruise_end_date": "",
+    "chief_scientist": "",
+    "data_download_link": "http://www.ifremer.fr/sismer/UK/donnees_UK.htm",
+    "device_type": "",
+    "metadata_information_link": "",
+    "cruise_start_date": "",
+    "platform": "",
+    "SID": 54661
+}}'''@en ;
+    skos:notation 'SDN:GGS::54661'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/54663/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/54663/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/54663/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_54663'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "contributing_organization": "IFREMER",
+    "cruise_ID": "",
+    "year": "",
+    "cruise_end_date": "",
+    "chief_scientist": "",
+    "data_download_link": "http://www.ifremer.fr/sismer/UK/donnees_UK.htm",
+    "device_type": "",
+    "metadata_information_link": "",
+    "cruise_start_date": "",
+    "platform": "",
+    "SID": 54663
+}}'''@en ;
+    skos:notation 'SDN:GGS::54663'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/54664/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/54664/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/54664/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_54664'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "contributing_organization": "IFREMER",
+    "cruise_ID": "",
+    "year": "",
+    "cruise_end_date": "",
+    "chief_scientist": "",
+    "data_download_link": "http://www.ifremer.fr/sismer/UK/donnees_UK.htm",
+    "device_type": "",
+    "metadata_information_link": "",
+    "cruise_start_date": "",
+    "platform": "",
+    "SID": 54664
+}}'''@en ;
+    skos:notation 'SDN:GGS::54664'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/54669/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/54669/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/54669/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_54669'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "contributing_organization": "IFREMER",
+    "cruise_ID": "",
+    "year": "",
+    "cruise_end_date": "",
+    "chief_scientist": "",
+    "data_download_link": "http://www.ifremer.fr/sismer/UK/donnees_UK.htm",
+    "device_type": "",
+    "metadata_information_link": "",
+    "cruise_start_date": "",
+    "platform": "",
+    "SID": 54669
+}}'''@en ;
+    skos:notation 'SDN:GGS::54669'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/54671/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/54671/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/54671/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_54671'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "contributing_organization": "IFREMER",
+    "cruise_ID": "",
+    "year": "",
+    "cruise_end_date": "",
+    "chief_scientist": "",
+    "data_download_link": "http://www.ifremer.fr/sismer/UK/donnees_UK.htm",
+    "device_type": "",
+    "metadata_information_link": "",
+    "cruise_start_date": "",
+    "platform": "",
+    "SID": 54671
+}}'''@en ;
+    skos:notation 'SDN:GGS::54671'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/54672/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/54672/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/54672/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_54672'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "contributing_organization": "IFREMER",
+    "cruise_ID": "",
+    "year": "",
+    "cruise_end_date": "",
+    "chief_scientist": "",
+    "data_download_link": "http://www.ifremer.fr/sismer/UK/donnees_UK.htm",
+    "device_type": "",
+    "metadata_information_link": "",
+    "cruise_start_date": "",
+    "platform": "",
+    "SID": 54672
+}}'''@en ;
+    skos:notation 'SDN:GGS::54672'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/54673/3/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/54673/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/54673/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_08 data source SID_54673'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "contributing_organization": "IFREMER",
+    "cruise_ID": "",
+    "year": "",
+    "cruise_end_date": "",
+    "chief_scientist": "",
+    "data_download_link": "http://www.ifremer.fr/sismer/UK/donnees_UK.htm",
+    "device_type": "",
+    "metadata_information_link": "",
+    "cruise_start_date": "",
+    "platform": "",
+    "SID": 54673
+}}'''@en ;
+    skos:notation 'SDN:GGS::54673'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID0/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID0/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID0/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_0'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "SRTM30_plus v5. Becker, J. J., D. T. Sandwell, W. H. F. Smith, J. Braud, B. Binder, J. Depner, D. Fabre, J. Factor, S. Ingalls, S-H. Kim, R. Ladner, K. Marks, S. Nelson, A. Pharaoh, R. Trimmer, J. Von Rosenberg, G. Wallace, P. Weatherall., Global Bathymetry and Elevation Data at 30 Arc Seconds Resolution: SRTM30_PLUS, Marine Geodesy, 32:4, 355-371, 2009; http://topex.ucsd.edu/WWW_html/srtm30_plus.html",
+    "definition": "The grid value at this location is based on a gridded data set developed from a database of ship-track soundings with interpolation between soundings guided by satellite-derived gravity data. At this location in the grid, the data value is based on interpolation."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID110/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID110/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID110/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_110'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Bathymetric compilations of the seas around Israel I: The Caspian and Black Seas, J.K. Hall, Geological Survey of Israel, Current Research, Vol. 13, December 2002.",
+    "definition": "The grid value at this location is taken from a gridded data set for the Caspian Sea region. This grid has been generated from a data set of soundings using a kriging gridding algorithm. GEBCO Source Identifier (SID) grid cells that contain a sounding(s) from the Caspian Sea source data set are coded as \'1100\'."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID110'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID1100/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID1100/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID1100/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_1100'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Bathymetric compilations of the seas around Israel I: The Caspian and Black Seas, J.K. Hall, Geological Survey of Israel, Current Research, Vol. 13, December 2002.",
+    "definition": "The grid value at this location is taken from a gridded data set for the Caspian Sea area. The grid cell at this location contains a sounding(s) from the Caspian Sea source data set. For the Caspian Sea grid, cells that do not contain a sounding(s) are coded as \'110\'."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID1100'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID120/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID120/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID120/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_120'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Bathymetric compilations of the seas around Israel I: The Caspian and Black Seas, J.K. Hall, Geological Survey of Israel, Current Research, Vol. 13, December 2002.",
+    "definition": "The grid value at this location is taken from a gridded data set for the Black Sea region. This grid has been generated from a data set of soundings using a kriging gridding algorithm. SID grid cells that contain a sounding(s) from the Black Sea source data set are coded as \'1200\'."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID120'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID1200/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID1200/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID1200/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_1200'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Bathymetric compilations of the seas around Israel I: The Caspian and Black Seas, J.K. Hall, Geological Survey of Israel, Current Research, Vol. 13, December 2002.",
+    "definition": "The grid value at this location is taken from a gridded data set for the Black Sea area. The grid cell at this location contains a sounding(s) from the Black Sea source data set. For the Black Sea, GEBCO Source Identifier (SID) grid cells that do not contain a sounding(s) are coded as \'120\'."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID1200'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID130/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID130/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID130/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_130'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Schenke, Hans Werner; Hinze, Heinrich; Dijkstra, Semme J; Hoppmann, Bernd; Niederjasper, Fred; Schöne, Tilo (1997): AWI Bathymetric Chart of the Weddell Sea, Antarctica (BCWS). Alfred Wegener Institute, Helmholtz Center for Polar and Marine Research, Bremerhaven, doi:10.1594/PANGAEA.708081",
+    "definition": "The grid value at this location is taken from the GEBCO_08 Grid. In this region, the GEBCO_08 Grid is based on a gridded data set for the Weddell Sea area. This grid has been generated from a data set of bathymetric contours based largely on multibeam and single beam bathymetric surveys. SID grid cells that contain trackline control from the Weddell Sea source data set are coded as \'1300\'."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID130'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID1300/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID1300/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID1300/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_1300'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Schenke, Hans Werner; Hinze, Heinrich; Dijkstra, Semme J; Hoppmann, Bernd; Niederjasper, Fred; Schöne, Tilo (1997): AWI Bathymetric Chart of the Weddell Sea, Antarctica (BCWS). Alfred Wegener Institute, Helmholtz Center for Polar and Marine Research, Bremerhaven, doi:10.1594/PANGAEA.708081",
+    "definition": "The grid value at this location is taken from the GEBCO_08 Grid. In this area the GEBCO_08 Grid is based on a gridded data set for the Weddell Sea area. This grid has been generated from a data set of bathymetric contours based largely on multibeam and single-beam bathymetric surveys. The grid cell at this location is \'crossed\' by trackline control information, i.e. survey track or isolated sounding, from the Weddell Sea source data set. For the Weddell Sea grid, cells that do not contain trackline control are coded as \'130\'."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID1300'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID1400/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID1400/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID1400/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_1400'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Whiteway, T., (2009), Australian Bathymetry and Topography Grid, June 2009. Scale 1:5000000. Geoscience Australia, Canberra. http://dx.doi.org/10.4225/25/53D99B6581B9A",
+    "definition": "The grid value at this location is taken from the Geoscience Australia grid \'Australian Bathymetry and Topography Grid, June 2009\'."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID1400'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID1500/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID1500/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID1500/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_1500'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "East Asia Hydrographic Commission. http://home.eahc.asia/",
+    "definition": "The grid value at this location is based on soundings from Electronic Navigation Charts (ENCs) supplied by the East Asia Hydrographic Commission."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID1500'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID1550/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID1550/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID1550/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_1550'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "East Asia Hydrographic Commission. http://home.eahc.asia/",
+    "definition": "The grid value at this location is based on bathymetric contours from Electronic Navigation Charts (ENCs) supplied by the East Asia Hydrographic Commission."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID1550'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID1600/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID1600/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID1600/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_1600'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "http://www.ngdc.noaa.gov/mgg/greatlakes/",
+    "definition": "The grid value at this location is based on a gridded data set for the North American Great Lakes."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID1600'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID1700/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID1700/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID1700/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_1700'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "The quest for the Africa-Eurasia plate boundary west of the Strait of Gibraltar: Zitellini, N., Gràcia, E., Matias, L., Terrinha, P., Abreu, M.A., DeAlteriis, G., Henriet, J.P., Dañobeitia, J.J., Masson, D.G., Mulder, T., Ramella, R., Somoza, L. and Diez, S. (2009). Earth and Planetary Science Letters, 280, (1-4), 13-50. ( doi:10.1016/j.epsl.2008.12.005 )",
+    "definition": "The grid value at this location is based on gridded data from the Gulf of Cadiz gridded data set: \'The quest for the Africa-Eurasia plate boundary west of the Strait of Gibraltar\'."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID1700'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID1800/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID1800/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID1800/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_1800'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Timothy J. Henstock, Lisa C. McNeill, and David R. Tappin, Seafloor morphology of the Sumatran subduction zone: Surface rupture during megathrust earthquakes? Geology, v34, pp485-488, 2006.",
+    "definition": "The grid value at this location is based on multibeam data from the 2004 cruise of HMS Scott."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID1800'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID1900/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID1900/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID1900/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_1900'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Jakobsson, M., L. A. Mayer, B. Coakley, J. A. Dowdeswell, S. Forbes, B. Fridman, H. Hodnesdal, R. Noormets, R. Pedersen, M. Rebesco, H.-W. Schenke, Y. Zarayskaya A, D. Accettella, A. Armstrong, R. M. Anderson, P. Bienhoff, A. Camerlenghi, I. Church, M. Edwards, J. V. Gardner, J. K. Hall, B. Hell, O. B. Hestvik, Y. Kristoffersen, C. Marcussen, R. Mohammad, D. Mosher, S. V. Nghiem, M. T. Pedrosa, P. G. Travaglini, and P. Weatherall,The International Bathymetric Chart of the Arctic Ocean (IBCAO) Version 3.0, Geophysical Research Letters, doi: 10.1029/2012GL052219. http://www.ibcao.org",
+    "definition": "The grid value at this location is taken from the International Bathymetric Chart of the Arctic Ocean (IBCAO) V3 grid and is based on interpolation."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID1900'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID1910/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID1910/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID1910/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_1910'@en ;
+    skos:definition '{"node": {"definition": "The grid value at this location is based on multibeam data"}}'@en ;
+    skos:notation 'SDN:GGS::SID1910'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID1920/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID1920/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID1920/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_1920'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Jakobsson, M., L. A. Mayer, B. Coakley, J. A. Dowdeswell, S. Forbes, B. Fridman, H. Hodnesdal, R. Noormets, R. Pedersen, M. Rebesco, H.-W. Schenke, Y. Zarayskaya A, D. Accettella, A. Armstrong, R. M. Anderson, P. Bienhoff, A. Camerlenghi, I. Church, M. Edwards, J. V. Gardner, J. K. Hall, B. Hell, O. B. Hestvik, Y. Kristoffersen, C. Marcussen, R. Mohammad, D. Mosher, S. V. Nghiem, M. T. Pedrosa, P. G. Travaglini, and P. Weatherall,The International Bathymetric Chart of the Arctic Ocean (IBCAO) Version 3.0, Geophysical Research Letters, doi: 10.1029/2012GL052219. http://www.ibcao.org; Arndt, J.E., H. W. Schenke, M. Jakobsson, F. Nitsche, G. Buys, B. Goleby, M. Rebesco, F. Bohoyo, J.K. Hong, J. Black, R. Greku, G. Udintsev, F. Barrios, W. Reynoso-Peralta, T. Morishita, R. Wigley, The International Bathymetric Chart of the Southern Ocean (IBCSO) Version 1.0 - A new bathymetric compilation covering circum-Antarctic waters, Geophysical Research Letters, doi: 10.1002/grl.50413, http://www.ibcso.org",
+    "definition": "The grid value at this location is based on single beam data from either the International Bathymetric Chart of the Arctic Ocean (IBCAO) V3 grid or the International Bathymetric Chart of the Southern Ocean (IBCSO) V1 grid."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID1920'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID1940/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID1940/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID1940/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_1940'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Arndt, J.E., H. W. Schenke, M. Jakobsson, F. Nitsche, G. Buys, B. Goleby, M. Rebesco, F. Bohoyo, J.K. Hong, J. Black, R. Greku, G. Udintsev, F. Barrios, W. Reynoso-Peralta, T. Morishita, R. Wigley, The International Bathymetric Chart of the Southern Ocean (IBCSO) Version 1.0 - A new bathymetric compilation covering circum-Antarctic waters, Geophysical Research Letters, doi: 10.1002/grl.50413, http://www.ibcso.org",
+    "definition": "The grid value at this location is taken from the International Bathymetric Chart of the Southern Ocean (IBCSO) V1 grid and is based on depth data from digital bathymetric models."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID1940'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID1950/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID1950/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID1950/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_1950'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Jakobsson, M., L. A. Mayer, B. Coakley, J. A. Dowdeswell, S. Forbes, B. Fridman, H. Hodnesdal, R. Noormets, R. Pedersen, M. Rebesco, H.-W. Schenke, Y. Zarayskaya A, D. Accettella, A. Armstrong, R. M. Anderson, P. Bienhoff, A. Camerlenghi, I. Church, M. Edwards, J. V. Gardner, J. K. Hall, B. Hell, O. B. Hestvik, Y. Kristoffersen, C. Marcussen, R. Mohammad, D. Mosher, S. V. Nghiem, M. T. Pedrosa, P. G. Travaglini, and P. Weatherall,The International Bathymetric Chart of the Arctic Ocean (IBCAO) Version 3.0, Geophysical Research Letters, doi: 10.1029/2012GL052219. http://www.ibcao.org",
+    "definition": "The grid value at this location is taken from  the  International Bathymetric Chart of the Arctic Ocean (IBCAO) V3 grid and is based on depth contours from digitised charts."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID1950'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID2000/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID2000/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID2000/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_2000'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Olex AS, Norway",
+    "definition": "The grid value at this location is based on Olex data."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID2000'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID2100/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID2100/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID2100/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_2100'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Wessel, P., and W. H. F. Smith , Free software helps map and display data, EOS Trans. Amer. Geophys. U., vol. 72 (41), pp. 441, 445-446,1991. http://gmt.soest.hawaii.edu/",
+    "definition": "The grid value at this location is based on interpolation using an adjustable tension continuous curvature surface gridding algorithm \'surface\' from Generic Mapping Tools (GMT)."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID2100'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID2200/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID2200/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID2200/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_2200'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Ryan, W. B. F., et al. (2009) , Global Multi-Resolution Topography synthesis, Geochem. Geophys. Geosyst., 10, Q03014. doi:10.1029/2008GC002332. http://www.marine-geo.org/portals/gmrt/",
+    "definition": "The grid value at this location is based on data from the Lamont-Doherty Earth Observatory (LDEO) of Columbia University, Global Multi-Resolution Topography Synthesis."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID2200'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID2300/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID2300/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID2300/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_2300'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "https://jetstream.gsi.ie/iwdds/index.html",
+    "definition": "The grid value at this location is based on a gridded bathymetric data set for Irish designated waters, based on multibeam surveys, provided by the Geological Survey of Ireland. The data set is included as part of the EMODnet 2013 Grid."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID2300'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID3100/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID3100/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID3100/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_3100'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Arndt, J.E., H. W. Schenke, M. Jakobsson, F. Nitsche, G. Buys, B. Goleby, M. Rebesco, F. Bohoyo, J.K. Hong, J. Black, R. Greku, G. Udintsev, F. Barrios, W. Reynoso-Peralta, T. Morishita, R. Wigley, The International Bathymetric Chart of the Southern Ocean (IBCSO) Version 1.0 - A new bathymetric compilation covering circum-Antarctic waters, Geophysical Research Letters, doi: 10.1002/grl.50413 http://www.ibcso.org",
+    "definition": "The grid value at this location is taken from the International Bathymetric Chart of the Southern Ocean (IBCSO) V1 grid and is based on data from nautical charts."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID3100'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID3200/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID3200/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID3200/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_3200'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Arndt, J.E., H. W. Schenke, M. Jakobsson, F. Nitsche, G. Buys, B. Goleby, M. Rebesco, F. Bohoyo, J.K. Hong, J. Black, R. Greku, G. Udintsev, F. Barrios, W. Reynoso-Peralta, T. Morishita, R. Wigley, The International Bathymetric Chart of the Southern Ocean (IBCSO) Version 1.0 - A new bathymetric compilation covering circum-Antarctic waters, Geophysical Research Letters, doi: 10.1002/grl.50413. http://www.ibcso.org",
+    "definition": "The grid value at this location is taken from the International Bathymetric Chart of the Southern Ocean (IBCSO) V1 grid and is based on steering points."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID3200'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID3300/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID3300/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID3300/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_3300'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Arndt, J.E., H. W. Schenke, M. Jakobsson, F. Nitsche, G. Buys, B. Goleby, M. Rebesco, F. Bohoyo, J.K. Hong, J. Black, R. Greku, G. Udintsev, F. Barrios, W. Reynoso-Peralta, T. Morishita, R. Wigley, The International Bathymetric Chart of the Southern Ocean (IBCSO) Version 1.0 - A new bathymetric compilation covering circum-Antarctic waters, Geophysical Research Letters, doi: 10.1002/grl.50413. http://www.ibcso.org",
+    "definition": "The grid value at this location is taken from the International Bathymetric Chart of the Southern Ocean (IBCSO) V1 grid and is based on interpolation."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID3300'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID3400/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID3400/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID3400/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_3400'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Arndt, J.E., H. W. Schenke, M. Jakobsson, F. Nitsche, G. Buys, B. Goleby, M. Rebesco, F. Bohoyo, J.K. Hong, J. Black, R. Greku, G. Udintsev, F. Barrios, W. Reynoso-Peralta, T. Morishita, R. Wigley, The International Bathymetric Chart of the Southern Ocean (IBCSO) Version 1.0 - A new bathymetric compilation covering circum-Antarctic waters, Geophysical Research Letters, doi: 10.1002/grl.50413. http://www.ibcso.org",
+    "definition": "The grid value at this location is taken from the International Bathymetric Chart of the Southern Ocean (IBCSO) v1 grid and is based on data from the GEBCO_08 Grid. In this region, the GEBCO_08 Grid is based on interpolation guided by satellite-derived gravity data."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID3400'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID3450/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID3450/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID3450/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_3450'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Arndt, J.E., H. W. Schenke, M. Jakobsson, F. Nitsche, G. Buys, B. Goleby, M. Rebesco, F. Bohoyo, J.K. Hong, J. Black, R. Greku, G. Udintsev, F. Barrios, W. Reynoso-Peralta, T. Morishita, R. Wigley,The International Bathymetric Chart of the Southern Ocean (IBCSO) Version 1.0 - A new bathymetric compilation covering circum-Antarctic waters, Geophysical Research Letters,doi: 10.1002/grl.50413. http://www.ibcso.org",
+    "definition": "The grid value at this location is taken from the  International Bathymetric Chart of the Southern Ocean (IBCSO) v1 grid and is based on data from the GEBCO_08 Grid. At this location, the GEBCO_08 is based on measured sounding data."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID3450'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID3500/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID3500/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID3500/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_3500'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Bedmap2: Fretwell, P., Pritchard, H. D. et al.,  Bedmap2: improved ice bed, surface and thickness datasets for Antarctica, The Cryosphere, 7, 375-393, doi:10.5194/tc-7-375-2013, 2013.",
+    "definition": "The grid value at this location is taken from the the International Bathymetric Chart of the Southern Ocean (IBCSO) v1 grid and is based on data from the Bedmap2 data set."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID3500'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID3600/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID3600/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID3600/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_3600'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Arndt, J.E., H. W. Schenke, M. Jakobsson, F. Nitsche, G. Buys, B. Goleby, M. Rebesco, F. Bohoyo, J.K. Hong, J. Black, R. Greku, G. Udintsev, F. Barrios, W. Reynoso-Peralta, T. Morishita, R. Wigley, The International Bathymetric Chart of the Southern Ocean (IBCSO) Version 1.0 - A new bathymetric compilation covering circum-Antarctic waters, Geophysical Research Letters, doi: 10.1002/grl.50413. http://www.ibcso.org",
+    "definition": "The grid value at this location is taken from the International Bathymetric Chart of the Southern Ocean (IBCSO) v1 grid and is based on other grids and data sets."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID3600'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID3700/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID3700/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID3700/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_3700'@en ;
+    skos:definition '{"node": {"definition": "The grid value at this location is based on control contours used to help constrain the grid interpolation process using Generic Mapping Tool\'s \'surface\' gridding algorithm."}}'@en ;
+    skos:notation 'SDN:GGS::SID3700'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID3800/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID3800/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID3800/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_3800'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Schaap, D. M. A., and E. Moussat (2013), EMODNet Hydrography-Seabed Mapping-Developing a higher resolution digital bathymetry for the European seas, Geophys. Res., Abstracts, vol. 15, EGU2013-3620, EGU General Assembly 2013, Vienna, Austria. www.emodnet-hydrography.eu",
+    "definition": "The grid value at this location is based on data from EMODnet 2013 Grid."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID3800'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID3900/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID3900/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID3900/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_3900'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Baltic Sea Hydrographic Commission, 2013, Baltic Sea Bathymetry Database version 0.9.3. Downloaded from http://data.bshc.pro/",
+    "definition": "The grid value at this location is taken from the Baltic Sea Bathymetric Database grid."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID3900'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID4000/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID4000/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID4000/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_4000'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Version 2.0 of the GEBCO One Minute Grid (November 2008), http://www.gebco.net/data_and_products/gridded_bathymetry_data/",
+    "definition": "The grid value at this location is based on the GEBCO One Minute Grid."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID4000'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID4100/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID4100/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID4100/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_4100'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "IOC, IHO, and BODC(2003), Centenary Edition of the GEBCO Digital Atlas, Published on CD-ROM on Behalf of the Intergovernmental Oceanographic Commission and the International Hydrographic Organization as Part of the General Bathymetric Chart of the Oceans, British Oceanographic Data Centre, Liverpool, U. K. http://www.gebco.net/data_and_products/gebco_digital_atlas/",
+    "definition": "The grid value at this location is based on bathymetric contours from the Centenary Edition of the GEBCO Digital Atlas."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID4100'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID4200/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID4200/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID4200/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_4200'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "International Bathymetric Chart of the Mediterranean (IBCM) Published in 1981 by the Head Department of Navigation and Oceanography, St. Petersburg, Russia on behalf of the Intergovernmental Oceanographic Commission (IOC). http://www.ngdc.noaa.gov/mgg/ibcm/",
+    "definition": "The grid value at this location is based on bathymetric contours from the International Bathymetric Chart of the Mediterranean (IBCM)."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID4200'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID4300/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID4300/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID4300/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_4300'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "CD118 - bathymetry data collected by RRS Charles Darwin cruise CD118 in May 1999 for the Anton Dohrn Seamount, Iceland Basin, Hatton Bank, Lousy Bank area of the Northeast Atlantic Ocean. Data collected by the Southampton Oceanography Centre (now the National Oceanography Centre, Southampton) using a Simrad EM12 S-120 multibeam echosounder",
+    "definition": "The grid value at this location is based on multibeam data from RRS Charles Darwin cruise CD118."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID4300'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID4400/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID4400/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID4400/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_4400'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Soundings from Electronic Navigation Charts (ENCs) supplied by the  Servicio Hidrografico y Oceanografico de la Armada de Chile. http://www.shoa.cl/index.htm",
+    "definition": "The grid value at this location is based on soundings from Electronic Navigation Charts (ENCs) supplied by the  Servicio Hidrografico y Oceanografico de la Armada de Chile."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID4400'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID4500/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID4500/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID4500/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_4500'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Japan Oceanographic Data Center (JODC) of the Japan Coast Guard. http://www.jodc.go.jp/",
+    "definition": "The grid value at this location is based on a gridded data set supplied by the Japan Oceanographic Data Center (JODC) of the Japan Coast Guard. In this region the grid is based on multibeam data."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID4500'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID4550/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID4550/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID4550/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_4550'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "Japan Oceanographic Data Center (JODC) of the Japan Coast Guard. http://www.jodc.go.jp/.  www.jodc.go.jp/data_set/jodc/jegg_intro.html",
+    "definition": "The grid value at this location is based on a gridded data set supplied by the Japan Oceanographic Data Center (JODC) of the Japan Coast Guard. In this region the grid is based on the J-EGG500 grid JODC-Expert Grid data for Geographic -500m."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID4550'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GGS/current/SID9999/2/> .
+<http://vocab.nerc.ac.uk/collection/GGS/current/SID9999/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GGS/current/SID9999/>;
+    dc:modified '2016-03-14T10:38:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEBCO_data_source_ID_9999'@en ;
+    skos:definition '''{"node": {
+    "references_and_links": "SRTM30_plus v5. Becker, J. J., D. T. Sandwell, W. H. F. Smith, J. Braud, B. Binder, J. Depner, D. Fabre, J. Factor, S. Ingalls, S-H. Kim, R. Ladner, K. Marks, S. Nelson, A. Pharaoh, R. Trimmer, J. Von Rosenberg, G. Wallace, P. Weatherall., Global Bathymetry and Elevation Data at 30 Arc Seconds Resolution: SRTM30_PLUS, Marine Geodesy, 32:4, 355-371, 2009",
+    "definition": "The grid value at this location is based on a gridded data set developed from a database of ship-track soundings with interpolation between soundings guided by satellite-derived gravity data. At this location, the grid cell has been constrained by bathymetric sounding(s) data during the gridding process."
+}}'''@en ;
+    skos:notation 'SDN:GGS::SID9999'^^xsd:string .

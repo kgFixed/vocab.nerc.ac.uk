@@ -1,0 +1,282 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C38/2017_01_01_00_00_00_2017_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C38/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2017-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH7033/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH7033/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH7033/>;
+    dc:modified '2017-12-04T17:00:30'^^xsd:dateTime ;
+    skos:altLabel 'Borno'^^xsd:string ;
+    skos:prefLabel 'Borno'@en ;
+    skos:definition '''{"node": {
+    "country": "Sweden",
+    "latitude": 58.380083,
+    "longitude": 11.578786
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH7033'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6993/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6993/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6993/>;
+    dc:modified '2017-09-18T16:13:27'^^xsd:dateTime ;
+    skos:altLabel 'Pornichet'^^xsd:string ;
+    skos:prefLabel 'Pornichet'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "latitude": 47.258117,
+    "longitude": -2.348033
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6993'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6973/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6973/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6973/>;
+    dc:modified '2017-09-12T12:26:55'^^xsd:dateTime ;
+    skos:altLabel 'Cirkewwa'^^xsd:string ;
+    skos:prefLabel 'Cirkewwa'@en ;
+    skos:definition '''{"node": {
+    "country": "Malta",
+    "latitude": 35.9889,
+    "longitude": 14.3294
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6973'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6933/2/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6933/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6933/>;
+    dc:modified '2017-08-10T14:08:13'^^xsd:dateTime ;
+    skos:altLabel 'Yomra'^^xsd:string ;
+    skos:prefLabel 'Yomra'@en ;
+    skos:definition '''{"node": {
+    "country": "Turkey",
+    "latitude": 40.96023,
+    "longitude": 39.855095
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6933'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6413/2/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6413/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6413/>;
+    dc:modified '2017-08-10T12:34:49'^^xsd:dateTime ;
+    skos:altLabel 'Aber-Wrac\'h'^^xsd:string ;
+    skos:prefLabel 'Aber-Wrac\'h'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "latitude": 48.59781,
+    "longitude": -4.56235
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6413'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6913/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6913/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6913/>;
+    dc:modified '2017-08-09T17:44:46'^^xsd:dateTime ;
+    skos:altLabel 'Ambitle'^^xsd:string ;
+    skos:prefLabel 'Ambitle'@en ;
+    skos:definition '''{"node": {
+    "country": "Papua New Guinea",
+    "notes": "Small island where our ship sometimes have to anchor offshore",
+    "latitude": -4.078,
+    "longitude": 153.615
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6913'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6914/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6914/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6914/>;
+    dc:modified '2017-08-09T17:44:46'^^xsd:dateTime ;
+    skos:altLabel 'Bassas da India'^^xsd:string ;
+    skos:prefLabel 'Bassas da India'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "notes": "Mozambique Channel atoll, French ship sometimes have to ahchor offshore this atoll",
+    "latitude": -21.48,
+    "longitude": 39.688
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6914'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6915/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6915/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6915/>;
+    dc:modified '2017-08-09T17:44:46'^^xsd:dateTime ;
+    skos:altLabel 'Crozet'^^xsd:string ;
+    skos:prefLabel 'Crozet'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "notes": "Ships have to Anchor offshore for supplying French base on the island",
+    "latitude": -46.4063,
+    "longitude": 51.7542
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6915'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6916/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6916/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6916/>;
+    dc:modified '2017-08-09T17:44:46'^^xsd:dateTime ;
+    skos:altLabel 'Europa'^^xsd:string ;
+    skos:prefLabel 'Europa'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "notes": "Mozambique Channel French island - Ships have to Anchor offshore",
+    "latitude": -22.3654,
+    "longitude": 40.3529
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6916'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6917/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6917/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6917/>;
+    dc:modified '2017-08-09T17:44:46'^^xsd:dateTime ;
+    skos:altLabel 'Glorieuses'^^xsd:string ;
+    skos:prefLabel 'Glorieuses'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "notes": "Mozambique Channel French island - Ships have to Anchor offshore",
+    "latitude": -11.551,
+    "longitude": 47.332
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6917'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6918/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6918/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6918/>;
+    dc:modified '2017-08-09T17:44:46'^^xsd:dateTime ;
+    skos:altLabel 'Juan de Nova'^^xsd:string ;
+    skos:prefLabel 'Juan de Nova'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "notes": "Mozambique Channel French island - Ships have to Anchor offshore",
+    "latitude": -17.053,
+    "longitude": 42.724
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6918'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6919/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6919/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6919/>;
+    dc:modified '2017-08-09T17:44:46'^^xsd:dateTime ;
+    skos:altLabel 'Saint-Guénolé'^^xsd:string ;
+    skos:prefLabel 'Saint-Guénolé'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "notes": "Small fishing harbour in Brittany",
+    "latitude": 47.819,
+    "longitude": -4.374
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6919'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6893/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6893/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6893/>;
+    dc:modified '2017-08-09T17:44:46'^^xsd:dateTime ;
+    skos:altLabel 'Saint-Paul'^^xsd:string ;
+    skos:prefLabel 'Saint-Paul'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "notes": "Kerguelen island, Ships have to Anchor offshore for supplyng French base on the island",
+    "latitude": -38.7195,
+    "longitude": 77.519
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6893'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6920/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6920/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6920/>;
+    dc:modified '2017-08-09T17:44:46'^^xsd:dateTime ;
+    skos:altLabel 'Tromelin'^^xsd:string ;
+    skos:prefLabel 'Tromelin'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "notes": "Indian Ocean small island - Ships have to Anchor offshore",
+    "latitude": -15.892,
+    "longitude": 54.524
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6920'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6921/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6921/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6921/>;
+    dc:modified '2017-08-09T17:44:46'^^xsd:dateTime ;
+    skos:altLabel 'Wallis'^^xsd:string ;
+    skos:prefLabel 'Wallis'@en ;
+    skos:definition '''{"node": {
+    "country": "Wallis and Futuna",
+    "notes": "Ships have to anchor offshore",
+    "latitude": -13.2796,
+    "longitude": -176.2025
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6921'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6232/2/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6232/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6232/>;
+    dc:modified '2017-01-04T16:30:20'^^xsd:dateTime ;
+    skos:altLabel 'Trébeurden'^^xsd:string ;
+    skos:prefLabel 'Trébeurden'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "latitude": 48.770688,
+    "longitude": -3.586608
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6232'^^xsd:string .

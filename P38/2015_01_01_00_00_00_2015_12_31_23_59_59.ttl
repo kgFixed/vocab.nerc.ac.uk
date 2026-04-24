@@ -1,0 +1,309 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P38/2015_01_01_00_00_00_2015_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/atmosphere/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/atmosphere/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/atmosphere/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere'@en ;
+    skos:definition 'The vertical region between the surface of the Earth and the top of the atmosphere.'@en ;
+    skos:notation 'SDN:P38::atmosphere'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/atmosphere_boundary_layer/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/atmosphere_boundary_layer/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/atmosphere_boundary_layer/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_boundary_layer'@en ;
+    skos:definition 'The (atmosphere) planetary boundary layer.'@en ;
+    skos:notation 'SDN:P38::atmosphere_boundary_layer'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/atmosphere_layer/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/atmosphere_layer/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/atmosphere_layer/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_layer'@en ;
+    skos:definition 'Layer means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well.'@en ;
+    skos:notation 'SDN:P38::atmosphere_layer'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/bedrock/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/bedrock/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/bedrock/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'bedrock'@en ;
+    skos:definition 'Bedrock is the solid Earth surface beneath land ice or ocean water.'@en ;
+    skos:notation 'SDN:P38::bedrock'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/canopy/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/canopy/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/canopy/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'canopy'@en ;
+    skos:definition 'Canopy means the plant or vegetation canopy.'@en ;
+    skos:notation 'SDN:P38::canopy'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/cloud_base/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/cloud_base/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/cloud_base/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'cloud_base'@en ;
+    skos:definition 'The base of the lowest cloud.'@en ;
+    skos:notation 'SDN:P38::cloud_base'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/cloud_top/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/cloud_top/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/cloud_top/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'cloud_top'@en ;
+    skos:definition 'The top of the highest cloud.'@en ;
+    skos:notation 'SDN:P38::cloud_top'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/convective_cloud_base/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/convective_cloud_base/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/convective_cloud_base/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'convective_cloud_base'@en ;
+    skos:definition 'The base of the lowest convective cloud.'@en ;
+    skos:notation 'SDN:P38::convective_cloud_base'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/convective_cloud_top/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/convective_cloud_top/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/convective_cloud_top/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'convective_cloud_top'@en ;
+    skos:definition 'The top of the highest convective cloud.'@en ;
+    skos:notation 'SDN:P38::convective_cloud_top'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/equilibrium_line/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/equilibrium_line/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/equilibrium_line/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'equilibrium_line'@en ;
+    skos:definition 'The equilibrium line is the locus of points on a land ice surface at which ice accumulation balances ice ablation over the year.'@en ;
+    skos:notation 'SDN:P38::equilibrium_line'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/freezing_level/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/freezing_level/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/freezing_level/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'freezing_level'@en ;
+    skos:definition 'The vertical location of the zero degrees Celsius isotherm.'@en ;
+    skos:notation 'SDN:P38::freezing_level'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/geoid/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/geoid/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/geoid/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'geoid'@en ;
+    skos:definition 'The geoid is a surface of constant geopotential with which mean sea level would coincide if the ocean were at rest.'@en ;
+    skos:notation 'SDN:P38::geoid'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/ionosphere/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/ionosphere/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/ionosphere/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ionosphere'@en ;
+    skos:definition 'The vertical region of the atmosphere that is ionized by solar and cosmic radiation, usually at an altitude of between 75 and 1000 km above the surface of the Earth.'@en ;
+    skos:notation 'SDN:P38::ionosphere'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/middle_atmosphere/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/middle_atmosphere/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/middle_atmosphere/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'middle_atmosphere'@en ;
+    skos:definition 'The vertical region comprising the troposphere and the stratosphere together.'@en ;
+    skos:notation 'SDN:P38::middle_atmosphere'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/ocean/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/ocean/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/ocean/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ocean'@en ;
+    skos:definition 'The vertical region between the sea surface and the sea floor.'@en ;
+    skos:notation 'SDN:P38::ocean'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/ocean_layer/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/ocean_layer/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/ocean_layer/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ocean_layer'@en ;
+    skos:definition 'Layer"" means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well.'@en ;
+    skos:notation 'SDN:P38::ocean_layer'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/ocean_mixed_layer/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/ocean_mixed_layer/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/ocean_mixed_layer/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ocean_mixed_layer'@en ;
+    skos:definition 'The ocean mixed layer is the upper part of the ocean, regarded as being well-mixed.'@en ;
+    skos:notation 'SDN:P38::ocean_mixed_layer'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/ocean_rigid_lid/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/ocean_rigid_lid/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/ocean_rigid_lid/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ocean_rigid_lid'@en ;
+    skos:definition 'The upper surface of an ocean model, assuming that it is bounded above by a rigid lid.'@en ;
+    skos:notation 'SDN:P38::ocean_rigid_lid'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/permafrost_layer/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/permafrost_layer/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/permafrost_layer/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'permafrost_layer'@en ;
+    skos:definition 'Permafrost is soil or rock that has remained at a temperature at or below zero degrees Celsius throughout the seasonal cycle for two or more years.'@en ;
+    skos:notation 'SDN:P38::permafrost_layer'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/reference_ellipsoid/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/reference_ellipsoid/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/reference_ellipsoid/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'reference_ellipsoid'@en ;
+    skos:definition 'A reference ellipsoid is a regular mathematical figure that approximates the irregular shape of the geoid. A number of reference ellipsoids are defined for use in the field of geodesy.'@en ;
+    skos:notation 'SDN:P38::reference_ellipsoid'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/sea_floor/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/sea_floor/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/sea_floor/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_floor'@en ;
+    skos:definition 'The lower boundary of the ocean.'@en ;
+    skos:notation 'SDN:P38::sea_floor'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/sea_level/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/sea_level/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/sea_level/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_level'@en ;
+    skos:definition 'sea_level means mean sea level, which is close to the geoid in sea areas.'@en ;
+    skos:notation 'SDN:P38::sea_level'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/soil_layer/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/soil_layer/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/soil_layer/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'soil_layer'@en ;
+    skos:definition 'Layer means any layer with upper and lower boundaries that have constant values in some vertical coordinate. There must be a vertical coordinate variable indicating the extent of the layer(s). If the layers are model layers, the vertical coordinate can be model_level_number, but it is recommended to specify a physical coordinate (in a scalar or auxiliary coordinate variable) as well. Quantities defined for a soil layer must have a vertical coordinate variable with boundaries indicating the extent of the layer(s).'@en ;
+    skos:notation 'SDN:P38::soil_layer'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/stratosphere/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/stratosphere/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/stratosphere/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'stratosphere'@en ;
+    skos:definition 'The vertical region between the tropopause and the stratopause.'@en ;
+    skos:notation 'SDN:P38::stratosphere'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/surface/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/surface/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/surface/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface'@en ;
+    skos:definition 'The lower boundary of the atmosphere.'@en ;
+    skos:notation 'SDN:P38::surface'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/toa/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/toa/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/toa/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'toa'@en ;
+    skos:definition 'Abbreviation for top of atmosphere.'@en ;
+    skos:notation 'SDN:P38::toa'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/tropopause/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/tropopause/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/tropopause/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tropopause'@en ;
+    skos:definition 'The upper boundary of the troposphere.'@en ;
+    skos:notation 'SDN:P38::tropopause'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P38/current/troposphere/1/> .
+<http://vocab.nerc.ac.uk/collection/P38/current/troposphere/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P38/current/troposphere/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'troposphere'@en ;
+    skos:definition 'The vertical region between the surface of the Earth and the tropopause.'@en ;
+    skos:notation 'SDN:P38::troposphere'^^xsd:string .

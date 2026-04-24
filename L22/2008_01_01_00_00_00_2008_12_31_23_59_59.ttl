@@ -1,0 +1,84 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2008_01_01_00_00_00_2008_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0014/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0014/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0014/>;
+    dc:modified '2008-11-28T07:54:52'^^xsd:dateTime ;
+    skos:altLabel 'Munro gauge'^^xsd:string ;
+    skos:prefLabel 'Munro tide gauge'@en ;
+    skos:definition 'The Munro gauge measures sea level by means of a float in a stilling well. The float is about 45cm in diameter - the large diameter reduces inevitable errors in buoyancy due to friction of the gearing and small changes in the length of float wire. This wire is coiled round a drum on the end of the gauge and another drum contains a counter balance wire. The drum is geared to a slotted tape attached to a pen carriage which traces the tide curve on the chart during the rise and fall of the tide. A precision potentiometer is attached to the gauge to provide an input to the data logger.'@en ;
+    skos:notation 'SDN:L22::TOOL0014'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0013/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0013/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0013/>;
+    dc:modified '2008-11-28T07:54:41'^^xsd:dateTime ;
+    skos:altLabel 'Pressure point'^^xsd:string ;
+    skos:prefLabel 'Dataring pressure point transducer'@en ;
+    skos:definition 'The Dataring pressure point comprises differential transducers contained in a watertight housing. The reference port is vented to atmosphere via the power supply and signal cable tube, while the measuring port of the transducer is connected to a copper outlet nozzle on the top of the transducer housing. The copper nozzle, transducer measuring port and connecting tube are filled with oil so the pressure is transmitted to the crystal element via the oil, thus keeping the transducer components free from the effects of the saltwater.'@en ;
+    skos:notation 'SDN:L22::TOOL0013'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0011/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0011/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0011/>;
+    dc:modified '2008-11-28T07:54:28'^^xsd:dateTime ;
+    skos:altLabel 'Bubbler'^^xsd:string ;
+    skos:prefLabel 'Bubbler tide gauge'@en ;
+    skos:definition 'The full tide bubbler system normally consists of two independent measuring systems. The pressure points are mounted approx 1m below Admiralty Chart Datum (ACD) so that negative surges may be recorded and are similar in appearance to an inverted bucket with a copper nozzle mounted on the side. This nozzle is the actual measuring point. A low flow of dry air (normally 7ml/min) is fed down an air tube to the top of the pressure point. When the air pressure in the air line equals the pressure exerted by the column of water above it, then the excess air is released as bubbles through the copper nozzle. This means that the pressure in the air line is proportional to the weight of the water column.'@en ;
+    skos:notation 'SDN:L22::TOOL0011'^^xsd:string .

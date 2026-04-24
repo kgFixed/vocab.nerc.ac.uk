@@ -1,0 +1,273 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/G29/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G29/current/001/1/> .
+<http://vocab.nerc.ac.uk/collection/G29/current/001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G29/current/001/>;
+    dc:modified '2012-07-04T14:21:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'attribute'@en ;
+    skos:definition 'Information applies to the attribute class'@en ;
+    skos:notation 'SDN:G29::001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G29/current/002/1/> .
+<http://vocab.nerc.ac.uk/collection/G29/current/002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G29/current/002/>;
+    dc:modified '2012-07-04T14:21:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'attributeType'@en ;
+    skos:definition 'Information applies to the characteristic of a feature'@en ;
+    skos:notation 'SDN:G29::002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G29/current/003/1/> .
+<http://vocab.nerc.ac.uk/collection/G29/current/003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G29/current/003/>;
+    dc:modified '2012-07-04T14:21:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'collectionHardware'@en ;
+    skos:definition 'Information applies to the collection hardware class'@en ;
+    skos:notation 'SDN:G29::003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G29/current/004/1/> .
+<http://vocab.nerc.ac.uk/collection/G29/current/004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G29/current/004/>;
+    dc:modified '2012-07-04T14:21:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'collectionSession'@en ;
+    skos:definition 'Information applies to the collection session'@en ;
+    skos:notation 'SDN:G29::004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G29/current/005/1/> .
+<http://vocab.nerc.ac.uk/collection/G29/current/005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G29/current/005/>;
+    dc:modified '2012-07-04T14:21:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'dataset'@en ;
+    skos:definition 'Information applies to the dataset'@en ;
+    skos:notation 'SDN:G29::005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G29/current/006/1/> .
+<http://vocab.nerc.ac.uk/collection/G29/current/006/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G29/current/006/>;
+    dc:modified '2012-07-04T14:21:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'dimensionGroup'@en ;
+    skos:definition 'Information applies to a dimension group'@en ;
+    skos:notation 'SDN:G29::006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G29/current/007/1/> .
+<http://vocab.nerc.ac.uk/collection/G29/current/007/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G29/current/007/>;
+    dc:modified '2012-07-04T14:21:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'feature'@en ;
+    skos:definition 'Information applies to a feature'@en ;
+    skos:notation 'SDN:G29::007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G29/current/008/1/> .
+<http://vocab.nerc.ac.uk/collection/G29/current/008/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G29/current/008/>;
+    dc:modified '2012-07-04T14:21:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'featureType'@en ;
+    skos:definition 'Information applies to a feature type'@en ;
+    skos:notation 'SDN:G29::008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G29/current/009/1/> .
+<http://vocab.nerc.ac.uk/collection/G29/current/009/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G29/current/009/>;
+    dc:modified '2012-07-04T14:21:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fieldSession'@en ;
+    skos:definition 'Information applies to a field session'@en ;
+    skos:notation 'SDN:G29::009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G29/current/010/1/> .
+<http://vocab.nerc.ac.uk/collection/G29/current/010/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G29/current/010/>;
+    dc:modified '2012-07-04T14:21:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'initiative'@en ;
+    skos:definition 'The referencing entity applies to a transfer aggregate which was originally identified as an initiative (DS_Initiative)'@en ;
+    skos:notation 'SDN:G29::010'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G29/current/011/1/> .
+<http://vocab.nerc.ac.uk/collection/G29/current/011/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G29/current/011/>;
+    dc:modified '2012-07-04T14:21:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'model'@en ;
+    skos:definition 'Information applies to a copy or imitation of an existing or hypothetical object'@en ;
+    skos:notation 'SDN:G29::011'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G29/current/012/1/> .
+<http://vocab.nerc.ac.uk/collection/G29/current/012/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G29/current/012/>;
+    dc:modified '2012-07-04T14:21:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'nonGeographicDataset'@en ;
+    skos:definition 'Information applies to non-geographic data'@en ;
+    skos:notation 'SDN:G29::012'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G29/current/013/1/> .
+<http://vocab.nerc.ac.uk/collection/G29/current/013/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G29/current/013/>;
+    dc:modified '2012-07-04T14:21:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'otherAggregate'@en ;
+    skos:definition 'The referencing entity applies to a transfer aggregate which has an existence outside of the transfer context, but which does not pertains to a specific aggregate type.'@en ;
+    skos:notation 'SDN:G29::013'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G29/current/014/1/> .
+<http://vocab.nerc.ac.uk/collection/G29/current/014/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G29/current/014/>;
+    dc:modified '2012-07-04T14:21:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'platformSeries'@en ;
+    skos:definition 'The referencing entity applies to a transfer aggregate which was originally identified as a platform series (DS_PlatformSeries)'@en ;
+    skos:notation 'SDN:G29::014'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G29/current/015/1/> .
+<http://vocab.nerc.ac.uk/collection/G29/current/015/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G29/current/015/>;
+    dc:modified '2012-07-04T14:21:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'productionSeries'@en ;
+    skos:definition 'The referencing entity applies to a transfer aggregate which was originally identified as a production series (DS_ProductionSeries)'@en ;
+    skos:notation 'SDN:G29::015'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G29/current/016/1/> .
+<http://vocab.nerc.ac.uk/collection/G29/current/016/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G29/current/016/>;
+    dc:modified '2012-07-04T14:21:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'propertyType'@en ;
+    skos:definition 'Information applies to a property type'@en ;
+    skos:notation 'SDN:G29::016'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G29/current/017/1/> .
+<http://vocab.nerc.ac.uk/collection/G29/current/017/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G29/current/017/>;
+    dc:modified '2012-07-04T14:21:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sensor'@en ;
+    skos:definition 'The referencing entity applies to a transfer aggregate which was originally identified as a sensor (DS_Sensor)'@en ;
+    skos:notation 'SDN:G29::017'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G29/current/018/1/> .
+<http://vocab.nerc.ac.uk/collection/G29/current/018/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G29/current/018/>;
+    dc:modified '2012-07-04T14:21:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sensorSeries'@en ;
+    skos:definition 'The referencing entity applies to a transfer aggregate which was originally identified as a sensor series (DS_SensorSeries)'@en ;
+    skos:notation 'SDN:G29::018'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G29/current/019/1/> .
+<http://vocab.nerc.ac.uk/collection/G29/current/019/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G29/current/019/>;
+    dc:modified '2012-07-04T14:21:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'series'@en ;
+    skos:definition 'Information applies to the series'@en ;
+    skos:notation 'SDN:G29::019'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G29/current/020/1/> .
+<http://vocab.nerc.ac.uk/collection/G29/current/020/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G29/current/020/>;
+    dc:modified '2012-07-04T14:21:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'service'@en ;
+    skos:definition 'Information applies to a capability which a service provider entity makes available to a service user entity through a set of interfaces that define a behaviour, such as a use case'@en ;
+    skos:notation 'SDN:G29::020'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G29/current/021/1/> .
+<http://vocab.nerc.ac.uk/collection/G29/current/021/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G29/current/021/>;
+    dc:modified '2012-07-04T14:21:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'software'@en ;
+    skos:definition 'Information applies to a computer program or routine'@en ;
+    skos:notation 'SDN:G29::021'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G29/current/022/1/> .
+<http://vocab.nerc.ac.uk/collection/G29/current/022/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G29/current/022/>;
+    dc:modified '2012-07-04T14:21:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'stereomate'@en ;
+    skos:definition 'The referencing entity applies to a transfer aggregate which was originally identified as a stereo mate (DS_StereoMate)'@en ;
+    skos:notation 'SDN:G29::022'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G29/current/023/1/> .
+<http://vocab.nerc.ac.uk/collection/G29/current/023/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G29/current/023/>;
+    dc:modified '2012-07-04T14:21:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tile'@en ;
+    skos:definition 'Information applies to a tile, a spatial subset of geographic data'@en ;
+    skos:notation 'SDN:G29::023'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G29/current/024/1/> .
+<http://vocab.nerc.ac.uk/collection/G29/current/024/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G29/current/024/>;
+    dc:modified '2012-07-04T14:21:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'transferAggregate'@en ;
+    skos:definition 'The referencing entity applies to a transfer aggregate which has no existence outside of the transfer context'@en ;
+    skos:notation 'SDN:G29::024'^^xsd:string .

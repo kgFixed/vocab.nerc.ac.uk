@@ -1,0 +1,91 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/M25/2021_01_01_00_00_00_2022_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/M25/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2022-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M25/current/MEDIN/4/> .
+<http://vocab.nerc.ac.uk/collection/M25/current/MEDIN/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M25/current/MEDIN/>;
+    dc:modified '2022-04-27T17:03:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'MEDIN'@en ;
+    skos:definition '{"metadataProfile":"The UK Marine Environmental Data and Information Network (MEDIN) maintain a discovery metadata standard for marine geospatial data. This is a marine-specific profile of UK GEMINI with elements restricted by marine-oriented controlled vocabularies. Further information on MEDIN and the MEDIN profile is available at www.medin.org.uk","profileCurrentVersion":"3.0"}'@en ;
+    skos:notation 'SDN:M25::MEDIN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M25/current/GEMINI/4/> .
+<http://vocab.nerc.ac.uk/collection/M25/current/GEMINI/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M25/current/GEMINI/>;
+    dc:modified '2022-04-27T17:03:52'^^xsd:dateTime ;
+    skos:altLabel 'GEMINI'^^xsd:string ;
+    skos:prefLabel 'UK GEMINI'@en ;
+    skos:definition '{"metadataProfile": "UK GEMINI (GEo-spatial Metadata Interoperability iNItiative) is a United Kingdom specification for a set of discovery metadata elements for describing geospatial data resources. It uses the EU INSPIRE subset of ISO 19115. The intellectual property of UK GEMINI is owned by the Association for Geographic Information (AGI) and further information is available at https://www.agi.org.uk/gemini","profileCurrentVersion": "2.3 "}'@en ;
+    skos:notation 'SDN:M25::GEMINI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M25/current/19115/2/> .
+<http://vocab.nerc.ac.uk/collection/M25/current/19115/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M25/current/19115/>;
+    dc:modified '2022-04-27T17:03:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ISO 19115:2003'@en ;
+    skos:definition '{"metadataProfile":"Standard published by the International Organisation for Standardisation (ISO) to provide a structure for describing digital geographic data. ISO 19115 was published in May 2003. This concept also accounts for ISO 19115:2003 with corrigenda added in 2006.","profileCurrentVersion":"ISO 19115:2003"}'@en ;
+    skos:notation 'SDN:M25::19115'^^xsd:string .

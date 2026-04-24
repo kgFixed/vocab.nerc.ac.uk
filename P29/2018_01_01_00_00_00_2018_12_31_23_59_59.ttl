@@ -1,0 +1,190 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P29/2018_01_01_00_00_00_2018_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P29/2017_01_01_00_00_00_2017_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2018-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/ATV9FRFW/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/ATV9FRFW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/ATV9FRFW/>;
+    dc:modified '2018-08-06T12:15:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fresh_free_water'@en ;
+    skos:definition 'An area type of "fresh_free_water" means a free interface between freshwater and the atmosphere without vegetation or other obstructions.'@en ;
+    skos:notation 'SDN:P29::ATV9FRFW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/ATV9IASL/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/ATV9IASL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/ATV9IASL/>;
+    dc:modified '2018-08-06T12:15:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ice_and_snow_on_land'@en ;
+    skos:definition 'The area type "ice_and_snow_on_land" means ice in glaciers, ice caps, ice sheets (grounded and floating shelves), river and lake ice, any other ice on a land surface, such as frozen flood water, and snow lying on such ice or on the land surface.'@en ;
+    skos:notation 'SDN:P29::ATV9IASL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/ATV9IOLA/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/ATV9IOLA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/ATV9IOLA/>;
+    dc:modified '2018-08-06T12:15:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ice_on_land'@en ;
+    skos:definition 'The area type "ice_on_land" means ice in glaciers, ice caps, grounded ice sheets (grounded and floating shelves), river and lake ice, and any other ice on a land surface, such as frozen flood water. This is distinct from the area type \'land ice\' which has a narrower definition.'@en ;
+    skos:notation 'SDN:P29::ATV9IOLA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/ATV9UFZS/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/ATV9UFZS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/ATV9UFZS/>;
+    dc:modified '2018-08-06T12:15:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'unfrozen_soil'@en ;
+    skos:definition 'An area type of "unfrozen_soil" means that the soil at the surface is unfrozen. Frozen soil may be present at lower levels within a soil model.'@en ;
+    skos:notation 'SDN:P29::ATV9UFZS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/cfherbvg/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/cfherbvg/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/cfherbvg/>;
+    dc:modified '2018-07-10T09:28:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'herbaceous_vegetation'@en ;
+    skos:definition 'Herbaceous plants are plants with very flexible stems. Their leaves and stems die down to soil level at the end of every growing season. Herbaceous plants can be annual, biennial or perennial.'@en ;
+    skos:notation 'SDN:P29::cfherbvg'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/cfnatgra/2/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/cfnatgra/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/cfnatgra/>;
+    dc:modified '2018-03-13T13:56:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'natural_grasses'@en ;
+    skos:definition '"Natural grasses" means grasses growing in areas of low productivity, often situated on rough or uneven ground. This can include rocky areas, briars and heathland.'@en ;
+    skos:notation 'SDN:P29::cfnatgra'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/ANGC3PFT/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/ANGC3PFT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/ANGC3PFT/>;
+    dc:modified '2018-03-13T13:56:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'natural_grasses_of_c3_plant_functional_types'@en ;
+    skos:definition '"Natural grasses" means grasses growing in areas of low productivity, often situated on rough or uneven ground. This can include rocky areas, briars and heathland. A "c3 plant" is one that utilizes the C3 carbon fixation pathway as the sole mechanism to bind CO2 before photosynthesis reactions take place. All trees are C3 type. Grasses and crops can be C3 or C4.'@en ;
+    skos:notation 'SDN:P29::ANGC3PFT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/ANGC4PFT/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/ANGC4PFT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/ANGC4PFT/>;
+    dc:modified '2018-03-13T13:56:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'natural_grasses_of_c4_plant_functional_types'@en ;
+    skos:definition '"Natural grasses" means grasses growing in areas of low productivity, often situated on rough or uneven ground. This can include rocky areas, briars and heathland. A "c4 plant" is one that utilizes the C4 carbon fixation pathway in which the CO2 is first bound to a compound containing four carbon atoms before photosynthesis reactions take place. All trees are C3 type. Grasses and crops can be C3 or C4.'@en ;
+    skos:notation 'SDN:P29::ANGC4PFT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/ATCC3PFT/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/ATCC3PFT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/ATCC3PFT/>;
+    dc:modified '2018-03-13T13:56:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'crops_of_c3_plant_functional_types'@en ;
+    skos:definition 'The definition of "crops" is model dependent, for example, some models may include fruit trees as crops. A "c3 plant" is one that utilizes the C3 carbon fixation pathway as the sole mechanism to bind CO2 before photosynthesis reactions take place. All trees are C3 type. Grasses and crops can be C3 or C4.'@en ;
+    skos:notation 'SDN:P29::ATCC3PFT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/ATCC4PFT/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/ATCC4PFT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/ATCC4PFT/>;
+    dc:modified '2018-03-13T13:56:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'crops_of_c4_plant_functional_types'@en ;
+    skos:definition 'The definition of "crops" is model dependent, for example, some models may include fruit trees as crops. A "c4 plant" is one that utilizes the C4 carbon fixation pathway in which the CO2 is first bound to a compound containing four carbon atoms before photosynthesis reactions take place. All trees are C3 type. Grasses and crops can be C3 or C4.'@en ;
+    skos:notation 'SDN:P29::ATCC4PFT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/ATPC3PFT/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/ATPC3PFT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/ATPC3PFT/>;
+    dc:modified '2018-03-13T13:56:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'pastures_of_c3_plant_functional_types'@en ;
+    skos:definition 'Pastures are assumed to be anthropogenic in origin. They include anthropogenically managed pastureland and rangeland. A "c3 plant" is one that utilizes the C3 carbon fixation pathway as the sole mechanism to bind CO2 before photosynthesis reactions take place. All trees are C3 type. Grasses and crops can be C3 or C4.'@en ;
+    skos:notation 'SDN:P29::ATPC3PFT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/ATPC4PFT/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/ATPC4PFT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/ATPC4PFT/>;
+    dc:modified '2018-03-13T13:56:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'pastures_of_c4_plant_functional_types'@en ;
+    skos:definition 'Pastures are assumed to be anthropogenic in origin. They include anthropogenically managed pastureland and rangeland. A "c4 plant" is one that utilizes the C4 carbon fixation pathway in which the CO2 is first bound to a compound containing four carbon atoms before photosynthesis reactions take place. All trees are C3 type. Grasses and crops can be C3 or C4.'@en ;
+    skos:notation 'SDN:P29::ATPC4PFT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/ATSIRIDG/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/ATSIRIDG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/ATSIRIDG/>;
+    dc:modified '2018-03-13T13:56:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_ice_ridges'@en ;
+    skos:definition 'Sea ice "ridging" occurs in rough sea conditions. The motion of the sea surface can cause areas of sea ice to deform and fold resulting in ridged upper and lower surfaces. The ridges can be as much as twenty metres thick if thick ice is deformed.'@en ;
+    skos:notation 'SDN:P29::ATSIRIDG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/ATWETLND/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/ATWETLND/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/ATWETLND/>;
+    dc:modified '2018-03-13T13:56:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'wetland'@en ;
+    skos:definition 'Wetlands are areas where water covers the soil, or is present either at or near the surface of the soil all year or for varying periods of time during the year, including during the growing season.'@en ;
+    skos:notation 'SDN:P29::ATWETLND'^^xsd:string .

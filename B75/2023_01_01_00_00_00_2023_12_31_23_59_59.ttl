@@ -1,0 +1,559 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/B75/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/B75/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2023-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02028/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02028/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02028/>;
+    dc:modified '2023-12-13T16:02:53'^^xsd:dateTime ;
+    skos:altLabel 'UWITEC'^^xsd:string ;
+    skos:prefLabel 'UWITEC GmbH'@en ;
+    skos:definition 'Organisation e-mail: office@uwitec.at; Organisation website: https://www.uwitec.at/en/'@en ;
+    skos:notation 'SDN:B75::ORG02028'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02027/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02027/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02027/>;
+    dc:modified '2023-11-23T13:53:29'^^xsd:dateTime ;
+    skos:altLabel 'REK'^^xsd:string ;
+    skos:prefLabel 'Eijkelkamp'@en ;
+    skos:definition 'Organisation e-mail: info@eijkelkamp.com; Organisation website: https://www.royaleijkelkamp.com'@en ;
+    skos:notation 'SDN:B75::ORG02027'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02026/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02026/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02026/>;
+    dc:modified '2023-10-17T15:43:45'^^xsd:dateTime ;
+    skos:altLabel 'GSC'^^xsd:string ;
+    skos:prefLabel 'Galapagos Science Center'@en ;
+    skos:definition 'Organisation e-mail: info@galapagosscience.org; Organisation website: https://www.galapagosscience.org'@en ;
+    skos:notation 'SDN:B75::ORG02026'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02025/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02025/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02025/>;
+    dc:modified '2023-10-09T11:12:33'^^xsd:dateTime ;
+    skos:altLabel 'DCT'^^xsd:string ;
+    skos:prefLabel 'University of Coimbra, Department of Earth Sciences'@en ;
+    skos:definition 'Organisation e-mail: dct@dct.uc.pt; Organisation website: https://www.uc.pt/en/fctuc/dct/'@en ;
+    skos:notation 'SDN:B75::ORG02025'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02024/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02024/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02024/>;
+    dc:modified '2023-10-06T10:40:16'^^xsd:dateTime ;
+    skos:altLabel 'IMS'^^xsd:string ;
+    skos:prefLabel 'University of North Carolina at Chapel Hill, Institute of Marine Sciences'@en ;
+    skos:definition 'Organisation e-mail: irish@unc.edu; Organisation website: https://ims.unc.edu'@en ;
+    skos:notation 'SDN:B75::ORG02024'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG00078/2/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG00078/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG00078/>;
+    dc:modified '2023-09-22T15:20:24'^^xsd:dateTime ;
+    skos:altLabel 'St Andrews GSD'^^xsd:string ;
+    skos:prefLabel 'University of St Andrews, School of Geography and Sustainable Development'@en ;
+    skos:definition 'Organisation e-mail: gsd@st-andrews.ac.uk; Organisation website: https://www.st-andrews.ac.uk/geography-sustainable-development/'@en ;
+    skos:notation 'SDN:B75::ORG00078'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG01940/2/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG01940/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG01940/>;
+    dc:modified '2023-09-22T10:22:34'^^xsd:dateTime ;
+    skos:altLabel 'PIBHMC'^^xsd:string ;
+    skos:prefLabel 'Pacific Islands Benthic Habitat Mapping Center, University of Hawai\'i at Mānoa'@en ;
+    skos:definition 'Organisation e-mail: pibhmc@soest.hawaii.edu; Organisation website: http://www.soest.hawaii.edu/pibhmc/cms/'@en ;
+    skos:notation 'SDN:B75::ORG01940'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG00235/4/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG00235/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG00235/>;
+    dc:modified '2023-09-22T10:22:32'^^xsd:dateTime ;
+    skos:altLabel 'HE Portsmouth'^^xsd:string ;
+    skos:prefLabel 'Historic England - Portsmouth'@en ;
+    skos:definition 'Organisation e-mail: fort.cumberland@historicengland.org.uk; Organisation website: https://historicengland.org.uk/about/contact-us/national-offices/fort-cumberland/'@en ;
+    skos:notation 'SDN:B75::ORG00235'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02023/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02023/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02023/>;
+    dc:modified '2023-09-21T15:54:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Kochi University, Marine Core Research Institute'@en ;
+    skos:definition 'Organisation e-mail: kk21@kochi-u.ac.jp; Organisation website: https://www.kochi-u.ac.jp/marine-core/en/'@en ;
+    skos:notation 'SDN:B75::ORG02023'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02022/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02022/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02022/>;
+    dc:modified '2023-08-23T12:04:53'^^xsd:dateTime ;
+    skos:altLabel 'Duke Environment'^^xsd:string ;
+    skos:prefLabel 'Duke University, Nicholas School of the Environment'@en ;
+    skos:definition 'Organisation e-mail: dukenvironment@nicholas.duke.edu; Organisation website: https://www.nicholas.duke.edu'@en ;
+    skos:notation 'SDN:B75::ORG02022'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02021/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02021/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02021/>;
+    dc:modified '2023-08-17T10:18:06'^^xsd:dateTime ;
+    skos:altLabel 'SMMI'^^xsd:string ;
+    skos:prefLabel 'Southampton Marine and Maritime Institute'@en ;
+    skos:definition 'Organisation e-mail: smmi@southampton.ac.uk; Organisation website: https://www.southampton.ac.uk/research/institutes-centres/southampton-marine-maritime-institute'@en ;
+    skos:notation 'SDN:B75::ORG02021'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02020/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02020/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02020/>;
+    dc:modified '2023-07-17T16:39:03'^^xsd:dateTime ;
+    skos:altLabel 'DBV'^^xsd:string ;
+    skos:prefLabel 'University of Lisbon, Department of Plant Biology'@en ;
+    skos:definition 'Organisation e-mail: nucleoc2@ciencias.ulisboa.pt; Organisation website: https://ciencias.ulisboa.pt/en/dbv'@en ;
+    skos:notation 'SDN:B75::ORG02020'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02019/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02019/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02019/>;
+    dc:modified '2023-07-13T10:11:10'^^xsd:dateTime ;
+    skos:altLabel 'StarDot'^^xsd:string ;
+    skos:prefLabel 'StarDot Technologies'@en ;
+    skos:definition 'Organisation e-mail: help@stardot-tech.com; Organisation website: http://www.stardot-tech.com'@en ;
+    skos:notation 'SDN:B75::ORG02019'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG01018/3/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG01018/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG01018/>;
+    dc:modified '2023-06-30T09:30:11'^^xsd:dateTime ;
+    skos:altLabel 'MARE UC'^^xsd:string ;
+    skos:prefLabel 'Marine and Environmental Research Centre, University of Coimbra'@en ;
+    skos:definition 'Organisation e-mail: imar@ci.uc.pt; Organisation website: https://www.uc.pt/fctuc/investigacao/mare-centro-de-ciencias-do-mar-e-do-ambiente/'@en ;
+    skos:notation 'SDN:B75::ORG01018'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02018/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02018/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02018/>;
+    dc:modified '2023-06-29T16:53:29'^^xsd:dateTime ;
+    skos:altLabel 'Bath Physics'^^xsd:string ;
+    skos:prefLabel 'University of Bath, Department of Physics'@en ;
+    skos:definition 'Organisation e-mail: physicsenquiries@bath.ac.uk; Organisation website: https://www.bath.ac.uk/departments/department-of-physics/'@en ;
+    skos:notation 'SDN:B75::ORG02018'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG00139/2/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG00139/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG00139/>;
+    dc:modified '2023-06-29T16:29:25'^^xsd:dateTime ;
+    skos:altLabel 'STANFORD-GEO'^^xsd:string ;
+    skos:prefLabel 'Stanford University, Geophysics Department'@en ;
+    skos:definition 'Organisation e-mail: geophysicsgeneral@stanford.edu; Organisation website: https://geophysics.stanford.edu'@en ;
+    skos:notation 'SDN:B75::ORG00139'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG01019/2/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG01019/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG01019/>;
+    dc:modified '2023-06-29T16:15:58'^^xsd:dateTime ;
+    skos:altLabel 'SAFS'^^xsd:string ;
+    skos:prefLabel 'University of Washington, School of Aquatic and Fishery Sciences'@en ;
+    skos:definition 'Organisation e-mail: safsdesk@u.washington.edu; Organisation website: https://fish.uw.edu/'@en ;
+    skos:notation 'SDN:B75::ORG01019'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG01394/2/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG01394/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG01394/>;
+    dc:modified '2023-06-29T16:14:01'^^xsd:dateTime ;
+    skos:altLabel 'QUT EAS'^^xsd:string ;
+    skos:prefLabel 'Queensland University of Technology, School of Earth & Atmospheric Sciences'@en ;
+    skos:definition 'Organisation e-mail: Unavailable; Organisation website: https://www.qut.edu.au/about/faculty-of-science/school-of-earth-and-atmospheric-sciences'@en ;
+    skos:notation 'SDN:B75::ORG01394'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG00392/3/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG00392/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG00392/>;
+    dc:modified '2023-06-29T15:12:37'^^xsd:dateTime ;
+    skos:altLabel 'CELS'^^xsd:string ;
+    skos:prefLabel 'CSIRO Centre for Environment and Life Sciences'@en ;
+    skos:definition 'Organisation e-mail: reception@floreat.csiro.au; Organisation website: https://www.csiro.au/en/about/locations/state-locations/wa/floreat'@en ;
+    skos:notation 'SDN:B75::ORG00392'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02017/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02017/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02017/>;
+    dc:modified '2023-06-26T10:19:09'^^xsd:dateTime ;
+    skos:altLabel 'Hanwha'^^xsd:string ;
+    skos:prefLabel 'Hanwha Vision'@en ;
+    skos:definition 'Organisation e-mail: htesecurity@hanwha.com; Organisation website: https://www.hanwha.com/en.html'@en ;
+    skos:notation 'SDN:B75::ORG02017'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02015/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02015/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02015/>;
+    dc:modified '2023-06-26T10:16:28'^^xsd:dateTime ;
+    skos:altLabel 'DeepSea'^^xsd:string ;
+    skos:prefLabel 'DeepSea Power and Light'@en ;
+    skos:definition 'Organisation e-mail: sales@deepsea.com; Organisation website: https://www.deepsea.com'@en ;
+    skos:notation 'SDN:B75::ORG02015'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02012/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02012/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02012/>;
+    dc:modified '2023-06-21T15:30:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Remote Ocean Systems Inc.'@en ;
+    skos:definition 'Organisation e-mail: sales@rosys.com; Organisation website: https://www.rosys.com/'@en ;
+    skos:notation 'SDN:B75::ORG02012'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02013/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02013/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02013/>;
+    dc:modified '2023-06-21T15:30:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'SIDUS Solutions LLC'@en ;
+    skos:definition 'Organisation e-mail: info@sidus-solutions.com; Organisation website: https://www.sidus-solutions.com/'@en ;
+    skos:notation 'SDN:B75::ORG02013'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02014/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02014/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02014/>;
+    dc:modified '2023-06-21T15:30:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sony Corporation'@en ;
+    skos:definition 'Organisation e-mail: Unavailable; Organisation website: https://www.sony.net/'@en ;
+    skos:notation 'SDN:B75::ORG02014'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG00736/4/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG00736/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG00736/>;
+    dc:modified '2023-06-16T10:22:06'^^xsd:dateTime ;
+    skos:altLabel 'HC Hereon'^^xsd:string ;
+    skos:prefLabel 'Helmholtz Centre Hereon'@en ;
+    skos:definition 'Organisation e-mail: Unavailable; Organisation website: http://www.hzg.de'@en ;
+    skos:notation 'SDN:B75::ORG00736'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02011/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02011/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02011/>;
+    dc:modified '2023-06-15T16:59:47'^^xsd:dateTime ;
+    skos:altLabel 'Canon'^^xsd:string ;
+    skos:prefLabel 'Canon Inc.'@en ;
+    skos:definition 'Organisation e-mail: Unavailable; Organisation website: https://global.canon/en/'@en ;
+    skos:notation 'SDN:B75::ORG02011'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02010/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02010/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02010/>;
+    dc:modified '2023-06-12T13:09:29'^^xsd:dateTime ;
+    skos:altLabel 'SubC'^^xsd:string ;
+    skos:prefLabel 'SubC Imaging'@en ;
+    skos:definition 'Organisation e-mail: support@subcimaging.com; Organisation website: https://www.subcimaging.com'@en ;
+    skos:notation 'SDN:B75::ORG02010'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02009/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02009/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02009/>;
+    dc:modified '2023-06-05T15:54:10'^^xsd:dateTime ;
+    skos:altLabel 'Ocean Presence'^^xsd:string ;
+    skos:prefLabel 'Ocean Presence Technologies'@en ;
+    skos:definition 'Organisation e-mail: oceanpresence@gmail.com; Organisation website: https://www.oceanpresence.com'@en ;
+    skos:notation 'SDN:B75::ORG02009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02008/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02008/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02008/>;
+    dc:modified '2023-06-02T17:15:56'^^xsd:dateTime ;
+    skos:altLabel 'Nikon'^^xsd:string ;
+    skos:prefLabel 'Nikon Corporation'@en ;
+    skos:definition 'Organisation e-mail: Unavailable; Organisation website: https://www.nikon.com'@en ;
+    skos:notation 'SDN:B75::ORG02008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02007/2/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02007/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02007/>;
+    dc:modified '2023-06-02T11:59:44'^^xsd:dateTime ;
+    skos:altLabel 'Imenco'^^xsd:string ;
+    skos:prefLabel 'Imenco AS'@en ;
+    skos:definition 'Organisation e-mail: imenco@imenco.com; Organisation website: https://imenco.no'@en ;
+    skos:notation 'SDN:B75::ORG02007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02006/2/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02006/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02006/>;
+    dc:modified '2023-06-02T11:59:17'^^xsd:dateTime ;
+    skos:altLabel 'INSITE'^^xsd:string ;
+    skos:prefLabel 'INSITE Pacific Inc.'@en ;
+    skos:definition 'Organisation e-mail: sales@insitepacific.com; Organisation website: http://insitepacific.com'@en ;
+    skos:notation 'SDN:B75::ORG02006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG00443/2/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG00443/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG00443/>;
+    dc:modified '2023-05-25T16:47:09'^^xsd:dateTime ;
+    skos:altLabel 'IMAS'^^xsd:string ;
+    skos:prefLabel 'University of Tasmania, Institute for Marine and Antarctic Studies'@en ;
+    skos:definition 'Organisation e-mail: imas.admin@utas.edu.au; Organisation website: http://www.imas.utas.edu.au'@en ;
+    skos:notation 'SDN:B75::ORG00443'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02005/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02005/>;
+    dc:modified '2023-04-11T10:48:04'^^xsd:dateTime ;
+    skos:altLabel 'MSU EES'^^xsd:string ;
+    skos:prefLabel 'Michigan State University, Department of Earth and Environmental Sciences'@en ;
+    skos:definition 'Organisation e-mail: geosci@msu.edu; Organisation website: https://ees.natsci.msu.edu'@en ;
+    skos:notation 'SDN:B75::ORG02005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02004/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02004/>;
+    dc:modified '2023-04-11T10:43:25'^^xsd:dateTime ;
+    skos:altLabel 'NKUA Biology'^^xsd:string ;
+    skos:prefLabel 'National and Kapodistrian University of Athens, Department of Biology'@en ;
+    skos:definition 'Organisation e-mail: secr@biol.uoa.gr; Organisation website: http://en.biol.uoa.gr'@en ;
+    skos:notation 'SDN:B75::ORG02004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02003/2/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02003/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02003/>;
+    dc:modified '2023-04-05T11:45:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'NatureScot, Inverness'@en ;
+    skos:definition 'Organisation e-mail: enquiries@nature.scot; Organisation website: https://www.nature.scot'@en ;
+    skos:notation 'SDN:B75::ORG02003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG00215/2/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG00215/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG00215/>;
+    dc:modified '2023-04-05T11:45:23'^^xsd:dateTime ;
+    skos:altLabel 'SNH'^^xsd:string ;
+    skos:prefLabel 'Scottish Natural Heritage, Edinburgh'@en ;
+    skos:definition 'Organisation e-mail: Unavailable; Organisation website: Unavailable'@en ;
+    skos:notation 'SDN:B75::ORG00215'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG00045/2/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG00045/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG00045/>;
+    dc:modified '2023-04-05T10:28:54'^^xsd:dateTime ;
+    skos:altLabel 'ERI'^^xsd:string ;
+    skos:prefLabel 'University of the Highlands and Islands, Environmental Research Institute'@en ;
+    skos:definition 'Organisation e-mail: Unavailable; Organisation website: https://eri.ac.uk'@en ;
+    skos:notation 'SDN:B75::ORG00045'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02001/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02001/>;
+    dc:modified '2023-04-04T12:18:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Scottish Power Renewables'@en ;
+    skos:definition 'Organisation e-mail: machairwind@scottishpower.com; Organisation website: https://www.scottishpowerrenewables.com'@en ;
+    skos:notation 'SDN:B75::ORG02001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02002/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02002/>;
+    dc:modified '2023-04-04T12:18:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ørsted'@en ;
+    skos:definition 'Organisation e-mail: receptionldn@orsted.com; Organisation website: https://orsted.co.uk'@en ;
+    skos:notation 'SDN:B75::ORG02002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02000/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02000/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02000/>;
+    dc:modified '2023-04-04T12:18:48'^^xsd:dateTime ;
+    skos:altLabel 'SSE Renewables'^^xsd:string ;
+    skos:prefLabel 'Scottish & Southern Energy Renewables'@en ;
+    skos:definition 'Organisation e-mail: media@sse.com; Organisation website: https://www.sserenewables.com'@en ;
+    skos:notation 'SDN:B75::ORG02000'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG01999/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG01999/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG01999/>;
+    dc:modified '2023-04-03T17:56:45'^^xsd:dateTime ;
+    skos:altLabel 'RSPB'^^xsd:string ;
+    skos:prefLabel 'Royal Society for the Protection of Birds'@en ;
+    skos:definition 'Organisation e-mail: wildlife@rspb.org.uk; Organisation website: https://www.rspb.org.uk'@en ;
+    skos:notation 'SDN:B75::ORG01999'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG00351/2/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG00351/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG00351/>;
+    dc:modified '2023-03-06T14:33:54'^^xsd:dateTime ;
+    skos:altLabel 'DEM-IST'^^xsd:string ;
+    skos:prefLabel 'Instituto Superior Tecnico, Department of Mechanical Engineering'@en ;
+    skos:definition 'Organisation e-mail: dem@tecnico.ulisboa.pt; Organisation website: http://dem.tecnico.ulisboa.pt'@en ;
+    skos:notation 'SDN:B75::ORG00351'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG00171/2/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG00171/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG00171/>;
+    dc:modified '2023-03-03T17:10:42'^^xsd:dateTime ;
+    skos:altLabel 'SB-ROSCOFF'^^xsd:string ;
+    skos:prefLabel 'Roscoff Biological Station, Marine Chemistry Laboratory'@en ;
+    skos:definition 'Deprecated code - do not use'@en ;
+    skos:notation 'SDN:B75::ORG00171'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG00169/3/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG00169/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG00169/>;
+    dc:modified '2023-03-03T16:52:55'^^xsd:dateTime ;
+    skos:altLabel 'SB-ROSCOFF'^^xsd:string ;
+    skos:prefLabel 'Roscoff Biological Station'@en ;
+    skos:definition 'Organisation e-mail: Unavailable; Organisation website: https://www.sb-roscoff.fr/en'@en ;
+    skos:notation 'SDN:B75::ORG00169'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG00352/2/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG00352/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG00352/>;
+    dc:modified '2023-03-03T16:21:51'^^xsd:dateTime ;
+    skos:altLabel 'EC DG RTD'^^xsd:string ;
+    skos:prefLabel 'European Commission, Directorate-General for Research and Innovation'@en ;
+    skos:definition 'Organisation e-mail: Unavailable; Organisation website: Unavailable'@en ;
+    skos:notation 'SDN:B75::ORG00352'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG00845/2/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG00845/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG00845/>;
+    dc:modified '2023-03-03T16:06:08'^^xsd:dateTime ;
+    skos:altLabel 'IOS'^^xsd:string ;
+    skos:prefLabel 'Fisheries and Oceans Canada, Institute of Ocean Sciences'@en ;
+    skos:definition 'Organisation e-mail: Unavailable; Organisation website: http://www.pac.dfo-mpo.gc.ca/science/facilities-installations/ios-ism/index-eng.html'@en ;
+    skos:notation 'SDN:B75::ORG00845'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG00509/2/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG00509/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG00509/>;
+    dc:modified '2023-03-03T16:05:20'^^xsd:dateTime ;
+    skos:altLabel 'FOC'^^xsd:string ;
+    skos:prefLabel 'Fisheries and Oceans Canada, National Headquarters'@en ;
+    skos:definition 'Organisation e-mail: Unavailable; Organisation website: http://www.dfo-mpo.gc.ca/index-eng.htm'@en ;
+    skos:notation 'SDN:B75::ORG00509'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG01254/2/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG01254/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG01254/>;
+    dc:modified '2023-02-28T16:00:36'^^xsd:dateTime ;
+    skos:altLabel 'CFOS'^^xsd:string ;
+    skos:prefLabel 'University of Alaska, Fairbanks, College of Fisheries and Ocean Sciences'@en ;
+    skos:definition 'Organisation e-mail: Unavailable; Organisation website: https://www.uaf.edu/cfos/'@en ;
+    skos:notation 'SDN:B75::ORG01254'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG01998/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG01998/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG01998/>;
+    dc:modified '2023-02-10T10:24:36'^^xsd:dateTime ;
+    skos:altLabel 'Pacific Gyre'^^xsd:string ;
+    skos:prefLabel 'Pacific Gyre Inc.'@en ;
+    skos:definition 'Organisation e-mail: info@pacificgyre.com; Organisation website: https://www.pacificgyre.com'@en ;
+    skos:notation 'SDN:B75::ORG01998'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG01997/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG01997/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG01997/>;
+    dc:modified '2023-02-10T10:21:23'^^xsd:dateTime ;
+    skos:altLabel 'Navitar'^^xsd:string ;
+    skos:prefLabel 'Navitar Inc'@en ;
+    skos:definition 'Organisation e-mail: info@navitar.com; Organisation website: https://navitar.com'@en ;
+    skos:notation 'SDN:B75::ORG01997'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG01996/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG01996/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG01996/>;
+    dc:modified '2023-02-10T10:16:58'^^xsd:dateTime ;
+    skos:altLabel 'FLIR'^^xsd:string ;
+    skos:prefLabel 'Teledyne FLIR'@en ;
+    skos:definition 'Organisation e-mail: marketing@flir.uk.com; Organisation website: https://www.flir.co.uk'@en ;
+    skos:notation 'SDN:B75::ORG01996'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG01995/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG01995/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG01995/>;
+    dc:modified '2023-02-09T14:20:56'^^xsd:dateTime ;
+    skos:altLabel 'QIAGEN'^^xsd:string ;
+    skos:prefLabel 'QIAGEN Instruments AG'@en ;
+    skos:definition 'Organisation e-mail: orders-bnl@qiagen.com; Organisation website: https://www.qiagen.com/us'@en ;
+    skos:notation 'SDN:B75::ORG01995'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG01994/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG01994/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG01994/>;
+    dc:modified '2023-02-09T14:18:27'^^xsd:dateTime ;
+    skos:altLabel 'Smart Radio'^^xsd:string ;
+    skos:prefLabel 'Smart Radio Holdings Limited'@en ;
+    skos:definition 'Organisation e-mail: smartradio@sina.com; Organisation website: https://smartradio.diytrade.com'@en ;
+    skos:notation 'SDN:B75::ORG01994'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG01993/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG01993/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG01993/>;
+    dc:modified '2023-02-02T16:41:02'^^xsd:dateTime ;
+    skos:altLabel 'ClearWater'^^xsd:string ;
+    skos:prefLabel 'ClearWater Sensors Ltd.'@en ;
+    skos:definition 'Organisation e-mail: info@clearwatersensors.com; Organisation website: https://www.clearwatersensors.com'@en ;
+    skos:notation 'SDN:B75::ORG01993'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG01992/4/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG01992/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG01992/>;
+    dc:modified '2023-01-24T13:13:18'^^xsd:dateTime ;
+    skos:altLabel 'CNR ISMAR Rome'^^xsd:string ;
+    skos:prefLabel 'CNR Institute of Marine Science, Rome'@en ;
+    skos:definition 'Organisation e-mail: protocollo-ammcen@pec.cnr.it; Organisation website: http://www.ismar.cnr.it/organization/geographic-units/roma'@en ;
+    skos:notation 'SDN:B75::ORG01992'^^xsd:string .

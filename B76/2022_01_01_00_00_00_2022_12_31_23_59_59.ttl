@@ -1,0 +1,73 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/B76/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/B76/2021_01_01_00_00_00_2021_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2022-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B76/current/B7600030/2/> .
+<http://vocab.nerc.ac.uk/collection/B76/current/B7600030/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B76/current/B7600030/>;
+    dc:modified '2022-07-11T11:39:26'^^xsd:dateTime ;
+    skos:altLabel 'UoW Seaglider M6'^^xsd:string ;
+    skos:prefLabel 'University of Washington Seaglider M6 Deepglider'@en ;
+    skos:definition 'An autonomous underwater vehicle (AUV) based on buoyancy. Initially developed at the University of Washington, it is now produced and developed by Kongsberg. The Seaglider M6 Deepglider is designed for continuous, long-term measurement of oceanographic parameters at full-ocean depth. It uses small changes in buoyancy and wings to achieve forward motion. The systems pitch and roll are controlled using adjustable ballast (the vehicle battery). The vehicle moves through the water in a saw-tooth like pattern and surfaces often to determine its position. Navigation is accomplished using a combination of GPS fixes while on the surface and internal sensors that monitor the vehicle heading, depth and attitude during dives. External sensors are constantly scanning the ocean to determine environmental properties. The glider is 1.8 m long with a maximum diameter of 30 cm and antenna mast length between 43 cm and 1 m. It weighs 52 kg with a wing span of 1 m. It has a maximum deployment range of 10000 km, enabling missions to last over a year. It has an operating depth range up to 6000 m. Maximum speed is 0.5 m/s. Glide angle is 14 - 45 degrees.'@en ;
+    skos:notation 'SDN:B76::B7600030'^^xsd:string .

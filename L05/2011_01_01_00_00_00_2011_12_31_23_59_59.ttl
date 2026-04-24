@@ -1,0 +1,145 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L05/2011_01_01_00_00_00_2011_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L05/2010_01_01_00_00_00_2010_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2011-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/67/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/67/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/67/>;
+    dc:modified '2011-11-25T11:45:36'^^xsd:dateTime ;
+    skos:altLabel 'HSS'^^xsd:string ;
+    skos:prefLabel 'high-speed plankton samplers'@en ;
+    skos:definition 'A fine-meshed net or filter towed behind a moving vessel that collects a single sample for a tow. Samples microzooplankton, mesozooplankton and nekton.'@en ;
+    skos:notation 'SDN:L05::67'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/66/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/66/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/66/>;
+    dc:modified '2011-08-26T14:59:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'flushing drills'@en ;
+    skos:definition 'Devices primarily designed to drill wells through sediment or rock that flush the drill spoil back to the surface where it is examined to provide lithological data through the process known as mud logging.'@en ;
+    skos:notation 'SDN:L05::66'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/65/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/65/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/65/>;
+    dc:modified '2011-08-26T14:52:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'gill nets'@en ;
+    skos:definition 'Nets drifting in the sea or standing on the sea floor in which fish become entangled, usually through their gill covers.'@en ;
+    skos:notation 'SDN:L05::65'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/182/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/182/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/182/>;
+    dc:modified '2011-08-26T10:27:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'inapplicable'@en ;
+    skos:definition 'There is no appropriate value. To be used in cases where metadata elements cannot be set null due to schema constraints.'@en ;
+    skos:notation 'SDN:L05::182'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/388/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/388/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/388/>;
+    dc:modified '2011-05-20T09:35:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'flow meters'@en ;
+    skos:definition 'Sensors that quantify the rate at which fluids (e.g. water or air) pass through sensor packages, instruments or sampling devices.'@en ;
+    skos:notation 'SDN:L05::388'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/186/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/186/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/186/>;
+    dc:modified '2011-04-15T14:18:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'radar altimeters'@en ;
+    skos:definition 'Instruments that determine the distance between the platform and the Earth\'s surface by timing reflected electromagnetic radiation, usually microwaves.'@en ;
+    skos:notation 'SDN:L05::186'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB20/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB20/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB20/>;
+    dc:modified '2011-04-15T14:18:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'spectrophotometers'@en ;
+    skos:definition 'Instruments measuring the relative absorption of electromagnetic radiation of different wavelengths in the near infra-red, visible and ultraviolet wavebands by samples.'@en ;
+    skos:notation 'SDN:L05::LAB20'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB22/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB22/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB22/>;
+    dc:modified '2011-04-15T14:18:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'gamma-ray spectrometers'@en ;
+    skos:definition 'Instruments measuring the relative levels of electromagnetic radiation of different wavelengths in the gamma-ray waveband.'@en ;
+    skos:notation 'SDN:L05::LAB22'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/357/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/357/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/357/>;
+    dc:modified '2011-02-02T12:45:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'acoustic tracking systems'@en ;
+    skos:definition 'A network of acoustic sensors that determine the location of a sound source by triangulation such as acoustically active float tracking systems.'@en ;
+    skos:notation 'SDN:L05::357'^^xsd:string .

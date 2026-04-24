@@ -1,0 +1,244 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S06/2019_01_01_00_00_00_2019_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S06/2018_01_01_00_00_00_2018_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2019-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600243/2/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600243/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600243/>;
+    dc:modified '2019-07-12T10:48:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Serial number'@en ;
+    skos:definition 'A number that is one of a series that identifies an object or thing from others in the series. For example, an identifier given to a manufactured part of a product line that uniquely identifies it from other parts produced in that line.'@en ;
+    skos:notation 'SDN:S06::S0600243'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600242/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600242/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600242/>;
+    dc:modified '2019-06-04T18:21:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Potential temperature'@en ;
+    skos:definition 'The temperature that a parcel of air or water would have if moved adiabatically (i.e. without exchange of heat) to a standard reference pressure.'@en ;
+    skos:notation 'SDN:S06::S0600242'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600241/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600241/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600241/>;
+    dc:modified '2019-05-30T17:28:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Activity ratio'@en ;
+    skos:definition 'Quotient of the radioactive decay rates of two co-located radionuclides.'@en ;
+    skos:notation 'SDN:S06::S0600241'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600240/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600240/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600240/>;
+    dc:modified '2019-05-30T17:28:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Atomic ratio'@en ;
+    skos:definition 'Quotient of the number of atoms of two co-located chemical elements or isotopes.'@en ;
+    skos:notation 'SDN:S06::S0600240'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600239/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600239/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600239/>;
+    dc:modified '2019-04-10T18:16:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Root-mean-square sound pressure'@en ;
+    skos:definition 'The square root of the mean of the variances of the instantaneous pressure of the sound signal over a given duration.'@en ;
+    skos:notation 'SDN:S06::S0600239'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600238/2/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600238/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600238/>;
+    dc:modified '2019-04-10T17:53:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sound pressure level'@en ;
+    skos:definition 'The pressure caused by a sound wave and expressed as the logarithm of the effective sound pressure to a reference value; also called acoustic pressure level. Unless otherwise specified, pressure is expressed in root-mean-square values and the reference sound pressure is 20 micropascal for sound in air and 1 micropascal for sound in other media.'@en ;
+    skos:notation 'SDN:S06::S0600238'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600237/2/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600237/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600237/>;
+    dc:modified '2019-04-09T18:15:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mass depth'@en ;
+    skos:definition 'Cumulative mass per unit surface of a medium or succession of media along a vertical path.'@en ;
+    skos:notation 'SDN:S06::S0600237'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600142/2/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600142/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600142/>;
+    dc:modified '2019-04-08T15:46:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Direction (from) at spectral maximum'@en ;
+    skos:definition 'A spectral analysis wave parameter defined as the direction from which the waves with the highest energy are coming.'@en ;
+    skos:notation 'SDN:S06::S0600142'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600236/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600236/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600236/>;
+    dc:modified '2019-04-04T15:57:07'^^xsd:dateTime ;
+    skos:altLabel 'DOP'^^xsd:string ;
+    skos:prefLabel 'Dilution of precision'@en ;
+    skos:definition 'Uncertainty index associated with the geometry of a ranging system.'@en ;
+    skos:notation 'SDN:S06::S0600236'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600235/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600235/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600235/>;
+    dc:modified '2019-03-26T18:13:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Nominal concentration'@en ;
+    skos:definition 'Term used to indicate that the value is an approximation of the real concentration of a substance in a solution.'@en ;
+    skos:notation 'SDN:S06::S0600235'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600234/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600234/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600234/>;
+    dc:modified '2019-03-16T17:20:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Nutritional status category'@en ;
+    skos:definition 'Term (free text or from a controlled vocabulary) indicating the nutritional status or emaciation score of biological organisms.'@en ;
+    skos:notation 'SDN:S06::S0600234'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600232/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600232/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600232/>;
+    dc:modified '2019-03-16T14:07:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ash-free dry weight biomass production rate'@en ;
+    skos:definition 'The rate (measured or modelled) at which biomass, exclusive of water and mineral matter, is produced over a given time.'@en ;
+    skos:notation 'SDN:S06::S0600232'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600227/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600227/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600227/>;
+    dc:modified '2019-03-16T13:39:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Cause of death'@en ;
+    skos:definition 'Single cause of death of biological specimen. This is either free text or a term or code from a controlled vocabulary.'@en ;
+    skos:notation 'SDN:S06::S0600227'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600226/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600226/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600226/>;
+    dc:modified '2019-03-16T13:27:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Specimen decomposition stage code'@en ;
+    skos:definition 'A code from a known classification scale specified elsewhere in the metadata indicating the condition of decomposiion of a biological specimen.'@en ;
+    skos:notation 'SDN:S06::S0600226'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600225/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600225/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600225/>;
+    dc:modified '2019-02-19T14:23:15'^^xsd:dateTime ;
+    skos:altLabel 'Tmax'^^xsd:string ;
+    skos:prefLabel 'Period at maximum recorded height'@en ;
+    skos:definition 'A wave parameter defined as the period of the highest wave in a record.'@en ;
+    skos:notation 'SDN:S06::S0600225'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600221/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600221/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600221/>;
+    dc:modified '2019-01-25T15:03:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Latitude north'@en ;
+    skos:definition 'Angular distance from the equator along a meridian of the Earth\'s surface, ranging from -90deg at the South Pole to 90deg at the North Pole.'@en ;
+    skos:notation 'SDN:S06::S0600221'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600222/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600222/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600222/>;
+    dc:modified '2019-01-25T15:03:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Longitude east'@en ;
+    skos:definition 'Angular distance from the Prime Meridian along a parallel of the Earth\'s surface, ranging from 0deg to 180deg to the east, and 0deg to -180deg to the west.'@en ;
+    skos:notation 'SDN:S06::S0600222'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600223/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600223/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600223/>;
+    dc:modified '2019-01-25T15:03:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Easting'@en ;
+    skos:definition 'Cartesian x co-ordinate of a point relative to a horizontal datum.'@en ;
+    skos:notation 'SDN:S06::S0600223'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600224/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600224/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600224/>;
+    dc:modified '2019-01-25T15:03:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Northing'@en ;
+    skos:definition 'Cartesian y co-ordinate of a point relative to a horizontal datum.'@en ;
+    skos:notation 'SDN:S06::S0600224'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600220/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600220/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600220/>;
+    dc:modified '2019-01-21T14:41:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Abundance increase'@en ;
+    skos:definition 'The positive change in the number of occurrences of an entity between two points (typically two points in time); negative values indicate a decrease.'@en ;
+    skos:notation 'SDN:S06::S0600220'^^xsd:string .

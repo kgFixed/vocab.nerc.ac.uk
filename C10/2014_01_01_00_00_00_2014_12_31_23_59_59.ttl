@@ -1,0 +1,217 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C10/2014_01_01_00_00_00_2014_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C10/2013_01_01_00_00_00_2013_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2014-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C10/current/VPRFSER/1/> .
+<http://vocab.nerc.ac.uk/collection/C10/current/VPRFSER/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C10/current/VPRFSER/>;
+    dc:modified '2014-12-17T14:41:23'^^xsd:dateTime ;
+    skos:altLabel 'VD_Prof_Ser'^^xsd:string ;
+    skos:prefLabel 'Variable-depth profile time series'@en ;
+    skos:definition 'The series has a set of measurements over time at a fixed point (position stored in metadata) and at multiple depths that can possibly vary from measurement to measurement. Each measurement constitutes a spectrum with a non-spatial variable (generally bin number) on the secondary (rank 0) dimension. The primary (rank 1) dimension includes the time variable. The z co-ordinate (depth or height) is carried with the data variables as 2D (rank 2) arrays.'@en ;
+    skos:notation 'SDN:C10::VPRFSER'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C10/current/VPRFCOLL/1/> .
+<http://vocab.nerc.ac.uk/collection/C10/current/VPRFCOLL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C10/current/VPRFCOLL/>;
+    dc:modified '2014-12-17T14:37:21'^^xsd:dateTime ;
+    skos:altLabel 'VD_Prof_Coll'^^xsd:string ;
+    skos:prefLabel 'Variable-depth profile collection'@en ;
+    skos:definition 'The series has a set of measurements along a trajectory (variable times and locations) at multiple depths that can possibly vary from measurement to measurement. Each measurement constitutes a spectrum with a non-spatial variable (generally bin number) on the secondary (rank 0) dimension. The primary (rank 1) dimension includes position and time variables. The z co-ordinate (depth or height) is carried with the data variables as 2D (rank 2) arrays.'@en ;
+    skos:notation 'SDN:C10::VPRFCOLL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C10/current/YOYO/2/> .
+<http://vocab.nerc.ac.uk/collection/C10/current/YOYO/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C10/current/YOYO/>;
+    dc:modified '2014-12-17T14:32:11'^^xsd:dateTime ;
+    skos:altLabel 'Yo_Yo'^^xsd:string ;
+    skos:prefLabel 'Repeated continuous profiles'@en ;
+    skos:definition 'The series has a set of measurements at a fixed position with elevation continuously varying (values potentially different for each oscillation) over time. QXF must include both a time channel and a z co-ordinate channel on the primary (rank 1) dimension along with the data parameters. Examples are wire-crawler moorings and repeated CTD casts that have neither been binned nor split into discrete profiles. Position is held in metadata.'@en ;
+    skos:notation 'SDN:C10::YOYO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C10/current/SPTRAJ3D/2/> .
+<http://vocab.nerc.ac.uk/collection/C10/current/SPTRAJ3D/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C10/current/SPTRAJ3D/>;
+    dc:modified '2014-12-17T14:30:28'^^xsd:dateTime ;
+    skos:altLabel 'Spec_Traj_3D'^^xsd:string ;
+    skos:prefLabel 'Spectrum three-dimensional trajectory'@en ;
+    skos:definition 'The series has a set of measurements at variable times, depths and locations. Each measurement constitutes a spectrum with a non-spatial variable (e.g. grain size or bin number) on the secondary (rank 0)dimension. The primary (rank 1) dimension includes position, time variables and depth variable.'@en ;
+    skos:notation 'SDN:C10::SPTRAJ3D'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C10/current/SPGRID/2/> .
+<http://vocab.nerc.ac.uk/collection/C10/current/SPGRID/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C10/current/SPGRID/>;
+    dc:modified '2014-12-17T14:29:57'^^xsd:dateTime ;
+    skos:altLabel 'Grid'^^xsd:string ;
+    skos:prefLabel 'Spatial Grid'@en ;
+    skos:definition 'The series has one set of measurements per parameter stored in a 2-D array described by two co-ordinate variables that are horizontal spatial co-ordinates (e.g. latitude and longitude) with longitude along the primary dimension (rank 1) and latitude along the secondary (rank 0).  Measurements could either be a single time-snapshot or considered time-independent.'@en ;
+    skos:notation 'SDN:C10::SPGRID'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C10/current/SPECTRAJ/2/> .
+<http://vocab.nerc.ac.uk/collection/C10/current/SPECTRAJ/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C10/current/SPECTRAJ/>;
+    dc:modified '2014-12-17T14:28:24'^^xsd:dateTime ;
+    skos:altLabel 'Spec_Traj'^^xsd:string ;
+    skos:prefLabel 'Spectrum trajectory'@en ;
+    skos:definition 'The series has a set of measurements at a fixed depth but variable times and locations. Each measurement constitutes a spectrum with a non-spatial variable (e.g. grain size or bin number) on the secondary dimension (rank 0). The primary dimension (rank 1) includes position and time variables, but no depth variable. Depth is stored in metadata.'@en ;
+    skos:notation 'SDN:C10::SPECTRAJ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C10/current/SPECSER/2/> .
+<http://vocab.nerc.ac.uk/collection/C10/current/SPECSER/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C10/current/SPECSER/>;
+    dc:modified '2014-12-17T14:27:10'^^xsd:dateTime ;
+    skos:altLabel 'Spec_Ser'^^xsd:string ;
+    skos:prefLabel 'Spectrum time series'@en ;
+    skos:definition 'The series has a set of measurements at a fixed position and multiple but fixed z co-ordinate values that are not elevation (e.g. frequency or size class) varying with time. Time is stored along the primary dimension (rank 1) and the z co-ordinate along the secondary dimension (rank 0). The data parameters are 2D arrays (rank 2). Position is stored in metadata.'@en ;
+    skos:notation 'SDN:C10::SPECSER'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C10/current/SPECPROF/2/> .
+<http://vocab.nerc.ac.uk/collection/C10/current/SPECPROF/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C10/current/SPECPROF/>;
+    dc:modified '2014-12-17T14:24:53'^^xsd:dateTime ;
+    skos:altLabel 'Spec_Prof'^^xsd:string ;
+    skos:prefLabel 'Spectrum profile'@en ;
+    skos:definition 'The series has a set of measurements at a fixed position and time but varying depths. Each measurement constitutes a spectrum with a non-spatial variable (e.g. grain size or bin number) on the secondary dimension (rank 0). The primary dimension (rank 1) includes a z co-ordinate (depth). Time and position are held as metadata.'@en ;
+    skos:notation 'SDN:C10::SPECPROF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C10/current/PPROF/2/> .
+<http://vocab.nerc.ac.uk/collection/C10/current/PPROF/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C10/current/PPROF/>;
+    dc:modified '2014-12-17T14:22:05'^^xsd:dateTime ;
+    skos:altLabel 'Prof_P'^^xsd:string ;
+    skos:prefLabel 'Profile with pressure'@en ;
+    skos:definition 'The series has a single set of instantaneous measurements at a fixed position over a vertical range (z).  Data and z co-ordinate (as pressure) are included along the primary dimension (rank 1). Time and position are stored as metadata.'@en ;
+    skos:notation 'SDN:C10::PPROF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C10/current/POINT/2/> .
+<http://vocab.nerc.ac.uk/collection/C10/current/POINT/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C10/current/POINT/>;
+    dc:modified '2014-12-17T14:20:38'^^xsd:dateTime ;
+    skos:altLabel 'Point_Ser'^^xsd:string ;
+    skos:prefLabel 'Point time series'@en ;
+    skos:definition 'The series has a single set of measurements at a fixed position and elevation varying with time. Time and data parameters are stored along the primary dimension (rank 1). Position and the z co-ordinate (depth or height) are stored in metadata.'@en ;
+    skos:notation 'SDN:C10::POINT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C10/current/PDPROF/2/> .
+<http://vocab.nerc.ac.uk/collection/C10/current/PDPROF/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C10/current/PDPROF/>;
+    dc:modified '2014-12-17T14:18:51'^^xsd:dateTime ;
+    skos:altLabel 'Prof_PandD'^^xsd:string ;
+    skos:prefLabel 'Profile with pressure and depth'@en ;
+    skos:definition 'The series has a single set of instantaneous measurements at a fixed position over a vertical range (z).  Z co-ordinates are included along the primary dimension (rank 1) as both pressure and depth. Time and position are stored as metadata.'@en ;
+    skos:notation 'SDN:C10::PDPROF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C10/current/DPROF/2/> .
+<http://vocab.nerc.ac.uk/collection/C10/current/DPROF/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C10/current/DPROF/>;
+    dc:modified '2014-12-17T14:18:01'^^xsd:dateTime ;
+    skos:altLabel 'Prof_D'^^xsd:string ;
+    skos:prefLabel 'Profile with depth'@en ;
+    skos:definition 'The series has a single set of instantaneous measurements at a fixed position over a vertical range (z).  Z co-ordinates are included along the primary dimension (rank 1) as depth. Time and position are stored as metadata.'@en ;
+    skos:notation 'SDN:C10::DPROF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C10/current/CSPGRID/3/> .
+<http://vocab.nerc.ac.uk/collection/C10/current/CSPGRID/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C10/current/CSPGRID/>;
+    dc:modified '2014-12-17T14:15:32'^^xsd:dateTime ;
+    skos:altLabel 'Comp_Grid'^^xsd:string ;
+    skos:prefLabel 'Compressed spatial grid'@en ;
+    skos:definition 'The series has data stored in a 2D array, having cycle number as the primary dimension (rank 1) variable and both latitude and longitude as the secondary dimension (rank 0) variables. Used in BODC for compact storage of spatial grids in QXF.'@en ;
+    skos:notation 'SDN:C10::CSPGRID'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C10/current/TRAJ3D/3/> .
+<http://vocab.nerc.ac.uk/collection/C10/current/TRAJ3D/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C10/current/TRAJ3D/>;
+    dc:modified '2014-12-17T13:58:59'^^xsd:dateTime ;
+    skos:altLabel 'Traj_3D'^^xsd:string ;
+    skos:prefLabel 'Three Dimensional Trajectory'@en ;
+    skos:definition 'The series has measurements at independently varying position and elevation as a function of time. Time, horizontal (e.g. latitude and longitude) and vertical (e.g. depth/height) coordinates together with data are stored along the primary dimension (rank 1). 2D trajectories may be stored as this feature type by including a z co-ordinate array set to a constant value.'@en ;
+    skos:notation 'SDN:C10::TRAJ3D'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C10/current/PROFSER/2/> .
+<http://vocab.nerc.ac.uk/collection/C10/current/PROFSER/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C10/current/PROFSER/>;
+    dc:modified '2014-12-17T13:57:59'^^xsd:dateTime ;
+    skos:altLabel 'Prof_Ser'^^xsd:string ;
+    skos:prefLabel 'Profile time series'@en ;
+    skos:definition 'The series has a set of measurements at a fixed position and multiple but fixed elevations at different times. Time is stored along the primary dimension (rank 1). The z co-ordinate (depth/height) is stored along the secondary dimension (rank 0). Horizontal spatial co-ordinates (e.g. latitude and longitude) are stored in metadata.'@en ;
+    skos:notation 'SDN:C10::PROFSER'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C10/current/TRAJ/2/> .
+<http://vocab.nerc.ac.uk/collection/C10/current/TRAJ/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C10/current/TRAJ/>;
+    dc:modified '2014-12-17T13:48:56'^^xsd:dateTime ;
+    skos:altLabel 'Traj'^^xsd:string ;
+    skos:prefLabel 'Trajectory'@en ;
+    skos:definition 'The series has measurements at a single fixed elevation varying with both position and time. Time and horizontal spatial (e.g. latitude and longitude) coordinates together with data are stored along the primary dimension (rank 1). The z co-ordinate (depth or height) is stored in metadata.'@en ;
+    skos:notation 'SDN:C10::TRAJ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C10/current/PROFCOLL/2/> .
+<http://vocab.nerc.ac.uk/collection/C10/current/PROFCOLL/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C10/current/PROFCOLL/>;
+    dc:modified '2014-12-17T13:45:57'^^xsd:dateTime ;
+    skos:altLabel 'Prof_Coll'^^xsd:string ;
+    skos:prefLabel 'Profile collection'@en ;
+    skos:definition 'The series has sets of measurements at multiple but constant elevations varying with both position and time. Time and horizontal spatial (e.g. latitude and longitude) coordinates are stored along the primary dimension (rank 1) with a z co-ordinate (depth or height) stored along the secondary dimension (rank 0). Data parameters are in 2D arrays (rank 2).'@en ;
+    skos:notation 'SDN:C10::PROFCOLL'^^xsd:string .

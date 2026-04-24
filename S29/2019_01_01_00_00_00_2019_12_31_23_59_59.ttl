@@ -1,0 +1,856 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S29/2019_01_01_00_00_00_2019_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S29/2018_01_01_00_00_00_2018_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2019-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001403/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001403/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001403/>;
+    dc:modified '2019-10-31T15:00:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'shells and shell fragments'@en ;
+    skos:definition 'The property relates to whole or broken shells as found in, for example, marine sediments or sedimentary rocks.'@en ;
+    skos:notation 'SDN:S29::PE001403'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001400/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001400/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001400/>;
+    dc:modified '2019-10-14T16:22:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ambient noise (2000Hz-centred one-third-octave frequency band, 20s interval) relative to 1 micropascal'@en ;
+    skos:definition 'Any sound other than the sound signal from a specific source, or acoustic and non-acoustic interferences from the measuring device. Applies to a sound pressure signal within the specified frequency band and the specified time interval. The reference level is a pressure of 1 micropascal.'@en ;
+    skos:notation 'SDN:S29::PE001400'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001401/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001401/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001401/>;
+    dc:modified '2019-10-14T16:22:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ambient noise (125Hz-centred one-third-octave frequency band, 20s interval) relative to 1 micropascal'@en ;
+    skos:definition 'Any sound other than the sound signal from a specific source, or acoustic and non-acoustic interferences from the measuring device. Applies to a sound pressure signal within the specified frequency band and the specified time interval. The reference level is a pressure of 1 micropascal.'@en ;
+    skos:notation 'SDN:S29::PE001401'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001402/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001402/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001402/>;
+    dc:modified '2019-10-14T16:22:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ambient noise (63Hz-centred one-third-octave frequency band, 20s interval) relative to 1 micropascal'@en ;
+    skos:definition 'Any sound other than the sound signal from a specific source, or acoustic and non-acoustic interferences from the measuring device. Applies to a sound pressure signal within the specified frequency band and the specified time interval. The reference level is a pressure of 1 micropascal.'@en ;
+    skos:notation 'SDN:S29::PE001402'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001399/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001399/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001399/>;
+    dc:modified '2019-10-14T15:29:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ambient noise (20s interval) relative to 1 micropascal'@en ;
+    skos:definition 'Any sound other than the sound signal from a specific source, or acoustic and non-acoustic interferences from the measuring device. The interval of time over which the phenomenon was integrated was 20 seconds. The reference level is a pressure of 1 micropascal.'@en ;
+    skos:notation 'SDN:S29::PE001399'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001398/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001398/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001398/>;
+    dc:modified '2019-07-29T14:19:58'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument output (470nm wavelength)'@en ;
+    skos:definition 'Raw signal generated by a measuring instrument. The physical entity refers to a single specified wavelength.'@en ;
+    skos:notation 'SDN:S29::PE001398'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001397/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001397/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001397/>;
+    dc:modified '2019-07-29T14:14:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument output (650nm wavelength)'@en ;
+    skos:definition 'Raw signal generated by a measuring instrument. The physical entity refers to a single specified wavelength.'@en ;
+    skos:notation 'SDN:S29::PE001397'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001396/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001396/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001396/>;
+    dc:modified '2019-07-29T13:57:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument output (880nm wavelength)'@en ;
+    skos:definition 'Raw signal generated by a measuring instrument. The physical entity refers to a single specified wavelength.'@en ;
+    skos:notation 'SDN:S29::PE001396'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001395/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001395/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001395/>;
+    dc:modified '2019-07-12T10:18:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument'@en ;
+    skos:definition 'A physical object that is a tool, an implement or a sampling/measuring device.'@en ;
+    skos:notation 'SDN:S29::PE001395'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001394/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001394/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001394/>;
+    dc:modified '2019-06-13T10:01:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ADCP bin (top of the depth cell) relative to bed surface'@en ;
+    skos:definition 'The property relates to the upper limit of an ADCP bin or depth cell.'@en ;
+    skos:notation 'SDN:S29::PE001394'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001391/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001391/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001391/>;
+    dc:modified '2019-06-04T17:05:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'organic carbon/nitrogen'@en ;
+    skos:definition 'Ratio of organic carbon to total nitrogen.'@en ;
+    skos:notation 'SDN:S29::PE001391'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001392/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001392/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001392/>;
+    dc:modified '2019-06-04T17:05:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'iodine-129/iodine-127'@en ;
+    skos:definition 'Ratio of the two specified isotopes.'@en ;
+    skos:notation 'SDN:S29::PE001392'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001393/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001393/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001393/>;
+    dc:modified '2019-06-04T17:05:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tritium/hydrogen'@en ;
+    skos:definition 'Ratio of tritium over hydrogen. This ratio is usually expressed in Tritium Units (TU) defined as 1 TU = 1 3H atom per 10^18 H atoms.'@en ;
+    skos:notation 'SDN:S29::PE001393'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001377/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001377/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001377/>;
+    dc:modified '2019-05-31T20:25:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'thorium-230/thorium-232'@en ;
+    skos:definition 'Ratio of the two specified isotopes.'@en ;
+    skos:notation 'SDN:S29::PE001377'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001378/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001378/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001378/>;
+    dc:modified '2019-05-31T20:25:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'neodymium-143/neodymium-144'@en ;
+    skos:definition 'Ratio of the two specified isotopes.'@en ;
+    skos:notation 'SDN:S29::PE001378'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001379/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001379/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001379/>;
+    dc:modified '2019-05-31T20:25:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'lead-206/lead-204'@en ;
+    skos:definition 'Ratio of the two specified isotopes.'@en ;
+    skos:notation 'SDN:S29::PE001379'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001380/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001380/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001380/>;
+    dc:modified '2019-05-31T20:25:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'radium-228/radium-226'@en ;
+    skos:definition 'Ratio of the two specified isotopes.'@en ;
+    skos:notation 'SDN:S29::PE001380'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001381/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001381/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001381/>;
+    dc:modified '2019-05-31T20:25:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'polonium-210/lead-210'@en ;
+    skos:definition 'Ratio of the two specified isotopes.'@en ;
+    skos:notation 'SDN:S29::PE001381'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001382/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001382/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001382/>;
+    dc:modified '2019-05-31T20:25:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'lead-208/lead-204'@en ;
+    skos:definition 'Ratio of the two specified isotopes.'@en ;
+    skos:notation 'SDN:S29::PE001382'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001383/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001383/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001383/>;
+    dc:modified '2019-05-31T20:25:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'lead-206/lead-207'@en ;
+    skos:definition 'Ratio of the two specified isotopes.'@en ;
+    skos:notation 'SDN:S29::PE001383'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001384/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001384/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001384/>;
+    dc:modified '2019-05-31T20:25:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'uranium-238/uranium-236'@en ;
+    skos:definition 'Ratio of the two specified isotopes.'@en ;
+    skos:notation 'SDN:S29::PE001384'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001385/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001385/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001385/>;
+    dc:modified '2019-05-31T20:25:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'uranium-236/uranium-238'@en ;
+    skos:definition 'Ratio of the two specified isotopes.'@en ;
+    skos:notation 'SDN:S29::PE001385'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001386/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001386/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001386/>;
+    dc:modified '2019-05-31T20:25:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'lead-208/lead-206'@en ;
+    skos:definition 'Ratio of the two specified isotopes.'@en ;
+    skos:notation 'SDN:S29::PE001386'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001387/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001387/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001387/>;
+    dc:modified '2019-05-31T20:25:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'lead-208/lead-207'@en ;
+    skos:definition 'Ratio of the two specified isotopes.'@en ;
+    skos:notation 'SDN:S29::PE001387'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001388/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001388/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001388/>;
+    dc:modified '2019-05-31T20:25:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'thorium-232/thorium-230'@en ;
+    skos:definition 'Ratio of the two specified isotopes.'@en ;
+    skos:notation 'SDN:S29::PE001388'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001389/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001389/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001389/>;
+    dc:modified '2019-05-31T20:25:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'uranium-234/uranium-238'@en ;
+    skos:definition 'Ratio of the two specified isotopes.'@en ;
+    skos:notation 'SDN:S29::PE001389'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001390/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001390/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001390/>;
+    dc:modified '2019-05-31T20:25:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'lead-207/lead-204'@en ;
+    skos:definition 'Ratio of the two specified isotopes.'@en ;
+    skos:notation 'SDN:S29::PE001390'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001334/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001334/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001334/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'density determination'@en ;
+    skos:definition 'The property relates to the determination of the density of a water body.'@en ;
+    skos:notation 'SDN:S29::PE001334'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001335/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001335/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001335/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CO2 gas standard at detector outlet (nominal zero ppm)'@en ;
+    skos:definition 'The property relates to a CO2 gas standard exiting a detector. Applies to gas standards with an approximate concentration of zero ppm (blank).'@en ;
+    skos:notation 'SDN:S29::PE001335'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001336/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001336/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001336/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'oxygen determination'@en ;
+    skos:definition 'The property relates to the quantification of oxygen gas.'@en ;
+    skos:notation 'SDN:S29::PE001336'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001337/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001337/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001337/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'readout module'@en ;
+    skos:definition 'The property relates to the hardware unit of a sensor or a set of sensors.'@en ;
+    skos:notation 'SDN:S29::PE001337'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001338/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001338/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001338/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CO2 gas standard at detector outlet (nominal 450 ppm)'@en ;
+    skos:definition 'The property relates to a CO2 gas standard exiting a detector. Applies to gas standards with an approximate concentration of 450 ppm.'@en ;
+    skos:notation 'SDN:S29::PE001338'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001339/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001339/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001339/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CPU temperature determination'@en ;
+    skos:definition 'The property relates to the temperature determination of a central processing unit.'@en ;
+    skos:notation 'SDN:S29::PE001339'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001340/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001340/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001340/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument (top of electronics tube)'@en ;
+    skos:definition 'The property relates to a condition (typically temperature) within an instrumentation setup. Applies to a location at the top of the electronics tube.'@en ;
+    skos:notation 'SDN:S29::PE001340'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001341/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001341/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001341/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CO2 gas standard in LI-COR (nominal zero ppm)'@en ;
+    skos:definition 'The property relates to the CO2 gas standard in the LI-COR gas analyser. Applies to gas standards with an approximate concentration of zero ppm (blank).'@en ;
+    skos:notation 'SDN:S29::PE001341'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001342/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001342/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001342/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water at equilibrator base'@en ;
+    skos:definition 'The property relates to the water sample at the base of an equilibrating vessel used as part of the analytical procedure.'@en ;
+    skos:notation 'SDN:S29::PE001342'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001343/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001343/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001343/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'divalent manganese determination'@en ;
+    skos:definition 'The property relates to the determination of divalent manganese.'@en ;
+    skos:notation 'SDN:S29::PE001343'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001344/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001344/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001344/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'equilibrated marine sample at detector outlet'@en ;
+    skos:definition 'The property relates to the equilibrated marine sample exiting the detector.'@en ;
+    skos:notation 'SDN:S29::PE001344'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001345/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001345/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001345/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'pCO2 determination'@en ;
+    skos:definition 'The property relates to the determination of the CO2 partial pressure in a water sample.'@en ;
+    skos:notation 'SDN:S29::PE001345'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001346/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001346/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001346/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CO2 gas standard at detector inlet (nominal zero ppm)'@en ;
+    skos:definition 'The property relates to a CO2 gas standard entering a detector. Applies to gas standards with an approximate concentration of zero ppm (blank).'@en ;
+    skos:notation 'SDN:S29::PE001346'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001347/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001347/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001347/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere sample in LI-COR (nominal zero ppm)'@en ;
+    skos:definition 'The property relates to the atmosphere in the LI-COR gas analyser. Applies to gas standards with an approximate concentration of zero ppm (blank).'@en ;
+    skos:notation 'SDN:S29::PE001347'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001348/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001348/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001348/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CO2 gas standard in LI-COR (nominal 450 ppm)'@en ;
+    skos:definition 'The property relates to the CO2 gas standard in the LI-COR gas analyser. Applies to gas standards with an approximate concentration of 450 ppm.'@en ;
+    skos:notation 'SDN:S29::PE001348'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001349/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001349/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001349/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CO2 gas standard at detector outlet (nominal 250 ppm)'@en ;
+    skos:definition 'The property relates to a CO2 gas standard exiting a detector. Applies to gas standards with an approximate concentration of 250 ppm.'@en ;
+    skos:notation 'SDN:S29::PE001349'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001350/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001350/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001350/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'oxygen fixation'@en ;
+    skos:definition 'The property relates to the condition at the time of the chemical fixation of the oxygen molecules by addition of reagents prior to analysis.'@en ;
+    skos:notation 'SDN:S29::PE001350'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001351/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001351/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001351/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'pH determination'@en ;
+    skos:definition 'The property relates to the determination of the pH of a medium or a sample.'@en ;
+    skos:notation 'SDN:S29::PE001351'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001352/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001352/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001352/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'dissolved total inorganic carbon {TCO2} determination'@en ;
+    skos:definition 'The property relates to the determination of total inorganic carbon dissolved in a water body.'@en ;
+    skos:notation 'SDN:S29::PE001352'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001353/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001353/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001353/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'measurement'@en ;
+    skos:definition 'The property relates to one or a set of conditions attached to a measurement.'@en ;
+    skos:notation 'SDN:S29::PE001353'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001354/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001354/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001354/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'equilibrated marine sample in LI-COR'@en ;
+    skos:definition 'The property relates to the equilibrated marine sample in the LI-COR gas analyser.'@en ;
+    skos:notation 'SDN:S29::PE001354'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001355/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001355/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001355/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CO2 gas standard in LI-COR (nominal 250 ppm)'@en ;
+    skos:definition 'The property relates to the CO2 gas standard in the LI-COR gas analyser. Applies to gas standards with an approximate concentration of 250 ppm.'@en ;
+    skos:notation 'SDN:S29::PE001355'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001356/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001356/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001356/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere sample at detector outlet'@en ;
+    skos:definition 'The property relates to the atmosphere sample exiting the detector.'@en ;
+    skos:notation 'SDN:S29::PE001356'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001357/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001357/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001357/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'calibration'@en ;
+    skos:definition 'The property relates to the calibration procedure or conditions of an instrument or a method.'@en ;
+    skos:notation 'SDN:S29::PE001357'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001358/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001358/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001358/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fluorescence measurement'@en ;
+    skos:definition 'A measurement made by a fluorometer. A fluorometer is set up to generate the wavelength of light to excite the analyte of interest, to selectively transmit the wavelength of light emitted and to measure the intensity of the emitted light.'@en ;
+    skos:notation 'SDN:S29::PE001358'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001359/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001359/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001359/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'optical cell'@en ;
+    skos:definition 'The property relates to an optical cell within an instrumentation setup.'@en ;
+    skos:notation 'SDN:S29::PE001359'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001360/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001360/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001360/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'electrical conductivity measurement'@en ;
+    skos:definition 'The property relates to the determination of the electrical conductivity of a water body.'@en ;
+    skos:notation 'SDN:S29::PE001360'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001361/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001361/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001361/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'DOC determination'@en ;
+    skos:definition 'The property relates to the determination of dissolved organic carbon (DOC).'@en ;
+    skos:notation 'SDN:S29::PE001361'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001362/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001362/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001362/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere sample at detector inlet'@en ;
+    skos:definition 'The property relates to the atmosphere sample entering the detector.'@en ;
+    skos:notation 'SDN:S29::PE001362'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001363/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001363/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001363/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument (middle of electronics tube)'@en ;
+    skos:definition 'The property relates to a condition (typically temperature) within an instrumentation setup. Applies to a location in the middle section of the electronics tube.'@en ;
+    skos:notation 'SDN:S29::PE001363'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001364/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001364/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001364/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'nutrient determination'@en ;
+    skos:definition 'The property relates to the determination of macro-nutrients.'@en ;
+    skos:notation 'SDN:S29::PE001364'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001365/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001365/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001365/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'P-wave propagation speed measurement'@en ;
+    skos:definition 'The property relates to the determination of P-wave propagation speed.'@en ;
+    skos:notation 'SDN:S29::PE001365'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001366/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001366/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001366/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'optical cell sensors'@en ;
+    skos:definition 'The property relates to sensors attached to one or several optical cells within an instrumentation setup.'@en ;
+    skos:notation 'SDN:S29::PE001366'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001367/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001367/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001367/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'total alkalinity determination'@en ;
+    skos:definition 'The property relates to the quantification of total alkalinity in a water sample.'@en ;
+    skos:notation 'SDN:S29::PE001367'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001368/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001368/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001368/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'equilibrated marine sample at detector inlet'@en ;
+    skos:definition 'The property relates to the equilibrated marine sample entering the detector.'@en ;
+    skos:notation 'SDN:S29::PE001368'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001369/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001369/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001369/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'heated atmosphere sample'@en ;
+    skos:definition 'The property relates to a sample from the atmosphere that has been heated as part of the analytical procedure.'@en ;
+    skos:notation 'SDN:S29::PE001369'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001370/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001370/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001370/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CO2 gas standard at detector inlet (nominal 450 ppm)'@en ;
+    skos:definition 'The property relates to a CO2 gas standard entering a detector. Applies to gas standards with an approximate concentration of 450 ppm.'@en ;
+    skos:notation 'SDN:S29::PE001370'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001371/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001371/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001371/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'oxygen sensor membrane'@en ;
+    skos:definition 'The property relates to the membrane of the oxygen sensor.'@en ;
+    skos:notation 'SDN:S29::PE001371'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001372/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001372/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001372/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'equilibration'@en ;
+    skos:definition 'The property relates to the phase of equilibration used as a technique to estimate gas concentrations in liquid samples.'@en ;
+    skos:notation 'SDN:S29::PE001372'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001373/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001373/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001373/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water at equilibrator top'@en ;
+    skos:definition 'The property relates to the water sample at the top of the equilibrating vessel used as part of the analytical procedure.'@en ;
+    skos:notation 'SDN:S29::PE001373'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001374/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001374/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001374/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'total iron determination'@en ;
+    skos:definition 'The property relates to the determination of total dissolved iron.'@en ;
+    skos:notation 'SDN:S29::PE001374'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001375/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001375/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001375/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CO2 gas standard at detector inlet (nominal 250 ppm)'@en ;
+    skos:definition 'The property relates to a CO2 gas standard entering a detector. Applies to gas standards with an approximate concentration of 250 ppm.'@en ;
+    skos:notation 'SDN:S29::PE001375'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001376/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001376/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001376/>;
+    dc:modified '2019-05-31T17:09:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument (bottom of electronics tube)'@en ;
+    skos:definition 'The property relates to a condition (typically temperature) within an instrumentation setup. Applies to a location at the bottom of the electronics tube.'@en ;
+    skos:notation 'SDN:S29::PE001376'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001333/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001333/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001333/>;
+    dc:modified '2019-04-10T17:37:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ambient noise'@en ;
+    skos:definition 'Any sound other than the sound signal from a specific source, or acoustic and non-acoustic interferences from the measuring device.'@en ;
+    skos:notation 'SDN:S29::PE001333'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001331/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001331/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001331/>;
+    dc:modified '2019-04-04T16:04:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'position (latitude)'@en ;
+    skos:definition 'The object of interest is the latitudinal position of a phenomenon.'@en ;
+    skos:notation 'SDN:S29::PE001331'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001332/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001332/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001332/>;
+    dc:modified '2019-04-04T16:04:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'position (longitude)'@en ;
+    skos:definition 'The object of interest is the longitudinal position of a phenomenon.'@en ;
+    skos:notation 'SDN:S29::PE001332'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001325/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001325/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001325/>;
+    dc:modified '2019-03-26T20:49:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to start of dive'@en ;
+    skos:definition 'The reference is the starting time of the platform dive.'@en ;
+    skos:notation 'SDN:S29::PE001325'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001326/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001326/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001326/>;
+    dc:modified '2019-03-26T20:49:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to last reading set'@en ;
+    skos:definition 'The reference is the time of the last reading set.'@en ;
+    skos:notation 'SDN:S29::PE001326'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001327/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001327/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001327/>;
+    dc:modified '2019-03-26T20:49:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to 1950-01-01T00:00:00Z'@en ;
+    skos:definition 'The time reference is midnight UTC on the 1st January 1950.'@en ;
+    skos:notation 'SDN:S29::PE001327'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001328/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001328/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001328/>;
+    dc:modified '2019-03-26T20:49:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to 1970-01-01T00:00:00Z'@en ;
+    skos:definition 'The time reference is midnight UTC on the 1st January 1970.'@en ;
+    skos:notation 'SDN:S29::PE001328'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001329/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001329/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001329/>;
+    dc:modified '2019-03-26T20:49:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to 1900-01-01T00:00:00Z'@en ;
+    skos:definition 'The time reference is midnight UTC on the 1st January 1900.'@en ;
+    skos:notation 'SDN:S29::PE001329'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001330/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001330/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001330/>;
+    dc:modified '2019-03-26T20:49:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to start of day 00:00:00 UT'@en ;
+    skos:definition 'The time reference is midnight UTC at the start of the day.'@en ;
+    skos:notation 'SDN:S29::PE001330'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001319/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001319/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001319/>;
+    dc:modified '2019-02-01T18:10:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument output (532nm wavelength)'@en ;
+    skos:definition 'Raw signal generated by a measuring instrument. The physical entity refers to a single specified wavelength.'@en ;
+    skos:notation 'SDN:S29::PE001319'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001320/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001320/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001320/>;
+    dc:modified '2019-02-01T18:10:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument output (412nm wavelength)'@en ;
+    skos:definition 'Raw signal generated by a measuring instrument. The physical entity refers to a single specified wavelength.'@en ;
+    skos:notation 'SDN:S29::PE001320'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001321/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001321/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001321/>;
+    dc:modified '2019-02-01T18:10:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument output (380nm wavelength)'@en ;
+    skos:definition 'Raw signal generated by a measuring instrument. The physical entity refers to a single specified wavelength.'@en ;
+    skos:notation 'SDN:S29::PE001321'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001322/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001322/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001322/>;
+    dc:modified '2019-02-01T18:10:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument output (700nm wavelength)'@en ;
+    skos:definition 'Raw signal generated by a measuring instrument. The physical entity refers to a single specified wavelength.'@en ;
+    skos:notation 'SDN:S29::PE001322'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001323/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001323/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001323/>;
+    dc:modified '2019-02-01T18:10:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument output (490nm wavelength)'@en ;
+    skos:definition 'Raw signal generated by a measuring instrument. The physical entity refers to a single specified wavelength.'@en ;
+    skos:notation 'SDN:S29::PE001323'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001324/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001324/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001324/>;
+    dc:modified '2019-02-01T18:10:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument output (555nm wavelength)'@en ;
+    skos:definition 'Raw signal generated by a measuring instrument. The physical entity refers to a single specified wavelength.'@en ;
+    skos:notation 'SDN:S29::PE001324'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001317/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001317/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001317/>;
+    dc:modified '2019-02-01T17:58:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to OSGB36'@en ;
+    skos:definition 'The entity is defined relative to the Ordnance Survey Great Britain 1936 datum.'@en ;
+    skos:notation 'SDN:S29::PE001317'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001318/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001318/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001318/>;
+    dc:modified '2019-02-01T17:58:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to Irish Grid Reference System'@en ;
+    skos:definition 'The entity is defined relative to the Irish Grid Reference System.'@en ;
+    skos:notation 'SDN:S29::PE001318'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001315/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001315/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001315/>;
+    dc:modified '2019-01-22T19:45:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to WGS84'@en ;
+    skos:definition 'The measurement is defined relative to the World Geodetic System 1984.'@en ;
+    skos:notation 'SDN:S29::PE001315'^^xsd:string .

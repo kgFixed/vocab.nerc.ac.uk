@@ -1,0 +1,478 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S03/2010_01_01_00_00_00_2010_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S03/2009_01_01_00_00_00_2009_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2010-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03425/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03425/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03425/>;
+    dc:modified '2010-12-04T14:48:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, Bligh and Dyer extraction'@en ;
+    skos:definition 'Physical separation of the solid phase from the sample.  Solid phase was then treated following the protocol of Bligh and Dyer Can J Biochem Physiol 1959, 37, 911 to extract intact polar lipids'@en ;
+    skos:notation 'SDN:S03::S03425'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03424/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03424/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03424/>;
+    dc:modified '2010-12-01T12:51:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'separation in bromoform'@en ;
+    skos:definition 'Sample has been separated into light (density <2.9 g/cm3) and heavy fractions by adding it to bromoform and collecting the portions that float or sink respectively'@en ;
+    skos:notation 'SDN:S03::S03424'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03423/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03423/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03423/>;
+    dc:modified '2010-08-24T09:59:38'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'preservation, filtration, SYBR Green I staining, flow sorting'@en ;
+    skos:definition 'Sample has been treated with preserative to fix biological material before physical separation of the solid and liquid phases. The filtrate is then stained using SYBR Green I (a fluorescent cyanine dye that binds strongly to double-stranded DNA and weakly to RNA and single-stranded DNA) and cell types separated by electrostatic deflection of charged sample droplets.'@en ;
+    skos:notation 'SDN:S03::S03423'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03422/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03422/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03422/>;
+    dc:modified '2010-08-24T09:51:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'preservation, filtration'@en ;
+    skos:definition 'Sample has been treated with preserative to fix biological material before physical separation of the solid and liquid phases'@en ;
+    skos:notation 'SDN:S03::S03422'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03420/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03420/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03420/>;
+    dc:modified '2010-07-28T11:48:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, sudan-1 synthesis, SPE extraction, HPLC purification'@en ;
+    skos:definition 'Concentration determined through sudan-1 synthesis, SPE extraction and HPLC purification. A deuterate internal standard was used to quantify nitrite concentration.'@en ;
+    skos:notation 'SDN:S03::S03420'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03421/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03421/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03421/>;
+    dc:modified '2010-07-28T11:02:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'isotope-labelled tracer addition, incubation, filtration, sudan-1 synthesis, SPE extraction, HPLC purification'@en ;
+    skos:definition 'Derived from magnitude of the dilution of added 15NO2- tracer by determining isotopic enrichment and ambient NO2 concentrations immediately prior to and following incubation.'@en ;
+    skos:notation 'SDN:S03::S03421'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03419/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03419/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03419/>;
+    dc:modified '2010-06-30T12:07:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, incubation at unspecified light level, purging, cryogenic trapping'@en ;
+    skos:definition 'A water sample was filtered to remove particulates above a specified size and held for a predetermined time at an unstated (documented elsewhere) light intensity. Volatiles for analysis were extracted by passing an inert gas through the sample and trapping at liquid nitrogen temperatures.'@en ;
+    skos:notation 'SDN:S03::S03419'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03401/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03401/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03401/>;
+    dc:modified '2010-06-25T16:38:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'isotope-labelled tracer addition, on-deck incubation at simulated in-situ light level, cascade filtration, acidification'@en ;
+    skos:definition 'A dissolved radioactive or stable isotope tracer was added to the sample which was held for a predetermined time, in a surface seawater bath and quantitatively shaded natural light (level usually designed to mimic collection depth and documented elsewhere) before filtration to collect the particulate phase as size fractions. This was then treated with acid to remove inorganic carbon.'@en ;
+    skos:notation 'SDN:S03::S03401'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03217/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03217/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03217/>;
+    dc:modified '2010-06-25T16:37:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'isotope-labelled tracer addition, on-deck incubation at simulated in-situ light level, filtration, acidification'@en ;
+    skos:definition 'A dissolved radioactive or stable isotope tracer was added to the sample which was held for a predetermined time, in a surface seawater bath and quantitatively shaded natural light (levels usually documented elsewhere) before filtration to collect the particulate phase.  This was then treated with acid to remove inorganic carbon.'@en ;
+    skos:notation 'SDN:S03::S03217'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03210/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03210/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03210/>;
+    dc:modified '2010-06-25T16:34:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'isotope-labelled tracer addition, incubation in the dark, filtration'@en ;
+    skos:definition 'A dissolved radioactive or stable isotope tracer was added to the sample which was held for a predetermined time in darkness before filtration to collect the particulate phase.'@en ;
+    skos:notation 'SDN:S03::S03210'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03202/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03202/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03202/>;
+    dc:modified '2010-06-25T16:31:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'isotope-labelled tracer addition, incubation at unspecified light level, filtration'@en ;
+    skos:definition 'A dissolved radioactive or stable isotope tracer was added to the sample which was held for a predetermined time at an unstated (usually documented elsewhere) light intensity before filtration to collect the particulate phase.'@en ;
+    skos:notation 'SDN:S03::S03202'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03200/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03200/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03200/>;
+    dc:modified '2010-06-25T16:28:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'isotope-labelled tracer addition, incubation at unspecified light level, cascade filtration'@en ;
+    skos:definition 'A dissolved radioactive or stable isotope tracer was added to the sample which was held for a predetermined time at an unstated (usually documented elsewhere) light intensity before filtration to collect the particulate phase as size fractions.'@en ;
+    skos:notation 'SDN:S03::S03200'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03103/3/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03103/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03103/>;
+    dc:modified '2010-05-27T15:17:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, acidification, chelation, solvent extraction'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of water or air before the acidified (pH 1.8-2) liquid phase was treated with a chelating agent (e.g. a dithiocarbamate or EDTA) to form complexes that were stripped out for analysis using a solvent.'@en ;
+    skos:notation 'SDN:S03::S03103'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03418/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03418/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03418/>;
+    dc:modified '2010-03-19T15:16:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'solvent extraction'@en ;
+    skos:definition 'Separation of analytes by mixing either solid samples with a liquid in which the analyte is soluble or mixing liquid samples with another liquid in which the analyte is more soluble.'@en ;
+    skos:notation 'SDN:S03::S03418'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03417/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03417/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03417/>;
+    dc:modified '2010-03-11T11:18:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, leaching with pH 4.7 ammonium acetate buffer'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of air followed by treatment to extract the soluble component, which is then analysed.'@en ;
+    skos:notation 'SDN:S03::S03417'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03416/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03416/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03416/>;
+    dc:modified '2010-02-23T12:12:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'photolytic conversion to NO'@en ;
+    skos:definition 'Chemical conversion of nitrogen dioxide to nitrogen monoxide (nitric oxide) induced by light.'@en ;
+    skos:notation 'SDN:S03::S03416'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03415/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03415/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03415/>;
+    dc:modified '2010-02-18T12:21:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, water leaching, acid hydrolysis of the residue'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of air followed by treatment to extract the water-soluble component followed by treatment to extract the acid-soluble component, which is then analysed.'@en ;
+    skos:notation 'SDN:S03::S03415'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03414/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03414/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03414/>;
+    dc:modified '2010-02-18T12:19:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, water leaching, acid hydrolysis of the leachate'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of air followed by treatment to extract the water-soluble component of that solid phase for treatment with acid and analysis.'@en ;
+    skos:notation 'SDN:S03::S03414'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03413/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03413/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03413/>;
+    dc:modified '2010-02-18T12:17:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, water leaching'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of air followed by treatment to extract the water-soluble component of that solid phase for analysis.'@en ;
+    skos:notation 'SDN:S03::S03413'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03100/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03100/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03100/>;
+    dc:modified '2010-02-18T12:05:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, acidification'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of water or air before the solid phase was treated with acid to remove inorganic carbon.'@en ;
+    skos:notation 'SDN:S03::S03100'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03101/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03101/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03101/>;
+    dc:modified '2010-02-18T12:05:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, acidification, combustion'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of water or air before the solid phase was treated with acid to remove inorganic carbon and oxidised by heating in air.'@en ;
+    skos:notation 'SDN:S03::S03101'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03102/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03102/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03102/>;
+    dc:modified '2010-02-18T12:05:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, alkali hydrolysis'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of water or air before the solid phase is hydrolysed by attack with strong alkali.'@en ;
+    skos:notation 'SDN:S03::S03102'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03104/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03104/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03104/>;
+    dc:modified '2010-02-18T12:05:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, combustion'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of water or air before the solid phase is oxidised by heating in air.'@en ;
+    skos:notation 'SDN:S03::S03104'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03105/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03105/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03105/>;
+    dc:modified '2010-02-18T12:05:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, freon extraction'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of water or air before the metals were stripped from the colloidal phase using a halocarbon.'@en ;
+    skos:notation 'SDN:S03::S03105'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03106/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03106/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03106/>;
+    dc:modified '2010-02-18T12:05:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, in-line preconcentration'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of water or air before the analyte concentration was quantitatively increased to raise detection level.'@en ;
+    skos:notation 'SDN:S03::S03106'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03113/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03113/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03113/>;
+    dc:modified '2010-02-18T12:05:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, methanol extraction'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of water or air before the solid phase is mixed with methanol to extract soluble compounds, usually plant pigments.'@en ;
+    skos:notation 'SDN:S03::S03113'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03114/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03114/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03114/>;
+    dc:modified '2010-02-18T12:05:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, no acidification'@en ;
+    skos:definition 'Physical separation of the solid and liquid phases of a water sample. There is explicit information that there was no further treatment on either phase to remove inorganic carbon.'@en ;
+    skos:notation 'SDN:S03::S03114'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03115/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03115/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03115/>;
+    dc:modified '2010-02-18T12:05:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, ortho-phthalaldehyde reaction'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of water or air before reaction of the solid phase with ortho-phthalaldehyde, usually to liberate amino acids.'@en ;
+    skos:notation 'SDN:S03::S03115'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03116/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03116/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03116/>;
+    dc:modified '2010-02-18T12:05:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, oxidation'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of water or air followed by treatment of either phase (or both) with a chemical oxidising agent.'@en ;
+    skos:notation 'SDN:S03::S03116'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03117/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03117/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03117/>;
+    dc:modified '2010-02-18T12:05:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, plating'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of water or air followed by deposition onto a substrate ready for radio-isotope assay.'@en ;
+    skos:notation 'SDN:S03::S03117'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03119/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03119/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03119/>;
+    dc:modified '2010-02-18T12:05:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, reaction with orthophthalic acid'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of water or air followed by reaction of either phase (or both) with orthophthalic acid.'@en ;
+    skos:notation 'SDN:S03::S03119'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03120/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03120/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03120/>;
+    dc:modified '2010-02-18T12:05:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, suspension of residue in buffer solution, collection of liberated DMS'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of water or air followed by resuspension of the solid phase in reagents to convert analyte to a dissolved gas that was collected and analysed.'@en ;
+    skos:notation 'SDN:S03::S03120'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03121/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03121/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03121/>;
+    dc:modified '2010-02-18T12:05:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, thin-film preparation'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of water or air before the solid phase is suspended in a fluid, usually water, and evaporated to dryness on a glass slide.'@en ;
+    skos:notation 'SDN:S03::S03121'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03123/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03123/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03123/>;
+    dc:modified '2010-02-18T12:05:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'hydrolysis'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of water or air before one or both phases were subjected to a chemical reaction with reagents that break down molecules by addition of a water molecule, such as strong acids or alkalis.'@en ;
+    skos:notation 'SDN:S03::S03123'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S0393/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S0393/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S0393/>;
+    dc:modified '2010-02-18T12:05:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration'@en ;
+    skos:definition 'Physical separation of the solid and liquid phases of a water sample.'@en ;
+    skos:notation 'SDN:S03::S0393'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S0395/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S0395/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S0395/>;
+    dc:modified '2010-02-18T12:05:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration with Teflon filter'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of water or air using a specific type of plastic filter.'@en ;
+    skos:notation 'SDN:S03::S0395'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S0396/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S0396/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S0396/>;
+    dc:modified '2010-02-18T12:05:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, HgCl2 preservation'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of water or air before addition of a strong poison to halt biological activity.'@en ;
+    skos:notation 'SDN:S03::S0396'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S0397/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S0397/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S0397/>;
+    dc:modified '2010-02-18T12:05:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, Mn absorption'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of water or air before dissolved manganese was stripped out by absorption for subsequent analysis.'@en ;
+    skos:notation 'SDN:S03::S0397'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S0398/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S0398/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S0398/>;
+    dc:modified '2010-02-18T12:05:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, acetone extraction'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of water or air before the solid phase was mixed with acidified acetone to extract soluble compounds, usually plant pigments.'@en ;
+    skos:notation 'SDN:S03::S0398'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S0399/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S0399/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S0399/>;
+    dc:modified '2010-02-18T12:05:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, acid digestion'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of water or air before the solid phase was totally absorbed by aggressive attack with strong acid.'@en ;
+    skos:notation 'SDN:S03::S0399'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03412/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03412/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03412/>;
+    dc:modified '2010-02-08T10:02:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'cascade impaction'@en ;
+    skos:definition 'A process to separate out particles into size fractions by passing the sample repeatedly through acceleration nozzles onto inert impaction substrates that retain the particles.'@en ;
+    skos:notation 'SDN:S03::S03412'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03411/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03411/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03411/>;
+    dc:modified '2010-01-18T09:18:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Soxhlet extraction'@en ;
+    skos:definition 'Method for extraction of the soluble fraction of a powdered solid sample by repeated washing with a solvent.'@en ;
+    skos:notation 'SDN:S03::S03411'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03410/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03410/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03410/>;
+    dc:modified '2010-01-11T11:21:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, DNA extraction, PicoGreen staining, primer selection'@en ;
+    skos:definition 'Separation of suspended solids from the sample, which then has its DNA content extracted, labelled with PicoGreen for quantification and processing to target specific subcomponents (genes) of the DNA molecules'@en ;
+    skos:notation 'SDN:S03::S03410'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03182/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03182/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03182/>;
+    dc:modified '2010-01-10T14:44:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'isotope-labelled tracer addition, azide poisoning, incubation at unspecified light level, cascade filtration'@en ;
+    skos:definition 'A dissolved radioactive or stable isotope tracer was added to the sample which was poisoned with azide (to eliminate biological activity), held for a predetermined time at an unstated (usually documented elsewhere) light intensity before filtration to collect the particulate phase as size fractions.'@en ;
+    skos:notation 'SDN:S03::S03182'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03183/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03183/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03183/>;
+    dc:modified '2010-01-10T14:40:58'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'isotope-labelled tracer addition, azide poisoning, incubation at unspecified light level, filtration'@en ;
+    skos:definition 'A dissolved radioactive or stable isotope tracer was added to the sample which was poisoned with azide (to eliminate biological activity), held for a predetermined time at an unstated (usually documented elsewhere) light intensity before filtration to collect the particulate phase.'@en ;
+    skos:notation 'SDN:S03::S03183'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03409/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03409/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03409/>;
+    dc:modified '2010-01-10T14:35:58'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, DNA extraction, PicoGreen staining'@en ;
+    skos:definition 'Separation of suspended solids from the sample, which then has its DNA content extracted and labelled with PicoGreen for quantification'@en ;
+    skos:notation 'SDN:S03::S03409'^^xsd:string .

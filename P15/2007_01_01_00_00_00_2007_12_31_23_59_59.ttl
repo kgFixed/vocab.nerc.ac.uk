@@ -1,0 +1,147 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P15/2007_01_01_00_00_00_2007_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P15/current/CFCM0003/1/> .
+<http://vocab.nerc.ac.uk/collection/P15/current/CFCM0003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P15/current/CFCM0003/>;
+    dc:modified '2007-05-17T12:30:07'^^xsd:dateTime ;
+    skos:altLabel 'maximum'^^xsd:string ;
+    skos:prefLabel 'maximum'@en ;
+    skos:definition 'Maximum'@en ;
+    skos:notation 'SDN:P15::CFCM0003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P15/current/CFCM0007/1/> .
+<http://vocab.nerc.ac.uk/collection/P15/current/CFCM0007/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P15/current/CFCM0007/>;
+    dc:modified '2007-05-17T12:30:07'^^xsd:dateTime ;
+    skos:altLabel 'mean'^^xsd:string ;
+    skos:prefLabel 'mean'@en ;
+    skos:definition 'Mean (average value)'@en ;
+    skos:notation 'SDN:P15::CFCM0007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P15/current/CFCM0004/1/> .
+<http://vocab.nerc.ac.uk/collection/P15/current/CFCM0004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P15/current/CFCM0004/>;
+    dc:modified '2007-05-17T12:30:07'^^xsd:dateTime ;
+    skos:altLabel 'median'^^xsd:string ;
+    skos:prefLabel 'median'@en ;
+    skos:definition 'Median'@en ;
+    skos:notation 'SDN:P15::CFCM0004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P15/current/CFCM0005/1/> .
+<http://vocab.nerc.ac.uk/collection/P15/current/CFCM0005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P15/current/CFCM0005/>;
+    dc:modified '2007-05-17T12:30:07'^^xsd:dateTime ;
+    skos:altLabel 'mid_range'^^xsd:string ;
+    skos:prefLabel 'mid_range'@en ;
+    skos:definition 'Average of maximum and minimum'@en ;
+    skos:notation 'SDN:P15::CFCM0005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P15/current/CFCM0006/1/> .
+<http://vocab.nerc.ac.uk/collection/P15/current/CFCM0006/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P15/current/CFCM0006/>;
+    dc:modified '2007-05-17T12:30:07'^^xsd:dateTime ;
+    skos:altLabel 'minimum'^^xsd:string ;
+    skos:prefLabel 'minimum'@en ;
+    skos:definition 'Minimum'@en ;
+    skos:notation 'SDN:P15::CFCM0006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P15/current/CFCM0008/1/> .
+<http://vocab.nerc.ac.uk/collection/P15/current/CFCM0008/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P15/current/CFCM0008/>;
+    dc:modified '2007-05-17T12:30:07'^^xsd:dateTime ;
+    skos:altLabel 'mode'^^xsd:string ;
+    skos:prefLabel 'mode'@en ;
+    skos:definition 'Mode (most common value)'@en ;
+    skos:notation 'SDN:P15::CFCM0008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P15/current/CFCM0001/1/> .
+<http://vocab.nerc.ac.uk/collection/P15/current/CFCM0001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P15/current/CFCM0001/>;
+    dc:modified '2007-05-17T12:30:07'^^xsd:dateTime ;
+    skos:altLabel 'point'^^xsd:string ;
+    skos:prefLabel 'point'@en ;
+    skos:definition 'The data values are representative of points in space or time (instantaneous). This is the default method for a quantity that is intensive with respect to the specified dimension.'@en ;
+    skos:notation 'SDN:P15::CFCM0001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P15/current/CFCM0009/1/> .
+<http://vocab.nerc.ac.uk/collection/P15/current/CFCM0009/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P15/current/CFCM0009/>;
+    dc:modified '2007-05-17T12:30:07'^^xsd:dateTime ;
+    skos:altLabel 'standard_deviation'^^xsd:string ;
+    skos:prefLabel 'standard_deviation'@en ;
+    skos:definition 'Standard deviation'@en ;
+    skos:notation 'SDN:P15::CFCM0009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P15/current/CFCM0002/1/> .
+<http://vocab.nerc.ac.uk/collection/P15/current/CFCM0002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P15/current/CFCM0002/>;
+    dc:modified '2007-05-17T12:30:07'^^xsd:dateTime ;
+    skos:altLabel 'sum'^^xsd:string ;
+    skos:prefLabel 'sum'@en ;
+    skos:definition 'The data values are representative of a sum or accumulation over the cell. This is the default method for a quantity that is extensive with respect to the specified dimension.'@en ;
+    skos:notation 'SDN:P15::CFCM0002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P15/current/CFCM0010/1/> .
+<http://vocab.nerc.ac.uk/collection/P15/current/CFCM0010/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P15/current/CFCM0010/>;
+    dc:modified '2007-05-17T12:30:07'^^xsd:dateTime ;
+    skos:altLabel 'variance'^^xsd:string ;
+    skos:prefLabel 'variance'@en ;
+    skos:definition 'Variance'@en ;
+    skos:notation 'SDN:P15::CFCM0010'^^xsd:string .

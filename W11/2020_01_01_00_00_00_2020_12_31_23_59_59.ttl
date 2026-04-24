@@ -1,0 +1,84 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/W11/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/W11/current/ECLS0003/1/> .
+<http://vocab.nerc.ac.uk/collection/W11/current/ECLS0003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/W11/current/ECLS0003/>;
+    dc:modified '2020-11-04T20:35:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Event action'@en ;
+    skos:definition 'A temporal punctuation (like a step, a phase, a moment) in an ongoing process which can be deliberate or incidental; for instance \'Start\', \'End\', \'Failure\'.'@en ;
+    skos:notation 'SDN:W11::ECLS0003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/W11/current/ECLS0001/1/> .
+<http://vocab.nerc.ac.uk/collection/W11/current/ECLS0001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/W11/current/ECLS0001/>;
+    dc:modified '2020-11-04T20:33:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Event process'@en ;
+    skos:definition 'An activity performed by a system and consisting of a sequence of punctuated actions (including malfunctions and deliberate actions).'@en ;
+    skos:notation 'SDN:W11::ECLS0001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/W11/current/ECLS0002/1/> .
+<http://vocab.nerc.ac.uk/collection/W11/current/ECLS0002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/W11/current/ECLS0002/>;
+    dc:modified '2020-11-04T20:32:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Event subject'@en ;
+    skos:definition 'The primary scientific purpose of the event (e.g. a given scientific activity preferably selected from a controlled vocabulary).'@en ;
+    skos:notation 'SDN:W11::ECLS0002'^^xsd:string .

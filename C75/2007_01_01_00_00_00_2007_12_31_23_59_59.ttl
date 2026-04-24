@@ -1,0 +1,127 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C75/2007_01_01_00_00_00_2007_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C75/2006_01_01_00_00_00_2006_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2007-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/CH5/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/CH5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/CH5/>;
+    dc:modified '2007-11-15T16:39:20'^^xsd:dateTime ;
+    skos:altLabel 'CEH, Oxford'^^xsd:string ;
+    skos:prefLabel 'Centre for Ecology and Hydrology, Oxford'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::CH5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/CH4/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/CH4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/CH4/>;
+    dc:modified '2007-11-15T16:38:58'^^xsd:dateTime ;
+    skos:altLabel 'CEH, Monks Wood'^^xsd:string ;
+    skos:prefLabel 'Centre for Ecology and Hydrology, Monks Wood'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::CH4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/ITE/2/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/ITE/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/ITE/>;
+    dc:modified '2007-11-15T16:37:31'^^xsd:dateTime ;
+    skos:altLabel 'CEH, Dorset'^^xsd:string ;
+    skos:prefLabel 'Centre for Ecology and Hydrology, Dorset'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::ITE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/IOH/2/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/IOH/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/IOH/>;
+    dc:modified '2007-11-15T16:36:46'^^xsd:dateTime ;
+    skos:altLabel 'CEH, Wallingford'^^xsd:string ;
+    skos:prefLabel 'Centre for Ecology and Hydrology, Wallingford'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::IOH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/CH3/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/CH3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/CH3/>;
+    dc:modified '2007-11-15T16:28:55'^^xsd:dateTime ;
+    skos:altLabel 'CEH, Edinburgh'^^xsd:string ;
+    skos:prefLabel 'Centre for Ecology and Hydrology, Edinburgh'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::CH3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/CH2/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/CH2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/CH2/>;
+    dc:modified '2007-11-15T16:28:26'^^xsd:dateTime ;
+    skos:altLabel 'CEH, Bangor'^^xsd:string ;
+    skos:prefLabel 'Centre for Ecology and Hydrology, Bangor'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::CH2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/CH1/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/CH1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/CH1/>;
+    dc:modified '2007-11-15T16:27:58'^^xsd:dateTime ;
+    skos:altLabel 'CEH, Banchory'^^xsd:string ;
+    skos:prefLabel 'Centre for Ecology and Hydrology, Banchory'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::CH1'^^xsd:string .

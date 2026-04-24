@@ -1,0 +1,91 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/R24/2021_01_01_00_00_00_2026_04_24_15_34_58.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/R24/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-24T15:34:58'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R24/current/NOTC/2/> .
+<http://vocab.nerc.ac.uk/collection/R24/current/NOTC/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R24/current/NOTC/>;
+    dc:modified '2025-11-25T10:14:01'^^xsd:dateTime ;
+    skos:altLabel 'NOTC'^^xsd:string ;
+    skos:prefLabel 'National Ocean Technology Center'@en ;
+    skos:definition 'National Ocean Technology Center, China.'@en ;
+    skos:notation 'SDN:R24::NOTC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R24/current/LaoshanL/3/> .
+<http://vocab.nerc.ac.uk/collection/R24/current/LaoshanL/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R24/current/LaoshanL/>;
+    dc:modified '2024-10-24T14:51:27'^^xsd:dateTime ;
+    skos:altLabel 'LaoshanLaboratory'^^xsd:string ;
+    skos:prefLabel 'LaoshanLaboratory'@en ;
+    skos:definition 'Laoshan Laboratory (was named QNLM before May 2023)'@en ;
+    skos:notation 'SDN:R24::LaoshanL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R24/current/QNLM/2/> .
+<http://vocab.nerc.ac.uk/collection/R24/current/QNLM/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R24/current/QNLM/>;
+    dc:modified '2024-10-24T14:51:27'^^xsd:dateTime ;
+    skos:altLabel 'QNLM'^^xsd:string ;
+    skos:prefLabel 'Qingdao National Laboratory for Marine Science and Technology'@en ;
+    skos:definition 'Qingdao National Laboratory for Marine Science and Technology, renamed LaoshanLaboratory since May 2023'@en ;
+    skos:notation 'SDN:R24::QNLM'^^xsd:string .

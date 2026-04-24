@@ -1,0 +1,198 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C38/2021_01_01_00_00_00_2022_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C38/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2022-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH7397/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH7397/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH7397/>;
+    dc:modified '2022-11-01T14:51:04'^^xsd:dateTime ;
+    skos:altLabel 'Blankaholm'^^xsd:string ;
+    skos:prefLabel 'Blankaholm'@en ;
+    skos:definition '''{"node": {
+    "country": "Sweden",
+    "latitude": 57.590228,
+    "longitude": 16.5304228
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH7397'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH7395/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH7395/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH7395/>;
+    dc:modified '2022-11-01T14:51:04'^^xsd:dateTime ;
+    skos:altLabel 'Styrsö Tången'^^xsd:string ;
+    skos:prefLabel 'Styrsö Tången'@en ;
+    skos:definition '''{"node": {
+    "country": "Sweden",
+    "latitude": 57.618236,
+    "longitude": 11.762133
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH7395'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH7396/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH7396/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH7396/>;
+    dc:modified '2022-11-01T14:51:04'^^xsd:dateTime ;
+    skos:altLabel 'Tjärnö'^^xsd:string ;
+    skos:prefLabel 'Tjärnö'@en ;
+    skos:definition '''{"node": {
+    "country": "Sweden",
+    "latitude": 58.876285,
+    "longitude": 11.145257
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH7396'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH7375/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH7375/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH7375/>;
+    dc:modified '2022-10-27T14:16:42'^^xsd:dateTime ;
+    skos:altLabel 'Bergsfjord'^^xsd:string ;
+    skos:prefLabel 'Bergsfjord'@en ;
+    skos:definition '''{"node": {
+    "country": "Norway",
+    "latitude": 70.25164,
+    "longitude": 21.78497
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH7375'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH7355/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH7355/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH7355/>;
+    dc:modified '2022-10-06T14:15:02'^^xsd:dateTime ;
+    skos:altLabel 'Skjervoey'^^xsd:string ;
+    skos:prefLabel 'Skjervoey'@en ;
+    skos:definition '''{"node": {
+    "country": "Norway",
+    "synonyms": {
+        "name": "Skjervøy",
+        "language": "Norwegian"
+    },
+    "latitude": 70.03026,
+    "longitude": 20.97606
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH7355'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH7335/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH7335/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH7335/>;
+    dc:modified '2022-10-03T12:04:38'^^xsd:dateTime ;
+    skos:altLabel 'Bogen'^^xsd:string ;
+    skos:prefLabel 'Bogen'@en ;
+    skos:definition '''{"node": {
+    "country": "Norway",
+    "latitude": 68.52089,
+    "longitude": 16.99946
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH7335'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH7315/2/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH7315/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH7315/>;
+    dc:modified '2022-07-12T11:34:18'^^xsd:dateTime ;
+    skos:altLabel 'Ilulissat'^^xsd:string ;
+    skos:prefLabel 'Ilulissat'@en ;
+    skos:definition '''{"node": {
+    "country": "Greenland",
+    "latitude": 69.22033,
+    "longitude": -51.09354
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH7315'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH7295/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH7295/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH7295/>;
+    dc:modified '2022-05-24T10:45:44'^^xsd:dateTime ;
+    skos:altLabel 'Skulte'^^xsd:string ;
+    skos:prefLabel 'Skulte'@en ;
+    skos:definition '''{"node": {
+    "country": "Latvia",
+    "latitude": 57.31557,
+    "longitude": 24.40591
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH7295'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH7275/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH7275/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH7275/>;
+    dc:modified '2022-05-06T16:14:26'^^xsd:dateTime ;
+    skos:altLabel 'Erquy'^^xsd:string ;
+    skos:prefLabel 'Erquy'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "latitude": 48.63616,
+    "longitude": -2.48016
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH7275'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH7196/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH7196/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH7196/>;
+    dc:modified '2022-04-29T12:40:53'^^xsd:dateTime ;
+    skos:altLabel 'Oortkaten'^^xsd:string ;
+    skos:prefLabel 'Oortkaten'@en ;
+    skos:definition '''{"node": {
+    "country": "Germany",
+    "latitude": 53.44283,
+    "longitude": 10.10067
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH7196'^^xsd:string .

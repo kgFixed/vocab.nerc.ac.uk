@@ -1,0 +1,109 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/OG1/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/OG1/2021_01_01_00_00_00_2021_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2022-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/TEMP_CNDC/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/TEMP_CNDC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/TEMP_CNDC/>;
+    dc:modified '2022-09-09T15:42:29'^^xsd:dateTime ;
+    skos:altLabel 'TEMP_CNDC'^^xsd:string ;
+    skos:prefLabel 'Internal temperature of the conductivity cell'@en ;
+    skos:definition 'Internal temperature (degC) of the conductivity cell.'@en ;
+    skos:notation 'SDN:OG1::TEMP_CNDC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/BBP412/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/BBP412/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/BBP412/>;
+    dc:modified '2022-03-28T16:25:57'^^xsd:dateTime ;
+    skos:altLabel 'BBP412'^^xsd:string ;
+    skos:prefLabel 'Particle backscattering at 412 nanometers'@en ;
+    skos:definition 'Particle backscattering at 412 nanometers.'@en ;
+    skos:notation 'SDN:OG1::BBP412'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/BBP715/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/BBP715/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/BBP715/>;
+    dc:modified '2022-03-28T16:25:57'^^xsd:dateTime ;
+    skos:altLabel 'BBP715'^^xsd:string ;
+    skos:prefLabel 'Particle backscattering at 715 nanometers'@en ;
+    skos:definition 'Particle backscattering at 715 nanometers.'@en ;
+    skos:notation 'SDN:OG1::BBP715'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/BBP880/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/BBP880/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/BBP880/>;
+    dc:modified '2022-03-28T16:25:57'^^xsd:dateTime ;
+    skos:altLabel 'BBP880'^^xsd:string ;
+    skos:prefLabel 'Particle backscattering at 880 nanometers'@en ;
+    skos:definition 'Particle backscattering at 880 nanometers.'@en ;
+    skos:notation 'SDN:OG1::BBP880'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/PPDOXY/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/PPDOXY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/PPDOXY/>;
+    dc:modified '2022-03-28T16:25:57'^^xsd:dateTime ;
+    skos:altLabel 'PP_DOXY'^^xsd:string ;
+    skos:prefLabel 'Partial pressure of oxygen in the water body'@en ;
+    skos:definition 'The partial pressure of oxygen in air in equilibrium with a water sample.'@en ;
+    skos:notation 'SDN:OG1::PPDOXY'^^xsd:string .

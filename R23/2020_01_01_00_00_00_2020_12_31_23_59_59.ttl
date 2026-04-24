@@ -1,0 +1,345 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/R23/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/ALAMO/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/ALAMO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/ALAMO/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'ALAMO'^^xsd:string ;
+    skos:prefLabel 'ALAMO float'@en ;
+    skos:definition 'ALAMO air-launched micro-observer float. PLATFORM_TYPE_KEY = 800'@en ;
+    skos:notation 'SDN:R23::ALAMO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/ALTO/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/ALTO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/ALTO/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'ALTO'^^xsd:string ;
+    skos:prefLabel 'ALTO float'@en ;
+    skos:definition 'ALTO float. PLATFORM_TYPE_KEY = 205'@en ;
+    skos:notation 'SDN:R23::ALTO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/APEX/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/APEX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/APEX/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'APEX'^^xsd:string ;
+    skos:prefLabel 'APEX float'@en ;
+    skos:definition 'APEX float. PLATFORM_TYPE_KEY = 001'@en ;
+    skos:notation 'SDN:R23::APEX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/APEX_D/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/APEX_D/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/APEX_D/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'APEX_D'^^xsd:string ;
+    skos:prefLabel 'Deep APEX float'@en ;
+    skos:definition 'Deep APEX float. PLATFORM_TYPE_KEY = 020'@en ;
+    skos:notation 'SDN:R23::APEX_D'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/APEX_EM/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/APEX_EM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/APEX_EM/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'APEX_EM'^^xsd:string ;
+    skos:prefLabel 'APEX electro-magnetic float'@en ;
+    skos:definition 'APEX electro-magnetic float, measuring velocity and mixing. PLATFORM_TYPE_KEY = 005'@en ;
+    skos:notation 'SDN:R23::APEX_EM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/ARVOR/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/ARVOR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/ARVOR/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'ARVOR'^^xsd:string ;
+    skos:prefLabel 'ARVOR float'@en ;
+    skos:definition 'ARVOR float. PLATFORM_TYPE_KEY = 102'@en ;
+    skos:notation 'SDN:R23::ARVOR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/ARVOR_C/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/ARVOR_C/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/ARVOR_C/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'ARVOR_C'^^xsd:string ;
+    skos:prefLabel 'Coastal ARVOR float'@en ;
+    skos:definition 'Coastal ARVOR float. PLATFORM_TYPE_KEY = 110'@en ;
+    skos:notation 'SDN:R23::ARVOR_C'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/ARVOR_D/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/ARVOR_D/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/ARVOR_D/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'ARVOR_D'^^xsd:string ;
+    skos:prefLabel 'Deep ARVOR float'@en ;
+    skos:definition 'Deep ARVOR float. PLATFORM_TYPE_KEY = 120'@en ;
+    skos:notation 'SDN:R23::ARVOR_D'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/COPEX/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/COPEX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/COPEX/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'COPEX'^^xsd:string ;
+    skos:prefLabel 'COPEX float'@en ;
+    skos:definition 'COPEX float. PLATFORM_TYPE_KEY = 701'@en ;
+    skos:notation 'SDN:R23::COPEX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/FLOAT/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/FLOAT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/FLOAT/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'FLOAT'^^xsd:string ;
+    skos:prefLabel 'Unknown platform type'@en ;
+    skos:definition 'Generic value when platform type unknown. PLATFORM_TYPE_KEY = 999'@en ;
+    skos:notation 'SDN:R23::FLOAT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/HM2000/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/HM2000/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/HM2000/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'HM2000'^^xsd:string ;
+    skos:prefLabel 'HM2000 float'@en ;
+    skos:definition 'HM2000 float. PLATFORM_TYPE_KEY = 700'@en ;
+    skos:notation 'SDN:R23::HM2000'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/ITP/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/ITP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/ITP/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'ITP'^^xsd:string ;
+    skos:prefLabel 'ITP float'@en ;
+    skos:definition 'Ice Tethered Profiler (ITP). PLATFORM_TYPE_KEY = 901'@en ;
+    skos:notation 'SDN:R23::ITP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/NAVIS_A/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/NAVIS_A/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/NAVIS_A/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'NAVIS_A'^^xsd:string ;
+    skos:prefLabel 'NAVIS_A float'@en ;
+    skos:definition 'NAVIS_A float. PLATFORM_TYPE_KEY = 500'@en ;
+    skos:notation 'SDN:R23::NAVIS_A'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/NAVIS_EBR/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/NAVIS_EBR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/NAVIS_EBR/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'NAVIS_EBR'^^xsd:string ;
+    skos:prefLabel 'NAVIS_EBR float'@en ;
+    skos:definition 'NAVIS_EBR float. PLATFORM_TYPE_KEY = 501'@en ;
+    skos:notation 'SDN:R23::NAVIS_EBR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/NEMO/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/NEMO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/NEMO/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'NEMO'^^xsd:string ;
+    skos:prefLabel 'NEMO float'@en ;
+    skos:definition 'NEMO float. PLATFORM_TYPE_KEY = 400'@en ;
+    skos:notation 'SDN:R23::NEMO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/NINJA/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/NINJA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/NINJA/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'NINJA'^^xsd:string ;
+    skos:prefLabel 'NINJA float'@en ;
+    skos:definition 'NINJA float. PLATFORM_TYPE_KEY = 300'@en ;
+    skos:notation 'SDN:R23::NINJA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/NINJA_D/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/NINJA_D/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/NINJA_D/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'NINJA_D'^^xsd:string ;
+    skos:prefLabel 'Deep NINJA float'@en ;
+    skos:definition 'Deep NINJA float. PLATFORM_TYPE_KEY = 320'@en ;
+    skos:notation 'SDN:R23::NINJA_D'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/NOVA/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/NOVA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/NOVA/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'NOVA'^^xsd:string ;
+    skos:prefLabel 'NOVA float'@en ;
+    skos:definition 'NOVA float. PLATFORM_TYPE_KEY = 600'@en ;
+    skos:notation 'SDN:R23::NOVA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/PALACE/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/PALACE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/PALACE/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'PALACE'^^xsd:string ;
+    skos:prefLabel 'PALACE float'@en ;
+    skos:definition 'PALACE float. PLATFORM_TYPE_KEY = 000'@en ;
+    skos:notation 'SDN:R23::PALACE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/POPS_NEMO/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/POPS_NEMO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/POPS_NEMO/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'POPS_NEMO'^^xsd:string ;
+    skos:prefLabel 'POPS with NEMO float'@en ;
+    skos:definition 'Polar Ocean Profiling System with a NEMO float. PLATFORM_TYPE_KEY = 430'@en ;
+    skos:notation 'SDN:R23::POPS_NEMO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/POPS_PROVOR/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/POPS_PROVOR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/POPS_PROVOR/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'POPS_PROVOR'^^xsd:string ;
+    skos:prefLabel 'Polar Ocean Profiling System with a PROVOR float'@en ;
+    skos:definition 'Polar Ocean Profiling System with a PROVOR float. PLATFORM_TYPE_KEY = 130'@en ;
+    skos:notation 'SDN:R23::POPS_PROVOR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/PROVOR/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/PROVOR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/PROVOR/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'PROVOR'^^xsd:string ;
+    skos:prefLabel 'PROVOR float'@en ;
+    skos:definition 'PROVOR float. PLATFORM_TYPE_KEY = 101'@en ;
+    skos:notation 'SDN:R23::PROVOR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/PROVOR_II/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/PROVOR_II/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/PROVOR_II/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'PROVOR_II'^^xsd:string ;
+    skos:prefLabel 'Dual board PROVOR float'@en ;
+    skos:definition 'Dual board PROVOR float. PLATFORM_TYPE_KEY = 103'@en ;
+    skos:notation 'SDN:R23::PROVOR_II'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/PROVOR_III/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/PROVOR_III/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/PROVOR_III/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'PROVOR_III'^^xsd:string ;
+    skos:prefLabel 'Dual board PROVOR CTS4 float'@en ;
+    skos:definition 'Dual board PROVOR CTS4 float. PLATFORM_TYPE_KEY = 104'@en ;
+    skos:notation 'SDN:R23::PROVOR_III'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/PROVOR_MT/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/PROVOR_MT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/PROVOR_MT/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'PROVOR_MT'^^xsd:string ;
+    skos:prefLabel 'Metocean PROVOR float'@en ;
+    skos:definition 'Metocean PROVOR float. PLATFORM_TYPE_KEY = 100'@en ;
+    skos:notation 'SDN:R23::PROVOR_MT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/S2A/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/S2A/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/S2A/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'S2A'^^xsd:string ;
+    skos:prefLabel 'S2-A float'@en ;
+    skos:definition 'S2-A float. PLATFORM_TYPE_KEY = 204'@en ;
+    skos:notation 'SDN:R23::S2A'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/S2X/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/S2X/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/S2X/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'S2X'^^xsd:string ;
+    skos:prefLabel 'S2X float'@en ;
+    skos:definition 'S2X float designed for the US Navy. PLATFORM_TYPE_KEY = 203'@en ;
+    skos:notation 'SDN:R23::S2X'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/SOLO/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/SOLO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/SOLO/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'SOLO'^^xsd:string ;
+    skos:prefLabel 'SIO SOLO float'@en ;
+    skos:definition 'SOLO float manufactured by Scripps Institution of Oceanography (SIO). PLATFORM_TYPE_KEY = 200'@en ;
+    skos:notation 'SDN:R23::SOLO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/SOLO_D/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/SOLO_D/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/SOLO_D/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'SOLO_D'^^xsd:string ;
+    skos:prefLabel 'Deep SOLO float'@en ;
+    skos:definition 'Deep SOLO float. PLATFORM_TYPE_KEY = 220'@en ;
+    skos:notation 'SDN:R23::SOLO_D'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/SOLO_D_MRV/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/SOLO_D_MRV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/SOLO_D_MRV/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'SOLO_D_MRV'^^xsd:string ;
+    skos:prefLabel 'DEEPSOLO MRV float'@en ;
+    skos:definition 'DEEPSOLO MRV float. PLATFORM_TYPE_KEY = 221'@en ;
+    skos:notation 'SDN:R23::SOLO_D_MRV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/SOLO_II/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/SOLO_II/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/SOLO_II/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'SOLO_II'^^xsd:string ;
+    skos:prefLabel 'SIO SOLO-II float'@en ;
+    skos:definition 'SOLO-II float manufactured by Scripps Institution of Oceanography (SIO). PLATFORM_TYPE_KEY = 202'@en ;
+    skos:notation 'SDN:R23::SOLO_II'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R23/current/SOLO_W/1/> .
+<http://vocab.nerc.ac.uk/collection/R23/current/SOLO_W/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R23/current/SOLO_W/>;
+    dc:modified '2020-05-03T20:30:02'^^xsd:dateTime ;
+    skos:altLabel 'SOLO_W'^^xsd:string ;
+    skos:prefLabel 'WHOI SOLO float'@en ;
+    skos:definition 'SOLO float manufactured by Woods Whole Oceanographic Institution (WHOI). PLATFORM_TYPE_KEY = 201'@en ;
+    skos:notation 'SDN:R23::SOLO_W'^^xsd:string .

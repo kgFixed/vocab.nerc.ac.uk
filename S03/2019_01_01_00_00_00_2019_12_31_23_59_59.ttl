@@ -1,0 +1,172 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S03/2019_01_01_00_00_00_2019_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S03/2017_01_01_00_00_00_2018_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2019-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03467/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03467/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03467/>;
+    dc:modified '2019-08-05T17:40:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'leaching with citrate dithionite of ascorbic acid-leached sample residue'@en ;
+    skos:definition 'A partial leaching treatment used to extract crystalline metal oxides bond to the sediment\'s solid phase (see e.g. Raiswell et al 2010 https://doi.org/10.1016/j.chemgeo.2010.09.002).'@en ;
+    skos:notation 'SDN:S03::S03467'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03466/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03466/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03466/>;
+    dc:modified '2019-08-05T17:40:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'leaching with ascorbic acid'@en ;
+    skos:definition 'A partial leaching treatment used to extract easily reducible metals bond to the sediment\'s solid phase while excluding the more crystalline oxides (see e.g. Raiswell et al 2010 https://doi.org/10.1016/j.chemgeo.2010.09.002).'@en ;
+    skos:notation 'SDN:S03::S03466'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03465/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03465/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03465/>;
+    dc:modified '2019-08-05T17:40:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'acid digestion of leached sample residue'@en ;
+    skos:definition 'The final stage in a sequential leaching protocol aimed at extracting by total dissolution in strong acid all remaining occurrence of an element from a sample that had previously been exposed to partial leaching with milder leaching agents.'@en ;
+    skos:notation 'SDN:S03::S03465'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03458/3/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03458/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03458/>;
+    dc:modified '2019-08-05T15:28:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'leaching with 1M sodium acetate at pH 5 of leached sample residue from stage 1 of Chester et al (1988)'@en ;
+    skos:definition 'A sediment leaching treatment designed to release elements classified as being in \'carbonate\' and in \'surface associations\' with phases such as hydrous iron and manganese oxides, clays and organic matter (stage 2 in Chester et al 1988 https://doi.org/10.1016/0304-4203(88)90036-9).'@en ;
+    skos:notation 'SDN:S03::S03458'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03459/3/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03459/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03459/>;
+    dc:modified '2019-08-05T15:28:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'leaching with 1M sodium acetate at pH 5 + 0.25M hydroxylamine hydrochloride of leached sample residue from stage 2 in Chester et al (1988)'@en ;
+    skos:definition 'A sediment leaching treatment designed to release elements classified as being in \'easily reducible\' associations, e.g. in \'new\' oxides and oxyhydroxides of manganese and amorphous iron oxides (stage 3 in Chester et al 1988 https://doi.org/10.1016/0304-4203(88)90036-9).'@en ;
+    skos:notation 'SDN:S03::S03459'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03460/3/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03460/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03460/>;
+    dc:modified '2019-08-05T15:28:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'leaching with 0.25M hydroxylamine hydrochloride + 25% acetic acid of leached sample residue from stage 3 in Chester et al (1988)'@en ;
+    skos:definition 'A sediment leaching treatment designed to release elements classified as being in \'moderately reducible\' associations, e.g. in \'aged\' manganese oxides and crystalline iron oxides (stage 4 in Chester et al 1988 https://doi.org/10.1016/0304-4203(88)90036-9).'@en ;
+    skos:notation 'SDN:S03::S03460'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03464/3/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03464/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03464/>;
+    dc:modified '2019-08-05T15:28:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'leaching with H2O2 + 1M ammonium acetate at pH 2 of leached sample residue from stage 4 in Chester et al (1988)'@en ;
+    skos:definition 'A sediment leaching treatment designed to release elements classified as being in \'organic matter\' and \'sulphide\' (when present) associations (stage 5 in Chester et al 1988 https://doi.org/10.1016/0304-4203(88)90036-9).'@en ;
+    skos:notation 'SDN:S03::S03464'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S0341/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S0341/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S0341/>;
+    dc:modified '2019-08-05T15:24:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'leaching with 1M ammonium acetate at pH 7'@en ;
+    skos:definition 'A gentle sediment leaching treatment designed to release elements classified as being in \'loosely held\' or in \'exchangeable\' associations (stage 1 in Chester et al 1988 https://doi.org/10.1016/0304-4203(88)90036-9).'@en ;
+    skos:notation 'SDN:S03::S0341'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03461/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03461/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03461/>;
+    dc:modified '2019-03-21T11:31:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, pH adjusted to 7.2'@en ;
+    skos:definition 'Physical removal of particulates by filtration followed by pH adjustment to 7.2 using reagents.'@en ;
+    skos:notation 'SDN:S03::S03461'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03462/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03462/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03462/>;
+    dc:modified '2019-03-21T11:31:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, pH adjusted to 7.6'@en ;
+    skos:definition 'Physical removal of particulates by filtration followed by pH adjustment to 7.6 using reagents.'@en ;
+    skos:notation 'SDN:S03::S03462'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03463/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03463/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03463/>;
+    dc:modified '2019-03-21T11:31:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, pH adjusted to 8.05'@en ;
+    skos:definition 'Physical removal of particulates by filtration followed by pH adjustment to 8.05 using reagents.'@en ;
+    skos:notation 'SDN:S03::S03463'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03457/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03457/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03457/>;
+    dc:modified '2019-01-22T12:33:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, ultrasonication extraction'@en ;
+    skos:definition 'The sample is filtered and collected particles are subsequently extracted using an ultrasound extraction technique.'@en ;
+    skos:notation 'SDN:S03::S03457'^^xsd:string .

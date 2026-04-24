@@ -1,0 +1,1081 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2011_01_01_00_00_00_2011_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2012-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0580/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0580/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0580/>;
+    dc:modified '2012-12-20T15:48:57'^^xsd:dateTime ;
+    skos:altLabel 'Star-Oddi centi-T'^^xsd:string ;
+    skos:prefLabel 'Star-Oddi DST centi-T Temperature Recorder'@en ;
+    skos:definition 'A miniature underwater temperature recorder with a temperature resolution of 0.032 degC and an accuracy of +/- 0.1 degC over a range of -1 degC to 40 degC. It has a memory capacity of 174,000 measurements in total; 261,819 bytes/ temperature 1.5 bytes. A memory extension option of 786,099 bytes is available with a data retention of 25 years.'@en ;
+    skos:notation 'SDN:L22::TOOL0580'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0575/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0575/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0575/>;
+    dc:modified '2012-12-18T15:30:23'^^xsd:dateTime ;
+    skos:altLabel 'Olympus BH2'^^xsd:string ;
+    skos:prefLabel 'Olympus BH2 series system microscope'@en ;
+    skos:definition 'A polarized light microscope that uses Koehler illumination for high performance microscopic techniques. The instrument utilises a coarse stage adjustment and coaxial focusing. A camera can be attached for use in photo micrography. The Olympus BH2 series includes many microscopes such as the BHS and BHT models. An optional attachment (BH2-RFC) converts microscopes in this series into fluorescence microscopes.'@en ;
+    skos:notation 'SDN:L22::TOOL0575'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0579/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0579/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0579/>;
+    dc:modified '2012-12-18T15:09:37'^^xsd:dateTime ;
+    skos:altLabel 'D and A OBS-3'^^xsd:string ;
+    skos:prefLabel 'D and A Instruments Optical Backscatter Sensor OBS-3'@en ;
+    skos:definition 'Optical backscatter instrument measuring scattering in water between 140 - 160deg for a wavelength of 875nm. It has a turbidity range of 0-2000 FTU and a maximum working depth of 500m. This instrument was superseded by the OBS-3+ model in 2005. The D and A Instrument Company and its OBS product line were purchased by Campbell Scientific Inc who now has full responsibility for D and A Instruments.'@en ;
+    skos:notation 'SDN:L22::TOOL0579'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0577/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0577/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0577/>;
+    dc:modified '2012-12-18T15:09:37'^^xsd:dateTime ;
+    skos:altLabel 'Plessey 9021'^^xsd:string ;
+    skos:prefLabel 'Plessey recording current meter model 9021'@en ;
+    skos:definition 'An axial flow impeller current meter designed to operate at depths to 2000 m (6000 m optional), and in temperatures from -5 to 40 degC. Forward currents rotate the impeller clockwise, and reverse currents rotate it anticlockwise (starting speed 1.5 cm/s; speed range 2.5 to 500 cm/s; accuracy greater of 2 cm/s or 2 percent). A counter is magnetically coupled to the impeller, and records net current speed over the sample period. A vane with horizontal stabiliser fins aligns the impeller with the current flow (minimum current velocity for alignment 3 cm/s). Current direction is measured by magnetic compass (360 degree range; accuracy 3 degrees; resolution 1.4 degrees; tolerated tilt rangeis -1 degrees to 4 degrees, or up to 40 degrees if gimballed). A solid state crystal clock measures time (accuracy better than 2 sec/day). Optional sensors include platinum resistance thermometer (range -2 to 35 degC; accuracy 0.1 degC; 99 percent response time 15 sec), pressure sensor (accuracy 0.5 percent of full scale; response time 10 msec), conductivity sensor and sample counter.'@en ;
+    skos:notation 'SDN:L22::TOOL0577'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0578/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0578/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0578/>;
+    dc:modified '2012-12-18T15:09:37'^^xsd:dateTime ;
+    skos:altLabel 'Plessey M021'^^xsd:string ;
+    skos:prefLabel 'Plessey recording current meter model M021'@en ;
+    skos:definition 'An axial flow impeller current meter designed to operate at depths to 1000 m, and in temperatures from -4 to 35 degC. Forward currents rotate the impeller clockwise, and reverse currents rotate it anticlockwise (starting speed 2 cm/s; speed range 5 to 250 cm/s; accuracy greater of 3 cm/s or 3 percent). A counter is magnetically coupled to the impeller, and records net current speed over the sample period. A vane with horizontal stabiliser fins aligns the impeller with the current flow. Current direction is measured by magnetic compass (tolerated tilt range is 15 degrees in both pitch and roll axes). Pre-1972 instruments were equipped with a battery-driven clock (accuracy better than 10 sec/day), whereas post-1972 instruments used a solid state crystal clock (accuracy 2 sec/day).'@en ;
+    skos:notation 'SDN:L22::TOOL0578'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0574/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0574/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0574/>;
+    dc:modified '2012-12-06T14:06:57'^^xsd:dateTime ;
+    skos:altLabel 'Plessey underwater radiometer'^^xsd:string ;
+    skos:prefLabel 'Plessey underwater radiometer'@en ;
+    skos:definition 'A submersible cosine collector radiometer designed to measure downwelling radiation. The collector is designed to measure the amount of light over a hemisphere. The instrument was commonly used in the 1980s.'@en ;
+    skos:notation 'SDN:L22::TOOL0574'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0573/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0573/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0573/>;
+    dc:modified '2012-11-28T14:15:26'^^xsd:dateTime ;
+    skos:altLabel 'Teflon PFA manifold air sampler'^^xsd:string ;
+    skos:prefLabel 'Teflon PFA manifold air sampler'@en ;
+    skos:definition 'Teflon PFA manifold leading directly from the least contaminated part of a ship to a clean metal bellows pump. Air is drawn through the tube by the pump at a flow rate of 30 litres/min and a subsample is fed into an analytical instrument.'@en ;
+    skos:notation 'SDN:L22::TOOL0573'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0057/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0057/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0057/>;
+    dc:modified '2012-11-20T14:50:06'^^xsd:dateTime ;
+    skos:altLabel 'Marsh McBirney 585 EMCM'^^xsd:string ;
+    skos:prefLabel 'Marsh McBirney 585 OEM electromagnetic flowmeter'@en ;
+    skos:definition 'A rugged solid-state electromagnetic current sensor designed to measure horizontal currents with minimal interference from vertical flow. Manufactured between 1976 and 1992 by Marsh McBirney, now part of Hashflow. The OEM 585 was a dual-axis unit with a 4-inch sensor able to measure currents up to 3 ms-1 with 2% accuracy and a resolution of 0.0018 ms-1. It was supplied as a sensor plus associated electronic unit rather than packaged into a self-contained current meter.'@en ;
+    skos:notation 'SDN:L22::TOOL0057'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0572/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0572/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0572/>;
+    dc:modified '2012-11-19T17:07:42'^^xsd:dateTime ;
+    skos:altLabel 'Metrohm 765 Dosimat'^^xsd:string ;
+    skos:prefLabel 'Metrohm 765 Dosimat Burette'@en ;
+    skos:definition 'A dispensing instrument for titrating and dosing operations in the laboratory. The instrument includes the following functions: automatic preparation of standard solutions; pipetting, diluting and dispensing; calculation of results. Dispensing rates of between 0.001 mL/min and 150 mL/min can be selected alongside pippetting volumes of between 0.001 mL/min and 150 mL/min. The 765 Dosimat is an upgrade of the 776 model, with additional features including automatic dosing test; tandem dispensing with a second Dosimat; data connection for a balance, computer or printer; remote control; and optional analogue output.'@en ;
+    skos:notation 'SDN:L22::TOOL0572'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0549/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0549/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0549/>;
+    dc:modified '2012-11-15T12:23:13'^^xsd:dateTime ;
+    skos:altLabel 'YSI Dissolved oxygen 57'^^xsd:string ;
+    skos:prefLabel 'YSI Model 57 Dissolved Oxygen Meter'@en ;
+    skos:definition 'A field instrument designed for measurement of dissolved oxygen and temperature in water. It comprises a submersible probe and a battery-powered meter. The probe incorporates Clark-type membrane covered polarographic sensors with built in thermistors for temperature measurement and compensation. Available oxygen measurement ranges are 0-5, 0-10 and 0-20 mg/l, with an accuracy of +/- 1% of full scale at calibration temperature or 0.1 mg/l, whichever is larger. The temperature range is -5 to 45 degC, with an accuracy of +/- 0.5 degC.'@en ;
+    skos:notation 'SDN:L22::TOOL0549'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0553/3/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0553/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0553/>;
+    dc:modified '2012-11-15T10:40:15'^^xsd:dateTime ;
+    skos:altLabel 'DGT trace metal sampler'^^xsd:string ;
+    skos:prefLabel 'DGT Research Diffusive Gradients in Thin Films trace metal sampler'@en ;
+    skos:definition 'A device designed to measure concentrations of dissolved metal species in water. It comprises a plastic casing that contains a Chelex resin impregnated in a hydrogel to accumulate metals. The resin layer is overlain by a diffusive layer of hydrogel and a filter. Ions diffuse through the filter and diffusive layer to reach the resin layer, thereby establishing a constant concentration gradient in the diffusive layer that allows the quantitative measurement of labile species in solution through laboratory analysis.'@en ;
+    skos:notation 'SDN:L22::TOOL0553'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0571/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0571/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0571/>;
+    dc:modified '2012-11-15T09:32:51'^^xsd:dateTime ;
+    skos:altLabel 'Copper pipe air sampler'^^xsd:string ;
+    skos:prefLabel 'Copper pipe air sampler'@en ;
+    skos:definition 'Copper tubing leading directly from the least contaminated part of a ship to an analytical instrument. Air is drawn through the pipe by the instrument.'@en ;
+    skos:notation 'SDN:L22::TOOL0571'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0245/4/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0245/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0245/>;
+    dc:modified '2012-11-06T15:30:27'^^xsd:dateTime ;
+    skos:altLabel 'Skalar SAN+ AA'^^xsd:string ;
+    skos:prefLabel 'Skalar SAN+ System colorimetric autoanalyser'@en ;
+    skos:definition 'A continuous flow analyser designed for laboratory use capable of simultaneous determination of up to 16 analystical measurements on a sample. It may be used to measure nutrient concentrations in seawater. The instrument is also known as the Skalar SAN++.'@en ;
+    skos:notation 'SDN:L22::TOOL0245'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0569/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0569/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0569/>;
+    dc:modified '2012-11-05T11:03:23'^^xsd:dateTime ;
+    skos:altLabel 'Agilent 6850 GC'^^xsd:string ;
+    skos:prefLabel 'Agilent 6850 networked gas chromatograph'@en ;
+    skos:definition 'A single channel, networked, gas chromatograph that separates and analyses compounds into separate components and can be used for chemical, petrochemical and petroleum analyses. The sample is introduced into the injector and then vaporised in the instrument. A chemically inert gas (e.g. helium and nitrogen) carries the vaporised solute into the column that is maintained in a temperature controlled oven. As the solute elutes from the column, it enters the heated detector. An electronic signal is generated upon interaction of the solute with the detector. The Agilent 6850 has a similar performance to the Agilent 6890N GC, but is half as wide. The local interface provides run control and status information and the instrument comes network-ready with a built-in LAN communications interface. There is a choice of detectors available, the Flame Ionization Detector (FID), Thermal Conductivity Detector (TCD) or Mass Selective Detector (MSD). There is an option of split/splitless or packed inlets, a variety of automated sample introduction systems and products available for headspace analysis. This model is no longer in production.'@en ;
+    skos:notation 'SDN:L22::TOOL0569'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0567/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0567/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0567/>;
+    dc:modified '2012-10-22T13:48:32'^^xsd:dateTime ;
+    skos:altLabel 'VG IsoPrep 18'^^xsd:string ;
+    skos:prefLabel 'VG IsoPrep 18 water equilibration device'@en ;
+    skos:definition 'A laboratory instrument which prepares water samples for isotopic analysis using a H2O-CO2 equilibration system. The instrument requires 3 ml of water for one measurement to be made. The IsoPrep 18 is usually coupled with an Isotope-Ratio Mass Spectrometer (IRMS) where the prepared gases are then ionised and analysed for their isotopic content.'@en ;
+    skos:notation 'SDN:L22::TOOL0567'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0566/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0566/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0566/>;
+    dc:modified '2012-10-22T13:48:32'^^xsd:dateTime ;
+    skos:altLabel 'VG SIRA 10 IRMS'^^xsd:string ;
+    skos:prefLabel 'VG SIRA 10 Isotope-Ratio Mass Spectrometer'@en ;
+    skos:definition 'An Isotope-Ratio Mass Spectrometer (IRMS) which operates in dual inlet flow mode for the measurement of the isotope ratios d13C/12C, d18O/16O and d34S/32S. It is used to determine the d13C/12C of carbon in different materials (organic matter, dissolved carbon in water), d13C/12C and d18O/16O in carbonates, d18O/16O and d34S/32S in sulphates and d34S/32S in sulphides. The natural sample is processed first (e.g. combustion, acid attack, or purification) in order to obtain a directly analysable gas. The prepared gases (CO2 or SO2) are then ionised and analysed for their isotopic content by the IRMS. This model is no longer in production.'@en ;
+    skos:notation 'SDN:L22::TOOL0566'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0561/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0561/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0561/>;
+    dc:modified '2012-10-17T15:58:06'^^xsd:dateTime ;
+    skos:altLabel 'Clean pumped sea water supply'^^xsd:string ;
+    skos:prefLabel 'Clean pumped sea water supply'@en ;
+    skos:definition 'The system comprises a precision echosounder (PES) fish attached to a clean, reinforced tube (typically composed of braided PVC). The fish is designed to be towed alongside a moving ship at a depth of 1-3m and water is drawn through the system by a clean pump. The tube usually leads to a clean laboratory on board the vessel, inside which samples are drawn for analysis. The system is typically used for continuous, underway, clean sampling (e.g., trace metal studies) of near-surface waters.'@en ;
+    skos:notation 'SDN:L22::TOOL0561'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0564/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0564/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0564/>;
+    dc:modified '2012-10-15T14:57:16'^^xsd:dateTime ;
+    skos:altLabel 'BIOPROBE lander'^^xsd:string ;
+    skos:prefLabel 'BIOPROBE benthic lander'@en ;
+    skos:definition 'A seabed lander comprising a stainless steel tripod with instrument cage, water samplers, water pump, compass, camera system, transmissometer or optical backscatter sensor, 3 current meters, thermistor temperature sensor and an electronic control unit with data logging. The components are independently housed to allow for changes in experimental setup. Sensor operation, data recording and water sampling are synchronised. The water sampling system consists of four cylindrical 15 litre polyethylene bottles, with inlets located 10, 15, 25 and 40 cm off the seabed. The bottles are connected to a centrifugal pump and during the sampling procedure fresh water in the four bottles is replaced by the near-bottom water. The instrument cage is located at the top of the tripod, well above the boundary layer sampling section and the sensors are controlled by a master electronics unit.'@en ;
+    skos:notation 'SDN:L22::TOOL0564'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0563/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0563/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0563/>;
+    dc:modified '2012-10-15T14:57:16'^^xsd:dateTime ;
+    skos:altLabel 'Cyclonic separation sampler'^^xsd:string ;
+    skos:prefLabel 'Cyclonic separation sampler'@en ;
+    skos:definition 'A device designed to remove particulates from an air, gas or liquid stream through vortex separation. A high speed rotating flow is established within a vertical cylindrical or conical container, where the stream to be separated is fed in the top (wide) end, flows helically around the container to the bottom (narrow) end and then exits the cyclone in a straight stream through the centre and out the top. Instead of following the flow of the stream, the inertia of large (dense) particles causes them to hit the sides of the container and fall to the bottom, where they can be removed. The cyclone geometry and flow rate define a cut point, which is the size of the particle that will be removed from the stream with 50% efficiency. Larger particles will be removed with a greater efficiency and smaller particles with a lower efficiency. The sampler may be used in series with filters designed to collect different target particles.'@en ;
+    skos:notation 'SDN:L22::TOOL0563'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0562/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0562/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0562/>;
+    dc:modified '2012-10-15T14:57:16'^^xsd:dateTime ;
+    skos:altLabel 'IFM clean pumped sea water supply'^^xsd:string ;
+    skos:prefLabel 'IFM Kiel clean pumped sea water supply'@en ;
+    skos:definition 'A system designed for continuous, underway, clean sampling of near-surface waters. A hollow stainless steel shaft holding a high density polyethylene (HDPE) tube is submerged beneath a vessel through a hole in the hull. The inlet head is located 1.7 m below the keel and features a sieve-like Teflon cap. Water is pumped from the inlet through a serial ball-valve panel from which it can be directed to different sampling facilities. Flow is maintained by chemically inert double membrane pump driven by compressed air. HDPE tubing is used throughout the system and the valves are composed of polypropylene and Teflon, thereby ensuring that the sampled water remains clean and suitable for trace metal analyses. The system was developed by what was then the Institut fur Meereskunde at Kiel University.'@en ;
+    skos:notation 'SDN:L22::TOOL0562'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/NETT0173/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/NETT0173/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/NETT0173/>;
+    dc:modified '2012-10-12T14:13:09'^^xsd:dateTime ;
+    skos:altLabel 'Plankton pump sampler'^^xsd:string ;
+    skos:prefLabel 'Plankton pump sampler'@en ;
+    skos:definition 'An in situ pump and net system for collecting plankton samples. Water is pumped at approximately 1.2 m^3 per minute through a mesh, and samples are collected in the net cod end. The device was used on research cruises in the late 1990s.'@en ;
+    skos:notation 'SDN:L22::NETT0173'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0539/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0539/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0539/>;
+    dc:modified '2012-10-12T09:11:26'^^xsd:dateTime ;
+    skos:altLabel 'Flygt pump'^^xsd:string ;
+    skos:prefLabel 'Flygt pump'@en ;
+    skos:definition 'Submersible electrical pump designed for continuous pumping of water. It incorporates an impeller, allowing large volumes of water to be pumped quickly. Flygt pumps were used by institutes such as the then Institute of Marine Environmental Research (now Plymouth Marine Laboratory) for oceanographic sampling in the 1970s. This allowed continuous monitoring of water properties as well as the collection of discrete samples from the pump outflow.'@en ;
+    skos:notation 'SDN:L22::TOOL0539'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0559/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0559/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0559/>;
+    dc:modified '2012-10-04T12:03:09'^^xsd:dateTime ;
+    skos:altLabel 'GV Gas Preconcentrator'^^xsd:string ;
+    skos:prefLabel 'GV Instruments Trace Gas Preconcentrator'@en ;
+    skos:definition 'A gas chromatograph used for the isotope characterisation of N2O, CO2 and CH4. Gas samples can be injected either manually, using dual-ended sample bottles with valves, or using the fully automated inlet system. Manual selection of the gas to be analysed (CH4, CO2 or N2O) dictates the route the sample will travel through the instrument. For CO2 and N2O analysis, a sample is diverted by a helium gas via the gas selector valves, through a sequence of chemical traps which purify the sample. The sample is then cryogenically frozen twice to concentrate the trace gas. The sample is then separated using the poraplot-Q gas chromatograph (GC) column, ready for analysis. During CH4 analysis, the sample is transported through additional stages including, the oxidation of CO to CO2 by a Sofnocat catalyst, combustion in the furnace and an additional cryogenic trap is used. The instrument is designed to be coupled with the IsoPrime stable isotope ratio mass spectrometer (IRMS). The Trace Gas preconcentrator was originally manufactured by GV Instruments, but part of the business was sold to Isoprime Ltd (a group member of Elementar Analysensysteme GmbH) in 2008, who now manufacturer the Trace Gas preconcentrator.'@en ;
+    skos:notation 'SDN:L22::TOOL0559'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0560/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0560/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0560/>;
+    dc:modified '2012-10-04T12:03:09'^^xsd:dateTime ;
+    skos:altLabel 'GV IsoPrime IRMS'^^xsd:string ;
+    skos:prefLabel 'GV Instruments IsoPrime Isotope Ratio Mass Spectrometer'@en ;
+    skos:definition 'A laboratory benchtop isotope ratio mass spectrometer (IRMS), which operates in dual inlet or continuous flow modes. It forms part of the IsoPrime system which has a range of sample preparation and purification modules that can be coupled with the IsoPrime IRMS. The modules can analyse a range of samples (solids, liquids or gases) and each prepares the sample to be introduced into the IRMS as purified gases. The resultant prepared gases such as H2, CO2, CO, N2, SO2 or N2O are then ionised and analysed for their isotopic content by the IRMS. The instrument was originally manufactured GV instruments as part of the IsoPrime series, but this part of the business was sold to Isoprime Ltd (a group member of Elementar Analysensysteme GmbH) and this instrument has been superseded by more recent models.'@en ;
+    skos:notation 'SDN:L22::TOOL0560'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0558/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0558/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0558/>;
+    dc:modified '2012-10-04T12:03:09'^^xsd:dateTime ;
+    skos:altLabel 'HP5890 II GC'^^xsd:string ;
+    skos:prefLabel 'Hewlett Packard 5890 Series II Gas Chromatograph'@en ;
+    skos:definition 'A gas chromatograph that separates and analyses compounds that do not degrade or decompose in the gas phase. The sample is dissolved in a solvent and vaporised in the instrument. A chemically inert gas, (e.g. helium or nitrogen) carries the vaporised analyte through a stationary phase which is coated inside the capillary column that is maintained at an elevated temperature. The analyte mixture separates on the stationary phase leading to chromatographic separation of the molecules. The HP 5890 Series II is completely customisable depending on the application, with choices of inlets, columns, detectors, sampling systems, flow and pressure control components. Optional detectors include Flame Ionization Detector (FID), Nitrogen-Phosphorus Detector (NPD), Electron Capture Detector (ECD), Thermal Conductivity Detector (TCD), Photoionisation Detector (PID), Flame Photometric Detector (FPD) and mass spectrometer. The instrument was originally manufactured by Hewlett Packard (HP), but part of this business was sold to Agilent Technologies in 1999. This model is no longer in production.'@en ;
+    skos:notation 'SDN:L22::TOOL0558'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0557/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0557/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0557/>;
+    dc:modified '2012-10-04T11:59:23'^^xsd:dateTime ;
+    skos:altLabel 'ISOMAP-UK manual sampler'^^xsd:string ;
+    skos:prefLabel 'RAPID ISOMAP-UK manual water sampler'@en ;
+    skos:definition 'Manual water sample collection system used during the RAPID ISOMAP-UK project. It comprises a sample container attached to the end of an extendable pole marked with target depths. The container is fitted with a sealing plug attached to a long cord. Samples are obtained by lowering the pole (or just the container for surface samples) vertically into the water. At the required depth the cord is pulled, thereby removing the plug and filling the container. After 30 seconds the container is brought slowly to the surface and the sample transfered to a storage bottle.'@en ;
+    skos:notation 'SDN:L22::TOOL0557'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0556/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0556/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0556/>;
+    dc:modified '2012-09-28T14:08:54'^^xsd:dateTime ;
+    skos:altLabel 'Glass bottle and bung'^^xsd:string ;
+    skos:prefLabel 'Glass bottle and bung water sampler'@en ;
+    skos:definition 'Glass bottle of unknown capacity used for manual water sampling. The bottle was sealed with a bung attached to a rope. The system was used for near-surface sampling during the Marine and Freshwater Microbial Biodiversity project for sampling in Priest Pot.'@en ;
+    skos:notation 'SDN:L22::TOOL0556'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0555/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0555/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0555/>;
+    dc:modified '2012-09-28T14:08:54'^^xsd:dateTime ;
+    skos:altLabel 'NOC torpedo towfish'^^xsd:string ;
+    skos:prefLabel 'National Oceanography Centre torpedo towfish water sampler'@en ;
+    skos:definition 'An epoxy resin-coated steel torpedo-shaped object designed to be towed alongside a moving ship at speeds of 1-12 knots. A teflon-lined tube runs through the centre of the fish and is connected to a pump on board the ship. Stabilising fins at the rear of the fish ensure that the sampling hose points forwards and that the fish maintains a roughly constant depth. The system is typically used for continuous, underway, clean sampling (e.g., trace metal studies) of near-surface waters.'@en ;
+    skos:notation 'SDN:L22::TOOL0555'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0554/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0554/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0554/>;
+    dc:modified '2012-09-28T09:56:09'^^xsd:dateTime ;
+    skos:altLabel 'UMA 4-stage CCI'^^xsd:string ;
+    skos:prefLabel 'University of Manchester 4-stage Compact Cascade Impactor'@en ;
+    skos:definition 'An aerosol sampler modelled on the Harvard Compact Cascade Impactor. Sample air is accelerated through an orifice towards a collector plate, which deflects the airflow around it. Particles too large to follow the streamlines impact on the plate. The air stream, now with the largest particles removed, proceeds to the subsequent impactor stages, each tuned to collect successively smaller particles. The four stages collect particles in the following size categories: greater than 9.9 um; 5.3-9.9 um; 1.0-5.3 um; 0.16-1.0 um.'@en ;
+    skos:notation 'SDN:L22::TOOL0554'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0552/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0552/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0552/>;
+    dc:modified '2012-09-26T17:11:56'^^xsd:dateTime ;
+    skos:altLabel 'Nereides 300l bottle'^^xsd:string ;
+    skos:prefLabel 'Nereides 300l sample bottle'@en ;
+    skos:definition 'A 300 litre capacity sampling bottle designed for oceanographic sampling. The bottle was closed by a messenger. It was used during the OMEX project in the 1990s.'@en ;
+    skos:notation 'SDN:L22::TOOL0552'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0544/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0544/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0544/>;
+    dc:modified '2012-09-26T16:33:22'^^xsd:dateTime ;
+    skos:altLabel 'Electropolished canister'^^xsd:string ;
+    skos:prefLabel 'Electropolished air sample canister'@en ;
+    skos:definition 'Metal sampling container of unknown make and capacity that has been smoothed by electropolishing (also known as electrochemical or electrolytic polishing). Suitable for the collection of high pressure air samples.'@en ;
+    skos:notation 'SDN:L22::TOOL0544'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0551/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0551/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0551/>;
+    dc:modified '2012-09-26T16:33:22'^^xsd:dateTime ;
+    skos:altLabel 'HVAS'^^xsd:string ;
+    skos:prefLabel 'High Volume Air Sampler'@en ;
+    skos:definition 'An atmospheric sampler that pumps air through a series of filters and traps to collect samples for off-line analysis of aerosol and gas-phase constituents. Air samples are drawn into a sheltered housing, and through one or more aerosol filters, which collect samples of particulate material. Successive aerosol filters may have smaller pore sizes to collect size fractionated aerosol samples. The air may then be drawn through one or more gas-phase filters or traps, such as reagent-soaked filter papers, reagent-filled impingers, or resin (polymer) traps. Flow meters between the filter set and the pump determine the volume of air sampled.'@en ;
+    skos:notation 'SDN:L22::TOOL0551'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0547/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0547/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0547/>;
+    dc:modified '2012-09-26T16:33:22'^^xsd:dateTime ;
+    skos:altLabel 'Lancs Uni syringe sampler'^^xsd:string ;
+    skos:prefLabel 'Lancaster University syringe water sampler'@en ;
+    skos:definition 'A water sample collection system comprising a peristaltic pump attached to a syringe, allowing near-surface samples to be gathered without introducing oxygen (a closed system).'@en ;
+    skos:notation 'SDN:L22::TOOL0547'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0546/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0546/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0546/>;
+    dc:modified '2012-09-26T16:33:22'^^xsd:dateTime ;
+    skos:altLabel 'PML Interfacial Sampler'^^xsd:string ;
+    skos:prefLabel 'Plymouth Marine Laboratory Interfacial Sampler'@en ;
+    skos:definition 'A sampler comprising a frame fitted with 10 horizontal syringe-type 4 litre water bottles. An electronic control cylinder, mounted in the top of the frame, is programmed to release the bottle pistons once the frame has settled on the seabed and disturbed sediment has had time to disperse. The release of the piston draws in a sample and, at completion of the piston stroke, a mechanism is triggered to close the bottle inlet.'@en ;
+    skos:notation 'SDN:L22::TOOL0546'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0548/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0548/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0548/>;
+    dc:modified '2012-09-26T16:33:22'^^xsd:dateTime ;
+    skos:altLabel 'PML NSSD'^^xsd:string ;
+    skos:prefLabel 'Plymouth Marine Laboratory Near-Surface Sampling Device'@en ;
+    skos:definition 'A water sample collection system comprising a flotation ring supporting a central vertical spar that carries a 8 sampling bottles, of which the upper 5 are vertically spaced at 20 cm intervals and the lower 3 at approximately 30 cm intervals. The spar also carries an array of thermistors spaced at logarithmic intervals between a few mm below the surface to approximately 2 m depth. Atop the spar is a control system which continuously logs the thermistor data. The device is deployed from a vessel and allowed to drift away on a tether with a conductive core. Thermistor data are transmitted up the cable to a host computer on board the ship, while the control system allows for the remote firing of the sampling bottles by the host computer.'@en ;
+    skos:notation 'SDN:L22::TOOL0548'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0542/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0542/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0542/>;
+    dc:modified '2012-09-26T16:33:22'^^xsd:dateTime ;
+    skos:altLabel 'Polypropylene 10L bottle'^^xsd:string ;
+    skos:prefLabel 'Polypropylene 10L surface sample bottle'@en ;
+    skos:definition 'Polypropylene plastic bottle with 10 litre capacity used for surface sampling from small boats during OMEX and LOIS RACS projects in the 1990s.'@en ;
+    skos:notation 'SDN:L22::TOOL0542'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0545/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0545/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0545/>;
+    dc:modified '2012-09-26T16:33:22'^^xsd:dateTime ;
+    skos:altLabel 'Stainless steel canister'^^xsd:string ;
+    skos:prefLabel 'Stainless steel air sample canister'@en ;
+    skos:definition 'Stainless steel sampling container suitable for the collection of high pressure air samples. The container has a capacity of several litres.'@en ;
+    skos:notation 'SDN:L22::TOOL0545'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0543/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0543/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0543/>;
+    dc:modified '2012-09-26T16:33:22'^^xsd:dateTime ;
+    skos:altLabel 'Transparent sample bottle'^^xsd:string ;
+    skos:prefLabel 'Transparent sample bottle'@en ;
+    skos:definition 'Sampling bottle of unknown material that posseses the physical property of allowing the transmission of light with little or no intereference.'@en ;
+    skos:notation 'SDN:L22::TOOL0543'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0550/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0550/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0550/>;
+    dc:modified '2012-09-26T16:33:22'^^xsd:dateTime ;
+    skos:altLabel 'UEA LVAS'^^xsd:string ;
+    skos:prefLabel 'University of East Anglia Low Volume Air Sampler'@en ;
+    skos:definition 'An atmospheric sampler that pumps air through a series of filters to collect samples for off-line analysis of aerosol and gas-phase constituents. Air samples are drawn into a sheltered housing, and through a PTFE filter, which collect samples of particulate material. The air is then drawn through a pair of oxalic acid-impregnated paper filters, which trap gas-phase components. The pump is chosen to produce a flow rate of approximately 50 litres per minute. Inline flow meters between the filter set and the pump determine the volume of air sampled.'@en ;
+    skos:notation 'SDN:L22::TOOL0550'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0541/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0541/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0541/>;
+    dc:modified '2012-09-26T16:33:22'^^xsd:dateTime ;
+    skos:altLabel 'UEA rainwater sampler'^^xsd:string ;
+    skos:prefLabel 'University of East Anglia rainwater sampler'@en ;
+    skos:definition 'A rainwater sampler comprising a 40 cm diameter polypropylene plastic funnel feeding into a low density polyethylene (LDPE) bottle.'@en ;
+    skos:notation 'SDN:L22::TOOL0541'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0536/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0536/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0536/>;
+    dc:modified '2012-09-25T16:03:31'^^xsd:dateTime ;
+    skos:altLabel 'Bucket'^^xsd:string ;
+    skos:prefLabel 'Bucket'@en ;
+    skos:definition 'Typically a watertight, vertical cylinder or truncated cone, with an open top and a flat bottom. Usually attached to a semicircular handle.'@en ;
+    skos:notation 'SDN:L22::TOOL0536'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0540/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0540/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0540/>;
+    dc:modified '2012-09-25T16:03:31'^^xsd:dateTime ;
+    skos:altLabel 'NIO bottle'^^xsd:string ;
+    skos:prefLabel 'National Institute of Oceanography water sampling bottle'@en ;
+    skos:definition 'A plastic free-flushing water sampling bottle designed for oceanographic sampling. It has valves at each end, which are held open on deployment. When the bottle reaches the desired depth the valves are released and sealed. A reversing thermometer may be mounted on the bottle. The bottle inverts on closure, triggering the thermometer. A sampling spigot is positioned at the base of the bottle. The bottle was designed in the 1970s by Francis E. Pierce, Dennis I. Gaunt, and Richard Dobson at what was  then the National Institute of Oceanography, UK (a predecessor of the National Oceanography Centre).'@en ;
+    skos:notation 'SDN:L22::TOOL0540'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0538/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0538/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0538/>;
+    dc:modified '2012-09-25T16:03:31'^^xsd:dateTime ;
+    skos:altLabel 'NOEX bottle'^^xsd:string ;
+    skos:prefLabel 'Technicap NOEX bottle'@en ;
+    skos:definition 'Water bottle designed for oceanographic sampling. The bottle comprises a plastic tube with caps at each end and is deployed with the caps held open, then closed at the target depth. Multiple bottles can be deployed on a CTD frame rosette. Bottle capacity is variable, but normally several litres. The bottle was developed by Technicap in the 1990s but has been superseded by more recent models. There is no known source of support available for this sampler.'@en ;
+    skos:notation 'SDN:L22::TOOL0538'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0537/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0537/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0537/>;
+    dc:modified '2012-09-25T16:03:31'^^xsd:dateTime ;
+    skos:altLabel 'Winchester bottle'^^xsd:string ;
+    skos:prefLabel 'Winchester bottle'@en ;
+    skos:definition 'A strong, heavy bottle typically made of brown glass (to filter out UV light) but may also be made of plastics. A range of capacities is available. Also known as a Boston round bottle.'@en ;
+    skos:notation 'SDN:L22::TOOL0537'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/NETT0171/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/NETT0171/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/NETT0171/>;
+    dc:modified '2012-09-25T14:08:12'^^xsd:dateTime ;
+    skos:altLabel 'OCEAN MKI'^^xsd:string ;
+    skos:prefLabel 'Marine Scotland Opening Closing Environmental Acoustic Net MKI'@en ;
+    skos:definition 'An oceanographic sampler designed to be towed behind a vessel. The sampler includes 4 nets which are controlled by acoustic signals from the towing ship. The system can be fitted with live codend buckets or codend bags. This version of the sampler has been supserseded.'@en ;
+    skos:notation 'SDN:L22::NETT0171'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/NETT0172/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/NETT0172/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/NETT0172/>;
+    dc:modified '2012-09-25T14:08:12'^^xsd:dateTime ;
+    skos:altLabel 'OCEAN MKII'^^xsd:string ;
+    skos:prefLabel 'Marine Scotland Opening Closing Environmental Acoustic Net MKII'@en ;
+    skos:definition 'An oceanographic sampler designed to be towed behind a vessel at a rate of 2-4 knots. The sampler includes 7 nets with mouth openings of 10cm internal and 160cms long. The nets are mounted in a removable stainless steel frame, which fits into the main stainless steel sampler frame, and can be changed to suit sampling requirements. The system can be fitted with live codend buckets or codend bags of similar mesh to the sampling nets. The system is pre-programmed using a computer which allocates depths where the sampler will activate.The operator can elect to sample down and up through the water column or only on the down leg or up leg. The  main nose cone contains a Marine Scotland titanium flowmeter whose measurements are recorded on a data logger. The system also contains a motor that controls the opening and closing of nets. The system also normally carries 7 water sampling bottles, an optical plankton counter and an SBE911 CTD fitted with transmissometer and fluorometer. The sampler is rated to 1000 m and can carry up to 250kg of other instrumentation.'@en ;
+    skos:notation 'SDN:L22::NETT0172'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0535/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0535/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0535/>;
+    dc:modified '2012-09-25T14:01:15'^^xsd:dateTime ;
+    skos:altLabel 'OCEAN water sample bottle'^^xsd:string ;
+    skos:prefLabel 'Marine Scotland Opening Closing Environmental Acoustic Net water bottle'@en ;
+    skos:definition 'A custom made water sampling bottle designed to fit on the OCEAN sampler. The bottle comprises a free-flooding tube with a capacity of 0.5 litres. The bottle closes when a net sample is collected. Bottle firing is pre-programmed using a computer prior to deployment of the sampler.'@en ;
+    skos:notation 'SDN:L22::TOOL0535'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0533/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0533/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0533/>;
+    dc:modified '2012-08-21T12:05:06'^^xsd:dateTime ;
+    skos:altLabel 'DTU Nutech GM-25-5A'^^xsd:string ;
+    skos:prefLabel 'DTU Nutech GM-25-5A beta Multicounter system'@en ;
+    skos:definition 'A laboratory instrument designed to count beta particles emitted by a sample using the Geiger-Muller principle. A steady gas stream of argon (99%) and isobutene or propane (1%) becomes ionised due to beta particle emission from the sample, and the ionised gas particles are collected within a high voltage field, detected as an electric current pulse and recorded as a counting event. A guard counter allows the removal of the cosmic background radiation signal. The instrument is typically placed inside a lead shielding to reduce the ambient background radiation.'@en ;
+    skos:notation 'SDN:L22::TOOL0533'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0527/3/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0527/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0527/>;
+    dc:modified '2012-08-16T13:02:49'^^xsd:dateTime ;
+    skos:altLabel 'HDW Bathysonde'^^xsd:string ;
+    skos:prefLabel 'Howaldtswerke-Deutsche Werft Bathysonde CTD profiler'@en ;
+    skos:definition 'A conductivity-temperature-pressure profiler with a pressure rating of either 800dbar or 6000dbar, a pressure precision of +/- 0.25% of total range and a resolution of 1dbar or better. It had temperature precision of +/- 0.01 degC and a resolution of 0.01 degC. The conductivity range was 0 to 80 mmho/cm, with a precision of +/- 1.5 permil of total range and a resolution of 0.01 mmho/cm. The instrument was developed in the 1970s and was used by the then Institute for Marine Science, Kiel.'@en ;
+    skos:notation 'SDN:L22::TOOL0527'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0531/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0531/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0531/>;
+    dc:modified '2012-08-16T11:26:51'^^xsd:dateTime ;
+    skos:altLabel 'Valeport MIDAS SVP'^^xsd:string ;
+    skos:prefLabel 'Valeport MIDAS Sound Velocity Probe'@en ;
+    skos:definition 'This instrument comprises a time of flight sound speed sensor, pressure transducer and platinum resistance temperature sensor. It is suitable for rapid profiling down to 6000 metres depth. It can be operated in continuous, burst, trip/profile, conditional or delayed mode. The instrument was formerly known as Model 650 Mk2.'@en ;
+    skos:notation 'SDN:L22::TOOL0531'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0526/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0526/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0526/>;
+    dc:modified '2012-07-31T08:55:11'^^xsd:dateTime ;
+    skos:altLabel 'Horiba U-22'^^xsd:string ;
+    skos:prefLabel 'Horiba U-22 multiparameter instrument'@en ;
+    skos:definition 'The Horiba U-22 multiparameter sensor is a submersible probe which allows simultaneous measurement of 10 water property parameters to depths of up to 100 metres. The measured parameters are pH, dissolved oxygen, conductivity, salinity, total dissolved solids, seawater specific gravity, temperature, turbidity, depth and oxidation reduction potential.'@en ;
+    skos:notation 'SDN:L22::TOOL0526'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0524/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0524/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0524/>;
+    dc:modified '2012-07-16T16:22:59'^^xsd:dateTime ;
+    skos:altLabel 'Ashtech G12 GPS'^^xsd:string ;
+    skos:prefLabel 'Ashtech G12 Global Positioning System receiver'@en ;
+    skos:definition 'A 12-channel, all-in-view Global Positioning System (GPS) receiver. It is Differential GPS (DGPS) ready, with a horizontal accuracy of 90 cm in GPS mode and 40 cm in DGPS mode. Update rate is selectable up to 10 Hz.'@en ;
+    skos:notation 'SDN:L22::TOOL0524'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0511/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0511/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0511/>;
+    dc:modified '2012-07-10T09:07:46'^^xsd:dateTime ;
+    skos:altLabel 'QuAAtro SFA'^^xsd:string ;
+    skos:prefLabel 'SEAL Analytical QuAAtro Autoanalyser'@en ;
+    skos:definition 'A microflow Segmented Flow Analysis (SFA) system, ideal for water and seawater analysis. It comprises a sampler, a peristaltic pump which simultaneously pumps samples, reagents and air bubbles (to segment the flow) through the system, a chemistry manifold and a high resolution digital photometer that allows detection of a variety of substances at low concentrations. The unit also includes AACE data acquisition software. High temperature heating baths, distillation and dialyzers are available for methods that require them.'@en ;
+    skos:notation 'SDN:L22::TOOL0511'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0521/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0521/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0521/>;
+    dc:modified '2012-07-05T15:53:41'^^xsd:dateTime ;
+    skos:altLabel 'BD FACSort Cytometer'^^xsd:string ;
+    skos:prefLabel 'Becton Dickinson FACSort Flow Cytometer'@en ;
+    skos:definition 'A fixed-alignment, 5 detector benchtop cell sorter. The cytometer can sort cells at a rate of 300 per second and can be used at three selectable flow rates. The cytometer uses an argon-ion laser and has a variable sample pressure. Seven data channels are available for data acquisition. The cytometer consists of an optics, electronics and fluidics system. Becton Dickinson is now BD Biosciences.'@en ;
+    skos:notation 'SDN:L22::TOOL0521'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0522/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0522/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0522/>;
+    dc:modified '2012-07-05T15:53:41'^^xsd:dateTime ;
+    skos:altLabel 'Nu Plasma I MC-ICP-MS'^^xsd:string ;
+    skos:prefLabel 'Nu Instruments Plasma I (HR) Multi-Collector Inductively Coupled Plasma Mass Spectrometer'@en ;
+    skos:definition 'A double focusing multi-collector inductively coupled plasma mass spectrometer (MC-ICP-MS) featuring unique variable dispersion optics. The instrument includes: a double focusing system, vacuum system, zoom optics, Faraday detector system, multiplier detector system, water cooling and computer systems. Twelve Faraday detectors are fitted to the instrument as standard and up to three ion-counting multiplier channels can be specified for the standard collector housing. Deflection with a magnet and second electrostatic anaylser compensates for any energy spread of the ion beam.'@en ;
+    skos:notation 'SDN:L22::TOOL0522'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0519/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0519/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0519/>;
+    dc:modified '2012-07-04T10:02:10'^^xsd:dateTime ;
+    skos:altLabel 'BD FACSAria II Flow Cytometer'^^xsd:string ;
+    skos:prefLabel 'BD Biosciences FACSAria II Flow Cytometer'@en ;
+    skos:definition 'A high-speed fixed-alignment benchtop cell sorter. The cytometer can be operated at varied pressures and can acquire up to 70,000 events per second. It is capable of multicolour analysis of up to 13 fluorescent markers and two scatter parameters at a time. The system consists of three major components: a fluidics cart, optics system and cytometer electronics. This model has been discontinued. BD Biosciences is a component of BD, previously known as Becton Dickinson.'@en ;
+    skos:notation 'SDN:L22::TOOL0519'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0513/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0513/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0513/>;
+    dc:modified '2012-07-04T10:02:10'^^xsd:dateTime ;
+    skos:altLabel 'FIA fluorometer system'^^xsd:string ;
+    skos:prefLabel 'Flow injection lumogallion system with fluorometer'@en ;
+    skos:definition 'An analytical system used to determine concentrations of chemical species in a sample based on the fluorescence from the reaction between lumogallion and the species of interest. The system typically comprises individual components typically including pumps, injection and autosampler valves, preconcentration columns and a fluorometer. The system is normally uniquely assembled for each analysis.'@en ;
+    skos:notation 'SDN:L22::TOOL0513'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0515/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0515/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0515/>;
+    dc:modified '2012-07-04T10:02:10'^^xsd:dateTime ;
+    skos:altLabel 'Metrohm 663 VA'^^xsd:string ;
+    skos:prefLabel 'Metrohm 663 VA Stand mercury electrode'@en ;
+    skos:definition 'The Metrohm 663 VA stand forms the wet chemical part of a polarographic and voltammetric analytical system. It features a mercury electrode, an Ag/AgCl reference electrode and a glassy carbon counter electrode. The size of the mercury drop and the stirrer speed are set manually on the VA Stand. The VA Stand can be operated in Dropping Mercury Electrode (DME), Hanging Mercury Drop Electrode (HMDE) and Static Mercury Drop Electrode (SMDE) modes. The VA Stand can be controlled by a potentiostat in conjunction with the Metrohm IME663 interface.'@en ;
+    skos:notation 'SDN:L22::TOOL0515'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0516/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0516/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0516/>;
+    dc:modified '2012-07-04T10:02:10'^^xsd:dateTime ;
+    skos:altLabel 'Nu Plasma 1700 MC-ICP-MS'^^xsd:string ;
+    skos:prefLabel 'Nu Instruments Plasma 1700 High Resolution Multi Collector inductively coupled plasma mass spectrometer'@en ;
+    skos:definition 'The Nu Plasma 1700 High Resolution Multi Collector inductively coupled plasma mass spectrometer (MC-ICP-MS) is designed for high resolution isotope ratio measurements. The instrument features a high dispersion and large geometry to provide a high mass resolution of 700 to 3000 m/Dm (10% valley convention) whilst still maintaining flat top peaks for high precision measurements with minimal loss in sensitivity. The instrument has a mass dispersion of 17% at zoom magnification 1 and is equipped with 16 Faraday cups: ten incorporated in a fixed central array and three each to the low and high mass side as well as three secondary electron multipliers, of which one is equipped with an abundance sensitivity filter. Independent computer controlled adjustable slits positioned in front of all detectors, allow movement in width and central position providing perfect alignment of the peaks of interest.'@en ;
+    skos:notation 'SDN:L22::TOOL0516'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0520/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0520/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0520/>;
+    dc:modified '2012-07-04T10:02:10'^^xsd:dateTime ;
+    skos:altLabel 'TrAAcs 800 autoanalyser'^^xsd:string ;
+    skos:prefLabel 'Technicon TrAAcs 800 colorimetric autoanalyser'@en ;
+    skos:definition 'The TrAAcs system is a continuous flow wet chemistry analyser that determines analyte concentrations using a colorimeter to detect changes in colour produced by the presence of the analytes. It may be used to measure nutrient concentrations in seawater. The instrument is no longer in production and Technicon no longer exists. However, the instrument is supported (parts, servicing and consumables) by SEAL Analytical.'@en ;
+    skos:notation 'SDN:L22::TOOL0520'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0510/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0510/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0510/>;
+    dc:modified '2012-06-28T09:49:48'^^xsd:dateTime ;
+    skos:altLabel 'TD-700 Lab Fluorometer'^^xsd:string ;
+    skos:prefLabel 'Turner Designs 700 Laboratory Fluorometer'@en ;
+    skos:definition 'A benchtop fluorometer designed to detect fluorescence over the UV to red range. It uses a Quartz Halogen Lamp or a Low Pressure Mercury Vapour Lamp to excite the species of interest and fluorescence is detected by a photomultiplier tube with a range of 300-650 nm. A red-sensitive tube with a detection range of 185-870 nm is also available. The instrument can measure concentrations of a variety of compounds, including chlorophyll-a and fluorescent dyes, and is thus suitable for a range of applications, including chlorophyll, water quality monitoring and fluorescent tracer studies. Samples can be averaged by the instrument to improve accuracy, and it can read and subtract a blank measurement from the data, further improving the accuracy. Data can be output as concentrations or raw fluorescence measurements.'@en ;
+    skos:notation 'SDN:L22::TOOL0510'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0508/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0508/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0508/>;
+    dc:modified '2012-06-22T15:36:10'^^xsd:dateTime ;
+    skos:altLabel 'Friedinger bottle'^^xsd:string ;
+    skos:prefLabel 'Friedinger bottle water sampler'@en ;
+    skos:definition 'A free flushing sample bottle of 1-5 litre capacity comprising a glass, metal or plastic tube with a hinged lid at each end. The bottle is deployed on a wire with the lids held open. When the bottle reaches the target depth a weighted messenger is sent down the wire and releases the lids, sealing the sample in the bottle. The bottle was designed by H Friedinger (Lucerne, Switzerland) to collect water samples for plankton analysis.'@en ;
+    skos:notation 'SDN:L22::TOOL0508'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0507/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0507/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0507/>;
+    dc:modified '2012-06-22T15:36:10'^^xsd:dateTime ;
+    skos:altLabel 'Garrett Screen'^^xsd:string ;
+    skos:prefLabel 'Garrett Screen surface sampler'@en ;
+    skos:definition 'A hand-held Monel (nickel-copper alloy) mesh screen in a rigid frame designed to sample the surface film in oceanic waters. The screen is placed horizontally through the water surface then withdrawn from the water (still held horizontally) and drained into a sample bottle. It is used to sample chemical and biological species in the surface film. The Garrett Screen was developed in the 1960s by William Garrett of the US Naval Research Laboratory.'@en ;
+    skos:notation 'SDN:L22::TOOL0507'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0509/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0509/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0509/>;
+    dc:modified '2012-06-22T15:36:10'^^xsd:dateTime ;
+    skos:altLabel 'Partec 100 FBRM'^^xsd:string ;
+    skos:prefLabel 'Lasentec Partec 100 focused beam reflectance measurement particle sizer'@en ;
+    skos:definition 'An in situ particle sizer that uses the principal of focused beam reflectance measurement (FBRM) to measure particle sizes in the range 2-1000 um in a liquid. The probe tip includes an optic filter, beam splitter, laser beam and sapphire window, through which laser light is passed into the liquid. The light is diffracted by particles suspended in the liquid and the FBRM measures the chord length distribution (CLD), which is a function of the number, size and shape of the particles. Typically, many thousands of chords are measured per second, providing a robust measurement sensitive to the change in the size or number of particles. The instrument can be deployed on a hydrographic wire and lowered to the required depth, where is is held steady while a particle spectrum is collected. The instrument was developed by Lasentec (also known as Lasentech), which has since been taken over by Mettler Toledo. The Partec 100 is no longer in production.'@en ;
+    skos:notation 'SDN:L22::TOOL0509'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0418/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0418/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0418/>;
+    dc:modified '2012-06-22T13:49:29'^^xsd:dateTime ;
+    skos:altLabel 'Teflon-coated Niskin'^^xsd:string ;
+    skos:prefLabel 'Teflon-coated Niskin bottle'@en ;
+    skos:definition 'A teflon-coated free-flushing water sampling bottle with a capacity of 1.7-30 litres. It has caps with rubber seals at each end joined by a latex cord running through the interior of the bottle. It is deployed with the caps held open against the latex cord by plastic lanyards. When the bottle reaches the desired depth the lanyards are released by a pressure-actuated switch, command signal or messenger weight and the caps are forced shut and sealed. Bottles may be deployed singly clamped to a wire or in groups of up to 48 on a rosette. Reversing thermometers may be attached to a spring-loaded disk that rotates through 180 degrees on bottle closure. These bottles are specifically designed to minimise metal contamination when sampling trace metals.'@en ;
+    skos:notation 'SDN:L22::TOOL0418'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0412/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0412/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0412/>;
+    dc:modified '2012-06-22T13:43:26'^^xsd:dateTime ;
+    skos:altLabel 'Niskin bottle'^^xsd:string ;
+    skos:prefLabel 'Niskin bottle'@en ;
+    skos:definition 'A plastic free-flushing water sampling bottle with a capacity of 1.7-30 litres. It has caps with rubber seals at each end joined by a plastic-coated metal spring or elastic cord running through the interior of the bottle. It is deployed with the caps held open against the spring by plastic lanyards. When the bottle reaches the desired depth the lanyards are released by a pressure-actuated switch, command signal or messenger weight and the caps are forced shut and sealed. Bottles may be deployed singly clamped to a wire or in groups of up to 48 on a rosette. Reversing thermometers may be attached to a spring-loaded disk that rotates through 180 degrees on bottle closure.'@en ;
+    skos:notation 'SDN:L22::TOOL0412'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0501/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0501/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0501/>;
+    dc:modified '2012-06-21T16:09:48'^^xsd:dateTime ;
+    skos:altLabel 'ARIES water sample bottle'^^xsd:string ;
+    skos:prefLabel 'Autosampling and Recording Instrumental Environmental Sampler rosette water bottle'@en ;
+    skos:definition 'A custom made water sampling bottle designed to fit on the ARIES net rosette sampler. The bottle comprises a free-flooding tube with hinged sealing lids at each end. The lids of each tube are connected by an internal length of silicone elastic. Prior to sampling the lids are held open by pins slotted into pivoting levers. When sampling is complete for one bottle the levels at each end of the next tube in the carousel are simultaneously turned by a rotating arm, thus releasing the lids and closing the tube. Each tube is 40 cm long and has an external diameter of 42 mm and a capacity of 250 ml.'@en ;
+    skos:notation 'SDN:L22::TOOL0501'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0504/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0504/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0504/>;
+    dc:modified '2012-06-21T16:09:48'^^xsd:dateTime ;
+    skos:altLabel 'Carboy'^^xsd:string ;
+    skos:prefLabel 'Carboy'@en ;
+    skos:definition 'A rigid container made of material such as glass or high density plastic with a typical capacity of 20 to 60 litres. A carboy is typically used to store or transport liquids.'@en ;
+    skos:notation 'SDN:L22::TOOL0504'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0506/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0506/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0506/>;
+    dc:modified '2012-06-21T16:09:48'^^xsd:dateTime ;
+    skos:altLabel 'GO-FLO bottle'^^xsd:string ;
+    skos:prefLabel 'General Oceanics GO-FLO water sampler'@en ;
+    skos:definition 'A plastic free-flushing water sampling bottle with a capacity of 1.7-100 litres. The tube is composed of PVC and has ball valves with Viton and silicone seals at each end joined by an external latex spring and nylon and Kevlar lanyards. It is closed when deployed then opens automatically (hydrostatic pressure activated) at approximately 10 m and flushes until closed. When the bottle reaches the desired depth the lanyards are released by a pressure-actuated switch, command signal or messenger weight and the caps are forced shut and sealed. Bottles may be deployed singly clamped to a wire or in groups on a rosette. A reversing thermometer assembly may be attached to the bottle. When extracting water from the bottle, inert gas can be injected into the bottle to force the sample out of the sampling valve. The GO-FLO sampler avoids sample contamination at the surface, internal spring contamination, loss of sample on deck (internal seals), and exchange of water from different depths.'@en ;
+    skos:notation 'SDN:L22::TOOL0506'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0505/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0505/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0505/>;
+    dc:modified '2012-06-21T16:09:48'^^xsd:dateTime ;
+    skos:altLabel 'Knudsen bottle'^^xsd:string ;
+    skos:prefLabel 'Knudsen reversing water bottle'@en ;
+    skos:definition 'A frameless reversing water bottle with reversing thermometers that is used to collect water samples. The bottom of the bottle is clamped to a wire and the top of the bottle is held to the wire by a catch. It has independent hinged lids at each end which are held open against an internal spring when the bottle is deployed. Once the bottle has reached the target depth a messenger is dropped down the wire and hits the catch. The lids close and the bottle falls through 180deg, pivoting on the bottom clamp. This action reversed the thermometers, which are housed in a frame attached to the bottle.'@en ;
+    skos:notation 'SDN:L22::TOOL0505'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0503/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0503/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0503/>;
+    dc:modified '2012-06-21T16:09:48'^^xsd:dateTime ;
+    skos:altLabel 'PRISTINE sampler'^^xsd:string ;
+    skos:prefLabel 'NIOZ PRISTINE ultraclean water sampler'@en ;
+    skos:definition 'Ultraclean water sampler developed by the Royal Netherlands Institute For Sea Research (NIOZ) for the GEOTRACES Program. Individual sample bottles have a capacity of 27 litres and include butterfly valves that ensure bottles are closed when passing through the ocean surface and reopen subsurface. Teflon valves for subsampling at the base of bottles ensure drainage of settling particulates. Samplers are deployed with a Kevlar hydrowire cable with internal signal cables. A single bottle may be used (e.g. during small boat work) or an array of bottles may be mounted on a frame for shipboard CTD work. Trip mechanisms range from a weighted messenger to trip wires or hydraulics for rosette sampling.'@en ;
+    skos:notation 'SDN:L22::TOOL0503'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0500/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0500/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0500/>;
+    dc:modified '2012-06-21T16:09:48'^^xsd:dateTime ;
+    skos:altLabel 'SAP'^^xsd:string ;
+    skos:prefLabel 'Stand-alone pump'@en ;
+    skos:definition 'A submersible battery powered water pump that sucks water through various filters leaving the materials of interest on the filter for analysis. SAPs are deployed clamped to a hydrographic wire and may be used to sample at depths of up to 6000 m. A SAP can pump thousands of litres of water over a few hours.'@en ;
+    skos:notation 'SDN:L22::TOOL0500'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0502/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0502/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0502/>;
+    dc:modified '2012-06-21T16:09:48'^^xsd:dateTime ;
+    skos:altLabel 'Van Dorn water sampler'^^xsd:string ;
+    skos:prefLabel 'Van Dorn water sampler'@en ;
+    skos:definition 'A free-flushing water sample bottle comprising a cylinder (polycarbonate, acrylic or PVC) with a stopper at each end. The bottle is closed by means of a messenger from the surface releasing the tension on a latex band and thus pulling the two stoppers firmly into place. A thermometer can be mounted inside the bottle. One or more bottles can be lowered on a line to allow sampling at a single or multiple depth levels. Van Dorn samplers are suitable for for physical (temperature), chemical and biological sampling in shallow to very deep water. Bottles are typically lowered vertically through the water column although a horizontal version is available for sampling near the seabed or at thermoclines or chemoclines. Because of the lack of metal parts the bottles are suitable for trace metal sampling, although the blue polyurethane seal used in the Alpha version may leach mercury. The Beta version uses white ASA plastic seals that do not leach mercury but are less durable.'@en ;
+    skos:notation 'SDN:L22::TOOL0502'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/NETT0004/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/NETT0004/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/NETT0004/>;
+    dc:modified '2012-06-21T14:43:33'^^xsd:dateTime ;
+    skos:altLabel 'ARIES'^^xsd:string ;
+    skos:prefLabel 'Autosampling and Recording Instrumental Environmental Sampler - Dunn et al. (1993)'@en ;
+    skos:definition 'A stretched version of the Lowestoft modified Gulf III (similar to Williams et al., LHPR frame) mounting three sampling systems.  The nose cone had a 35.6 cm diameter opening expanding to 76 cm diameter.  Instead of an LHPR box, a 2000 cm long by 16 cm wide belt was outfitted with 110 6-cm diameter cod-ends with 0.2 mm mesh. A drive motor periodically incremented the belt moving the nets from a feed spool into a position to collect a sample at the back of the net and then onto a take-up spool.  Water samples were collected with 60 250 ml bottles mounted in a carousel similar to a conventional rosette sampler.  A data logger recorded temperature, conductivity, pressure, flow, and sampling events at rates between 1 second and 60 minutes.  User selected plankton and water sampling rates were 1 to 60 minutes.  An acoustical telemetry system transmitted depth for realtime monitoring of the system.  Towing speed is 4-5 kts [Wiebe and Benfield 2003 Plate 27 C]'@en ;
+    skos:notation 'SDN:L22::NETT0004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/NETT0149/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/NETT0149/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/NETT0149/>;
+    dc:modified '2012-06-21T13:49:01'^^xsd:dateTime ;
+    skos:altLabel 'RMT 1+8'^^xsd:string ;
+    skos:prefLabel 'The National Institute of Oceanography Rectangular Midwater Trawl combination net 1+8  - Baker et al. (1973)'@en ;
+    skos:definition 'A combination 100 cm x 141 cm rectangular flexible  mouth opening net and one with a 283 cm x 400 cm mouth opening, one above the other on the same towing framework. The 8-m2 as described by Clarke . The 1-m2 was 423 cm long and had 0.32 mm nylon mesh. Data telemetry improved to include temperature and flow. Descriptions of scaled up versions of the RMT 8 to  25-m2 and  90-m2 mouth openings provided [Wiebe and Benfield 2003 Plate 28 A].'@en ;
+    skos:notation 'SDN:L22::NETT0149'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0498/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0498/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0498/>;
+    dc:modified '2012-06-13T14:30:27'^^xsd:dateTime ;
+    skos:altLabel 'Aanderaa 3919A cond sensor'^^xsd:string ;
+    skos:prefLabel 'Aanderaa conductivity sensor 3919A'@en ;
+    skos:definition 'An inductive conductivity sensor designed to operate over a range of 0-7.5 S/m with a resolution of 0.0002 S/m and an accuracy of +/- 0.005 S/m. The instrument includes a temperature sensor with a range of -5 to 40 degC, a resolution of 0.01 degC and an accuracy of +/-0.1 degC. The shallow water (SW) version of the instrument is rated to 300 m, the intermediate water (IW) version to 2000 m and the deep water (DW) version to 6000 m. The instrument has a titanium casing and can be interfaced with the Aanderaa RCM9/11 or RDCP, or used for standalone operations.'@en ;
+    skos:notation 'SDN:L22::TOOL0498'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0499/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0499/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0499/>;
+    dc:modified '2012-06-13T14:30:27'^^xsd:dateTime ;
+    skos:altLabel 'Aanderaa 3919B cond sensor'^^xsd:string ;
+    skos:prefLabel 'Aanderaa conductivity sensor 3919B'@en ;
+    skos:definition 'An inductive conductivity sensor designed to operate over a range of 0-7.5 S/m with a resolution of 0.0002 S/m and an accuracy of +/- 0.0018 S/m. The instrument includes a temperature sensor with a range of -5 to 40 degC, a resolution of 0.01 degC and an accuracy of +/-0.1 degC. The shallow water (SW) version of the instrument is rated to 300 m, the intermediate water (IW) version to 2000 m and the deep water (DW) version to 6000 m. The instrument has a titanium casing and can be interfaced with the Aanderaa RCM9/11 or RDCP, or used for standalone operations.'@en ;
+    skos:notation 'SDN:L22::TOOL0499'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0497/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0497/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0497/>;
+    dc:modified '2012-05-23T10:01:58'^^xsd:dateTime ;
+    skos:altLabel 'Bran+Luebbe Autoanalyser 3'^^xsd:string ;
+    skos:prefLabel 'SPX Bran+Luebbe colorimetric Autoanalyser 3'@en ;
+    skos:definition 'A colorimetric autoanalyser (AA) that may be used to measure nutrient concentrations in seawater. It is an air-segmented, continuous flow instrument comprising a sampler, a peristaltic pump which simultaneously pumps samples, reagents and air bubbles through the system, an analytical cartridge and a colorimeter. Additional modules for functions such as dialysis, distillation and heating can be added to the system, depending on user requirements.'@en ;
+    skos:notation 'SDN:L22::TOOL0497'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0492/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0492/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0492/>;
+    dc:modified '2012-05-21T10:02:44'^^xsd:dateTime ;
+    skos:altLabel 'Kongsberg EM 122'^^xsd:string ;
+    skos:prefLabel 'Kongsberg EM 122 multibeam echosounder'@en ;
+    skos:definition 'A multibeam 12 kHz echsounder designed for high resolution seabed mapping. It uses both Continuous Wave (CW) and Frequency Modulated (FM) sweep pulses with pulse compression on reception in order to increase the maximum used swath width. This system has up to 288 beams/432 soundings per swath with pointing angles which are automatically adjusted according to achievable coverage or operator defined limits. The transducers are modular linear arrays in a Mills cross configuration with separate units for transmit and receive. It has a depth range of 20 to 11000 m and a depth resolution of 1 cm.'@en ;
+    skos:notation 'SDN:L22::TOOL0492'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0493/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0493/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0493/>;
+    dc:modified '2012-05-21T10:02:44'^^xsd:dateTime ;
+    skos:altLabel 'Litre Meter LMSPFA.05 flow meter'^^xsd:string ;
+    skos:prefLabel 'Litre Meter LMSPFA.05 flow meter'@en ;
+    skos:definition 'Pelton Wheel flow meter designed to monitor water flow rates for pumped systems such as ships\' continuous seawater supplies. The flow meter is designed to measure low flow rates in the range 0.006 to 0.1 l/min. Water flows through an inlet and is directed onto a rotor, whose rotation rate is directly proportional to the flow rate.'@en ;
+    skos:notation 'SDN:L22::TOOL0493'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0494/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0494/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0494/>;
+    dc:modified '2012-05-21T10:02:44'^^xsd:dateTime ;
+    skos:altLabel 'Rotronic MP102H'^^xsd:string ;
+    skos:prefLabel 'Rotronic Hygromet MP102H temperature and humidity probe'@en ;
+    skos:definition 'Meteorological probe with a Hygro Clip HC2-S3 plug-in sensor that measures humidity and temperature. This model has a range of 0 to 100% in humidity, with an accuracy of 0.8%, and a temperature range of -40 to 80 degC, with an accuracy of 0.1 degC. It can be equipped with a signal conditioned Pt100 temperature probe. Model MP102H produces a voltage output as opposed to the current output produced by the similar MP402H.'@en ;
+    skos:notation 'SDN:L22::TOOL0494'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0495/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0495/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0495/>;
+    dc:modified '2012-05-21T10:02:44'^^xsd:dateTime ;
+    skos:altLabel 'Rotronic MP402H'^^xsd:string ;
+    skos:prefLabel 'Rotronic Hygromet MP402H temperature and humidity probe'@en ;
+    skos:definition 'Meteorological probe with a Hygro Clip HC2-S3 plug-in sensor that measures humidity and temperature. This model has a range of 0 to 100% in humidity, with an accuracy of 0.8%, and a temperature range of -40 to 80 degC, with an accuracy of 0.1 degC. It can be equipped with a signal conditioned Pt100 temperature probe. Model MP402H produces a current output as opposed to the voltage output produced by the similar MP102H.'@en ;
+    skos:notation 'SDN:L22::TOOL0495'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/NETT0001/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/NETT0001/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/NETT0001/>;
+    dc:modified '2012-05-11T10:27:07'^^xsd:dateTime ;
+    skos:altLabel 'Adriatic plankton sampler'^^xsd:string ;
+    skos:prefLabel 'Adriatic plankton sampler - Krsinic (1990)'@en ;
+    skos:definition 'Construction is a 50 cm diameter cylindrical sampler sent to depth with the cylinder net (0.25 mm mesh) closed and upside down (cod-end facing upward). A messenger releases the bottom margin of cylinder allowing it to drop open (115 cm length) and at the same time closing half circle doors. A second messenger releases the first support bridle and the sampler turns right side up. Sampler collects about 250 litres of water [Wiebe and Benfield 2003 Plate 11 A].'@en ;
+    skos:notation 'SDN:L22::NETT0001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0490/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0490/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0490/>;
+    dc:modified '2012-04-30T10:32:27'^^xsd:dateTime ;
+    skos:altLabel 'Star-Oddi DST Pitch and Roll'^^xsd:string ;
+    skos:prefLabel 'Star-Oddi DST Pitch and Roll Recorder'@en ;
+    skos:definition 'A miniature underwater data logger which measures temperature, pressure and pitch and roll (tilt angle) relative to the earth gravity. It has a range of depth ratings from 30 m to 3000 m and a temperature range of -1 degC to 40 degC with an accuracy of +/- 0.1 degC and a resolution of 0.032 degC. The tilt range is 160 deg (+/- 80 deg) with an accuracy of +/- 5deg and a resolution of 0.3 deg.'@en ;
+    skos:notation 'SDN:L22::TOOL0490'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0483/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0483/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0483/>;
+    dc:modified '2012-03-29T16:25:41'^^xsd:dateTime ;
+    skos:altLabel 'FI-CL photon counting system'^^xsd:string ;
+    skos:prefLabel 'Flow injection chemiluminescence system with photon counting head'@en ;
+    skos:definition 'An analytical system used to determine concentrations of chemical species in a sample based on the luminescence of the species of interest. The system typically comprises individual components typically including pumps, injection and autosampler valves, preconcentration columns and a photon counting head for chemiluminescence detection. The system is normally uniquely assembled for each analysis.'@en ;
+    skos:notation 'SDN:L22::TOOL0483'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0484/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0484/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0484/>;
+    dc:modified '2012-03-29T16:25:41'^^xsd:dateTime ;
+    skos:altLabel 'PerkinElmer 4300 DV ICP-OES'^^xsd:string ;
+    skos:prefLabel 'PerkinElmer Optima 4300 DV inductively coupled plasma optical emission spectrometer'@en ;
+    skos:definition 'An optical emission spectrometer (OES) that determines elemental composition of a sample through the amount of light emitted from atoms or ions at specific wavelengths. The atomization source is an inductively coupled plasma (ICP) which is maintained by the interaction of Radio Frequency (RF) energy, generated by a solid-state RF generator, a horizontally mounted quartz torch and ionized argon gas. Standards and samples are acquired with the aid of an autosampler. The sample solution is injected as an aerosol into the plasma via a nebuliser and spray chamber using the integral peristaltic pump. Light from the plasma and the various atomic emissions therein pass through duel view (DV) windows into the thermally stabilised, argon-purged optical compartment housing an Echelle polychromator to separate the light into its component wavelengths. The polychromator comprises diffraction gratings, mirrors, lenses and visible and ultra-violet detector sets, each comprising arrays of segmented-array charge-coupled device (SCD) detectors and allows simultaneous quantification of atomic emissions in the plasma.'@en ;
+    skos:notation 'SDN:L22::TOOL0484'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0485/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0485/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0485/>;
+    dc:modified '2012-03-29T16:25:41'^^xsd:dateTime ;
+    skos:altLabel 'PerkinElmer AS 93plus autosampler'^^xsd:string ;
+    skos:prefLabel 'PerkinElmer AS 93plus autosampler'@en ;
+    skos:definition 'A laboratory random-access autosampler which is a computer-controlled, multi-purpose sampling system for flame and flow-injection atomic absorption, ICP-OES and ICP-MS. The instrument automates standard and sample introductions via software commands. Random-access programming gives broad flexibility in the placement of samples and standards. The sample probe, including the sample transport capillary tubing is made of acid and solvent-resistant materials. The AS 93plus model is compatible with commonly used sample trays from other manufacturers.  The instrument includes an integrated power supply and control electronics, and also has automatic rinsing.'@en ;
+    skos:notation 'SDN:L22::TOOL0485'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0482/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0482/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0482/>;
+    dc:modified '2012-03-19T13:44:14'^^xsd:dateTime ;
+    skos:altLabel 'Applanix POSMV GPS'^^xsd:string ;
+    skos:prefLabel 'Trimble Applanix POSMV global positioning system'@en ;
+    skos:definition 'The Position and Orientation Systems for Marine Vessels (POSMV) is a real time kinematic (RTK) and differential global positioning system (DGPS) receiver for marine navigation. It includes an inertial system that provides platform attitude information. The instrument provides accurate location, heading, velocity, attitude, heave, acceleration and angular rate measurements.'@en ;
+    skos:notation 'SDN:L22::TOOL0482'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0481/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0481/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0481/>;
+    dc:modified '2012-03-19T13:44:14'^^xsd:dateTime ;
+    skos:altLabel 'VINDTA 3C TIC and TA analyser'^^xsd:string ;
+    skos:prefLabel 'Marianda VINDTA 3C total inorganic carbon and titration alkalinity analyser'@en ;
+    skos:definition 'The Versatile INstrument for the Determination of Total inorganic carbon and titration Alkalinity (VINDTA) 3C is a laboratory alkalinity titration system combined with an extraction unit for coulometric titration, which simultaneously determines the alkalinity and dissolved inorganic carbon content of a sample. The sample transport is performed with peristaltic pumps and acid is added to the sample using a membrane pump. No pressurizing system is required and only one gas supply (nitrogen or dry and CO2-free air) is necessary. The system uses a Metrohm Titrino 719S, an ORION-Ross pH electrode and a Metrohm reference electrode. The burette, the pipette and the analysis cell have a water jacket around them. Precision is typically ± 1 umol/kg for TA and/or DIC in open ocean water.'@en ;
+    skos:notation 'SDN:L22::TOOL0481'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0478/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0478/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0478/>;
+    dc:modified '2012-03-06T15:57:11'^^xsd:dateTime ;
+    skos:altLabel 'Agilent I-AS autosampler'^^xsd:string ;
+    skos:prefLabel 'Agilent Integrated Autosampler I-AS'@en ;
+    skos:definition 'A laboratory autosampler for low volume and ultra-trace analyses. The instrument features a peristaltic pump and continuously flowing rinse port so that the probe is always rinsed with fresh wash solution, eliminating the risk of cross contamination during a long sample sequence. It uses non-metal materials to minimise the risk of trace metal contamination. The autosampler was designed for use with the Agilent 7500 series ICP-MS but can also be used with the Agilent 4500 series ICP-MS.'@en ;
+    skos:notation 'SDN:L22::TOOL0478'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0477/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0477/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0477/>;
+    dc:modified '2012-03-06T15:57:11'^^xsd:dateTime ;
+    skos:altLabel 'Nortek Aquadopp 3000'^^xsd:string ;
+    skos:prefLabel 'Nortek Aquadopp 3000 3D Doppler current meter'@en ;
+    skos:definition 'The Nortek Aquadopp 3000 is a single-depth doppler current meter designed for deployment in intermediate water depths down to 3000 m. It is suitable for use on moorings or fixed structures. It features higher power and an increased signal-to-noise ratio compared with the standard (300 m depth rated) Aquadopp so that it can provide accurate current measurements in water with low concentrations of suspended particulate matter. Current velocity is derived from the Doppler shift measured by two or three 2MHz acoustic beams. It comes with compass, tilt, pressure and temperature sensors. Data are stored on an internal data logger. It can be run in \'diagnostic\' mode when set to collect data at 1 Hz frequency in user specified intervals, which allows studies of mooring motion and the performance of other current meters to be conducted.'@en ;
+    skos:notation 'SDN:L22::TOOL0477'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0476/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0476/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0476/>;
+    dc:modified '2012-03-06T15:57:11'^^xsd:dateTime ;
+    skos:altLabel 'Nortek Aquadopp 6000'^^xsd:string ;
+    skos:prefLabel 'Nortek Aquadopp 6000 3D Doppler current meter'@en ;
+    skos:definition 'The Nortek Aquadopp 6000 is a single-depth doppler current meter designed for deployment on deep water moorings, although it is also suitable for attachment to fixed structures. It features higher power and an increased signal-to-noise ratio compared with the standard (300 m depth rated) Aquadopp so that it can provide accurate current measurements in water with low concentrations of suspended particulate matter. Current velocity is derived from the Doppler shift measured by two or three 2MHz acoustic beams. It comes with compass, tilt, pressure and temperature sensors. It has a titanium casing rated to 6000 m and data are stored on an internal logger. It can be run in \'diagnostic\' mode when set to collect data at 1 Hz frequency in user specified intervals, which allows studies of mooring motion and the performance of other current meters to be conducted.'@en ;
+    skos:notation 'SDN:L22::TOOL0476'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0475/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0475/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0475/>;
+    dc:modified '2012-02-29T16:34:45'^^xsd:dateTime ;
+    skos:altLabel 'Paroscientific 415K'^^xsd:string ;
+    skos:prefLabel 'Paroscientific 415K Pressure Transducer'@en ;
+    skos:definition 'An absolute pressure transducer with a Digiquartz pressure sensor and precision thermometer. Operates over a temperature range of 0-50 degC and a pressure range of 0-15000 psia with a typical accuracy of 0.01% and a resolution of 0.0001%.'@en ;
+    skos:notation 'SDN:L22::TOOL0475'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0471/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0471/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0471/>;
+    dc:modified '2012-02-21T16:06:42'^^xsd:dateTime ;
+    skos:altLabel 'AE240 analytical balance'^^xsd:string ;
+    skos:prefLabel 'Mettler AE240 dual range analytical balance'@en ;
+    skos:definition 'A laboratory instrument used to measure sample mass over the range 0-40 g or 0-200 g. The 40 g range has a readability of 0.01 mg, a reproducibility standard deviation of 0.02 mg and a typical stabilisation time of 8 sec, while the 200 g range has a readability of 0.1 mg, reproducibility standard devation of 0.1 mg and typical stabilisation time of 5 sec. This model is no longer in production.'@en ;
+    skos:notation 'SDN:L22::TOOL0471'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0464/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0464/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0464/>;
+    dc:modified '2012-02-21T16:06:42'^^xsd:dateTime ;
+    skos:altLabel 'Agilent 7500ce ICP-MS'^^xsd:string ;
+    skos:prefLabel 'Agilent 7500ce inductively coupled plasma mass spectrometer'@en ;
+    skos:definition 'A laboratory benchtop inductively coupled plasma mass spectrometer (ICP-MS) for metal analysis. The instrument comprises a sample introduction system (micromist glass concentric nebuliser, quartz Scott-type spray chamber, peristaltic pump), an interface of nickel cones and dual on-axis extraction lenses, a vacuum system, mass flow controllers (plasma, auxiliary, makeup, and carrier gas and two Octopole Reaction System (ORS) reaction gas lines), a shieldtorch system (STS), an all-solid state digitally-driven 27 MHz RF generator and an off-axis Omega lens. The octopole cell of the ORS can be used with no gas, operated in collision mode using pure He cell gas or used in H2 reaction mode for ultra-trace Se analysis and semiconductor applications. All three of these modes come as standard in the 7500ce model. The instrument has been discontinued.'@en ;
+    skos:notation 'SDN:L22::TOOL0464'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0472/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0472/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0472/>;
+    dc:modified '2012-02-21T16:06:42'^^xsd:dateTime ;
+    skos:altLabel 'Bowers and Connelly Mega Corer'^^xsd:string ;
+    skos:prefLabel 'Bowers and Connelly Mega Corer'@en ;
+    skos:definition 'A sediment corer which collects relatively undisturbed sea-floor sediment samples including an intact sediment-water interface and overlying supernatant water. The Mega Corer holds 12 tubes, each 600 mm in length, allowing collection of sediment cores up to 400 mm long. It has a hydrostatic damping system which is used to slow down the penetration rate and to remove the typical bow wave. Corer deployment rates are in the region of 1 metre per second on the descent, and at any speed on retrieval as the samples are sealed top and bottom. The core tubing can be manufactured from acrylic, poly carbonate or stainless steel. The instrument was designed by Bowers and Connelly and is now manufactured by OSIL.'@en ;
+    skos:notation 'SDN:L22::TOOL0472'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0469/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0469/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0469/>;
+    dc:modified '2012-02-21T16:06:42'^^xsd:dateTime ;
+    skos:altLabel 'Challenger Oceanic SAP'^^xsd:string ;
+    skos:prefLabel 'Challenger Oceanic Stand-alone Pump'@en ;
+    skos:definition 'A submersible battery powered water pump that sucks water through various filters leaving the materials of interest on the filter for analysis. The SAP is deployed clamped to a hydrographic wire. Challenger Oceanic no longer exists.'@en ;
+    skos:notation 'SDN:L22::TOOL0469'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0473/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0473/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0473/>;
+    dc:modified '2012-02-21T16:06:42'^^xsd:dateTime ;
+    skos:altLabel 'SCAMP microstructure profiler'^^xsd:string ;
+    skos:prefLabel 'Precision Measurement Engineering SCAMP microstructure profiler'@en ;
+    skos:definition 'A self contained, autonomous microstructure profiler designed to measure extremely small scale (order 1 mm) fluctuations of electrical conductivity, temperature, and chlorophyll concentration in aquatic environments. It has a maximum depth rating of 100 m, a travel rate of 10 cm/s and a sampling rate of 100 Hz. The instrument is powered by internal batteries that allow it to operate continuously for at least 4 hours. The fast conductivity channel uses a PME 4-electrode conductivity microsensor while the standard conductivity channel uses a PME 4-electrode ceramic sensor. The instrument has two available fast temperature channels, each using a Thermometrics FP07 thermistor, and includes a Keller PSI PAA-10 pressure sensor. Two gradient channels are used to store d/dt computations. These data can be used to infer the levels of dissipation of turbulent kinetic energy, in-situ fluxes of heat and salt, and the microstructure behavior of these parameters. The chlorophyll fluorometer consists of a high intense blue LED and a 455 nm interface filter that illuminates a small water sample. Chlorophyll fluorescence is observed through a 685 nm interference filter by a photo diode detector. A Li-Cor LI-192SA PAR sensor can also be attached to the SCAMP. Data are stored on an internal data logger.'@en ;
+    skos:notation 'SDN:L22::TOOL0473'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0467/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0467/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0467/>;
+    dc:modified '2012-02-21T16:06:42'^^xsd:dateTime ;
+    skos:altLabel 'U-2000 spectrophotometer'^^xsd:string ;
+    skos:prefLabel 'Hitachi High-Technologies U-2000 UV-Visible spectrophotometer'@en ;
+    skos:definition 'A laboratory instrument that measures the amount of light at discrete pre-determined wavelengths that is transmitted or emitted by a sample. This is a double beam instrument that operates over the spectral range 190-1100 nm with a 2 nm bandpass and an accuracy of 0.4 nm. The instrument uses a concave diffraction grating monochromator and a silicon photodiode detector. This model is no longer in production.'@en ;
+    skos:notation 'SDN:L22::TOOL0467'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0463/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0463/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0463/>;
+    dc:modified '2012-02-21T10:03:56'^^xsd:dateTime ;
+    skos:altLabel 'Agilent 7500cx ICP-MS'^^xsd:string ;
+    skos:prefLabel 'Agilent 7500cx inductively coupled plasma mass spectrometer'@en ;
+    skos:definition 'A laboratory benchtop inductively coupled plasma mass spectrometer (ICP-MS) for metal analysis. The instrument comprises a sample introduction system (micromist glass concentric nebuliser, quartz Scott-type spray chamber, peristaltic pump), an interface of nickel cones and dual on-axis extraction lenses, a vacuum system, mass flow controllers (plasma, auxiliary, makeup, and carrier gas and two Octopole Reaction System (ORS) reaction gas lines), a shieldtorch system (SIS), an all-solid state digitally-driven 27 MHz RF generator and an off-axis Omega lens. The octopole cell of the ORS can be used with no gas or operated in collision mode using pure helium cell gas. As an optional extra for the 7500cx model, the cell can also be used in hydrogen reaction mode for ultra-trace Se analysis and semiconductor applications. The instrument has been discontinued.'@en ;
+    skos:notation 'SDN:L22::TOOL0463'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0458/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0458/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0458/>;
+    dc:modified '2012-02-16T10:05:14'^^xsd:dateTime ;
+    skos:altLabel 'LI-193 PAR'^^xsd:string ;
+    skos:prefLabel 'LI-COR LI-193 Spherical Quantum PAR sensor'@en ;
+    skos:definition 'An underwater spherical quantum sensor which measures photon flux from all directions (termed quantum scalar irradiance). The sensor can operate down to 350 m and is fitted with a blue-enhanced silicon photovoltaic detector. Two versions of the instrument are available (193SA and 193SB). These use different connector types for the underwater cable.'@en ;
+    skos:notation 'SDN:L22::TOOL0458'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0460/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0460/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0460/>;
+    dc:modified '2012-02-16T10:05:14'^^xsd:dateTime ;
+    skos:altLabel 'UPUV spectrophotometer'^^xsd:string ;
+    skos:prefLabel 'World Precision Instruments UltraPath Ultraviolet spectrophotometer'@en ;
+    skos:definition 'A high performance spectrophotometer that measures absorbance of UV light over the range 250-730 nm with a resolution of 5 nm. It is designed to detect low absorbing substances in solution. The instrument uses a deuterium/tungsten light source with a user-selectable optical path length of 2, 10, 50 or 500 cm. The UltraPath system typically includes a Tidas I spectrometer module, a fibre optic light source, fibre optic cables and a Peri-Star Pro peristaltic pump. A sample is drawn into the sample cell by the peristaltic pump and absorbance of the solution at the selected path length is measured. Individual samples are separated by air bubbles, thereby minimizing cross-contamination.'@en ;
+    skos:notation 'SDN:L22::TOOL0460'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0461/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0461/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0461/>;
+    dc:modified '2012-02-16T10:05:14'^^xsd:dateTime ;
+    skos:altLabel 'Unisense oxygen microsensor'^^xsd:string ;
+    skos:prefLabel 'Unisense oxygen microsensor'@en ;
+    skos:definition 'A miniaturized Clark-type dissolved oxygen instrument, including glass micro-sensors with minute tips (diameters ranging from 1 to 800 um). A gold sensing cathode is polarized against an internal reference and, driven by external partial pressure, oxygen from the environment penetrates through the sensor tip membrane and is reduced at the sensing cathode surface. A picoammeter converts the resulting reduction current to a signal. The sensor also includes a polarized guard cathode, which scavenges oxygen in the electrolyte, thus minimizing zero-current and pre-polarization time.'@en ;
+    skos:notation 'SDN:L22::TOOL0461'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0457/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0457/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0457/>;
+    dc:modified '2012-02-07T12:32:54'^^xsd:dateTime ;
+    skos:altLabel 'Furuno GP32 GPS'^^xsd:string ;
+    skos:prefLabel 'Furuno GP32 Global Positioning System receiver'@en ;
+    skos:definition 'A 12-channel, all-in-view Global Positioning System (GPS) receiver. The unit also contains a Wide Area Augmentation System (WAAS) receiver, which applies correction data by means of geostationary satellites, thereby improving positional accuracy. It is Differential GPS (DGPS) ready, with a positional accuracy of 10 m in GPS mode, 5 m in DGPS mode and 3 m in WAAS mode.'@en ;
+    skos:notation 'SDN:L22::TOOL0457'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0455/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0455/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0455/>;
+    dc:modified '2012-01-24T16:36:37'^^xsd:dateTime ;
+    skos:altLabel 'FSI OCM'^^xsd:string ;
+    skos:prefLabel 'Falmouth Scientific Instruments ocean conductivity module'@en ;
+    skos:definition 'An inductively coupled conductivity sensor with a low-power micro-controller to collect, scale and transmit real-time data via RS-232 or RS-485. The sensor has an accuracy of +/- 0.0003 S/m and a resolution of 0.00001 S/m over the range 0-7.0 S/m. It has a response time of 50 ms at a flow rate of 1 m/s.'@en ;
+    skos:notation 'SDN:L22::TOOL0455'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0453/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0453/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0453/>;
+    dc:modified '2012-01-24T16:36:37'^^xsd:dateTime ;
+    skos:altLabel 'MSS 90 microstructure profiler'^^xsd:string ;
+    skos:prefLabel 'Sea and Sun Technology Microstructure Profiler MSS 90'@en ;
+    skos:definition 'A profiler that measures micro-structure water stratification and small scale turbulence in the water column in marine and limnic environments. It can be used for free sinking or rising measurements. Its sinking or rising velocity can be adjusted by a combination of weights and buoyancy elements. It has a depth rating of approx. 500 m, samples at 1024Hz and is equipped with high resolution micro-structure and turbulence sensors (temperature, current shear) and standard CTD sensors (temperature, conductivity, pressure). All microstructure channels have a response time of <12ms. The unit controls vibrations and tilt internally, and additional sensors, such as oxygen and optical scattering, can be attached.'@en ;
+    skos:notation 'SDN:L22::TOOL0453'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0403/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0403/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0403/>;
+    dc:modified '2012-01-24T10:08:14'^^xsd:dateTime ;
+    skos:altLabel 'Paroscientific 410K'^^xsd:string ;
+    skos:prefLabel 'Paroscientific 410K Pressure Transducer'@en ;
+    skos:definition 'An absolute pressure transducer with a Digiquartz pressure sensor and precision thermometer. Operates over a temperature range of 0-125 degC and a pressure range of 0-10000 psia with a typical accuracy of 0.01% and a resolution of 0.0001%.'@en ;
+    skos:notation 'SDN:L22::TOOL0403'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0451/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0451/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0451/>;
+    dc:modified '2012-01-10T13:45:04'^^xsd:dateTime ;
+    skos:altLabel 'Zullig Hydropolytester profiler'^^xsd:string ;
+    skos:prefLabel 'Zullig Hydropolytester profiler'@en ;
+    skos:definition 'Profiling package for measurement of water properties. The unit includes pressure, temperature, conductivity, pH, dissolved oxygen and optical backscatter sensors. The system is no longer in production and no source of support is known.'@en ;
+    skos:notation 'SDN:L22::TOOL0451'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0447/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0447/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0447/>;
+    dc:modified '2012-01-05T09:34:05'^^xsd:dateTime ;
+    skos:altLabel 'AML SVP16'^^xsd:string ;
+    skos:prefLabel 'Applied Microsystems Sound Velocity Profiler model 16'@en ;
+    skos:definition 'An autonomous, battery-powered sound velocity profiler that uses a "sing-around" sensor to measure sound velocity in the water column. It has a range of 1300-1500 m/s, an accuracy of +/-0.25 m/s and a resolution of 0.13 m/s. A built-in microprocessor enables samples to be logged at pre-determined depth increments or for changes in sound velocity greater than 1 m/s. The standard model has a depth rating of 1000 m but other options are available up to a maximum rating of 5000 m. The instrument is no longer in production.'@en ;
+    skos:notation 'SDN:L22::TOOL0447'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0001/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0001/>;
+    dc:modified '2012-01-05T09:34:05'^^xsd:dateTime ;
+    skos:altLabel 'CTD'^^xsd:string ;
+    skos:prefLabel 'Conductivity, temperature and depth package'@en ;
+    skos:definition 'A generic term for a set of co-located conductivity, temperature and pressure (proxy for depth) sensors.  The pressure sensor is generally used to ascertain the instrument Z co-ordinate in the water body, whilst the other sensors determine water temperature and salinity. Deployed on a range of platforms such as vertically lowered metal frames, towed fish, AUVs or moorings.'@en ;
+    skos:notation 'SDN:L22::TOOL0001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0450/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0450/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0450/>;
+    dc:modified '2012-01-05T09:34:05'^^xsd:dateTime ;
+    skos:altLabel 'PML Aiken CTD'^^xsd:string ;
+    skos:prefLabel 'Plymouth Marine Laboratory Aiken CTD'@en ;
+    skos:definition 'A conductivity-temperature-depth package developed at Plymouth Marine Laboratory by J. Aiken. The unit had a depth rating of 200 m and data were logged internally on a miniature digital tape recorder. The package was originally developed for use on an Undulating Oceanographic Recorder but was also used to collect standard CTD profiles.'@en ;
+    skos:notation 'SDN:L22::TOOL0450'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0449/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0449/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0449/>;
+    dc:modified '2012-01-05T09:34:05'^^xsd:dateTime ;
+    skos:altLabel 'Uncles DRCM'^^xsd:string ;
+    skos:prefLabel 'Uncles direct reading current meter'@en ;
+    skos:definition 'A version of the Valeport Braystoke impeller flow meter adapted by R.J. Uncles from the Plymouth Marine Laboratory to measure current in estuarine environments. An analogue readout provided low accuracy and precision measurements. The instrument was used from the late 1970s to the 1990s.'@en ;
+    skos:notation 'SDN:L22::TOOL0449'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0448/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0448/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0448/>;
+    dc:modified '2012-01-05T09:34:05'^^xsd:dateTime ;
+    skos:altLabel 'Uncles STD'^^xsd:string ;
+    skos:prefLabel 'Uncles STD profiler'@en ;
+    skos:definition 'A direct-reading salinity-temperature-depth profiler including a conductivity cell and thermistor. An analogue readout provides low accuracy and precision measurements. The unit was home-built by R.J. Uncles from the Plymouth Marine Laboratory to measure water characteristics in estuarine environments. It was used from the late 1970s to the 1990s.'@en ;
+    skos:notation 'SDN:L22::TOOL0448'^^xsd:string .

@@ -1,0 +1,84 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/RD2/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/RD2/current/0/1/> .
+<http://vocab.nerc.ac.uk/collection/RD2/current/0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/RD2/current/0/>;
+    dc:modified '2020-04-04T15:05:33'^^xsd:dateTime ;
+    skos:altLabel '0'^^xsd:string ;
+    skos:prefLabel 'No QC'@en ;
+    skos:definition 'No delayed-mode quality-control (QC) was performed.'@en ;
+    skos:notation 'SDN:RD2::0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/RD2/current/5/1/> .
+<http://vocab.nerc.ac.uk/collection/RD2/current/5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/RD2/current/5/>;
+    dc:modified '2020-04-04T15:05:33'^^xsd:dateTime ;
+    skos:altLabel '5'^^xsd:string ;
+    skos:prefLabel 'Value changed'@en ;
+    skos:definition 'Value changed.'@en ;
+    skos:notation 'SDN:RD2::5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/RD2/current/8/1/> .
+<http://vocab.nerc.ac.uk/collection/RD2/current/8/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/RD2/current/8/>;
+    dc:modified '2020-04-04T15:05:33'^^xsd:dateTime ;
+    skos:altLabel '8'^^xsd:string ;
+    skos:prefLabel 'Estimated value'@en ;
+    skos:definition 'Estimated value (interpolated, extrapolated or other estimation).'@en ;
+    skos:notation 'SDN:RD2::8'^^xsd:string .

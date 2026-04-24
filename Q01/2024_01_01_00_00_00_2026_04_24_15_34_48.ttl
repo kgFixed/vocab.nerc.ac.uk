@@ -1,0 +1,208 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/Q01/2024_01_01_00_00_00_2026_04_24_15_34_48.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/Q01/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-24T15:34:48'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100001/2/> .
+<http://vocab.nerc.ac.uk/collection/Q01/current/Q0100001/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100001/>;
+    dc:modified '2024-04-26T14:19:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sampling platform name'@en ;
+    skos:definition 'Term deprecated on 26/04/2024 as the Q01 collection will no longer be used; use the equivalent P01 term instead. The name of the platform used to make the sampling, measurement or observation.'@en ;
+    skos:notation 'SDN:Q01::Q0100001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100002/2/> .
+<http://vocab.nerc.ac.uk/collection/Q01/current/Q0100002/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100002/>;
+    dc:modified '2024-04-26T14:19:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sampling instrument name'@en ;
+    skos:definition 'Term deprecated on 26/04/2024 as the Q01 collection will no longer be used; use the equivalent P01 term instead. The name of the gear or instrument used to collect the sample or make the in-situ measurement or observation.'@en ;
+    skos:notation 'SDN:Q01::Q0100002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100003/3/> .
+<http://vocab.nerc.ac.uk/collection/Q01/current/Q0100003/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100003/>;
+    dc:modified '2024-04-26T14:19:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sampling method'@en ;
+    skos:definition 'Term deprecated on 26/04/2024 as the Q01 collection will no longer be used; use the equivalent P01 term instead. The name or description of the method used to collect the sample or make the in-situ measurement or observation.'@en ;
+    skos:notation 'SDN:Q01::Q0100003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100004/2/> .
+<http://vocab.nerc.ac.uk/collection/Q01/current/Q0100004/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100004/>;
+    dc:modified '2024-04-26T14:19:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sample preservation method'@en ;
+    skos:definition 'Term deprecated on 26/04/2024 as the Q01 collection will no longer be used; use the equivalent P01 term instead. The name or description of the method used to preserve the sample after collection and prior to the analysis.'@en ;
+    skos:notation 'SDN:Q01::Q0100004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100005/2/> .
+<http://vocab.nerc.ac.uk/collection/Q01/current/Q0100005/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100005/>;
+    dc:modified '2024-04-26T14:19:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sample extraction method'@en ;
+    skos:definition 'Term deprecated on 26/04/2024 as the Q01 collection will no longer be used; use the equivalent P01 term instead. The name or description of the method used to extract the biological material from its surrounding matrix.'@en ;
+    skos:notation 'SDN:Q01::Q0100005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100006/2/> .
+<http://vocab.nerc.ac.uk/collection/Q01/current/Q0100006/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100006/>;
+    dc:modified '2024-04-26T14:19:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Subsampling protocol'@en ;
+    skos:definition 'Term deprecated on 26/04/2024 as the Q01 collection will no longer be used; use the equivalent P01 term instead. The name or description of the method used to divide the sample into subsamples.'@en ;
+    skos:notation 'SDN:Q01::Q0100006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100007/2/> .
+<http://vocab.nerc.ac.uk/collection/Q01/current/Q0100007/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100007/>;
+    dc:modified '2024-04-26T14:19:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Lower sieve mesh size'@en ;
+    skos:definition 'Term deprecated on 26/04/2024 as the Q01 collection will no longer be used; use the equivalent P01 term instead. The mesh size of the sieve used to sort biological material from a sample (typically a sediment sample). Only the material that remains in the sieve is used in the analyses.'@en ;
+    skos:notation 'SDN:Q01::Q0100007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100008/2/> .
+<http://vocab.nerc.ac.uk/collection/Q01/current/Q0100008/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100008/>;
+    dc:modified '2024-04-26T14:19:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Upper sieve mesh size'@en ;
+    skos:definition 'Term deprecated on 26/04/2024 as the Q01 collection will no longer be used; use the equivalent P01 term instead. The mesh size of the sieve used to sort biological material from a sample (typically a sediment sample). The material that remains in the sieve is discarded.'@en ;
+    skos:notation 'SDN:Q01::Q0100008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100009/2/> .
+<http://vocab.nerc.ac.uk/collection/Q01/current/Q0100009/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100009/>;
+    dc:modified '2024-04-26T14:19:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Biological sample size range'@en ;
+    skos:definition 'Term deprecated on 26/04/2024 as the Q01 collection will no longer be used; use the equivalent P01 term instead. The size class of the biological entities used for the observation. Specimens with sizes outside this range would not be included in the dataset.'@en ;
+    skos:notation 'SDN:Q01::Q0100009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100010/3/> .
+<http://vocab.nerc.ac.uk/collection/Q01/current/Q0100010/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100010/>;
+    dc:modified '2024-04-26T14:19:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Upper filter pore size'@en ;
+    skos:definition 'Term deprecated on 26/04/2024 as the Q01 collection will no longer be used; use the equivalent P01 term instead. The pore size of the filter used to exclude particulate material from a sample (typically a water sample). Only the material and liquid passing through the filter are used in the analysis.'@en ;
+    skos:notation 'SDN:Q01::Q0100010'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100011/3/> .
+<http://vocab.nerc.ac.uk/collection/Q01/current/Q0100011/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100011/>;
+    dc:modified '2024-04-26T14:19:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Lower filter pore size'@en ;
+    skos:definition 'Term deprecated on 26/04/2024 as the Q01 collection will no longer be used; use the equivalent P01 term instead. The pore size of the filter used to collect particulate material from a sample (typically a water sample). Only the material collected on the filter is used in the analysis.'@en ;
+    skos:notation 'SDN:Q01::Q0100011'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100012/2/> .
+<http://vocab.nerc.ac.uk/collection/Q01/current/Q0100012/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100012/>;
+    dc:modified '2024-04-26T14:19:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sampling device aperture diameter'@en ;
+    skos:definition 'Term deprecated on 26/04/2024 as the Q01 collection will no longer be used; use the equivalent P01 term instead. The diameter of the sampling area of a device with a circular aperture (e.g. a corer or a net); the type of device is specified elsewhere.'@en ;
+    skos:notation 'SDN:Q01::Q0100012'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100013/2/> .
+<http://vocab.nerc.ac.uk/collection/Q01/current/Q0100013/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100013/>;
+    dc:modified '2024-04-26T14:19:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sampling device aperture width'@en ;
+    skos:definition 'Term deprecated on 26/04/2024 as the Q01 collection will no longer be used; use the equivalent P01 term instead. The smaller dimension of the sampling area of a device with a rectangular aperture (e.g. a grab or a trawl); the type of device is specified elsewhere.'@en ;
+    skos:notation 'SDN:Q01::Q0100013'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100014/3/> .
+<http://vocab.nerc.ac.uk/collection/Q01/current/Q0100014/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100014/>;
+    dc:modified '2024-04-26T14:19:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sampling device aperture length'@en ;
+    skos:definition 'Term deprecated on 26/04/2024 as the Q01 collection will no longer be used; use the equivalent P01 term instead. The larger dimension of the sampling area of a device with a rectangular aperture (e.g. a grab); the type of device is specified elsewhere.'@en ;
+    skos:notation 'SDN:Q01::Q0100014'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100015/2/> .
+<http://vocab.nerc.ac.uk/collection/Q01/current/Q0100015/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100015/>;
+    dc:modified '2024-04-26T14:19:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sampling net mesh size'@en ;
+    skos:definition 'Term deprecated on 26/04/2024 as the Q01 collection will no longer be used; use the equivalent P01 term instead. The mesh size of the sampling net used to obtain the sample. The type of net is specified elsewhere.'@en ;
+    skos:notation 'SDN:Q01::Q0100015'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100017/2/> .
+<http://vocab.nerc.ac.uk/collection/Q01/current/Q0100017/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/Q01/current/Q0100017/>;
+    dc:modified '2024-04-26T14:19:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sampling device aperture surface area'@en ;
+    skos:definition 'Term deprecated on 26/04/2024 as the Q01 collection will no longer be used; use the equivalent P01 term instead. The 2-dimensional size of the opening of a sampling device (e.g. a grab or a trawl); the type of device is specified elsewhere'@en ;
+    skos:notation 'SDN:Q01::Q0100017'^^xsd:string .

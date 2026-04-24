@@ -1,0 +1,559 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C62/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C62/2007_01_01_00_00_00_2011_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2012-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/BR-RS/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/BR-RS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/BR-RS/>;
+    dc:modified '2012-11-30T07:52:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Rio Grande do Sul'@en ;
+    skos:definition 'State of Brazil.'@en ;
+    skos:notation 'SDN:C62::BR-RS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/FI-19/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/FI-19/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/FI-19/>;
+    dc:modified '2012-11-30T07:52:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Finland Proper'@en ;
+    skos:definition 'Region of Finland. Native name is Varsinais-Suomi.'@en ;
+    skos:notation 'SDN:C62::FI-19'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/GR-I/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/GR-I/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/GR-I/>;
+    dc:modified '2012-11-30T07:52:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Attica'@en ;
+    skos:definition 'Region of Greece. Native name is Attiki.'@en ;
+    skos:notation 'SDN:C62::GR-I'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/JP-02/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/JP-02/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/JP-02/>;
+    dc:modified '2012-10-04T08:55:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Aomori Prefecture'@en ;
+    skos:definition 'Administrative region of Japan.'@en ;
+    skos:notation 'SDN:C62::JP-02'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/JP-26/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/JP-26/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/JP-26/>;
+    dc:modified '2012-10-04T08:55:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Kyoto Prefecture'@en ;
+    skos:definition 'Administrative region of Japan.'@en ;
+    skos:notation 'SDN:C62::JP-26'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/JP-27/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/JP-27/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/JP-27/>;
+    dc:modified '2012-10-04T08:55:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Osaka Prefecture'@en ;
+    skos:definition 'Administrative region of Japan.'@en ;
+    skos:notation 'SDN:C62::JP-27'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/JP-39/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/JP-39/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/JP-39/>;
+    dc:modified '2012-10-04T08:55:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Kochi Prefecture'@en ;
+    skos:definition 'Administrative region of Japan.'@en ;
+    skos:notation 'SDN:C62::JP-39'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/JP-12/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/JP-12/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/JP-12/>;
+    dc:modified '2012-10-03T08:35:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Chiba Prefecture'@en ;
+    skos:definition 'Administrative region of Japan.'@en ;
+    skos:notation 'SDN:C62::JP-12'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/RU-SPE/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/RU-SPE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/RU-SPE/>;
+    dc:modified '2012-10-03T08:35:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'St Petersburg'@en ;
+    skos:definition 'Autonomous city in the Russian Federation.   Transliteration from Cyrillic is Sankt-Peterburg.'@en ;
+    skos:notation 'SDN:C62::RU-SPE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/RU-MUR/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/RU-MUR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/RU-MUR/>;
+    dc:modified '2012-09-29T07:57:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Murmansk Oblast'@en ;
+    skos:definition 'Administrative region of the Russian Federation. Russian name is \'Murmanskaya Oblast\'.'@en ;
+    skos:notation 'SDN:C62::RU-MUR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/USTA007/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/USTA007/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/USTA007/>;
+    dc:modified '2012-07-04T10:23:12'^^xsd:dateTime ;
+    skos:altLabel 'CT'^^xsd:string ;
+    skos:prefLabel 'Connecticut'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::USTA007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/MXCTY015/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/MXCTY015/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/MXCTY015/>;
+    dc:modified '2012-06-27T08:00:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mexico State'@en ;
+    skos:definition 'State of Mexico'@en ;
+    skos:notation 'SDN:C62::MXCTY015'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/MXCTY016/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/MXCTY016/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/MXCTY016/>;
+    dc:modified '2012-06-27T08:00:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Michoacán'@en ;
+    skos:definition 'State of Mexico (sometimes \'Michoacan de Ocampo\')'@en ;
+    skos:notation 'SDN:C62::MXCTY016'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/MXCTY022/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/MXCTY022/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/MXCTY022/>;
+    dc:modified '2012-06-27T08:00:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Querétaro'@en ;
+    skos:definition 'State of Mexico (sometimes \'Querétaro de Atreaga\')'@en ;
+    skos:notation 'SDN:C62::MXCTY022'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/MXCTY031/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/MXCTY031/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/MXCTY031/>;
+    dc:modified '2012-06-27T08:00:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Veracruz'@en ;
+    skos:definition 'State of Mexico (sometimes \'Veracruz de Ignacio de la Llave\')'@en ;
+    skos:notation 'SDN:C62::MXCTY031'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/PT-NO/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/PT-NO/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/PT-NO/>;
+    dc:modified '2012-06-27T07:56:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Porto'@en ;
+    skos:definition 'District of Portugal'@en ;
+    skos:notation 'SDN:C62::PT-NO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/BELGPR01/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/BELGPR01/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/BELGPR01/>;
+    dc:modified '2012-06-20T08:49:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Brussels-Capital Region'@en ;
+    skos:definition 'Known locally as Région de Bruxelles-Capitale and Brussels Hoofdstedelijk Gewest'@en ;
+    skos:notation 'SDN:C62::BELGPR01'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/BELGPR02/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/BELGPR02/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/BELGPR02/>;
+    dc:modified '2012-06-20T08:49:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Antwerp'@en ;
+    skos:definition 'Province of Belgium. Known locally as Antwerpen.'@en ;
+    skos:notation 'SDN:C62::BELGPR02'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/BELGPR04/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/BELGPR04/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/BELGPR04/>;
+    dc:modified '2012-06-20T08:49:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Flemish Brabant'@en ;
+    skos:definition 'Province of Belgium. Known locally as Vlaams Brabant.'@en ;
+    skos:notation 'SDN:C62::BELGPR04'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/BELGPR05/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/BELGPR05/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/BELGPR05/>;
+    dc:modified '2012-06-20T08:49:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'East Flanders'@en ;
+    skos:definition 'Province of Belgium. Known locally as Oost-Vlaanderen.'@en ;
+    skos:notation 'SDN:C62::BELGPR05'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/BELGPR06/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/BELGPR06/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/BELGPR06/>;
+    dc:modified '2012-06-20T08:49:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'West Flanders'@en ;
+    skos:definition 'Province of Belgium. Known locally as West-Vlaanderen.'@en ;
+    skos:notation 'SDN:C62::BELGPR06'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/BELGPR08/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/BELGPR08/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/BELGPR08/>;
+    dc:modified '2012-06-20T08:49:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Walloon Brabant'@en ;
+    skos:definition 'Province of Belgium. Known locally as Brabant Wallon.'@en ;
+    skos:notation 'SDN:C62::BELGPR08'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/DANREG01/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/DANREG01/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/DANREG01/>;
+    dc:modified '2012-06-20T08:49:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Capital Region of Denmark'@en ;
+    skos:definition 'Region of Denmark. Local name is Hovedstaden.'@en ;
+    skos:notation 'SDN:C62::DANREG01'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/DANREG02/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/DANREG02/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/DANREG02/>;
+    dc:modified '2012-06-20T08:49:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Central Jutland'@en ;
+    skos:definition 'Region of Denamrk. Local name is Midtjylland.'@en ;
+    skos:notation 'SDN:C62::DANREG02'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/DANREG03/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/DANREG03/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/DANREG03/>;
+    dc:modified '2012-06-20T08:49:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'North Jutland'@en ;
+    skos:definition 'Region of Denmark. Local name is Nordjylland.'@en ;
+    skos:notation 'SDN:C62::DANREG03'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/DANREG04/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/DANREG04/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/DANREG04/>;
+    dc:modified '2012-06-20T08:49:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Zealand'@en ;
+    skos:definition 'Region of Denmark. Local name is Sjaelland.'@en ;
+    skos:notation 'SDN:C62::DANREG04'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/DANREG05/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/DANREG05/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/DANREG05/>;
+    dc:modified '2012-06-20T08:49:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'South Denmark'@en ;
+    skos:definition 'Region of Denmark. Local name is Syddanmark.'@en ;
+    skos:notation 'SDN:C62::DANREG05'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/GER00005/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/GER00005/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/GER00005/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mecklenburg-Western Pomerania'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::GER00005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EICO0001/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EICO0001/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EICO0001/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel 'CAR'^^xsd:string ;
+    skos:prefLabel 'County Carlow'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::EICO0001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EICO0002/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EICO0002/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EICO0002/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel 'CAV'^^xsd:string ;
+    skos:prefLabel 'County Cavan'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::EICO0002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EICO0004/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EICO0004/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EICO0004/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel 'COR'^^xsd:string ;
+    skos:prefLabel 'County Cork'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::EICO0004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EICO0005/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EICO0005/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EICO0005/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel 'DON'^^xsd:string ;
+    skos:prefLabel 'County Donegal'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::EICO0005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EICO0006/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EICO0006/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EICO0006/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel 'DUB'^^xsd:string ;
+    skos:prefLabel 'County Dublin'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::EICO0006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EICO0007/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EICO0007/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EICO0007/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel 'GAL'^^xsd:string ;
+    skos:prefLabel 'County Galway'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::EICO0007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EICO0008/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EICO0008/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EICO0008/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel 'KER'^^xsd:string ;
+    skos:prefLabel 'County Kerry'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::EICO0008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EICO0010/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EICO0010/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EICO0010/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel 'KIK'^^xsd:string ;
+    skos:prefLabel 'County Kilkenny'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::EICO0010'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EICO0009/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EICO0009/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EICO0009/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel 'KIL'^^xsd:string ;
+    skos:prefLabel 'County Kildare'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::EICO0009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EICO0011/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EICO0011/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EICO0011/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel 'LET'^^xsd:string ;
+    skos:prefLabel 'County Leitrim'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::EICO0011'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EICO0013/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EICO0013/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EICO0013/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel 'LIM'^^xsd:string ;
+    skos:prefLabel 'County Limerick'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::EICO0013'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EICO0014/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EICO0014/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EICO0014/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel 'LOG'^^xsd:string ;
+    skos:prefLabel 'County Longford'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::EICO0014'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EICO0015/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EICO0015/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EICO0015/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel 'LOU'^^xsd:string ;
+    skos:prefLabel 'County Louth'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::EICO0015'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EICO0016/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EICO0016/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EICO0016/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel 'MAY'^^xsd:string ;
+    skos:prefLabel 'County Mayo'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::EICO0016'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EICO0017/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EICO0017/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EICO0017/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel 'MEA'^^xsd:string ;
+    skos:prefLabel 'County Meath'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::EICO0017'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EICO0018/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EICO0018/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EICO0018/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel 'MOG'^^xsd:string ;
+    skos:prefLabel 'County Monaghan'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::EICO0018'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EICO0019/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EICO0019/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EICO0019/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel 'OFF'^^xsd:string ;
+    skos:prefLabel 'County Offaly'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::EICO0019'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EICO0020/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EICO0020/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EICO0020/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel 'ROD'^^xsd:string ;
+    skos:prefLabel 'County Roscommon'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::EICO0020'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EICO0021/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EICO0021/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EICO0021/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel 'SLI'^^xsd:string ;
+    skos:prefLabel 'County Sligo'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::EICO0021'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EICO0022/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EICO0022/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EICO0022/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel 'TIP'^^xsd:string ;
+    skos:prefLabel 'County Tipperary'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::EICO0022'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EICO0023/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EICO0023/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EICO0023/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel 'WAT'^^xsd:string ;
+    skos:prefLabel 'County Waterford'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::EICO0023'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EICO0024/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EICO0024/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EICO0024/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel 'WEM'^^xsd:string ;
+    skos:prefLabel 'County Westmeath'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::EICO0024'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EICO0025/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EICO0025/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EICO0025/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel 'WEX'^^xsd:string ;
+    skos:prefLabel 'County Wexford'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::EICO0025'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/EICO0026/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/EICO0026/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/EICO0026/>;
+    dc:modified '2012-06-19T07:52:01'^^xsd:dateTime ;
+    skos:altLabel 'WIC'^^xsd:string ;
+    skos:prefLabel 'County Wicklow'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C62::EICO0026'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/IT-45/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/IT-45/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/IT-45/>;
+    dc:modified '2012-05-31T16:52:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Emilia-Romagna'@en ;
+    skos:definition 'Region of Italy.'@en ;
+    skos:notation 'SDN:C62::IT-45'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/BM-STG/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/BM-STG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/BM-STG/>;
+    dc:modified '2012-03-17T13:26:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'St George\'s'@en ;
+    skos:definition 'Administrative division of Bermuda'@en ;
+    skos:notation 'SDN:C62::BM-STG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/ZA-GP/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/ZA-GP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/ZA-GP/>;
+    dc:modified '2012-02-18T17:48:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Gauteng'@en ;
+    skos:definition 'Province of South Africa'@en ;
+    skos:notation 'SDN:C62::ZA-GP'^^xsd:string .

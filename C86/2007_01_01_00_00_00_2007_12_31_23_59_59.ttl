@@ -1,0 +1,136 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C86/2007_01_01_00_00_00_2007_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C86/2006_01_01_00_00_00_2006_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2007-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C86/current/SDNR05/4/> .
+<http://vocab.nerc.ac.uk/collection/C86/current/SDNR05/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C86/current/SDNR05/>;
+    dc:modified '2007-04-17T11:11:48'^^xsd:dateTime ;
+    skos:altLabel 'national_gov'^^xsd:string ;
+    skos:prefLabel 'national and local government'@en ;
+    skos:definition 'A user who accesses data on the SeaDataNet network for administrative or legislative purposes within the boundaries of a nation.'@en ;
+    skos:notation 'SDN:C86::SDNR05'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C86/current/SDNR06/3/> .
+<http://vocab.nerc.ac.uk/collection/C86/current/SDNR06/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C86/current/SDNR06/>;
+    dc:modified '2007-04-17T11:10:14'^^xsd:dateTime ;
+    skos:altLabel 'pan-national_gov'^^xsd:string ;
+    skos:prefLabel 'pan-national government'@en ;
+    skos:definition 'A user who accesses data on the SeaDataNet network for international administrative or legislative purposes. Generally, but not exclusively, the European Union in the SeaDataNet context'@en ;
+    skos:notation 'SDN:C86::SDNR06'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C86/current/SDNR04/2/> .
+<http://vocab.nerc.ac.uk/collection/C86/current/SDNR04/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C86/current/SDNR04/>;
+    dc:modified '2007-04-17T11:07:01'^^xsd:dateTime ;
+    skos:altLabel 'commercial'^^xsd:string ;
+    skos:prefLabel 'Commercial'@en ;
+    skos:definition 'A user who accesses data on the SeaDataNet network with the objective of making a financial profit from its use.'@en ;
+    skos:notation 'SDN:C86::SDNR04'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C86/current/SDNR03/2/> .
+<http://vocab.nerc.ac.uk/collection/C86/current/SDNR03/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C86/current/SDNR03/>;
+    dc:modified '2007-04-17T11:06:46'^^xsd:dateTime ;
+    skos:altLabel 'academic'^^xsd:string ;
+    skos:prefLabel 'Academic'@en ;
+    skos:definition 'A user who accesses data on the SeaDataNet network for purposes of education or bona fide non-profit academic research.'@en ;
+    skos:notation 'SDN:C86::SDNR03'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C86/current/SDNR08/1/> .
+<http://vocab.nerc.ac.uk/collection/C86/current/SDNR08/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C86/current/SDNR08/>;
+    dc:modified '2007-02-16T16:29:09'^^xsd:dateTime ;
+    skos:altLabel 'CSR_contributor'^^xsd:string ;
+    skos:prefLabel 'Cruise Summary Report contributor'@en ;
+    skos:definition 'An individual outside SeaDataNet granted rights to create and (with owenership rights) maintain records in the SeaDataNet Cruise Summary Report repository.'@en ;
+    skos:notation 'SDN:C86::SDNR08'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C86/current/SDNR01/1/> .
+<http://vocab.nerc.ac.uk/collection/C86/current/SDNR01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C86/current/SDNR01/>;
+    dc:modified '2007-02-16T16:29:09'^^xsd:dateTime ;
+    skos:altLabel 'administrator'^^xsd:string ;
+    skos:prefLabel 'Administrator'@en ;
+    skos:definition 'A user who is able to bypass any access control created by SeaDataNet but with no  bypass rights for local access controls.'@en ;
+    skos:notation 'SDN:C86::SDNR01'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C86/current/SDNR07/1/> .
+<http://vocab.nerc.ac.uk/collection/C86/current/SDNR07/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C86/current/SDNR07/>;
+    dc:modified '2007-02-16T16:29:09'^^xsd:dateTime ;
+    skos:altLabel 'partner'^^xsd:string ;
+    skos:prefLabel 'partner'@en ;
+    skos:definition 'A person employed by an organisation participating in SeaDataNet.  This gives the right to access, create and (with ownership rights) maintain  project documents and metadatabase entries.'@en ;
+    skos:notation 'SDN:C86::SDNR07'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C86/current/SDNR02/1/> .
+<http://vocab.nerc.ac.uk/collection/C86/current/SDNR02/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C86/current/SDNR02/>;
+    dc:modified '2007-02-16T16:29:09'^^xsd:dateTime ;
+    skos:altLabel 'public'^^xsd:string ;
+    skos:prefLabel 'public'@en ;
+    skos:definition 'Any authenticated individual with sufficient credentials to satisfy SeaDataNet access logging requirements.'@en ;
+    skos:notation 'SDN:C86::SDNR02'^^xsd:string .

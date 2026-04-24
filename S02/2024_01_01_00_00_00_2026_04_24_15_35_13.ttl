@@ -1,0 +1,118 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S02/2024_01_01_00_00_00_2026_04_24_15_35_13.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S02/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-24T15:35:13'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S02/current/S02044/1/> .
+<http://vocab.nerc.ac.uk/collection/S02/current/S02044/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S02/current/S02044/>;
+    dc:modified '2026-04-01T13:26:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'in time interval specified elsewhere by'@en ;
+    skos:definition 'The phenomenon is reported to have been measured within a specific time frame which is described elsewhere in the metadata.'@en ;
+    skos:notation 'SDN:S02::S02044'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S02/current/S02043/1/> .
+<http://vocab.nerc.ac.uk/collection/S02/current/S02043/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S02/current/S02043/>;
+    dc:modified '2026-03-25T07:59:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'per unit time per unit wet weight of'@en ;
+    skos:definition 'The measured phenomenon is reported relative to a unit of time and a unit of mass of a fresh sample of a specified matrix.'@en ;
+    skos:notation 'SDN:S02::S02043'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S02/current/S02042/1/> .
+<http://vocab.nerc.ac.uk/collection/S02/current/S02042/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S02/current/S02042/>;
+    dc:modified '2026-03-12T16:54:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'in analysed sample from the'@en ;
+    skos:definition 'The measured phenomenon is reported relative to the size of the analysed sample from the given matrix without additional normalisation or subsetting.'@en ;
+    skos:notation 'SDN:S02::S02042'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S02/current/S02041/1/> .
+<http://vocab.nerc.ac.uk/collection/S02/current/S02041/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S02/current/S02041/>;
+    dc:modified '2025-11-23T16:55:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'per unit time per unit mass of the'@en ;
+    skos:definition 'The measured phenomenon is reported relative to a unit of time and a unit of mass of a matrix (e.g. a water body).'@en ;
+    skos:notation 'SDN:S02::S02041'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S02/current/S02040/1/> .
+<http://vocab.nerc.ac.uk/collection/S02/current/S02040/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S02/current/S02040/>;
+    dc:modified '2025-07-10T12:18:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'per hour per unit mass of chlorophyll-a per unit photosynthetic photon flux density in the'@en ;
+    skos:definition 'The measured phenomenon is reported per hour and reported relative to both the chlorophyll-a biomass and the measured photosynthetic photon flux density (PPFD, a measure of light intensity).'@en ;
+    skos:notation 'SDN:S02::S02040'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S02/current/S02039/1/> .
+<http://vocab.nerc.ac.uk/collection/S02/current/S02039/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S02/current/S02039/>;
+    dc:modified '2025-07-10T12:03:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'per hour per unit mass of chlorophyll-a in the'@en ;
+    skos:definition 'The measured phenomenon is reported per hour and reported relative to the chlorophyll-a biomass, also known as "chlorophyll-normalised" or "chlorophyll-specific".'@en ;
+    skos:notation 'SDN:S02::S02039'^^xsd:string .

@@ -1,0 +1,118 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P29/2024_01_01_00_00_00_2026_04_24_15_34_43.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P29/2021_01_01_00_00_00_2023_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-24T15:34:43'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/CFATLAIS/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/CFATLAIS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/CFATLAIS/>;
+    dc:modified '2025-03-19T08:31:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'lake_and_inland_sea'@en ;
+    skos:definition 'The area type lake_and_inland_sea means a quasi-permanent body of water surrounded by land, which may include certain ponds and reservoirs, but excludes rivers and streams which by gravity convey water into and out of lakes or inland seas or into the ocean.'@en ;
+    skos:notation 'SDN:P29::CFATLAIS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/CFATRIV1/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/CFATRIV1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/CFATRIV1/>;
+    dc:modified '2025-03-19T08:31:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'river'@en ;
+    skos:definition 'The area type river means flowing water in a channel that is mainly driven by gravity. It includes streams, creeks and canals but not lakes or seas. It also includes water in a floodplain.'@en ;
+    skos:notation 'SDN:P29::CFATRIV1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/CFATBLDT/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/CFATBLDT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/CFATBLDT/>;
+    dc:modified '2025-01-20T16:07:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'broadleaf_deciduous_trees'@en ;
+    skos:definition 'Broadleaf trees are characterized by leaves that are broad, flat and thin with networked veins (reference: https://treeterms.co.uk/broadleaf/). Deciduous trees lose their leaves seasonally, for example, during winter in high latitudes or following seasonal variations in rainfall.'@en ;
+    skos:notation 'SDN:P29::CFATBLDT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/CFATBLEV/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/CFATBLEV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/CFATBLEV/>;
+    dc:modified '2025-01-20T16:07:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'broadleaf_evergreen_trees'@en ;
+    skos:definition 'Broadleaf trees are characterized by leaves that are broad, flat and thin with networked veins (reference: https://treeterms.co.uk/broadleaf/). Evergreen plants retain their leaves through the year and into the following growing season (reference: https://www.britannica.com/plant/evergreen-plant).'@en ;
+    skos:notation 'SDN:P29::CFATBLEV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/CFATNLDT/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/CFATNLDT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/CFATNLDT/>;
+    dc:modified '2025-01-20T16:07:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'needleleaf_deciduous_trees'@en ;
+    skos:definition 'Needleleaf trees, often referred to as conifers, have long, thin needle-shaped leaves that are well adapted to retaining water. Deciduous trees lose their leaves seasonally, for example, during winter in high latitudes or following seasonal variations in rainfall.'@en ;
+    skos:notation 'SDN:P29::CFATNLDT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P29/current/CFATNLEV/1/> .
+<http://vocab.nerc.ac.uk/collection/P29/current/CFATNLEV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P29/current/CFATNLEV/>;
+    dc:modified '2025-01-20T16:07:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'needleleaf_evergreen_trees'@en ;
+    skos:definition 'Needleleaf trees, often referred to as conifers, have long, thin needle-shaped leaves that are well adapted to retaining water. Evergreen plants retain their leaves through the year and into the following growing season (reference: https://www.britannica.com/plant/evergreen-plant).'@en ;
+    skos:notation 'SDN:P29::CFATNLEV'^^xsd:string .

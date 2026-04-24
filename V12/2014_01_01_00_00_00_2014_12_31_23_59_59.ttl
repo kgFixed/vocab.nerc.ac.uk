@@ -1,0 +1,163 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/V12/2014_01_01_00_00_00_2014_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/V12/2013_01_01_00_00_00_2013_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2014-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/P36/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/P36/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/P36/>;
+    dc:modified '2014-07-02T09:32:26'^^xsd:dateTime ;
+    skos:altLabel 'EMODNET Chemistry themes'^^xsd:string ;
+    skos:prefLabel 'EMODNET Chemistry Lot chemical themes'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/P36/current/accepted'@en ;
+    skos:notation 'SDN:V12::P36'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/L33/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/L33/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/L33/>;
+    dc:modified '2014-06-24T09:21:09'^^xsd:dateTime ;
+    skos:altLabel 'WMO XBT data types'^^xsd:string ;
+    skos:prefLabel 'WMO C3 vocabulary of XBT data types'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L33/current/accepted'@en ;
+    skos:notation 'SDN:V12::L33'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/S26/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/S26/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/S26/>;
+    dc:modified '2014-06-05T12:24:42'^^xsd:dateTime ;
+    skos:altLabel 'BODC matrices'^^xsd:string ;
+    skos:prefLabel 'BODC parameter semantic model matrices'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/S26/current/accepted'@en ;
+    skos:notation 'SDN:V12::S26'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/M04/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/M04/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/M04/>;
+    dc:modified '2014-04-15T08:52:37'^^xsd:dateTime ;
+    skos:altLabel 'TCE Renewable Development Phases'^^xsd:string ;
+    skos:prefLabel 'The Crown Estate Renewable Energy Development Phases'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/M04/current/accepted'@en ;
+    skos:notation 'SDN:V12::M04'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/M03/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/M03/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/M03/>;
+    dc:modified '2014-04-15T08:51:25'^^xsd:dateTime ;
+    skos:altLabel 'TCE Renewable Development Areas'^^xsd:string ;
+    skos:prefLabel 'The Crown Estate Renewable Energy Development Areas'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/M03/current/accepted'@en ;
+    skos:notation 'SDN:V12::M03'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/M11/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/M11/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/M11/>;
+    dc:modified '2014-04-01T12:01:46'^^xsd:dateTime ;
+    skos:altLabel 'MEDIN ES types'^^xsd:string ;
+    skos:prefLabel 'MEDIN ecosystem service types'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/M11/current/accepted'@en ;
+    skos:notation 'SDN:V12::M11'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/M09/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/M09/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/M09/>;
+    dc:modified '2014-04-01T12:01:46'^^xsd:dateTime ;
+    skos:altLabel 'MEDIN EV method types'^^xsd:string ;
+    skos:prefLabel 'MEDIN ecosystem valuation method types'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/M09/current/accepted'@en ;
+    skos:notation 'SDN:V12::M09'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/M10/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/M10/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/M10/>;
+    dc:modified '2014-04-01T12:01:46'^^xsd:dateTime ;
+    skos:altLabel 'MEDIN EV methods'^^xsd:string ;
+    skos:prefLabel 'MEDIN ecosystem valuation methods'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/M10/current/accepted'@en ;
+    skos:notation 'SDN:V12::M10'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/M05/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/M05/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/M05/>;
+    dc:modified '2014-04-01T12:01:46'^^xsd:dateTime ;
+    skos:altLabel 'MEDIN governance objective types'^^xsd:string ;
+    skos:prefLabel 'MEDIN socio-economic governance objective categories'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/M05/current/accepted'@en ;
+    skos:notation 'SDN:V12::M05'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/M06/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/M06/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/M06/>;
+    dc:modified '2014-04-01T12:01:46'^^xsd:dateTime ;
+    skos:altLabel 'MEDIN monitoring types'^^xsd:string ;
+    skos:prefLabel 'MEDIN monitoring activity categories'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/M06/current/accepted'@en ;
+    skos:notation 'SDN:V12::M06'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V12/current/P64/1/> .
+<http://vocab.nerc.ac.uk/collection/V12/current/P64/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V12/current/P64/>;
+    dc:modified '2014-01-09T12:06:02'^^xsd:dateTime ;
+    skos:altLabel 'GCMD Science Keywords V6'^^xsd:string ;
+    skos:prefLabel 'Global Change Master Directory Science Keywords V6'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/P64/current/accepted'@en ;
+    skos:notation 'SDN:V12::P64'^^xsd:string .

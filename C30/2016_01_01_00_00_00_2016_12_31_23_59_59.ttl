@@ -1,0 +1,100 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C30/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C30/2015_01_01_00_00_00_2015_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2016-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/OBIS/3/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/OBIS/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/OBIS/>;
+    dc:modified '2016-09-14T21:40:48'^^xsd:dateTime ;
+    skos:altLabel 'OBIS'^^xsd:string ;
+    skos:prefLabel 'Ocean Biogeographic Information System'@en ;
+    skos:definition 'Governance for vocabularies created and maintained by the Ocean Biogeographic Information System.'@en ;
+    skos:notation 'SDN:C30::OBIS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/SWE/2/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/SWE/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/SWE/>;
+    dc:modified '2016-07-20T15:08:30'^^xsd:dateTime ;
+    skos:altLabel 'SWE'^^xsd:string ;
+    skos:prefLabel 'Sensor Web Enablement Marine Profiles'@en ;
+    skos:definition 'Governance for vocabularies created for use in SWE Marine Profiles.'@en ;
+    skos:notation 'SDN:C30::SWE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/IOC/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/IOC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/IOC/>;
+    dc:modified '2016-02-23T09:27:25'^^xsd:dateTime ;
+    skos:altLabel 'IOC'^^xsd:string ;
+    skos:prefLabel 'International Oceanographic Commission'@en ;
+    skos:definition 'Governance for vocabularies used by the International Oceanographic Commission of UNESCO for the international exchange of oceanographic and ocean biodiversity data and information.'@en ;
+    skos:notation 'SDN:C30::IOC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/NASA/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/NASA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/NASA/>;
+    dc:modified '2016-01-06T13:56:35'^^xsd:dateTime ;
+    skos:altLabel 'NASA'^^xsd:string ;
+    skos:prefLabel 'National Aeronautics and Space Administration'@en ;
+    skos:definition 'The United States government agency responsible for science and technology related to air and space. See www.nasa.gov for further details.'@en ;
+    skos:notation 'SDN:C30::NASA'^^xsd:string .

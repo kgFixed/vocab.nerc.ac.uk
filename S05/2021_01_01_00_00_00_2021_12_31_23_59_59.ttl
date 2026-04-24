@@ -1,0 +1,226 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S05/2021_01_01_00_00_00_2021_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S05/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2021-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050241/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050241/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050241/>;
+    dc:modified '2021-12-02T13:11:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'manufacturer\'s calibration and laboratory calibration against TRIS-buffer applied'@en ;
+    skos:definition 'The sensor has been calibrated using the manufacturer\'s calibration, and has been further calibrated against a TRIS-buffer with salinity 35. This involves immersing the sensor electrodes in a certified reference material (CRM) and comparing the sensor output values with the theoretical values for the TRIS buffer at different temperatures. The offset is then applied to the sensor values.'@en ;
+    skos:notation 'SDN:S05::S050241'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050240/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050240/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050240/>;
+    dc:modified '2021-12-02T13:09:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'manufacturer\'s calibration and correction against independent temperature and salinity measurements'@en ;
+    skos:definition 'The sensor has been calibrated using the manufacturer\'s calibration, and has been further corrected against other measurements of the observed property (e.g. from another sensor). The latter may be applied using dedicated software (e.g. Sea-Bird software).'@en ;
+    skos:notation 'SDN:S05::S050240'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050239/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050239/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050239/>;
+    dc:modified '2021-11-29T14:41:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'normalisation at zero pressure and 25 degrees Celsius'@en ;
+    skos:definition 'The data presented are normalised to account for the effect of temperature and pressure on the neutral value of pH.'@en ;
+    skos:notation 'SDN:S05::S050239'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050238/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050238/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050238/>;
+    dc:modified '2021-07-06T13:50:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'classification to a term from the Everyone\'s Gliding Observatories (EGO) format reference list (https://doi.org/10.13155/34980)'@en ;
+    skos:definition 'The classification used is published as a reference table within the Everyone\'s Gliding Observatories (EGO) gliders NetCDF format reference manual, with the latest version published at https://doi.org/10.13155/34980.'@en ;
+    skos:notation 'SDN:S05::S050238'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050236/2/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050236/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050236/>;
+    dc:modified '2021-06-23T10:38:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'classification to a term from the OSPAR Commission\'s List of Threatened and/or Declining Species and Habitats (SDN:M22::)'@en ;
+    skos:definition 'The habitat has been described using a term defined in the OSPAR Commission\'s List of Threatened and/or Declining Species and Habitats (SDN:M22::).'@en ;
+    skos:notation 'SDN:S05::S050236'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050237/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050237/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050237/>;
+    dc:modified '2021-06-23T10:25:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'classification to a term from the HELCOM \'HUB\' Underwater Biotope and Habitat Classification System (SDN:M23::)'@en ;
+    skos:definition 'The habitat has been described using a term defined in the HELCOM \'HUB\' Underwater Biotope and Habitat Classification System (SDN:M23::).'@en ;
+    skos:notation 'SDN:S05::S050237'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050235/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050235/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050235/>;
+    dc:modified '2021-05-21T12:11:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation from true wind speed using the COARE3.5 model (Edson et al. 2013)'@en ;
+    skos:definition 'True wind speed is computed to neutral conditionas using the COARE3.5 model algorithm (Edson et al. 2013, https://doi.org/10.1175/JPO-D-12-0173.1).'@en ;
+    skos:notation 'SDN:S05::S050235'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050233/2/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050233/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050233/>;
+    dc:modified '2021-04-27T14:02:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation of carbon biomass using the equation of Andrássy (1956)'@en ;
+    skos:definition 'Carbon biomass derived from image analysis using the Andrássy (1956) formula for nematodes: W = (L*D2)/(1.6*106) where W is the mass (as fresh weight in ug) per individual, L is the nematode length (um) and D is the greatest body diameter (um).'@en ;
+    skos:notation 'SDN:S05::S050233'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050234/2/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050234/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050234/>;
+    dc:modified '2021-04-27T14:01:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation of carbon biomass from displacement volumes'@en ;
+    skos:definition 'Carbon biomass estimated from displacement volumes using unknown algorithms or algorithms specified elsewhere in the metadata.'@en ;
+    skos:notation 'SDN:S05::S050234'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050232/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050232/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050232/>;
+    dc:modified '2021-04-27T13:02:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation of carbon biomass from abundance using the equations of Menden-Deuer and Lessard (2000)'@en ;
+    skos:definition 'Carbon biomass derived from abundance using methodology described in Menden-Deuer and Lessard (2000). Carbon to volume relationships for dinoﬂagellates, diatoms, and other protist plankton (https://doi.org/10.4319/lo.2000.45.3.0569).'@en ;
+    skos:notation 'SDN:S05::S050232'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050231/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050231/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050231/>;
+    dc:modified '2021-04-27T12:51:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation of carbon biomass using the equation of Alcaraz et al. (2003)'@en ;
+    skos:definition 'Carbon biomass derived from image analysis using methodology described in Alcaraz, M., Saiz, E., Calbet, A. et al. Estimating zooplankton biomass through image analysis. Marine Biology 143, 307–315 (2003). https://doi.org/10.1007/s00227-003-1094-8.'@en ;
+    skos:notation 'SDN:S05::S050231'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050059/2/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050059/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050059/>;
+    dc:modified '2021-04-27T11:47:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation of carbon produced from amino acid uptake, abundance and cell volume data'@en ;
+    skos:definition 'Carbon production rate has been computed from the number of individuals and a proxy for biomass production rate.'@en ;
+    skos:notation 'SDN:S05::S050059'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050069/2/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050069/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050069/>;
+    dc:modified '2021-04-27T11:46:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation of carbon biomass from measured weight and profile integration'@en ;
+    skos:definition 'Biomass was measured per unit volume, converted from mass to carbon and the value per unit area was determined by depth integration.'@en ;
+    skos:notation 'SDN:S05::S050069'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050062/4/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050062/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050062/>;
+    dc:modified '2021-04-27T11:44:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation of carbon biomass from abundance using the equation of Putt and Stoecker (1989)'@en ;
+    skos:definition 'Carbon biomass has been computed from the number of individuals using the protocol documented in Putt M, Stoeker DK (1989) An experimentally determined carbon:volume ratio for marine \'oligotrichous\' ciliates from estuarine and coastal waters. Limnol Ocean 34:1097-1103.'@en ;
+    skos:notation 'SDN:S05::S050062'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050058/2/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050058/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050058/>;
+    dc:modified '2021-04-27T11:42:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation of carbon biomass from abundance'@en ;
+    skos:definition 'Carbon biomass has been computed from the number of individuals and the conversion factor is either unknown or specified elsewhere.'@en ;
+    skos:notation 'SDN:S05::S050058'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050230/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050230/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050230/>;
+    dc:modified '2021-02-12T13:47:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation using the eddy covariance method'@en ;
+    skos:definition 'A statistical method used to process eddy covariance measurements and to derive quantities such as heat, momentum, and gas fluxes between a flat, horizontally homogeneous surface and the overlying atmosphere.'@en ;
+    skos:notation 'SDN:S05::S050230'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050229/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050229/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050229/>;
+    dc:modified '2021-01-19T15:04:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation using resultant velocity components from beams 2 and 4'@en ;
+    skos:definition 'The 3D velocity is computed from the resultant horizontal velocity components and one vertical velocity from beams 2 and 4 of an acoustic doppler current profiler.'@en ;
+    skos:notation 'SDN:S05::S050229'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050228/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050228/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050228/>;
+    dc:modified '2021-01-19T15:04:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation using resultant velocity components from beams 1 and 3'@en ;
+    skos:definition 'The 3D velocity is computed from the resultant horizontal velocity components and one vertical velocity from beams 1 and 3 of an acoustic doppler current profiler.'@en ;
+    skos:notation 'SDN:S05::S050228'^^xsd:string .

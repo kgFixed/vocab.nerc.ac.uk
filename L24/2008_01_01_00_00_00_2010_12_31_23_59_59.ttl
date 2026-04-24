@@ -1,0 +1,109 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L24/2008_01_01_00_00_00_2010_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L24/2007_01_01_00_00_00_2007_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2010-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/UKOAP190/1/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/UKOAP190/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/UKOAP190/>;
+    dc:modified '2010-06-16T15:07:31'^^xsd:dateTime ;
+    skos:altLabel 'UKOOA P1-90'^^xsd:string ;
+    skos:prefLabel 'United Kingdom Offshore Operators Association P1-90'@en ;
+    skos:definition 'A standard format designed for raw marine positioning and ancillary data exchange widely used by industry especially for seismic surveys (http://www.epsg.org/Exchange/P1.pdf).'@en ;
+    skos:notation 'SDN:L24::UKOAP190'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/PNG/1/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/PNG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/PNG/>;
+    dc:modified '2010-06-16T15:02:24'^^xsd:dateTime ;
+    skos:altLabel 'PNG'^^xsd:string ;
+    skos:prefLabel 'Portable Network Graphics'@en ;
+    skos:definition 'A standard bit-mapped image format employing lossless compression for the storage of images.'@en ;
+    skos:notation 'SDN:L24::PNG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/TIFF/1/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/TIFF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/TIFF/>;
+    dc:modified '2010-06-16T14:57:21'^^xsd:dateTime ;
+    skos:altLabel 'TIFF'^^xsd:string ;
+    skos:prefLabel 'Tagged Image File Format'@en ;
+    skos:definition 'A standard format for the storage of images originally developed by Aldus, but under the control of Adobe Systems since 2009.'@en ;
+    skos:notation 'SDN:L24::TIFF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/SEGY/1/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/SEGY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/SEGY/>;
+    dc:modified '2010-06-16T14:54:12'^^xsd:dateTime ;
+    skos:altLabel 'SEG Y'^^xsd:string ;
+    skos:prefLabel 'Society of Exploration Geophysicists SEG Y'@en ;
+    skos:definition 'A standard data format developed by the Society of Exploration Geophysicists for exchanging seismics data (http://www.seg.org/SEGportalWEBproject/prod/SEG-Publications/Pub-Technical-Standards/Documents/seg_y_rev1.pdf).'@en ;
+    skos:notation 'SDN:L24::SEGY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/XTF/1/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/XTF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/XTF/>;
+    dc:modified '2010-06-16T14:27:18'^^xsd:dateTime ;
+    skos:altLabel 'XTF'^^xsd:string ;
+    skos:prefLabel 'eXtended Triton Format'@en ;
+    skos:definition 'A Triton Imaging Incorporated file format for recording hydrographic survey data, widely used for sidescan sonar.'@en ;
+    skos:notation 'SDN:L24::XTF'^^xsd:string .

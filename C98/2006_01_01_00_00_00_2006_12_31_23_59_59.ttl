@@ -1,0 +1,165 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C98/2006_01_01_00_00_00_2006_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C98/current/CL12/3/> .
+<http://vocab.nerc.ac.uk/collection/C98/current/CL12/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C98/current/CL12/>;
+    dc:modified '2006-11-15T16:20:10'^^xsd:dateTime ;
+    skos:altLabel 'SeaDataNet'^^xsd:string ;
+    skos:prefLabel 'SeaDataNet Controlled Vocabularies'@en ;
+    skos:definition 'All vocabulary lists deemed to be of interest to participants in the SeaDataNet project.'@en ;
+    skos:notation 'SDN:C98::CL12'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C98/current/CL07/2/> .
+<http://vocab.nerc.ac.uk/collection/C98/current/CL07/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C98/current/CL07/>;
+    dc:modified '2006-08-25T14:26:33'^^xsd:dateTime ;
+    skos:altLabel 'NODB documents'^^xsd:string ;
+    skos:prefLabel 'BODC NODB documentation system'@en ;
+    skos:definition 'Term lists concerned with the documents stored in the BODC NODB document management system.'@en ;
+    skos:notation 'SDN:C98::CL07'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C98/current/CL11/1/> .
+<http://vocab.nerc.ac.uk/collection/C98/current/CL11/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C98/current/CL11/>;
+    dc:modified '2006-05-02T08:18:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'I18n web text display system term lists'@en ;
+    skos:definition 'All vocabulary lists associated with the BODC I18n web text display system (initially UK English but could be developed into a multi-lingual system)'@en ;
+    skos:notation 'SDN:C98::CL11'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C98/current/CL02/1/> .
+<http://vocab.nerc.ac.uk/collection/C98/current/CL02/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C98/current/CL02/>;
+    dc:modified '2006-03-07T08:56:00'^^xsd:dateTime ;
+    skos:altLabel 'Administration'^^xsd:string ;
+    skos:prefLabel 'BODC operational systems and administration'@en ;
+    skos:definition 'Term lists concerned with the description of BODC systems, operational procedures and internal administration.'@en ;
+    skos:notation 'SDN:C98::CL02'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C98/current/CL10/1/> .
+<http://vocab.nerc.ac.uk/collection/C98/current/CL10/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C98/current/CL10/>;
+    dc:modified '2006-03-07T08:56:00'^^xsd:dateTime ;
+    skos:altLabel 'All'^^xsd:string ;
+    skos:prefLabel 'All BODC controlled vocabulary lists'@en ;
+    skos:definition 'All code tables held in the BODC code table system (tables BODCCODE, BODCCDTX and BODCCDHD)'@en ;
+    skos:notation 'SDN:C98::CL10'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C98/current/CL05/1/> .
+<http://vocab.nerc.ac.uk/collection/C98/current/CL05/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C98/current/CL05/>;
+    dc:modified '2006-03-07T08:56:00'^^xsd:dateTime ;
+    skos:altLabel 'Instruments'^^xsd:string ;
+    skos:prefLabel 'Data production tools'@en ;
+    skos:definition 'Term lists concerned with instrumentation or methodology used to obtain data.'@en ;
+    skos:notation 'SDN:C98::CL05'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C98/current/CL06/1/> .
+<http://vocab.nerc.ac.uk/collection/C98/current/CL06/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C98/current/CL06/>;
+    dc:modified '2006-03-07T08:56:00'^^xsd:dateTime ;
+    skos:altLabel 'Parameters'^^xsd:string ;
+    skos:prefLabel 'Phenomenon descriptions and qualifications'@en ;
+    skos:definition 'Term lists concerned with the specification of the nature of measured phenomena.'@en ;
+    skos:notation 'SDN:C98::CL06'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C98/current/CL09/1/> .
+<http://vocab.nerc.ac.uk/collection/C98/current/CL09/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C98/current/CL09/>;
+    dc:modified '2006-03-07T08:56:00'^^xsd:dateTime ;
+    skos:altLabel 'Platforms'^^xsd:string ;
+    skos:prefLabel 'Data collection platforms and observation stations'@en ;
+    skos:definition 'Term lists concerned with platforms and stations around which data collection activities are organised.'@en ;
+    skos:notation 'SDN:C98::CL09'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C98/current/CL04/1/> .
+<http://vocab.nerc.ac.uk/collection/C98/current/CL04/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C98/current/CL04/>;
+    dc:modified '2006-03-07T08:56:00'^^xsd:dateTime ;
+    skos:altLabel 'Projects and organisations'^^xsd:string ;
+    skos:prefLabel 'Projects and organisations'@en ;
+    skos:definition 'Term lists concerned with data collecting organisations and their data collection activities.'@en ;
+    skos:notation 'SDN:C98::CL04'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C98/current/CL03/1/> .
+<http://vocab.nerc.ac.uk/collection/C98/current/CL03/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C98/current/CL03/>;
+    dc:modified '2006-03-07T08:56:00'^^xsd:dateTime ;
+    skos:altLabel 'Security'^^xsd:string ;
+    skos:prefLabel 'BODC authentication and authorisation'@en ;
+    skos:definition 'Term lists concerned with the identification of individuals and their access rights to BODC-controlled assets including data sets, documents, web pages and services.'@en ;
+    skos:notation 'SDN:C98::CL03'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C98/current/CL01/1/> .
+<http://vocab.nerc.ac.uk/collection/C98/current/CL01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C98/current/CL01/>;
+    dc:modified '2006-03-07T08:56:00'^^xsd:dateTime ;
+    skos:altLabel 'Semantic Model'^^xsd:string ;
+    skos:prefLabel 'BODC Parameter Semantic Model'@en ;
+    skos:definition 'Term lists constraining components of the semantic model used to BODC to describe phenomena.'@en ;
+    skos:notation 'SDN:C98::CL01'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C98/current/CL08/1/> .
+<http://vocab.nerc.ac.uk/collection/C98/current/CL08/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C98/current/CL08/>;
+    dc:modified '2006-03-07T08:56:00'^^xsd:dateTime ;
+    skos:altLabel 'Spatio-temporal'^^xsd:string ;
+    skos:prefLabel 'Geographic location (3D) and time'@en ;
+    skos:definition 'Terms associated with absolute or descriptive 3-dimensional geographic location or with time.'@en ;
+    skos:notation 'SDN:C98::CL08'^^xsd:string .

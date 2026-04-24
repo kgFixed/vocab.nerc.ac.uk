@@ -1,0 +1,299 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/GBX/2017_01_01_00_00_00_2017_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/GBX/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2017-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT042/2/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT042/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT042/>;
+    dc:modified '2017-09-29T11:58:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Vocab builder - text - with BODC or'@en ;
+    skos:definition 'with BODC or'@en ;
+    skos:notation 'SDN:GBX::VBTXT042'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT040/2/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT040/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT040/>;
+    dc:modified '2017-09-28T16:41:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Vocab builder - text - (S25 and a component of the P01 semantic models)'@en ;
+    skos:definition '(S25 and a component of the P01 semantic models)'@en ;
+    skos:notation 'SDN:GBX::VBTXT040'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT039/2/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT039/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT039/>;
+    dc:modified '2017-09-28T16:41:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Vocab builder - text - (S26 and a component of the P01 semantic models)'@en ;
+    skos:definition '(S26 and a component of the P01 semantic models)'@en ;
+    skos:notation 'SDN:GBX::VBTXT039'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT038/2/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT038/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT038/>;
+    dc:modified '2017-09-28T16:41:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Vocab builder - text - (subset of P01)'@en ;
+    skos:definition '(subset of P01)'@en ;
+    skos:notation 'SDN:GBX::VBTXT038'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT019/2/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT019/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT019/>;
+    dc:modified '2017-09-28T16:41:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Vocab builder - text - Biological entity concepts'@en ;
+    skos:definition 'Biological entity concepts'@en ;
+    skos:notation 'SDN:GBX::VBTXT019'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT037/2/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT037/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT037/>;
+    dc:modified '2017-09-28T16:40:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Vocab builder - text - Measurement matrix concepts'@en ;
+    skos:definition 'Measurement matrix concepts'@en ;
+    skos:notation 'SDN:GBX::VBTXT037'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT044/1/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT044/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT044/>;
+    dc:modified '2017-09-28T16:40:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Vocab builder - text - Physical entity and other parameter codes'@en ;
+    skos:definition 'Physical entity and other parameter codes'@en ;
+    skos:notation 'SDN:GBX::VBTXT044'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT043/1/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT043/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT043/>;
+    dc:modified '2017-09-28T16:40:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Vocab builder - text - Biological entity parameter codes'@en ;
+    skos:definition 'Biological entity parameter codes'@en ;
+    skos:notation 'SDN:GBX::VBTXT043'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT036/3/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT036/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT036/>;
+    dc:modified '2017-09-28T16:29:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Vocab builder - text - Chemical entity parameter codes'@en ;
+    skos:definition 'Chemical entity parameter codes'@en ;
+    skos:notation 'SDN:GBX::VBTXT036'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T4000019/1/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T4000019/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T4000019/>;
+    dc:modified '2017-09-15T09:26:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'File delivery header'@en ;
+    skos:definition '{"node": {"h2": "File delivered to browser"}}'@en ;
+    skos:notation 'SDN:GBX::T4000019'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T4000018/2/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T4000018/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T4000018/>;
+    dc:modified '2017-09-15T09:03:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Service exit - info text - no multiple file option.'@en ;
+    skos:definition '''{"node": {"p": [
+    "Thank you for using the file download service.",
+    "To exit, may we please ask that you close this window/tab."
+]}}'''@en ;
+    skos:notation 'SDN:GBX::T4000018'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/GN000100/2/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/GN000100/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/GN000100/>;
+    dc:modified '2017-08-10T12:37:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Product order form - INDIA data attribution information.'@en ;
+    skos:definition '{"node": {"p": "\'\'This study uses data from the INDIA Project DVD; project co-ordinated at the University of Liverpool\'s Department of Civil Engineering; data provided by the British Oceanographic Data Centre; project funded by the European Commission through the Marine Science and Technology (MAST) III programme.\'\'"}}'@en ;
+    skos:notation 'SDN:GBX::GN000100'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT031/2/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT031/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT031/>;
+    dc:modified '2017-06-20T17:43:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Vocab builder - text - Search'@en ;
+    skos:definition 'Search'@en ;
+    skos:notation 'SDN:GBX::VBTXT031'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT041/1/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT041/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/VBTXT041/>;
+    dc:modified '2017-06-14T10:00:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Vocab builder - text - To submit new terms please'@en ;
+    skos:definition 'To submit new terms please'@en ;
+    skos:notation 'SDN:GBX::VBTXT041'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T5000001/5/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T5000001/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T5000001/>;
+    dc:modified '2017-01-09T14:17:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Index page - opening paragraphs - tagged'@en ;
+    skos:definition '''{"node": {
+    "p": [
+        {
+            "a": {
+                "href": "/resources/delivery_formats/cfnetcdf_format/",
+                "content": "CF compliant"
+            },
+            "content": [
+                "This index provides access to all numerical model datasets held by BODC. Model data originating from a variety of projects and organisations are stored in our systems and are available for online retrieval. All model data are stored as",
+                "netCDF format files."
+            ]
+        },
+        "An interactive search function is provided below to enable you to interrogate BODC\'s numerical model data holdings before choosing which, if any, data to select for download. Once you have chosen your search criteria, click the Search button. The data files held by BODC that match the criteria will be displayed in a table.",
+        {
+            "img": {
+                "src": "/images/icons/plot.gif",
+                "alt": "View parameter",
+                "title": "View parameter",
+                "class": "icon"
+            },
+            "content": [
+                "The data within the selected files can be visualised before final selection. Click the visualisation icon",
+                "beside the parameter that you wish to view in the results table."
+            ]
+        },
+        "A demonstration (with audio) of search and visualisation (best viewed with screen resolutions of 1024 x 768 or greater) is available for you to watch.",
+        {
+            "img": {
+                "src": "/images/icons/help_icon.gif",
+                "width": 16,
+                "alt": "Help",
+                "class": "helpImage",
+                "height": 16
+            },
+            "content": [
+                "A detailed explanation for each search category is also provided. This information may be viewed via the",
+                "button."
+            ]
+        }
+    ],
+    "h1": "Numerical model data",
+    "h2": "Search categories"
+}}'''@en ;
+    skos:notation 'SDN:GBX::T5000001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T4000017/2/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T4000017/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T4000017/>;
+    dc:modified '2017-01-09T14:17:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Service exit - info text'@en ;
+    skos:definition '''{"node": {"p": [
+    {
+        "a": {
+            "href": "/data/bodc_database/nodb/",
+            "content": "multiple file download"
+        },
+        "content": [
+            "Thank you for using the BODC single file download service. Should you be looking to access a large volume of data we offer a",
+            "service."
+        ]
+    },
+    "To exit, may we please ask that you close this browser window/tab."
+]}}'''@en ;
+    skos:notation 'SDN:GBX::T4000017'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/ST000252/5/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/ST000252/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/ST000252/>;
+    dc:modified '2017-01-09T14:17:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'plain text - download csv file'@en ;
+    skos:definition '''{"node": {
+    "p": [
+        "A comma-separated ASCII (CSV) and a Keyhole Markup Language (KML) file of your search results are available to download should you wish to retain a copy. Note: The KML file allows the display of your results in geospatial applications, such as Google Earth.",
+        "Please select series of interest and your data file format prior to submitting your request. To assist your decision, a brief summary of the available formats is provided below",
+        {
+            "a": {
+                "href": "/resources/delivery_formats/",
+                "content": "code and format definitions"
+            },
+            "strong": "Please note",
+            "content": [
+                "Detailed information about the formats is available via the",
+                "section of our web site.",
+                ": if you follow this link your selected items in the results table will be lost."
+            ]
+        }
+    ],
+    "ul": {"li": [
+        "ASCII - a BODC output format which contains several rows of metadata followed by the data cycles (data variables and their quality control flags) listed one per line.",
+        "QXF - the BODC subset of netCDF. QXF is \'a format for datacycles\'. Consequently, it does not include the metadata. Each QXF file contains a header (a series of global attributes) and a series of QXF channels. These channels generally consist of a data variable plus quality control flag channel, although the flag channel will not be encountered in some circumstances."
+    ]},
+    "h2": [
+        "Download metadata",
+        "Request data"
+    ]
+}}'''@en ;
+    skos:notation 'SDN:GBX::ST000252'^^xsd:string .

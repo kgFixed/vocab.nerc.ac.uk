@@ -1,0 +1,1272 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/B06/2014_01_01_00_00_00_2014_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dChanAbsentZUPM/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dChanAbsentZUPM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dChanAbsentZUPM/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Absent data value check'^^xsd:string ;
+    skos:prefLabel 'dChanAbsentZUPM'@en ;
+    skos:definition 'CHECKNQXF integrity check that the absent data values recorded in the file header match those prescribed in the Parameter Dictionary for each parameter'@en ;
+    skos:notation 'SDN:B06::dChanAbsentZUPM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zAllSeriesAppFieldsNotNull/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zAllSeriesAppFieldsNotNull/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zAllSeriesAppFieldsNotNull/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'All Series App mandatory fields check'^^xsd:string ;
+    skos:prefLabel 'zAllSeriesAppFieldsNotNull'@en ;
+    skos:definition 'ZESHXREF integrity check that all the ZESH fields that are mandatory for All Series App exposure have been populated for the series'@en ;
+    skos:notation 'SDN:B06::zAllSeriesAppFieldsNotNull'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kLinkZyshaEdmed/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kLinkZyshaEdmed/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kLinkZyshaEdmed/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'At least one EDMED check'^^xsd:string ;
+    skos:prefLabel 'kLinkZyshaEdmed'@en ;
+    skos:definition 'ZESHXREF integrity check whether the series is linked through ZYSHA to at least one EDMED data set'@en ;
+    skos:notation 'SDN:B06::kLinkZyshaEdmed'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kLinkToAtLeastOneActivity/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kLinkToAtLeastOneActivity/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kLinkToAtLeastOneActivity/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'At least one activity check'^^xsd:string ;
+    skos:prefLabel 'kLinkToAtLeastOneActivity'@en ;
+    skos:definition 'ZESHXREF integrity check whether the series is linked through ZYSHA to a Data Activity'@en ;
+    skos:notation 'SDN:B06::kLinkToAtLeastOneActivity'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kAtLeastOneDocumentLink/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kAtLeastOneDocumentLink/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kAtLeastOneDocumentLink/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'At least one document check'^^xsd:string ;
+    skos:prefLabel 'kAtLeastOneDocumentLink'@en ;
+    skos:definition 'ZESHXREF integrity check that the series is linked to at least one NDMS document'@en ;
+    skos:notation 'SDN:B06::kAtLeastOneDocumentLink'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kLinkToFixedStation/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kLinkToFixedStation/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kLinkToFixedStation/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'At least one fixed station check'^^xsd:string ;
+    skos:prefLabel 'kLinkToFixedStation'@en ;
+    skos:definition 'ZESHXREF integrity check whether the series is linked through ZYSHA to a Fixed Station'@en ;
+    skos:notation 'SDN:B06::kLinkToFixedStation'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kLinkAtLeastOneIpjref/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kLinkAtLeastOneIpjref/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kLinkAtLeastOneIpjref/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'At least one project check'^^xsd:string ;
+    skos:prefLabel 'kLinkAtLeastOneIpjref'@en ;
+    skos:definition 'ZESHXREF integrity check that  the series is linked to at least one Project'@en ;
+    skos:notation 'SDN:B06::kLinkAtLeastOneIpjref'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zBoundingBoxIsValid/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zBoundingBoxIsValid/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zBoundingBoxIsValid/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Bounding box check'^^xsd:string ;
+    skos:prefLabel 'zBoundingBoxIsValid'@en ;
+    skos:definition 'ZESHXREF integrity check that the series positions in ZESH describe the south-east and north-west corners of a viable bounding box'@en ;
+    skos:notation 'SDN:B06::zBoundingBoxIsValid'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kInventoryTypePopulated/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kInventoryTypePopulated/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kInventoryTypePopulated/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'CNDX inventory type should be populated'^^xsd:string ;
+    skos:prefLabel 'kInventoryTypePopulated'@en ;
+    skos:definition 'ZESHXREF integrity check that the series inventory type in Central Index has been populated.'@en ;
+    skos:notation 'SDN:B06::kInventoryTypePopulated'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/xCsrformTimesValid/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/xCsrformTimesValid/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/xCsrformTimesValid/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'CSRFORM times check'^^xsd:string ;
+    skos:prefLabel 'xCsrformTimesValid'@en ;
+    skos:definition 'ZESHXREF integrity check that cruise records in CSRFORM that are linked to the series have valid times'@en ;
+    skos:notation 'SDN:B06::xCsrformTimesValid'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kCautionDocumentLinked/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kCautionDocumentLinked/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kCautionDocumentLinked/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Caution document check'^^xsd:string ;
+    skos:prefLabel 'kCautionDocumentLinked'@en ;
+    skos:definition 'ZESHXREF integrity check that the series link to a Caution Document is valid'@en ;
+    skos:notation 'SDN:B06::kCautionDocumentLinked'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/iCentralIndex/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/iCentralIndex/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/iCentralIndex/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Central Index reference check'^^xsd:string ;
+    skos:prefLabel 'iCentralIndex'@en ;
+    skos:definition 'CHECKNQXF integrity check that the series identifier, decoded from the internal file name, corresponds to an entry in the Series Schema Central Index (CNDX).'@en ;
+    skos:notation 'SDN:B06::iCentralIndex'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dChanLimitsAbs/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dChanLimitsAbs/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dChanLimitsAbs/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Channel limits header versus absent value check'^^xsd:string ;
+    skos:prefLabel 'dChanLimitsAbs'@en ;
+    skos:definition 'CHECKNQXF integrity check that the channel limits are not still set as the absent data value. The transfer program initially sets the channel limits in the header to the absent data value, but should recalculate them once the data channels are populated.'@en ;
+    skos:notation 'SDN:B06::dChanLimitsAbs'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dChanLimitsFile/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dChanLimitsFile/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dChanLimitsFile/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Channel limits header versus file check'^^xsd:string ;
+    skos:prefLabel 'dChanLimitsFile'@en ;
+    skos:definition 'CHECKNQXF integrity check that the channel limits calculated on-the-fly from the data file match those recorded in the file header.'@en ;
+    skos:notation 'SDN:B06::dChanLimitsFile'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dChanSort/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dChanSort/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dChanSort/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Channel order check'^^xsd:string ;
+    skos:prefLabel 'dChanSort'@en ;
+    skos:definition 'CHECKNQXF integrity check that channels are sorted according to standard ASCII ordering for QXF data.'@en ;
+    skos:notation 'SDN:B06::dChanSort'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/qChanDataType/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/qChanDataType/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/qChanDataType/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Channels must be 4-bytes'^^xsd:string ;
+    skos:prefLabel 'qChanDataType'@en ;
+    skos:definition 'CHECKNQXF integrity check that data channels are 4 bytes: either integer*4 (long) or real*4 (float).'@en ;
+    skos:notation 'SDN:B06::qChanDataType'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dBinChanConst/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dBinChanConst/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dBinChanConst/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Constant bin check'^^xsd:string ;
+    skos:prefLabel 'dBinChanConst'@en ;
+    skos:definition 'CHECKNQXF integrity check that data bins, in a 2-D parameter, are not constant.'@en ;
+    skos:notation 'SDN:B06::dBinChanConst'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dChanConst/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dChanConst/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dChanConst/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Constant channel check'^^xsd:string ;
+    skos:prefLabel 'dChanConst'@en ;
+    skos:definition 'CHECKNQXF integrity check that data channels, except in single-cycle series, are not constant.'@en ;
+    skos:notation 'SDN:B06::dChanConst'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zCycleIntervalIsQualified/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zCycleIntervalIsQualified/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zCycleIntervalIsQualified/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Cycle interval units check'^^xsd:string ;
+    skos:prefLabel 'zCycleIntervalIsQualified'@en ;
+    skos:definition 'ZESHXREF integrity check that the series cycle interval units have been specified'@en ;
+    skos:notation 'SDN:B06::zCycleIntervalIsQualified'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/qDimensions/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/qDimensions/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/qDimensions/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Data dimension check'^^xsd:string ;
+    skos:prefLabel 'qDimensions'@en ;
+    skos:definition 'CHECKNQXF integrity check that the file contains primary dimension channels and, for 2-D data only, a secondary dimension channel'@en ;
+    skos:notation 'SDN:B06::qDimensions'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kDataFileTracking/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kDataFileTracking/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kDataFileTracking/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Data file tracking check'^^xsd:string ;
+    skos:prefLabel 'kDataFileTracking'@en ;
+    skos:definition 'ZESHXREF integrity check that the series data file is properly tracked'@en ;
+    skos:notation 'SDN:B06::kDataFileTracking'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dChanLimitsZUPM/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dChanLimitsZUPM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dChanLimitsZUPM/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Data range check'^^xsd:string ;
+    skos:prefLabel 'dChanLimitsZUPM'@en ;
+    skos:definition 'CHECKNQXF integrity check that the channel limits, calculated over flagged and unflagged data, are within the limits given by the Parameter Dictionary for that parameter.'@en ;
+    skos:notation 'SDN:B06::dChanLimitsZUPM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dChanSpanAbsent/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dChanSpanAbsent/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dChanSpanAbsent/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Data span absent data value check'^^xsd:string ;
+    skos:prefLabel 'dChanSpanAbsent'@en ;
+    skos:definition 'CHECKNQXF integrity check that the absent data value for a parameter doesn\'t fall between the limits determined for that channel.'@en ;
+    skos:notation 'SDN:B06::dChanSpanAbsent'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dDateTimeIncrease/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dDateTimeIncrease/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dDateTimeIncrease/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Date time increase check'^^xsd:string ;
+    skos:prefLabel 'dDateTimeIncrease'@en ;
+    skos:definition 'CHECKNQXF integrity check that the time channel increases monotonically.'@en ;
+    skos:notation 'SDN:B06::dDateTimeIncrease'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dDateTimeNull/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dDateTimeNull/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dDateTimeNull/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Date time null check'^^xsd:string ;
+    skos:prefLabel 'dDateTimeNull'@en ;
+    skos:definition 'CHECKNQXF integrity check that there are no null values in the time channel.'@en ;
+    skos:notation 'SDN:B06::dDateTimeNull'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dDateTimeUniform/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dDateTimeUniform/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dDateTimeUniform/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Date time uniform check'^^xsd:string ;
+    skos:prefLabel 'dDateTimeUniform'@en ;
+    skos:definition 'CHECKNQXF integrity check that the time channel intervals are uniform.'@en ;
+    skos:notation 'SDN:B06::dDateTimeUniform'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dAAFDFlagNotGood/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dAAFDFlagNotGood/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dAAFDFlagNotGood/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Day fraction flag check'^^xsd:string ;
+    skos:prefLabel 'dAAFDFlagNotGood'@en ;
+    skos:definition 'CHECKNQXF integrity check that the day fraction flag channel is empty.'@en ;
+    skos:notation 'SDN:B06::dAAFDFlagNotGood'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dDayFraction/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dDayFraction/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dDayFraction/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Day fraction range check'^^xsd:string ;
+    skos:prefLabel 'dDayFraction'@en ;
+    skos:definition 'CHECKNQXF integrity check that the day fraction must be greater than or equal to 0.0, and less than 1.0.'@en ;
+    skos:notation 'SDN:B06::dDayFraction'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dChanDatime/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dChanDatime/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dChanDatime/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Day number day fraction pair check'^^xsd:string ;
+    skos:prefLabel 'dChanDatime'@en ;
+    skos:definition 'CHECKNQXF integrity check that day number and day fraction channels are paired, and neither appears without the other.'@en ;
+    skos:notation 'SDN:B06::dChanDatime'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dAADYNoFlag/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dAADYNoFlag/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dAADYNoFlag/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Day number flag check'^^xsd:string ;
+    skos:prefLabel 'dAADYNoFlag'@en ;
+    skos:definition 'CHECKNQXF integrity check that the day number channel does not have a flag channel associated with it.'@en ;
+    skos:notation 'SDN:B06::dAADYNoFlag'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dAADYType/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dAADYType/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dAADYType/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Day number integer check'^^xsd:string ;
+    skos:prefLabel 'dAADYType'@en ;
+    skos:definition 'CHECKNQXF integrity check that the day number variable contains only integer data'@en ;
+    skos:notation 'SDN:B06::dAADYType'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zDepthLessThanMaxDepth/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zDepthLessThanMaxDepth/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zDepthLessThanMaxDepth/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Depth should be less than maximum depth'^^xsd:string ;
+    skos:prefLabel 'zDepthLessThanMaxDepth'@en ;
+    skos:definition 'ZESHXREF integrity check that the series depth is less than the series maximum depth'@en ;
+    skos:notation 'SDN:B06::zDepthLessThanMaxDepth'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zDepthNotMoreThanMaxDepth/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zDepthNotMoreThanMaxDepth/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zDepthNotMoreThanMaxDepth/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Depth should not be more than maximum depth'^^xsd:string ;
+    skos:prefLabel 'zDepthNotMoreThanMaxDepth'@en ;
+    skos:definition 'ZESHXREF integrity check that the series depth is less than or equal to the series maximum depth'@en ;
+    skos:notation 'SDN:B06::zDepthNotMoreThanMaxDepth'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kLinkedDocumentIsInZotx/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kLinkedDocumentIsInZotx/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kLinkedDocumentIsInZotx/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Document content check'^^xsd:string ;
+    skos:prefLabel 'kLinkedDocumentIsInZotx'@en ;
+    skos:definition 'ZESHXREF integrity check that the series documents linked through ZYSHO have content in ZOTX'@en ;
+    skos:notation 'SDN:B06::kLinkedDocumentIsInZotx'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kLinkedDocumentIsInZond/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kLinkedDocumentIsInZond/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kLinkedDocumentIsInZond/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Document reference check'^^xsd:string ;
+    skos:prefLabel 'kLinkedDocumentIsInZond'@en ;
+    skos:definition 'ZESHXREF integrity check that the series document reference exists in ZOND'@en ;
+    skos:notation 'SDN:B06::kLinkedDocumentIsInZond'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/iPosZESH/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/iPosZESH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/iPosZESH/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'File position ZESH position check'^^xsd:string ;
+    skos:prefLabel 'iPosZESH'@en ;
+    skos:definition 'CHECKNQXF integrity check that the latitude and longitude recorded in the data file match the series positions recorded in ZESH.'@en ;
+    skos:notation 'SDN:B06::iPosZESH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/iBegEndZESH/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/iBegEndZESH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/iBegEndZESH/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'File times ZESH times check'^^xsd:string ;
+    skos:prefLabel 'iBegEndZESH'@en ;
+    skos:definition 'CHECKNQXF integrity check that start and end times calculated on-the-fly from the data file match, to within a second, the series start and end times recorded in ZESH.'@en ;
+    skos:notation 'SDN:B06::iBegEndZESH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/iTrackingSystem/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/iTrackingSystem/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/iTrackingSystem/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'File tracking check'^^xsd:string ;
+    skos:prefLabel 'iTrackingSystem'@en ;
+    skos:definition 'CHECKNQXF integrity check that the data file is known to the Series Schema tracking system.'@en ;
+    skos:notation 'SDN:B06::iTrackingSystem'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dFlagCodes/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dFlagCodes/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dFlagCodes/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Flag code check'^^xsd:string ;
+    skos:prefLabel 'dFlagCodes'@en ;
+    skos:definition 'CHECKNQXF integrity check that the flag characters in all flag channels are recognised codes from BODC code table C15.'@en ;
+    skos:notation 'SDN:B06::dFlagCodes'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/qFlagDimensions/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/qFlagDimensions/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/qFlagDimensions/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Flag dimension check'^^xsd:string ;
+    skos:prefLabel 'qFlagDimensions'@en ;
+    skos:definition 'CHECKNQXF integrity check that the length and shape of flag variable arrays must be the as the associated data variable array.'@en ;
+    skos:notation 'SDN:B06::qFlagDimensions'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/qGlobalAttribute/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/qGlobalAttribute/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/qGlobalAttribute/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Global attribute check'^^xsd:string ;
+    skos:prefLabel 'qGlobalAttribute'@en ;
+    skos:definition 'CHECKNQXF integrity check that only standard QXF global attributes are present.'@en ;
+    skos:notation 'SDN:B06::qGlobalAttribute'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/qSeridnLength/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/qSeridnLength/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/qSeridnLength/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Internal filename length check'^^xsd:string ;
+    skos:prefLabel 'qSeridnLength'@en ;
+    skos:definition 'CHECKNQXF integrity check that the internal filename, SERIDN, is 40 characters long, blank-padded on the right.'@en ;
+    skos:notation 'SDN:B06::qSeridnLength'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kInvtypeSuitsSft/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kInvtypeSuitsSft/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kInvtypeSuitsSft/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Inventory type compatible with SFT'^^xsd:string ;
+    skos:prefLabel 'kInvtypeSuitsSft'@en ;
+    skos:definition 'ZESHXREF integrity check that the Series inventory type in Central Index is MTSI or MCSLI where the Series Feature Type indicates a mooring series'@en ;
+    skos:notation 'SDN:B06::kInvtypeSuitsSft'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kEitherCruiseOrActivity/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kEitherCruiseOrActivity/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kEitherCruiseOrActivity/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Just cruise OR activity check'^^xsd:string ;
+    skos:prefLabel 'kEitherCruiseOrActivity'@en ;
+    skos:definition 'ZESHXREF integrity check whether the series is linked through ZYSHA to both Cruise AND Data Activity metadata'@en ;
+    skos:notation 'SDN:B06::kEitherCruiseOrActivity'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kLinkZyshaSingleEdmed/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kLinkZyshaSingleEdmed/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kLinkZyshaSingleEdmed/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Just one EDMED check'^^xsd:string ;
+    skos:prefLabel 'kLinkZyshaSingleEdmed'@en ;
+    skos:definition 'ZESHXREF integrity check whether the series is linked through ZYSHA to just one EDMED data set'@en ;
+    skos:notation 'SDN:B06::kLinkZyshaSingleEdmed'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kLinkToJustOneActivity/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kLinkToJustOneActivity/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kLinkToJustOneActivity/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Just one activity check'^^xsd:string ;
+    skos:prefLabel 'kLinkToJustOneActivity'@en ;
+    skos:definition 'ZESHXREF integrity check whether the series is linked through ZYSHA to just one Data Activity'@en ;
+    skos:notation 'SDN:B06::kLinkToJustOneActivity'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kLinkToJustOneCruise/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kLinkToJustOneCruise/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kLinkToJustOneCruise/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Just one cruise check'^^xsd:string ;
+    skos:prefLabel 'kLinkToJustOneCruise'@en ;
+    skos:definition 'ZESHXREF integrity check whether the series is linked through ZYSHA to just one cruise'@en ;
+    skos:notation 'SDN:B06::kLinkToJustOneCruise'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kMcslibIsrrefGotIshref/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kMcslibIsrrefGotIshref/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kMcslibIsrrefGotIshref/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'MCSLIB series reference check'^^xsd:string ;
+    skos:prefLabel 'kMcslibIsrrefGotIshref'@en ;
+    skos:definition 'ZESHXREF integrity check that the series reference in MCSLIB matches the series reference in ZESH'@en ;
+    skos:notation 'SDN:B06::kMcslibIsrrefGotIshref'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kMooringLinkToCruise/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kMooringLinkToCruise/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kMooringLinkToCruise/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Mooring series linked to cruise check'^^xsd:string ;
+    skos:prefLabel 'kMooringLinkToCruise'@en ;
+    skos:definition 'ZESHXREF integrity check that the mooring series is linked through ZYSHA to a cruise'@en ;
+    skos:notation 'SDN:B06::kMooringLinkToCruise'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dBinNull/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dBinNull/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dBinNull/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Null bin check'^^xsd:string ;
+    skos:prefLabel 'dBinNull'@en ;
+    skos:definition 'CHECKNQXF integrity check that data bins, in a 2-D parameter, are not null throughout.'@en ;
+    skos:notation 'SDN:B06::dBinNull'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dChanNull/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dChanNull/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dChanNull/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Null channel check'^^xsd:string ;
+    skos:prefLabel 'dChanNull'@en ;
+    skos:definition 'CHECKNQXF integrity check that no data channels are null throughout.'@en ;
+    skos:notation 'SDN:B06::dChanNull'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dNullEqualsAbsent/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dNullEqualsAbsent/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dNullEqualsAbsent/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Null flags versus absent data check'^^xsd:string ;
+    skos:prefLabel 'dNullEqualsAbsent'@en ;
+    skos:definition 'CHECKNQXF integrity check that null flags correspond to absent data values and vice versa.'@en ;
+    skos:notation 'SDN:B06::dNullEqualsAbsent'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/xMoreThan1Parameter/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/xMoreThan1Parameter/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/xMoreThan1Parameter/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Number of parameters check'^^xsd:string ;
+    skos:prefLabel 'xMoreThan1Parameter'@en ;
+    skos:definition 'ZESHXREF integrity check that the parameter set associated with the series has a viable number of parameters'@en ;
+    skos:notation 'SDN:B06::xMoreThan1Parameter'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/qOrphanFlag/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/qOrphanFlag/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/qOrphanFlag/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Orphan flag check'^^xsd:string ;
+    skos:prefLabel 'qOrphanFlag'@en ;
+    skos:definition 'CHECKNQXF integrity check that every character array in the files is a flag channel attached to a data channel. Unattached character arrays are not allowed.'@en ;
+    skos:notation 'SDN:B06::qOrphanFlag'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dChanNamesZUSG/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dChanNamesZUSG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dChanNamesZUSG/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Parameter code check'^^xsd:string ;
+    skos:prefLabel 'dChanNamesZUSG'@en ;
+    skos:definition 'CHECKNQXF integrity check that the parameter codes used in the data file are valid Parameter Dictionary codes.'@en ;
+    skos:notation 'SDN:B06::dChanNamesZUSG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dFormatZUSG/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dFormatZUSG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dFormatZUSG/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Parameter format element check'^^xsd:string ;
+    skos:prefLabel 'dFormatZUSG'@en ;
+    skos:definition 'CHECKNQXF integrity check that the parameter format element (LFM) in the file matches the one indicated in the Parameter Dictionary.'@en ;
+    skos:notation 'SDN:B06::dFormatZUSG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zParameterSetOkForSft/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zParameterSetOkForSft/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zParameterSetOkForSft/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Parameter set SFT compatibility check'^^xsd:string ;
+    skos:prefLabel 'zParameterSetOkForSft'@en ;
+    skos:definition 'ZESHXREF integrity check that the Series Feature Type is compatible with the parameter set'@en ;
+    skos:notation 'SDN:B06::zParameterSetOkForSft'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dParameterSet/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dParameterSet/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dParameterSet/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Parameter set check'^^xsd:string ;
+    skos:prefLabel 'dParameterSet'@en ;
+    skos:definition 'CHECKNQXF integrity check that the parameter set, calculated on-the-fly from the data file, corresponds to a parameter set record in ZYPSU.'@en ;
+    skos:notation 'SDN:B06::dParameterSet'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kParameterSetInZeps/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kParameterSetInZeps/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kParameterSetInZeps/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Parameter set in ZEPS check'^^xsd:string ;
+    skos:prefLabel 'kParameterSetInZeps'@en ;
+    skos:definition 'ZESHXREF integrity check that the series parameter set reference exists in ZEPS'@en ;
+    skos:notation 'SDN:B06::kParameterSetInZeps'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/xProjectEndTimeIsNull/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/xProjectEndTimeIsNull/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/xProjectEndTimeIsNull/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Project end time should be populated'^^xsd:string ;
+    skos:prefLabel 'xProjectEndTimeIsNull'@en ;
+    skos:definition 'ZESHXREF integrity check that project records in PROJ that are linked to the series have end time populated'@en ;
+    skos:notation 'SDN:B06::xProjectEndTimeIsNull'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kProjectsAreParentChild/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kProjectsAreParentChild/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kProjectsAreParentChild/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Project relationship check'^^xsd:string ;
+    skos:prefLabel 'kProjectsAreParentChild'@en ;
+    skos:definition 'ZESHXREF integrity check that the projects linked to the series have parent/child relationships to each other'@en ;
+    skos:notation 'SDN:B06::kProjectsAreParentChild'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/qVersion/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/qVersion/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/qVersion/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'QXF-version check'^^xsd:string ;
+    skos:prefLabel 'qVersion'@en ;
+    skos:definition 'CHECKNQXF integrity check that the QXF version is either 0.1 or 1.0.'@en ;
+    skos:notation 'SDN:B06::qVersion'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/qChanAttribute/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/qChanAttribute/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/qChanAttribute/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'QXF-version-specific attribute check'^^xsd:string ;
+    skos:prefLabel 'qChanAttribute'@en ;
+    skos:definition 'CHECKNQXF integrity check that file attributes are are appropriate to the QXF version. QXF version 0.1 variables should have limits and absent data values. QXF version 1.0 variables should have limits, absent data values and format elements, and version 1.0 flag variables should have limits.'@en ;
+    skos:notation 'SDN:B06::qChanAttribute'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dFlagPresent/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dFlagPresent/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dFlagPresent/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Rank 1 and 2 flag check'^^xsd:string ;
+    skos:prefLabel 'dFlagPresent'@en ;
+    skos:definition 'CHECKNQXF integrity check that, except for day number, all rank 1 and rank 2 channels have flag channels associated with them.'@en ;
+    skos:notation 'SDN:B06::dFlagPresent'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kAtLeast1RankZeroDpt/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kAtLeast1RankZeroDpt/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kAtLeast1RankZeroDpt/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Rank zero DPT check'^^xsd:string ;
+    skos:prefLabel 'kAtLeast1RankZeroDpt'@en ;
+    skos:definition 'ZESHXREF integrity check that the series is linked to at least one rank zero DPT'@en ;
+    skos:notation 'SDN:B06::kAtLeast1RankZeroDpt'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/qZeroRankPresent/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/qZeroRankPresent/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/qZeroRankPresent/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Rank zero data check'^^xsd:string ;
+    skos:prefLabel 'qZeroRankPresent'@en ;
+    skos:definition 'CHECKNQXF integrity check that if the file contains one or more 2-D parameters, a rank-zero channel must be present.'@en ;
+    skos:notation 'SDN:B06::qZeroRankPresent'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/qRankZeroNoFlag/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/qRankZeroNoFlag/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/qRankZeroNoFlag/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Rank zero flag check'^^xsd:string ;
+    skos:prefLabel 'qRankZeroNoFlag'@en ;
+    skos:definition 'CHECKNQXF integrity check that a rank zero channel does not have a flag channel associated with it.'@en ;
+    skos:notation 'SDN:B06::qRankZeroNoFlag'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kValidLinkDpt/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kValidLinkDpt/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kValidLinkDpt/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series DPT reference check'^^xsd:string ;
+    skos:prefLabel 'kValidLinkDpt'@en ;
+    skos:definition 'ZESHXREF integrity check that all links between the series and Data Production Tools have valid L22 references'@en ;
+    skos:notation 'SDN:B06::kValidLinkDpt'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kValidLinkZyshaEdmed/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kValidLinkZyshaEdmed/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kValidLinkZyshaEdmed/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series EDMED dataset reference check'^^xsd:string ;
+    skos:prefLabel 'kValidLinkZyshaEdmed'@en ;
+    skos:definition 'ZESHXREF integrity check that all links between the series and EDMED data sets have valid EDMED references'@en ;
+    skos:notation 'SDN:B06::kValidLinkZyshaEdmed'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kIslrefInMcslia/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kIslrefInMcslia/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kIslrefInMcslia/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series MCSLIA reference check'^^xsd:string ;
+    skos:prefLabel 'kIslrefInMcslia'@en ;
+    skos:definition 'ZESHXREF integrity check that the series sea level site reference is found in MCSLIA'@en ;
+    skos:notation 'SDN:B06::kIslrefInMcslia'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kImtrefInMtsia/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kImtrefInMtsia/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kImtrefInMtsia/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series MTSIA reference check'^^xsd:string ;
+    skos:prefLabel 'kImtrefInMtsia'@en ;
+    skos:definition 'ZESHXREF integrity check that the series mooring reference is found in the appropriate inventory'@en ;
+    skos:notation 'SDN:B06::kImtrefInMtsia'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kZyshaIrefInProj/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kZyshaIrefInProj/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kZyshaIrefInProj/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series PROJ reference check'^^xsd:string ;
+    skos:prefLabel 'kZyshaIrefInProj'@en ;
+    skos:definition 'ZESHXREF integrity check that all links between the series and projects have valid PROJ references'@en ;
+    skos:notation 'SDN:B06::kZyshaIrefInProj'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zMandatorySchemaFieldsNotNull/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zMandatorySchemaFieldsNotNull/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zMandatorySchemaFieldsNotNull/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series Schema mandatory fields check'^^xsd:string ;
+    skos:prefLabel 'zMandatorySchemaFieldsNotNull'@en ;
+    skos:definition 'ZESHXREF integrity check that all the ZESH fields that are mandatory for Series Schema banking have been populated'@en ;
+    skos:notation 'SDN:B06::zMandatorySchemaFieldsNotNull'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kZyshaIrefInZapj/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kZyshaIrefInZapj/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kZyshaIrefInZapj/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series ZAPJ reference check'^^xsd:string ;
+    skos:prefLabel 'kZyshaIrefInZapj'@en ;
+    skos:definition 'ZESHXREF integrity check that all links between the series and projects have valid ZAPJ references'@en ;
+    skos:notation 'SDN:B06::kZyshaIrefInZapj'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zSeriesDepthBelowSurface/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zSeriesDepthBelowSurface/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zSeriesDepthBelowSurface/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series below sea surface check'^^xsd:string ;
+    skos:prefLabel 'zSeriesDepthBelowSurface'@en ;
+    skos:definition 'ZESHXREF integrity check that the series depth is below the sea surface'@en ;
+    skos:notation 'SDN:B06::zSeriesDepthBelowSurface'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zWithinProjectTimeSpan/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zWithinProjectTimeSpan/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zWithinProjectTimeSpan/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series concurrent with project'^^xsd:string ;
+    skos:prefLabel 'zWithinProjectTimeSpan'@en ;
+    skos:definition 'ZESHXREF integrity check that the series start and end times are within the time spans of any projects in PROJ that are linked'@en ;
+    skos:notation 'SDN:B06::zWithinProjectTimeSpan'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zWithinZafsFeatureTime/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zWithinZafsFeatureTime/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zWithinZafsFeatureTime/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series concurrent with spatial feature'^^xsd:string ;
+    skos:prefLabel 'zWithinZafsFeatureTime'@en ;
+    skos:definition 'ZESHXREF integrity check that the series start and end time are within the span of at least one spatial feature for each fixed station that is linked to it'@en ;
+    skos:notation 'SDN:B06::zWithinZafsFeatureTime'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kZyshaIrefInCsrform/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kZyshaIrefInCsrform/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kZyshaIrefInCsrform/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series cruise reference check'^^xsd:string ;
+    skos:prefLabel 'kZyshaIrefInCsrform'@en ;
+    skos:definition 'ZESHXREF integrity check that all links between the series and cruises have valid CSR references'@en ;
+    skos:notation 'SDN:B06::kZyshaIrefInCsrform'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kZyshaIrefInZada/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kZyshaIrefInZada/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kZyshaIrefInZada/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series data activity reference check'^^xsd:string ;
+    skos:prefLabel 'kZyshaIrefInZada'@en ;
+    skos:definition 'ZESHXREF integrity check that all links between the series and data activities have valid ZADA references'@en ;
+    skos:notation 'SDN:B06::kZyshaIrefInZada'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zSeriesDepthQualified/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zSeriesDepthQualified/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zSeriesDepthQualified/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series depth qualification check'^^xsd:string ;
+    skos:prefLabel 'zSeriesDepthQualified'@en ;
+    skos:definition 'ZESHXREF integrity check that the series depth and maximum depth, and the depth qualifiers are are all populated'@en ;
+    skos:notation 'SDN:B06::zSeriesDepthQualified'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zDepthEqualsMaxDepth/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zDepthEqualsMaxDepth/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zDepthEqualsMaxDepth/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series depth should be equal to maximum depth'^^xsd:string ;
+    skos:prefLabel 'zDepthEqualsMaxDepth'@en ;
+    skos:definition 'ZESHXREF integrity check that the series depth is equal to the series maximum depth'@en ;
+    skos:notation 'SDN:B06::zDepthEqualsMaxDepth'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zDepthWithinWaterDepth/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zDepthWithinWaterDepth/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zDepthWithinWaterDepth/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series depth within water depth check'^^xsd:string ;
+    skos:prefLabel 'zDepthWithinWaterDepth'@en ;
+    skos:definition 'ZESHXREF integrity check that the series depth is not deeper than the sea floor depth'@en ;
+    skos:notation 'SDN:B06::zDepthWithinWaterDepth'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zDepWithinWaterDep10m/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zDepWithinWaterDep10m/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zDepWithinWaterDep10m/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series depth within water depth plus 10m'^^xsd:string ;
+    skos:prefLabel 'zDepWithinWaterDep10m'@en ;
+    skos:definition 'ZESHXREF integrity check that the series instantaneous depth is less than the approximate bathymetric depth plus 10 m tolerance'@en ;
+    skos:notation 'SDN:B06::zDepWithinWaterDep10m'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zDepWithinWaterDep5Perc/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zDepWithinWaterDep5Perc/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zDepWithinWaterDep5Perc/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series depth within water depth plus 5 percent'^^xsd:string ;
+    skos:prefLabel 'zDepWithinWaterDep5Perc'@en ;
+    skos:definition 'ZESHXREF integrity check that the CTD series depth is less than the approximate sea floor depth plus 5 percent tolerance'@en ;
+    skos:notation 'SDN:B06::zDepWithinWaterDep5Perc'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zEndPositionsBothNull/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zEndPositionsBothNull/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zEndPositionsBothNull/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series end latitude and longitude compatible'^^xsd:string ;
+    skos:prefLabel 'zEndPositionsBothNull'@en ;
+    skos:definition 'ZESHXREF integrity check that the end latitude and longitude are either both populated, or both null'@en ;
+    skos:notation 'SDN:B06::zEndPositionsBothNull'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zEndPositionIsAtSea/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zEndPositionIsAtSea/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zEndPositionIsAtSea/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series end position at sea'^^xsd:string ;
+    skos:prefLabel 'zEndPositionIsAtSea'@en ;
+    skos:definition 'ZESHXREF integrity check that the series end position is at sea'@en ;
+    skos:notation 'SDN:B06::zEndPositionIsAtSea'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zEndPositionIsNull/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zEndPositionIsNull/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zEndPositionIsNull/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series end position should be null'^^xsd:string ;
+    skos:prefLabel 'zEndPositionIsNull'@en ;
+    skos:definition 'ZESHXREF integrity check that the series end position has not been populated'@en ;
+    skos:notation 'SDN:B06::zEndPositionIsNull'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zEndPositionIsPopulated/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zEndPositionIsPopulated/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zEndPositionIsPopulated/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series end position should be populated'^^xsd:string ;
+    skos:prefLabel 'zEndPositionIsPopulated'@en ;
+    skos:definition 'ZESHXREF integrity check that the series end position has been populated'@en ;
+    skos:notation 'SDN:B06::zEndPositionIsPopulated'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zEndTimeIsNull/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zEndTimeIsNull/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zEndTimeIsNull/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series end time should be null'^^xsd:string ;
+    skos:prefLabel 'zEndTimeIsNull'@en ;
+    skos:definition 'ZESHXREF integrity check that the series end time has not been populated'@en ;
+    skos:notation 'SDN:B06::zEndTimeIsNull'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zEndTimeIsPopulated/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zEndTimeIsPopulated/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zEndTimeIsPopulated/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series end time should be populated'^^xsd:string ;
+    skos:prefLabel 'zEndTimeIsPopulated'@en ;
+    skos:definition 'ZESHXREF integrity check that the series end time has been populated'@en ;
+    skos:notation 'SDN:B06::zEndTimeIsPopulated'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zEndsWithinActivityTime/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zEndsWithinActivityTime/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zEndsWithinActivityTime/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series ends after data activity starts'^^xsd:string ;
+    skos:prefLabel 'zEndsWithinActivityTime'@en ;
+    skos:definition 'ZESHXREF integrity check that the series ends after the start time of any Data Activities it is linked to'@en ;
+    skos:notation 'SDN:B06::zEndsWithinActivityTime'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zEndsBeforeCruiseEndTime/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zEndsBeforeCruiseEndTime/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zEndsBeforeCruiseEndTime/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series ends before cruise ends'^^xsd:string ;
+    skos:prefLabel 'zEndsBeforeCruiseEndTime'@en ;
+    skos:definition 'ZESHXREF integrity check that the series ends before the end time of any cruises it is linked to'@en ;
+    skos:notation 'SDN:B06::zEndsBeforeCruiseEndTime'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zSftIsPopulated/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zSftIsPopulated/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zSftIsPopulated/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series feature type reference populated'^^xsd:string ;
+    skos:prefLabel 'zSftIsPopulated'@en ;
+    skos:definition 'ZESHXREF integrity check that the Series Feature Type reference has been assigned'@en ;
+    skos:notation 'SDN:B06::zSftIsPopulated'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kValidLinkZyshaFs/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kValidLinkZyshaFs/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kValidLinkZyshaFs/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series fixed station reference check'^^xsd:string ;
+    skos:prefLabel 'kValidLinkZyshaFs'@en ;
+    skos:definition 'ZESHXREF integrity check that all links between the series and to Fixed Stations have valid ZAFS references'@en ;
+    skos:notation 'SDN:B06::kValidLinkZyshaFs'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zAccessPoliciesPopulated/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zAccessPoliciesPopulated/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zAccessPoliciesPopulated/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series has Access Policy check'^^xsd:string ;
+    skos:prefLabel 'zAccessPoliciesPopulated'@en ;
+    skos:definition 'ZESHXREF integrity check that the series has been linked to a data access policy'@en ;
+    skos:notation 'SDN:B06::zAccessPoliciesPopulated'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kLinkToCruise/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kLinkToCruise/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kLinkToCruise/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series linked to cruise check'^^xsd:string ;
+    skos:prefLabel 'kLinkToCruise'@en ;
+    skos:definition 'ZESHXREF integrity check whether the series is linked through ZYSHA to a cruise'@en ;
+    skos:notation 'SDN:B06::kLinkToCruise'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zSamePositionAsFixedStation/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zSamePositionAsFixedStation/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zSamePositionAsFixedStation/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series on station position'^^xsd:string ;
+    skos:prefLabel 'zSamePositionAsFixedStation'@en ;
+    skos:definition 'ZESHXREF integrity check that the series postion coincides with the positions of any Fixed stations that are linked to it'@en ;
+    skos:notation 'SDN:B06::zSamePositionAsFixedStation'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zParameterSetIsPopulated/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zParameterSetIsPopulated/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zParameterSetIsPopulated/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series parameter set reference populated'^^xsd:string ;
+    skos:prefLabel 'zParameterSetIsPopulated'@en ;
+    skos:definition 'ZESHXREF integrity check that the series parameter set reference has been populated'@en ;
+    skos:notation 'SDN:B06::zParameterSetIsPopulated'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kIrsrefIsInPolicy/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kIrsrefIsInPolicy/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kIrsrefIsInPolicy/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series policy reference check'^^xsd:string ;
+    skos:prefLabel 'kIrsrefIsInPolicy'@en ;
+    skos:definition 'ZESHXREF integrity check that ZESH access policy reference exists in POLICY'@en ;
+    skos:notation 'SDN:B06::kIrsrefIsInPolicy'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zPositionInValidRange/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zPositionInValidRange/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zPositionInValidRange/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series position range check'^^xsd:string ;
+    skos:prefLabel 'zPositionInValidRange'@en ;
+    skos:definition 'ZESHXREF integrity check that the series latitude is in the range -90 to 90 degrees, and longitude in the range -180 to 180 degrees'@en ;
+    skos:notation 'SDN:B06::zPositionInValidRange'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zStartPositionIsAtSea/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zStartPositionIsAtSea/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zStartPositionIsAtSea/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series start position at sea'^^xsd:string ;
+    skos:prefLabel 'zStartPositionIsAtSea'@en ;
+    skos:definition 'ZESHXREF integrity check that the series start position is at sea'@en ;
+    skos:notation 'SDN:B06::zStartPositionIsAtSea'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zStartTimeIsPopulated/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zStartTimeIsPopulated/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zStartTimeIsPopulated/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series start time should be populated'^^xsd:string ;
+    skos:prefLabel 'zStartTimeIsPopulated'@en ;
+    skos:definition 'ZESHXREF integrity check that the series start time has been populated'@en ;
+    skos:notation 'SDN:B06::zStartTimeIsPopulated'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zEndsAfterCruiseStartTime/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zEndsAfterCruiseStartTime/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zEndsAfterCruiseStartTime/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series starts after cruise starts'^^xsd:string ;
+    skos:prefLabel 'zEndsAfterCruiseStartTime'@en ;
+    skos:definition 'ZESHXREF integrity check that the series ends after the start time of any cruises it is linked to'@en ;
+    skos:notation 'SDN:B06::zEndsAfterCruiseStartTime'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zStartTimeBeforeEndTime/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zStartTimeBeforeEndTime/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zStartTimeBeforeEndTime/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series starts before series end time'^^xsd:string ;
+    skos:prefLabel 'zStartTimeBeforeEndTime'@en ;
+    skos:definition 'ZESHXREF integrity check that the series start time is earlier than its end time'@en ;
+    skos:notation 'SDN:B06::zStartTimeBeforeEndTime'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zTimePrecisionIsPopulated/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zTimePrecisionIsPopulated/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zTimePrecisionIsPopulated/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series time precision should be populated'^^xsd:string ;
+    skos:prefLabel 'zTimePrecisionIsPopulated'@en ;
+    skos:definition 'ZESHXREF integrity check that the series time and time precision have been populated'@en ;
+    skos:notation 'SDN:B06::zTimePrecisionIsPopulated'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zTimeWithinPrecision/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zTimeWithinPrecision/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zTimeWithinPrecision/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series time versus precision specification'^^xsd:string ;
+    skos:prefLabel 'zTimeWithinPrecision'@en ;
+    skos:definition 'ZESHXREF integrity check that the series start and end times have not been recorded to higher precision than indicated by the series time precision'@en ;
+    skos:notation 'SDN:B06::zTimeWithinPrecision'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zStartsWithinCruiseTime/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zStartsWithinCruiseTime/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zStartsWithinCruiseTime/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series within cruise time'^^xsd:string ;
+    skos:prefLabel 'zStartsWithinCruiseTime'@en ;
+    skos:definition 'ZESHXREF integrity check that the series starts within the time span of any cruises that it is linked to'@en ;
+    skos:notation 'SDN:B06::zStartsWithinCruiseTime'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zStartsWithinActivityTime/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zStartsWithinActivityTime/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zStartsWithinActivityTime/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series within data activity time'^^xsd:string ;
+    skos:prefLabel 'zStartsWithinActivityTime'@en ;
+    skos:definition 'ZESHXREF integrity check that the series starts within the time span of any Data Activities that it is linked to'@en ;
+    skos:notation 'SDN:B06::zStartsWithinActivityTime'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kMcsliaLabMatchesZesh/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kMcsliaLabMatchesZesh/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kMcsliaLabMatchesZesh/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series/MCSLIA laboratory crosscheck'^^xsd:string ;
+    skos:prefLabel 'kMcsliaLabMatchesZesh'@en ;
+    skos:definition 'ZESHXREF integrity check that the sea level site inventory laboratory code in MCSLIA matches the series laboratory code in ZESH'@en ;
+    skos:notation 'SDN:B06::kMcsliaLabMatchesZesh'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kMcsliaPositionsMatchZesh/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kMcsliaPositionsMatchZesh/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kMcsliaPositionsMatchZesh/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series/MCSLIA position crosscheck'^^xsd:string ;
+    skos:prefLabel 'kMcsliaPositionsMatchZesh'@en ;
+    skos:definition 'ZESHXREF integrity check that the sea level site inventory position in MCSLIA matches the series position in ZESH'@en ;
+    skos:notation 'SDN:B06::kMcsliaPositionsMatchZesh'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kMcslibIntervalMatchZesh/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kMcslibIntervalMatchZesh/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kMcslibIntervalMatchZesh/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series/MCSLIB interval crosscheck'^^xsd:string ;
+    skos:prefLabel 'kMcslibIntervalMatchZesh'@en ;
+    skos:definition 'ZESHXREF integrity check that the sampling interval in MCSLIB matches the series sampling interval in ZESH'@en ;
+    skos:notation 'SDN:B06::kMcslibIntervalMatchZesh'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kMcslibTimesMatchZesh/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kMcslibTimesMatchZesh/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kMcslibTimesMatchZesh/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series/MCSLIB time crosscheck'^^xsd:string ;
+    skos:prefLabel 'kMcslibTimesMatchZesh'@en ;
+    skos:definition 'ZESHXREF integrity check that series times in MCSLIB match the series times in ZESH'@en ;
+    skos:notation 'SDN:B06::kMcslibTimesMatchZesh'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kMtsiaCountryMatchesZesh/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kMtsiaCountryMatchesZesh/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kMtsiaCountryMatchesZesh/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series/MTSIA country crosscheck'^^xsd:string ;
+    skos:prefLabel 'kMtsiaCountryMatchesZesh'@en ;
+    skos:definition 'ZESHXREF integrity check that the mooring country code in MTSIA matches the series country code in ZESH'@en ;
+    skos:notation 'SDN:B06::kMtsiaCountryMatchesZesh'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kMtsiaFloorDepMatchesZesh/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kMtsiaFloorDepMatchesZesh/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kMtsiaFloorDepMatchesZesh/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series/MTSIA floor depth crosscheck'^^xsd:string ;
+    skos:prefLabel 'kMtsiaFloorDepMatchesZesh'@en ;
+    skos:definition 'ZESHXREF integrity check that the mooring sea floor depth in MTSIA matches the series sea floor depth in ZESH'@en ;
+    skos:notation 'SDN:B06::kMtsiaFloorDepMatchesZesh'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kMtsiaCincatMatchesZesh/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kMtsiaCincatMatchesZesh/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kMtsiaCincatMatchesZesh/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series/MTSIA instrument category crosscheck'^^xsd:string ;
+    skos:prefLabel 'kMtsiaCincatMatchesZesh'@en ;
+    skos:definition 'ZESHXREF integrity check that the mooring instrument category in MTSIA matches the series instrument category in ZESH'@en ;
+    skos:notation 'SDN:B06::kMtsiaCincatMatchesZesh'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kMtsiaInstDepMatchesZesh/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kMtsiaInstDepMatchesZesh/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kMtsiaInstDepMatchesZesh/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series/MTSIA instrument depth crosscheck'^^xsd:string ;
+    skos:prefLabel 'kMtsiaInstDepMatchesZesh'@en ;
+    skos:definition 'ZESHXREF integrity check that the mooring instrument depth in MTSIA matches the series instrument depth in ZESH'@en ;
+    skos:notation 'SDN:B06::kMtsiaInstDepMatchesZesh'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kMtsiaIntervalMatchesZesh/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kMtsiaIntervalMatchesZesh/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kMtsiaIntervalMatchesZesh/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series/MTSIA interval crosscheck'^^xsd:string ;
+    skos:prefLabel 'kMtsiaIntervalMatchesZesh'@en ;
+    skos:definition 'ZESHXREF integrity check that the mooring sampling interval in MTSIA matches the series sampling interval in ZESH'@en ;
+    skos:notation 'SDN:B06::kMtsiaIntervalMatchesZesh'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kMtsiaLabMatchesZesh/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kMtsiaLabMatchesZesh/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kMtsiaLabMatchesZesh/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series/MTSIA laboratory crosscheck'^^xsd:string ;
+    skos:prefLabel 'kMtsiaLabMatchesZesh'@en ;
+    skos:definition 'ZESHXREF integrity check that the mooring laboratory code in MTSIA matches the series laboratory code in ZESH'@en ;
+    skos:notation 'SDN:B06::kMtsiaLabMatchesZesh'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kMtsiaPositionsMatchZesh/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kMtsiaPositionsMatchZesh/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kMtsiaPositionsMatchZesh/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series/MTSIA positions crosscheck'^^xsd:string ;
+    skos:prefLabel 'kMtsiaPositionsMatchZesh'@en ;
+    skos:definition 'ZESHXREF integrity check that the mooring position in MTSIA matches the series position in ZESH'@en ;
+    skos:notation 'SDN:B06::kMtsiaPositionsMatchZesh'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kMtsiaTimesMatchZesh/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kMtsiaTimesMatchZesh/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kMtsiaTimesMatchZesh/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Series/MTSIA times crosscheck'^^xsd:string ;
+    skos:prefLabel 'kMtsiaTimesMatchZesh'@en ;
+    skos:definition 'ZESHXREF integrity check that the mooring time in MTSIA matches the series time in ZESH'@en ;
+    skos:notation 'SDN:B06::kMtsiaTimesMatchZesh'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dNoDualDatime/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dNoDualDatime/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dNoDualDatime/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Single time channel check'^^xsd:string ;
+    skos:prefLabel 'dNoDualDatime'@en ;
+    skos:definition 'CHECKNQXF integrity check that there is only one time channel (ie: one day number/day fraction pair).'@en ;
+    skos:notation 'SDN:B06::dNoDualDatime'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/kStationHasSpatialFeature/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/kStationHasSpatialFeature/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/kStationHasSpatialFeature/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Station spatial feature check'^^xsd:string ;
+    skos:prefLabel 'kStationHasSpatialFeature'@en ;
+    skos:definition 'ZESHXREF integrity check that all Fixed Stations linked to the series are linked to at least one Spatial Feature'@en ;
+    skos:notation 'SDN:B06::kStationHasSpatialFeature'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dAfterPresent/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dAfterPresent/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dAfterPresent/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Times after present'^^xsd:string ;
+    skos:prefLabel 'dAfterPresent'@en ;
+    skos:definition 'CHECKNQXF integrity check that the time channel does not overtake the present. We cannot log future observations.'@en ;
+    skos:notation 'SDN:B06::dAfterPresent'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dBegEndNullCycle/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dBegEndNullCycle/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dBegEndNullCycle/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Trailing null cycles check'^^xsd:string ;
+    skos:prefLabel 'dBegEndNullCycle'@en ;
+    skos:definition 'CHECKNQXF integrity check that the file does not begin or end with cycles where only the time channel is non-null.'@en ;
+    skos:notation 'SDN:B06::dBegEndNullCycle'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/dChanFlagLimitZ/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/dChanFlagLimitZ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/dChanFlagLimitZ/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Unflagged data range check'^^xsd:string ;
+    skos:prefLabel 'dChanFlagLimitZ'@en ;
+    skos:definition 'CHECKNQXF integrity check that the channel limits calculated over unflagged data are within the limits given by the Parameter Dictionary for that parameter.'@en ;
+    skos:notation 'SDN:B06::dChanFlagLimitZ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zWaterDepthProvPopulated/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zWaterDepthProvPopulated/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zWaterDepthProvPopulated/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Water depth provenance check'^^xsd:string ;
+    skos:prefLabel 'zWaterDepthProvPopulated'@en ;
+    skos:definition 'ZESHXREF integrity check that the series Sea Floor Depth Provenance has been populated'@en ;
+    skos:notation 'SDN:B06::zWaterDepthProvPopulated'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/zWaterDepthQualified/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/zWaterDepthQualified/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/zWaterDepthQualified/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'Water depth qualification check'^^xsd:string ;
+    skos:prefLabel 'zWaterDepthQualified'@en ;
+    skos:definition 'ZESHXREF integrity check that the series sea floor depth and its qualifier have both been populated'@en ;
+    skos:notation 'SDN:B06::zWaterDepthQualified'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/xZadaTimesValid/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/xZadaTimesValid/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/xZadaTimesValid/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'ZADA data activity times check'^^xsd:string ;
+    skos:prefLabel 'xZadaTimesValid'@en ;
+    skos:definition 'ZESHXREF integrity check that Data Activity records in ZADA that are linked to the series have valid times'@en ;
+    skos:notation 'SDN:B06::xZadaTimesValid'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/xZadaZiloValid/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/xZadaZiloValid/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/xZadaZiloValid/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'ZADA load number check'^^xsd:string ;
+    skos:prefLabel 'xZadaZiloValid'@en ;
+    skos:definition 'ZESHXREF integrity check that Data Activity records in ZADA that are linked to the series have load numbers recorded in ZILO'@en ;
+    skos:notation 'SDN:B06::xZadaZiloValid'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/xZafsZiloValid/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/xZafsZiloValid/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/xZafsZiloValid/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'ZAFS load number check'^^xsd:string ;
+    skos:prefLabel 'xZafsZiloValid'@en ;
+    skos:definition 'ZESHXREF integrity check that Fixed Station records in ZAFS that are linked to the series have load numbers recorded in ZILO'@en ;
+    skos:notation 'SDN:B06::xZafsZiloValid'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/xZafsPositionAtSea/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/xZafsPositionAtSea/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/xZafsPositionAtSea/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'ZAFS station at sea check'^^xsd:string ;
+    skos:prefLabel 'xZafsPositionAtSea'@en ;
+    skos:definition 'ZESHXREF integrity check that Fixed Station records in ZAFS that are linked to the series have station position at sea'@en ;
+    skos:notation 'SDN:B06::xZafsPositionAtSea'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/xZafsDepthValid/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/xZafsDepthValid/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/xZafsDepthValid/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'ZAFS station depth range check'^^xsd:string ;
+    skos:prefLabel 'xZafsDepthValid'@en ;
+    skos:definition 'ZESHXREF integrity check that Fixed Station records in ZAFS that are linked to the series have station depth within a sensible range'@en ;
+    skos:notation 'SDN:B06::xZafsDepthValid'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/xZafsPositionRange/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/xZafsPositionRange/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/xZafsPositionRange/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'ZAFS station position range check'^^xsd:string ;
+    skos:prefLabel 'xZafsPositionRange'@en ;
+    skos:definition 'ZESHXREF integrity check that Fixed Station records in ZAFS that are linked to the series have latitude in  the range -90 to 90 degrees, and longitude in the range -180 to 180 degrees'@en ;
+    skos:notation 'SDN:B06::xZafsPositionRange'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/xZapjZiloValid/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/xZapjZiloValid/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/xZapjZiloValid/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'ZAPJ load number check'^^xsd:string ;
+    skos:prefLabel 'xZapjZiloValid'@en ;
+    skos:definition 'ZESHXREF integrity check that Project records in ZAPJ that are linked to the series have load numbers recorded in ZILO'@en ;
+    skos:notation 'SDN:B06::xZapjZiloValid'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B06/current/xZapjProjectHasName/1/> .
+<http://vocab.nerc.ac.uk/collection/B06/current/xZapjProjectHasName/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B06/current/xZapjProjectHasName/>;
+    dc:modified '2014-07-08T14:49:08'^^xsd:dateTime ;
+    skos:altLabel 'ZAPJ project name check'^^xsd:string ;
+    skos:prefLabel 'xZapjProjectHasName'@en ;
+    skos:definition 'ZESHXREF integrity check that Project records in ZAPJ that are linked to the series have a project name'@en ;
+    skos:notation 'SDN:B06::xZapjProjectHasName'^^xsd:string .

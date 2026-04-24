@@ -1,0 +1,127 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S11/2009_01_01_00_00_00_2010_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S11/2007_01_01_00_00_00_2008_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2010-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S11/current/S1123/2/> .
+<http://vocab.nerc.ac.uk/collection/S11/current/S1123/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S11/current/S1123/>;
+    dc:modified '2010-06-21T16:54:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'furcilia'@en ;
+    skos:definition 'Fourth free-swimming planktonic larval stage of euphausiaceans with stalked eyes and the general body form of the adult.'@en ;
+    skos:notation 'SDN:S11::S1123'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S11/current/S1161/1/> .
+<http://vocab.nerc.ac.uk/collection/S11/current/S1161/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S11/current/S1161/>;
+    dc:modified '2010-06-21T16:34:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mysis'@en ;
+    skos:definition 'Free-swimming planktonic larval forms of decapod crustaceans (especially shrimps) with three recognised development sub-stages. First sub-stage produced from protozoeae by moulting.'@en ;
+    skos:notation 'SDN:S11::S1161'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S11/current/S1158/2/> .
+<http://vocab.nerc.ac.uk/collection/S11/current/S1158/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S11/current/S1158/>;
+    dc:modified '2010-03-05T09:59:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'pre-weaned pup'@en ;
+    skos:definition 'A juvenile pinniped that is less than one year old and is ingesting milk produced by an adult female.'@en ;
+    skos:notation 'SDN:S11::S1158'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S11/current/S1159/1/> .
+<http://vocab.nerc.ac.uk/collection/S11/current/S1159/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S11/current/S1159/>;
+    dc:modified '2010-03-05T09:59:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'post-weaned pup'@en ;
+    skos:definition 'A juvenile pinniped that is less than one year old and is nutritionally independent and no longer ingesting milk produced by an adult female..'@en ;
+    skos:notation 'SDN:S11::S1159'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S11/current/S1157/1/> .
+<http://vocab.nerc.ac.uk/collection/S11/current/S1157/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S11/current/S1157/>;
+    dc:modified '2010-02-09T10:50:38'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'pup'@en ;
+    skos:definition 'A juvenile pinniped that is less than one year old'@en ;
+    skos:notation 'SDN:S11::S1157'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S11/current/S1116/3/> .
+<http://vocab.nerc.ac.uk/collection/S11/current/S1116/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S11/current/S1116/>;
+    dc:modified '2010-02-09T10:44:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'adult'@en ;
+    skos:definition 'An animal that has reached sexual maturity'@en ;
+    skos:notation 'SDN:S11::S1116'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S11/current/S1127/2/> .
+<http://vocab.nerc.ac.uk/collection/S11/current/S1127/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S11/current/S1127/>;
+    dc:modified '2010-02-09T10:43:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'juvenile'@en ;
+    skos:definition 'An animal that has not yet reached sexual maturity'@en ;
+    skos:notation 'SDN:S11::S1127'^^xsd:string .

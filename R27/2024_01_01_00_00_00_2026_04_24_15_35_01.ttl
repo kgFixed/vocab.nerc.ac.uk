@@ -1,0 +1,586 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/R27/2024_01_01_00_00_00_2026_04_24_15_35_01.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/R27/2022_01_01_00_00_00_2023_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-24T15:35:01'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/AANDERAA_OPTODE_3930/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/AANDERAA_OPTODE_3930/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/AANDERAA_OPTODE_3930/>;
+    dc:modified '2026-03-09T09:11:24'^^xsd:dateTime ;
+    skos:altLabel 'AANDERAA_OPTODE_3930'^^xsd:string ;
+    skos:prefLabel 'Aanderaa 3930 oxygen optode'@en ;
+    skos:definition 'Deprecated as it is not used on Argo Floats. A stand-alone oxygen optode with integrated temperature sensor, manufactured by Aanderaa. This instrument exploits the physio-chemical principle of dynamic fluorescence quenching to measure absolute oxygen concentration and percent saturation. Depth rating: 2000 m or 6000 m; oxygen concentration accuracy of < 8 uM or 5 %, and resolution of < 1 uM; air saturation accuracy of < 5 %, and resolution of 0.4 %; settling time (63 %): < 25 s.'@en ;
+    skos:notation 'SDN:R27::AANDERAA_OPTODE_3930'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE83_OPTODE/2/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE83_OPTODE/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE83_OPTODE/>;
+    dc:modified '2025-11-18T12:09:41'^^xsd:dateTime ;
+    skos:altLabel 'SBE83_OPTODE'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE83 oxygen optode'@en ;
+    skos:definition 'An optical dissolved oxygen sensor, manufactured by Sea-Bird Scientific and designed to be integrated into a pumped CTD system.'@en ;
+    skos:notation 'SDN:R27::SBE83_OPTODE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/RBR_CTD/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/RBR_CTD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/RBR_CTD/>;
+    dc:modified '2025-10-08T10:58:28'^^xsd:dateTime ;
+    skos:altLabel 'RBR_CTD'^^xsd:string ;
+    skos:prefLabel 'RBR CTD'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors, manufactured by RBR for moored applications. This cell was not optimized for use on profiling floats, and this was used in only one test deployment. The system supports both spot and continuous sampling modes, with sampling speeds configurable to up to 12 Hz. The depth rating for a standard profile is 2000 dbar, with energy consumption of approximately 700 J.'@en ;
+    skos:notation 'SDN:R27::RBR_CTD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/QUARTZDYNE_DSB301-10-C85/4/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/QUARTZDYNE_DSB301-10-C85/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/QUARTZDYNE_DSB301-10-C85/>;
+    dc:modified '2025-09-02T12:51:44'^^xsd:dateTime ;
+    skos:altLabel 'QUARTZDYNE_DSB301-10-C85'^^xsd:string ;
+    skos:prefLabel 'Quartzdyne DSB301-10-C85 pressure sensor'@en ;
+    skos:definition 'Term deprecated, replaced by \'https://vocab.nerc.ac.uk/collection/R27/current/DSB301-10-C85/\'. A thickness shear mode quartz resonator pressure sensor manufactured by Quartzdyne. Pressure range: 0 dbar - 6900 dbar; field accuracy: 0.02 % Full Scale (FS) between -40 degC and 85 degC.'@en ;
+    skos:notation 'SDN:R27::QUARTZDYNE_DSB301-10-C85'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/ECO_BB/2/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/ECO_BB/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/ECO_BB/>;
+    dc:modified '2025-08-28T11:45:52'^^xsd:dateTime ;
+    skos:altLabel 'ECO_BB'^^xsd:string ;
+    skos:prefLabel 'ECO BB scattering meter'@en ;
+    skos:definition 'An optical sensor measuring scattering at a single 117 deg angle, configurable to 470 nm, 532 nm or 660 nm wavelength and depth-rated to 600 m. The scattering sensor has an in-water centroid angle of 124 deg. The instrument is part of the Environmental Characterization Optics (ECO) series tools, originally developed and manufactured at WET Labs and rebranded as a Sea-Bird Scientific product following the company\'s acquisition by Danaher in 2010.'@en ;
+    skos:notation 'SDN:R27::ECO_BB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/OCR504_ICSW/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/OCR504_ICSW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/OCR504_ICSW/>;
+    dc:modified '2025-08-28T11:45:52'^^xsd:dateTime ;
+    skos:altLabel 'OCR504_ICSW'^^xsd:string ;
+    skos:prefLabel 'OCR-504 multispectral radiometer (downwelling irradiance)'@en ;
+    skos:definition 'Replaces deprecated term  \'http://vocab.nerc.ac.uk/collection/R27/current/SATLANTIC_OCR504_ICSW\'. A cosine-response, multispectral radiometer configured to measure downwelling irradiance in water. Number of channels: 4; bandwidth range: 400 nm to 865 nm (standard), or 305 nm, 325 nm, 340 nm, 380 nm (UV); sampling rate: 7 Hz - 24 Hz; spectral bandwidth: 10 nm or 20 nm. The instrument was originally developed and manufactured at Satlantic, and was rebranded as a Sea-Bird Scientific product following the company\'s acquisition by Danaher in 2011.'@en ;
+    skos:notation 'SDN:R27::OCR504_ICSW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/OCR504_R10W/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/OCR504_R10W/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/OCR504_R10W/>;
+    dc:modified '2025-08-28T11:45:52'^^xsd:dateTime ;
+    skos:altLabel 'OCR504_R10W'^^xsd:string ;
+    skos:prefLabel 'OCR-504 multispectral radiometer (upwelling radiance)'@en ;
+    skos:definition 'Replaces deprecated term  \'http://vocab.nerc.ac.uk/collection/R27/current/SATLANTIC_OCR504_R10W\'. A cosine-response, multispectral radiometer configured to measure upwelling radiance in water. Number of channels: 4; field of view: 10 deg (half angle, half maximum); bandwidth range: 400 nm to 865 nm (standard), or 305 nm, 325 nm, 340 nm, 380 nm (UV); sampling rate: 7 Hz - 24 Hz; spectral bandwidth: 10 nm or 20 nm. The instrument was originally developed and manufactured at Satlantic, and was rebranded as a Sea-Bird Scientific product following the company\'s acquisition by Danaher in 2011.'@en ;
+    skos:notation 'SDN:R27::OCR504_R10W'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SATLANTIC_OCR504_ICSW/2/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SATLANTIC_OCR504_ICSW/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SATLANTIC_OCR504_ICSW/>;
+    dc:modified '2025-08-28T11:45:52'^^xsd:dateTime ;
+    skos:altLabel 'SATLANTIC_OCR504_ICSW'^^xsd:string ;
+    skos:prefLabel 'OCR-504 multispectral radiometer (downwelling irradiance)'@en ;
+    skos:definition 'A cosine-response, multispectral radiometer configured to measure downwelling irradiance in water. Number of channels: 4; bandwidth range: 400 nm to 865 nm (standard), or 305 nm, 325 nm, 340 nm, 380 nm (UV); sampling rate: 7 Hz – 24 Hz; spectral bandwidth: 10 nm or 20 nm. The instrument was originally developed and manufactured at Satlantic, and was rebranded as a Sea-Bird Scientific product following the company\'s acquisition by Danaher in 2011.'@en ;
+    skos:notation 'SDN:R27::SATLANTIC_OCR504_ICSW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SATLANTIC_OCR504_R10W/2/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SATLANTIC_OCR504_R10W/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SATLANTIC_OCR504_R10W/>;
+    dc:modified '2025-08-28T11:45:52'^^xsd:dateTime ;
+    skos:altLabel 'SATLANTIC_OCR504_R10W'^^xsd:string ;
+    skos:prefLabel 'OCR-504 multispectral radiometer (upwelling radiance)'@en ;
+    skos:definition 'A cosine-response, multispectral radiometer configured to measure upwelling radiance in water. Number of channels: 4; field of view: 10 deg (half angle, half maximum); bandwidth range: 400 nm to 865 nm (standard), or 305 nm, 325 nm, 340 nm, 380 nm (UV); sampling rate: 7 Hz – 24 Hz; spectral bandwidth: 10 nm or 20 nm. The instrument was originally developed and manufactured at Satlantic, and was rebranded as a Sea-Bird Scientific product following the company\'s acquisition by Danaher in 2011.'@en ;
+    skos:notation 'SDN:R27::SATLANTIC_OCR504_R10W'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SATLANTIC_OCR507_ICSW/2/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SATLANTIC_OCR507_ICSW/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SATLANTIC_OCR507_ICSW/>;
+    dc:modified '2025-08-28T11:45:52'^^xsd:dateTime ;
+    skos:altLabel 'SATLANTIC_OCR507_ICSW'^^xsd:string ;
+    skos:prefLabel 'OCR-507 multispectral radiometer (downwelling irradiance)'@en ;
+    skos:definition 'A cosine-response, multispectral radiometer configured to measure downwelling irradiance in water. Number of channels: 7; bandwidth range: 400 nm to 865 nm (standard), or 305 nm, 325 nm, 340 nm, 380 nm (UV); sampling rate: 7 Hz – 24 Hz; spectral bandwidth: 10 nm or 20 nm. The instrument was originally developed and manufactured at Satlantic, and was rebranded as a Sea-Bird Scientific product following the company\'s acquisition by Danaher in 2011.'@en ;
+    skos:notation 'SDN:R27::SATLANTIC_OCR507_ICSW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SATLANTIC_OCR507_ICSWR10W/2/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SATLANTIC_OCR507_ICSWR10W/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SATLANTIC_OCR507_ICSWR10W/>;
+    dc:modified '2025-08-28T11:45:52'^^xsd:dateTime ;
+    skos:altLabel 'SATLANTIC_OCR507_ICSWR10W'^^xsd:string ;
+    skos:prefLabel 'OCR-507 multispectral radiometer (downwelling irradiance and upwelling radiance)'@en ;
+    skos:definition 'A cosine-response, multispectral radiometer configured to measure downwelling irradiance and upwelling radiance in water. Number of channels: 7; upwelling radiance field of view: 10 deg (half angle, half maximum); bandwidth range: 400 nm to 865 nm (standard); spectral bandwidth: 10 nm or 20 nm. The instrument was originally developed and manufactured at Satlantic, and was rebranded as a Sea-Bird Scientific product following the company\'s acquisition by Danaher in 2011.'@en ;
+    skos:notation 'SDN:R27::SATLANTIC_OCR507_ICSWR10W'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SATLANTIC_OCR507_R10W/2/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SATLANTIC_OCR507_R10W/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SATLANTIC_OCR507_R10W/>;
+    dc:modified '2025-08-28T11:45:52'^^xsd:dateTime ;
+    skos:altLabel 'SATLANTIC_OCR507_R10W'^^xsd:string ;
+    skos:prefLabel 'OCR-507 multispectral radiometer (upwelling radiance)'@en ;
+    skos:definition 'A cosine-response, multispectral radiometer configured to measure upwelling radiance in water. Number of channels: 7; field of view: 10 deg (half angle, half maximum); bandwidth range: 400 nm to 865 nm (standard), or 305 nm, 325 nm, 340 nm, 380 nm (UV); sampling rate: 7 Hz – 24 Hz; spectral bandwidth: 10 nm or 20 nm. The instrument was originally developed and manufactured at Satlantic, and was rebranded as a Sea-Bird Scientific product following the company\'s acquisition by Danaher in 2011.'@en ;
+    skos:notation 'SDN:R27::SATLANTIC_OCR507_R10W'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/DSB301-10-C85/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/DSB301-10-C85/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/DSB301-10-C85/>;
+    dc:modified '2025-08-20T09:29:53'^^xsd:dateTime ;
+    skos:altLabel 'DSB301-10-C85'^^xsd:string ;
+    skos:prefLabel 'Quartzdyne DSB301-10-C85 pressure sensor'@en ;
+    skos:definition 'A thickness shear mode quartz resonator pressure sensor manufactured by Quartzdyne. Pressure range: 0 dbar - 6900 dbar; field accuracy: 0.02 % Full Scale (FS) between -40 degC and 85 degC.'@en ;
+    skos:notation 'SDN:R27::DSB301-10-C85'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/DRUCK_10153PSIA/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/DRUCK_10153PSIA/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/DRUCK_10153PSIA/>;
+    dc:modified '2025-08-18T11:39:10'^^xsd:dateTime ;
+    skos:altLabel 'DRUCK_10153PSIA'^^xsd:string ;
+    skos:prefLabel 'Druck pressure sensor with 10153 PSIA rating'@en ;
+    skos:definition 'A strain gauge pressure sensor rated to a maximum pressure of 10153 pounds per square inch absolute manufactured by Druck.'@en ;
+    skos:notation 'SDN:R27::DRUCK_10153PSIA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_IDO_V2.0b/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_IDO_V2.0b/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_IDO_V2.0b/>;
+    dc:modified '2025-04-03T11:54:30'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_IDO_V2.0b'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD with an Integrated Dissolved Oxygen (IDO) sensor V2.0b'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensor, as well as an electrochemical Integrated Dissolved Oxygen sensor with pump-controlled, T-C ducted flow. The unit is designed for deployment on profiling floats. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface. This SBE41CP IDO model has firmware version 2.0b.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_IDO_V2.0b'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V5.3.2/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V5.3.2/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V5.3.2/>;
+    dc:modified '2025-04-03T11:54:30'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_V5.3.2'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD V5.3.2'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface. This SBE41CP model has firmware version 5.3.2.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_V5.3.2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V7.2.3/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V7.2.3/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V7.2.3/>;
+    dc:modified '2025-04-03T11:54:30'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_V7.2.3'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD V7.2.3'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. The unit is designed for deployment on profiling floats. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface. This SBE41CP model has firmware version 7.2.3.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_V7.2.3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V7.2.5/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V7.2.5/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V7.2.5/>;
+    dc:modified '2025-04-03T11:54:30'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_V7.2.5'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD V7.2.5'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. The unit is designed for deployment on profiling floats. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface. This SBE41CP model has firmware version 7.2.5.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_V7.2.5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41N_V5.3.0/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41N_V5.3.0/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41N_V5.3.0/>;
+    dc:modified '2025-04-03T11:54:30'^^xsd:dateTime ;
+    skos:altLabel 'SBE41N_V5.3.0'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41N CTD V5.3.0'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. The unit is designed for deployment on profiling floats hosting multiple biogeochemical (BGC) sensors. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent. Data from all the float\'s sensors, including the optional bolt-on ones, are integrated in the data stream and transmitted to the float controller when the float reaches the surface. This SBE41N model has firmware version 5.3.0.'@en ;
+    skos:notation 'SDN:R27::SBE41N_V5.3.0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41N_V5.3.4/2/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41N_V5.3.4/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41N_V5.3.4/>;
+    dc:modified '2025-04-03T11:54:30'^^xsd:dateTime ;
+    skos:altLabel 'SBE41N_V5.3.4'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41N CTD V5.3.4'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow, manufactured by Sea-Bir Scientific. The unit is designed for deployment on profiling floats hosting multiple biogeochemical (BGC) sensors. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent. Data from all the float\'s sensors, including the optional bolt-on ones, are integrated in the data stream and transmitted to the float controller when the float reaches the surface. This SBE41N model has firmware version 5.3.4.'@en ;
+    skos:notation 'SDN:R27::SBE41N_V5.3.4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41N_V5.4.0/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41N_V5.4.0/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41N_V5.4.0/>;
+    dc:modified '2025-04-03T11:54:30'^^xsd:dateTime ;
+    skos:altLabel 'SBE41N_V5.4.0'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41N CTD V5.4.0'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. The unit is designed for deployment on profiling floats hosting multiple biogeochemical (BGC) sensors. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent. Data from all the float\'s sensors, including the optional bolt-on ones, are integrated in the data stream and transmitted to the float controller when the float reaches the surface. This SBE41N model has firmware version 5.4.0.'@en ;
+    skos:notation 'SDN:R27::SBE41N_V5.4.0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V4.5.2/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V4.5.2/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V4.5.2/>;
+    dc:modified '2025-04-03T11:54:30'^^xsd:dateTime ;
+    skos:altLabel 'SBE61_V4.5.2'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 61 CTD V4.5.2'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. The unit is designed for deployment on Deep Argo profiling floats reaching 7000 m depth. This SBE61 model has firmware version 4.5.2.'@en ;
+    skos:notation 'SDN:R27::SBE61_V4.5.2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V4.5.3/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V4.5.3/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V4.5.3/>;
+    dc:modified '2025-04-03T11:54:30'^^xsd:dateTime ;
+    skos:altLabel 'SBE61_V4.5.3'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 61 CTD V4.5.3'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. The unit is designed for deployment on Deep Argo profiling floats reaching 7000 m depth. This SBE61 model has firmware version 4.5.3.'@en ;
+    skos:notation 'SDN:R27::SBE61_V4.5.3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V5.0.0/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V5.0.0/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V5.0.0/>;
+    dc:modified '2025-04-03T11:54:30'^^xsd:dateTime ;
+    skos:altLabel 'SBE61_V5.0.0'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 61 CTD V5.0.0'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. The unit is designed for deployment on Deep Argo profiling floats reaching 7000 m depth. This SBE61 model has firmware version 5.0.0.'@en ;
+    skos:notation 'SDN:R27::SBE61_V5.0.0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V5.0.1/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V5.0.1/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V5.0.1/>;
+    dc:modified '2025-04-03T11:54:30'^^xsd:dateTime ;
+    skos:altLabel 'SBE61_V5.0.1'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 61 CTD V5.0.1'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. The unit is designed for deployment on Deep Argo profiling floats reaching 7000 m depth. This SBE61 model has firmware version 5.0.1.'@en ;
+    skos:notation 'SDN:R27::SBE61_V5.0.1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V5.0.10/2/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V5.0.10/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V5.0.10/>;
+    dc:modified '2025-04-03T11:54:30'^^xsd:dateTime ;
+    skos:altLabel 'SBE61_V5.0.10'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 61 CTD V5.0.10'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. The unit is designed for deployment on Deep Argo profiling floats reaching 7000 m depth. This SBE61 model has firmware version 5.0.9.'@en ;
+    skos:notation 'SDN:R27::SBE61_V5.0.10'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V5.0.12/2/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V5.0.12/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V5.0.12/>;
+    dc:modified '2025-04-03T11:54:30'^^xsd:dateTime ;
+    skos:altLabel 'SBE61_V5.0.12'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 61 CTD V5.0.12'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. The unit is designed for deployment on Deep Argo profiling floats reaching 7000 m depth. This SBE61 model has firmware version 5.0.9.'@en ;
+    skos:notation 'SDN:R27::SBE61_V5.0.12'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V5.0.2/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V5.0.2/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V5.0.2/>;
+    dc:modified '2025-04-03T11:54:30'^^xsd:dateTime ;
+    skos:altLabel 'SBE61_V5.0.2'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 61 CTD V5.0.2'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. The unit is designed for deployment on Deep Argo profiling floats reaching 7000 m depth. This SBE61 model has firmware version 5.0.2.'@en ;
+    skos:notation 'SDN:R27::SBE61_V5.0.2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V5.0.3/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V5.0.3/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V5.0.3/>;
+    dc:modified '2025-04-03T11:54:30'^^xsd:dateTime ;
+    skos:altLabel 'SBE61_V5.0.3'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 61 CTD V5.0.3'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. The unit is designed for deployment on Deep Argo profiling floats reaching 7000 m depth. This SBE61 model has firmware version 5.0.3.'@en ;
+    skos:notation 'SDN:R27::SBE61_V5.0.3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V5.0.9/2/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V5.0.9/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE61_V5.0.9/>;
+    dc:modified '2025-04-03T11:54:30'^^xsd:dateTime ;
+    skos:altLabel 'SBE61_V5.0.9'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 61 CTD V5.0.9'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. The unit is designed for deployment on Deep Argo profiling floats reaching 7000 m depth. This SBE61 model has firmware version 5.0.9.'@en ;
+    skos:notation 'SDN:R27::SBE61_V5.0.9'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1/>;
+    dc:modified '2025-04-03T11:54:29'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_V1'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD V1'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface. This SBE41CP model has firmware version 1.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_V1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.1/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.1/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.1/>;
+    dc:modified '2025-04-03T11:54:29'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_V1.1'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD V1.1'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface. This SBE41CP model has firmware version 1.1.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_V1.1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.2/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.2/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.2/>;
+    dc:modified '2025-04-03T11:54:29'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_V1.2'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD V1.2'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface. This SBE41CP model has firmware version 1.2.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_V1.2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.2a/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.2a/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.2a/>;
+    dc:modified '2025-04-03T11:54:29'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_V1.2a'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD V1.2a'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface. This SBE41CP model has firmware version 1.2a.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_V1.2a'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.3/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.3/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.3/>;
+    dc:modified '2025-04-03T11:54:29'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_V1.3'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD V1.3'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface. This SBE41CP model has firmware version 1.3.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_V1.3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.3b/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.3b/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.3b/>;
+    dc:modified '2025-04-03T11:54:29'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_V1.3b'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD V1.3b'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface. This SBE41CP model has firmware version 1.3b.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_V1.3b'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.4/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.4/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.4/>;
+    dc:modified '2025-04-03T11:54:29'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_V1.4'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD V1.4'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface. This SBE41CP model has firmware version 1.4.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_V1.4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.5/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.5/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.5/>;
+    dc:modified '2025-04-03T11:54:29'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_V1.5'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD V1.5'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface. This SBE41CP model has firmware version 1.5.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_V1.5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.7/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.7/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.7/>;
+    dc:modified '2025-04-03T11:54:29'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_V1.7'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD V1.7'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface. This SBE41CP model has firmware version 1.7.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_V1.7'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.8/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.8/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.8/>;
+    dc:modified '2025-04-03T11:54:29'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_V1.8'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD V1.8'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface. This SBE41CP model has firmware version 1.8.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_V1.8'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.9/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.9/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.9/>;
+    dc:modified '2025-04-03T11:54:29'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_V1.9'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD V1.9'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface. This SBE41CP model has firmware version 1.9.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_V1.9'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.9a/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.9a/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V1.9a/>;
+    dc:modified '2025-04-03T11:54:29'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_V1.9a'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD V1.9a'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface. This SBE41CP model has firmware version 1.9a.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_V1.9a'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V2/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V2/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V2/>;
+    dc:modified '2025-04-03T11:54:29'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_V2'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD V2'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface. This SBE41CP model has firmware version 2.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_V2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V3/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V3/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V3/>;
+    dc:modified '2025-04-03T11:54:29'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_V3'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD V3'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface. This SBE41CP model has firmware version 3.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_V3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V3.0a/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V3.0a/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V3.0a/>;
+    dc:modified '2025-04-03T11:54:29'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_V3.0a'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD V3.0a'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface. This SBE41CP model has firmware version 3.0a.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_V3.0a'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V3.0c/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V3.0c/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V3.0c/>;
+    dc:modified '2025-04-03T11:54:29'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_V3.0c'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD V3.0c'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface. This SBE41CP model has firmware version 3.0c.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_V3.0c'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V4.4.0/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V4.4.0/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V4.4.0/>;
+    dc:modified '2025-04-03T11:54:29'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_V4.4.0'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD V4.4.0'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface. This SBE41CP model has firmware version 4.4.0.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_V4.4.0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V5.0.1/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V5.0.1/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V5.0.1/>;
+    dc:modified '2025-04-03T11:54:29'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_V5.0.1'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD V5.0.1'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface. This SBE41CP model has firmware version 5.0.1.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_V5.0.1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V5.3.0/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V5.3.0/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V5.3.0/>;
+    dc:modified '2025-04-03T11:54:29'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_V5.3.0'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD V5.3.0'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface. This SBE41CP model has firmware version 5.3.0.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_V5.3.0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V5.3.1/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V5.3.1/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_V5.3.1/>;
+    dc:modified '2025-04-03T11:54:29'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_V5.3.1'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD V5.3.1'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface. This SBE41CP model has firmware version 5.3.1.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_V5.3.1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41_IDO_V3.0/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41_IDO_V3.0/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41_IDO_V3.0/>;
+    dc:modified '2025-04-03T11:54:29'^^xsd:dateTime ;
+    skos:altLabel 'SBE41_IDO_V3.0'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41 CTD with an Integrated Dissolved Oxygen (IDO) sensor V3.0'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensor, as well as an electrochemical Integrated Dissolved Oxygen sensor with pump-controlled, T-C ducted flow. The unit is designed for deployment on profiling floats. During float ascent, spot samples are taken and transmitted to the float controller. This SBE41 IDO model has firmware version 3.0.'@en ;
+    skos:notation 'SDN:R27::SBE41_IDO_V3.0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41_IDO_V1.0c/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41_IDO_V1.0c/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41_IDO_V1.0c/>;
+    dc:modified '2025-04-03T11:54:28'^^xsd:dateTime ;
+    skos:altLabel 'SBE41_IDO_V1.0c'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41 CTD with an Integrated Dissolved Oxygen (IDO) sensor V1.0c'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensor, as well as an electrochemical Integrated Dissolved Oxygen sensor with pump-controlled, T-C ducted flow. The unit is designed for deployment on profiling floats. During float ascent, spot samples are taken and transmitted to the float controller. This SBE41 IDO model has firmware version 1.0c.'@en ;
+    skos:notation 'SDN:R27::SBE41_IDO_V1.0c'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41_IDO_V2.0/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41_IDO_V2.0/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41_IDO_V2.0/>;
+    dc:modified '2025-04-03T11:54:28'^^xsd:dateTime ;
+    skos:altLabel 'SBE41_IDO_V2.0'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41 CTD with an Integrated Dissolved Oxygen (IDO) sensor V2.0'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensor, as well as an electrochemical Integrated Dissolved Oxygen sensor with pump-controlled, T-C ducted flow. The unit is designed for deployment on profiling floats. During float ascent, spot samples are taken and transmitted to the float controller. This SBE41 IDO model has firmware version 2.0c.'@en ;
+    skos:notation 'SDN:R27::SBE41_IDO_V2.0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41_V2.5/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41_V2.5/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41_V2.5/>;
+    dc:modified '2025-04-03T11:54:28'^^xsd:dateTime ;
+    skos:altLabel 'SBE41_V2.5'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41 CTD V2.5'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. During float ascent, spot samples are taken and transmitted to the float controller. This SBE41 model has firmware version 2.5.'@en ;
+    skos:notation 'SDN:R27::SBE41_V2.5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41_V2.6/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41_V2.6/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41_V2.6/>;
+    dc:modified '2025-04-03T11:54:28'^^xsd:dateTime ;
+    skos:altLabel 'SBE41_V2.6'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41 CTD V2.6'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. During float ascent, spot samples are taken and transmitted to the float controller. This SBE41 model has firmware version 2.6.'@en ;
+    skos:notation 'SDN:R27::SBE41_V2.6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41_V3/3/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41_V3/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41_V3/>;
+    dc:modified '2025-04-03T11:54:28'^^xsd:dateTime ;
+    skos:altLabel 'SBE41_V3'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41 CTD V3'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. During float ascent, spot samples are taken and transmitted to the float controller. This SBE41 model has firmware version 3.'@en ;
+    skos:notation 'SDN:R27::SBE41_V3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_IDO/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_IDO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41CP_IDO/>;
+    dc:modified '2025-03-31T13:56:07'^^xsd:dateTime ;
+    skos:altLabel 'SBE41CP_IDO'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41CP CTD with an Integrated Dissolved Oxygen (IDO) sensor'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensor, as well as an electrochemical Integrated Dissolved Oxygen sensor with pump-controlled, T-C ducted flow. The unit is designed for deployment on profiling floats. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent, logging the data in internal memory and transmitting to the float controller when the float reaches the surface.'@en ;
+    skos:notation 'SDN:R27::SBE41CP_IDO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41_IDO/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41_IDO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41_IDO/>;
+    dc:modified '2025-03-31T13:56:07'^^xsd:dateTime ;
+    skos:altLabel 'SBE41_IDO'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41 CTD with an Integrated Dissolved Oxygen (IDO)'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensor, as well as an electrochemical Integrated Dissolved Oxygen sensor with pump-controlled, T-C ducted flow. The unit is designed for deployment on profiling floats. During float ascent, spot samples are taken and transmitted to the float controller.'@en ;
+    skos:notation 'SDN:R27::SBE41_IDO'^^xsd:string .

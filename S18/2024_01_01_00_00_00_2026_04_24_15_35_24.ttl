@@ -1,0 +1,469 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S18/2024_01_01_00_00_00_2026_04_24_15_35_24.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S18/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-24T15:35:24'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800014/4/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800014/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800014/>;
+    dc:modified '2026-04-10T15:56:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'wind'@en ;
+    skos:definition 'Air motion relative to the Earth\'s surface. Unless otherwise specified, only the horizontal component is considered. [International Meteorological Vocabulary, WMO - No. 182]'@en ;
+    skos:notation 'SDN:S18::S1800014'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800158/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800158/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800158/>;
+    dc:modified '2026-04-07T08:59:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sound'@en ;
+    skos:definition 'Vibrations propagated in an elastic or viscous medium.'@en ;
+    skos:notation 'SDN:S18::S1800158'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800157/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800157/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800157/>;
+    dc:modified '2026-04-01T10:29:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtered clicks'@en ;
+    skos:definition 'High intensity, highly directional, short (milliseconds) sounds that fit certain criteria of frequency and direction.'@en ;
+    skos:notation 'SDN:S18::S1800157'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800156/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800156/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800156/>;
+    dc:modified '2026-04-01T10:28:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'total clicks detected'@en ;
+    skos:definition 'All of the high intensity, highly directional, short (milliseconds) sounds detected by an instrument.'@en ;
+    skos:notation 'SDN:S18::S1800156'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800155/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800155/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800155/>;
+    dc:modified '2026-04-01T10:03:02'^^xsd:dateTime ;
+    skos:altLabel 'DPM'^^xsd:string ;
+    skos:prefLabel 'detection positive minutes'@en ;
+    skos:definition 'Term commonly used in the study of marine mammal vocalisations (but could have wider application) which indicates if an individual of a specific species or group of species was detected within a sampling minute (1 for detected, 0 for undetected).'@en ;
+    skos:notation 'SDN:S18::S1800155'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800154/2/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800154/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800154/>;
+    dc:modified '2026-02-17T15:16:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'incubation'@en ;
+    skos:definition 'The isolation in containing enclosure such as bottles or specialised chambers of a sample for a given duration under in situ, simulated in situ or controlled experimental conditions.'@en ;
+    skos:notation 'SDN:S18::S1800154'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800153/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800153/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800153/>;
+    dc:modified '2026-02-09T16:44:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ice'@en ;
+    skos:definition 'The solid state of water produced by the freezing of liquid water or water vapour. Generic term to be used when type of ice cannot be determined.'@en ;
+    skos:notation 'SDN:S18::S1800153'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800152/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800152/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800152/>;
+    dc:modified '2026-02-04T07:44:37'^^xsd:dateTime ;
+    skos:altLabel 'AOU'^^xsd:string ;
+    skos:prefLabel 'Apparent Oxygen Utilisation'@en ;
+    skos:definition 'The difference between the measured dissolved oxygen concentration and its equilibrium saturation concentration in water with the same physical and chemical properties.'@en ;
+    skos:notation 'SDN:S18::S1800152'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800151/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800151/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800151/>;
+    dc:modified '2026-01-26T14:05:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'transmitting antenna'@en ;
+    skos:definition 'A device that converts electrical signals into electromagnetic waves for sending information (e.g. in high frequency radar systems). Can refer to a single antenna element or a whole transmitting system.'@en ;
+    skos:notation 'SDN:S18::S1800151'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800150/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800150/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800150/>;
+    dc:modified '2026-01-26T14:05:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'receiving antenna'@en ;
+    skos:definition 'A device that captures electromagnetic waves and converts them into a detectable form (e.g. in high frequency radar systems). Can refer to a single antenna element or a whole receiving system.'@en ;
+    skos:notation 'SDN:S18::S1800150'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800149/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800149/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800149/>;
+    dc:modified '2025-12-05T16:45:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'analytical software'@en ;
+    skos:definition 'Computer program used to process data.'@en ;
+    skos:notation 'SDN:S18::S1800149'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800148/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800148/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800148/>;
+    dc:modified '2025-11-07T13:05:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water in equilibrator'@en ;
+    skos:definition 'The property relates to the water sample in the equilibrating vessel used as part of the analytical procedure.'@en ;
+    skos:notation 'SDN:S18::S1800148'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800147/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800147/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800147/>;
+    dc:modified '2025-07-01T14:41:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'calcification'@en ;
+    skos:definition 'The accumulation of calcium salts into cells or body tissue as a result of a biologically-mediated process.'@en ;
+    skos:notation 'SDN:S18::S1800147'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800146/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800146/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800146/>;
+    dc:modified '2025-07-01T14:39:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'carbon uptake'@en ;
+    skos:definition 'The taking in or absorption of carbon by cellular organisms or organs.'@en ;
+    skos:notation 'SDN:S18::S1800146'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800145/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800145/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800145/>;
+    dc:modified '2025-05-16T11:55:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'buoyancy control oil'@en ;
+    skos:definition 'The oil used within the buoyancy engine of a platform such as a glider. Movement of oil between the internal and external reservoirs of the buoyancy engine results in ascent or descent of the the platform. Used to control the flight or buoyancy of the platform.'@en ;
+    skos:notation 'SDN:S18::S1800145'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800144/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800144/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800144/>;
+    dc:modified '2025-04-02T21:51:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'euphotic zone'@en ;
+    skos:definition 'The upper surface layer of a water body where light is sufficient to support photosynthesis.'@en ;
+    skos:notation 'SDN:S18::S1800144'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800143/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800143/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800143/>;
+    dc:modified '2025-02-27T16:43:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mixed layer'@en ;
+    skos:definition 'An oceanic or limnological range of depths which active turbulence has homogenised.'@en ;
+    skos:notation 'SDN:S18::S1800143'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800142/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800142/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800142/>;
+    dc:modified '2025-02-19T10:28:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'layer above aRPD'@en ;
+    skos:definition 'The layer of sediment between the apparent redox potential discontinuity (aRPD) and the sediment-water interface.'@en ;
+    skos:notation 'SDN:S18::S1800142'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800141/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800141/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800141/>;
+    dc:modified '2025-02-12T15:21:09'^^xsd:dateTime ;
+    skos:altLabel 'TEP'^^xsd:string ;
+    skos:prefLabel 'transparent exopolymer particle'@en ;
+    skos:definition 'Extracellular acidic polysaccharides produced by phytoplankton and bacteria in water bodies that are important for the biogeochemical cycling of elements.'@en ;
+    skos:notation 'SDN:S18::S1800141'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800140/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800140/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800140/>;
+    dc:modified '2025-02-07T10:30:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sediment-water interface'@en ;
+    skos:definition 'The boundary between the sediment layer and the overlying water in a water body.'@en ;
+    skos:notation 'SDN:S18::S1800140'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800139/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800139/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800139/>;
+    dc:modified '2025-02-03T16:50:24'^^xsd:dateTime ;
+    skos:altLabel 'aRPD'^^xsd:string ;
+    skos:prefLabel 'apparent redox potential discontinuity'@en ;
+    skos:definition 'A transition of sediment colour in the seabed used as an indicator of a change in dissolved oxygen content from oxidized surface sediment to reduced deeper sediment.'@en ;
+    skos:notation 'SDN:S18::S1800139'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800138/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800138/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800138/>;
+    dc:modified '2025-01-17T10:21:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'analytical instrument'@en ;
+    skos:definition 'Equipment designed to qualitatively and/or quantitatively measure the composition, properties, structure of substances or samples.'@en ;
+    skos:notation 'SDN:S18::S1800138'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800137/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800137/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800137/>;
+    dc:modified '2025-01-14T13:29:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'analytical method'@en ;
+    skos:definition 'Method used to analyse the samples.'@en ;
+    skos:notation 'SDN:S18::S1800137'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800136/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800136/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800136/>;
+    dc:modified '2024-10-29T11:20:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'LIDAR bin'@en ;
+    skos:definition 'Regularly spaced and contiguous segments dividing the section of atmosphere that is covered by the LIDAR instrument and over which data are averaged.'@en ;
+    skos:notation 'SDN:S18::S1800136'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800135/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800135/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800135/>;
+    dc:modified '2024-09-12T12:11:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'seafloor'@en ;
+    skos:definition 'The property relates to the solid surface underlying a sea or an ocean'@en ;
+    skos:notation 'SDN:S18::S1800135'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800134/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800134/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800134/>;
+    dc:modified '2024-06-24T16:11:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'radiometer dome'@en ;
+    skos:definition 'The property relates to a condition (typically temperature) within an infrared radiometer. Applies to a location in the radiometer dome.'@en ;
+    skos:notation 'SDN:S18::S1800134'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800133/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800133/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800133/>;
+    dc:modified '2024-06-24T16:10:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'radiometer case'@en ;
+    skos:definition 'The property relates to a condition (typically temperature) within an infrared radiometer. Applies to a location in the radiometer case.'@en ;
+    skos:notation 'SDN:S18::S1800133'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800132/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800132/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800132/>;
+    dc:modified '2024-06-14T08:30:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sampling station'@en ;
+    skos:definition 'A location or facility at which measurements or samples were taken.'@en ;
+    skos:notation 'SDN:S18::S1800132'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800131/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800131/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800131/>;
+    dc:modified '2024-06-05T14:46:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'liquid water equivalent'@en ;
+    skos:definition 'The liquid content of solid precipitation that has accumulated on the ground (snow depth). The accumulation may consist of snow, ice formed by freezing precipitation, freezing liquid precipitation, or ice formed by the refreezing of melted snow. (Source: US National Weather Service Glossary)'@en ;
+    skos:notation 'SDN:S18::S1800131'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800130/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800130/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800130/>;
+    dc:modified '2024-05-07T10:03:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'measurement device'@en ;
+    skos:definition 'An instrument or instrument system from which measurements are made.'@en ;
+    skos:notation 'SDN:S18::S1800130'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800129/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800129/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800129/>;
+    dc:modified '2024-04-10T13:29:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'spatial replicate'@en ;
+    skos:definition 'Samples collected independently over some area, specifically collected to estimate statistical information about that area.'@en ;
+    skos:notation 'SDN:S18::S1800129'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800128/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800128/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800128/>;
+    dc:modified '2024-04-10T13:27:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'temporal replicate'@en ;
+    skos:definition 'Samples collected independently over a timeframe, specifically collected to estimate changes to the subject of interest over that timeframe.'@en ;
+    skos:notation 'SDN:S18::S1800128'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800127/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800127/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800127/>;
+    dc:modified '2024-04-10T12:26:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'technical replicate'@en ;
+    skos:definition 'Subsamples, or repeated processing, of a parent sample, to capture variation in handling of each replicate, or simply to repeat the processing.'@en ;
+    skos:notation 'SDN:S18::S1800127'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800126/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800126/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800126/>;
+    dc:modified '2024-04-10T12:17:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'biological replicate'@en ;
+    skos:definition 'Biologically distinct samples that are collected in parallel to capture random biological variation.'@en ;
+    skos:notation 'SDN:S18::S1800126'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800125/2/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800125/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800125/>;
+    dc:modified '2024-03-22T09:20:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sampling processor (lower filter)'@en ;
+    skos:definition 'The lower filter in a cascade or sequential filtration setup designed to exclude material retained by the filter. Only the material collected on the filter is used in the analysis.'@en ;
+    skos:notation 'SDN:S18::S1800125'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800124/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800124/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800124/>;
+    dc:modified '2024-03-19T16:23:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sampling processor (upper sieve)'@en ;
+    skos:definition 'Equipment used to sort biological or geological material. The material that remain on the sieve are discarded.'@en ;
+    skos:notation 'SDN:S18::S1800124'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800123/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800123/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800123/>;
+    dc:modified '2024-03-19T15:53:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sampling processor (lower sieve)'@en ;
+    skos:definition 'Equipment used to sort biological or geological material. Only the material that remains on the sieve is used in the analyses.'@en ;
+    skos:notation 'SDN:S18::S1800123'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800122/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800122/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800122/>;
+    dc:modified '2024-03-18T14:10:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sampling processor (upper filter)'@en ;
+    skos:definition 'The upper filter in a cascade or sequential filtration setup designed to exclude material retained by the filter. Only material and liquid that pass through the filter are used in the analyses.'@en ;
+    skos:notation 'SDN:S18::S1800122'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800121/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800121/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800121/>;
+    dc:modified '2024-03-18T13:38:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'analysed biological entities'@en ;
+    skos:definition 'The biological organisms used in the analysis.'@en ;
+    skos:notation 'SDN:S18::S1800121'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800120/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800120/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800120/>;
+    dc:modified '2024-03-13T16:16:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sub-sampling protocol'@en ;
+    skos:definition 'Method used to divide the sample into sub-samples.'@en ;
+    skos:notation 'SDN:S18::S1800120'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800119/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800119/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800119/>;
+    dc:modified '2024-03-13T16:15:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sample extraction method'@en ;
+    skos:definition 'Method used to extract the analysed sample from its matrix.'@en ;
+    skos:notation 'SDN:S18::S1800119'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800118/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800118/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800118/>;
+    dc:modified '2024-03-13T16:11:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sample preservation method'@en ;
+    skos:definition 'Method used to preserve the samples after collection and prior to analysis.'@en ;
+    skos:notation 'SDN:S18::S1800118'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800117/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800117/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800117/>;
+    dc:modified '2024-03-13T16:06:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sampling method'@en ;
+    skos:definition 'Method used to obtain the samples used for the analysis.'@en ;
+    skos:notation 'SDN:S18::S1800117'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800116/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800116/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800116/>;
+    dc:modified '2024-03-13T16:04:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sampling instrument'@en ;
+    skos:definition 'Equipment designed to collect physical samples.'@en ;
+    skos:notation 'SDN:S18::S1800116'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S18/current/S1800115/1/> .
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800115/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S18/current/S1800115/>;
+    dc:modified '2024-03-13T16:03:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sampling platform'@en ;
+    skos:definition 'A structure or vehicle that serves as a base for deploying sampling or sensing equipment.'@en ;
+    skos:notation 'SDN:S18::S1800115'^^xsd:string .

@@ -1,0 +1,138 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/G28/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G28/current/001/1/> .
+<http://vocab.nerc.ac.uk/collection/G28/current/001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G28/current/001/>;
+    dc:modified '2012-07-04T11:39:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'geometryOnly'@en ;
+    skos:definition 'Geometry objects without any additional structure which describes topology'@en ;
+    skos:notation 'SDN:G28::001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G28/current/002/1/> .
+<http://vocab.nerc.ac.uk/collection/G28/current/002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G28/current/002/>;
+    dc:modified '2012-07-04T11:39:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'topology1D'@en ;
+    skos:definition '1-dimensional topological complex --  commonly called  chain-node  topology'@en ;
+    skos:notation 'SDN:G28::002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G28/current/003/1/> .
+<http://vocab.nerc.ac.uk/collection/G28/current/003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G28/current/003/>;
+    dc:modified '2012-07-04T11:39:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'planarGraph'@en ;
+    skos:definition '1-dimensional topological complex that is planar. (A planar graph is a graph that can be drawn in a plane in such a way that no two edges intersect except at a vertex.)'@en ;
+    skos:notation 'SDN:G28::003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G28/current/004/1/> .
+<http://vocab.nerc.ac.uk/collection/G28/current/004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G28/current/004/>;
+    dc:modified '2012-07-04T11:39:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fullPlanarGraph'@en ;
+    skos:definition '2-dimensional topological complex that is planar. (A 2-dimensional topological complex is commonly called  full topology  in a cartographic 2D environment.)'@en ;
+    skos:notation 'SDN:G28::004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G28/current/005/1/> .
+<http://vocab.nerc.ac.uk/collection/G28/current/005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G28/current/005/>;
+    dc:modified '2012-07-04T11:39:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surfaceGraph'@en ;
+    skos:definition '1-dimensional topological complex that is isomorphic to a subset of a surface. (A geometric complex is isomorphic to a topological complex if their elements are in a one-to-one, dimensional-and boundry-preserving correspondence to one another.)'@en ;
+    skos:notation 'SDN:G28::005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G28/current/006/1/> .
+<http://vocab.nerc.ac.uk/collection/G28/current/006/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G28/current/006/>;
+    dc:modified '2012-07-04T11:39:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fullSurfaceGraph'@en ;
+    skos:definition '2-dimensional topological complex that is isomorphic to a subset of a surface'@en ;
+    skos:notation 'SDN:G28::006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G28/current/007/1/> .
+<http://vocab.nerc.ac.uk/collection/G28/current/007/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G28/current/007/>;
+    dc:modified '2012-07-04T11:39:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'topology3D'@en ;
+    skos:definition '3-dimensional topological complex. (A topological complex is a collection of topological primitives that are closed under the boundary operations.)'@en ;
+    skos:notation 'SDN:G28::007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G28/current/008/1/> .
+<http://vocab.nerc.ac.uk/collection/G28/current/008/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G28/current/008/>;
+    dc:modified '2012-07-04T11:39:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fullTopology3D'@en ;
+    skos:definition 'Complete coverage of a 3D Euclidean coordinate space'@en ;
+    skos:notation 'SDN:G28::008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G28/current/009/1/> .
+<http://vocab.nerc.ac.uk/collection/G28/current/009/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G28/current/009/>;
+    dc:modified '2012-07-04T11:39:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'abstract'@en ;
+    skos:definition 'Topological complex without any specified geometric realisation'@en ;
+    skos:notation 'SDN:G28::009'^^xsd:string .

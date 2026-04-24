@@ -1,0 +1,120 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/V22/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V22/current/C32/1/> .
+<http://vocab.nerc.ac.uk/collection/V22/current/C32/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V22/current/C32/>;
+    dc:modified '2012-06-27T08:11:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'SDN_CountryCode'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/C32/current'@en ;
+    skos:notation 'SDN:V22::C32'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V22/current/L05/1/> .
+<http://vocab.nerc.ac.uk/collection/V22/current/L05/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V22/current/L05/>;
+    dc:modified '2012-06-27T08:11:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'SDN_DeviceCategoryCode'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L05/current'@en ;
+    skos:notation 'SDN:V22::L05'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V22/current/L06/1/> .
+<http://vocab.nerc.ac.uk/collection/V22/current/L06/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V22/current/L06/>;
+    dc:modified '2012-06-27T08:11:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'SDN_PlatformCategoryCode'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L06/current'@en ;
+    skos:notation 'SDN:V22::L06'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V22/current/L10/1/> .
+<http://vocab.nerc.ac.uk/collection/V22/current/L10/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V22/current/L10/>;
+    dc:modified '2012-06-27T08:11:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'SDN_CRSCode'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L10/current'@en ;
+    skos:notation 'SDN:V22::L10'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V22/current/L23/1/> .
+<http://vocab.nerc.ac.uk/collection/V22/current/L23/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V22/current/L23/>;
+    dc:modified '2012-06-27T08:11:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'SDN_HierarchyLevelNameCode'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L23/current'@en ;
+    skos:notation 'SDN:V22::L23'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V22/current/L24/1/> .
+<http://vocab.nerc.ac.uk/collection/V22/current/L24/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V22/current/L24/>;
+    dc:modified '2012-06-27T08:11:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'SDN_FormatNameCode'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/L24/current'@en ;
+    skos:notation 'SDN:V22::L24'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V22/current/P02/1/> .
+<http://vocab.nerc.ac.uk/collection/V22/current/P02/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V22/current/P02/>;
+    dc:modified '2012-06-27T08:11:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'SDN_ParameterDiscoveryCode'@en ;
+    skos:definition 'http://vocab.nerc.ac.uk/collection/P02/current'@en ;
+    skos:notation 'SDN:V22::P02'^^xsd:string .

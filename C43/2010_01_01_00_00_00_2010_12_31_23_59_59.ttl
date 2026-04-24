@@ -1,0 +1,102 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C43/2010_01_01_00_00_00_2010_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C43/current/XXL/1/> .
+<http://vocab.nerc.ac.uk/collection/C43/current/XXL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C43/current/XXL/>;
+    dc:modified '2010-01-26T12:44:15'^^xsd:dateTime ;
+    skos:altLabel 'very large'^^xsd:string ;
+    skos:prefLabel 'very large'@en ;
+    skos:definition 'A spill with a quantity in excess of a thousand metric tonnes such as the cargo of an oil tanker.'@en ;
+    skos:notation 'SDN:C43::XXL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C43/current/LRG/1/> .
+<http://vocab.nerc.ac.uk/collection/C43/current/LRG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C43/current/LRG/>;
+    dc:modified '2010-01-26T12:43:20'^^xsd:dateTime ;
+    skos:altLabel 'large'^^xsd:string ;
+    skos:prefLabel 'large'@en ;
+    skos:definition 'A spill with a quantity of between one and a thousand metric tonnes such as the contents of a ship fuel tank.'@en ;
+    skos:notation 'SDN:C43::LRG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C43/current/MED/1/> .
+<http://vocab.nerc.ac.uk/collection/C43/current/MED/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C43/current/MED/>;
+    dc:modified '2010-01-26T12:40:58'^^xsd:dateTime ;
+    skos:altLabel 'medium'^^xsd:string ;
+    skos:prefLabel 'medium'@en ;
+    skos:definition 'A spill with a quantity of between a litre and a metric tonne such as the result of tank flushing.'@en ;
+    skos:notation 'SDN:C43::MED'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C43/current/SML/1/> .
+<http://vocab.nerc.ac.uk/collection/C43/current/SML/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C43/current/SML/>;
+    dc:modified '2010-01-26T12:39:28'^^xsd:dateTime ;
+    skos:altLabel 'small'^^xsd:string ;
+    skos:prefLabel 'small'@en ;
+    skos:definition 'A spill with a quantity of less than a litre such as deck runoff.'@en ;
+    skos:notation 'SDN:C43::SML'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C43/current/UNK/1/> .
+<http://vocab.nerc.ac.uk/collection/C43/current/UNK/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C43/current/UNK/>;
+    dc:modified '2010-01-26T12:37:44'^^xsd:dateTime ;
+    skos:altLabel 'unknown'^^xsd:string ;
+    skos:prefLabel 'unknown'@en ;
+    skos:definition 'The correct value is not known to, or not computable by, the sender of this data. However, the correct value probably exists.'@en ;
+    skos:notation 'SDN:C43::UNK'^^xsd:string .

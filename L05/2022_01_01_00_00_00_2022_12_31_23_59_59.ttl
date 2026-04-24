@@ -1,0 +1,100 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L05/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L05/2021_01_01_00_00_00_2021_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2022-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/152/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/152/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/152/>;
+    dc:modified '2022-11-17T09:42:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sidescan sonars'@en ;
+    skos:definition 'Instruments with directional acoustic transmitters and receivers fitted to an underwater platform that emit fan-shaped pulses down toward the seafloor across a wide angle perpendicular to the path of the platform through the water. Used for the classification of seafloor substrates and structures according to the intensity of signal return. Higher signal return intensities indicate harder substrates or structures, and vice versa.'@en ;
+    skos:notation 'SDN:L05::152'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB45/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB45/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB45/>;
+    dc:modified '2022-04-27T16:58:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ion chromatography analysers'@en ;
+    skos:definition 'Instruments that use ion chromatography to separate ions and polar molecules based on their affinity to an ion exchanger resin. Sample solutions pass through a pressurized chromatographic column where ions are absorbed by the resin and subsequently eluted using an ion extraction liquid. The retention time of different species determines the ionic concentrations in the sample.'@en ;
+    skos:notation 'SDN:L05::LAB45'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB46/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB46/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB46/>;
+    dc:modified '2022-04-27T16:58:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'proton transfer reaction mass spectrometers'@en ;
+    skos:definition 'Instruments that ionise trace gas molecules by proton transfer from protonated water, H3O. Ions of specific mass-to-charge ratios are then quantified in a quadrupole or time-of-flight mass spectrometer.'@en ;
+    skos:notation 'SDN:L05::LAB46'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB47/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB47/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB47/>;
+    dc:modified '2022-04-27T16:58:27'^^xsd:dateTime ;
+    skos:altLabel 'TIMS'^^xsd:string ;
+    skos:prefLabel 'thermal ionisation mass spectrometers'@en ;
+    skos:definition 'Instruments that measure isotopic ratios using thermal ionisation. Purified samples are heated to cause ionisation of atoms. Subsequently, ions are focused into a beam by an electromagnet and then separated into individual beams based on their mass/charge ratio.'@en ;
+    skos:notation 'SDN:L05::LAB47'^^xsd:string .

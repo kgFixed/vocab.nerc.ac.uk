@@ -1,0 +1,100 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S24/2017_01_01_00_00_00_2017_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S24/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2017-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S24/current/S24C099/1/> .
+<http://vocab.nerc.ac.uk/collection/S24/current/S24C099/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S24/current/S24C099/>;
+    dc:modified '2017-09-07T11:08:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '0.8-200um'@en ;
+    skos:definition 'Particles that pass through a 200 micron mesh screen but are trapped by a 0.8 micron pore filter.'@en ;
+    skos:notation 'SDN:S24::S24C099'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S24/current/S24C098/1/> .
+<http://vocab.nerc.ac.uk/collection/S24/current/S24C098/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S24/current/S24C098/>;
+    dc:modified '2017-07-29T18:22:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '0.2-3um'@en ;
+    skos:definition 'Particles that pass through a 3 micron pore filter, but are trapped by a 0.2 micron pore filter.'@en ;
+    skos:notation 'SDN:S24::S24C098'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S24/current/S24C097/1/> .
+<http://vocab.nerc.ac.uk/collection/S24/current/S24C097/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S24/current/S24C097/>;
+    dc:modified '2017-07-28T16:03:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '2.5-500um'@en ;
+    skos:definition 'Particles that pass through a 500 micron mesh screen but are trapped by a 2.5 micron pore filter.'@en ;
+    skos:notation 'SDN:S24::S24C097'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S24/current/S24C096/1/> .
+<http://vocab.nerc.ac.uk/collection/S24/current/S24C096/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S24/current/S24C096/>;
+    dc:modified '2017-07-24T16:19:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '0.2-20um'@en ;
+    skos:definition 'Particles that pass through a 20um mesh or filter but are trapped by a 0.2um pore filter.'@en ;
+    skos:notation 'SDN:S24::S24C096'^^xsd:string .

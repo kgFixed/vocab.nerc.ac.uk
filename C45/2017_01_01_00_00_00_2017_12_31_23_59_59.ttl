@@ -1,0 +1,156 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C45/2017_01_01_00_00_00_2017_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C45/current/D11/3/> .
+<http://vocab.nerc.ac.uk/collection/C45/current/D11/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C45/current/D11/>;
+    dc:modified '2017-02-24T16:46:12'^^xsd:dateTime ;
+    skos:altLabel 'Energy including underwater noise'^^xsd:string ;
+    skos:prefLabel 'Introduction of energy does not adversely affect the marine environment'@en ;
+    skos:definition 'Introduction of energy, including underwater noise, is at levels that do not adversely affect the marine environment'@en ;
+    skos:notation 'SDN:C45::D11'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C45/current/D10/2/> .
+<http://vocab.nerc.ac.uk/collection/C45/current/D10/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C45/current/D10/>;
+    dc:modified '2017-02-24T16:45:54'^^xsd:dateTime ;
+    skos:altLabel 'Marine litter'^^xsd:string ;
+    skos:prefLabel 'Properties and quantities of marine litter do not cause harm'@en ;
+    skos:definition 'Properties and quantities of marine litter do not cause harm to the coastal and marine environment'@en ;
+    skos:notation 'SDN:C45::D10'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C45/current/D9/2/> .
+<http://vocab.nerc.ac.uk/collection/C45/current/D9/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C45/current/D9/>;
+    dc:modified '2017-02-24T16:45:33'^^xsd:dateTime ;
+    skos:altLabel 'Contaminants in seafood'^^xsd:string ;
+    skos:prefLabel 'Contaminants in seafood do not exceed established levels'@en ;
+    skos:definition 'Contaminants in fish and other seafood for human consumption do not exceed levels established by Community legislation or other relevant standards'@en ;
+    skos:notation 'SDN:C45::D9'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C45/current/D8/2/> .
+<http://vocab.nerc.ac.uk/collection/C45/current/D8/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C45/current/D8/>;
+    dc:modified '2017-02-24T16:45:15'^^xsd:dateTime ;
+    skos:altLabel 'Contaminants'^^xsd:string ;
+    skos:prefLabel 'Contaminants do not produce pollution effects'@en ;
+    skos:definition 'Concentrations of contaminants are at levels not giving rise to pollution effects'@en ;
+    skos:notation 'SDN:C45::D8'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C45/current/D7/2/> .
+<http://vocab.nerc.ac.uk/collection/C45/current/D7/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C45/current/D7/>;
+    dc:modified '2017-02-24T16:44:57'^^xsd:dateTime ;
+    skos:altLabel 'Hydrographical conditions'^^xsd:string ;
+    skos:prefLabel 'Hydrographical conditions are not altered'@en ;
+    skos:definition 'Permanent alteration of hydrographical conditions does not adversely affect marine ecosystems'@en ;
+    skos:notation 'SDN:C45::D7'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C45/current/D6/2/> .
+<http://vocab.nerc.ac.uk/collection/C45/current/D6/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C45/current/D6/>;
+    dc:modified '2017-02-24T16:44:41'^^xsd:dateTime ;
+    skos:altLabel 'Sea-floor integrity'^^xsd:string ;
+    skos:prefLabel 'Sea-floor integrity supports ecosystem'@en ;
+    skos:definition 'Sea-floor integrity is at a level that ensures that the structure and functions of the ecosystems are safeguarded and benthic ecosystems, in particular, are not adversely affected'@en ;
+    skos:notation 'SDN:C45::D6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C45/current/D5/2/> .
+<http://vocab.nerc.ac.uk/collection/C45/current/D5/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C45/current/D5/>;
+    dc:modified '2017-02-24T16:44:25'^^xsd:dateTime ;
+    skos:altLabel 'Eutrophication'^^xsd:string ;
+    skos:prefLabel 'Eutrophication is minimised'@en ;
+    skos:definition 'Human-induced eutrophication is minimised, especially adverse effects thereof, such as losses in biodiversity, ecosystem degradation, harmful algal blooms and oxygen deficiency in bottom water'@en ;
+    skos:notation 'SDN:C45::D5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C45/current/D3/2/> .
+<http://vocab.nerc.ac.uk/collection/C45/current/D3/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C45/current/D3/>;
+    dc:modified '2017-02-24T16:43:39'^^xsd:dateTime ;
+    skos:altLabel 'Commercial fish and shellfish'^^xsd:string ;
+    skos:prefLabel 'Commercial fish and shellfish populations are healthy'@en ;
+    skos:definition 'Populations of all commercially exploited fish and shellfish are within safe biological limits, exhibiting a population age and size distribution that is indicative of a healthy stock'@en ;
+    skos:notation 'SDN:C45::D3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C45/current/D1/2/> .
+<http://vocab.nerc.ac.uk/collection/C45/current/D1/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C45/current/D1/>;
+    dc:modified '2017-02-24T16:43:15'^^xsd:dateTime ;
+    skos:altLabel 'Biodiversity'^^xsd:string ;
+    skos:prefLabel 'Biological diversity maintained'@en ;
+    skos:definition 'Biological diversity is maintained. The quality and occurrence of habitats and the distribution and abundance of species are in line with prevailing physiographic, geographic and climate conditions'@en ;
+    skos:notation 'SDN:C45::D1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C45/current/D4/2/> .
+<http://vocab.nerc.ac.uk/collection/C45/current/D4/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C45/current/D4/>;
+    dc:modified '2017-02-24T16:42:37'^^xsd:dateTime ;
+    skos:altLabel 'Food webs'^^xsd:string ;
+    skos:prefLabel 'Marine food webs are at normal abundance and diversity'@en ;
+    skos:definition 'All elements of the marine food webs, to the extent that they are known, occur at normal abundance and diversity and levels capable of ensuring the long-term abundance of the species and the retention of their full reproductive capacity'@en ;
+    skos:notation 'SDN:C45::D4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C45/current/D2/2/> .
+<http://vocab.nerc.ac.uk/collection/C45/current/D2/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C45/current/D2/>;
+    dc:modified '2017-02-24T16:41:10'^^xsd:dateTime ;
+    skos:altLabel 'Non-indigenous species'^^xsd:string ;
+    skos:prefLabel 'Non-indigenous species do not adversely affect ecosystem'@en ;
+    skos:definition 'Non-indigenous species introduced by human activities are at levels that do not adversely alter the ecosystem'@en ;
+    skos:notation 'SDN:C45::D2'^^xsd:string .
