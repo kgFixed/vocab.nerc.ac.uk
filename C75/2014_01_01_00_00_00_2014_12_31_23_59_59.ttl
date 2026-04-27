@@ -1,0 +1,478 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C75/2014_01_01_00_00_00_2014_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C75/2013_01_01_00_00_00_2013_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2014-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/RTC/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/RTC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/RTC/>;
+    dc:modified '2014-12-05T08:06:55'^^xsd:dateTime ;
+    skos:altLabel 'RTC'^^xsd:string ;
+    skos:prefLabel 'Romberg Tiburon Center for Environmental Studies'@en ;
+    skos:definition 'Institute located in Tiburon, CA, USA. Part of San Francisco State University.'@en ;
+    skos:notation 'SDN:C75::RTC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/GMB/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/GMB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/GMB/>;
+    dc:modified '2014-12-05T08:06:55'^^xsd:dateTime ;
+    skos:altLabel 'TAMUG Marine Biology'^^xsd:string ;
+    skos:prefLabel 'Texas A&M University at Galveston Department of Marine Biology'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::GMB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/MOI/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/MOI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/MOI/>;
+    dc:modified '2014-09-30T12:30:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mauritius Oceanography Institute'@en ;
+    skos:definition 'Government lab located in Quatre Bornes.'@en ;
+    skos:notation 'SDN:C75::MOI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/LUE/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/LUE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/LUE/>;
+    dc:modified '2014-09-23T08:34:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Loughborough University School of Electronic, Electrical and Systems Engineering'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::LUE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/BNH/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/BNH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/BNH/>;
+    dc:modified '2014-07-23T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bangladesh Navy Hydrographic and Oceanographic Centre'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::BNH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/KHO/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/KHO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/KHO/>;
+    dc:modified '2014-07-23T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Korea Hydrographic and Oceanographic Administration'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::KHO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/MHC/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/MHC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/MHC/>;
+    dc:modified '2014-07-23T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'National Hydrographic Centre, Malaysia'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::MHC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/VIF/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/VIF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/VIF/>;
+    dc:modified '2014-07-23T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Research Institute for Marine Fisheries, Viet Nam'@en ;
+    skos:definition 'Government research institute'@en ;
+    skos:notation 'SDN:C75::VIF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/ARG/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/ARG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/ARG/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'All-Russian Research Institute of Geology and Mineral Resources of the World Ocean'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::ARG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/BGA/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/BGA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/BGA/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'University of Brasilia, Gama, Faculty of Engineering'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::BGA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/CCE/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/CCE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/CCE/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'School of Civil and Construction Engineering, College of Engineering, Oregon State University'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::CCE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/CMI/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/CMI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/CMI/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'National Marine Data and Information Service, China'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::CMI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/CPL/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/CPL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/CPL/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Chart Pilot Ltd'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::CPL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/DGA/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/DGA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/DGA/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Danish Geodata Agency'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::DGA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/DOI/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/DOI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/DOI/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Defence Services Officers\' Institute, Dhaula Kuan'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::DOI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/FSD/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/FSD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/FSD/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Fugro Pelagos, Inc, San Diego'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::FSD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/FSE/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/FSE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/FSE/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Fugro Pelagos, Inc, Seattle'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::FSE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/GIA/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/GIA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/GIA/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'National Geospatial-Intelligence Agency'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::GIA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/GMF/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/GMF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/GMF/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Marine Fisheries Research Division, Ministry of Fisheries, Ghana'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::GMF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/GMR/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/GMR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/GMR/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Gulf of Mexico Research Initiative'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::GMR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/GNS/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/GNS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/GNS/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GNS Science TE PU AO'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::GNS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/GOF/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/GOF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/GOF/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Russian Academy of Sciences, Laboratory of Geomorphology and Ocean Floor Tectonics'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::GOF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/GOO/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/GOO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/GOO/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Google Inc'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::GOO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/HGP/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/HGP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/HGP/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Hawai\'i Institute of Geophysics and Planetology, University of Hawai\'i at Manoa'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::HGP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/HLS/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/HLS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/HLS/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Heat, Light and Sound Research, Inc'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::HLS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/IHY/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/IHY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/IHY/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Indonesian Hydro-Oceanographic Office'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::IHY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/JHA/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/JHA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/JHA/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Japan Hydrographic Association'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::JHA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/KAS/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/KAS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/KAS/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'National Academy of Sciences, Republic of Korea'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::KAS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/KFR/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/KFR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/KFR/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Kenya Marine and Fisheries Research Institute'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::KFR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/KGM/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/KGM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/KGM/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Korea Institute of Geoscience and Mineral Resources'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::KGM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/LEI/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/LEI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/LEI/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Leidos Inc'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::LEI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/LKR/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/LKR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/LKR/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'National Aquatic Resources Research and Development Agency, Sri Lanka'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::LKR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/NCS/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/NCS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/NCS/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'NOAA Office of Coast Survey'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::NCS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/NNH/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/NNH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/NNH/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Nigerian Navy Hydrographic Office'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::NNH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/NRM/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/NRM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/NRM/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'United States Naval Research Laboratory, Mississippi'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::NRM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/OHC/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/OHC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/OHC/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Centre for Oceanographic and Hydrographic Research, Colombia'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::OHC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/PHD/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/PHD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/PHD/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Pakistan Navy Hydrographic Department'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::PHD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/PHS/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/PHS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/PHS/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Polish Navy Hydrographic Support Squadron'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::PHS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/PMA/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/PMA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/PMA/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'National Mapping and Resource Information Authority, Philippines'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::PMA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/RFA/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/RFA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/RFA/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Robin Falconer Associates'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::RFA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/SUM/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/SUM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/SUM/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Maritime Authority Suriname'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::SUM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/TNH/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/TNH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/TNH/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Royal Thai Navy Hydrographic Department'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::TNH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/VHS/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/VHS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/VHS/>;
+    dc:modified '2014-07-21T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Hydrographic Survey and Navigation Safety Department, Viet Nam Maritime University'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::VHS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/RAN/2/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/RAN/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/RAN/>;
+    dc:modified '2014-06-07T11:13:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Royal Australian Navy Hydrographic Service'@en ;
+    skos:definition 'The naval bathymetric surveying and charting group based in Wollongong NSW'@en ;
+    skos:notation 'SDN:C75::RAN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/MCR/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/MCR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/MCR/>;
+    dc:modified '2014-05-20T08:05:30'^^xsd:dateTime ;
+    skos:altLabel 'MCRI'^^xsd:string ;
+    skos:prefLabel 'Marine Conservation Research International'@en ;
+    skos:definition 'Non-profit organisation investigating human impacts and conducting conservation projects on threatened marine wildlife and habitats.'@en ;
+    skos:notation 'SDN:C75::MCR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/IRM/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/IRM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/IRM/>;
+    dc:modified '2014-02-26T07:58:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'European Commission Joint Research Centre Institute for Reference Materials and Measurements'@en ;
+    skos:definition 'EC body based in Geel, Belgium.'@en ;
+    skos:notation 'SDN:C75::IRM'^^xsd:string .

@@ -1,0 +1,118 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L13/2011_01_01_00_00_00_2013_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L13/2007_01_01_00_00_00_2010_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2013-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L13/current/AY/1/> .
+<http://vocab.nerc.ac.uk/collection/L13/current/AY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L13/current/AY/>;
+    dc:modified '2013-02-05T12:39:17'^^xsd:dateTime ;
+    skos:altLabel 'abyssobenthic'^^xsd:string ;
+    skos:prefLabel 'abyssobenthic'@en ;
+    skos:definition 'The zone of the seabed comprising the ocean floor with a bathymetric depth greater than  approximately 2700 metres where the bathyal fauna are replaced by more primitive abyssal fauna.'@en ;
+    skos:notation 'SDN:L13::AY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L13/current/CL/1/> .
+<http://vocab.nerc.ac.uk/collection/L13/current/CL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L13/current/CL/>;
+    dc:modified '2013-02-05T12:39:17'^^xsd:dateTime ;
+    skos:altLabel 'circalittoral'^^xsd:string ;
+    skos:prefLabel 'circalittoral'@en ;
+    skos:definition 'The zone of the seabed dominated by animals. On open coastline this is from bottom of the infralittoral zone to the depth to which storms and waves still influence the seabed (wave-base).'@en ;
+    skos:notation 'SDN:L13::CL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L13/current/IL/1/> .
+<http://vocab.nerc.ac.uk/collection/L13/current/IL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L13/current/IL/>;
+    dc:modified '2013-02-05T12:39:17'^^xsd:dateTime ;
+    skos:altLabel 'infralittoral'^^xsd:string ;
+    skos:prefLabel 'infralittoral'@en ;
+    skos:definition 'The zone of the seabed dominated by macroalgae below the low water mark. It extends to a depth where 1% of the surface illumination reaches the seabed, which varies according to turbidity.'@en ;
+    skos:notation 'SDN:L13::IL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L13/current/LI/1/> .
+<http://vocab.nerc.ac.uk/collection/L13/current/LI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L13/current/LI/>;
+    dc:modified '2013-02-05T12:39:17'^^xsd:dateTime ;
+    skos:altLabel 'littoral'^^xsd:string ;
+    skos:prefLabel 'littoral'@en ;
+    skos:definition 'That part of the shore (the fringe of a body of water that has been geologically modified by the action of that body of water past and present) above the low water mark and therefore exposed to the atmosphere at low tide.'@en ;
+    skos:notation 'SDN:L13::LI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L13/current/DC/1/> .
+<http://vocab.nerc.ac.uk/collection/L13/current/DC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L13/current/DC/>;
+    dc:modified '2013-02-05T12:39:17'^^xsd:dateTime ;
+    skos:altLabel 'offshore_circalittoral'^^xsd:string ;
+    skos:prefLabel 'deep circalittoral'@en ;
+    skos:definition 'The zone of the seabed between the depth to which storms and waves still influence the seabed (wave-base) and the marked break of slope that characterises the offshore limit of the shelf (shelf-break).'@en ;
+    skos:notation 'SDN:L13::DC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L13/current/US/1/> .
+<http://vocab.nerc.ac.uk/collection/L13/current/US/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L13/current/US/>;
+    dc:modified '2013-02-05T12:39:17'^^xsd:dateTime ;
+    skos:altLabel 'upper_slope'^^xsd:string ;
+    skos:prefLabel 'upper slope'@en ;
+    skos:definition 'The zone of steeply-sloping seabed between the shelf-break and the permanent thermocline in the overlying water body.'@en ;
+    skos:notation 'SDN:L13::US'^^xsd:string .

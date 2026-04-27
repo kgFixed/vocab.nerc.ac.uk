@@ -1,0 +1,118 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C60/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C60/2009_01_01_00_00_00_2021_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2022-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C60/current/TYP/1/> .
+<http://vocab.nerc.ac.uk/collection/C60/current/TYP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C60/current/TYP/>;
+    dc:modified '2022-07-14T10:30:04'^^xsd:dateTime ;
+    skos:altLabel 'type'^^xsd:string ;
+    skos:prefLabel 'rdf#type'@en ;
+    skos:definition 'rdf:type is an instance of rdf:Property that is used to state that a resource is an instance of a class.'@en ;
+    skos:notation 'SDN:C60::TYP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C60/current/IHC/1/> .
+<http://vocab.nerc.ac.uk/collection/C60/current/IHC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C60/current/IHC/>;
+    dc:modified '2022-03-23T12:33:00'^^xsd:dateTime ;
+    skos:altLabel 'hasConstraint'^^xsd:string ;
+    skos:prefLabel 'iop#hasConstraint'@en ;
+    skos:definition 'I-ADOPT framework ontology property linking the variable to a constraint component.'@en ;
+    skos:notation 'SDN:C60::IHC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C60/current/ICO/1/> .
+<http://vocab.nerc.ac.uk/collection/C60/current/ICO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C60/current/ICO/>;
+    dc:modified '2022-03-23T12:32:51'^^xsd:dateTime ;
+    skos:altLabel 'hasContextObject'^^xsd:string ;
+    skos:prefLabel 'iop#hasContextObject'@en ;
+    skos:definition 'I-ADOPT framework ontology property linking the variable to a context object.'@en ;
+    skos:notation 'SDN:C60::ICO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C60/current/IHM/1/> .
+<http://vocab.nerc.ac.uk/collection/C60/current/IHM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C60/current/IHM/>;
+    dc:modified '2022-03-23T12:32:42'^^xsd:dateTime ;
+    skos:altLabel 'hasMatrix'^^xsd:string ;
+    skos:prefLabel 'iop#hasMatrix'@en ;
+    skos:definition 'I-ADOPT framework ontology property linking the variable to a matrix entity.'@en ;
+    skos:notation 'SDN:C60::IHM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C60/current/IHO/1/> .
+<http://vocab.nerc.ac.uk/collection/C60/current/IHO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C60/current/IHO/>;
+    dc:modified '2022-03-23T12:32:27'^^xsd:dateTime ;
+    skos:altLabel 'hasObjectOfInterest'^^xsd:string ;
+    skos:prefLabel 'iop#hasObjectOfInterest'@en ;
+    skos:definition 'I-ADOPT framework ontology property linking the variable to its object of interest.'@en ;
+    skos:notation 'SDN:C60::IHO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C60/current/IHP/1/> .
+<http://vocab.nerc.ac.uk/collection/C60/current/IHP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C60/current/IHP/>;
+    dc:modified '2022-03-23T12:32:07'^^xsd:dateTime ;
+    skos:altLabel 'hasProperty'^^xsd:string ;
+    skos:prefLabel 'iop#hasProperty'@en ;
+    skos:definition 'I-ADOPT framework ontology property linking the variable to its property component.'@en ;
+    skos:notation 'SDN:C60::IHP'^^xsd:string .

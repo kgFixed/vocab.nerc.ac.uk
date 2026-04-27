@@ -1,0 +1,109 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C62/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C62/2015_01_01_00_00_00_2015_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2016-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/UY-MO/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/UY-MO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/UY-MO/>;
+    dc:modified '2016-08-01T08:16:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Montevideo Department'@en ;
+    skos:definition 'Department of Uruguay containing the city of the same name.'@en ;
+    skos:notation 'SDN:C62::UY-MO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/UA-30/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/UA-30/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/UA-30/>;
+    dc:modified '2016-05-16T08:24:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Kiev'@en ;
+    skos:definition 'City and region of Ukraine. Alternative spelling Kyiv.'@en ;
+    skos:notation 'SDN:C62::UA-30'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/CN-37/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/CN-37/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/CN-37/>;
+    dc:modified '2016-05-04T10:34:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Shandong'@en ;
+    skos:definition 'Province of China.'@en ;
+    skos:notation 'SDN:C62::CN-37'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/PT-06/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/PT-06/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/PT-06/>;
+    dc:modified '2016-03-02T08:17:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Coimbra'@en ;
+    skos:definition 'District of Portugal'@en ;
+    skos:notation 'SDN:C62::PT-06'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/AT-7/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/AT-7/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/AT-7/>;
+    dc:modified '2016-01-12T09:12:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Tyrol'@en ;
+    skos:definition 'Federal State (Bundesland) of Austria. Native spelling is Tirol.'@en ;
+    skos:notation 'SDN:C62::AT-7'^^xsd:string .

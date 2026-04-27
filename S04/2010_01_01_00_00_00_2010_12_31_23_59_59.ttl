@@ -1,0 +1,343 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S04/2010_01_01_00_00_00_2010_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S04/2009_01_01_00_00_00_2009_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2010-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041050/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041050/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041050/>;
+    dc:modified '2010-12-15T14:21:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'non-contact resistivity'@en ;
+    skos:definition 'A technique where the electrical resistivity of a core at a particular point is measured by quantifying the magnetic field produced by electric currents induced by a high-frequency magnetic field.'@en ;
+    skos:notation 'SDN:S04::S041050'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041049/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041049/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041049/>;
+    dc:modified '2010-12-15T14:15:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'gamma-ray attenuation measurements'@en ;
+    skos:definition 'A technique where a gamma-ray source (137Cs) of known intensity is placed on one side of a core with a detector on the other. The gamma-ray attenuance is measured from which density may be determined.'@en ;
+    skos:notation 'SDN:S04::S041049'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041048/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041048/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041048/>;
+    dc:modified '2010-12-15T14:11:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'piezoelectric P-wave transducer'@en ;
+    skos:definition 'An acoustic transmitter made of PZT material comprising a forest of narrow longitudinal rods embedded in a polymer, which combines high coupling with relatively low acoustic impedance.  Desgned to to incorporated into acoustic rolling contact core profilers.'@en ;
+    skos:notation 'SDN:S04::S041048'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041047/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041047/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041047/>;
+    dc:modified '2010-12-04T14:54:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'high performance liquid chromatography - electrospray ionisation quadrupole mass spectrometry'@en ;
+    skos:definition 'A chromatographic technique for separating and analysing mixtures of substances, using a packed column containing microspheres coated with the stationary phase and where the mobile phase is pumped through the column with a high pressure pump. The emergence of each component of the sample under analysis from the column is monitored using a mass spectrometer with an ionisation technique suited to biological samples..'@en ;
+    skos:notation 'SDN:S04::S041047'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041046/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041046/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041046/>;
+    dc:modified '2010-09-30T10:35:33'^^xsd:dateTime ;
+    skos:altLabel 'U-Th dating'^^xsd:string ;
+    skos:prefLabel 'uranium-thorium isotope dating'@en ;
+    skos:definition 'A relatively short-range dating technique based on the decay of uranium-234 into thorium-230.'@en ;
+    skos:notation 'SDN:S04::S041046'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041045/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041045/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041045/>;
+    dc:modified '2010-09-30T10:31:51'^^xsd:dateTime ;
+    skos:altLabel 'OSL'^^xsd:string ;
+    skos:prefLabel 'optically stimulated luminescence dating'@en ;
+    skos:definition 'A technique that determines the period of time since minerals were exposed to daylight by measuring the degree of luminance caused by radiation damage during burial.'@en ;
+    skos:notation 'SDN:S04::S041045'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041044/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041044/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041044/>;
+    dc:modified '2010-09-15T10:12:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'aethalometer'@en ;
+    skos:definition 'An instrument measures the light absorption of an aerosol sample deposited on a quartz fibre filter as a proxy for black carbon concentration.'@en ;
+    skos:notation 'SDN:S04::S041044'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S04224/2/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S04224/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S04224/>;
+    dc:modified '2010-09-13T14:53:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'in-situ particle sizer'@en ;
+    skos:definition 'An instrument that determines size spectra of particulates in the water column or the atmosphere in place in the field.'@en ;
+    skos:notation 'SDN:S04::S04224'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041043/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041043/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041043/>;
+    dc:modified '2010-09-13T14:51:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'in-situ particle counter'@en ;
+    skos:definition 'An instrument that determines the abundance of particulates of all sizes suspended in the water column or the atmosphere in place in the field.'@en ;
+    skos:notation 'SDN:S04::S041043'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041042/2/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041042/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041042/>;
+    dc:modified '2010-08-24T11:33:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CARD-FISH with DAPI staining and epifluorescence microscopy'@en ;
+    skos:definition 'Catalysed reporter deposition-fluorescence in situ hybridisation (CARD-FISH) is a microbe study technique based on tyramide signal amplification and observation of hybridisation in a live, growing population'@en ;
+    skos:notation 'SDN:S04::S041042'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041041/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041041/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041041/>;
+    dc:modified '2010-08-13T09:52:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ferrozine 560nm colorimetric autoanalysis'@en ;
+    skos:definition 'An analytical method where ferric iron is reduced to ferrous and the total iron then converted to a violet complex by reaction with Ferrozine that is then assayed colorimetrically.'@en ;
+    skos:notation 'SDN:S04::S041041'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041040/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041040/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041040/>;
+    dc:modified '2010-07-27T15:19:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'in-situ UV nitrate analyser'@en ;
+    skos:definition 'An absorption analyser measuring absorption at an unspecified wavelength in the ultra-violet waveband designed to measure nutrient concentrations in place in the field.'@en ;
+    skos:notation 'SDN:S04::S041040'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041039/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041039/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041039/>;
+    dc:modified '2010-07-26T13:04:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fluorescence induction and relaxation (FIRe) fluorometer'@en ;
+    skos:definition 'A development of FRRF based on active stimulation and highly resolved detection of the induction and subsequent relaxation of chlorophyll fluorescence yields on micro- and millisecond time scales.'@en ;
+    skos:notation 'SDN:S04::S041039'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041038/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041038/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041038/>;
+    dc:modified '2010-07-20T14:44:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'linear-response phycocyanin fluorometer'@en ;
+    skos:definition 'A linear response fluorometer (output voltage proportional to fluorescent substance concentration), with emission and reception frequencies set up to measure phycocyanin fluorescence.'@en ;
+    skos:notation 'SDN:S04::S041038'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041037/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041037/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041037/>;
+    dc:modified '2010-07-20T14:32:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'linear-response CDOM fluorometer'@en ;
+    skos:definition 'A linear response fluorometer (output voltage proportional to fluorescent substance concentration), with emission and reception frequencies set up to measure CDOM (chromophoric dissolved organic matter: sometimes called Gelbstoff or yellow matter) fluorescence.'@en ;
+    skos:notation 'SDN:S04::S041037'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S04244/2/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S04244/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S04244/>;
+    dc:modified '2010-07-20T14:10:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'linear-response chlorophyll fluorometer'@en ;
+    skos:definition 'A linear response fluorometer (output voltage proportional to chlorophyll concentration e.g. WetStar, SeaPoint, SeaTech, SCUFA), set up to measure chlorophyll fluorescence (transmit violet, receive red).'@en ;
+    skos:notation 'SDN:S04::S04244'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041036/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041036/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041036/>;
+    dc:modified '2010-07-02T14:00:38'^^xsd:dateTime ;
+    skos:altLabel 'PAN 560nm AA'^^xsd:string ;
+    skos:prefLabel '1-(2-pyridylazo)-2-naphthol (PAN)-Mn 560nm colorimetric autoanalysis'@en ;
+    skos:definition 'A method of chemical analysis described in Chin (Marine Chemistry, 1992) where the analyte is quantitatively coloured by reaction with 1-(2-pyridylazo)-2-naphthol. The resulting colour strength is assayed by absorption of light of 560nm wavelength.'@en ;
+    skos:notation 'SDN:S04::S041036'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041035/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041035/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041035/>;
+    dc:modified '2010-04-30T16:20:44'^^xsd:dateTime ;
+    skos:altLabel 'SPI'^^xsd:string ;
+    skos:prefLabel 'sediment profile imager'@en ;
+    skos:definition 'Device that provide in-situ still or video images of a section including bottom water, the undisturbed sediment-water interface and the upper sediment layers.'@en ;
+    skos:notation 'SDN:S04::S041035'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041034/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041034/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041034/>;
+    dc:modified '2010-04-11T18:15:38'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'in-situ impeller plus vane current meter'@en ;
+    skos:definition 'An instrument that determines current velocity in place in a water body, which determines direction through instrument alignment by vane and speed using a propeller.'@en ;
+    skos:notation 'SDN:S04::S041034'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041033/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041033/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041033/>;
+    dc:modified '2010-03-26T14:37:11'^^xsd:dateTime ;
+    skos:altLabel 'ice profiler'^^xsd:string ;
+    skos:prefLabel 'ice profiler'@en ;
+    skos:definition 'Sub-surface moored instrument that measures ice draft (distance of the ice keel below water body surface) by differencing acoustic range to keel range measurements and water depth determined from sea pressure'@en ;
+    skos:notation 'SDN:S04::S041033'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041032/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041032/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041032/>;
+    dc:modified '2010-03-11T11:22:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'nanomolar ammonium system after Holmes et al (1999)'@en ;
+    skos:definition 'Ammonium analysis protocol described in Holmes et al. (1999) A simple and precise method for measuring ammonium in marine and freshwater ecosystems, Can. J. Fish. Aquat. Sci. 56:1801-1808.'@en ;
+    skos:notation 'SDN:S04::S041032'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S04198/2/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S04198/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S04198/>;
+    dc:modified '2010-02-24T17:00:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fixed half-tide pressure sensor'@en ;
+    skos:definition 'A tide gauge sensor that is located so that is only underwater for part of the tidal cycle enabling it to be accurately levelled into a geodetic network.'@en ;
+    skos:notation 'SDN:S04::S04198'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041031/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041031/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041031/>;
+    dc:modified '2010-02-23T19:45:25'^^xsd:dateTime ;
+    skos:altLabel 'MAAP'^^xsd:string ;
+    skos:prefLabel 'Multi-angle absorption photometer'@en ;
+    skos:definition 'A technique which determines the aerosol light absorption by simultaneously measuring the radiation transmitted through and scattered back from a particle-loaded filter at multiple detection angles.'@en ;
+    skos:notation 'SDN:S04::S041031'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S04278/2/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S04278/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S04278/>;
+    dc:modified '2010-02-23T15:28:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'particle sizer'@en ;
+    skos:definition 'A laboratory instrument that measures the size spectrum of particulate material suspended in a fluid.'@en ;
+    skos:notation 'SDN:S04::S04278'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041030/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041030/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041030/>;
+    dc:modified '2010-02-23T12:03:11'^^xsd:dateTime ;
+    skos:altLabel 'aerosol-MS'^^xsd:string ;
+    skos:prefLabel 'aerosol mass spectrometer'@en ;
+    skos:definition 'Technique to measure the aerosol composition using a mass spectrometer. The sample is vaporized and then ionised before being passed to a mass spectrometer where ions are separated according to m/z.  The particle size is almost always measured simultaneously with the composition.'@en ;
+    skos:notation 'SDN:S04::S041030'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041029/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041029/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041029/>;
+    dc:modified '2010-02-23T11:48:21'^^xsd:dateTime ;
+    skos:altLabel 'ChemLum'^^xsd:string ;
+    skos:prefLabel 'chemiluminescence'@en ;
+    skos:definition 'Generic term for analytical methods that quantify light produced as the result of a chemical reaction'@en ;
+    skos:notation 'SDN:S04::S041029'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041028/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041028/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041028/>;
+    dc:modified '2010-02-22T08:40:00'^^xsd:dateTime ;
+    skos:altLabel 'BBCEAS'^^xsd:string ;
+    skos:prefLabel 'broadband cavity-enhanced absorption spectroscopy'@en ;
+    skos:definition 'Analytical method which uses a broadband light source to measure multiple species simultaneously in gas phase by absorption spectrometry. The sample is placed in a cavity to extend the length of the interactions.'@en ;
+    skos:notation 'SDN:S04::S041028'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041027/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041027/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041027/>;
+    dc:modified '2010-02-22T08:36:48'^^xsd:dateTime ;
+    skos:altLabel 'LIF'^^xsd:string ;
+    skos:prefLabel 'laser-induced fluorescence'@en ;
+    skos:definition 'A spectroscopic technique which measures the amount of light emitted on de-excitation (fluorescence) by molecules that have been excited to higher energy levels by a laser.'@en ;
+    skos:notation 'SDN:S04::S041027'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041026/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041026/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041026/>;
+    dc:modified '2010-02-15T16:04:58'^^xsd:dateTime ;
+    skos:altLabel 'Seatex DPS 116 DGPS'^^xsd:string ;
+    skos:prefLabel 'Kongsberg Seatex DPS 116 DGPS'@en ;
+    skos:definition 'A particular type of differential Global Positioning System receiver.'@en ;
+    skos:notation 'SDN:S04::S041026'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041025/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041025/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041025/>;
+    dc:modified '2010-02-12T11:45:12'^^xsd:dateTime ;
+    skos:altLabel 'HDTMA'^^xsd:string ;
+    skos:prefLabel 'Hygroscopic Tandem Differential Mobility Analyser'@en ;
+    skos:definition 'Instrument which measures size-resolved aerosol particle growth with increasing relative humidity'@en ;
+    skos:notation 'SDN:S04::S041025'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041024/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041024/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041024/>;
+    dc:modified '2010-02-12T11:38:27'^^xsd:dateTime ;
+    skos:altLabel 'POS MV'^^xsd:string ;
+    skos:prefLabel 'Position and Orientation Systems for Marine Vessels'@en ;
+    skos:definition 'A system for measuring position and orientation of a platform by coupling a differential global positioning system and an inertial measurement unit'@en ;
+    skos:notation 'SDN:S04::S041024'^^xsd:string .

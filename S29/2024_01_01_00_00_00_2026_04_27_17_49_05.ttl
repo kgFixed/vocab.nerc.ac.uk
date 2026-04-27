@@ -1,0 +1,757 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S29/2024_01_01_00_00_00_2026_04_27_17_49_05.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S29/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-27T17:49:05'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001586/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001586/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001586/>;
+    dc:modified '2026-04-07T09:02:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sound'@en ;
+    skos:definition 'Vibrations propagated in an elastic or viscous medium.'@en ;
+    skos:notation 'SDN:S29::PE001586'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001584/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001584/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001584/>;
+    dc:modified '2026-04-01T10:32:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'total clicks detected'@en ;
+    skos:definition 'All of the high intensity, highly directional, short (milliseconds) sounds detected by an instrument.'@en ;
+    skos:notation 'SDN:S29::PE001584'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001585/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001585/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001585/>;
+    dc:modified '2026-04-01T10:32:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtered clicks'@en ;
+    skos:definition 'High intensity, highly directional, short (milliseconds) sounds that fit certain criteria of frequency and direction.'@en ;
+    skos:notation 'SDN:S29::PE001585'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001583/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001583/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001583/>;
+    dc:modified '2026-04-01T10:21:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'detection positive minutes'@en ;
+    skos:definition 'Term commonly used in the study of marine mammal vocalisations (but could have wider application) which indicates if an individual of a specific species or group of species was detected within a sampling minute (1 for detected, 0 for undetected).'@en ;
+    skos:notation 'SDN:S29::PE001583'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001582/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001582/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001582/>;
+    dc:modified '2026-02-17T15:18:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'incubation'@en ;
+    skos:definition 'The isolation in containing enclosure such as bottles or specialised chambers of a sample for a given duration under in situ, simulated in situ or controlled experimental conditions.'@en ;
+    skos:notation 'SDN:S29::PE001582'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001581/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001581/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001581/>;
+    dc:modified '2026-02-09T16:48:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ice'@en ;
+    skos:definition 'The solid state of water produced by the freezing of liquid water or water vapour. Generic term to be used when type of ice cannot be determined.'@en ;
+    skos:notation 'SDN:S29::PE001581'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001580/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001580/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001580/>;
+    dc:modified '2026-02-04T07:47:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Apparent Oxygen Utilisation'@en ;
+    skos:definition 'The difference between the measured dissolved oxygen concentration and its equilibrium saturation concentration in water with the same physical and chemical properties.'@en ;
+    skos:notation 'SDN:S29::PE001580'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001577/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001577/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001577/>;
+    dc:modified '2026-01-26T14:14:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'receiving antenna'@en ;
+    skos:definition 'A device that captures electromagnetic waves and converts them into a detectable form (e.g. in high frequency radar systems). Can refer to a single antenna element or a whole receiving system.'@en ;
+    skos:notation 'SDN:S29::PE001577'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001578/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001578/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001578/>;
+    dc:modified '2026-01-26T14:14:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'transmitting antenna'@en ;
+    skos:definition 'A device that converts electrical signals into electromagnetic waves for sending information (e.g. in high frequency radar systems). Can refer to a single antenna element or a whole transmitting system.'@en ;
+    skos:notation 'SDN:S29::PE001578'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001576/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001576/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001576/>;
+    dc:modified '2025-12-10T10:23:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ADCP bin relative to mean sea level'@en ;
+    skos:definition 'Also called depth cells, ADCP bins are regularly spaced and contiguous segments dividing the section of water column that is covered by the instrument and over which data are averaged. The entity is defined relative to the sea surface elevation averaged over a long period of time which approximates to the Earth\'s geoid.'@en ;
+    skos:notation 'SDN:S29::PE001576'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001575/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001575/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001575/>;
+    dc:modified '2025-12-05T16:48:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'analytical software'@en ;
+    skos:definition 'Computer program used to process data.'@en ;
+    skos:notation 'SDN:S29::PE001575'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001574/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001574/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001574/>;
+    dc:modified '2025-11-26T12:46:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'position'@en ;
+    skos:definition 'Location in space of an entity.'@en ;
+    skos:notation 'SDN:S29::PE001574'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001573/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001573/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001573/>;
+    dc:modified '2025-11-18T11:16:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water current relative to instrument and True North'@en ;
+    skos:definition 'The movement or flow of water. The entity is defined relative to the instrument (e.g. a radar) and True North for direction.'@en ;
+    skos:notation 'SDN:S29::PE001573'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001572/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001572/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001572/>;
+    dc:modified '2025-11-07T13:10:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water in equilibrator'@en ;
+    skos:definition 'The property relates to the water sample in the equilibrating vessel used as part of the analytical procedure.'@en ;
+    skos:notation 'SDN:S29::PE001572'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001571/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001571/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001571/>;
+    dc:modified '2025-07-07T16:12:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument output (443nm wavelength)'@en ;
+    skos:definition 'Raw signal generated by a measuring instrument. The physical entity refers to a single specified wavelength.'@en ;
+    skos:notation 'SDN:S29::PE001571'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001569/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001569/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001569/>;
+    dc:modified '2025-07-01T14:57:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'carbon uptake'@en ;
+    skos:definition 'The taking in or absorption of carbon by cellular organisms or organs.'@en ;
+    skos:notation 'SDN:S29::PE001569'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001570/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001570/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001570/>;
+    dc:modified '2025-07-01T14:57:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'calcification'@en ;
+    skos:definition 'The accumulation of calcium salts into cells or body tissue as a result of a biologically-mediated process.'@en ;
+    skos:notation 'SDN:S29::PE001570'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001568/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001568/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001568/>;
+    dc:modified '2025-05-16T11:59:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'buoyancy control oil'@en ;
+    skos:definition 'The oil used within the buoyancy engine of a platform such as a glider. Movement of oil between the internal and external reservoirs of the buoyancy engine results in ascent or descent of the the platform. Used to control the flight or buoyancy of the platform.'@en ;
+    skos:notation 'SDN:S29::PE001568'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001567/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001567/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001567/>;
+    dc:modified '2025-04-02T22:02:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'euphotic zone (1% light depth) relative to water surface'@en ;
+    skos:definition 'The upper surface layer of a water body where light is sufficient to support photosynthesis. The operational definition of the euphotic zone in lake and ocean sciences is the depth at which photosynthetic available radiation (PAR) is 1% of its surface value (1%LD).'@en ;
+    skos:notation 'SDN:S29::PE001567'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001566/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001566/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001566/>;
+    dc:modified '2025-02-27T16:54:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mixed layer'@en ;
+    skos:definition 'An oceanic or limnological range of depths which active turbulence has homogenised.'@en ;
+    skos:notation 'SDN:S29::PE001566'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001565/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001565/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001565/>;
+    dc:modified '2025-02-19T10:41:58'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'layer above aRPD'@en ;
+    skos:definition 'The layer of sediment between the apparent redox potential discontinuity (aRPD) and the sediment-water interface.'@en ;
+    skos:notation 'SDN:S29::PE001565'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001564/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001564/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001564/>;
+    dc:modified '2025-02-12T15:34:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'transparent exopolymer particle'@en ;
+    skos:definition 'Extracellular acidic polysaccharides produced by phytoplankton and bacteria in water bodies that are important for the biogeochemical cycling of elements.'@en ;
+    skos:notation 'SDN:S29::PE001564'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001563/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001563/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001563/>;
+    dc:modified '2025-02-07T10:35:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sediment-water interface'@en ;
+    skos:definition 'The boundary between the sediment layer and the overlying water in a water body.'@en ;
+    skos:notation 'SDN:S29::PE001563'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001562/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001562/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001562/>;
+    dc:modified '2025-02-03T17:00:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'apparent redox potential discontinuity'@en ;
+    skos:definition 'A transition of sediment colour in the seabed used as an indicator of a change in dissolved oxygen content from oxidized surface sediment to reduced deeper sediment.'@en ;
+    skos:notation 'SDN:S29::PE001562'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001561/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001561/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001561/>;
+    dc:modified '2025-01-17T10:31:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'analytical instrument'@en ;
+    skos:definition 'Equipment designed to qualitatively and/or quantitatively measure the composition, properties, structure of substances or samples.'@en ;
+    skos:notation 'SDN:S29::PE001561'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001560/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001560/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001560/>;
+    dc:modified '2025-01-14T13:39:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'analytical method'@en ;
+    skos:definition 'Method used to analyse the samples.'@en ;
+    skos:notation 'SDN:S29::PE001560'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001559/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001559/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001559/>;
+    dc:modified '2024-11-05T13:47:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to instrument frame'@en ;
+    skos:definition 'The reference is the rigid structure of a physical object that is a tool, an implement or a sampling/measuring device.'@en ;
+    skos:notation 'SDN:S29::PE001559'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001551/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001551/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001551/>;
+    dc:modified '2024-11-01T16:25:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'seafloor relative to Lowest Astronomical Tide datum'@en ;
+    skos:definition 'The property measured relates to the solid surface underlying a sea or an ocean relative to a vertical datum based on the arithmetic mean of hourly heights observed over the National Tidal Datum Epoch. Shorter series are specified in the name; e.g. monthly mean sea level and yearly mean sea level. Adapted from https://tidesandcurrents.noaa.gov/datum_options.html'@en ;
+    skos:notation 'SDN:S29::PE001551'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001552/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001552/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001552/>;
+    dc:modified '2024-11-01T16:25:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'seafloor relative to datum specified elsewhere'@en ;
+    skos:definition 'The property measured relates to the solid surface underlying a sea or an ocean relative to a datum provided elsewhere in the data model.'@en ;
+    skos:notation 'SDN:S29::PE001552'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001553/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001553/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001553/>;
+    dc:modified '2024-11-01T16:25:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'seafloor relative to instantaneous sea level'@en ;
+    skos:definition 'The property measured relates to the solid surface underlying a sea or an ocean relative to the sea surface elevation at the time of the observation.'@en ;
+    skos:notation 'SDN:S29::PE001553'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001554/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001554/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001554/>;
+    dc:modified '2024-11-01T16:25:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'seafloor relative to unspecified datum'@en ;
+    skos:definition 'The property measured relates to the solid surface underlying a sea or an ocean relative to a datum that has not been specified.'@en ;
+    skos:notation 'SDN:S29::PE001554'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001555/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001555/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001555/>;
+    dc:modified '2024-11-01T16:25:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'seafloor relative to NAP datum'@en ;
+    skos:definition 'The property measured relates to the solid surface underlying a sea or an ocean relative to a vertical datum used in large parts of Western Europe. Also known as Amsterdam Ordnance Datum. NAP stands for Normaal Amsterdams Peil.'@en ;
+    skos:notation 'SDN:S29::PE001555'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001556/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001556/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001556/>;
+    dc:modified '2024-11-01T16:25:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'seafloor relative to Alicante Mean Sea Level datum'@en ;
+    skos:definition 'The property measured relates to the solid surface underlying a sea or an ocean relative to a vertical datum based on the mean sea level at Alicante, Spain (Nivel Medio del Mar en Alicante NMMA)'@en ;
+    skos:notation 'SDN:S29::PE001556'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001557/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001557/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001557/>;
+    dc:modified '2024-11-01T16:25:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'seafloor relative to Ordnance Datum Newlyn'@en ;
+    skos:definition 'The property measured relates to the solid surface underlying a sea or an ocean relative to a vertical datum based on the mean sea level at Newlyn in Cornwall averaged between 1915 and 1921 used for the elevation of the zero metres contour on UK Ordnance Survey maps.'@en ;
+    skos:notation 'SDN:S29::PE001557'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001558/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001558/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001558/>;
+    dc:modified '2024-11-01T16:25:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'seafloor relative to Rijkswaterstaat Mean Sea Level'@en ;
+    skos:definition 'The property measured relates to the solid surface underlying a sea or an ocean relative to a vertical datum based on the mean sea level for a period of minimal 2 days converted to a many-year average based on measurements taken at the specified location.'@en ;
+    skos:notation 'SDN:S29::PE001558'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001550/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001550/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001550/>;
+    dc:modified '2024-10-29T11:43:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'LIDAR bin relative to water surface'@en ;
+    skos:definition 'Regularly spaced and contiguous segments dividing the section of atmosphere that is covered by the LIDAR instrument and over which data are averaged. The entity is defined relative to the surface of a water body.'@en ;
+    skos:notation 'SDN:S29::PE001550'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001549/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001549/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001549/>;
+    dc:modified '2024-09-12T12:25:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'seafloor relative to Mean Sea Level datum'@en ;
+    skos:definition 'The property relates to the solid surface underlying a sea or an ocean relative to a vertical datum based on the arithmetic mean of hourly heights observed over the National Tidal Datum Epoch. Shorter series are specified in the name; e.g. monthly mean sea level and yearly mean sea level. Adapted from https://tidesandcurrents.noaa.gov/datum_options.html'@en ;
+    skos:notation 'SDN:S29::PE001549'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001547/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001547/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001547/>;
+    dc:modified '2024-06-24T16:21:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'radiometer case'@en ;
+    skos:definition 'The property relates to a condition (typically temperature) within an infrared radiometer. Applies to a location in the radiometer case.'@en ;
+    skos:notation 'SDN:S29::PE001547'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001548/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001548/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001548/>;
+    dc:modified '2024-06-24T16:21:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'radiometer dome'@en ;
+    skos:definition 'The property relates to a condition (typically temperature) within an infrared radiometer. Applies to a location in the radiometer dome.'@en ;
+    skos:notation 'SDN:S29::PE001548'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001546/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001546/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001546/>;
+    dc:modified '2024-06-14T09:15:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sampling station'@en ;
+    skos:definition 'A location or facility at which measurements or samples were taken.'@en ;
+    skos:notation 'SDN:S29::PE001546'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001545/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001545/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001545/>;
+    dc:modified '2024-06-05T14:57:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'liquid water equivalent'@en ;
+    skos:definition 'The liquid content of solid precipitation that has accumulated on the ground (snow depth). The accumulation may consist of snow, ice formed by freezing precipitation, freezing liquid precipitation, or ice formed by the refreezing of melted snow. (Source: US National Weather Service Glossary)'@en ;
+    skos:notation 'SDN:S29::PE001545'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001542/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001542/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001542/>;
+    dc:modified '2024-05-07T10:25:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'measurement platform relative to magnetic north'@en ;
+    skos:definition 'A platform from which measurements are made. The entity is defined relative to the direction indicated by a magnetic needle or compass.'@en ;
+    skos:notation 'SDN:S29::PE001542'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001543/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001543/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001543/>;
+    dc:modified '2024-05-07T10:25:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'measurement device'@en ;
+    skos:definition 'An instrument or instrument system from which measurements are made.'@en ;
+    skos:notation 'SDN:S29::PE001543'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001544/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001544/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001544/>;
+    dc:modified '2024-05-07T10:25:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'measurement device relative to True North'@en ;
+    skos:definition 'An instrument or instrument system from which measurements are made. The entity is defined relative to the direction towards the geographic North Pole.'@en ;
+    skos:notation 'SDN:S29::PE001544'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001529/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001529/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001529/>;
+    dc:modified '2024-04-23T15:41:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to Lowest Astronomical Tide datum'@en ;
+    skos:definition 'A vertical datum based on the arithmetic mean of hourly heights observed over the National Tidal Datum Epoch. Shorter series are specified in the name; e.g. monthly mean sea level and yearly mean sea level. Adapted from https://tidesandcurrents.noaa.gov/datum_options.html'@en ;
+    skos:notation 'SDN:S29::PE001529'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001530/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001530/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001530/>;
+    dc:modified '2024-04-23T15:41:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to Ordnance Datum Malin'@en ;
+    skos:definition 'A vertical datum based on the mean sea level of the tide gauge at Malin Head, County Donegal. It was adopted as the national datum in 1970 from readings taken between 1960 and 1969 and all heights on national grid maps are measured above this datum.'@en ;
+    skos:notation 'SDN:S29::PE001530'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001531/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001531/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001531/>;
+    dc:modified '2024-04-23T15:41:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to Rijkswaterstaat Mean Sea Level'@en ;
+    skos:definition 'A vertical datum based on the mean sea level for a period of minimal 2 days converted to a many-year average based on measurements taken at the specified location.'@en ;
+    skos:notation 'SDN:S29::PE001531'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001532/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001532/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001532/>;
+    dc:modified '2024-04-23T15:41:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to UK Admiralty Chart Datum'@en ;
+    skos:definition 'A vertical datum based on the low water plane specified by UK Admiralty. This approximates to Lowest Astonomical Tide but the two are not exactly the same in some geographical areas.'@en ;
+    skos:notation 'SDN:S29::PE001532'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001533/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001533/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001533/>;
+    dc:modified '2024-04-23T15:41:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to Normal Low Water datum'@en ;
+    skos:definition 'Not available'@en ;
+    skos:notation 'SDN:S29::PE001533'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001534/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001534/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001534/>;
+    dc:modified '2024-04-23T15:41:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to Okioc Reference Level datum'@en ;
+    skos:definition 'Not available'@en ;
+    skos:notation 'SDN:S29::PE001534'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001535/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001535/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001535/>;
+    dc:modified '2024-04-23T15:41:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to unspecified datum'@en ;
+    skos:definition 'The datum is not specified.'@en ;
+    skos:notation 'SDN:S29::PE001535'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001536/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001536/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001536/>;
+    dc:modified '2024-04-23T15:41:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to Mean Water Height'@en ;
+    skos:definition 'Not available'@en ;
+    skos:notation 'SDN:S29::PE001536'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001537/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001537/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001537/>;
+    dc:modified '2024-04-23T15:41:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to NAP datum'@en ;
+    skos:definition 'A vertical datum used in large parts of Western Europe. Also known as Amsterdam Ordnance Datum. NAP stands for Normaal Amsterdams Peil.'@en ;
+    skos:notation 'SDN:S29::PE001537'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001538/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001538/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001538/>;
+    dc:modified '2024-04-23T15:41:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to Chart Datum'@en ;
+    skos:definition '	The measurement is referenced to an unspecified chart datum.'@en ;
+    skos:notation 'SDN:S29::PE001538'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001539/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001539/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001539/>;
+    dc:modified '2024-04-23T15:41:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to Ordnance Datum Newlyn'@en ;
+    skos:definition 'A vertical datum based on the mean sea level at Newlyn in Cornwall averaged between 1915 and 1921 used for the elevation of the zero metres contour on UK Ordnance Survey maps.'@en ;
+    skos:notation 'SDN:S29::PE001539'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001540/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001540/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001540/>;
+    dc:modified '2024-04-23T15:41:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to Mean Sea Level datum'@en ;
+    skos:definition 'A vertical datum based on the arithmetic mean of hourly heights observed over the National Tidal Datum Epoch. Shorter series are specified in the name; e.g. monthly mean sea level and yearly mean sea level. Adapted from https://tidesandcurrents.noaa.gov/datum_options.html'@en ;
+    skos:notation 'SDN:S29::PE001540'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001541/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001541/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001541/>;
+    dc:modified '2024-04-23T15:41:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'relative to instrument zero'@en ;
+    skos:definition 'The measurement is given relative to the instrument\'s zero.'@en ;
+    skos:notation 'SDN:S29::PE001541'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001528/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001528/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001528/>;
+    dc:modified '2024-04-19T07:08:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'measurement platform relative to water surface'@en ;
+    skos:definition 'A platform from which measurements are made. The entity is defined relative to the surface of a water body.'@en ;
+    skos:notation 'SDN:S29::PE001528'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001527/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001527/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001527/>;
+    dc:modified '2024-04-19T07:08:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'measurement platform relative to True North'@en ;
+    skos:definition 'A platform from which measurements are made. The entity is defined relative to the direction towards the geographic North Pole.'@en ;
+    skos:notation 'SDN:S29::PE001527'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001525/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001525/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001525/>;
+    dc:modified '2024-04-10T14:04:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'technical replicate'@en ;
+    skos:definition 'Subsamples, or repeated processing, of a parent sample, to capture variation in handling of each replicate, or simply to repeat the processing.'@en ;
+    skos:notation 'SDN:S29::PE001525'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001526/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001526/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001526/>;
+    dc:modified '2024-04-10T14:04:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'biological replicate'@en ;
+    skos:definition 'Biologically distinct samples that are collected in parallel to capture random biological variation.'@en ;
+    skos:notation 'SDN:S29::PE001526'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001523/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001523/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001523/>;
+    dc:modified '2024-04-10T14:04:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'spatial replicate'@en ;
+    skos:definition 'Samples collected independently over some area, specifically collected to estimate statistical information about that area.'@en ;
+    skos:notation 'SDN:S29::PE001523'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001524/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001524/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001524/>;
+    dc:modified '2024-04-10T14:04:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'temporal replicate'@en ;
+    skos:definition 'Samples collected independently over a timeframe, specifically collected to estimate changes to the subject of interest over that timeframe.'@en ;
+    skos:notation 'SDN:S29::PE001524'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001522/2/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001522/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001522/>;
+    dc:modified '2024-03-22T09:19:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sampling processor (lower filter)'@en ;
+    skos:definition 'The lower filter in a cascade or sequential filtration setup designed to exclude material retained by the filter. Only the material collected on the filter is used in the analysis.'@en ;
+    skos:notation 'SDN:S29::PE001522'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001521/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001521/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001521/>;
+    dc:modified '2024-03-19T16:30:38'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sampling processor (upper sieve)'@en ;
+    skos:definition 'Equipment used to sort biological or geological material. The material that remain on the sieve are discarded.'@en ;
+    skos:notation 'SDN:S29::PE001521'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001520/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001520/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001520/>;
+    dc:modified '2024-03-19T15:57:38'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sampling processor (lower sieve)'@en ;
+    skos:definition 'Equipment used to sort biological or geological material. Only the material that remains on the sieve is used in the analyses.'@en ;
+    skos:notation 'SDN:S29::PE001520'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001519/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001519/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001519/>;
+    dc:modified '2024-03-18T14:19:38'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sampling processor (upper filter)'@en ;
+    skos:definition 'The upper filter in a cascade or sequential filtration setup designed to exclude material retained by the filter. Only material and liquid that pass through the filter are used in the analyses.'@en ;
+    skos:notation 'SDN:S29::PE001519'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001518/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001518/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001518/>;
+    dc:modified '2024-03-18T13:47:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'analysed biological entities'@en ;
+    skos:definition 'The biological organisms used in the analysis.'@en ;
+    skos:notation 'SDN:S29::PE001518'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001517/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001517/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001517/>;
+    dc:modified '2024-03-14T08:03:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sample collector'@en ;
+    skos:definition 'A device used to collect physical samples.'@en ;
+    skos:notation 'SDN:S29::PE001517'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001511/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001511/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001511/>;
+    dc:modified '2024-03-13T16:57:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sampling platform'@en ;
+    skos:definition 'A structure or vehicle that serves as a base for deploying sampling or sensing equipment.'@en ;
+    skos:notation 'SDN:S29::PE001511'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001512/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001512/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001512/>;
+    dc:modified '2024-03-13T16:57:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sampling instrument'@en ;
+    skos:definition 'Equipment designed to collect physical samples.'@en ;
+    skos:notation 'SDN:S29::PE001512'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001513/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001513/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001513/>;
+    dc:modified '2024-03-13T16:57:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sampling method'@en ;
+    skos:definition 'Method used to obtain the samples used for the analysis.'@en ;
+    skos:notation 'SDN:S29::PE001513'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001514/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001514/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001514/>;
+    dc:modified '2024-03-13T16:57:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sample preservation method'@en ;
+    skos:definition 'Method used to preserve the samples after collection and prior to analysis.'@en ;
+    skos:notation 'SDN:S29::PE001514'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001515/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001515/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001515/>;
+    dc:modified '2024-03-13T16:57:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sample extraction method'@en ;
+    skos:definition 'Method used to extract the analysed sample from its matrix.'@en ;
+    skos:notation 'SDN:S29::PE001515'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001516/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001516/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001516/>;
+    dc:modified '2024-03-13T16:57:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sub-sampling protocol'@en ;
+    skos:definition 'Method used to divide the sample into sub-samples.'@en ;
+    skos:notation 'SDN:S29::PE001516'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001510/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001510/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001510/>;
+    dc:modified '2024-02-29T10:25:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'electromagnetic radiation (880nm wavelength)'@en ;
+    skos:definition 'Single wavelength electromagnetic radiation of the specified wavelength in nanometer.'@en ;
+    skos:notation 'SDN:S29::PE001510'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S29/current/PE001509/1/> .
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001509/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S29/current/PE001509/>;
+    dc:modified '2024-02-28T12:15:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'instrument output (800nm wavelength)'@en ;
+    skos:definition 'Raw signal generated by a measuring instrument. The physical entity refers to a single specified wavelength.'@en ;
+    skos:notation 'SDN:S29::PE001509'^^xsd:string .

@@ -1,0 +1,955 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C19/2011_01_01_00_00_00_2011_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C19/2010_01_01_00_00_00_2010_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2011-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/SVX00013/3/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00013/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/SVX00013/>;
+    dc:modified '2011-12-14T10:46:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Lake Superior'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 46.32977967,
+    "Easternmost_longitude": -84.05785001,
+    "Northernmost_latitude": 49.14277507,
+    "Westernmost_longitude": -92.14768148
+}}}'''@en ;
+    skos:notation 'SDN:C19::SVX00013'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/SVX00012/3/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00012/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/SVX00012/>;
+    dc:modified '2011-12-14T10:44:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Lake Ontario'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 42.82457724,
+    "Easternmost_longitude": -75.32667302,
+    "Northernmost_latitude": 44.71688896,
+    "Westernmost_longitude": -80.01261225
+}}}'''@en ;
+    skos:notation 'SDN:C19::SVX00012'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/SVX00011/3/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00011/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/SVX00011/>;
+    dc:modified '2011-12-14T10:41:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Lake Michigan'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 41.26611069,
+    "Easternmost_longitude": -84.6962558,
+    "Northernmost_latitude": 47.00565218,
+    "Westernmost_longitude": -89.29404555
+}}}'''@en ;
+    skos:notation 'SDN:C19::SVX00011'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/SVX00010/3/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00010/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/SVX00010/>;
+    dc:modified '2011-12-14T10:37:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Lake Huron'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 42.36058299,
+    "Easternmost_longitude": -79.49905027,
+    "Northernmost_latitude": 48.20296145,
+    "Westernmost_longitude": -85.37542358
+}}}'''@en ;
+    skos:notation 'SDN:C19::SVX00010'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/SVX00009/3/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00009/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/SVX00009/>;
+    dc:modified '2011-12-14T10:33:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Lake Erie'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 40.95141031,
+    "Easternmost_longitude": -78.63477641,
+    "Northernmost_latitude": 43.40770536,
+    "Westernmost_longitude": -83.6656431
+}}}'''@en ;
+    skos:notation 'SDN:C19::SVX00009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN038/2/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN038/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN038/>;
+    dc:modified '2011-09-29T15:03:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Northern Minch'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 57.041349,
+    "Easternmost_longitude": -4.835844,
+    "Northernmost_latitude": 58.63073,
+    "Westernmost_longitude": -7.511826
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN038'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN056/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN056/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN056/>;
+    dc:modified '2011-08-26T15:29:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Menai Strait'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 53.0918041417739,
+    "Easternmost_longitude": -3.95996733538543,
+    "Northernmost_latitude": 53.3299731363398,
+    "Westernmost_longitude": -4.36577626471796
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN056'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/SVX00008/4/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00008/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/SVX00008/>;
+    dc:modified '2011-08-26T15:23:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'European mainland'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 35.9472951304195,
+    "Easternmost_longitude": 67.9620933833754,
+    "Northernmost_latitude": 71.6807828234932,
+    "Westernmost_longitude": -9.9397205555026
+}}}'''@en ;
+    skos:notation 'SDN:C19::SVX00008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/IA/2/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/IA/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/IA/>;
+    dc:modified '2011-08-26T10:26:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'inapplicable'@en ;
+    skos:definition 'There is no appropriate value.'@en ;
+    skos:notation 'SDN:C19::IA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN001/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN001/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mounts Bay'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 49.96068,
+    "Easternmost_longitude": -5.198206,
+    "Northernmost_latitude": 50.152329,
+    "Westernmost_longitude": -5.671801
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN002/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN002/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Plymouth Sound'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 50.292427,
+    "Easternmost_longitude": -4.105946,
+    "Northernmost_latitude": 50.405638,
+    "Westernmost_longitude": -4.248892
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN003/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN003/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Weymouth Bay'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 50.539421,
+    "Easternmost_longitude": -2.1484,
+    "Northernmost_latitude": 50.690864,
+    "Westernmost_longitude": -2.478166
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN004/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN004/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Lyme Bay'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 50.388656,
+    "Easternmost_longitude": -2.446001,
+    "Northernmost_latitude": 50.800431,
+    "Westernmost_longitude": -3.59979
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN005/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN005/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Solent'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 50.655327,
+    "Easternmost_longitude": -0.807473,
+    "Northernmost_latitude": 50.940925,
+    "Westernmost_longitude": -1.789143
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN006/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN006/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN006/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Christchurch Bay'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 50.7054,
+    "Easternmost_longitude": -1.565847,
+    "Northernmost_latitude": 50.737718,
+    "Westernmost_longitude": -1.783162
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN007/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN007/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN007/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Poole Bay'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 50.578536,
+    "Easternmost_longitude": -1.749722,
+    "Northernmost_latitude": 50.740662,
+    "Westernmost_longitude": -2.089777
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN008/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN008/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN008/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Rye Bay'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 50.874109,
+    "Easternmost_longitude": 0.966864,
+    "Northernmost_latitude": 50.956953,
+    "Westernmost_longitude": 0.670112
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN009/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN009/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN009/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Barnstaple or Bideford Bay'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 50.904033,
+    "Easternmost_longitude": -4.067554,
+    "Northernmost_latitude": 51.203304,
+    "Westernmost_longitude": -4.526373
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN010/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN010/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN010/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bridgwater Bay'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 51.094136,
+    "Easternmost_longitude": -2.983919,
+    "Northernmost_latitude": 51.327537,
+    "Westernmost_longitude": -3.556599
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN010'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN011/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN011/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN011/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Swansea Bay'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 51.502667,
+    "Easternmost_longitude": -3.72218,
+    "Northernmost_latitude": 51.667944,
+    "Westernmost_longitude": -4.000391
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN011'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN012/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN012/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN012/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Carmarthen Bay'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 51.518205,
+    "Easternmost_longitude": -4.065184,
+    "Northernmost_latitude": 51.872269,
+    "Westernmost_longitude": -4.716649
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN012'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN013/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN013/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN013/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Severn Estuary'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 51.23584,
+    "Easternmost_longitude": -2.287589,
+    "Northernmost_latitude": 51.919964,
+    "Westernmost_longitude": -3.198788
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN013'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN014/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN014/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN014/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'St. Brides Bay'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 51.714651,
+    "Easternmost_longitude": -5.094861,
+    "Northernmost_latitude": 51.922062,
+    "Westernmost_longitude": -5.3184
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN014'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN015/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN015/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN015/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'St. George\'s Channel'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 51.831487,
+    "Easternmost_longitude": -5.193781,
+    "Northernmost_latitude": 52.301173,
+    "Westernmost_longitude": -6.589568
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN015'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN016/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN016/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN016/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Caernarfon Bay'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 52.9274,
+    "Easternmost_longitude": -4.331398,
+    "Northernmost_latitude": 53.246701,
+    "Westernmost_longitude": -4.569748
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN016'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN017/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN017/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN017/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Carlingford Lough'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 53.989547,
+    "Easternmost_longitude": -6.055121,
+    "Northernmost_latitude": 54.146726,
+    "Westernmost_longitude": -6.285679
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN017'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN018/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN018/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN018/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Morecambe Bay'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 53.824857,
+    "Easternmost_longitude": -2.685308,
+    "Northernmost_latitude": 54.386974,
+    "Westernmost_longitude": -3.251891
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN018'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN019/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN019/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN019/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Strangford Lough'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 54.279875,
+    "Easternmost_longitude": -5.49527,
+    "Northernmost_latitude": 54.608598,
+    "Westernmost_longitude": -5.72834
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN019'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN020/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN020/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN020/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Solway Firth'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 54.375635,
+    "Easternmost_longitude": -2.986914,
+    "Northernmost_latitude": 55.067844,
+    "Westernmost_longitude": -4.965239
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN020'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN021/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN021/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN021/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Luce Bay'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 54.625705,
+    "Easternmost_longitude": -4.4068,
+    "Northernmost_latitude": 54.909026,
+    "Westernmost_longitude": -4.964556
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN021'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN022/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN022/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN022/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Wigtown Bay'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 54.985808,
+    "Easternmost_longitude": -4.099056,
+    "Northernmost_latitude": 54.683219,
+    "Westernmost_longitude": -4.444787
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN022'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN023/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN023/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN023/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Liverpool Bay'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 52.783504,
+    "Easternmost_longitude": -2.671846,
+    "Northernmost_latitude": 53.96993,
+    "Westernmost_longitude": -4.311958
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN023'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN024/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN024/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN024/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ribble Estuary'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 53.6408,
+    "Easternmost_longitude": -2.821021,
+    "Northernmost_latitude": 53.805262,
+    "Westernmost_longitude": -3.060802
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN024'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN025/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN025/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN025/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mersey Estuary'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 53.245121,
+    "Easternmost_longitude": -2.680371,
+    "Northernmost_latitude": 53.455889,
+    "Westernmost_longitude": -3.068628
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN025'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN026/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN026/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN026/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Dee Estuary'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 53.228119,
+    "Easternmost_longitude": -3.039657,
+    "Northernmost_latitude": 53.424093,
+    "Westernmost_longitude": -3.320215
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN026'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN027/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN027/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN027/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Cardigan Bay'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 51.946541,
+    "Easternmost_longitude": -3.834283,
+    "Northernmost_latitude": 53.040645,
+    "Westernmost_longitude": -5.27197
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN027'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN028/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN028/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN028/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Tremadog Bay'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 52.798415,
+    "Easternmost_longitude": -4.048563,
+    "Northernmost_latitude": 52.932953,
+    "Westernmost_longitude": -4.328205
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN028'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN029/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN029/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN029/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Belfast Lough'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 54.607174,
+    "Easternmost_longitude": -5.604049,
+    "Northernmost_latitude": 54.782645,
+    "Westernmost_longitude": -5.932802
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN029'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN030/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN030/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN030/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'North Channel'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 54.211573,
+    "Easternmost_longitude": -4.856702,
+    "Northernmost_latitude": 55.62523,
+    "Westernmost_longitude": -6.166288
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN030'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN031/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN031/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN031/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Lough Foyle'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 54.956736,
+    "Easternmost_longitude": -6.8535,
+    "Northernmost_latitude": 55.24537,
+    "Westernmost_longitude": -7.342805
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN031'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN032/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN032/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN032/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sound of Jura'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 55.367397,
+    "Easternmost_longitude": -5.299566,
+    "Northernmost_latitude": 56.272716,
+    "Westernmost_longitude": -6.151701
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN032'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN033/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN033/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN033/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Firth of Lorn'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 55.961122,
+    "Easternmost_longitude": -4.934555,
+    "Northernmost_latitude": 56.969342,
+    "Westernmost_longitude": -6.048401
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN033'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN034/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN034/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN034/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Firth of Clyde'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 54.885078,
+    "Easternmost_longitude": -4.331275,
+    "Northernmost_latitude": 56.471122,
+    "Westernmost_longitude": -5.83493
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN034'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN035/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN035/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN035/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Kilbrannan Sound'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 55.45499,
+    "Easternmost_longitude": -5.24548,
+    "Northernmost_latitude": 55.810485,
+    "Westernmost_longitude": -5.538141
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN035'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN036/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN036/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN036/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Little Minch'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 57.40673,
+    "Easternmost_longitude": -6.553322,
+    "Northernmost_latitude": 57.654663,
+    "Westernmost_longitude": -7.233532
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN036'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN037/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN037/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN037/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sea of the Hebrides'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 56.374818,
+    "Easternmost_longitude": -5.372056,
+    "Northernmost_latitude": 57.599962,
+    "Westernmost_longitude": -7.662207
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN037'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN039/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN039/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN039/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'St. Magnus Bay'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 60.273211,
+    "Easternmost_longitude": -1.257318,
+    "Northernmost_latitude": 60.503747,
+    "Westernmost_longitude": -1.699614
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN039'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN040/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN040/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN040/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Thames Estuary'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 51.266863,
+    "Easternmost_longitude": 1.429283,
+    "Northernmost_latitude": 51.573154,
+    "Westernmost_longitude": 0.248911
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN040'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN041/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN041/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN041/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Blackwater Estuary'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 51.664707,
+    "Easternmost_longitude": 1.057928,
+    "Northernmost_latitude": 51.866938,
+    "Westernmost_longitude": 0.682348
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN041'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN042/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN042/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN042/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'The Wash'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 52.739109,
+    "Easternmost_longitude": 0.558268,
+    "Northernmost_latitude": 53.170645,
+    "Westernmost_longitude": -0.007793
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN042'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN043/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN043/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN043/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Humber Estuary'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 53.480805,
+    "Easternmost_longitude": 0.178388,
+    "Northernmost_latitude": 53.831931,
+    "Westernmost_longitude": -0.789063
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN043'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN044/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN044/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN044/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bridlington Bay'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 53.597962,
+    "Easternmost_longitude": 0.119202,
+    "Northernmost_latitude": 54.132972,
+    "Westernmost_longitude": -0.238945
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN044'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN045/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN045/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN045/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Tees Bay'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 54.560296,
+    "Easternmost_longitude": -1.041938,
+    "Northernmost_latitude": 54.699222,
+    "Westernmost_longitude": -1.212684
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN045'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN046/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN046/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN046/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Firth of Forth'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 55.853468,
+    "Easternmost_longitude": -2.554731,
+    "Northernmost_latitude": 56.275002,
+    "Westernmost_longitude": -3.849235
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN046'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN047/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN047/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN047/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Firth of Tay'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 56.326438,
+    "Easternmost_longitude": -2.747818,
+    "Northernmost_latitude": 56.517411,
+    "Westernmost_longitude": -3.379359
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN047'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN048/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN048/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN048/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Moray Firth'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 57.424671,
+    "Easternmost_longitude": -3.277641,
+    "Northernmost_latitude": 57.97304,
+    "Westernmost_longitude": -4.490557
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN048'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN049/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN049/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN049/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Dornoch Firth'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 57.752077,
+    "Easternmost_longitude": -3.772059,
+    "Northernmost_latitude": 58.004131,
+    "Westernmost_longitude": -4.363134
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN049'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN050/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN050/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN050/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Pentland Firth'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 58.63386,
+    "Easternmost_longitude": -2.959717,
+    "Northernmost_latitude": 58.791276,
+    "Westernmost_longitude": -3.3757
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN050'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN051/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN051/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN051/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Scapa Flow'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 58.756063,
+    "Easternmost_longitude": -2.894615,
+    "Northernmost_latitude": 58.991706,
+    "Westernmost_longitude": -3.403708
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN051'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN052/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN052/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN052/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Stronsay Firth'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 58.860211,
+    "Easternmost_longitude": -2.543717,
+    "Northernmost_latitude": 59.238553,
+    "Westernmost_longitude": -3.115032
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN052'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN053/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN053/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN053/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Westray Firth'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 59.022014,
+    "Easternmost_longitude": -2.816584,
+    "Northernmost_latitude": 59.343044,
+    "Westernmost_longitude": -3.219673
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN053'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN054/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN054/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN054/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Yell Sound'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 60.328169,
+    "Easternmost_longitude": -1.05284,
+    "Northernmost_latitude": 60.696275,
+    "Westernmost_longitude": -1.396898
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN054'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN055/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/UKMDN055/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/UKMDN055/>;
+    dc:modified '2011-08-12T12:18:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Poole Harbour'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 50.659636,
+    "Easternmost_longitude": -1.932983,
+    "Northernmost_latitude": 50.740995,
+    "Westernmost_longitude": -2.084423
+}}}'''@en ;
+    skos:notation 'SDN:C19::UKMDN055'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/SVX00003/3/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00003/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/SVX00003/>;
+    dc:modified '2011-05-25T14:07:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Aral Sea'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 43,
+    "Easternmost_longitude": 62.5,
+    "Northernmost_latitude": 46.99975,
+    "Westernmost_longitude": 58
+}}}'''@en ;
+    skos:notation 'SDN:C19::SVX00003'^^xsd:string .

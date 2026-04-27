@@ -1,0 +1,111 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P08/2005_01_01_00_00_00_2005_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P08/current/DS07/1/> .
+<http://vocab.nerc.ac.uk/collection/P08/current/DS07/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P08/current/DS07/>;
+    dc:modified '2005-03-10T14:31:52'^^xsd:dateTime ;
+    skos:altLabel 'Administration and dimensions'^^xsd:string ;
+    skos:prefLabel 'Administration and dimensions'@en ;
+    skos:definition 'Parameters related to spatial and temporal co-ordinates, entity referencing (eg record numbering and keys) and access control'@en ;
+    skos:notation 'SDN:P08::DS07'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P08/current/DS05/1/> .
+<http://vocab.nerc.ac.uk/collection/P08/current/DS05/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P08/current/DS05/>;
+    dc:modified '2005-03-10T14:31:52'^^xsd:dateTime ;
+    skos:altLabel 'Atmosphere'^^xsd:string ;
+    skos:prefLabel 'Atmosphere'@en ;
+    skos:definition 'The atmospheric sciences domain'@en ;
+    skos:notation 'SDN:P08::DS05'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P08/current/DS01/1/> .
+<http://vocab.nerc.ac.uk/collection/P08/current/DS01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P08/current/DS01/>;
+    dc:modified '2005-03-10T14:31:52'^^xsd:dateTime ;
+    skos:altLabel 'Biological oceanography'^^xsd:string ;
+    skos:prefLabel 'Biological oceanography'@en ;
+    skos:definition 'The biological oceanographic science domain'@en ;
+    skos:notation 'SDN:P08::DS01'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P08/current/DS02/1/> .
+<http://vocab.nerc.ac.uk/collection/P08/current/DS02/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P08/current/DS02/>;
+    dc:modified '2005-03-10T14:31:52'^^xsd:dateTime ;
+    skos:altLabel 'Chemical oceanography'^^xsd:string ;
+    skos:prefLabel 'Chemical oceanography'@en ;
+    skos:definition 'The chemical oceanographic science domain'@en ;
+    skos:notation 'SDN:P08::DS02'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P08/current/DS06/1/> .
+<http://vocab.nerc.ac.uk/collection/P08/current/DS06/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P08/current/DS06/>;
+    dc:modified '2005-03-10T14:31:52'^^xsd:dateTime ;
+    skos:altLabel 'Cross-discipline'^^xsd:string ;
+    skos:prefLabel 'Cross-discipline'@en ;
+    skos:definition 'No specific association with an identified domain'@en ;
+    skos:notation 'SDN:P08::DS06'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P08/current/DS03/1/> .
+<http://vocab.nerc.ac.uk/collection/P08/current/DS03/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P08/current/DS03/>;
+    dc:modified '2005-03-10T14:31:52'^^xsd:dateTime ;
+    skos:altLabel 'Physical oceanography'^^xsd:string ;
+    skos:prefLabel 'Physical oceanography'@en ;
+    skos:definition 'The physical oceanographic science domain'@en ;
+    skos:notation 'SDN:P08::DS03'^^xsd:string .

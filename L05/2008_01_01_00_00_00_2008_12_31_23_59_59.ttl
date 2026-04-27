@@ -1,0 +1,334 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L05/2008_01_01_00_00_00_2008_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L05/2007_01_01_00_00_00_2007_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2008-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/309/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/309/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/309/>;
+    dc:modified '2008-01-10T16:23:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'terrestrial radiometers'@en ;
+    skos:definition 'Sensors that measure the intensity and nature of electromagnetic radiation in a manner optimised for the quantification of terrestrial phenomena.'@en ;
+    skos:notation 'SDN:L05::309'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/308/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/308/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/308/>;
+    dc:modified '2008-01-10T16:22:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmospheric radiometers'@en ;
+    skos:definition 'Sensors that measure the intensity an nature of electromagnetic radiation in a manner optimised for the quantification of atmospheric phenomena.'@en ;
+    skos:notation 'SDN:L05::308'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/307/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/307/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/307/>;
+    dc:modified '2008-01-10T16:21:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'accelerometers'@en ;
+    skos:definition 'Instruments that measure non-gravitational accelerations acting upon a spacecraft.'@en ;
+    skos:notation 'SDN:L05::307'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/306/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/306/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/306/>;
+    dc:modified '2008-01-10T16:21:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'synthetic aperture radars'@en ;
+    skos:definition 'Instruments that generate maps of radar reflectivity through the synthesis of multiple pulses from a moving platform.'@en ;
+    skos:notation 'SDN:L05::306'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/304/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/304/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/304/>;
+    dc:modified '2008-01-10T16:19:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ocean colour radiometers'@en ;
+    skos:definition 'Sensors that measure the intensity and nature of electromagnetic radiation in a manner optimised for the determination of ocean chlorophyll concentration.'@en ;
+    skos:notation 'SDN:L05::304'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/358/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/358/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/358/>;
+    dc:modified '2008-01-10T16:15:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'bubble detectors'@en ;
+    skos:definition 'Instruments that measure the concentration and size of air bubbles in the water column.'@en ;
+    skos:notation 'SDN:L05::358'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB01/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB01/>;
+    dc:modified '2008-01-10T16:10:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'elemental analysers'@en ;
+    skos:definition 'Instruments that quantify carbon, nitrogen and sometimes other elements by combusting the sample at very high temperature and assaying the resulting gaseous oxides. Usually used for samples including organic material.'@en ;
+    skos:notation 'SDN:L05::LAB01'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB02/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB02/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB02/>;
+    dc:modified '2008-01-10T16:10:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'gas chromatographs'@en ;
+    skos:definition 'Instruments separating gases, volatile substances or substances dissolved in a volatile solvent by transporting an inert gas through a column packed with a sorbent to a detector for assay.'@en ;
+    skos:notation 'SDN:L05::LAB02'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB03/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB03/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB03/>;
+    dc:modified '2008-01-10T16:10:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'colorimeters'@en ;
+    skos:definition 'Instruments measuring the amount of light of a given wavelength absorbed by a sample of solution to determine the concentration of a specific coloured solute.'@en ;
+    skos:notation 'SDN:L05::LAB03'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB04/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB04/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB04/>;
+    dc:modified '2008-01-10T16:10:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'autoanalysers'@en ;
+    skos:definition 'Instruments that continuously draw samples through plumbing adding reagents whilst controlling the environment to produce a chemical reaction before passing the sample to a detector, e.g. the automated colorimetric determination of nutrients.'@en ;
+    skos:notation 'SDN:L05::LAB04'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB05/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB05/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB05/>;
+    dc:modified '2008-01-10T16:10:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'optical microscopes'@en ;
+    skos:definition 'Instruments that generate enlarged images of samples using the phenomena of reflection and absorption of visible light. Includes conventional and inverted instruments.'@en ;
+    skos:notation 'SDN:L05::LAB05'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB06/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB06/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB06/>;
+    dc:modified '2008-01-10T16:10:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fluorescence microscopes'@en ;
+    skos:definition 'Instruments that generate enlarged images of samples using the phenomena of fluorescence and phosphorescence instead of, or in addition to, reflection and absorption of visible light. Includes conventional and inverted instruments.'@en ;
+    skos:notation 'SDN:L05::LAB06'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB07/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB07/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB07/>;
+    dc:modified '2008-01-10T16:10:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'electron microscopes'@en ;
+    skos:definition 'Instruments that generate enlarged images of samples using the phenomena of reflection and absorption of electrons behaving as waves.'@en ;
+    skos:notation 'SDN:L05::LAB07'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB08/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB08/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB08/>;
+    dc:modified '2008-01-10T16:10:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'electron microprobes'@en ;
+    skos:definition 'Instruments that chemically analyse a small area of a sample by bombarding it with electrons and spectroscopically assaying the resulting X-Ray emissions.'@en ;
+    skos:notation 'SDN:L05::LAB08'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB09/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB09/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB09/>;
+    dc:modified '2008-01-10T16:10:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ion microprobes'@en ;
+    skos:definition 'Instruments that isotopically analyse a small area of sample by bombarding it with ions to form a plasma that is analysed in a mass spectrometer.'@en ;
+    skos:notation 'SDN:L05::LAB09'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB10/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB10/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB10/>;
+    dc:modified '2008-01-10T16:10:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atomic absorption spectrometers'@en ;
+    skos:definition 'Instruments that volatilise the sample, illuminate the resultant vapour with light wavelengths matched to the analyte of interest and quantify the radiation absorbed, which is proportional to concentration.'@en ;
+    skos:notation 'SDN:L05::LAB10'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB11/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB11/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB11/>;
+    dc:modified '2008-01-10T16:10:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'high performance liquid chromatographs'@en ;
+    skos:definition 'Instruments that separate and analyse mixtures of substances by high pressure pumping the sample through a column packed with microspheres coated with the stationary phase.'@en ;
+    skos:notation 'SDN:L05::LAB11'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB12/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB12/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB12/>;
+    dc:modified '2008-01-10T16:10:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'titrators'@en ;
+    skos:definition 'Instruments that incrementally add quantified aliquites of a reagent to a sample until the end-point of a chemical reaction is reached.'@en ;
+    skos:notation 'SDN:L05::LAB12'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB14/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB14/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB14/>;
+    dc:modified '2008-01-10T16:10:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'inductively-coupled plasma atomic emission spectroscopes'@en ;
+    skos:definition 'Instruments that pass nebulised samples into an inductively-coupled gas plasma (8-10000 K) where they are atomised and excited. The de-excitation optical emissions at characteristic wavelengths are spectroscopically analysed.'@en ;
+    skos:notation 'SDN:L05::LAB14'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB15/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB15/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB15/>;
+    dc:modified '2008-01-10T16:10:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'inductively-coupled plasma mass spectrometers'@en ;
+    skos:definition 'Instruments that pass nebulised samples into an inductively-coupled gas plasma (8-10000 K) where they are atomised and ionised. Ions of specific mass-to-charge ratios are quantified in a quadrupole mass spectrometer.'@en ;
+    skos:notation 'SDN:L05::LAB15'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB16/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB16/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB16/>;
+    dc:modified '2008-01-10T16:10:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass spectrometers'@en ;
+    skos:definition 'Instruments used to measure the mass-to-charge ratio of ions most generally used to find the composition of a sample by generating a mass spectrum representing the masses of sample components.'@en ;
+    skos:notation 'SDN:L05::LAB16'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB17/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB17/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB17/>;
+    dc:modified '2008-01-10T16:10:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'accelerator mass spectrometers'@en ;
+    skos:definition 'Instruments measuring the mass-to-charge ratio of the products of sample molecule disassociation, atom ionisation and ion acceleration in a particle accelerator.'@en ;
+    skos:notation 'SDN:L05::LAB17'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB18/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB18/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB18/>;
+    dc:modified '2008-01-10T16:10:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'nuclear magnetic resonance spectrometers'@en ;
+    skos:definition 'Instruments that identify and quantify magnetically active chemical entities by subjecting a sample to orthogonal magnetic and electrical fields.'@en ;
+    skos:notation 'SDN:L05::LAB18'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB19/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB19/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB19/>;
+    dc:modified '2008-01-10T16:10:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'gas chromatograph mass spectrometers'@en ;
+    skos:definition 'Instruments separating gases, volatile substances or substances dissolved in a volatile solvent by transporting an inert gas through a column packed with a sorbent to a detector for assay by a mass spectrometer.'@en ;
+    skos:notation 'SDN:L05::LAB19'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB24/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB24/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB24/>;
+    dc:modified '2008-01-10T16:10:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'gel permeation chromatographs'@en ;
+    skos:definition 'Instruments that separate components in aqueous or organic solution based on molecular size generally for molecular weight determination.'@en ;
+    skos:notation 'SDN:L05::LAB24'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB25/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB25/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB25/>;
+    dc:modified '2008-01-10T16:10:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'X-ray fluorescence analysers'@en ;
+    skos:definition 'Instruments that identify and quantify the elemental constituents of a sample from the spectrum of electromagnetic radiation emitted by the atoms in the sample when excited by X-ray radiation.'@en ;
+    skos:notation 'SDN:L05::LAB25'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB26/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB26/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB26/>;
+    dc:modified '2008-01-10T16:10:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'X-ray diffractometers'@en ;
+    skos:definition 'Instruments that identify crystalline solids by measuring the characteristic spaces between layers of atoms or molecules in a crystal.'@en ;
+    skos:notation 'SDN:L05::LAB26'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/151/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/151/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/151/>;
+    dc:modified '2008-01-10T15:47:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'benthic incubation chambers'@en ;
+    skos:definition 'A device that isolates a portion of seabed plus overlying water from its surroundings. Either returns the entire system to the surface or incorporates sampling devices and/or in-situ sensors.'@en ;
+    skos:notation 'SDN:L05::151'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/81/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/81/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/81/>;
+    dc:modified '2008-01-10T15:47:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'shipboard incubators'@en ;
+    skos:definition 'A device mounted on a ship that holds water samples under conditions of controlled temperature or controlled temperature and illumination.'@en ;
+    skos:notation 'SDN:L05::81'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/82/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/82/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/82/>;
+    dc:modified '2008-01-10T15:47:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'in-situ incubators'@en ;
+    skos:definition 'A rig that allows water samples to be retained from where they were collected whilst physically separated from their surroundings.  Includes small-scale incubation rigs and mesocosms.'@en ;
+    skos:notation 'SDN:L05::82'^^xsd:string .

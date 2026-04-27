@@ -1,0 +1,102 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/G21/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G21/current/001/1/> .
+<http://vocab.nerc.ac.uk/collection/G21/current/001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G21/current/001/>;
+    dc:modified '2012-07-04T11:27:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'center'@en ;
+    skos:definition 'Point halfway between the lower left and the upper right of the pixel'@en ;
+    skos:notation 'SDN:G21::001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G21/current/002/1/> .
+<http://vocab.nerc.ac.uk/collection/G21/current/002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G21/current/002/>;
+    dc:modified '2012-07-04T11:27:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'lowerLeft'@en ;
+    skos:definition 'The corner in the pixel closest to the origin of the SRS; if two are at the same distance from the origin, the one with the smallest x-value'@en ;
+    skos:notation 'SDN:G21::002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G21/current/003/1/> .
+<http://vocab.nerc.ac.uk/collection/G21/current/003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G21/current/003/>;
+    dc:modified '2012-07-04T11:27:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'lowerRight'@en ;
+    skos:definition 'Next corner counterclockwise from the lower left'@en ;
+    skos:notation 'SDN:G21::003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G21/current/004/1/> .
+<http://vocab.nerc.ac.uk/collection/G21/current/004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G21/current/004/>;
+    dc:modified '2012-07-04T11:27:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'upperRight'@en ;
+    skos:definition 'Next corner counterclockwise from the lower right'@en ;
+    skos:notation 'SDN:G21::004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G21/current/005/1/> .
+<http://vocab.nerc.ac.uk/collection/G21/current/005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G21/current/005/>;
+    dc:modified '2012-07-04T11:27:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'upperLeft'@en ;
+    skos:definition 'Next corner counterclockwise from the upper right'@en ;
+    skos:notation 'SDN:G21::005'^^xsd:string .

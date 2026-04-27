@@ -1,0 +1,145 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S12/2018_01_01_00_00_00_2018_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S12/2017_01_01_00_00_00_2017_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2018-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1258/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1258/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1258/>;
+    dc:modified '2018-05-29T12:24:58'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'muscle tissues and skin'@en ;
+    skos:definition 'Muscles and skin considered as one entity.'@en ;
+    skos:notation 'SDN:S12::S1258'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1252/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1252/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1252/>;
+    dc:modified '2018-05-29T11:57:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'blood cells'@en ;
+    skos:definition 'Cells found in the fluid contained in the vascular system of animals.'@en ;
+    skos:notation 'SDN:S12::S1252'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1253/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1253/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1253/>;
+    dc:modified '2018-05-29T11:57:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'brain'@en ;
+    skos:definition 'The organ that acts as the centre of the nervous system in all vertebrate and most invertebrate animals.'@en ;
+    skos:notation 'SDN:S12::S1253'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1254/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1254/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1254/>;
+    dc:modified '2018-05-29T11:57:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'blood serum'@en ;
+    skos:definition 'Blood component without cells and clotting factors.'@en ;
+    skos:notation 'SDN:S12::S1254'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1255/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1255/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1255/>;
+    dc:modified '2018-05-29T11:57:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'egg yolk and albumen homogenate'@en ;
+    skos:definition 'Suspension resulting from the homogenization of the yolk and the albumen of an egg.'@en ;
+    skos:notation 'SDN:S12::S1255'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1256/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1256/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1256/>;
+    dc:modified '2018-05-29T11:57:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'body fat'@en ;
+    skos:definition 'A connective tissue consisting mainly of fat cells also called adipose cells or adipocytes. Its main role is to store energy but it also acts as a protective layer around the body and its organs.'@en ;
+    skos:notation 'SDN:S12::S1256'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1257/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1257/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1257/>;
+    dc:modified '2018-05-29T11:57:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'feathers'@en ;
+    skos:definition 'Epidermal extensions (keratin) that are unique to birds.'@en ;
+    skos:notation 'SDN:S12::S1257'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1214/4/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1214/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1214/>;
+    dc:modified '2018-05-29T11:13:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'flesh'@en ;
+    skos:definition 'The soft-body parts of an animal.'@en ;
+    skos:notation 'SDN:S12::S1214'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1251/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1251/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1251/>;
+    dc:modified '2018-02-19T14:19:34'^^xsd:dateTime ;
+    skos:altLabel 'rhizome'^^xsd:string ;
+    skos:prefLabel 'rhizomes'@en ;
+    skos:definition 'Underground stems that grows horizontally and from which roots and shoots can grow.'@en ;
+    skos:notation 'SDN:S12::S1251'^^xsd:string .

@@ -1,0 +1,160 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P17/2024_01_01_00_00_00_2026_04_27_17_48_11.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P17/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-27T17:48:11'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/46BS/4/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/46BS/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/46BS/>;
+    dc:modified '2025-08-28T12:37:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bjarni Saemundsson'@en ;
+    skos:definition '''{"node": {
+    "country": "Iceland",
+    "decommissioned": 2025,
+    "platformclass": "research vessel",
+    "notes": "RV operated by the Marine and Freshwater Research Institute. Built as Bjarni Saemundsson (IS), cv. to a supply vessel Nordvaag (NO) in 2025.",
+    "built": 1970,
+    "callsign": "TFEA",
+    "length": 55,
+    "IMO": 7017466,
+    "native_name": "Bjarni Sæmundsson",
+    "commissioned": 1971
+}}'''@en ;
+    skos:notation 'SDN:P17::46BS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/46FR/4/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/46FR/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/46FR/>;
+    dc:modified '2025-07-02T12:31:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Arni Fridriksson'@en ;
+    skos:definition '''{"node": {
+    "country": "Iceland",
+    "notes": "Multiple hulls: See 46AS and 46AN"
+}}'''@en ;
+    skos:notation 'SDN:P17::46FR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/68DM/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/68DM/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/68DM/>;
+    dc:modified '2025-02-10T11:45:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Dom Carlos I'@en ;
+    skos:definition '''{"node": {
+    "country": "Portugal",
+    "platformclass": "research vessel",
+    "notes": "Built as USNS Audacious (T-AGOS-11) surveillance ship of the US Navy, became NRP Dom Carlos I (A522) owned by PT Navy",
+    "built": 1989,
+    "pennant": "A522",
+    "previous_name": "USNS Audacious",
+    "IMO": 8830920,
+    "title": "NRP",
+    "WOD": 9209,
+    "commissioned": 1997,
+    "MMSI": 263144000,
+    "synonym": "D. Carlos I",
+    "callsign": "CTHJ"
+}}'''@en ;
+    skos:notation 'SDN:P17::68DM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/06PO/4/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/06PO/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/06PO/>;
+    dc:modified '2025-01-09T16:12:38'^^xsd:dateTime ;
+    skos:altLabel 'PO'^^xsd:string ;
+    skos:prefLabel 'Poseidon'@en ;
+    skos:definition '''{"node": {
+    "country": "Germany",
+    "decommissioned": "2020-02-21",
+    "platformclass": "research vessel",
+    "notes": "Built as RV Poseidon, cv. to search and rescue Sea-Watch 4 (Call Sign DJCW) in 2020, became Humanity 1 in 2022",
+    "built": 1976,
+    "callsign": "DBKV",
+    "length": 60,
+    "IMO": 7427518,
+    "commissioned": 1976
+}}'''@en ;
+    skos:notation 'SDN:P17::06PO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P17/current/CIFR/3/> .
+<http://vocab.nerc.ac.uk/collection/P17/current/CIFR/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P17/current/CIFR/>;
+    dc:modified '2025-01-02T10:43:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Falkor'@en ;
+    skos:definition '''{"node": {
+    "country": "Cayman Islands",
+    "decommissioned": 2022,
+    "MMSI": 319005600,
+    "platformclass": "research vessel",
+    "notes": "Operated by Schmidt Ocean Institute. Built as a fishery protection vessel SEEFALKE (DE), became RV FALKOR (KY) in 2009, became RV GAIA BLU (IT) in 2022.",
+    "built": 1981,
+    "callsign": "ZCYL5",
+    "length": 82.9,
+    "previous_name": "Seefalke",
+    "IMO": 7928677,
+    "title": "RV",
+    "commissioned": 2009
+}}'''@en ;
+    skos:notation 'SDN:P17::CIFR'^^xsd:string .

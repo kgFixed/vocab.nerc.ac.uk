@@ -1,0 +1,199 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C88/2019_01_01_00_00_00_2019_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C88/2018_01_01_00_00_00_2018_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2019-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR176/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR176/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR176/>;
+    dc:modified '2019-10-31T17:27:32'^^xsd:dateTime ;
+    skos:altLabel 'Seabed 2030 vocab editor'^^xsd:string ;
+    skos:prefLabel 'GEBCO Seabed 2030 vocabulary editor'@en ;
+    skos:definition 'Person or persons authorised to make changes to controlled vocabularies under the governance of the Nippon Foundation-GEBCO Seabed 2030 Project Team.'@en ;
+    skos:notation 'SDN:C88::BODCSR176'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR175/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR175/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR175/>;
+    dc:modified '2019-10-22T03:58:00'^^xsd:dateTime ;
+    skos:altLabel 'COMICSMemb'^^xsd:string ;
+    skos:prefLabel 'COMICS project participant'@en ;
+    skos:definition 'Principal and co-investigators of the COMICS Project or people designated by them as workers on the project'@en ;
+    skos:notation 'SDN:C88::BODCSR175'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR174/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR174/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR174/>;
+    dc:modified '2019-10-04T19:19:48'^^xsd:dateTime ;
+    skos:altLabel 'Argo vocab editor std format'^^xsd:string ;
+    skos:prefLabel 'Argo vocabulary editor of standard format tables'@en ;
+    skos:definition 'Person or persons authorised to make changes to the Argo standard format tables under the Argo program governance.'@en ;
+    skos:notation 'SDN:C88::BODCSR174'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR173/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR173/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR173/>;
+    dc:modified '2019-10-04T19:18:18'^^xsd:dateTime ;
+    skos:altLabel 'Argo vocab editor ref'^^xsd:string ;
+    skos:prefLabel 'Argo vocabulary editor of reference tables'@en ;
+    skos:definition 'Person or persons authorised to make changes to the Argo User\'s Manual reference tables under the Argo program governance.'@en ;
+    skos:notation 'SDN:C88::BODCSR173'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR172/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR172/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR172/>;
+    dc:modified '2019-10-04T19:16:33'^^xsd:dateTime ;
+    skos:altLabel 'Argo vocab editor core config'^^xsd:string ;
+    skos:prefLabel 'Argo vocabulary editor of core configuration parameter names'@en ;
+    skos:definition 'Person or persons authorised to make changes to the core Argo configuration parameter names vocabularies under the Argo program governance.'@en ;
+    skos:notation 'SDN:C88::BODCSR172'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR171/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR171/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR171/>;
+    dc:modified '2019-10-04T19:14:19'^^xsd:dateTime ;
+    skos:altLabel 'Argo vocab editor bgc config'^^xsd:string ;
+    skos:prefLabel 'Argo vocabulary editor of biogeochemical (BGC) configuration parameter names'@en ;
+    skos:definition 'Person or persons authorised to make changes to the Argo biogeochemical (BGC) configuration parameter names vocabularies under the Argo program governance.'@en ;
+    skos:notation 'SDN:C88::BODCSR171'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR170/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR170/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR170/>;
+    dc:modified '2019-10-04T19:12:57'^^xsd:dateTime ;
+    skos:altLabel 'Argo vocab editor tech'^^xsd:string ;
+    skos:prefLabel 'Argo vocabulary editor of technical parameter names and units'@en ;
+    skos:definition 'Person or persons authorised to make changes to the Argo technical parameter names and units vocabularies under the Argo program governance.'@en ;
+    skos:notation 'SDN:C88::BODCSR170'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR169/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR169/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR169/>;
+    dc:modified '2019-07-11T13:29:54'^^xsd:dateTime ;
+    skos:altLabel 'MASSMO05Memb'^^xsd:string ;
+    skos:prefLabel 'MASSMO05 project participant'@en ;
+    skos:definition 'Principal and co-investigators of the Marine Autonomous Systems in Support of Marine Observations (MASSMO) mission 5 or people designated by them as workers on the project.'@en ;
+    skos:notation 'SDN:C88::BODCSR169'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR168/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR168/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR168/>;
+    dc:modified '2019-03-03T19:32:36'^^xsd:dateTime ;
+    skos:altLabel 'Movebank vocab editor'^^xsd:string ;
+    skos:prefLabel 'Movebank database vocabulary editor'@en ;
+    skos:definition 'Person or persons authorised to make changes to controlled vocabularies set up for the Movebank database under the governance of the Max Planck Institute for Ornithology.'@en ;
+    skos:notation 'SDN:C88::BODCSR168'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR167/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR167/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR167/>;
+    dc:modified '2019-01-28T15:34:03'^^xsd:dateTime ;
+    skos:altLabel 'GEBCOFileDownload'^^xsd:string ;
+    skos:prefLabel 'GEBCO Secure File Transfer (SFT) participant - download'@en ;
+    skos:definition 'Person or persons authorised to download files to the GEBCO area of the BODC Secure File Transfer facility.'@en ;
+    skos:notation 'SDN:C88::BODCSR167'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR166/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR166/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR166/>;
+    dc:modified '2019-01-28T15:34:03'^^xsd:dateTime ;
+    skos:altLabel 'GEBCOFileUpload'^^xsd:string ;
+    skos:prefLabel 'GEBCO Secure File Transfer (SFT) participant - upload'@en ;
+    skos:definition 'Person or persons authorised to upload files to the GEBCO area of the BODC Secure File Transfer facility.'@en ;
+    skos:notation 'SDN:C88::BODCSR166'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR164/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR164/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR164/>;
+    dc:modified '2019-01-24T15:06:30'^^xsd:dateTime ;
+    skos:altLabel 'CMEP (Caribbean region) project participant'^^xsd:string ;
+    skos:prefLabel 'Commonwealth Marine Economies Programme (Caribbean region) project participant'@en ;
+    skos:definition 'Person or persons authorised to access the CMEP data from the Caribbean region.'@en ;
+    skos:notation 'SDN:C88::BODCSR164'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR165/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR165/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR165/>;
+    dc:modified '2019-01-24T15:06:30'^^xsd:dateTime ;
+    skos:altLabel 'CMEP (South Pacific Islands) project participant'^^xsd:string ;
+    skos:prefLabel 'Commonwealth Marine Economies Programme (South Pacific Islands) project participant'@en ;
+    skos:definition 'Person or persons authorised to access the CMEP data from the South Pacific Islands.'@en ;
+    skos:notation 'SDN:C88::BODCSR165'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR160/2/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR160/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR160/>;
+    dc:modified '2019-01-24T12:46:02'^^xsd:dateTime ;
+    skos:altLabel 'Licence-GEBCO 2018'^^xsd:string ;
+    skos:prefLabel 'GEBCO 2018 terms and conditions agreed'@en ;
+    skos:definition 'User agreed GEBCO terms and condtions'@en ;
+    skos:notation 'SDN:C88::BODCSR160'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR163/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR163/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR163/>;
+    dc:modified '2019-01-20T15:34:33'^^xsd:dateTime ;
+    skos:altLabel 'OBIS vocab editor'^^xsd:string ;
+    skos:prefLabel 'OBIS vocabulary editor'@en ;
+    skos:definition 'Person or persons authorised to make changes to controlled vocabularies under the governance of OBIS.'@en ;
+    skos:notation 'SDN:C88::BODCSR163'^^xsd:string .

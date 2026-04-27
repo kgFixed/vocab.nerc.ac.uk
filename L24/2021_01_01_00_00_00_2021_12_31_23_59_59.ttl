@@ -1,0 +1,82 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L24/2021_01_01_00_00_00_2021_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L24/2019_01_01_00_00_00_2020_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2021-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/SODV/1/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/SODV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/SODV/>;
+    dc:modified '2021-03-04T21:48:55'^^xsd:dateTime ;
+    skos:altLabel 'Sediment_microlitter_ODV'^^xsd:string ;
+    skos:prefLabel 'Sediment micro-litter ODV format'@en ;
+    skos:definition 'A variant of the ODV ASCII format to enable Data Centers to exchange microlitter in sediments data using the SeaDataNet infrastructure. It contains all the elements required to describe microlitter in sediments.'@en ;
+    skos:notation 'SDN:L24::SODV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/MODV/3/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/MODV/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/MODV/>;
+    dc:modified '2021-03-04T21:47:53'^^xsd:dateTime ;
+    skos:altLabel 'Floating_microlitter_ODV'^^xsd:string ;
+    skos:prefLabel 'Floating micro-litter ODV format'@en ;
+    skos:definition 'A variant of the Biological ODV format to enable Data Centers to exchange floating microlitter data using the SeaDataNet infrastructure. It contains all the required elements to describe the floating microlitter observation.'@en ;
+    skos:notation 'SDN:L24::MODV'^^xsd:string .

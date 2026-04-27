@@ -1,0 +1,433 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S05/2024_01_01_00_00_00_2026_04_27_17_48_47.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S05/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-27T17:48:47'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050290/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050290/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050290/>;
+    dc:modified '2026-02-16T09:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'derivation from GEBCO_25 15 arc-second global grid'@en ;
+    skos:definition 'The data have been derived from the GEBCO 2025 15 arc-second global bathymetric grid.'@en ;
+    skos:notation 'SDN:S05::S050290'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050289/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050289/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050289/>;
+    dc:modified '2026-02-08T22:15:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation from True Oxygen Utilisation (TOU) and Transit Time Distribution (TTD)'@en ;
+    skos:definition 'The variable (change in dissolved oxygen along water mass pathways) is calculated from an estimation of oxygen utilisation which accounts for oxygen saturation states other than 100% (mostly lower) in surface water at the time of water mass formation, and water mass age estimates taking into account mixing occurring into the ocean interior (Sulpis et al. 2023, 10.1029/2023GB007747).'@en ;
+    skos:notation 'SDN:S05::S050289'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050288/2/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050288/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050288/>;
+    dc:modified '2026-02-07T21:07:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation from Apparent Oxygen Utilisation (AOU) derived from Argo float profiles and regression against time along isopycnal surfaces'@en ;
+    skos:definition 'The value is obtained by regressing the Apparent Oxygen Utilisation calculated from oxygen, temperature, salinity and pressure measurements made during an Argo profiling float deployment and regressed over time in layers of equal densities.'@en ;
+    skos:notation 'SDN:S05::S050288'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050287/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050287/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050287/>;
+    dc:modified '2026-01-29T22:36:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'conversion using empirically derived equation'@en ;
+    skos:definition 'A proxy measurement is converted to the quantity of interest using a formula based on real-world observation or experimental data.'@en ;
+    skos:notation 'SDN:S05::S050287'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050286/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050286/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050286/>;
+    dc:modified '2025-12-19T12:43:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'measurement along the y-axis'@en ;
+    skos:definition 'The measurement has been obtained by measuring along the vertical axis of an image.'@en ;
+    skos:notation 'SDN:S05::S050286'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050285/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050285/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050285/>;
+    dc:modified '2025-12-19T12:43:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'measurement along the x-axis'@en ;
+    skos:definition 'The measurement has been obtained by measuring along the horizontal axis of an image.'@en ;
+    skos:notation 'SDN:S05::S050285'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050284/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050284/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050284/>;
+    dc:modified '2025-11-26T12:31:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation using equations from Chapman et al. (1997)'@en ;
+    skos:definition 'The parameter has been calculated using the equations published in Chapman, R. D.; Shay, L. K.; Graber, H. C.; Edson, J. B.; Karachintsev, A.; Trump, C. L.; and Ross, D. B. (1997) On the accuracy of HF radar surface current measurements: Intercomparisons with ship-based sensors. Journal of Geophysical Research Atmospheres 1021(C8):18737-18748.'@en ;
+    skos:notation 'SDN:S05::S050284'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050283/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050283/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050283/>;
+    dc:modified '2025-11-23T18:52:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'differencing between 18O-derived gross oxygen production and net changes in dissolved oxygen concentration over a 24h incubation period.'@en ;
+    skos:definition 'Respiration rates over the 24h day-night cycle are obtained by subtracting net changes in oxygen concentrations to the gross oxygen production derived from 18O-spiked samples in parallel 24h incubations.'@en ;
+    skos:notation 'SDN:S05::S050283'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050282/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050282/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050282/>;
+    dc:modified '2025-11-23T16:37:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation from Apparent Oxygen Utilisation (AOU) and water mass age along isopycnal surfaces'@en ;
+    skos:definition 'The value is calculated by dividing the change in apparent oxygen utilisation (AOU) along a given distance in a layer of constant density (isopycnal surface) by the change in water age along the same distance.'@en ;
+    skos:notation 'SDN:S05::S050282'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050281/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050281/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050281/>;
+    dc:modified '2025-11-18T10:37:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation over the coverage period'@en ;
+    skos:definition 'The parameter has been calculated to reflect a purely temporal average (no spatial averaging).'@en ;
+    skos:notation 'SDN:S05::S050281'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050280/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050280/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050280/>;
+    dc:modified '2025-11-18T10:35:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation over the scatter patch'@en ;
+    skos:definition 'The parameter has been calculated to reflect a purely spatial average (no temporal averaging).'@en ;
+    skos:notation 'SDN:S05::S050280'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050279/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050279/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050279/>;
+    dc:modified '2025-08-20T21:50:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation by regression against incubation time'@en ;
+    skos:definition 'The parameter has been determined from the slope of a linear regression against incubation time of the property measured at different time-points during an incubation experiment.'@en ;
+    skos:notation 'SDN:S05::S050279'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050278/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050278/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050278/>;
+    dc:modified '2025-08-13T08:32:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'correction based on Michaelis Menten kinetics'@en ;
+    skos:definition 'A correction used to account for the stimulation by added tracer of in-situ uptake rates of a substrate over and above actual rates at low substrate concentration.'@en ;
+    skos:notation 'SDN:S05::S050278'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050277/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050277/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050277/>;
+    dc:modified '2025-07-22T09:21:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation from absolute salinity and conservative temperature using UNESCO 2010 algorithm'@en ;
+    skos:definition 'The parameter has been calculated from the corresponding absolute salinity and conservative temperature values using the algorithm from IOC, SCOR and IAPSO (2010). TEOS-10: Thermodynamic Properties of Seawater Calculation and Use. UNESCO, Paris.'@en ;
+    skos:notation 'SDN:S05::S050277'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050276/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050276/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050276/>;
+    dc:modified '2025-07-14T15:46:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation using UNESCO 2010 algorithm'@en ;
+    skos:definition 'The parameter has been calculated using the appropriate algorithm from IOC, SCOR and IAPSO (2010). TEOS-10: Thermodynamic Properties of Seawater Calculation and Use. UNESCO, Paris.'@en ;
+    skos:notation 'SDN:S05::S050276'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050275/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050275/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050275/>;
+    dc:modified '2025-07-10T13:28:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'estimation from the model of Platt et al. (1980)'@en ;
+    skos:definition 'The parameter has been estimated by fitting the experimental data to the model of Platt et al. (1980), Photoinhibition of photosynthesis in natural assemblages of marine phytoplankton. J. Mar. Res 38(4), 687-701.'@en ;
+    skos:notation 'SDN:S05::S050275'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050274/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050274/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050274/>;
+    dc:modified '2025-06-10T13:41:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'profile integration and correction based on Michaelis Menten kinetics'@en ;
+    skos:definition 'A correction used to account for the stimulation by added tracer of in-situ uptake rates of a substrate over and above actual rates at low substrate concentration.'@en ;
+    skos:notation 'SDN:S05::S050274'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050273/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050273/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050273/>;
+    dc:modified '2025-05-16T11:44:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'correction for surface drift'@en ;
+    skos:definition 'The data value has been corrected for surface drift.'@en ;
+    skos:notation 'SDN:S05::S050273'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050272/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050272/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050272/>;
+    dc:modified '2025-02-27T20:00:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'correction for drift and expressed to unspecified datum by subtraction of a constant'@en ;
+    skos:definition 'The data value has been corrected for instrument drift and the data have been corrected to an unspecified datum by subtraction of a constant from the recorded measurement.'@en ;
+    skos:notation 'SDN:S05::S050272'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050271/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050271/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050271/>;
+    dc:modified '2025-02-27T19:56:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'correction for drift and correction to sea level'@en ;
+    skos:definition 'The data value has been corrected for instrument drift and the data have been corrected to sea level by addition of a constant.'@en ;
+    skos:notation 'SDN:S05::S050271'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050270/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050270/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050270/>;
+    dc:modified '2025-02-12T12:24:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation using Mari (1999) formula'@en ;
+    skos:definition 'An equation used to estimate the carbon content of transparent exopolymer particles (TEP) based on the equivalent spherical diameter of the particle and a fractal dimension value of 2.55. TEP-Carbon (ug) for each particle=0.25 x 10^-6 r^2.55. Mari, X. (1999). Carbon content and C:N ratio of transparent exopolymeric particles (TEP) produced by bubbling exudates of diatoms. Mar Ecol Prog Ser 183:59-71.'@en ;
+    skos:notation 'SDN:S05::S050270'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050269/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050269/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050269/>;
+    dc:modified '2025-02-03T16:16:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation using ImageJ software'@en ;
+    skos:definition 'The parameter has been calculated using ImageJ, an image processing and analysis software.'@en ;
+    skos:notation 'SDN:S05::S050269'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050268/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050268/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050268/>;
+    dc:modified '2024-11-05T12:50:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'normalisation and correction for pitch and roll'@en ;
+    skos:definition 'The data presented are normalised and have been corrected for pitch and roll.'@en ;
+    skos:notation 'SDN:S05::S050268'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050267/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050267/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050267/>;
+    dc:modified '2024-11-01T16:44:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'modelling of satellite altimetry and sounding data'@en ;
+    skos:definition 'The data have been derived from a model that combined combined satellite altimetry and sounding data.'@en ;
+    skos:notation 'SDN:S05::S050267'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050266/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050266/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050266/>;
+    dc:modified '2024-11-01T16:42:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'derivation from a global grid'@en ;
+    skos:definition 'The data have been derived from a global grid specified elsewhere.'@en ;
+    skos:notation 'SDN:S05::S050266'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050265/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050265/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050265/>;
+    dc:modified '2024-11-01T16:40:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'gridding using Generic Mapping Tools (GMT) software'@en ;
+    skos:definition 'The data have been gridded using Generic Mapping Tools software.'@en ;
+    skos:notation 'SDN:S05::S050265'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050264/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050264/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050264/>;
+    dc:modified '2024-11-01T16:35:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'correction using unknown algorithm'@en ;
+    skos:definition 'A correction was applied but the algorithm used is unknown.'@en ;
+    skos:notation 'SDN:S05::S050264'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050263/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050263/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050263/>;
+    dc:modified '2024-11-01T16:33:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'correction to datum using GPS'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:S05::S050263'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050262/2/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050262/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050262/>;
+    dc:modified '2024-11-01T07:33:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation from derived ratio and laboratory calibration (Clarke et al. 2015) and correction to in-situ temperature and salinity'@en ;
+    skos:definition 'The parameter has been calculated following the derivation of a ratio and application of a laboratory-derived calibration after Clarke et al. (2015), Characterisation and deployment of an immobilised pH sensor spot towards surface ocean pH measurements. Anal. Chim. Acta 897, 69-80. A subsequent correction to in-situ temperature and salinity values was applied.'@en ;
+    skos:notation 'SDN:S05::S050262'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050261/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050261/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050261/>;
+    dc:modified '2024-09-26T14:31:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'standardised to a reference pressure level using concurrent CTD profile data'@en ;
+    skos:definition 'The value has been calculated using concurrent CTD profile data such as temperature and salinity, according to a reference pressure level specified in the usage metadata.'@en ;
+    skos:notation 'SDN:S05::S050261'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050260/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050260/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050260/>;
+    dc:modified '2024-09-12T11:38:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'derivation from GEBCO_24 15 arc-second global grid'@en ;
+    skos:definition 'The data have been derived from the GEBCO 2024 15 arc-second global bathymetric grid.'@en ;
+    skos:notation 'SDN:S05::S050260'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050049/3/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050049/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050049/>;
+    dc:modified '2024-08-19T16:11:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation using Fourier analysis with no depth attenuation correction'@en ;
+    skos:definition 'A wave data processing protocol which does not take into account corrections associated with the attenuation of wave energy with depth.'@en ;
+    skos:notation 'SDN:S05::S050049'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050055/2/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050055/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050055/>;
+    dc:modified '2024-08-19T16:11:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'no correction or calibration of raw count rates'@en ;
+    skos:definition 'The data value has not been converted from from the raw number of counts made by the instrument.'@en ;
+    skos:notation 'SDN:S05::S050055'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050056/2/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050056/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050056/>;
+    dc:modified '2024-08-19T16:11:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'no salt correction'@en ;
+    skos:definition 'Whilst the data value has been converted into engineering units it has not been corrected for the presence of sea salt in the sample.'@en ;
+    skos:notation 'SDN:S05::S050056'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050057/2/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050057/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050057/>;
+    dc:modified '2024-08-19T16:11:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'no verification against independent measurements'@en ;
+    skos:definition 'Whilst the data value has been converted into engineering units it has not been verified or back-calibrated against co-located, generally high accuracy, measurements using a different technique such as Winkler titration for oxygen or bench salinometer for salinity.'@en ;
+    skos:notation 'SDN:S05::S050057'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050114/2/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050114/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050114/>;
+    dc:modified '2024-08-19T16:11:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation using UNESCO algorithm and no calibration against independent measurements'@en ;
+    skos:definition 'The parameter has been calculated without calibration against an independently measured sample and using the appropriate algorithm from Fofonoff and Millard (1983). Algorithms for computation of fundamental properties of seawater. UNESCO, Paris.'@en ;
+    skos:notation 'SDN:S05::S050114'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050183/2/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050183/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050183/>;
+    dc:modified '2024-08-19T16:11:43'^^xsd:dateTime ;
+    skos:altLabel 'UNESCO_1983_uncal'^^xsd:string ;
+    skos:prefLabel 'computation using UNESCO 1983 algorithm and no calibration against independent measurements'@en ;
+    skos:definition 'The parameter has been calculated using the algorithm from Fofonoff and Millard (1983). Algorithms for computation of fundamental properties of seawater. UNESCO, Paris; the sensor values have not been checked against in-situ measurements.'@en ;
+    skos:notation 'SDN:S05::S050183'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050259/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050259/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050259/>;
+    dc:modified '2024-04-24T15:54:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'estimation using best available on-board navigation system and algorithm'@en ;
+    skos:definition 'The data value is a best estimate, obtained using an on-board navigation system and algorithm.'@en ;
+    skos:notation 'SDN:S05::S050259'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050258/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050258/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050258/>;
+    dc:modified '2024-04-23T16:59:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'rolling averaging of higher frequency data'@en ;
+    skos:definition 'The data value is the rolling average of the specified subset of data.'@en ;
+    skos:notation 'SDN:S05::S050258'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050257/2/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050257/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050257/>;
+    dc:modified '2024-04-23T16:58:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'averaging of higher frequency data'@en ;
+    skos:definition 'The data value is the simple arithmetic average of a specified subset of data.'@en ;
+    skos:notation 'SDN:S05::S050257'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050256/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050256/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050256/>;
+    dc:modified '2024-02-08T09:54:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'assumption that POC is negligible'@en ;
+    skos:definition 'The sample is assumed to contain undetectable amounts of Particulate Organic Carbon (POC), i.e. POC has not been quantitatively measured.'@en ;
+    skos:notation 'SDN:S05::S050256'^^xsd:string .

@@ -1,0 +1,172 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C48/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C48/2021_01_01_00_00_00_2022_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2023-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG003/2/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG003/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG003/>;
+    dc:modified '2023-05-11T09:35:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Oceanographic vertical profile'@en ;
+    skos:definition 'MEDIN data guideline for the recording of oceanographic vertical profile data'@en ;
+    skos:notation 'SDN:C48::MDG003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG004/2/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG004/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG004/>;
+    dc:modified '2023-05-11T09:35:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Image'@en ;
+    skos:definition 'MEDIN data guideline for recording and archiving of digital images'@en ;
+    skos:notation 'SDN:C48::MDG004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG008/3/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG008/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG008/>;
+    dc:modified '2023-05-11T09:35:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Fish and benthos trawl tow'@en ;
+    skos:definition 'MEDIN data guideline for species and benthos data by trawl or dredge'@en ;
+    skos:notation 'SDN:C48::MDG008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG009/2/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG009/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG009/>;
+    dc:modified '2023-05-11T09:35:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Moored instrument'@en ;
+    skos:definition 'MEDIN data guideline for the recording of moored instrument data'@en ;
+    skos:notation 'SDN:C48::MDG009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG014/3/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG014/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG014/>;
+    dc:modified '2023-05-11T09:35:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Leisure and recreation'@en ;
+    skos:definition 'MMO data guideline for leisure and recreation activities'@en ;
+    skos:notation 'SDN:C48::MDG014'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG025/3/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG025/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG025/>;
+    dc:modified '2023-05-11T09:35:54'^^xsd:dateTime ;
+    skos:altLabel 'ADCP'^^xsd:string ;
+    skos:prefLabel 'Acoustic doppler current profile'@en ;
+    skos:definition 'MEDIN data guideline for Acoustic Doppler Current Profiler (ADCP) data'@en ;
+    skos:notation 'SDN:C48::MDG025'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG015/2/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG015/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG015/>;
+    dc:modified '2023-05-11T09:35:54'^^xsd:dateTime ;
+    skos:altLabel 'OBS'^^xsd:string ;
+    skos:prefLabel 'Seabed survey ancillary observations'@en ;
+    skos:definition 'MEDIN data guideline for ancillary observations'@en ;
+    skos:notation 'SDN:C48::MDG015'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG016/2/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG016/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG016/>;
+    dc:modified '2023-05-11T09:35:54'^^xsd:dateTime ;
+    skos:altLabel 'POS'^^xsd:string ;
+    skos:prefLabel 'Seabed survey navigation and positioning'@en ;
+    skos:definition 'MEDIN data guideline for navigation and positioning data'@en ;
+    skos:notation 'SDN:C48::MDG016'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG024/2/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG024/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG024/>;
+    dc:modified '2023-05-11T09:35:54'^^xsd:dateTime ;
+    skos:altLabel 'SBES'^^xsd:string ;
+    skos:prefLabel 'Hydrographic singlebeam echo'@en ;
+    skos:definition 'MEDIN data guideline for single beam echosounder (SBES) data'@en ;
+    skos:notation 'SDN:C48::MDG024'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG017/2/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG017/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG017/>;
+    dc:modified '2023-05-11T09:35:54'^^xsd:dateTime ;
+    skos:altLabel 'SURV_C'^^xsd:string ;
+    skos:prefLabel 'Seabed survey control'@en ;
+    skos:definition 'MEDIN data guideline for survey control data'@en ;
+    skos:notation 'SDN:C48::MDG017'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG038/2/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG038/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG038/>;
+    dc:modified '2023-05-11T09:35:54'^^xsd:dateTime ;
+    skos:altLabel 'VIDEO'^^xsd:string ;
+    skos:prefLabel 'Species and benthos video surveys'@en ;
+    skos:definition 'MEDIN data guideline for video surveys of species and benthos'@en ;
+    skos:notation 'SDN:C48::MDG038'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C48/current/MDG049/1/> .
+<http://vocab.nerc.ac.uk/collection/C48/current/MDG049/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C48/current/MDG049/>;
+    dc:modified '2023-05-11T09:35:53'^^xsd:dateTime ;
+    skos:altLabel 'JCDP'^^xsd:string ;
+    skos:prefLabel 'Effort related cetacean survey'@en ;
+    skos:definition 'Joint Cetacean Data Programme (JCDP) data guideline for effort related cetacean survey data'@en ;
+    skos:notation 'SDN:C48::MDG049'^^xsd:string .

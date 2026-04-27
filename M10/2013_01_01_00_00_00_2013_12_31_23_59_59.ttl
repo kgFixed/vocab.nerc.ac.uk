@@ -1,0 +1,183 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/M10/2013_01_01_00_00_00_2013_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M10/current/10/1/> .
+<http://vocab.nerc.ac.uk/collection/M10/current/10/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M10/current/10/>;
+    dc:modified '2013-11-14T10:15:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Focus groups'@en ;
+    skos:definition 'Used to elicit information about values and preferences from small groups of relevant members of the public engaging in group discussion led by a facilitator.'@en ;
+    skos:notation 'SDN:M10::10'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M10/current/12/1/> .
+<http://vocab.nerc.ac.uk/collection/M10/current/12/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M10/current/12/>;
+    dc:modified '2013-11-14T10:15:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Travel cost method'@en ;
+    skos:definition 'Use information about how much people implicitly or explicitly pay to visit locations with specific environmental attributes including specific levels of ecosystem services, to infer how much they value changes in those attributes. A revealed preference method.'@en ;
+    skos:notation 'SDN:M10::12'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M10/current/13/1/> .
+<http://vocab.nerc.ac.uk/collection/M10/current/13/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M10/current/13/>;
+    dc:modified '2013-11-14T10:15:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Hedonic pricing'@en ;
+    skos:definition 'Uses information about how much people pay for houses or other directly-purchased items with specific environmental attributes (e.g., visibility, proximity to amenities or disamenities) to infer how much they value changes in those attributes. A revealed preference method.'@en ;
+    skos:notation 'SDN:M10::13'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M10/current/15/1/> .
+<http://vocab.nerc.ac.uk/collection/M10/current/15/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M10/current/15/>;
+    dc:modified '2013-11-14T10:15:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Contingent valuation'@en ;
+    skos:definition 'Directly elicits values through surveys by asking people about their willingness to pay for a given ecosystem service.  A stated preference method.'@en ;
+    skos:notation 'SDN:M10::15'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M10/current/16/1/> .
+<http://vocab.nerc.ac.uk/collection/M10/current/16/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M10/current/16/>;
+    dc:modified '2013-11-14T10:15:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Contingent behaviour'@en ;
+    skos:definition 'Directly elicits values through surveys by asking people about their hypothetical behaviour towards a given ecosystem service.  A stated preference method.'@en ;
+    skos:notation 'SDN:M10::16'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M10/current/17/1/> .
+<http://vocab.nerc.ac.uk/collection/M10/current/17/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M10/current/17/>;
+    dc:modified '2013-11-14T10:15:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Choice experiment'@en ;
+    skos:definition 'Successively presents a number of choice sets to respondents and asks them to choose their preferred scenario. Each choice set consists of two or three scenarios related to the good under valuation. This good is defined by its key attributes (or characteristics) and the levels that these attributes take, where one attribute is price.  A stated preference method.'@en ;
+    skos:notation 'SDN:M10::17'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M10/current/18/1/> .
+<http://vocab.nerc.ac.uk/collection/M10/current/18/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M10/current/18/>;
+    dc:modified '2013-11-14T10:15:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Benefit transfer'@en ;
+    skos:definition 'Estimates the economic values of ecosystem services using existing estimates from studies completed for another location or issue. The critical part of benefit transfer consists in adapting the value derived from existing studies to some other context.'@en ;
+    skos:notation 'SDN:M10::18'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M10/current/19/1/> .
+<http://vocab.nerc.ac.uk/collection/M10/current/19/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M10/current/19/>;
+    dc:modified '2013-11-14T10:15:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Referenda or initiatives'@en ;
+    skos:definition 'Provide information about how members of the voting population value a particular governmental action involving the environment, given a particular means of financing the associated expenditure. Individuals may also consider what the community as a whole stands to gain or lose if the proposal is adopted.'@en ;
+    skos:notation 'SDN:M10::19'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M10/current/20/1/> .
+<http://vocab.nerc.ac.uk/collection/M10/current/20/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M10/current/20/>;
+    dc:modified '2013-11-14T10:15:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Citizen valuation juries'@en ;
+    skos:definition 'Citizen valuation juries are given extensive information and, after a lengthy discussion, are usually asked to agree on a common value or make a group decision. Citizen juries can develop a ranking of alternative options for achieving a given goal. Their estimates would reflect community-based values rather than economic values.'@en ;
+    skos:notation 'SDN:M10::20'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M10/current/21/1/> .
+<http://vocab.nerc.ac.uk/collection/M10/current/21/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M10/current/21/>;
+    dc:modified '2013-11-14T10:15:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Conservation value method'@en ;
+    skos:definition 'Develops a spatially-differentiated index of conservation value across a landscape based on an assessment of rarity, persistence, threat, and other landscape attributes, reflecting the contribution of these attributes to sustained ecosystem diversity and integrity. These values can be used to prioritize land for acquisition, conservation, or other purposes, given relevant biophysical goals.'@en ;
+    skos:notation 'SDN:M10::21'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M10/current/22/1/> .
+<http://vocab.nerc.ac.uk/collection/M10/current/22/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M10/current/22/>;
+    dc:modified '2013-11-14T10:15:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Embodied energy analysis'@en ;
+    skos:definition 'Measures the total energy, direct and indirect, required to produce a good or service.  A measure to identify the resources or resource-equivalents needed to produce a product or service, using a systems or life-cycle (\'cradle to grave\') approach.'@en ;
+    skos:notation 'SDN:M10::22'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M10/current/23/1/> .
+<http://vocab.nerc.ac.uk/collection/M10/current/23/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M10/current/23/>;
+    dc:modified '2013-11-14T10:15:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ecological footprint analysis'@en ;
+    skos:definition 'Measures the area of an ecosystem (e.g., the amount of land and/or water) required to support a certain level and type of consumption by an individual or population. A measure to identify the resources or resource-equivalents needed to produce a product or service, using a systems or life-cycle (\'cradle to grave\') approach.'@en ;
+    skos:notation 'SDN:M10::23'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M10/current/24/1/> .
+<http://vocab.nerc.ac.uk/collection/M10/current/24/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M10/current/24/>;
+    dc:modified '2013-11-14T10:15:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Habitat equivalency analysis'@en ;
+    skos:definition 'HEA seeks to determine the restoration projects that would provide ecosystem or other related services (including capital investments such as boat docks) sufficient to compensate for a loss from a natural-resource injury (e.g., a hazardous waste release or spill).'@en ;
+    skos:notation 'SDN:M10::24'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/M10/current/8/1/> .
+<http://vocab.nerc.ac.uk/collection/M10/current/8/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/M10/current/8/>;
+    dc:modified '2013-11-14T10:15:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Surveys of attitudes, preferences, and intentions'@en ;
+    skos:definition 'Assessments can be conveyed in perceptual surveys or conjoint surveys (e.g., requiring choices among alternatives that combine multiple attributes). Results are based on quantitative analyses of responses from large representative samples.'@en ;
+    skos:notation 'SDN:M10::8'^^xsd:string .

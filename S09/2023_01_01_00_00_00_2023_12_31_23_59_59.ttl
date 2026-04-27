@@ -1,0 +1,136 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S09/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S09/2018_01_01_00_00_00_2022_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2023-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S09/current/S09133/2/> .
+<http://vocab.nerc.ac.uk/collection/S09/current/S09133/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S09/current/S09133/>;
+    dc:modified '2023-08-25T10:32:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'not specified'@en ;
+    skos:definition 'The biological entity definition does not include a size specification as a component.'@en ;
+    skos:notation 'SDN:S09::S09133'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S09/current/S09226/1/> .
+<http://vocab.nerc.ac.uk/collection/S09/current/S09226/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S09/current/S09226/>;
+    dc:modified '2023-06-05T11:56:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'diameter >40um'@en ;
+    skos:definition 'The targeted biological entity has a diameter size greater than 40 micrometres.'@en ;
+    skos:notation 'SDN:S09::S09226'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S09/current/S09224/1/> .
+<http://vocab.nerc.ac.uk/collection/S09/current/S09224/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S09/current/S09224/>;
+    dc:modified '2023-06-05T11:56:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'diameter 10-20um'@en ;
+    skos:definition 'The targeted biological entity has a diameter size range of between 10 and 20 micrometres.'@en ;
+    skos:notation 'SDN:S09::S09224'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S09/current/S09225/1/> .
+<http://vocab.nerc.ac.uk/collection/S09/current/S09225/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S09/current/S09225/>;
+    dc:modified '2023-06-05T11:56:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'diameter 30-40um'@en ;
+    skos:definition 'The targeted biological entity has a diameter size range of between 30 and 40 micrometres.'@en ;
+    skos:notation 'SDN:S09::S09225'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S09/current/S09223/1/> .
+<http://vocab.nerc.ac.uk/collection/S09/current/S09223/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S09/current/S09223/>;
+    dc:modified '2023-06-05T11:56:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '10-25um'@en ;
+    skos:definition 'The targeted biological entity has a size range of between 10 and 25 micrometres.'@en ;
+    skos:notation 'SDN:S09::S09223'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S09/current/S09221/1/> .
+<http://vocab.nerc.ac.uk/collection/S09/current/S09221/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S09/current/S09221/>;
+    dc:modified '2023-06-05T11:56:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '40-80um'@en ;
+    skos:definition 'The targeted biological entity has a size range of between 40 and 80 micrometres.'@en ;
+    skos:notation 'SDN:S09::S09221'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S09/current/S09222/1/> .
+<http://vocab.nerc.ac.uk/collection/S09/current/S09222/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S09/current/S09222/>;
+    dc:modified '2023-06-05T11:56:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '>80um'@en ;
+    skos:definition 'The targeted biological entity has a size greater than 80 micrometres.'@en ;
+    skos:notation 'SDN:S09::S09222'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S09/current/S09220/1/> .
+<http://vocab.nerc.ac.uk/collection/S09/current/S09220/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S09/current/S09220/>;
+    dc:modified '2023-06-05T11:56:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '10-40um'@en ;
+    skos:definition 'The targeted biological entity has a size range of between 10 and 40 micrometres.'@en ;
+    skos:notation 'SDN:S09::S09220'^^xsd:string .

@@ -1,0 +1,127 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L05/2018_01_01_00_00_00_2018_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L05/2017_01_01_00_00_00_2017_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2018-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/390/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/390/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/390/>;
+    dc:modified '2018-10-24T09:48:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mechanical bathythermographs'@en ;
+    skos:definition 'Tethered probes that measure temperature in relation to depth using a temperature and pressure package that is lowered into the water and subsequently retrieved using a winch. The profile of temperature is recorded mechanically by etchings on a glass slide. Depth is calculated as a function of pressure.'@en ;
+    skos:notation 'SDN:L05::390'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/389/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/389/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/389/>;
+    dc:modified '2018-10-24T08:19:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Expendable bathythermographs'@en ;
+    skos:definition 'Disposable, free-falling probes that measure temperature in relation to depth using a thermistor and electronic data acquisition system. Probes are dropped into the water and a temperature signal is transferred to the platform by a wire that breaks when the wire is out. Depth is calculated as a function of time to descend and a known constant rate of descent.'@en ;
+    skos:notation 'SDN:L05::389'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/53/3/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/53/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/53/>;
+    dc:modified '2018-09-20T10:24:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'rock corers'@en ;
+    skos:definition 'A device that extracts rock either by chipping or drilling.'@en ;
+    skos:notation 'SDN:L05::53'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB21/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB21/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB21/>;
+    dc:modified '2018-07-30T16:26:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'liquid scintillation counters'@en ;
+    skos:definition 'Instruments assaying alpha and beta radiation by quantitative detection of visible light produced by the passage of rays or particles through a suitable scintillant incorporated into the sample.'@en ;
+    skos:notation 'SDN:L05::LAB21'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/130/3/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/130/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/130/>;
+    dc:modified '2018-04-06T17:31:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CTD'@en ;
+    skos:definition 'A reusable instrument that always simultaneously measures conductivity and temperature (for salinity) and pressure (for depth).'@en ;
+    skos:notation 'SDN:L05::130'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/131/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/131/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/131/>;
+    dc:modified '2018-04-06T17:31:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CTD undulators'@en ;
+    skos:definition 'An undulating platform towed behind a ship carrying an instrument that measures temperature, conductivity and pressure (for depth) and possibly other instruments such as fluorometers. Current thinking is that this is a platform category and not an instrument category and so its inclusion in this vocabulary was an error. Its usage is not recommended.'@en ;
+    skos:notation 'SDN:L05::131'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/22/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/22/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/22/>;
+    dc:modified '2018-02-20T17:43:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'plankton nets'@en ;
+    skos:definition 'A fine-meshed net designed to collect small size organisms, aggregates, or litter in the water column including for example microzooplankton, mesozooplankton, nekton, microplastic or other litter.'@en ;
+    skos:notation 'SDN:L05::22'^^xsd:string .

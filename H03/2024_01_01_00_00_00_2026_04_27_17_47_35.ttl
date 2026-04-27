@@ -1,0 +1,145 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/H03/2024_01_01_00_00_00_2026_04_27_17_47_35.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/H03/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-27T17:47:35'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/H03/current/H0300008/6/> .
+<http://vocab.nerc.ac.uk/collection/H03/current/H0300008/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/H03/current/H0300008/>;
+    dc:modified '2026-03-20T11:02:00'^^xsd:dateTime ;
+    skos:altLabel '1-5mm'^^xsd:string ;
+    skos:prefLabel '1 to 5 millimetres'@en ;
+    skos:definition 'Term deprecated on 20-03-2026 [https://github.com/nvs-vocabs/H03/issues/4] to align with MSFD classification - use SDN:H03::H0300021 instead.'@en ;
+    skos:notation 'SDN:H03::H0300008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/H03/current/H0300005/7/> .
+<http://vocab.nerc.ac.uk/collection/H03/current/H0300005/7/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/H03/current/H0300005/>;
+    dc:modified '2026-03-20T11:01:57'^^xsd:dateTime ;
+    skos:altLabel '300um-1mm'^^xsd:string ;
+    skos:prefLabel '300 micrometres to 1 millimetres'@en ;
+    skos:definition 'Term deprecated on 20-03-2026 [https://github.com/nvs-vocabs/H03/issues/4] to align with MSFD classification - use SDN:H03::H0300020 or SDN:H03::H0300021 instead.'@en ;
+    skos:notation 'SDN:H03::H0300005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/H03/current/H0300021/1/> .
+<http://vocab.nerc.ac.uk/collection/H03/current/H0300021/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/H03/current/H0300021/>;
+    dc:modified '2026-03-20T10:54:12'^^xsd:dateTime ;
+    skos:altLabel '1000-4999um'^^xsd:string ;
+    skos:prefLabel '1000-4999 micrometres'@en ;
+    skos:definition 'Size class defined as recommended by the Guidance on Monitoring of Marine Litter in European Seas (e.g. MSFD Technical Subgroup on Marine Litter, 2023) for micro-litter particle measurement or monitoring.'@en ;
+    skos:notation 'SDN:H03::H0300021'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/H03/current/H0300020/1/> .
+<http://vocab.nerc.ac.uk/collection/H03/current/H0300020/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/H03/current/H0300020/>;
+    dc:modified '2026-03-20T10:52:27'^^xsd:dateTime ;
+    skos:altLabel '300-999um'^^xsd:string ;
+    skos:prefLabel '300-999 micrometres'@en ;
+    skos:definition 'Size class defined as recommended by the Guidance on Monitoring of Marine Litter in European Seas (e.g. MSFD Technical Subgroup on Marine Litter, 2023) for micro-litter particle measurement or monitoring.'@en ;
+    skos:notation 'SDN:H03::H0300020'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/H03/current/H0300018/3/> .
+<http://vocab.nerc.ac.uk/collection/H03/current/H0300018/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/H03/current/H0300018/>;
+    dc:modified '2026-03-18T10:53:02'^^xsd:dateTime ;
+    skos:altLabel '100-299um'^^xsd:string ;
+    skos:prefLabel '100 to 299 micrometres'@en ;
+    skos:definition 'Size class defined as recommended by the Guidance on Monitoring of Marine Litter in European Seas (e.g. MSFD Technical Subgroup on Marine Litter, 2023) for micro-litter particle measurement or monitoring.'@en ;
+    skos:notation 'SDN:H03::H0300018'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/H03/current/H0300016/3/> .
+<http://vocab.nerc.ac.uk/collection/H03/current/H0300016/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/H03/current/H0300016/>;
+    dc:modified '2026-03-18T10:51:10'^^xsd:dateTime ;
+    skos:altLabel '20-49um'^^xsd:string ;
+    skos:prefLabel '20 to 49 micrometres'@en ;
+    skos:definition 'Size class defined as optional by the Guidance on Monitoring of Marine Litter in European Seas (e.g. MSFD Technical Subgroup on Marine Litter, 2023) for micro-litter particle measurement or monitoring.'@en ;
+    skos:notation 'SDN:H03::H0300016'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/H03/current/H0300017/3/> .
+<http://vocab.nerc.ac.uk/collection/H03/current/H0300017/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/H03/current/H0300017/>;
+    dc:modified '2026-03-18T10:51:10'^^xsd:dateTime ;
+    skos:altLabel '50-99um'^^xsd:string ;
+    skos:prefLabel '50 to 99 micrometres'@en ;
+    skos:definition 'Size class defined as optional by the Guidance on Monitoring of Marine Litter in European Seas (e.g. MSFD Technical Subgroup on Marine Litter, 2023) for micro-litter particle measurement or monitoring.'@en ;
+    skos:notation 'SDN:H03::H0300017'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/H03/current/H0300001/6/> .
+<http://vocab.nerc.ac.uk/collection/H03/current/H0300001/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/H03/current/H0300001/>;
+    dc:modified '2026-03-18T10:51:10'^^xsd:dateTime ;
+    skos:altLabel '<20um'^^xsd:string ;
+    skos:prefLabel 'less than 20 micrometres'@en ;
+    skos:definition 'Size class defined as optional by the Guidance on Monitoring of Marine Litter in European Seas (e.g. MSFD Technical Subgroup on Marine Litter, 2023) for micro-litter particle measurement or monitoring.'@en ;
+    skos:notation 'SDN:H03::H0300001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/H03/current/H0300019/1/> .
+<http://vocab.nerc.ac.uk/collection/H03/current/H0300019/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/H03/current/H0300019/>;
+    dc:modified '2025-04-04T15:55:51'^^xsd:dateTime ;
+    skos:altLabel '63um-5mm'^^xsd:string ;
+    skos:prefLabel '63 micrometres to 5 millimetres'@en ;
+    skos:definition 'A size-class used for micro-litter particle measurement or monitoring.'@en ;
+    skos:notation 'SDN:H03::H0300019'^^xsd:string .

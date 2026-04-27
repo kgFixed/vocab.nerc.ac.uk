@@ -1,0 +1,102 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/I10/2015_01_01_00_00_00_2015_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I10/current/4/2/> .
+<http://vocab.nerc.ac.uk/collection/I10/current/4/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I10/current/4/>;
+    dc:modified '2015-08-25T16:46:04'^^xsd:dateTime ;
+    skos:altLabel 'Transformation'^^xsd:string ;
+    skos:prefLabel 'Transformation Service'@en ;
+    skos:definition 'Service that enables spatial data sets to be transformed with a view to achieving interoperability.'@en ;
+    skos:notation 'SDN:I10::4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I10/current/3/2/> .
+<http://vocab.nerc.ac.uk/collection/I10/current/3/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I10/current/3/>;
+    dc:modified '2015-08-25T16:45:47'^^xsd:dateTime ;
+    skos:altLabel 'Download'^^xsd:string ;
+    skos:prefLabel 'Download Service'@en ;
+    skos:definition 'Service that enables copies of spatial data sets, or parts of such sets, to be downloaded and, where practicable, accessed directly.'@en ;
+    skos:notation 'SDN:I10::3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I10/current/2/2/> .
+<http://vocab.nerc.ac.uk/collection/I10/current/2/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I10/current/2/>;
+    dc:modified '2015-08-25T16:45:33'^^xsd:dateTime ;
+    skos:altLabel 'View'^^xsd:string ;
+    skos:prefLabel 'View Service'@en ;
+    skos:definition 'Service that makes it possible, as a minimum, to display, navigate, zoom in and out, pan or overlay viewable spatial data sets and to display legend information and any relevant content of metadata.'@en ;
+    skos:notation 'SDN:I10::2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I10/current/1/2/> .
+<http://vocab.nerc.ac.uk/collection/I10/current/1/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I10/current/1/>;
+    dc:modified '2015-08-25T16:45:07'^^xsd:dateTime ;
+    skos:altLabel 'Discovery'^^xsd:string ;
+    skos:prefLabel 'Discovery Service'@en ;
+    skos:definition 'Services making it possible to search for spatial data sets and services on the basis of the content of the corresponding metadata and to display the content of the metadata.'@en ;
+    skos:notation 'SDN:I10::1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/I10/current/5/1/> .
+<http://vocab.nerc.ac.uk/collection/I10/current/5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/I10/current/5/>;
+    dc:modified '2015-08-25T16:44:48'^^xsd:dateTime ;
+    skos:altLabel 'Invoke'^^xsd:string ;
+    skos:prefLabel 'Invoke  Spatial Data Service'@en ;
+    skos:definition 'Service that allows defining both the data inputs and data outputs expected by the spatial service and a workflow or service chain combining multiple services. It also allows defining the external web service interface of the workflow or service chain.'@en ;
+    skos:notation 'SDN:I10::5'^^xsd:string .

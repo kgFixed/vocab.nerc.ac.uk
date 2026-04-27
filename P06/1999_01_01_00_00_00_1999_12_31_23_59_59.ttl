@@ -1,0 +1,100 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/1999_01_01_00_00_00_1999_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/1998_01_01_00_00_00_1998_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '1999-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UDTM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UDTM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UDTM/>;
+    dc:modified '1999-12-10T10:28:49'^^xsd:dateTime ;
+    skos:altLabel 'Date+Time'^^xsd:string ;
+    skos:prefLabel 'yyyymmddhh24miss.dd'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UDTM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UMPE/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UMPE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UMPE/>;
+    dc:modified '1999-03-18T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'mol/E'^^xsd:string ;
+    skos:prefLabel 'Moles per Einstein'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UMPE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UMMS/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UMMS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UMMS/>;
+    dc:modified '1999-03-09T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'mg/m^2'^^xsd:string ;
+    skos:prefLabel 'Milligrams per square metre'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UMMS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UUMV/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UUMV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UUMV/>;
+    dc:modified '1999-01-28T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'mV'^^xsd:string ;
+    skos:prefLabel 'Millivolts'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UUMV'^^xsd:string .

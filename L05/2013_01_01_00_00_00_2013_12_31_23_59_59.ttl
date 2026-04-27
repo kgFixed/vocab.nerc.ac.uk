@@ -1,0 +1,523 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L05/2013_01_01_00_00_00_2013_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L05/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2013-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB42/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB42/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB42/>;
+    dc:modified '2013-12-19T09:08:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'laboratory optical rangefinders'@en ;
+    skos:definition 'Devices used to detect the distance between sensor and sample or presence/absence of an object based a light (often infrared and possibly laser) transmitter and a photoelectric receiver.'@en ;
+    skos:notation 'SDN:L05::LAB42'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/CCOV/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/CCOV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/CCOV/>;
+    dc:modified '2013-04-23T13:40:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'cloud cover quantifiers'@en ;
+    skos:definition 'Instruments that measure the proportion of the sky covered by cloud (cloud amount) and/or the height of the cloud above the ground (cloud base).'@en ;
+    skos:notation 'SDN:L05::CCOV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/EQUIL/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/EQUIL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/EQUIL/>;
+    dc:modified '2013-04-23T13:37:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'equilibrators'@en ;
+    skos:definition 'Devices in which samples and carriers are brought into chemical equilibrium prior to analysis. For example, a shower head or tower full of marbles used to equilibrate water samples with air that is subsequently analysed for carbon dioxide to give pCO2 in the water sample.'@en ;
+    skos:notation 'SDN:L05::EQUIL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/TFSAMP/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/TFSAMP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/TFSAMP/>;
+    dc:modified '2013-04-23T12:55:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'thin film metal samplers'@en ;
+    skos:definition 'Metal samplers comprising a filter, a diffusive gel layer and a resin layer that scavenge trace metals by diffusion from water bodies or in-situ sediment pore waters. A constant concentration gradient is set up in the gel from which the metal concentration in the sampled medium may be determined.'@en ;
+    skos:notation 'SDN:L05::TFSAMP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/ATRANS/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/ATRANS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/ATRANS/>;
+    dc:modified '2013-04-23T12:49:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmospheric transparency quantifiers'@en ;
+    skos:definition 'Instruments that quantify the degree of scattering and absorption of light passing through the atmosphere, including instruments that quantify aerosol and particulate concentrations (e.g. black carbon) and instruments measure meteorological visibility.'@en ;
+    skos:notation 'SDN:L05::ATRANS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/ICEP/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/ICEP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/ICEP/>;
+    dc:modified '2013-04-23T12:40:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ice thickness profilers'@en ;
+    skos:definition 'Instruments that measure the freeboard, draught or thickness of ice sheets or sea ice. These are not to be confused with tethered ice profilers that are platforms that sample the water column beneath sea ice.'@en ;
+    skos:notation 'SDN:L05::ICEP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/101/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/101/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/101/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'anemometers'@en ;
+    skos:definition 'Instrument that measures wind speed and direction at a single elevation.'@en ;
+    skos:notation 'SDN:L05::101'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/102/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/102/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/102/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'meteorological packages'@en ;
+    skos:definition 'Instrument that makes routine meteorological measurements on the atmosphere, typically air pressure, temperature and humidity.'@en ;
+    skos:notation 'SDN:L05::102'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/11/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/11/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/11/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'discrete air samplers'@en ;
+    skos:definition 'A device that collects a sample of air from the atmosphere and stores it, usually under pressure, for subsequent analysis.'@en ;
+    skos:notation 'SDN:L05::11'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/112/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/112/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/112/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'inverted echosounders'@en ;
+    skos:definition 'Instruments that locate acoustic reflectors such as fronts in the water column by transmitting pulses of sound from the seabed and determing reflection return times.'@en ;
+    skos:notation 'SDN:L05::112'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/113/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/113/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/113/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fluorometers'@en ;
+    skos:definition 'Instrument that measures the amount of stimulated electromagnetic radiation produced by pulses of electromagnetic radiation emitted into the water column.'@en ;
+    skos:notation 'SDN:L05::113'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/114/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/114/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/114/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'current meters'@en ;
+    skos:definition 'Instrument that measures current speed and direction at a single depth.'@en ;
+    skos:notation 'SDN:L05::114'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/115/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/115/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/115/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'current profilers'@en ;
+    skos:definition 'Instrument that measures current speed and direction at multiple predetermined depths simultaneously.'@en ;
+    skos:notation 'SDN:L05::115'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/12/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/12/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/12/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fog samplers'@en ;
+    skos:definition 'A device that condenses a sample of fog from the atmosphere.'@en ;
+    skos:notation 'SDN:L05::12'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/122/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/122/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/122/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'radiometers'@en ;
+    skos:definition 'Instrument that measures the intensity of electromagnetic radiation in either the atmosphere or the water column.'@en ;
+    skos:notation 'SDN:L05::122'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/13/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/13/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/13/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'aerosol samplers'@en ;
+    skos:definition 'A device that collects a sample of aerosol (dry particles or liquid droplets) from the atmosphere.'@en ;
+    skos:notation 'SDN:L05::13'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/134/3/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/134/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/134/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water temperature sensor'@en ;
+    skos:definition 'An instrument that measures the temperature of the water with which it is in contact.'@en ;
+    skos:notation 'SDN:L05::134'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/14/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/14/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/14/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'precipitation samplers'@en ;
+    skos:definition 'A device that collects a sample of precipitation (rain, hail or snow) as it falls.'@en ;
+    skos:notation 'SDN:L05::14'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/156/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/156/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/156/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'single-beam echosounders'@en ;
+    skos:definition 'Instruments that measure water depth at a single point below the platform by timing pulses of sound reflected on the seafloor.'@en ;
+    skos:notation 'SDN:L05::156'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/157/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/157/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/157/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'multi-beam echosounders'@en ;
+    skos:definition 'Instruments that measure water depth along several tracks parallel to the platform track by timing pulses of sound reflected on the seafloor.'@en ;
+    skos:notation 'SDN:L05::157'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/158/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/158/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/158/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'gravimeters'@en ;
+    skos:definition 'Instrument that makes measurements of the Earth\'s gravity field.'@en ;
+    skos:notation 'SDN:L05::158'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/159/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/159/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/159/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'magnetometers'@en ;
+    skos:definition 'Instrument that makes measurements of the Earth\'s magnetic field.'@en ;
+    skos:notation 'SDN:L05::159'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/181/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/181/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/181/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'nutrient analysers'@en ;
+    skos:definition 'Instrument that makes in-situ measurements of one or more of nitrate, nitrite, ammonium, urea, phosphate or silicate dissolved in the water column.'@en ;
+    skos:notation 'SDN:L05::181'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/185/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/185/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/185/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sound velocity sensors'@en ;
+    skos:definition 'Instrument that measures the velocity of sound in seawater.'@en ;
+    skos:notation 'SDN:L05::185'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/21/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/21/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/21/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'plankton recorders'@en ;
+    skos:definition 'A device that continuously samples a flow of water, separating and fixing plankton for subsequent identification and counting.'@en ;
+    skos:notation 'SDN:L05::21'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/30/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/30/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/30/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'discrete water samplers'@en ;
+    skos:definition 'A device that collects an in-situ discrete water sample from any depth and returns it to the surface without contamination by the waters through which it passes, such as a water bottle.'@en ;
+    skos:notation 'SDN:L05::30'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/303/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/303/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/303/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface current radars'@en ;
+    skos:definition 'Instruments that measure the speed and direction of sea surface travel by timing reflected radio waves.'@en ;
+    skos:notation 'SDN:L05::303'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/31/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/31/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/31/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'continuous water samplers'@en ;
+    skos:definition 'A device that continuously supplies a flow of water either to an analytical instrument, over a sensor or from which samples may be drawn.'@en ;
+    skos:notation 'SDN:L05::31'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/313/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/313/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/313/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'bird detection radars'@en ;
+    skos:definition 'X-band and S-band radar systems developed for the detection, tracking and counting of birds in flight.'@en ;
+    skos:notation 'SDN:L05::313'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/33/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/33/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/33/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sediment traps'@en ;
+    skos:definition 'A collector of particulates as they sink through the water column.'@en ;
+    skos:notation 'SDN:L05::33'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/350/3/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/350/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/350/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'salinity sensor'@en ;
+    skos:definition 'Instrument that simultaneously measures electrical conductivity and temperature in the water column to provide temperature and salinity data.'@en ;
+    skos:notation 'SDN:L05::350'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/351/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/351/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/351/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'dissolved gas sensors'@en ;
+    skos:definition 'Instrument that measures the concentration of gases, generally oxygen, dissolved in the water column.'@en ;
+    skos:notation 'SDN:L05::351'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/353/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/353/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/353/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'active fluorometers'@en ;
+    skos:definition 'Fluorometers that measure photosynthetic parameters by taking measurements whilst manipulating the phytoplankton with controlled high-intensity illumination such as pump and probe and FRRF.'@en ;
+    skos:notation 'SDN:L05::353'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/355/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/355/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/355/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'pH sensors'@en ;
+    skos:definition 'Instruments that measure the hydrogen ion concentration in the water column.'@en ;
+    skos:notation 'SDN:L05::355'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/356/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/356/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/356/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'redox potential sensors'@en ;
+    skos:definition 'Instruments that measure the tendency of the water column to either gain or lose electrons when it is subject to change by introduction of a new species.'@en ;
+    skos:notation 'SDN:L05::356'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/56/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/56/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/56/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'snow and ice samplers'@en ;
+    skos:definition 'A device that collects a sample of frozen seawater or accumulated frozen precipitation.'@en ;
+    skos:notation 'SDN:L05::56'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/57/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/57/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/57/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'manual rock samplers'@en ;
+    skos:definition 'A simple tool like a hammer, saw or even just a hand for the collection of rock samples.'@en ;
+    skos:notation 'SDN:L05::57'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/58/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/58/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/58/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'continuous air samplers'@en ;
+    skos:definition 'A device that continuously supplies a flow of air either to an analytical instrument, over a sensor or from which discrete samples may be drawn.'@en ;
+    skos:notation 'SDN:L05::58'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/83/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/83/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/83/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'centrifuges'@en ;
+    skos:definition 'Devices that separate the liquid and solid phases of a sample through forces exerted by rapid rotation.'@en ;
+    skos:notation 'SDN:L05::83'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/84/3/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/84/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/84/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sieves and filters'@en ;
+    skos:definition 'Devices that separate solid particles larger than a particular size from a sample collected by another device that is a suspension of solid particles in a liquid or gas.'@en ;
+    skos:notation 'SDN:L05::84'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/90/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/90/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/90/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'manual biota samplers'@en ;
+    skos:definition 'A simple tool like a hammer, saw or even just a hand for the collection of biota samples.'@en ;
+    skos:notation 'SDN:L05::90'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/EXHL/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/EXHL/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/EXHL/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'high resolution low penetration explosives'@en ;
+    skos:definition 'Groups all explosives that allows high resolution but low penetration surveys.'@en ;
+    skos:notation 'SDN:L05::EXHL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/EXLH/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/EXLH/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/EXLH/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'high penetration low resolution explosives'@en ;
+    skos:definition 'Groups all explosives that allows high penetration but low resolution surveys.'@en ;
+    skos:notation 'SDN:L05::EXLH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/FLXT/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/FLXT/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/FLXT/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Flexotir'@en ;
+    skos:definition 'A seismic method for marine shooting whereby small charges are propelled through a rubber hose by water under pressure into a steel cage where they are detonated. Holes in the cage allow the water repelled by the explosion to flow out and in thus dissipating some of the energy in the bubble effect.'@en ;
+    skos:notation 'SDN:L05::FLXT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB31/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB31/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB31/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'magnetic susceptibility systems'@en ;
+    skos:definition 'Sensors, probes and meters that measure the degree to which a sample or part thereof is influenced by a magnetic field.'@en ;
+    skos:notation 'SDN:L05::LAB31'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB32/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB32/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB32/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'acoustic velocity systems'@en ;
+    skos:definition 'Instruments that measure the speed or velocity of sound, including P-waves, in samples of solids, liquids or gases.'@en ;
+    skos:notation 'SDN:L05::LAB32'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LBTG/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LBTG/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LBTG/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'labelling tags'@en ;
+    skos:definition 'Passive devices attached to captured organisms to specifically identify them when recaptured after release.'@en ;
+    skos:notation 'SDN:L05::LBTG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/NATS/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/NATS/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/NATS/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'natural source'@en ;
+    skos:definition 'Any kind of natural source of acoustic waves, that can be used in passive seismics.'@en ;
+    skos:notation 'SDN:L05::NATS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/SBAG/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/SBAG/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/SBAG/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'single-bubble airgun'@en ;
+    skos:definition 'Array of air gun tuned in order to obtain the necessary energy wile reducing the size of the air guns.'@en ;
+    skos:notation 'SDN:L05::SBAG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/SPRK/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/SPRK/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/SPRK/>;
+    dc:modified '2013-02-26T17:11:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sparker'@en ;
+    skos:definition 'A seismic source in which an electrical discharge in water is the energy source.'@en ;
+    skos:notation 'SDN:L05::SPRK'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/MMIS/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/MMIS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/MMIS/>;
+    dc:modified '2013-02-18T08:17:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'multi-frame imaging sonar'@en ;
+    skos:definition 'High-frequency (>1 MHz), possibly multiple frequency, active sonar systems that provide images approaching the same quality as optical video cameras. They may be deployed in many ways including hand-held by divers, attached to profiling instruments, AUVs and ROVs, towed fish or moorings.  They have many scientific, commercial and military applications including observation and identification of fish, seabed characterisation, underwater vessel inspections and mine detection. Examples of this type of system are DIDSON (Dual-frequency IDentification SONar) and LIMIS (Limpet Mine Imaging Sonar).  Any instrument that may be considered the underwater acoustic equivalent of an optical video camera belongs in this category.'@en ;
+    skos:notation 'SDN:L05::MMIS'^^xsd:string .

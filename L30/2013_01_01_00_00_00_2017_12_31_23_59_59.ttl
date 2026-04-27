@@ -1,0 +1,127 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L30/2013_01_01_00_00_00_2017_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L30/2009_01_01_00_00_00_2012_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2017-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L30/current/AP/2/> .
+<http://vocab.nerc.ac.uk/collection/L30/current/AP/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L30/current/AP/>;
+    dc:modified '2017-08-10T12:19:08'^^xsd:dateTime ;
+    skos:altLabel 'EDMO1228'^^xsd:string ;
+    skos:prefLabel 'Polytechnic University of Tirana - PUT'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:L30::AP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L30/current/TI/2/> .
+<http://vocab.nerc.ac.uk/collection/L30/current/TI/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L30/current/TI/>;
+    dc:modified '2017-08-10T12:19:08'^^xsd:dateTime ;
+    skos:altLabel 'EDMO1232'^^xsd:string ;
+    skos:prefLabel 'Institut National des Sciences et Technologies de la Mer - INSTM'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:L30::TI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L30/current/FC/2/> .
+<http://vocab.nerc.ac.uk/collection/L30/current/FC/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L30/current/FC/>;
+    dc:modified '2017-08-10T12:19:08'^^xsd:dateTime ;
+    skos:altLabel 'EDMO1233'^^xsd:string ;
+    skos:prefLabel 'Collecte Localisation Satellites SA - CLS'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:L30::FC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L30/current/IN/2/> .
+<http://vocab.nerc.ac.uk/collection/L30/current/IN/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L30/current/IN/>;
+    dc:modified '2017-08-10T12:19:08'^^xsd:dateTime ;
+    skos:altLabel 'EDMO251'^^xsd:string ;
+    skos:prefLabel 'Istituto Nazionale di Geofisica e Vulcanologia - INGV'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:L30::IN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L30/current/FA/1/> .
+<http://vocab.nerc.ac.uk/collection/L30/current/FA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L30/current/FA/>;
+    dc:modified '2017-07-05T14:35:21'^^xsd:dateTime ;
+    skos:altLabel 'EDMO3078'^^xsd:string ;
+    skos:prefLabel 'Mediterranean Institute of Oceanography'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:L30::FA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L30/current/FR/1/> .
+<http://vocab.nerc.ac.uk/collection/L30/current/FR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L30/current/FR/>;
+    dc:modified '2017-07-05T14:34:23'^^xsd:dateTime ;
+    skos:altLabel 'EDMO521'^^xsd:string ;
+    skos:prefLabel 'Biological Station of ROSCOFF'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:L30::FR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L30/current/FB/1/> .
+<http://vocab.nerc.ac.uk/collection/L30/current/FB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L30/current/FB/>;
+    dc:modified '2017-07-05T14:33:31'^^xsd:dateTime ;
+    skos:altLabel 'EDMO1002'^^xsd:string ;
+    skos:prefLabel 'Aquitaine Observatory of Sciences of the Universe (Bordeaux I University) / OSU (OASU)'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:L30::FB'^^xsd:string .

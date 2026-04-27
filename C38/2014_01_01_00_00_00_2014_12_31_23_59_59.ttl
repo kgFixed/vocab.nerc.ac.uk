@@ -1,0 +1,467 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C38/2014_01_01_00_00_00_2014_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C38/2013_01_01_00_00_00_2013_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2014-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6621/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6621/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6621/>;
+    dc:modified '2014-09-01T15:11:07'^^xsd:dateTime ;
+    skos:altLabel 'Thiruvananthapuram'^^xsd:string ;
+    skos:prefLabel 'Thiruvananthapuram'@en ;
+    skos:definition '''{"node": {
+    "country": "India",
+    "notes": "Renamed from Trivandrum (code BSH1992), change effective 2012.",
+    "latitude": 8.483333,
+    "longitude": 76.95
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6621'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH1992/2/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH1992/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH1992/>;
+    dc:modified '2014-09-01T15:10:23'^^xsd:dateTime ;
+    skos:altLabel 'Trivandrum'^^xsd:string ;
+    skos:prefLabel 'Trivandrum'@en ;
+    skos:definition '''{"node": {
+    "country": "India",
+    "notes": "Renamed Thiruvananthapuram, change effective 1990. See code BSH6621",
+    "latitude": 8.483333,
+    "longitude": 76.95
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH1992'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6620/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6620/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6620/>;
+    dc:modified '2014-09-01T15:07:56'^^xsd:dateTime ;
+    skos:altLabel 'Thalassery'^^xsd:string ;
+    skos:prefLabel 'Thalassery'@en ;
+    skos:definition '''{"node": {
+    "country": "India",
+    "notes": "Renamed from Tellicherry (code BSH2170), change effective 2012.",
+    "latitude": 11.75,
+    "longitude": 75.483333
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6620'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH2170/2/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH2170/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH2170/>;
+    dc:modified '2014-09-01T15:06:57'^^xsd:dateTime ;
+    skos:altLabel 'Tellicherry'^^xsd:string ;
+    skos:prefLabel 'Tellicherry'@en ;
+    skos:definition '''{"node": {
+    "country": "India",
+    "notes": "Renamed Thalassery, change effective 2012. See code BSH6620",
+    "latitude": 11.75,
+    "longitude": 75.483333
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH2170'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6619/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6619/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6619/>;
+    dc:modified '2014-09-01T15:01:30'^^xsd:dateTime ;
+    skos:altLabel 'Kollam'^^xsd:string ;
+    skos:prefLabel 'Kollam'@en ;
+    skos:definition '''{"node": {
+    "country": "India",
+    "notes": "Renamed from Cochin (code BSH2011), change effective 1990.",
+    "latitude": 8.883333,
+    "longitude": 76.583333
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6619'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH2011/2/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH2011/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH2011/>;
+    dc:modified '2014-09-01T15:00:56'^^xsd:dateTime ;
+    skos:altLabel 'Quilon'^^xsd:string ;
+    skos:prefLabel 'Quilon'@en ;
+    skos:definition '''{"node": {
+    "country": "India",
+    "notes": "Renamed Kollam, change effective 1990. See code BSH6619",
+    "latitude": 8.883333,
+    "longitude": 76.583333
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH2011'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6618/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6618/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6618/>;
+    dc:modified '2014-09-01T14:59:45'^^xsd:dateTime ;
+    skos:altLabel 'Kochi'^^xsd:string ;
+    skos:prefLabel 'Kochi'@en ;
+    skos:definition '''{"node": {
+    "country": "India",
+    "notes": "Renamed from Cochin (code BSH2179), change effective 2006.",
+    "latitude": 11.933333,
+    "longitude": 79.833333
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6618'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH2179/3/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH2179/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH2179/>;
+    dc:modified '2014-09-01T14:59:32'^^xsd:dateTime ;
+    skos:altLabel 'Pondicherry'^^xsd:string ;
+    skos:prefLabel 'Pondicherry'@en ;
+    skos:definition '''{"node": {
+    "country": "India",
+    "notes": "Renamed Puducherry, change effective 2006. See code BSH6618",
+    "latitude": 11.933333,
+    "longitude": 79.833333
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH2179'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6617/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6617/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6617/>;
+    dc:modified '2014-09-01T14:46:15'^^xsd:dateTime ;
+    skos:altLabel 'Kochi'^^xsd:string ;
+    skos:prefLabel 'Kochi'@en ;
+    skos:definition '''{"node": {
+    "country": "India",
+    "notes": "Renamed from Cochin (code BSH44), change effective 1996.",
+    "latitude": 9.966666666667,
+    "longitude": 76.233333333333
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6617'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH44/2/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH44/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH44/>;
+    dc:modified '2014-09-01T14:45:14'^^xsd:dateTime ;
+    skos:altLabel 'Cochin'^^xsd:string ;
+    skos:prefLabel 'Cochin'@en ;
+    skos:definition '''{"node": {
+    "country": "India",
+    "notes": "Renamed Kochi, change effective 1996. See code BSH6617",
+    "latitude": 9.966666666667,
+    "longitude": 76.233333333333
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH44'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6616/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6616/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6616/>;
+    dc:modified '2014-09-01T14:30:34'^^xsd:dateTime ;
+    skos:altLabel 'Kannur'^^xsd:string ;
+    skos:prefLabel 'Kannur'@en ;
+    skos:definition '''{"node": {
+    "country": "India",
+    "notes": "Renamed from Cannanore (code BSH2175), change effective 1990.",
+    "latitude": 11.866667,
+    "longitude": 75.366667
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6616'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH2175/2/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH2175/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH2175/>;
+    dc:modified '2014-09-01T14:28:44'^^xsd:dateTime ;
+    skos:altLabel 'Cannanore'^^xsd:string ;
+    skos:prefLabel 'Cannanore'@en ;
+    skos:definition '''{"node": {
+    "country": "India",
+    "notes": "Renamed Kannur, change effective 1990. See code BSH6616",
+    "latitude": 11.866667,
+    "longitude": 75.366667
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH2175'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6615/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6615/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6615/>;
+    dc:modified '2014-09-01T13:51:41'^^xsd:dateTime ;
+    skos:altLabel 'Kolkata'^^xsd:string ;
+    skos:prefLabel 'Kolkata'@en ;
+    skos:definition '''{"node": {
+    "country": "India",
+    "notes": "Renamed from Calcutta (code BSH2548), change effective 1 January 2001.",
+    "latitude": 22.55,
+    "longitude": 88.316667
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6615'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH2548/2/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH2548/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH2548/>;
+    dc:modified '2014-09-01T13:49:39'^^xsd:dateTime ;
+    skos:altLabel 'Calcutta'^^xsd:string ;
+    skos:prefLabel 'Calcutta'@en ;
+    skos:definition '''{"node": {
+    "country": "India",
+    "notes": "Renamed Kolkata, change effective 1 January 2001. See code BSH6615",
+    "latitude": 22.55,
+    "longitude": 88.316667
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH2548'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6614/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6614/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6614/>;
+    dc:modified '2014-09-01T13:47:11'^^xsd:dateTime ;
+    skos:altLabel 'Mumbai'^^xsd:string ;
+    skos:prefLabel 'Mumbai'@en ;
+    skos:definition '''{"node": {
+    "country": "India",
+    "notes": "Renamed from Bombay (code BSH2437), change effective 1995.",
+    "latitude": 18.833333,
+    "longitude": 72.833333
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6614'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH2437/2/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH2437/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH2437/>;
+    dc:modified '2014-09-01T13:45:27'^^xsd:dateTime ;
+    skos:altLabel 'Bombay'^^xsd:string ;
+    skos:prefLabel 'Bombay'@en ;
+    skos:definition '''{"node": {
+    "country": "India",
+    "notes": "Renamed Mumbai, change effective 1995. See code BSH6614",
+    "latitude": 18.833333,
+    "longitude": 72.833333
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH2437'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6613/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6613/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6613/>;
+    dc:modified '2014-09-01T12:39:34'^^xsd:dateTime ;
+    skos:altLabel 'Alappuzha'^^xsd:string ;
+    skos:prefLabel 'Alappuzha'@en ;
+    skos:definition '''{"node": {
+    "country": "India",
+    "notes": "Renamed from Alleppey (code BSH2034), change effective 1990.",
+    "latitude": 9.483333,
+    "longitude": 76.316667
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6613'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH2034/2/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH2034/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH2034/>;
+    dc:modified '2014-09-01T12:37:34'^^xsd:dateTime ;
+    skos:altLabel 'Alleppey'^^xsd:string ;
+    skos:prefLabel 'Alleppey'@en ;
+    skos:definition '''{"node": {
+    "country": "India",
+    "notes": "Renamed Alappuzha, change effective 1990. See code BSH6613.",
+    "latitude": 9.483333,
+    "longitude": 76.316667
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH2034'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6593/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6593/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6593/>;
+    dc:modified '2014-08-04T10:02:56'^^xsd:dateTime ;
+    skos:altLabel 'Chennai'^^xsd:string ;
+    skos:prefLabel 'Chennai'@en ;
+    skos:definition '''{"node": {
+    "country": "India",
+    "notes": "Renamed from Madras, change effective August 1996 (see code BSH2218).",
+    "latitude": 13.1,
+    "longitude": 80.3
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6593'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH2218/2/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH2218/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH2218/>;
+    dc:modified '2014-08-04T09:56:45'^^xsd:dateTime ;
+    skos:altLabel 'Madras'^^xsd:string ;
+    skos:prefLabel 'Madras'@en ;
+    skos:definition '''{"node": {
+    "country": "India",
+    "notes": "Renamed Chennai in August 1996 (see code BSH6593).",
+    "latitude": 13.1,
+    "longitude": 80.3
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH2218'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6579/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6579/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6579/>;
+    dc:modified '2014-06-24T09:59:09'^^xsd:dateTime ;
+    skos:altLabel 'Gulfport'^^xsd:string ;
+    skos:prefLabel 'Gulfport'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "notes": "Florida",
+    "latitude": 27.75,
+    "longitude": -82.7
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6579'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6578/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6578/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6578/>;
+    dc:modified '2014-06-24T09:58:07'^^xsd:dateTime ;
+    skos:altLabel 'Teller'^^xsd:string ;
+    skos:prefLabel 'Teller'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "notes": "Alaska",
+    "latitude": 65.257222,
+    "longitude": -166.353889
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6578'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6575/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6575/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6575/>;
+    dc:modified '2014-06-24T09:51:32'^^xsd:dateTime ;
+    skos:altLabel 'Palmer Station'^^xsd:string ;
+    skos:prefLabel 'Palmer Station'@en ;
+    skos:definition '''{"node": {
+    "country": "Antarctica",
+    "latitude": -64.749579,
+    "longitude": -64.052103
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6575'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6573/2/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6573/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6573/>;
+    dc:modified '2014-06-24T09:50:18'^^xsd:dateTime ;
+    skos:altLabel 'Port of Avondale'^^xsd:string ;
+    skos:prefLabel 'Port of Avondale'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "notes": "State of Louisiana, Mississipi port",
+    "latitude": 29.904444,
+    "longitude": -90.204167
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6573'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6574/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6574/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6574/>;
+    dc:modified '2014-06-24T09:49:36'^^xsd:dateTime ;
+    skos:altLabel 'Fort Lauderdale'^^xsd:string ;
+    skos:prefLabel 'Fort Lauderdale'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "latitude": 26.0933342,
+    "longitude": -80.08000183
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6574'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6533/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6533/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6533/>;
+    dc:modified '2014-02-06T13:31:08'^^xsd:dateTime ;
+    skos:altLabel 'Stellendam'^^xsd:string ;
+    skos:prefLabel 'Stellendam'@en ;
+    skos:definition '''{"node": {
+    "country": "Netherlands",
+    "latitude": 51.805561,
+    "longitude": 4.0298
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6533'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH3995/2/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH3995/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH3995/>;
+    dc:modified '2014-01-28T15:24:32'^^xsd:dateTime ;
+    skos:altLabel 'St John'^^xsd:string ;
+    skos:prefLabel 'St John'@en ;
+    skos:definition '''{"node": {
+    "country": "Canada",
+    "notes": "New Brunswick",
+    "latitude": 45.266667,
+    "longitude": -66.05
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH3995'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH197/4/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH197/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH197/>;
+    dc:modified '2014-01-28T15:23:18'^^xsd:dateTime ;
+    skos:altLabel 'St. John\'s'^^xsd:string ;
+    skos:prefLabel 'St. John\'s'@en ;
+    skos:definition '''{"node": {
+    "country": "Canada",
+    "notes": "Newfoundland",
+    "latitude": 47.55,
+    "longitude": -52.666666666667
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH197'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6513/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6513/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6513/>;
+    dc:modified '2014-01-28T15:19:07'^^xsd:dateTime ;
+    skos:altLabel 'Myrè'^^xsd:string ;
+    skos:prefLabel 'Myre'@en ;
+    skos:definition '''{"node": {
+    "country": "Norway",
+    "notes": "Nordland county",
+    "latitude": 68.914963,
+    "longitude": 15.0873
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6513'^^xsd:string .

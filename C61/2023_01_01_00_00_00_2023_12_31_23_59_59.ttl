@@ -1,0 +1,163 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C61/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C61/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2023-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/DUTPT022/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/DUTPT022/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/DUTPT022/>;
+    dc:modified '2023-11-24T09:35:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Giesbeek'@en ;
+    skos:definition 'Village in Gelderland, Netherlands'@en ;
+    skos:notation 'SDN:C61::DUTPT022'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/ECPT0002/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/ECPT0002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/ECPT0002/>;
+    dc:modified '2023-10-17T21:29:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Puerto Baquerizo Moreno'@en ;
+    skos:definition 'City in Galapagos, Ecuador'@en ;
+    skos:notation 'SDN:C61::ECPT0002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY205/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY205/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY205/>;
+    dc:modified '2023-10-09T10:40:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Morehead City'@en ;
+    skos:definition 'City in North Carolina, USA'@en ;
+    skos:notation 'SDN:C61::USCTY205'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY204/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY204/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY204/>;
+    dc:modified '2023-08-31T11:21:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Durham'@en ;
+    skos:definition 'City in North Carolina, USA'@en ;
+    skos:notation 'SDN:C61::USCTY204'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY203/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY203/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY203/>;
+    dc:modified '2023-07-13T16:42:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Buena Park'@en ;
+    skos:definition 'City in California, USA'@en ;
+    skos:notation 'SDN:C61::USCTY203'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/CNPT0025/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/CNPT0025/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/CNPT0025/>;
+    dc:modified '2023-06-15T17:20:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Clarenville'@en ;
+    skos:definition 'Town in Newfoundland, Newfoundland and Labrador, Canada'@en ;
+    skos:notation 'SDN:C61::CNPT0025'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/NWCTY007/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/NWCTY007/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/NWCTY007/>;
+    dc:modified '2023-06-05T10:18:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Aksdal'@en ;
+    skos:definition 'Village in Rogaland, Norway'@en ;
+    skos:notation 'SDN:C61::NWCTY007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY202/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY202/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY202/>;
+    dc:modified '2023-04-12T10:00:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'East Lansing'@en ;
+    skos:definition 'City in Michigan, USA'@en ;
+    skos:notation 'SDN:C61::USCTY202'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY201/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY201/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY201/>;
+    dc:modified '2023-02-15T10:48:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Oceanside'@en ;
+    skos:definition 'City in California, USA'@en ;
+    skos:notation 'SDN:C61::USCTY201'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/CHNPT009/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/CHNPT009/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/CHNPT009/>;
+    dc:modified '2023-02-09T15:23:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Shenzhen'@en ;
+    skos:definition 'City in Guangdong, China. Also known as Shamchun.'@en ;
+    skos:notation 'SDN:C61::CHNPT009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/DUTPT021/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/DUTPT021/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/DUTPT021/>;
+    dc:modified '2023-02-09T15:23:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Venlo'@en ;
+    skos:definition 'City in Limburg, Netherlands.'@en ;
+    skos:notation 'SDN:C61::DUTPT021'^^xsd:string .

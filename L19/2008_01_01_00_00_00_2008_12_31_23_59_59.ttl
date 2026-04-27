@@ -1,0 +1,228 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L19/2008_01_01_00_00_00_2008_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG09/1/> .
+<http://vocab.nerc.ac.uk/collection/L19/current/SDNKG09/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG09/>;
+    dc:modified '2008-01-16T13:49:51'^^xsd:dateTime ;
+    skos:altLabel 'arrival_country'^^xsd:string ;
+    skos:prefLabel 'arrival_country'@en ;
+    skos:definition 'Keyword identifies the country where an activity begins'@en ;
+    skos:notation 'SDN:L19::SDNKG09'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG08/1/> .
+<http://vocab.nerc.ac.uk/collection/L19/current/SDNKG08/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG08/>;
+    dc:modified '2008-01-16T13:49:51'^^xsd:dateTime ;
+    skos:altLabel 'arrival_place'^^xsd:string ;
+    skos:prefLabel 'arrival_place'@en ;
+    skos:definition 'Keyword identifies a location where an activity finishes'@en ;
+    skos:notation 'SDN:L19::SDNKG08'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG07/1/> .
+<http://vocab.nerc.ac.uk/collection/L19/current/SDNKG07/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG07/>;
+    dc:modified '2008-01-16T13:49:51'^^xsd:dateTime ;
+    skos:altLabel 'departure_country'^^xsd:string ;
+    skos:prefLabel 'departure_country'@en ;
+    skos:definition 'Keyword identifies the country where an activity starts'@en ;
+    skos:notation 'SDN:L19::SDNKG07'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG06/1/> .
+<http://vocab.nerc.ac.uk/collection/L19/current/SDNKG06/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG06/>;
+    dc:modified '2008-01-16T13:49:51'^^xsd:dateTime ;
+    skos:altLabel 'departure_place'^^xsd:string ;
+    skos:prefLabel 'departure_place'@en ;
+    skos:definition 'Keyword identifies a location where an activity starts'@en ;
+    skos:notation 'SDN:L19::SDNKG06'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L19/current/001/1/> .
+<http://vocab.nerc.ac.uk/collection/L19/current/001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L19/current/001/>;
+    dc:modified '2008-01-16T13:49:51'^^xsd:dateTime ;
+    skos:altLabel 'discipline'^^xsd:string ;
+    skos:prefLabel 'discipline'@en ;
+    skos:definition 'Keyword identifies a branch of instruction or specialized learning'@en ;
+    skos:notation 'SDN:L19::001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG13/1/> .
+<http://vocab.nerc.ac.uk/collection/L19/current/SDNKG13/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG13/>;
+    dc:modified '2008-01-16T13:49:51'^^xsd:dateTime ;
+    skos:altLabel 'habitat'^^xsd:string ;
+    skos:prefLabel 'habitat'@en ;
+    skos:definition 'Keyword identifies the ecological character of a place where an organism is found'@en ;
+    skos:notation 'SDN:L19::SDNKG13'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG12/1/> .
+<http://vocab.nerc.ac.uk/collection/L19/current/SDNKG12/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG12/>;
+    dc:modified '2008-01-16T13:49:51'^^xsd:dateTime ;
+    skos:altLabel 'legislative_driver'^^xsd:string ;
+    skos:prefLabel 'legislative_driver'@en ;
+    skos:definition 'Keyword identifies legislation relevant to an activity'@en ;
+    skos:notation 'SDN:L19::SDNKG12'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG10/1/> .
+<http://vocab.nerc.ac.uk/collection/L19/current/SDNKG10/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG10/>;
+    dc:modified '2008-01-16T13:49:51'^^xsd:dateTime ;
+    skos:altLabel 'marsden_square'^^xsd:string ;
+    skos:prefLabel 'marsden_square'@en ;
+    skos:definition 'Keyword identifies a location as encoded geographic co-ordinates for a rectangular polygon following WMO conventions'@en ;
+    skos:notation 'SDN:L19::SDNKG10'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG14/1/> .
+<http://vocab.nerc.ac.uk/collection/L19/current/SDNKG14/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG14/>;
+    dc:modified '2008-01-16T13:49:51'^^xsd:dateTime ;
+    skos:altLabel 'operational_status'^^xsd:string ;
+    skos:prefLabel 'operational_status'@en ;
+    skos:definition 'Keyword identifies the functional state of an activity'@en ;
+    skos:notation 'SDN:L19::SDNKG14'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG03/1/> .
+<http://vocab.nerc.ac.uk/collection/L19/current/SDNKG03/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG03/>;
+    dc:modified '2008-01-16T13:49:51'^^xsd:dateTime ;
+    skos:altLabel 'parameter'^^xsd:string ;
+    skos:prefLabel 'parameter'@en ;
+    skos:definition 'Keyword identifies a phenomenon or group of phenomena in the dataset'@en ;
+    skos:notation 'SDN:L19::SDNKG03'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L19/current/002/1/> .
+<http://vocab.nerc.ac.uk/collection/L19/current/002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L19/current/002/>;
+    dc:modified '2008-01-16T13:49:51'^^xsd:dateTime ;
+    skos:altLabel 'place'^^xsd:string ;
+    skos:prefLabel 'place'@en ;
+    skos:definition 'Keyword identifies a location'@en ;
+    skos:notation 'SDN:L19::002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG04/1/> .
+<http://vocab.nerc.ac.uk/collection/L19/current/SDNKG04/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG04/>;
+    dc:modified '2008-01-16T13:49:51'^^xsd:dateTime ;
+    skos:altLabel 'platform'^^xsd:string ;
+    skos:prefLabel 'platform'@en ;
+    skos:definition 'Keyword identifies a specific vehicle, object, structure or organism capable of bearing instruments or tools for the collection of physical, chemical, geological or biological samples.'@en ;
+    skos:notation 'SDN:L19::SDNKG04'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG05/1/> .
+<http://vocab.nerc.ac.uk/collection/L19/current/SDNKG05/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG05/>;
+    dc:modified '2008-01-16T13:49:51'^^xsd:dateTime ;
+    skos:altLabel 'platform_class'^^xsd:string ;
+    skos:prefLabel 'platform_class'@en ;
+    skos:definition 'Keyword identifies groups of vehicles, objects, structures or organisms capable of bearing instruments or tools for the collection of physical, chemical, geological or biological samples.'@en ;
+    skos:notation 'SDN:L19::SDNKG05'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG02/1/> .
+<http://vocab.nerc.ac.uk/collection/L19/current/SDNKG02/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG02/>;
+    dc:modified '2008-01-16T13:49:51'^^xsd:dateTime ;
+    skos:altLabel 'project'^^xsd:string ;
+    skos:prefLabel 'project'@en ;
+    skos:definition 'Keyword describes a strategic undertaking encomapssing an organised set of activities'@en ;
+    skos:notation 'SDN:L19::SDNKG02'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG15/1/> .
+<http://vocab.nerc.ac.uk/collection/L19/current/SDNKG15/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG15/>;
+    dc:modified '2008-01-16T13:49:51'^^xsd:dateTime ;
+    skos:altLabel 'quality_accreditation'^^xsd:string ;
+    skos:prefLabel 'quality_accreditation'@en ;
+    skos:definition 'Keyword identifies a standards body or specific standard associated with data quality'@en ;
+    skos:notation 'SDN:L19::SDNKG15'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG11/1/> .
+<http://vocab.nerc.ac.uk/collection/L19/current/SDNKG11/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L19/current/SDNKG11/>;
+    dc:modified '2008-01-16T13:49:51'^^xsd:dateTime ;
+    skos:altLabel 'rationale'^^xsd:string ;
+    skos:prefLabel 'rationale'@en ;
+    skos:definition 'Keyword identifies the reason for an activity'@en ;
+    skos:notation 'SDN:L19::SDNKG11'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L19/current/003/1/> .
+<http://vocab.nerc.ac.uk/collection/L19/current/003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L19/current/003/>;
+    dc:modified '2008-01-16T13:49:51'^^xsd:dateTime ;
+    skos:altLabel 'stratum'^^xsd:string ;
+    skos:prefLabel 'stratum'@en ;
+    skos:definition 'Keyword identifies the layer(s) of any deposited substance'@en ;
+    skos:notation 'SDN:L19::003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L19/current/004/1/> .
+<http://vocab.nerc.ac.uk/collection/L19/current/004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L19/current/004/>;
+    dc:modified '2008-01-16T13:49:51'^^xsd:dateTime ;
+    skos:altLabel 'temporal'^^xsd:string ;
+    skos:prefLabel 'temporal'@en ;
+    skos:definition 'Keyword identifies a time period related to the dataset'@en ;
+    skos:notation 'SDN:L19::004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L19/current/005/1/> .
+<http://vocab.nerc.ac.uk/collection/L19/current/005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L19/current/005/>;
+    dc:modified '2008-01-16T13:49:51'^^xsd:dateTime ;
+    skos:altLabel 'theme'^^xsd:string ;
+    skos:prefLabel 'theme'@en ;
+    skos:definition 'Keyword identifies a particular subject or topic'@en ;
+    skos:notation 'SDN:L19::005'^^xsd:string .

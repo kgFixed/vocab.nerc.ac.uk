@@ -1,0 +1,100 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C88/2021_01_01_00_00_00_2021_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C88/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2021-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR186/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR186/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR186/>;
+    dc:modified '2021-12-10T16:33:26'^^xsd:dateTime ;
+    skos:altLabel 'CC BY-NC 4.0'^^xsd:string ;
+    skos:prefLabel 'Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) agreed'@en ;
+    skos:definition 'User agreed Attribution-NonCommercial 4.0 International Licence - generic international attribution non commercial only licence.'@en ;
+    skos:notation 'SDN:C88::BODCSR186'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR185/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR185/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR185/>;
+    dc:modified '2021-11-26T15:48:07'^^xsd:dateTime ;
+    skos:altLabel 'Argo vocab editor traj'^^xsd:string ;
+    skos:prefLabel 'Argo vocabulary editor of trajectory tables'@en ;
+    skos:definition 'Person or persons authorised to make changes to the Argo trajectory tables under the Argo program governance.'@en ;
+    skos:notation 'SDN:C88::BODCSR185'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR184/1/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR184/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR184/>;
+    dc:modified '2021-10-27T13:53:49'^^xsd:dateTime ;
+    skos:altLabel 'CC-BY4.0'^^xsd:string ;
+    skos:prefLabel 'Creative Commons Attribution 4.0 International Licence agreed'@en ;
+    skos:definition 'User agreed Creative Commons Attribution 4.0 International Licence - generic international attribution only licence.'@en ;
+    skos:notation 'SDN:C88::BODCSR184'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR183/2/> .
+<http://vocab.nerc.ac.uk/collection/C88/current/BODCSR183/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C88/current/BODCSR183/>;
+    dc:modified '2021-09-07T10:19:21'^^xsd:dateTime ;
+    skos:altLabel 'ODATIS vocab editor'^^xsd:string ;
+    skos:prefLabel 'ODATIS Ocean Cluster vocabulary editor'@en ;
+    skos:definition 'Person or persons authorised to make changes to controlled vocabularies governed by the French Ocean Data and Services Cluster ODATIS governance team.'@en ;
+    skos:notation 'SDN:C88::BODCSR183'^^xsd:string .

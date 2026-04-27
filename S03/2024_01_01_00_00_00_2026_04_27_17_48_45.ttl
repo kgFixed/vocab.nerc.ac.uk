@@ -1,0 +1,262 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S03/2024_01_01_00_00_00_2026_04_27_17_48_45.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S03/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-27T17:48:45'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03493/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03493/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03493/>;
+    dc:modified '2026-04-13T13:27:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '13C-bicarbonate and 15N-urea tracer addition, on-deck incubation at simulated in-situ light level, filtration'@en ;
+    skos:definition 'Bicarbonate labelled with carbon-13 and urea labelled with nitrogen-15 were both added to the sample which was held for a predetermined time in a surface seawater bath and quantitatively shaded natural light (level usually designed to mimic collection depth and documented elsewhere) before filtration to collect the particulate phase.'@en ;
+    skos:notation 'SDN:S03::S03493'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03492/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03492/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03492/>;
+    dc:modified '2026-04-13T13:27:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '13C-bicarbonate and 15N-ammonium tracer addition, on-deck incubation at simulated in-situ light level, filtration'@en ;
+    skos:definition 'Bicarbonate labelled with carbon-13 and ammonium labelled with nitrogen-15 were both added to the sample which was held for a predetermined time in a surface seawater bath and quantitatively shaded natural light (level usually designed to mimic collection depth and documented elsewhere) before filtration to collect the particulate phase.'@en ;
+    skos:notation 'SDN:S03::S03492'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03491/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03491/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03491/>;
+    dc:modified '2026-04-13T13:27:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '13C-bicarbonate and 15N-nitrate tracer addition, on-deck incubation at simulated in-situ light level, filtration'@en ;
+    skos:definition 'Bicarbonate labelled with carbon-13 and nitrate labelled with nitrogen-15 were both added to the sample which was held for a predetermined time in a surface seawater bath and quantitatively shaded natural light (level usually designed to mimic collection depth and documented elsewhere) before filtration to collect the particulate phase.'@en ;
+    skos:notation 'SDN:S03::S03491'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03490/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03490/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03490/>;
+    dc:modified '2026-03-25T09:54:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'in-vitro incubation chamber'@en ;
+    skos:definition 'An enclosure system equipped with sensors and/or sampling devices which enables measurements to be made on specific variables in-vitro e.g. isolated from the natural system with increased control over the experimental conditions.'@en ;
+    skos:notation 'SDN:S03::S03490'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03486/3/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03486/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03486/>;
+    dc:modified '2026-01-30T15:05:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '14C-LEU-tracer addition, incubation in the dark, acidification, purging and trapping CO2'@en ;
+    skos:definition 'The sample was spiked with radioactive leucine (an amino acid), retained for a predetermined time under controlled conditions in the dark before dissolved gases were stripped and their CO2 component retained for analysis.'@en ;
+    skos:notation 'SDN:S03::S03486'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03489/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03489/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03489/>;
+    dc:modified '2026-01-29T22:11:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'RedoxSensor Green (RSG) probing'@en ;
+    skos:definition 'The sample is spiked with a fluorogenic redox indicator.'@en ;
+    skos:notation 'SDN:S03::S03489'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03488/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03488/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03488/>;
+    dc:modified '2025-11-23T18:30:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '18O-H2O-tracer addition, in-vitro incubation'@en ;
+    skos:definition 'The sample was spiked with 18O-labeled water and incubated in a glass bottle for a predetermined period under simulated in-situ conditions.'@en ;
+    skos:notation 'SDN:S03::S03488'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03487/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03487/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03487/>;
+    dc:modified '2025-11-07T10:51:22'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'stretching'@en ;
+    skos:definition 'The procedure of gently pulling or aligning a specimen to remove natural curvature or slack.'@en ;
+    skos:notation 'SDN:S03::S03487'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03485/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03485/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03485/>;
+    dc:modified '2025-07-10T13:16:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'PvI incubation, filtration, acidification'@en ;
+    skos:definition 'Aliquots of the sample inoculated with radioactive dissolved inorganic carbon were retained at various known light levels for a predetermined period before the particulate phase was extracted by filtration and acid was added to remove any remaining inorganic radioactivity prior to counting.'@en ;
+    skos:notation 'SDN:S03::S03485'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03484/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03484/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03484/>;
+    dc:modified '2025-06-30T14:19:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'in-situ pore water sampling, filtration, acidification'@en ;
+    skos:definition 'Samples of sediment pore water were taken using a specialised in-situ apparatus and particulates were physically removed by filtration. Samples were acidified prior to analysis.'@en ;
+    skos:notation 'SDN:S03::S03484'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03483/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03483/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03483/>;
+    dc:modified '2025-04-05T21:41:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'in-vitro incubation in the dark on deck'@en ;
+    skos:definition 'The sample was retained in darkness or in a darkened bottle for a predetermined period typically in on-deck incubators cooled with pumped surface water ("shipboard incubations").'@en ;
+    skos:notation 'SDN:S03::S03483'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03482/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03482/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03482/>;
+    dc:modified '2025-04-05T20:16:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'in-vitro incubation in the dark on in-situ rig'@en ;
+    skos:definition 'The sample was retained in darkness or in a darkened bottle for a predetermined period on a rig deployed close to its original location and depth of collection.'@en ;
+    skos:notation 'SDN:S03::S03482'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03481/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03481/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03481/>;
+    dc:modified '2025-04-03T08:29:38'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'in-situ incubation chamber'@en ;
+    skos:definition 'An enclosure system equipped with sensors and/or sampling devices, which enables measurements to be made in-situ on a parcel of water and/or sediment with minimum disruption to the natural system.'@en ;
+    skos:notation 'SDN:S03::S03481'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S0328/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S0328/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S0328/>;
+    dc:modified '2025-04-03T08:12:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'screening, in-vitro incubation on in-situ rig dilution experiment'@en ;
+    skos:definition 'The sample has been taken from one of a series of incubations (tethered to a buoy at collection depth) of coarse filtered (usually to remove zooplankton except for microzooplankton) seawater sample at multiple dilutions. Usually associated with the quantification of phytoplankton consumption by grazers.'@en ;
+    skos:notation 'SDN:S03::S0328'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03185/3/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03185/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03185/>;
+    dc:modified '2025-04-03T08:11:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'isotope-labelled tracer addition, in-vitro incubation on in-situ rig, filtration'@en ;
+    skos:definition 'A dissolved radioactive or stable isotope tracer was added to the sample which was held for a predetermined time on a rig at the location and depth of sample collection before filtration to collect the particulate phase.'@en ;
+    skos:notation 'SDN:S03::S03185'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03184/3/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03184/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03184/>;
+    dc:modified '2025-04-03T08:10:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'isotope-labelled tracer addition, in-vitro incubation on in-situ rig, cascade filtration'@en ;
+    skos:definition 'A dissolved radioactive or stable isotope tracer was added to the sample which was held for a predetermined time on a rig at the location and depth of sample collection before filtration to collect the particulate phase as size fractions.'@en ;
+    skos:notation 'SDN:S03::S03184'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03128/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03128/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03128/>;
+    dc:modified '2025-04-03T08:06:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'in-vitro incubation on in-situ rig dilution experiment'@en ;
+    skos:definition 'The sample has been taken from one of a series of incubations of a seawater sample at multiple dilutions held on a rig at the depth of sample collection. Usually associated with the quantification of phytoplankton consumption by grazers.'@en ;
+    skos:notation 'SDN:S03::S03128'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03127/2/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03127/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03127/>;
+    dc:modified '2025-04-03T08:03:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'in-vitro incubation on in-situ rig'@en ;
+    skos:definition 'The sample was retained for a predetermined period on a rig at its location and depth of collection.'@en ;
+    skos:notation 'SDN:S03::S03127'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03480/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03480/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03480/>;
+    dc:modified '2025-04-02T18:24:04'^^xsd:dateTime ;
+    skos:altLabel 'in-vitro'^^xsd:string ;
+    skos:prefLabel 'in-vitro incubation in the dark'@en ;
+    skos:definition 'Aliquots of the sample were retained for a set period of time in bottles incubated in the dark. In oceanography, in-vitro incubations (i.e. in bottle enclosures) are typically carried out in on-deck incubators cooled with pumped surface water ("shipboard incubations"), or on an in-situ rig at the depths the samples were collected, or in an incubation chamber in the laboratory where temperatures close to in-situ temperatures can be maintained.'@en ;
+    skos:notation 'SDN:S03::S03480'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03479/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03479/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03479/>;
+    dc:modified '2025-01-28T15:27:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, Alcian blue staining'@en ;
+    skos:definition 'Suspended solids from the sample are separated then stained using an Alcian blue solution - a family of polyvalent basic dyes used for tissue preparation in microscopy to target specific anionic groups.'@en ;
+    skos:notation 'SDN:S03::S03479'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03478/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03478/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03478/>;
+    dc:modified '2024-08-29T09:52:38'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'filtration, hydrolysis, reaction with ortho-phthalaldehyde'@en ;
+    skos:definition 'Physical separation of the solid phase from a volume of water or air before the phase of interest was treated with reagents to initiate a hydrolysis reaction followed by reaction with ortho-phthalaldehyde (OPA).'@en ;
+    skos:notation 'SDN:S03::S03478'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S03/current/S03477/1/> .
+<http://vocab.nerc.ac.uk/collection/S03/current/S03477/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S03/current/S03477/>;
+    dc:modified '2024-02-07T12:28:17'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'no filtration'@en ;
+    skos:definition 'The sample has not undergone any physical separatation of the solid and liquid phases. This code is to be used alongside the appropriate matrix and only in cases where this needs to be made very clear to avoid confusion.'@en ;
+    skos:notation 'SDN:S03::S03477'^^xsd:string .

@@ -1,0 +1,210 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/B04/2014_01_01_00_00_00_2014_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B04/current/MCP/1/> .
+<http://vocab.nerc.ac.uk/collection/B04/current/MCP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B04/current/MCP/>;
+    dc:modified '2014-07-09T08:06:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'MCPO'@en ;
+    skos:definition 'Abbreviation of title used for someone holding naval military rank Master Chief Petty Officer'@en ;
+    skos:notation 'SDN:B04::MCP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B04/current/CAP/1/> .
+<http://vocab.nerc.ac.uk/collection/B04/current/CAP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B04/current/CAP/>;
+    dc:modified '2014-06-08T13:51:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Capt'@en ;
+    skos:definition 'Abbreviation of title used for someone holding military rank Captain'@en ;
+    skos:notation 'SDN:B04::CAP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B04/current/CDR/1/> .
+<http://vocab.nerc.ac.uk/collection/B04/current/CDR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B04/current/CDR/>;
+    dc:modified '2014-06-08T13:51:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Cdr'@en ;
+    skos:definition 'Abbreviation of title used for someone holding military rank Commander'@en ;
+    skos:notation 'SDN:B04::CDR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B04/current/DR1/1/> .
+<http://vocab.nerc.ac.uk/collection/B04/current/DR1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B04/current/DR1/>;
+    dc:modified '2014-06-08T13:51:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Dr'@en ;
+    skos:definition 'Doctor - English language honorific for a someone with a PhD (or medical qualification)'@en ;
+    skos:notation 'SDN:B04::DR1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B04/current/ING/1/> .
+<http://vocab.nerc.ac.uk/collection/B04/current/ING/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B04/current/ING/>;
+    dc:modified '2014-06-08T13:51:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ing'@en ;
+    skos:definition 'Abbreviation of title used for holders of postgraduate qualifications in some parts of Europe'@en ;
+    skos:notation 'SDN:B04::ING'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B04/current/IR1/1/> .
+<http://vocab.nerc.ac.uk/collection/B04/current/IR1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B04/current/IR1/>;
+    dc:modified '2014-06-08T13:51:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ir'@en ;
+    skos:definition 'Abbreviation of Ingénieur and also Ingenieur - title used for holders of postgraduate qualifications in some parts of Europe'@en ;
+    skos:notation 'SDN:B04::IR1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B04/current/LT1/1/> .
+<http://vocab.nerc.ac.uk/collection/B04/current/LT1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B04/current/LT1/>;
+    dc:modified '2014-06-08T13:51:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Lt'@en ;
+    skos:definition 'Abbreviation of title used for someone holding military rank Lieutenant'@en ;
+    skos:notation 'SDN:B04::LT1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B04/current/LTC/1/> .
+<http://vocab.nerc.ac.uk/collection/B04/current/LTC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B04/current/LTC/>;
+    dc:modified '2014-06-08T13:51:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Lt Cdr'@en ;
+    skos:definition 'Abbreviation of title used for someone holding military rank Lieutenant Commander'@en ;
+    skos:notation 'SDN:B04::LTC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B04/current/MIS/1/> .
+<http://vocab.nerc.ac.uk/collection/B04/current/MIS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B04/current/MIS/>;
+    dc:modified '2014-06-08T13:51:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Miss'@en ;
+    skos:definition 'English language honorific for an unmarried woman'@en ;
+    skos:notation 'SDN:B04::MIS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B04/current/MR1/1/> .
+<http://vocab.nerc.ac.uk/collection/B04/current/MR1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B04/current/MR1/>;
+    dc:modified '2014-06-08T13:51:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mr'@en ;
+    skos:definition 'English language honorific for a man'@en ;
+    skos:notation 'SDN:B04::MR1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B04/current/MRS/1/> .
+<http://vocab.nerc.ac.uk/collection/B04/current/MRS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B04/current/MRS/>;
+    dc:modified '2014-06-08T13:51:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mrs'@en ;
+    skos:definition 'English language honorific for a married woman'@en ;
+    skos:notation 'SDN:B04::MRS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B04/current/MS1/1/> .
+<http://vocab.nerc.ac.uk/collection/B04/current/MS1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B04/current/MS1/>;
+    dc:modified '2014-06-08T13:51:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ms'@en ;
+    skos:definition 'English language honorific for a woman, not dependant on marital status'@en ;
+    skos:notation 'SDN:B04::MS1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B04/current/PRO/1/> .
+<http://vocab.nerc.ac.uk/collection/B04/current/PRO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B04/current/PRO/>;
+    dc:modified '2014-06-08T13:51:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Prof'@en ;
+    skos:definition 'Abbreviation of Professor - English language honorific for a senior academic'@en ;
+    skos:notation 'SDN:B04::PRO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B04/current/RAD/1/> .
+<http://vocab.nerc.ac.uk/collection/B04/current/RAD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B04/current/RAD/>;
+    dc:modified '2014-06-08T13:51:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'RAdm'@en ;
+    skos:definition 'Abbreviation of title used for someone holding military rank Rear Admiral'@en ;
+    skos:notation 'SDN:B04::RAD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B04/current/REV/1/> .
+<http://vocab.nerc.ac.uk/collection/B04/current/REV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B04/current/REV/>;
+    dc:modified '2014-06-08T13:51:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Rev'@en ;
+    skos:definition 'Abbreviation of Reverend - title used by some (primarily Christian) clergy'@en ;
+    skos:notation 'SDN:B04::REV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B04/current/SIR/1/> .
+<http://vocab.nerc.ac.uk/collection/B04/current/SIR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B04/current/SIR/>;
+    dc:modified '2014-06-08T13:51:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sir'@en ;
+    skos:definition 'English language honorific for a knighted man (or Baronet)'@en ;
+    skos:notation 'SDN:B04::SIR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B04/current/VAD/1/> .
+<http://vocab.nerc.ac.uk/collection/B04/current/VAD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B04/current/VAD/>;
+    dc:modified '2014-06-08T13:51:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'VAdm'@en ;
+    skos:definition 'Abbreviation of title used for someone holding military rank Vice Admiral'@en ;
+    skos:notation 'SDN:B04::VAD'^^xsd:string .

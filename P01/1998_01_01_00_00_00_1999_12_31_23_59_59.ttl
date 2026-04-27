@@ -1,0 +1,109 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/1998_01_01_00_00_00_1999_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/1997_01_01_00_00_00_1997_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '1999-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/D052M04Z/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/D052M04Z/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/D052M04Z/>;
+    dc:modified '1999-07-28T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'D05204'^^xsd:string ;
+    skos:prefLabel 'Abundance of Fragilaria investiens per unit mass of sediment by optical microscopy'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P01::D052M04Z'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/D110M01A/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/D110M01A/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/D110M01A/>;
+    dc:modified '1999-07-28T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'D11001A'^^xsd:string ;
+    skos:prefLabel 'Abundance of Thalassionema nitzschioides var. parva per unit mass of sediment by optical microscopy'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P01::D110M01A'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/D193M20Z/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/D193M20Z/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/D193M20Z/>;
+    dc:modified '1999-07-28T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'D19320'^^xsd:string ;
+    skos:prefLabel 'Abundance of Delphineis karstenii per unit mass of sediment by optical microscopy'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P01::D193M20Z'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/N360S10Z/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/N360S10Z/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/N360S10Z/>;
+    dc:modified '1999-07-26T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'N36010'^^xsd:string ;
+    skos:prefLabel 'Abundance of Prionospio cirrata per unit area of the bed by sieving and picking under an optical microscope'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P01::N360S10Z'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/N362S20Z/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/N362S20Z/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/N362S20Z/>;
+    dc:modified '1999-07-26T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'N36220'^^xsd:string ;
+    skos:prefLabel 'Abundance of Pseudoeulalia exigua per unit area of the bed by sieving and picking under an optical microscope'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P01::N362S20Z'^^xsd:string .

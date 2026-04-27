@@ -1,0 +1,91 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/1998_01_01_00_00_00_1998_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/1997_01_01_00_00_00_1997_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '1998-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UUTU/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UUTU/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UUTU/>;
+    dc:modified '1998-12-14T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'TU'^^xsd:string ;
+    skos:prefLabel 'Tritium units (10**18H/Tr)'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UUTU'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UWNS/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UWNS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UWNS/>;
+    dc:modified '1998-11-11T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'W/m^2/nm/sr'^^xsd:string ;
+    skos:prefLabel 'Watts per square metre per nanometre per steradian'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UWNS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UMAM/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UMAM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UMAM/>;
+    dc:modified '1998-07-13T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'mA'^^xsd:string ;
+    skos:prefLabel 'Milliamps'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UMAM'^^xsd:string .

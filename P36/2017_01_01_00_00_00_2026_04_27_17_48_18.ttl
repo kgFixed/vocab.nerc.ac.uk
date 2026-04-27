@@ -1,0 +1,217 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P36/2017_01_01_00_00_00_2026_04_27_17_48_18.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P36/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-27T17:48:18'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P36/current/OTCHEM/1/> .
+<http://vocab.nerc.ac.uk/collection/P36/current/OTCHEM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P36/current/OTCHEM/>;
+    dc:modified '2025-08-01T12:49:50'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Other chemical parameters'@en ;
+    skos:definition 'Concentrations of chemical parameters not included in the other P36 groups; for instance, organo-oxygen substances (e.g. alcohols, phenols (non-chlorinated), ketones, and esters), stable isotopes, and biotoxins'@en ;
+    skos:notation 'SDN:P36::OTCHEM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P36/current/FERTIL/2/> .
+<http://vocab.nerc.ac.uk/collection/P36/current/FERTIL/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P36/current/FERTIL/>;
+    dc:modified '2025-04-07T12:27:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'N+P nutrients'@en ;
+    skos:definition 'Concentrations of organic and inorganic nitrogen and phosphorus nutrients; for example, nitrate, nitrite, ammonium, and phosphate.'@en ;
+    skos:notation 'SDN:P36::FERTIL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P36/current/PESTBI/3/> .
+<http://vocab.nerc.ac.uk/collection/P36/current/PESTBI/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P36/current/PESTBI/>;
+    dc:modified '2025-04-07T11:55:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Pesticides'@en ;
+    skos:definition 'Concentrations of pesticides (in use and banned in the EU), excluding those used mainly in antifouling paints (for boats and ships) and pharmaceuticals (e.g. certain fungicides). A pesticide prevents, destroys, or controls a harmful organism (\'pest\') or disease, or protects plants or plant products during production, storage, and transport. Pesticides include, for example, biocides (substances for non-food and non-feed purposes) and plant protection products (substances for food and feed purposes).'@en ;
+    skos:notation 'SDN:P36::PESTBI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P36/current/DISGAS/2/> .
+<http://vocab.nerc.ac.uk/collection/P36/current/DISGAS/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P36/current/DISGAS/>;
+    dc:modified '2025-04-07T11:54:58'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Dissolved gases'@en ;
+    skos:definition 'Concentrations of dissolved gases in water, for example, dissolved oxygen. This group excludes carbon dioxide (since April 2025), which is with carbonate system parameters (ACIDIT), and hydrocarbons in a gas state (e.g. methane), which are groups under hydrocarbons (HCARBS).'@en ;
+    skos:notation 'SDN:P36::DISGAS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P36/current/ANTIFL/2/> .
+<http://vocab.nerc.ac.uk/collection/P36/current/ANTIFL/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P36/current/ANTIFL/>;
+    dc:modified '2025-04-07T11:54:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Organometals'@en ;
+    skos:definition 'Concentrations of organometallic substances, including those within antifouling paints and products (in use or previously used); for example, EU banned organotin compounds (e.g. tributyltin).'@en ;
+    skos:notation 'SDN:P36::ANTIFL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P36/current/SLCATE/2/> .
+<http://vocab.nerc.ac.uk/collection/P36/current/SLCATE/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P36/current/SLCATE/>;
+    dc:modified '2025-04-07T11:53:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Silicates'@en ;
+    skos:definition 'Concentrations of dissolved inorganic silicon usually as hydrosilicic acid (often called silicate) and biogenic silica.'@en ;
+    skos:notation 'SDN:P36::SLCATE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P36/current/HCARBS/2/> .
+<http://vocab.nerc.ac.uk/collection/P36/current/HCARBS/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P36/current/HCARBS/>;
+    dc:modified '2025-04-07T11:52:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Hydrocarbons'@en ;
+    skos:definition 'Concentrations of hydrocarbons. A hydrocarbon is an organic compound consisting entirely of hydrogen and carbon. Hydrocarbons include, for example, alkanes, alkenes, alkynes, and parent polycyclic aromatic hydrocarbons (PAHs). However, this group also includes transformed PAH products such as nitro-PAHs (N-PAHs), carbonyl-PAHs (C-PAHs) and hydroxyl-PAHs (HO-PAHs).'@en ;
+    skos:notation 'SDN:P36::HCARBS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P36/current/MRNLTTR/2/> .
+<http://vocab.nerc.ac.uk/collection/P36/current/MRNLTTR/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P36/current/MRNLTTR/>;
+    dc:modified '2025-04-07T11:52:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Marine litter, including Plastics'@en ;
+    skos:definition 'Measurements of litter, including plastics, in the coastal and marine environments (i.e. beach, seabed, sediment, water column). Litter is defined as any persistent, manufactured, or processed solid material that is discarded, disposed of, or abandoned, and can be categorised by size as macro- (>25 mm), meso- (5-25 mm) and micro-litter (<5 mm).'@en ;
+    skos:notation 'SDN:P36::MRNLTTR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P36/current/ORGMAT/2/> .
+<http://vocab.nerc.ac.uk/collection/P36/current/ORGMAT/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P36/current/ORGMAT/>;
+    dc:modified '2025-04-07T11:51:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Organic matter'@en ;
+    skos:definition 'Measurements relating to organic matter, which refers to the large source of carbon-based compounds found within terrestrial and aquatic environments and is composed of organic compounds derived from the remains and byproducts of organisms such as plants and animals. Aquatic organic matter can be divided into dissolved organic matter (measured as coloured dissolved organic matter or dissolved organic carbon) and particulate organic matter.'@en ;
+    skos:notation 'SDN:P36::ORGMAT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P36/current/RADNUC/2/> .
+<http://vocab.nerc.ac.uk/collection/P36/current/RADNUC/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P36/current/RADNUC/>;
+    dc:modified '2025-04-07T11:50:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Radionuclides'@en ;
+    skos:definition 'Activities of radionuclides and related parameters. Radionuclides occur naturally or are artificially produced (e.g. in nuclear reactors or radionuclide generators). A radionuclide is a nuclide that has excess numbers of either neutrons or protons, giving it excess nuclear energy, and making it unstable. Therefore, this group excludes stable nuclides such as carbon-13 and nitrogen-14.'@en ;
+    skos:notation 'SDN:P36::RADNUC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P36/current/CHPHYL/2/> .
+<http://vocab.nerc.ac.uk/collection/P36/current/CHPHYL/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P36/current/CHPHYL/>;
+    dc:modified '2025-04-07T11:49:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Chlorophyll'@en ;
+    skos:definition 'Measurements of chlorophyll (a green pigment present in all green plants and in cyanobacteria that is responsible for the absorption of light to provide energy for photosynthesis) and its degradation products (phaeopigments). Chlorophyll-a is an indicator of phytoplankton biomass and reflects the level of primary production in marine waters.'@en ;
+    skos:notation 'SDN:P36::CHPHYL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P36/current/ACIDIT/2/> .
+<http://vocab.nerc.ac.uk/collection/P36/current/ACIDIT/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P36/current/ACIDIT/>;
+    dc:modified '2025-04-07T11:47:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Acidity'@en ;
+    skos:definition 'The parameters that quantify the carbonate system in seawater; for example, pH, alkalinity, dissolved inorganic carbon, and carbon dioxide (e.g. pCO2).'@en ;
+    skos:notation 'SDN:P36::ACIDIT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P36/current/PHARMS/2/> .
+<http://vocab.nerc.ac.uk/collection/P36/current/PHARMS/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P36/current/PHARMS/>;
+    dc:modified '2025-04-07T11:46:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Pharmaceuticals'@en ;
+    skos:definition 'Concentrations of pharmaceuticals in the marine environment. These are primarily used in the diagnosis, treatment, or prevention of disease and for restoring, correcting, or modifying organic functions, including human and veterinary drugs (e.g. antibiotics, anti-inflammatory drugs, steroid hormones, anti-microbial drugs, and illegal drugs).'@en ;
+    skos:notation 'SDN:P36::PHARMS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P36/current/PLASTIC/2/> .
+<http://vocab.nerc.ac.uk/collection/P36/current/PLASTIC/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P36/current/PLASTIC/>;
+    dc:modified '2025-04-07T11:07:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Plastics'@en ;
+    skos:definition 'The quantity of litter and debris made up of polymerised organic compounds.'@en ;
+    skos:notation 'SDN:P36::PLASTIC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P36/current/PCBSXX/3/> .
+<http://vocab.nerc.ac.uk/collection/P36/current/PCBSXX/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P36/current/PCBSXX/>;
+    dc:modified '2025-01-24T17:31:45'^^xsd:dateTime ;
+    skos:altLabel 'PCBs'^^xsd:string ;
+    skos:prefLabel 'Polychlorinated biphenyls'@en ;
+    skos:definition 'Concentrations of synthetic organic compounds with one or more chlorine atoms attached to a double benzene ring. These are highly toxic persistent organic pollutants.'@en ;
+    skos:notation 'SDN:P36::PCBSXX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P36/current/ORGHAL/1/> .
+<http://vocab.nerc.ac.uk/collection/P36/current/ORGHAL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P36/current/ORGHAL/>;
+    dc:modified '2025-01-24T17:30:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Organohalogens'@en ;
+    skos:definition 'Any of a class of organic compounds that contain at least one halogen (fluorine [F], chlorine [Cl], bromine [Br], or iodine [I]) bonded to carbon. Organohalogen substances that are predominately used as pesticides are excluded from this group.'@en ;
+    skos:notation 'SDN:P36::ORGHAL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P36/current/HVYMTL/3/> .
+<http://vocab.nerc.ac.uk/collection/P36/current/HVYMTL/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P36/current/HVYMTL/>;
+    dc:modified '2025-01-24T17:21:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Metals and metalloids'@en ;
+    skos:definition 'Concentrations of metals and metalloids, some of which are of environmental concern. This category also includes selenium (Se), a reactive non-metal, but excludes silicon (Si, a metalloid) as this is mapped to the P36 SLCATE.'@en ;
+    skos:notation 'SDN:P36::HVYMTL'^^xsd:string .

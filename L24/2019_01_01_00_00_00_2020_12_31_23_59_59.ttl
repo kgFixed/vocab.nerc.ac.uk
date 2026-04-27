@@ -1,0 +1,82 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L24/2019_01_01_00_00_00_2020_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L24/2015_01_01_00_00_00_2018_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2020-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/ODV/2/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/ODV/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/ODV/>;
+    dc:modified '2020-11-30T09:46:57'^^xsd:dateTime ;
+    skos:altLabel 'ODV'^^xsd:string ;
+    skos:prefLabel 'Ocean Data View ASCII input'@en ;
+    skos:definition 'SeaDataNet extension of the Ocean Data View ASCII upload format with additional semantics embedded. Designed for profiles and point time series. For taxon-based data and micro-litter data please use the specially designed ODV variants.'@en ;
+    skos:notation 'SDN:L24::ODV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L24/current/BODV/1/> .
+<http://vocab.nerc.ac.uk/collection/L24/current/BODV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L24/current/BODV/>;
+    dc:modified '2020-11-30T09:46:45'^^xsd:dateTime ;
+    skos:altLabel 'Biological_ODV'^^xsd:string ;
+    skos:prefLabel 'Biological ODV'@en ;
+    skos:definition 'A variant of the ODV ASCII format to enable Data Centers to exchange biological (taxon-based) data using the SeaDataNet infrastructure. It contains all the elements required to allow conversion to the Darwin Core format and is therefore compatible with formats used by e.g. EMODNet Biology, (Eur)OBIS and GBIF.'@en ;
+    skos:notation 'SDN:L24::BODV'^^xsd:string .

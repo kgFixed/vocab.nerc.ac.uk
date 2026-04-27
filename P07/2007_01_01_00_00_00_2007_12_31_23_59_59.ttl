@@ -1,0 +1,532 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P07/2007_01_01_00_00_00_2007_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P07/2006_01_01_00_00_00_2006_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2007-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N22/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N22/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N22/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_nitric_acid_due_to_wet_deposition'@en ;
+    skos:definition '"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. "Wet deposition" means deposition by precipitation.'@en ;
+    skos:notation 'SDN:P07::CFV7N22'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N24/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N24/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N24/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_nox_expressed_as_nitrogen_due_to_emission'@en ;
+    skos:definition '"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. "Nox" means nitric oxide (NO) and nitrogen dioxide (NO2). "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth\'s surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names.'@en ;
+    skos:notation 'SDN:P07::CFV7N24'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N3/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N3/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_sulfur_dioxide_due_to_emission'@en ;
+    skos:definition '"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth\'s surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names.'@en ;
+    skos:notation 'SDN:P07::CFV7N3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N31/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N31/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N31/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_carbon_monoxide_due_to_emission'@en ;
+    skos:definition '"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth\'s surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names.'@en ;
+    skos:notation 'SDN:P07::CFV7N31'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N33/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N33/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N33/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_dimethyl_sulfide_due_to_emission'@en ;
+    skos:definition '"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth\'s surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names.'@en ;
+    skos:notation 'SDN:P07::CFV7N33'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N34/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N34/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N34/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_dimethyl_sulfide_due_to_wet_deposition'@en ;
+    skos:definition '"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. "Wet deposition" means deposition by precipitation.'@en ;
+    skos:notation 'SDN:P07::CFV7N34'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N4/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N4/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_sulfur_dioxide_due_to_wet_deposition'@en ;
+    skos:definition '"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. "Wet deposition" means deposition by precipitation.'@en ;
+    skos:notation 'SDN:P07::CFV7N4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N45/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N45/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N45/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'beaufort_wind_force'@en ;
+    skos:definition '"Beaufort wind force" is an index assigned on the Beaufort wind force scale and relates a qualitative description of the degree of disturbance or destruction caused by wind to the speed of the wind. The Beaufort wind scale varies between 0 (qualitatively described as calm, smoke rises vertically, sea appears glassy) (wind speeds in the range 0 - 0.2 m s-1) and 12 (hurricane, wave heights in excess of 14 m) (wind speeds in excess of 32.7 m s-1).'@en ;
+    skos:notation 'SDN:P07::CFV7N45'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N46/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N46/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N46/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_benzene_in_air'@en ;
+    skos:definition 'Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFV7N46'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N47/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N47/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N47/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_carbon_dioxide_in_air'@en ;
+    skos:definition 'Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFV7N47'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N48/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N48/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N48/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_ethane_in_air'@en ;
+    skos:definition 'Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFV7N48'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N49/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N49/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N49/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_ethene_in_air'@en ;
+    skos:definition 'Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFV7N49'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N50/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N50/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N50/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_ethyne_in_air'@en ;
+    skos:definition 'Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFV7N50'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N51/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N51/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N51/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_formaldehyde_in_air'@en ;
+    skos:definition 'Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFV7N51'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N52/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N52/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N52/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_gaseous_divalent_mercury_in_air'@en ;
+    skos:definition 'Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y. "Divalent mercury" means all compounds in which the mercury has two binding sites to other ion(s) in a salt or to other atom(s) in a molecule.'@en ;
+    skos:notation 'SDN:P07::CFV7N52'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N53/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N53/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N53/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_gaseous_elemental_mercury_in_air'@en ;
+    skos:definition 'Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFV7N53'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N55/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N55/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N55/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_methane_in_air'@en ;
+    skos:definition 'Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFV7N55'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N56/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N56/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N56/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_propane_in_air'@en ;
+    skos:definition 'Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFV7N56'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N57/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N57/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N57/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_propene_in_air'@en ;
+    skos:definition 'Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFV7N57'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N59/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N59/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N59/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_xylene_in_air'@en ;
+    skos:definition 'Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFV7N59'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N61/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N61/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N61/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_alpha_hexachlorocyclohexane_due_to_emission'@en ;
+    skos:definition '"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth\'s surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names.'@en ;
+    skos:notation 'SDN:P07::CFV7N61'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N62/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N62/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N62/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_alpha_hexachlorocyclohexane_due_to_re_emission'@en ;
+    skos:definition '"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. "Re-emission" refers to emission that is not from a primary source; it refers to emission of a species that has previously been deposited and accumulated in soils or water. "Re-emission" is a process entirely distinct from "emission" which is used in some standard names.'@en ;
+    skos:notation 'SDN:P07::CFV7N62'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N63/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N63/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N63/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_alpha_hexachlorocyclohexane_due_to_wet_deposition'@en ;
+    skos:definition '"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. "Wet deposition" means deposition by precipitation.'@en ;
+    skos:notation 'SDN:P07::CFV7N63'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N65/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N65/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N65/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_ammonia_due_to_emission'@en ;
+    skos:definition '"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. earth\'s surface). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names.'@en ;
+    skos:notation 'SDN:P07::CFV7N65'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N66/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N66/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N66/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_ammonia_due_to_wet_deposition'@en ;
+    skos:definition '"tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. "Wet deposition" means deposition by precipitation.'@en ;
+    skos:notation 'SDN:P07::CFV7N66'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N72/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV7N72/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV7N72/>;
+    dc:modified '2007-11-21T17:19:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_optical_thickness_due_to_black_carbon_ambient_aerosol'@en ;
+    skos:definition 'The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path. The atmosphere optical thickness applies to radiation passing through the entire atmosphere. "Aerosol" means the suspended liquid or solid particles in air (except cloud droplets). "Ambient aerosol" is aerosol that has taken up ambient water through hygroscopic growth. The extent of hygroscopic growth depends on the relative humidity and the composition of the aerosol. Black carbon aerosol is composed of elemental carbon. It is strongly light absorbing.'@en ;
+    skos:notation 'SDN:P07::CFV7N72'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0814/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0814/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0814/>;
+    dc:modified '2007-07-17T11:30:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_hexachlorobiphenyl_in_air'@en ;
+    skos:definition 'Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFSN0814'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0830/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0830/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0830/>;
+    dc:modified '2007-07-17T11:30:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface_net_downward_radiative_flux'@en ;
+    skos:definition 'The surface called "surface" means the lower boundary of the atmosphere. "Downward" indicates a vector component which is positive when directed downward (negative upward). Net downward radiation is the difference between radiation from above (downwelling) and radiation from below (upwelling). Radiative flux is the sum of shortwave and longwave radiative fluxes. In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.'@en ;
+    skos:notation 'SDN:P07::CFSN0830'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0071/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0071/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0071/>;
+    dc:modified '2007-05-15T11:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'volume_fraction_of_water_in_soil'@en ;
+    skos:definition '\'Water\' means water in all phases. \'Volume fraction\' is used in the construction volume_fraction_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFSN0071'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0072/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0072/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0072/>;
+    dc:modified '2007-05-15T11:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'volume_fraction_of_water_in_soil_at_field_capacity'@en ;
+    skos:definition '\'Water\' means water in all phases. \'Volume fraction\' is used in the construction volume_fraction_of_X_in_Y, where X is a material constituent of Y. The field capacity of soil is the maximum content of water it can retain against gravitational drainage.'@en ;
+    skos:notation 'SDN:P07::CFSN0072'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0073/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0073/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0073/>;
+    dc:modified '2007-05-15T11:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'volume_fraction_of_water_in_soil_at_wilting_point'@en ;
+    skos:definition '\'Water\' means water in all phases. \'Volume fraction\' is used in the construction volume_fraction_of_X_in_Y, where X is a material constituent of Y. The wilting point of soil is the water content below which plants cannot extract sufficient water to balance their loss through transpiration.'@en ;
+    skos:notation 'SDN:P07::CFSN0073'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0783/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0783/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0783/>;
+    dc:modified '2007-05-15T11:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'volume_fraction_of_water_in_soil_at_critical_point'@en ;
+    skos:definition '"Water" means water in all phases. "Volume fraction" is used in the construction volume_fraction_of_X_in_Y, where X is a material constituent of Y. When soil moisture equals or exceeds the critical point evapotranspiration takes place at the potential rate and is controlled by the ambient meteorological conditions (temperature, wind, relative humidity). Evapotranspiration is the sum of evaporation and plant transpiration. Potential evapotranspiration is the rate at which evapotranspiration would occur under ambient conditions from a uniformly vegetated area when the water supply is not limiting.'@en ;
+    skos:notation 'SDN:P07::CFSN0783'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0785/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0785/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0785/>;
+    dc:modified '2007-05-15T11:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_mass_of_air_per_unit_area'@en ;
+    skos:definition '"Mass_of_air" means the mass due solely to the gaseous constituents of the atmosphere.  The standard name for the mass including precipitation and aerosol particles is atmosphere_mass_per_unit_area.'@en ;
+    skos:notation 'SDN:P07::CFSN0785'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0787/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0787/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0787/>;
+    dc:modified '2007-05-15T11:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_condensed_water_in_soil'@en ;
+    skos:definition 'Mass concentration means mass per unit volume and is used in the construction mass_concentration_of_X_in_Y, where X is a material constituent of Y.  Condensed water means liquid and ice.'@en ;
+    skos:notation 'SDN:P07::CFSN0787'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0802/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0802/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0802/>;
+    dc:modified '2007-05-15T11:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_concentration_of_ammonium_in_sea_water'@en ;
+    skos:definition 'Mole concentration means moles (amount of substance) per unit volume and is used in the construction mole_concentration_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFSN0802'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0806/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0806/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0806/>;
+    dc:modified '2007-05-15T11:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_concentration_of_nitrate_in_sea_water'@en ;
+    skos:definition 'Mole concentration means moles (amount of substance) per unit volume and is used in the construction mole_concentration_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFSN0806'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0810/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0810/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0810/>;
+    dc:modified '2007-05-15T11:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_concentration_of_silicate_in_sea_water'@en ;
+    skos:definition 'Mole concentration means moles (amount of substance) per unit volume and is used in the construction mole_concentration_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFSN0810'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0811/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0811/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0811/>;
+    dc:modified '2007-05-15T11:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_alpha_hexachlorocyclohexane_in_air'@en ;
+    skos:definition 'Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFSN0811'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0812/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0812/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0812/>;
+    dc:modified '2007-05-15T11:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_carbon_monoxide_in_air'@en ;
+    skos:definition 'Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFSN0812'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0813/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0813/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0813/>;
+    dc:modified '2007-05-15T11:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_dimethyl_sulfide_in_air'@en ;
+    skos:definition 'Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFSN0813'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0815/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0815/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0815/>;
+    dc:modified '2007-05-15T11:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_hydroxyl_radical_in_air'@en ;
+    skos:definition 'Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFSN0815'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0816/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0816/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0816/>;
+    dc:modified '2007-05-15T11:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_nitric_acid_in_air'@en ;
+    skos:definition 'Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFSN0816'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0817/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0817/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0817/>;
+    dc:modified '2007-05-15T11:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_nitrogen_dioxide_in_air'@en ;
+    skos:definition 'Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFSN0817'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0818/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0818/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0818/>;
+    dc:modified '2007-05-15T11:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_nitrogen_monoxide_in_air'@en ;
+    skos:definition 'Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFSN0818'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0820/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0820/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0820/>;
+    dc:modified '2007-05-15T11:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_peroxyacetyl_nitrate_in_air'@en ;
+    skos:definition 'Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFSN0820'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0821/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0821/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0821/>;
+    dc:modified '2007-05-15T11:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_fraction_of_sulfur_dioxide_in_air'@en ;
+    skos:definition 'Mole fraction is used in the construction mole_fraction_of_X_in_Y, where X is a material constituent of Y.'@en ;
+    skos:notation 'SDN:P07::CFSN0821'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0824/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0824/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0824/>;
+    dc:modified '2007-05-15T11:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_mass_fraction_of_cloud_condensed_water_in_air'@en ;
+    skos:definition '"Tendency_of_X" means derivative of X with respect to time. Mass fraction is used in the construction mass_fraction_of_X_in_Y, where X is a material constituent of Y. It means the ratio of the mass of Y to the mass of X (including Y).  "Condensed_water" means liquid and ice.'@en ;
+    skos:notation 'SDN:P07::CFSN0824'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0784/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0784/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0784/>;
+    dc:modified '2007-03-13T11:55:38'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'toa_net_downward_longwave_flux'@en ;
+    skos:definition '"longwave" means longwave radiation. "toa" means top of atmosphere. "Downward" indicates a vector component which is positive when directed downward (negative upward). Net downward radiation is the difference between radiation from above (downwelling) and radiation from below (upwelling). In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics.'@en ;
+    skos:notation 'SDN:P07::CFSN0784'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0773/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0773/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0773/>;
+    dc:modified '2007-02-20T10:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'baseflow_amount'@en ;
+    skos:definition 'Baseflow is subsurface runoff which takes place below the level of the water table.  Runoff is the liquid water which drains from land.  "Amount" means mass per unit area.'@en ;
+    skos:notation 'SDN:P07::CFSN0773'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0774/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0774/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0774/>;
+    dc:modified '2007-02-20T10:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'correction_for_model_negative_specific_humidity'@en ;
+    skos:definition 'A numerical correction which is added to modelled negative specific humidities in order to obtain a value of zero.'@en ;
+    skos:notation 'SDN:P07::CFSN0774'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0775/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0775/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0775/>;
+    dc:modified '2007-02-20T10:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'normalized_difference_vegetation_index'@en ;
+    skos:definition '"Normalized_difference_vegetation_index", usually abbreviated to NDVI, is an index calculated from reflectances measured in the visible and near infrared channels. It is calculated as NDVI = (NIR - R) / (NIR + R) where NIR is the reflectance in the near-infrared band and R is the reflectance in the red visible band. Reflectance is the ratio of the reflected over the incoming radiation in each spectral band. The calculated value of NDVI depends on the precise definitions of the spectral bands and these definitions may vary between different models and remote sensing instruments.'@en ;
+    skos:notation 'SDN:P07::CFSN0775'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0776/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFSN0776/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0776/>;
+    dc:modified '2007-02-20T10:55:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'runoff_amount_excluding_baseflow'@en ;
+    skos:definition 'Runoff is the liquid water which drains from land. "Runoff_excluding_baseflow" is the sum of surface runoff and subsurface runoff excluding baseflow. Baseflow is subsurface runoff which takes place below the level of the water table. "Amount" means mass per unit area.'@en ;
+    skos:notation 'SDN:P07::CFSN0776'^^xsd:string .

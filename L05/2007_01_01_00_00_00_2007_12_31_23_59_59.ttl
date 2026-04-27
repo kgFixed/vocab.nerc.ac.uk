@@ -1,0 +1,237 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L05/2007_01_01_00_00_00_2007_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/103/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/103/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/103/>;
+    dc:modified '2007-11-20T09:34:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'radiosondes'@en ;
+    skos:definition 'A balloon-borne package equipped with a radio transmitter and meteorological sensors typically measuring temperature, pressure, and humidity.'@en ;
+    skos:notation 'SDN:L05::103'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/110/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/110/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/110/>;
+    dc:modified '2007-11-20T09:34:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'wave recorders'@en ;
+    skos:definition 'Instrument that measures water column surface wave parameters including height, period, direction and energy spectra.'@en ;
+    skos:notation 'SDN:L05::110'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/116/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/116/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/116/>;
+    dc:modified '2007-11-20T09:34:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'lowered current profilers'@en ;
+    skos:definition 'An acoustic doppler current meter lowered and raised vertically from a surface platform, typically a ship.'@en ;
+    skos:notation 'SDN:L05::116'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/123/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/123/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/123/>;
+    dc:modified '2007-11-20T09:34:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'optical backscatter sensors'@en ;
+    skos:definition 'Instrument that measures the amount of electromagnetic radiation emitted into the water column returned to the instrument.'@en ;
+    skos:notation 'SDN:L05::123'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/124/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/124/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/124/>;
+    dc:modified '2007-11-20T09:34:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'transmissometers'@en ;
+    skos:definition 'Systems that measure the attenuation of electromagnetic radiation by the water column. Includes human observer plus Secchi Disk.'@en ;
+    skos:notation 'SDN:L05::124'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/132/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/132/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/132/>;
+    dc:modified '2007-11-20T09:34:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'bathythermographs'@en ;
+    skos:definition 'Instruments that measure vertical profiles of sea temperature by either lowering a pressure plus temperature senor package (MBT) or dropping a free falling disposable sensor (XBT).'@en ;
+    skos:notation 'SDN:L05::132'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/133/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/133/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/133/>;
+    dc:modified '2007-11-20T09:34:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'thermosalinographs'@en ;
+    skos:definition 'Temperature and conductivity sensors mounted on a sea-surface platform continuously measuring a surface water supply.'@en ;
+    skos:notation 'SDN:L05::133'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/135/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/135/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/135/>;
+    dc:modified '2007-11-20T09:34:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'thermistor chains'@en ;
+    skos:definition 'A group of rigidly-mounted temperature sensors sampled by a common data logger held at various depths in the water column.'@en ;
+    skos:notation 'SDN:L05::135'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/155/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/155/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/155/>;
+    dc:modified '2007-11-20T09:34:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'seismic refraction systems'@en ;
+    skos:definition 'A network of seismometers or geophones plus an energy source that determine geologic structure by detecting waves refracted by subsurface layers.'@en ;
+    skos:notation 'SDN:L05::155'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/183/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/183/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/183/>;
+    dc:modified '2007-11-20T09:34:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'acoustic backscatter sensors'@en ;
+    skos:definition 'Instrument that measures the amount of sound energy transmitted into the water column returned to the instrument.'@en ;
+    skos:notation 'SDN:L05::183'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/354/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/354/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/354/>;
+    dc:modified '2007-11-20T09:34:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'expendable CTDs'@en ;
+    skos:definition 'Instruments that measure vertical profiles of sea temperature and salinity with a free falling disposable temperature and conductivity sensor package.'@en ;
+    skos:notation 'SDN:L05::354'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/301/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/301/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/301/>;
+    dc:modified '2007-11-20T09:03:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'satellite positioning systems'@en ;
+    skos:definition 'A network of statellites that generate signals that allow a receiver to determine its position such as GPS.'@en ;
+    skos:notation 'SDN:L05::301'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/305/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/305/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/305/>;
+    dc:modified '2007-11-20T09:03:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'scatterometers'@en ;
+    skos:definition 'Sensors that measure the reflection or scattering effect produced while scanning the surface of the earth. Primarily used to measure near surface winds over the oceans.'@en ;
+    skos:notation 'SDN:L05::305'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/23/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/23/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/23/>;
+    dc:modified '2007-11-20T08:50:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'pelagic trawl nets'@en ;
+    skos:definition 'A net towed through the water column designed to sample free-swimming nekton or fish.'@en ;
+    skos:notation 'SDN:L05::23'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/32/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/32/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/32/>;
+    dc:modified '2007-11-20T08:50:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'particulates samplers'@en ;
+    skos:definition 'A system that collects samples of water column particulates such as in-situ high volume filtration systems liks SAPs.'@en ;
+    skos:notation 'SDN:L05::32'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/50/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/50/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/50/>;
+    dc:modified '2007-11-20T08:50:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sediment grabs'@en ;
+    skos:definition 'A device that collects a sample of surface sediment including manually deployed equipment like a shovel or bucket.'@en ;
+    skos:notation 'SDN:L05::50'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/52/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/52/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/52/>;
+    dc:modified '2007-11-20T08:50:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sediment porewater samplers'@en ;
+    skos:definition 'A device that collects samples of pore water from various horizons below the seabed.'@en ;
+    skos:notation 'SDN:L05::52'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/54/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/54/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/54/>;
+    dc:modified '2007-11-20T08:50:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'rock dredges'@en ;
+    skos:definition 'A device dragged across the seabed designed to collect loose rock samples.'@en ;
+    skos:notation 'SDN:L05::54'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/55/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/55/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/55/>;
+    dc:modified '2007-11-20T08:50:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sediment settling tubes'@en ;
+    skos:definition 'A specialised water bottle that both collects water samples and provides a settling velocity experiment apparatus.'@en ;
+    skos:notation 'SDN:L05::55'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/999/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/999/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/999/>;
+    dc:modified '2007-11-20T08:50:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'unknown'@en ;
+    skos:definition 'The correct value is not known to and not computable by the creator of this information. However a correct value probably exists.'@en ;
+    skos:notation 'SDN:L05::999'^^xsd:string .

@@ -1,0 +1,127 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L05/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L05/2019_01_01_00_00_00_2019_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2020-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/311/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/311/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/311/>;
+    dc:modified '2020-09-18T10:36:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'cameras'@en ;
+    skos:definition 'All types of photographic equipment used to record visual images. Includes stills, video, film and digital systems.'@en ;
+    skos:notation 'SDN:L05::311'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB41/2/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB41/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB41/>;
+    dc:modified '2020-09-18T10:32:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'laboratory cameras'@en ;
+    skos:definition 'Code deprecated on 18Sep2020: created in error. Description was: All types of photographic equipment that are hand-held or part of laboratory apparatus including stills, video, film and digital systems.'@en ;
+    skos:notation 'SDN:L05::LAB41'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/180/5/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/180/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/180/>;
+    dc:modified '2020-09-18T10:24:38'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'underwater cameras'@en ;
+    skos:definition 'Code deprecated on 18Sep2020: created in error. Description was: All types of photographic equipment that may be deployed underwater including stills, video, film and digital systems.'@en ;
+    skos:notation 'SDN:L05::180'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/352/3/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/352/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/352/>;
+    dc:modified '2020-07-30T12:20:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'plankton categorisers and counters'@en ;
+    skos:definition 'Instruments that categorise and/or count plankton, and/or enable 2D/3D spatial reconstruction of plankton in the water column.'@en ;
+    skos:notation 'SDN:L05::352'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/LAB50/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/LAB50/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/LAB50/>;
+    dc:modified '2020-06-10T09:00:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'thermal cyclers'@en ;
+    skos:definition 'Instruments that repeatedly heat and cool samples in a series of steps. They are typically used to amplify segments of DNA via the polymerase chain reaction (PCR). They can also be used to facilitate other temperature-sensitive reactions, including restriction enzyme digestion or rapid diagnostics.'@en ;
+    skos:notation 'SDN:L05::LAB50'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/393/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/393/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/393/>;
+    dc:modified '2020-06-04T14:46:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'binoculars and terrestrial scopes'@en ;
+    skos:definition 'Optical tools used to magnify and observe terrestrial objects that are distant from the observer. This includes tools such as binoculars, monoculars, terrestrial telescopes and spotting scopes. It excludes astronomical telescopes, camera devices, and tools which enlarge objects close to the observer such as hand lenses.'@en ;
+    skos:notation 'SDN:L05::393'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L05/current/392/1/> .
+<http://vocab.nerc.ac.uk/collection/L05/current/392/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L05/current/392/>;
+    dc:modified '2020-04-07T10:14:48'^^xsd:dateTime ;
+    skos:altLabel 'substrates'^^xsd:string ;
+    skos:prefLabel 'colonisation substrata'@en ;
+    skos:definition 'Natural or artificial materials deployed in a marine or artificial environment for a given period to act as standardised, passive settlement sampling devices (e.g. settlement plates). They are used to determine the extent of colonisation and/or the diversity of settled organisms.'@en ;
+    skos:notation 'SDN:L05::392'^^xsd:string .

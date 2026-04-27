@@ -1,0 +1,201 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C77/1992_01_01_00_00_00_1992_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/D01/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/D01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/D01/>;
+    dc:modified '1992-07-01T12:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Current meters'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::D01'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/D03/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/D03/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/D03/>;
+    dc:modified '1992-07-01T12:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Currents measured from ship drift'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::D03'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/D04/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/D04/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/D04/>;
+    dc:modified '1992-07-01T12:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'GEK'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::D04'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/D05/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/D05/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/D05/>;
+    dc:modified '1992-07-01T12:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Surface drifters/drifting buoys'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::D05'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/D06/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/D06/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/D06/>;
+    dc:modified '1992-07-01T12:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Neutrally buoyant floats'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::D06'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/D09/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/D09/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/D09/>;
+    dc:modified '1992-07-01T12:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sea level (inc. bot. press., inverted echosounder)'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::D09'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/D71/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/D71/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/D71/>;
+    dc:modified '1992-07-01T12:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Current profiler (eg ADCP)'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::D71'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/D72/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/D72/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/D72/>;
+    dc:modified '1992-07-01T12:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Instrumented wave measurements'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::D72'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/D90/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/D90/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/D90/>;
+    dc:modified '1992-07-01T12:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Other physical oceanographic measurements'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::D90'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H09/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H09/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H09/>;
+    dc:modified '1992-07-01T12:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Water bottle stations'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::H09'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H10/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H10/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H10/>;
+    dc:modified '1992-07-01T12:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CTD stations'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::H10'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H13/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H13/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H13/>;
+    dc:modified '1992-07-01T12:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bathythermograph'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::H13'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H16/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H16/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H16/>;
+    dc:modified '1992-07-01T12:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Transparency (eg transmissometer)'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::H16'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H17/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H17/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H17/>;
+    dc:modified '1992-07-01T12:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Optics (eg underwater light levels)'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::H17'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H71/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H71/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H71/>;
+    dc:modified '1992-07-01T12:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Surface measurements underway (T,S)'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::H71'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C77/current/H73/1/> .
+<http://vocab.nerc.ac.uk/collection/C77/current/H73/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C77/current/H73/>;
+    dc:modified '1992-07-01T12:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Geochemical tracers (eg freons)'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C77::H73'^^xsd:string .

@@ -1,0 +1,226 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L35/2017_01_01_00_00_00_2017_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L35/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2017-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0026/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0026/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0026/>;
+    dc:modified '2017-12-08T11:35:26'^^xsd:dateTime ;
+    skos:altLabel 'WL'^^xsd:string ;
+    skos:prefLabel 'WET Labs'@en ;
+    skos:definition 'A brand of Sea-Bird Scientific, the business manufactures oceanographic and environmental fluorometers, transmissometers, scattering sensors and spectrophotometers. The company was initially founded in 1992. Danaher acquired three ocean science instrumentation companies, Sea-Bird Electronics (2008), WET Labs (2010), and Satlantic (2011), which were then combined to form Sea-Bird Scientific.'@en ;
+    skos:notation 'SDN:L35::MAN0026'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0025/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0025/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0025/>;
+    dc:modified '2017-08-04T09:35:48'^^xsd:dateTime ;
+    skos:altLabel 'VAISL'^^xsd:string ;
+    skos:prefLabel 'Vaisala'@en ;
+    skos:definition 'A Finland-based company that specialises in environmental measurement, especially weather measurement. The company was established in 1936 by Professor Vilho Vaisala and initially manufactured radiosondes.'@en ;
+    skos:notation 'SDN:L35::MAN0025'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0024/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0024/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0024/>;
+    dc:modified '2017-07-03T16:31:56'^^xsd:dateTime ;
+    skos:altLabel 'UW'^^xsd:string ;
+    skos:prefLabel 'University of Washington'@en ;
+    skos:definition 'A public research university whose largest and original campus is in Seattle, Washington, United States. Founded in 1861 as the Territorial University of Washington, it is one of the oldest universities on the West Coast. The university has three campuses: the oldest and largest in the University District of Seattle and two others in Tacoma and Bothell.'@en ;
+    skos:notation 'SDN:L35::MAN0024'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0023/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0023/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0023/>;
+    dc:modified '2017-07-03T16:30:48'^^xsd:dateTime ;
+    skos:altLabel 'IROB'^^xsd:string ;
+    skos:prefLabel 'iRobot'@en ;
+    skos:definition 'A US-based company that designs and builds robots in the areas of mapping and navigation, human-robot interaction, and physical solutions. The company was founded in 1990 by Massachusetts Institute of Technology roboticists. The company inspired the first Micro Rovers used by NASA, deployed the first ground robots used by U.S. Forces in conflict, brought the first self-navigating FDA-approved remote presence robots to hospitals and introduced the first practical home robot with Roomba.'@en ;
+    skos:notation 'SDN:L35::MAN0023'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0018/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0018/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0018/>;
+    dc:modified '2017-06-14T10:13:21'^^xsd:dateTime ;
+    skos:altLabel 'ASV'^^xsd:string ;
+    skos:prefLabel 'ASV Global'@en ;
+    skos:definition 'A global company, headquartered in Porchester (UK) that design and manufacture unmanned and autonomous marine systems for military, security, offshore energy and scientific applications. It has facilities in the UK, USA and Brazil.'@en ;
+    skos:notation 'SDN:L35::MAN0018'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0019/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0019/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0019/>;
+    dc:modified '2017-06-14T10:13:21'^^xsd:dateTime ;
+    skos:altLabel 'AUNAUT'^^xsd:string ;
+    skos:prefLabel 'AutoNaut'@en ;
+    skos:definition 'A UK-based company that is part of the Seiche Group. It manufactures the AutoNaut range of wave propelled unmanned surface vessels (USV). It was formed in 2016 from MOST (Autonomous Vessels) Ltd.'@en ;
+    skos:notation 'SDN:L35::MAN0019'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0009/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0009/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0009/>;
+    dc:modified '2017-06-14T10:13:21'^^xsd:dateTime ;
+    skos:altLabel 'ECOSUB'^^xsd:string ;
+    skos:prefLabel 'ecoSUB Robotics'@en ;
+    skos:definition 'A UK-based company that designs, manufactures and sells small low cost Autonomous Underwater Vehicles (AUVs) for environmental monitoring in research, defense, oil and gas industries. The company was spun out of Planet Ocean Limited, a marine science technology specialist, following extensive collaboration with the Marine Autonomous Robotics Systems (MARS) group at the National Oceanography Centre (NOC), UK. It was incorporated on the 27 April 2016. It is headquartered in Camberley, UK.'@en ;
+    skos:notation 'SDN:L35::MAN0009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0012/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0012/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0012/>;
+    dc:modified '2017-06-14T10:13:21'^^xsd:dateTime ;
+    skos:altLabel 'IXBL'^^xsd:string ;
+    skos:prefLabel 'iXblue'@en ;
+    skos:definition 'A French-based, global company that provides navigation, positioning, imaging and photonics for sea, land, air and space applications. It is recognised for its work on the development of Fibre-Optic Gyroscopes (FOG). It was founded in 1998 and has operations in over 30 countries.'@en ;
+    skos:notation 'SDN:L35::MAN0012'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0021/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0021/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0021/>;
+    dc:modified '2017-06-14T10:13:21'^^xsd:dateTime ;
+    skos:altLabel 'LQROBO'^^xsd:string ;
+    skos:prefLabel 'Liquid Robotics'@en ;
+    skos:definition 'A US-based subsidiary of The Boeing Company, that designs and manufacturers the Wave Glider range of autonomous, unmanned surface vehicles (USVs).'@en ;
+    skos:notation 'SDN:L35::MAN0021'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0015/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0015/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0015/>;
+    dc:modified '2017-06-14T10:13:21'^^xsd:dateTime ;
+    skos:altLabel 'MARITIME'^^xsd:string ;
+    skos:prefLabel 'Kongsberg Maritime'@en ;
+    skos:definition 'A Norwegian technology subsidiary of the Kongsberg Group. It delivers systems for positioning, surveying, navigation and automation to merchant vessels and offshore installations. It was formed in 1997, consisting of the following companies: Kongsberg Simrad, Kongsberg Norcontrol, Kongsberg Norcontrol Simulation and Simrad. It has around 4000 staff and operates in 20 countries.'@en ;
+    skos:notation 'SDN:L35::MAN0015'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0010/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0010/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0010/>;
+    dc:modified '2017-06-14T10:13:21'^^xsd:dateTime ;
+    skos:altLabel 'RDI'^^xsd:string ;
+    skos:prefLabel 'Teledyne RD Instruments'@en ;
+    skos:definition 'A Teledyne Marine brand, that specialises in Acoustic Doppler Current Profilers (ADCPs). It manufactures solutions for current profiling, wave measurement and precision underwater navigation applications. It was founded in 1982.'@en ;
+    skos:notation 'SDN:L35::MAN0010'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0016/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0016/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0016/>;
+    dc:modified '2017-06-14T10:13:21'^^xsd:dateTime ;
+    skos:altLabel 'RESON'^^xsd:string ;
+    skos:prefLabel 'Teledyne Reson'@en ;
+    skos:definition 'A Teledyne Marine brand established in 2013, that specialises in the design, development, manufacture and commissioning of advanced multibeam sonar-systems, sensors, transducers, hydrophones and survey software. They operate in the hydrographic, offshore, dredging, defense and  security and marine-research business areas. The founding company was established in 1976 by three brothers (Jens, Claus and Per resen Steenstrup) as RESON A/S. It is notable for the development of the SeaBat multibeam sonar system and acquired ATLAS HYDROGRAPHIC in 2014.'@en ;
+    skos:notation 'SDN:L35::MAN0016'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0022/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0022/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0022/>;
+    dc:modified '2017-06-14T10:13:21'^^xsd:dateTime ;
+    skos:altLabel 'RSI'^^xsd:string ;
+    skos:prefLabel 'Rockland Scientific'@en ;
+    skos:definition 'A Canadian company that specialises in systems that measure marine turbulence. It designs and manufactures high accuracy instrumentation for oceanographic research that are deployable in coastal and deep sea applications.  It was founded in 2005, by co-founders Rolf Lueck and Fabian Wolk.'@en ;
+    skos:notation 'SDN:L35::MAN0022'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0013/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0013/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0013/>;
+    dc:modified '2017-06-14T10:13:21'^^xsd:dateTime ;
+    skos:altLabel 'SBE'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific'@en ;
+    skos:definition 'A large, global company that develops and manufacturers products for the measurement of salinity, temperature, pressure, dissolved oxygen, fluorescence, nutrients and related oceanographic parameters in marine waters. It is formed from three ocean science companies, Sea-Bird Electronics, WET Labs and Satlantic that were combined in 2011.'@en ;
+    skos:notation 'SDN:L35::MAN0013'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0011/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0011/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0011/>;
+    dc:modified '2017-06-14T10:13:21'^^xsd:dateTime ;
+    skos:altLabel 'SODYNE'^^xsd:string ;
+    skos:prefLabel 'Sonardyne'@en ;
+    skos:definition 'A UK-based, global company that designs and manufactures underwater acoustic positioning, inertial navigation, wireless communications and sonar technology systems. It was founded in 1971 by John Partridge. It is headquarted in Yately, UK.'@en ;
+    skos:notation 'SDN:L35::MAN0011'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0017/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0017/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0017/>;
+    dc:modified '2017-06-14T10:13:21'^^xsd:dateTime ;
+    skos:altLabel 'TRITC'^^xsd:string ;
+    skos:prefLabel 'Tritech'@en ;
+    skos:definition 'A Moog Inc. company that provides sensors and tools for Remotely Operated Underwater Vehicles (ROV) and Autonomous Underwater Vehicles (AUVs). Established in 1991, Tritech was founded by Richard Marsh and Dick Wright, beginning operations as a two-man outfit from a converted house in Kingswells, Aberdeenshire.'@en ;
+    skos:notation 'SDN:L35::MAN0017'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0014/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0014/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0014/>;
+    dc:modified '2017-06-14T10:13:21'^^xsd:dateTime ;
+    skos:altLabel 'VLPRT'^^xsd:string ;
+    skos:prefLabel 'Valeport'@en ;
+    skos:definition 'A UK-based company that designs and manufactures instrumentation for the oceanographic, hydrometric and hydrographic markets, with a worldwide customer base that includes the environmental, military, oil and gas, renewable, construction, dredging and civil engineering sectors. It was founded near Dartmouth, in Devon in 1969 by Jim Stevens and originally sold the Braystoke Flow Meter, an impeller-type device which was used in the feasibility study for the Thames Barrier. The popularity of this led to an expansion of the company into other types of flow meters and accessories. Valeport was then purchased in 1982 by Oceonics Group PLC prior to their flotation, which led to an expansion of Valeport\'s expertise to include CTD measurement. Oceonics sold Valeport in 1985.'@en ;
+    skos:notation 'SDN:L35::MAN0014'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L35/current/MAN0020/1/> .
+<http://vocab.nerc.ac.uk/collection/L35/current/MAN0020/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L35/current/MAN0020/>;
+    dc:modified '2017-06-14T10:13:21'^^xsd:dateTime ;
+    skos:altLabel 'WEBB RES'^^xsd:string ;
+    skos:prefLabel 'Teledyne Webb Research'@en ;
+    skos:definition 'A Teledyne Marine brand that specialises in neutrally buoyant, autonomous drifters and profilers, autonomous underwater gliding vehicles and moored underwater sound sources. It is notable for the APEX (Autonomous Profiling Explorer) profiling float and Slocum Glider.'@en ;
+    skos:notation 'SDN:L35::MAN0020'^^xsd:string .

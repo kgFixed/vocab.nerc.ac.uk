@@ -1,0 +1,100 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C60/2009_01_01_00_00_00_2021_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C60/2008_01_01_00_00_00_2008_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2021-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C60/current/HCO/1/> .
+<http://vocab.nerc.ac.uk/collection/C60/current/HCO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C60/current/HCO/>;
+    dc:modified '2021-07-06T16:21:53'^^xsd:dateTime ;
+    skos:altLabel 'hasChemicalObject'^^xsd:string ;
+    skos:prefLabel 'puv#chemicalObject'@en ;
+    skos:definition 'Parameter Usage Vocabulary ontology property that is used to link a variable identifier, label or description to its chemical object of interest when applicable.'@en ;
+    skos:notation 'SDN:C60::HCO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C60/current/HMX/1/> .
+<http://vocab.nerc.ac.uk/collection/C60/current/HMX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C60/current/HMX/>;
+    dc:modified '2021-06-30T11:50:09'^^xsd:dateTime ;
+    skos:altLabel 'hasMatrix'^^xsd:string ;
+    skos:prefLabel 'puv#matrix'@en ;
+    skos:definition 'Parameter Usage Vocabulary ontology property used to link a variable identifier, label or description to a matrix when applicable.'@en ;
+    skos:notation 'SDN:C60::HMX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C60/current/HST/1/> .
+<http://vocab.nerc.ac.uk/collection/C60/current/HST/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C60/current/HST/>;
+    dc:modified '2021-06-30T11:46:44'^^xsd:dateTime ;
+    skos:altLabel 'hasStatisticModifier'^^xsd:string ;
+    skos:prefLabel 'puv#statistic'@en ;
+    skos:definition 'Parameter Usage Vocabulary ontology property used to link a variable identifier, label or description to a statistical modifier if applicable.'@en ;
+    skos:notation 'SDN:C60::HST'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C60/current/HPP/1/> .
+<http://vocab.nerc.ac.uk/collection/C60/current/HPP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C60/current/HPP/>;
+    dc:modified '2021-06-30T11:44:21'^^xsd:dateTime ;
+    skos:altLabel 'hasProperty'^^xsd:string ;
+    skos:prefLabel 'puv#property'@en ;
+    skos:definition 'Parameter Usage Vocabulary ontology property used to link a variable identifier, label or description to the property or attribute that is being measured, which must be associated with either an object of interest or a matrix or both.'@en ;
+    skos:notation 'SDN:C60::HPP'^^xsd:string .

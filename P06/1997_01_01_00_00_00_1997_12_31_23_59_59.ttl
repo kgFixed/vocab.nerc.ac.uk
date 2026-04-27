@@ -1,0 +1,118 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/1997_01_01_00_00_00_1997_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P06/1996_01_01_00_00_00_1996_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '1997-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UBLV/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UBLV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UBLV/>;
+    dc:modified '1997-12-15T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'ppbv'^^xsd:string ;
+    skos:prefLabel 'Parts per billion by volume'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UBLV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UMLV/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UMLV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UMLV/>;
+    dc:modified '1997-12-15T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'ppmv'^^xsd:string ;
+    skos:prefLabel 'Parts per million by volume'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UMLV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UTRV/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UTRV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UTRV/>;
+    dc:modified '1997-12-15T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'pptrv'^^xsd:string ;
+    skos:prefLabel 'Parts per trillion by volume'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UTRV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UHMS/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UHMS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UHMS/>;
+    dc:modified '1997-12-02T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'hh24miss'^^xsd:string ;
+    skos:prefLabel 'Hours Minutes Seconds'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UHMS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/ULKG/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/ULKG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/ULKG/>;
+    dc:modified '1997-02-07T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'l/kg'^^xsd:string ;
+    skos:prefLabel 'Litres per kilogram'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::ULKG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P06/current/UPVW/1/> .
+<http://vocab.nerc.ac.uk/collection/P06/current/UPVW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P06/current/UPVW/>;
+    dc:modified '1997-01-22T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'pmol/m/W/s'^^xsd:string ;
+    skos:prefLabel 'Picomoles per metre per watt per second'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P06::UPVW'^^xsd:string .

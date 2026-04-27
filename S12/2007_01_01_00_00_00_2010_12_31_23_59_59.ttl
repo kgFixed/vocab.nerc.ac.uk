@@ -1,0 +1,226 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S12/2007_01_01_00_00_00_2010_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S12/2006_01_01_00_00_00_2006_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2010-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1218/2/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1218/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1218/>;
+    dc:modified '2010-08-10T09:05:16'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'muscle tissue'@en ;
+    skos:definition 'Striated muscles, such as those that that move the skeleton (also called voluntary muscle).'@en ;
+    skos:notation 'SDN:S12::S1218'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S121/2/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S121/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S121/>;
+    dc:modified '2010-08-10T09:02:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'bladders'@en ;
+    skos:definition 'Distensible membranous sacs containing liquid or gas found in certain types of algae (e.g. Phaeocystis or Fucus vesiculosus (bladderwrack)).'@en ;
+    skos:notation 'SDN:S12::S121'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1216/2/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1216/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1216/>;
+    dc:modified '2010-08-10T08:58:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'liver'@en ;
+    skos:definition 'A large organ in vertebrates and some other animals that stores and metabolises nutrients, destroys toxins and produces bile.'@en ;
+    skos:notation 'SDN:S12::S1216'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1241/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1241/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1241/>;
+    dc:modified '2010-08-10T08:55:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'vas deferens'@en ;
+    skos:definition 'A coiled tube that carries the sperm out of the testes.'@en ;
+    skos:notation 'SDN:S12::S1241'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1240/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1240/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1240/>;
+    dc:modified '2010-08-10T08:52:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'bone'@en ;
+    skos:definition 'The rigid part of the endoskeleton of vertebrates except cartillagenous fish.'@en ;
+    skos:notation 'SDN:S12::S1240'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1239/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1239/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1239/>;
+    dc:modified '2010-08-10T08:48:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'shell'@en ;
+    skos:definition 'The hard outer covering of certain organisms (e.g.arthropods, bivalves, gastropods, crustaceans and turtles), birds\' eggs and the seeds of some plants (e.g. nuts).'@en ;
+    skos:notation 'SDN:S12::S1239'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1224/2/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1224/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1224/>;
+    dc:modified '2010-08-10T08:43:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tests'@en ;
+    skos:definition 'The hard outer covering of some protozoans (e.g. foraminifera) and echinoderms (sea urchins).'@en ;
+    skos:notation 'SDN:S12::S1224'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1238/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1238/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1238/>;
+    dc:modified '2010-08-09T17:16:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'viscera'@en ;
+    skos:definition 'The internal organs of the body cavity.'@en ;
+    skos:notation 'SDN:S12::S1238'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1237/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1237/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1237/>;
+    dc:modified '2010-08-09T17:14:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'intestine'@en ;
+    skos:definition 'The part of the alimentary canal between the stomach and the anus.'@en ;
+    skos:notation 'SDN:S12::S1237'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1236/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1236/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1236/>;
+    dc:modified '2010-08-09T17:11:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'gonads'@en ;
+    skos:definition 'The primary sex organs of an organism. The term covers the organs of both sexes and may be used for example where ovaries and testes are pooled together for chemical analysis..'@en ;
+    skos:notation 'SDN:S12::S1236'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1235/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1235/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1235/>;
+    dc:modified '2010-08-09T17:07:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'skin'@en ;
+    skos:definition 'The soft outer covering of a vertebrate animal.'@en ;
+    skos:notation 'SDN:S12::S1235'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1234/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1234/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1234/>;
+    dc:modified '2010-08-09T17:05:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'bile'@en ;
+    skos:definition 'A digestive juice secreted by the liver and stored in the gallbladder which aids in the digestion of fats'@en ;
+    skos:notation 'SDN:S12::S1234'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1222/2/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1222/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1222/>;
+    dc:modified '2010-08-09T17:02:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'skeleton'@en ;
+    skos:definition 'The system that provides support to an organism. It is internal and made up of bones and cartilage in vertebrates, but may be external in some other animals and possibly plants'@en ;
+    skos:notation 'SDN:S12::S1222'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1233/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1233/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1233/>;
+    dc:modified '2010-07-30T15:31:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'gill'@en ;
+    skos:definition 'A respiratory organ used to breathe oxygen dissolved in water by aquatic animals.'@en ;
+    skos:notation 'SDN:S12::S1233'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1232/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1232/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1232/>;
+    dc:modified '2010-01-25T10:12:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ovary'@en ;
+    skos:definition 'The female gonad. In animals it is the organ that produces eggs. In plants it is the part of the pistil that holds the ovules.'@en ;
+    skos:notation 'SDN:S12::S1232'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1231/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1231/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1231/>;
+    dc:modified '2010-01-25T10:04:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'milk'@en ;
+    skos:definition 'Fluid produced by female mammals to feed their young.'@en ;
+    skos:notation 'SDN:S12::S1231'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1230/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1230/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1230/>;
+    dc:modified '2010-01-25T10:03:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'blood'@en ;
+    skos:definition 'Fluid contained in the vascular system of animals'@en ;
+    skos:notation 'SDN:S12::S1230'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1229/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1229/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1229/>;
+    dc:modified '2010-01-25T10:01:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'blubber'@en ;
+    skos:definition 'A thick layer of vascularised fat found under the skin of all cetaceans, pinnipeds and sirenians'@en ;
+    skos:notation 'SDN:S12::S1229'^^xsd:string .

@@ -1,0 +1,147 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L08/2006_01_01_00_00_00_2006_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L08/current/SR/1/> .
+<http://vocab.nerc.ac.uk/collection/L08/current/SR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L08/current/SR/>;
+    dc:modified '2006-12-05T16:18:33'^^xsd:dateTime ;
+    skos:altLabel 'academic'^^xsd:string ;
+    skos:prefLabel 'academic'@en ;
+    skos:definition 'The data are freely available for research and education purposes.  Usage acknowledgement is usually expected.'@en ;
+    skos:notation 'SDN:L08::SR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L08/current/CC/1/> .
+<http://vocab.nerc.ac.uk/collection/L08/current/CC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L08/current/CC/>;
+    dc:modified '2006-12-05T16:18:33'^^xsd:dateTime ;
+    skos:altLabel 'collection_charge'^^xsd:string ;
+    skos:prefLabel 'collection cost charge'@en ;
+    skos:definition 'A charge is made related to the cost of collecting the data.'@en ;
+    skos:notation 'SDN:L08::CC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L08/current/FE/1/> .
+<http://vocab.nerc.ac.uk/collection/L08/current/FE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L08/current/FE/>;
+    dc:modified '2006-12-05T16:18:33'^^xsd:dateTime ;
+    skos:altLabel 'commercial_charge'^^xsd:string ;
+    skos:prefLabel 'commercial charge'@en ;
+    skos:definition 'A charge significantly exceeding the cost of data collection and delivery is made for usage of the data.'@en ;
+    skos:notation 'SDN:L08::FE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L08/current/NC/1/> .
+<http://vocab.nerc.ac.uk/collection/L08/current/NC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L08/current/NC/>;
+    dc:modified '2006-12-05T16:18:33'^^xsd:dateTime ;
+    skos:altLabel 'distribution_charge'^^xsd:string ;
+    skos:prefLabel 'distribution cost charge'@en ;
+    skos:definition 'A charge is made to cover the costs of delivering data to the user.'@en ;
+    skos:notation 'SDN:L08::NC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L08/current/LI/1/> .
+<http://vocab.nerc.ac.uk/collection/L08/current/LI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L08/current/LI/>;
+    dc:modified '2006-12-05T16:18:33'^^xsd:dateTime ;
+    skos:altLabel 'licence'^^xsd:string ;
+    skos:prefLabel 'licence'@en ;
+    skos:definition 'Conditions of supply and usage of the data are specified in a formal agreement.'@en ;
+    skos:notation 'SDN:L08::LI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L08/current/MO/1/> .
+<http://vocab.nerc.ac.uk/collection/L08/current/MO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L08/current/MO/>;
+    dc:modified '2006-12-05T16:18:33'^^xsd:dateTime ;
+    skos:altLabel 'moratorium'^^xsd:string ;
+    skos:prefLabel 'moratorium'@en ;
+    skos:definition 'Data are initially restricted, but the access condition relaxes to academic or unrestricted once a specified period of time after an event (such as collection, publication, completion of QC procedures or project cessation) has elapsed.'@en ;
+    skos:notation 'SDN:L08::MO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L08/current/NA/1/> .
+<http://vocab.nerc.ac.uk/collection/L08/current/NA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L08/current/NA/>;
+    dc:modified '2006-12-05T16:18:33'^^xsd:dateTime ;
+    skos:altLabel 'none'^^xsd:string ;
+    skos:prefLabel 'no access'@en ;
+    skos:definition 'Access to the data cannot be negotiated.'@en ;
+    skos:notation 'SDN:L08::NA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L08/current/OG/1/> .
+<http://vocab.nerc.ac.uk/collection/L08/current/OG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L08/current/OG/>;
+    dc:modified '2006-12-05T16:18:33'^^xsd:dateTime ;
+    skos:altLabel 'organisation'^^xsd:string ;
+    skos:prefLabel 'organisation'@en ;
+    skos:definition 'The data are unrestricted to members of an organisation or a virtual organisation (such as project or cruise participants) but restricted to anybody else.'@en ;
+    skos:notation 'SDN:L08::OG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L08/current/UK/1/> .
+<http://vocab.nerc.ac.uk/collection/L08/current/UK/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L08/current/UK/>;
+    dc:modified '2006-12-05T16:18:33'^^xsd:dateTime ;
+    skos:altLabel 'unknown'^^xsd:string ;
+    skos:prefLabel 'unknown'@en ;
+    skos:definition 'The correct value is not known to and not computable by the creator of this information. However a correct value probably exists.'@en ;
+    skos:notation 'SDN:L08::UK'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L08/current/UN/1/> .
+<http://vocab.nerc.ac.uk/collection/L08/current/UN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L08/current/UN/>;
+    dc:modified '2006-12-05T16:18:33'^^xsd:dateTime ;
+    skos:altLabel 'unrestricted'^^xsd:string ;
+    skos:prefLabel 'unrestricted'@en ;
+    skos:definition 'The data are freely available to anybody and may be used for any purpose. Usage acknowledgement may be required.'@en ;
+    skos:notation 'SDN:L08::UN'^^xsd:string .

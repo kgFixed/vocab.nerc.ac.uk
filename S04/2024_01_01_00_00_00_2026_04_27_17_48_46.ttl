@@ -1,0 +1,370 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S04/2024_01_01_00_00_00_2026_04_27_17_48_46.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S04/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-27T17:48:46'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S04276/2/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S04276/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S04276/>;
+    dc:modified '2026-03-25T10:10:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'oxygen sensor'@en ;
+    skos:definition 'An instrument that may be incorporated into a sensor package to measure dissolved oxygen concentrations in place in the field or within experimental setups.'@en ;
+    skos:notation 'SDN:S04::S04276'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041209/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041209/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041209/>;
+    dc:modified '2026-02-24T14:42:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'gas chromatography-thermal conductivity detection'@en ;
+    skos:definition 'A technique to separate gases, volatile substances or substances dissolved in a volatile solvent by transport by an inert gas through a column packed with a sorbent. Each component has a different capacity to conduct heat and different gas compositions cause heat to be conducted away from a heated filament at different rates. The changes in filament temperature and electrical resistance are used to identify components.'@en ;
+    skos:notation 'SDN:S04::S041209'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041023/2/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041023/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041023/>;
+    dc:modified '2025-10-30T15:14:00'^^xsd:dateTime ;
+    skos:altLabel 'AgNO3 titration'^^xsd:string ;
+    skos:prefLabel 'titration against silver nitrate (AgNO3)'@en ;
+    skos:definition 'Quantitative incremental addition of silver nitrate solution to extract all halide anions from the sample as indicated by an indicator colour change (usually potassium chromate from yellow to red). Often referred to as \'Knudsen titration\' after Knudsen, M., 1901. Hydrographical Tables Copenhagen, G.E.C. Gad, 63 pp.'@en ;
+    skos:notation 'SDN:S04::S041023'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041208/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041208/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041208/>;
+    dc:modified '2025-10-30T14:47:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ammonium fluorometry after Kerouel and Aminot (1997)'@en ;
+    skos:definition 'Ammonium analysis protocol described in Kerouel, R., Aminot, A. (1997). Marine Chemistry 57: 265-275. This describes the standard protocol when not working at nanomolar ranges.'@en ;
+    skos:notation 'SDN:S04::S041208'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041207/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041207/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041207/>;
+    dc:modified '2025-10-30T14:46:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'hydrometry'@en ;
+    skos:definition 'A technique used to measure the density or salinity of a liquid using a hydrometer, a floating device that will sink to a greater or lesser extent depending on the density, salinity and temperature of the liquid.'@en ;
+    skos:notation 'SDN:S04::S041207'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041206/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041206/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041206/>;
+    dc:modified '2025-10-30T14:45:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'refractometry'@en ;
+    skos:definition 'A technique used to measure the concentration of dissolved substances (such as salt) in liquids by determining the refractive index of the liquid (how much light bends through the liquid). Both analogue and digital refractometers can be used.'@en ;
+    skos:notation 'SDN:S04::S041206'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S04501/2/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S04501/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S04501/>;
+    dc:modified '2025-10-30T14:07:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'nanomolar ammonium fluorometry after Kerouel and Aminot (1997)'@en ;
+    skos:definition 'Nanomolar ammonium analysis protocol described in Kerouel, R., Aminot, A. (1997). Marine Chemistry 57: 265-275. The protocol is slightly different to the standard method when working at nanomolar ranges, and is described on p.267.'@en ;
+    skos:notation 'SDN:S04::S04501'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041205/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041205/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041205/>;
+    dc:modified '2025-08-07T14:39:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'curvilinear measurement'@en ;
+    skos:definition 'A measurement taken along the curved surface or body of an object, following its natural shape, often using a flexible tape measure.'@en ;
+    skos:notation 'SDN:S04::S041205'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041204/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041204/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041204/>;
+    dc:modified '2025-08-07T14:39:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'linear measurement'@en ;
+    skos:definition 'A measurement taken in a straight line between two points, typically using tools such as calipers, rulers, or measuring boards.'@en ;
+    skos:notation 'SDN:S04::S041204'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041203/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041203/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041203/>;
+    dc:modified '2025-07-14T09:53:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'single turnover active fluorometry'@en ;
+    skos:definition 'An active fluorescence technique with a single turnover protocol that uses a solid excitation pulse; each pulse only allows one single reduction of the primary electron acceptors of PSII, Qa.'@en ;
+    skos:notation 'SDN:S04::S041203'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041202/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041202/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041202/>;
+    dc:modified '2025-07-07T15:46:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'nephelometry using a tungsten halogen light source'@en ;
+    skos:definition 'Method for measuring turbidity using a nephelometer (instrument that measures scattered light at an angle of 90°) equipped with a tungsten halogen light source. This method is used as part of the US EPA method 180.1 standard for turbidity measurements.'@en ;
+    skos:notation 'SDN:S04::S041202'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041201/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041201/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041201/>;
+    dc:modified '2025-05-16T11:48:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'profiling pressure sensor (second sensor)'@en ;
+    skos:definition 'An underwater pressure sensor that is mounted to an instrument or vehicle that is able to move freely in the water column. The data are used to determine the depth of the sensor below the sea surface. Deployed on a package of instruments or sensors as the second sensor of this type.'@en ;
+    skos:notation 'SDN:S04::S041201'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041199/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041199/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041199/>;
+    dc:modified '2025-05-16T11:27:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'dead reckoning'@en ;
+    skos:definition 'The estimation of position based upon interpolation between satellite fixes from the GPS network using measurements of an object\'s velocity through the water.'@en ;
+    skos:notation 'SDN:S04::S041199'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041198/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041198/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041198/>;
+    dc:modified '2025-04-02T21:19:33'^^xsd:dateTime ;
+    skos:altLabel 'MIMS'^^xsd:string ;
+    skos:prefLabel 'membrane inlet mass spectrometry (MIMS)'@en ;
+    skos:definition 'A technique that uses a semi-permeable membrane coupled to a mass spectrometer to directly sample dissolved gases and volatile compounds from liquids and solids.'@en ;
+    skos:notation 'SDN:S04::S041198'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041197/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041197/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041197/>;
+    dc:modified '2025-02-27T19:34:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fixed in-situ pressure sensor (third sensor)'@en ;
+    skos:definition 'An underwater pressure sensor that is rigidly mounted to either the seabed or some type of structure. Data from the instrument may be used to determine wave or sea level parameters depending on sampling frequency and subsequent data reduction. Deployed on a package of instruments as the third sensor of this type.'@en ;
+    skos:notation 'SDN:S04::S041197'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041196/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041196/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041196/>;
+    dc:modified '2025-02-18T14:22:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ocean and Land Colour Instrument OLCI-B'@en ;
+    skos:definition 'A visible imaging push-broom radiometer with 21 spectral bands from 400 to 1200 nm deployed on the Copernicus Sentinel-3B platform. Also referred to in literature as S-3B OLCI.'@en ;
+    skos:notation 'SDN:S04::S041196'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041195/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041195/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041195/>;
+    dc:modified '2025-02-18T14:21:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ocean and Land Colour Instrument OLCI-A'@en ;
+    skos:definition 'A visible imaging push-broom radiometer with 21 spectral bands from 400 to 1200 nm deployed on the Copernicus Sentinel-3A platform. Also referred to in literature as S-3A OLCI.'@en ;
+    skos:notation 'SDN:S04::S041195'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041194/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041194/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041194/>;
+    dc:modified '2025-01-28T15:36:58'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'optical microscopy and image analysis'@en ;
+    skos:definition 'Identification, quantification, or measurement of biological entities or other small objects from digital images taken from a conventional optical microscope.'@en ;
+    skos:notation 'SDN:S04::S041194'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S04505/2/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S04505/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S04505/>;
+    dc:modified '2024-10-31T17:38:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'optode'@en ;
+    skos:definition 'An optical chemical sensor based on the ability of selected substances to specifically interact with an analyte and in the process change an optical property.'@en ;
+    skos:notation 'SDN:S04::S04505'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S0505/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S0505/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S0505/>;
+    dc:modified '2024-10-07T10:02:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Smartfin external temperature sensor'@en ;
+    skos:definition 'A device, located on the tip of the Smartfin, that measures temperature.'@en ;
+    skos:notation 'SDN:S04::S0505'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S0504/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S0504/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S0504/>;
+    dc:modified '2024-10-07T10:00:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Smartfin internal temperature sensor'@en ;
+    skos:definition 'A device, located on the motherboard in the centre of the Smartfin, that measures temperature.'@en ;
+    skos:notation 'SDN:S04::S0504'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041193/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041193/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041193/>;
+    dc:modified '2024-08-29T10:51:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fluorescence spectroscopy'@en ;
+    skos:definition 'Analytical method where a sample is irradiated by light of a specific excitation wavelength causing the substance of interest to fluoresce. The intensity of the fluorescence emitted is detected as a function of wavelength or time. Synonyms include fluorescence spectrometry, spectrofluorometry, and fluorescence emission spectroscopy.'@en ;
+    skos:notation 'SDN:S04::S041193'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041192/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041192/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041192/>;
+    dc:modified '2024-08-06T10:44:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tidal height sensor4'@en ;
+    skos:definition 'One of a group of duplicate pressure sensors on a tide gauge installation.'@en ;
+    skos:notation 'SDN:S04::S041192'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041191/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041191/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041191/>;
+    dc:modified '2024-08-06T10:07:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'radar water level recorder (second sensor)'@en ;
+    skos:definition 'A precision water level measuring instrument based on radar that can be used to measure waves or sea level depending on sampling frequency and averaging intervals. Deployed on a package of instruments or sensors as the second sensor of this type.'@en ;
+    skos:notation 'SDN:S04::S041191'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041190/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041190/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041190/>;
+    dc:modified '2024-06-24T08:13:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'internal thermistor'@en ;
+    skos:definition 'A semiconductor with large linear changes of resistance as a function of temperature located within an instrument to measure internal temperature.'@en ;
+    skos:notation 'SDN:S04::S041190'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041189/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041189/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041189/>;
+    dc:modified '2024-06-03T11:19:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'inclinometer (second sensor)'@en ;
+    skos:definition 'An instrument to measure the orientation of an object relative to the Earth\'s gravitational field. Deployed on a package of instruments or sensors as the second sensor of this type.'@en ;
+    skos:notation 'SDN:S04::S041189'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041188/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041188/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041188/>;
+    dc:modified '2024-04-23T16:47:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'bubbler tide gauge (second sensor)'@en ;
+    skos:definition 'A tide gauge that measures the depth of water above the sensor by measuring the air pressure required to generate bubbles from a nozzle on the sensor. Deployed on a package of instruments or sensors as the second sensor of this type.'@en ;
+    skos:notation 'SDN:S04::S041188'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041187/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041187/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041187/>;
+    dc:modified '2024-04-23T16:45:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fixed in-situ pressure sensor (second sensor)'@en ;
+    skos:definition 'An underwater pressure sensor that is rigidly mounted to either the seabed or some type of structure. Data from the instrument may be used to determine wave or sea level parameters depending on sampling frequency and subsequent data reduction. Deployed on a package of instruments or sensors as the second sensor of this type.'@en ;
+    skos:notation 'SDN:S04::S041187'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041186/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041186/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041186/>;
+    dc:modified '2024-02-08T12:54:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'in-situ spectrophotometer'@en ;
+    skos:definition 'An instrument in place in the field that determines the amount of light absorbed by a sample at one or more specified wavelengths, generally within the visible waveband.'@en ;
+    skos:notation 'SDN:S04::S041186'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041173/2/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041173/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041173/>;
+    dc:modified '2024-02-08T12:37:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'spectrophotometry (internal electrode)'@en ;
+    skos:definition 'Measurement of the amount of light absorbed by a sample at one or more specified wavelengths, generally within the visible waveband, measured using the internal (primary) electrode of a dual-electrode instrument (e.g. Sea-Bird SeaFET ISFET).'@en ;
+    skos:notation 'SDN:S04::S041173'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041174/2/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041174/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041174/>;
+    dc:modified '2024-02-08T12:37:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'spectrophotometry (external electrode)'@en ;
+    skos:definition 'Measurement of the amount of light absorbed by a sample at one or more specified wavelengths, generally within the visible waveband, measured using the external (reference) electrode of a dual-electrode instrument (e.g. Sea-Bird SeaFET ISFET).'@en ;
+    skos:notation 'SDN:S04::S041174'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S041185/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S041185/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S041185/>;
+    dc:modified '2024-02-07T17:10:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'in-situ glass electrode'@en ;
+    skos:definition 'Electrochemical device with a glass membrane, sensitive to the concentration of ions in the water body. This sensor is located within the water body that it measures.'@en ;
+    skos:notation 'SDN:S04::S041185'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S0503/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S0503/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S0503/>;
+    dc:modified '2024-02-06T11:20:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ion sensitive field-effect transistor (ISFET) sensor (external counter electrode)'@en ;
+    skos:definition 'A field-effect transistor used for measuring ion concentrations in solution.'@en ;
+    skos:notation 'SDN:S04::S0503'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S04/current/S0502/1/> .
+<http://vocab.nerc.ac.uk/collection/S04/current/S0502/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S04/current/S0502/>;
+    dc:modified '2024-02-06T10:53:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ion sensitive field-effect transistor (ISFET) sensor (internal counter electrode)'@en ;
+    skos:definition 'A field-effect transistor used for measuring ion concentrations in solution.'@en ;
+    skos:notation 'SDN:S04::S0502'^^xsd:string .

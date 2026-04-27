@@ -1,0 +1,118 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/1995_01_01_00_00_00_1996_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/1994_01_01_00_00_00_1994_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '1996-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/NMGSWSCT/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/NMGSWSCT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/NMGSWSCT/>;
+    dc:modified '1996-10-25T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'TSCrseNorMagSus'^^xsd:string ;
+    skos:prefLabel 'Magnetic susceptibility per unit dry weight of sediment 63-1000um by wet sieving and magnetic susceptibility meter'@en ;
+    skos:definition 'Wet sieving then magnetic susceptibility detector'@en ;
+    skos:notation 'SDN:P01::NMGSWSCT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/NMGSWSFT/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/NMGSWSFT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/NMGSWSFT/>;
+    dc:modified '1996-10-25T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'TSFineNorMagSus'^^xsd:string ;
+    skos:prefLabel 'Magnetic susceptibility per unit dry weight of sediment <63um by wet sieving and magnetic susceptibility meter'@en ;
+    skos:definition 'Wet sieving then magnetic susceptibility detector'@en ;
+    skos:notation 'SDN:P01::NMGSWSFT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SDSPFLTX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SDSPFLTX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SDSPFLTX/>;
+    dc:modified '1996-10-16T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'SDTCPE'^^xsd:string ;
+    skos:prefLabel 'Concentration standard deviation of chloroplastic pigments (total) per unit wet volume of sediment by acetone extraction and fluorometry'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P01::SDSPFLTX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SCPEFLTX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SCPEFLTX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SCPEFLTX/>;
+    dc:modified '1996-10-16T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'TotCPE'^^xsd:string ;
+    skos:prefLabel 'Concentration of chloroplastic pigments (total) per unit wet volume of sediment by acetone extraction and fluorometry'@en ;
+    skos:definition 'Unavailable'@en ;
+    skos:notation 'SDN:P01::SCPEFLTX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SDTAELTX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SDTAELTX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SDTAELTX/>;
+    dc:modified '1996-10-14T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'SDTAden'^^xsd:string ;
+    skos:prefLabel 'Concentration as ATP standard deviation of adenylates (total) per unit wet volume of sediment by firefly enzyme luminescence'@en ;
+    skos:definition 'Firefly enzyme luminescence of sediment plus pore water'@en ;
+    skos:notation 'SDN:P01::SDTAELTX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/TADNELTX/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/TADNELTX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/TADNELTX/>;
+    dc:modified '1996-10-14T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'TotAden'^^xsd:string ;
+    skos:prefLabel 'Concentration as ATP of adenylates (total) per unit wet volume of sediment by firefly enzyme luminescence'@en ;
+    skos:definition 'Firefly enzyme luminescence of sediment plus pore water'@en ;
+    skos:notation 'SDN:P01::TADNELTX'^^xsd:string .

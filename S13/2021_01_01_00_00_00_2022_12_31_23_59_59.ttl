@@ -1,0 +1,109 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S13/2021_01_01_00_00_00_2022_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S13/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2022-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S1364/2/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S1364/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S1364/>;
+    dc:modified '2022-05-13T08:18:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'with percentage necrosis >=10%'@en ;
+    skos:definition 'The targeted biological entity has a proportion of necrosis greater or equal to 10 percent; for coralligeneous colonies, this is relative to the total living area of the colony.'@en ;
+    skos:notation 'SDN:S13::S1364'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S1365/2/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S1365/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S1365/>;
+    dc:modified '2022-05-13T08:18:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'in coral tissue'@en ;
+    skos:definition 'The targeted biological entity is located within coral tissue.'@en ;
+    skos:notation 'SDN:S13::S1365'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S1312/3/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S1312/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S1312/>;
+    dc:modified '2022-04-27T16:57:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'heterotrophic'@en ;
+    skos:definition 'A term describing organisms that are unable of making organic molecules from inorganic sources of carbon and rely instead on the consumption of organic molecules synthesized by other organisms.'@en ;
+    skos:notation 'SDN:S13::S1312'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S1348/4/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S1348/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S1348/>;
+    dc:modified '2022-04-27T16:57:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'plastidic'@en ;
+    skos:definition 'A term describing cells that have organelles termed plastids for the storage of pigments or food; plastids are found in plants and algae.'@en ;
+    skos:notation 'SDN:S13::S1348'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S13/current/S135/3/> .
+<http://vocab.nerc.ac.uk/collection/S13/current/S135/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S13/current/S135/>;
+    dc:modified '2022-04-27T16:57:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'autotrophic'@en ;
+    skos:definition 'A term describing organisms capable of making organic molecules from inorganic sources using energy from light via photosynthesis or from chemical reactions via chemosynthesis.'@en ;
+    skos:notation 'SDN:S13::S135'^^xsd:string .

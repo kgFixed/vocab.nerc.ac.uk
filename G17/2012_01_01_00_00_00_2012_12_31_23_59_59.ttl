@@ -1,0 +1,165 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/G17/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G17/current/001/1/> .
+<http://vocab.nerc.ac.uk/collection/G17/current/001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G17/current/001/>;
+    dc:modified '2012-07-04T11:05:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'continual'@en ;
+    skos:definition 'Data are repeatedly and frequently updated'@en ;
+    skos:notation 'SDN:G17::001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G17/current/002/1/> .
+<http://vocab.nerc.ac.uk/collection/G17/current/002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G17/current/002/>;
+    dc:modified '2012-07-04T11:05:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'daily'@en ;
+    skos:definition 'Data are updated each day'@en ;
+    skos:notation 'SDN:G17::002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G17/current/003/1/> .
+<http://vocab.nerc.ac.uk/collection/G17/current/003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G17/current/003/>;
+    dc:modified '2012-07-04T11:05:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'weekly'@en ;
+    skos:definition 'Data are updated on a weekly basare'@en ;
+    skos:notation 'SDN:G17::003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G17/current/004/1/> .
+<http://vocab.nerc.ac.uk/collection/G17/current/004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G17/current/004/>;
+    dc:modified '2012-07-04T11:05:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'fortnightly'@en ;
+    skos:definition 'Data are updated every two weeks'@en ;
+    skos:notation 'SDN:G17::004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G17/current/005/1/> .
+<http://vocab.nerc.ac.uk/collection/G17/current/005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G17/current/005/>;
+    dc:modified '2012-07-04T11:05:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'monthly'@en ;
+    skos:definition 'Data are updated each month'@en ;
+    skos:notation 'SDN:G17::005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G17/current/006/1/> .
+<http://vocab.nerc.ac.uk/collection/G17/current/006/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G17/current/006/>;
+    dc:modified '2012-07-04T11:05:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'quarterly'@en ;
+    skos:definition 'Data are updated every three months'@en ;
+    skos:notation 'SDN:G17::006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G17/current/007/1/> .
+<http://vocab.nerc.ac.uk/collection/G17/current/007/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G17/current/007/>;
+    dc:modified '2012-07-04T11:05:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'biannually'@en ;
+    skos:definition 'Data are updated twice each year'@en ;
+    skos:notation 'SDN:G17::007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G17/current/008/1/> .
+<http://vocab.nerc.ac.uk/collection/G17/current/008/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G17/current/008/>;
+    dc:modified '2012-07-04T11:05:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'annually'@en ;
+    skos:definition 'Data are updated every year'@en ;
+    skos:notation 'SDN:G17::008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G17/current/009/1/> .
+<http://vocab.nerc.ac.uk/collection/G17/current/009/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G17/current/009/>;
+    dc:modified '2012-07-04T11:05:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'asNeeded'@en ;
+    skos:definition 'Data are updated as deemed necessary'@en ;
+    skos:notation 'SDN:G17::009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G17/current/010/1/> .
+<http://vocab.nerc.ac.uk/collection/G17/current/010/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G17/current/010/>;
+    dc:modified '2012-07-04T11:05:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'irregular'@en ;
+    skos:definition 'Data are updated in intervals that are uneven in duration'@en ;
+    skos:notation 'SDN:G17::010'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G17/current/011/1/> .
+<http://vocab.nerc.ac.uk/collection/G17/current/011/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G17/current/011/>;
+    dc:modified '2012-07-04T11:05:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'notPlanned'@en ;
+    skos:definition 'There are no plans to update the data'@en ;
+    skos:notation 'SDN:G17::011'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/G17/current/012/1/> .
+<http://vocab.nerc.ac.uk/collection/G17/current/012/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/G17/current/012/>;
+    dc:modified '2012-07-04T11:05:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'unknown'@en ;
+    skos:definition 'Frequency of maintenance for the data is not known'@en ;
+    skos:notation 'SDN:G17::012'^^xsd:string .

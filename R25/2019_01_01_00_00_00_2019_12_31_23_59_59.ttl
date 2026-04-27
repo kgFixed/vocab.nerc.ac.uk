@@ -1,0 +1,219 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/R25/2019_01_01_00_00_00_2019_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R25/current/ACOUSTIC/1/> .
+<http://vocab.nerc.ac.uk/collection/R25/current/ACOUSTIC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R25/current/ACOUSTIC/>;
+    dc:modified '2019-10-11T15:06:36'^^xsd:dateTime ;
+    skos:altLabel 'ACOUSTIC'^^xsd:string ;
+    skos:prefLabel 'Acoustic sensor'@en ;
+    skos:definition 'Acoustic sensor'@en ;
+    skos:notation 'SDN:R25::ACOUSTIC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R25/current/ACOUSTIC_GEOLOCATION/1/> .
+<http://vocab.nerc.ac.uk/collection/R25/current/ACOUSTIC_GEOLOCATION/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R25/current/ACOUSTIC_GEOLOCATION/>;
+    dc:modified '2019-10-11T15:06:36'^^xsd:dateTime ;
+    skos:altLabel 'ACOUSTIC_GEOLOCATION'^^xsd:string ;
+    skos:prefLabel 'Acoustic sensor measuring geolocation'@en ;
+    skos:definition 'Acoustic sensor for geolocation'@en ;
+    skos:notation 'SDN:R25::ACOUSTIC_GEOLOCATION'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R25/current/BACKSCATTERINGMETER_TURBIDITY/1/> .
+<http://vocab.nerc.ac.uk/collection/R25/current/BACKSCATTERINGMETER_TURBIDITY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R25/current/BACKSCATTERINGMETER_TURBIDITY/>;
+    dc:modified '2019-10-11T15:06:36'^^xsd:dateTime ;
+    skos:altLabel 'BACKSCATTERINGMETER_TURBIDITY'^^xsd:string ;
+    skos:prefLabel 'Backscattering meter measuring turbidity'@en ;
+    skos:definition 'Backscattering meter measuring turbidity'@en ;
+    skos:notation 'SDN:R25::BACKSCATTERINGMETER_TURBIDITY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R25/current/CTD_CNDC/1/> .
+<http://vocab.nerc.ac.uk/collection/R25/current/CTD_CNDC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R25/current/CTD_CNDC/>;
+    dc:modified '2019-10-11T15:06:36'^^xsd:dateTime ;
+    skos:altLabel 'CTD_CNDC'^^xsd:string ;
+    skos:prefLabel 'Conductivity Temperature Depth (CTD) sensors package measuring conductivity'@en ;
+    skos:definition 'Conductivity Temperature Depth (CTD) sensors package measuring conductivity'@en ;
+    skos:notation 'SDN:R25::CTD_CNDC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R25/current/CTD_PRES/1/> .
+<http://vocab.nerc.ac.uk/collection/R25/current/CTD_PRES/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R25/current/CTD_PRES/>;
+    dc:modified '2019-10-11T15:06:36'^^xsd:dateTime ;
+    skos:altLabel 'CTD_PRES'^^xsd:string ;
+    skos:prefLabel 'Conductivity Temperature Depth (CTD) sensors package measuring pressure'@en ;
+    skos:definition 'Conductivity Temperature Depth (CTD) sensors package measuring pressure'@en ;
+    skos:notation 'SDN:R25::CTD_PRES'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R25/current/CTD_TEMP/1/> .
+<http://vocab.nerc.ac.uk/collection/R25/current/CTD_TEMP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R25/current/CTD_TEMP/>;
+    dc:modified '2019-10-11T15:06:36'^^xsd:dateTime ;
+    skos:altLabel 'CTD_TEMP'^^xsd:string ;
+    skos:prefLabel 'Conductivity Temperature Depth (CTD) sensors package measuring temperature'@en ;
+    skos:definition 'Conductivity Temperature Depth (CTD) sensors package measuring temperature'@en ;
+    skos:notation 'SDN:R25::CTD_TEMP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R25/current/EM/1/> .
+<http://vocab.nerc.ac.uk/collection/R25/current/EM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R25/current/EM/>;
+    dc:modified '2019-10-11T15:06:36'^^xsd:dateTime ;
+    skos:altLabel 'EM'^^xsd:string ;
+    skos:prefLabel 'Electromagnetic sensor'@en ;
+    skos:definition 'Electromagnetic sensor package measuring velocity and turbulence'@en ;
+    skos:notation 'SDN:R25::EM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R25/current/FLOATCLOCK_MTIME/1/> .
+<http://vocab.nerc.ac.uk/collection/R25/current/FLOATCLOCK_MTIME/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R25/current/FLOATCLOCK_MTIME/>;
+    dc:modified '2019-10-11T15:06:36'^^xsd:dateTime ;
+    skos:altLabel 'FLOATCLOCK_MTIME'^^xsd:string ;
+    skos:prefLabel 'Clock on float measuring time'@en ;
+    skos:definition 'Fractional day of the individual measurement relative to JULD of the station'@en ;
+    skos:notation 'SDN:R25::FLOATCLOCK_MTIME'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R25/current/FLUOROMETER_CDOM/1/> .
+<http://vocab.nerc.ac.uk/collection/R25/current/FLUOROMETER_CDOM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R25/current/FLUOROMETER_CDOM/>;
+    dc:modified '2019-10-11T15:06:36'^^xsd:dateTime ;
+    skos:altLabel 'FLUOROMETER_CDOM'^^xsd:string ;
+    skos:prefLabel 'Fluorometer measuring Colored Dissolved Organic Matter (CDOM)'@en ;
+    skos:definition 'Fluorometer measuring Colored Dissolved Organic Matter (CDOM)'@en ;
+    skos:notation 'SDN:R25::FLUOROMETER_CDOM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R25/current/FLUOROMETER_CHLA/1/> .
+<http://vocab.nerc.ac.uk/collection/R25/current/FLUOROMETER_CHLA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R25/current/FLUOROMETER_CHLA/>;
+    dc:modified '2019-10-11T15:06:36'^^xsd:dateTime ;
+    skos:altLabel 'FLUOROMETER_CHLA'^^xsd:string ;
+    skos:prefLabel 'Fluorometer measuring chlorophyll-a'@en ;
+    skos:definition 'Fluorometer measuring chlorophyll-a concentration'@en ;
+    skos:notation 'SDN:R25::FLUOROMETER_CHLA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R25/current/IDO_DOXY/1/> .
+<http://vocab.nerc.ac.uk/collection/R25/current/IDO_DOXY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R25/current/IDO_DOXY/>;
+    dc:modified '2019-10-11T15:06:36'^^xsd:dateTime ;
+    skos:altLabel 'IDO_DOXY'^^xsd:string ;
+    skos:prefLabel 'Integrated Dissolved Oxygen (IDO) sensor measuring dissolved oxygen'@en ;
+    skos:definition 'A type of electrochemical dissolved oxygen sensor called Integrated Dissolved Oxygen (IDO)'@en ;
+    skos:notation 'SDN:R25::IDO_DOXY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R25/current/OPTODE_DOXY/1/> .
+<http://vocab.nerc.ac.uk/collection/R25/current/OPTODE_DOXY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R25/current/OPTODE_DOXY/>;
+    dc:modified '2019-10-11T15:06:36'^^xsd:dateTime ;
+    skos:altLabel 'OPTODE_DOXY'^^xsd:string ;
+    skos:prefLabel 'Optode measuring dissolved oxygen'@en ;
+    skos:definition 'An optical dissolved oxygen sensor, also known as optode'@en ;
+    skos:notation 'SDN:R25::OPTODE_DOXY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R25/current/RADIOMETER_PAR/1/> .
+<http://vocab.nerc.ac.uk/collection/R25/current/RADIOMETER_PAR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R25/current/RADIOMETER_PAR/>;
+    dc:modified '2019-10-11T15:06:36'^^xsd:dateTime ;
+    skos:altLabel 'RADIOMETER_PAR'^^xsd:string ;
+    skos:prefLabel 'Radiometer measuring Photosynthetically Active Radiation (PAR)'@en ;
+    skos:definition 'Radiometer measuring Photosynthetically Active Radiation (PAR)'@en ;
+    skos:notation 'SDN:R25::RADIOMETER_PAR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R25/current/SPECTROPHOTOMETER_BISULFIDE/1/> .
+<http://vocab.nerc.ac.uk/collection/R25/current/SPECTROPHOTOMETER_BISULFIDE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R25/current/SPECTROPHOTOMETER_BISULFIDE/>;
+    dc:modified '2019-10-11T15:06:36'^^xsd:dateTime ;
+    skos:altLabel 'SPECTROPHOTOMETER_BISULFIDE'^^xsd:string ;
+    skos:prefLabel 'Spectrophotometer measuring bisulfide'@en ;
+    skos:definition 'Spectrophotometer measuring bisulfide concentration'@en ;
+    skos:notation 'SDN:R25::SPECTROPHOTOMETER_BISULFIDE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R25/current/SPECTROPHOTOMETER_NITRATE/1/> .
+<http://vocab.nerc.ac.uk/collection/R25/current/SPECTROPHOTOMETER_NITRATE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R25/current/SPECTROPHOTOMETER_NITRATE/>;
+    dc:modified '2019-10-11T15:06:36'^^xsd:dateTime ;
+    skos:altLabel 'SPECTROPHOTOMETER_NITRATE'^^xsd:string ;
+    skos:prefLabel 'Spectrophotometer measuring nitrate'@en ;
+    skos:definition 'Spectrophotometer measuring nitrate concentration'@en ;
+    skos:notation 'SDN:R25::SPECTROPHOTOMETER_NITRATE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R25/current/STS_CNDC/1/> .
+<http://vocab.nerc.ac.uk/collection/R25/current/STS_CNDC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R25/current/STS_CNDC/>;
+    dc:modified '2019-10-11T15:06:36'^^xsd:dateTime ;
+    skos:altLabel 'STS_CNDC'^^xsd:string ;
+    skos:prefLabel 'Surface Temperature and Salinity (STS) sensor measuring conductivity'@en ;
+    skos:definition 'Surface Temperature and Salinity (STS) sensor measuring conductivity'@en ;
+    skos:notation 'SDN:R25::STS_CNDC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R25/current/STS_TEMP/1/> .
+<http://vocab.nerc.ac.uk/collection/R25/current/STS_TEMP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R25/current/STS_TEMP/>;
+    dc:modified '2019-10-11T15:06:36'^^xsd:dateTime ;
+    skos:altLabel 'STS_TEMP'^^xsd:string ;
+    skos:prefLabel 'Surface Temperature and Salinity (STS) sensor measuring temperature'@en ;
+    skos:definition 'Surface Temperature and Salinity (STS) sensor measuring temperature'@en ;
+    skos:notation 'SDN:R25::STS_TEMP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R25/current/TRANSISTOR_PH/1/> .
+<http://vocab.nerc.ac.uk/collection/R25/current/TRANSISTOR_PH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R25/current/TRANSISTOR_PH/>;
+    dc:modified '2019-10-11T15:06:36'^^xsd:dateTime ;
+    skos:altLabel 'TRANSISTOR_PH'^^xsd:string ;
+    skos:prefLabel 'Transistor measuring pH'@en ;
+    skos:definition 'Transistor measuring pH'@en ;
+    skos:notation 'SDN:R25::TRANSISTOR_PH'^^xsd:string .

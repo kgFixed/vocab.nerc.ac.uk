@@ -1,0 +1,147 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P37/2015_01_01_00_00_00_2015_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P37/current/360_day/1/> .
+<http://vocab.nerc.ac.uk/collection/P37/current/360_day/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P37/current/360_day/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '360_day'@en ;
+    skos:definition 'All years are 360 days divided into 30 day months.'@en ;
+    skos:notation 'SDN:P37::360_day'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P37/current/365_day/1/> .
+<http://vocab.nerc.ac.uk/collection/P37/current/365_day/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P37/current/365_day/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '365_day'@en ;
+    skos:definition 'Gregorian calendar without leap years, i.e., all years are 365 days long.'@en ;
+    skos:notation 'SDN:P37::365_day'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P37/current/366_day/1/> .
+<http://vocab.nerc.ac.uk/collection/P37/current/366_day/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P37/current/366_day/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '366_day'@en ;
+    skos:definition 'Gregorian calendar with every year being a leap year, i.e., all years are 366 days long.'@en ;
+    skos:notation 'SDN:P37::366_day'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P37/current/all_leap/1/> .
+<http://vocab.nerc.ac.uk/collection/P37/current/all_leap/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P37/current/all_leap/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'all_leap'@en ;
+    skos:definition 'Gregorian calendar with every year being a leap year, i.e., all years are 366 days long.'@en ;
+    skos:notation 'SDN:P37::all_leap'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P37/current/gregorian/1/> .
+<http://vocab.nerc.ac.uk/collection/P37/current/gregorian/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P37/current/gregorian/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'gregorian'@en ;
+    skos:definition 'Mixed Gregorian/Julian calendar, as implemented in the Unidata Udunits software, in which dates prior to 15th October 1582 are assumed to use  the Julian calendar. Dates on or after 15th October 1582 are assumed to use the Gregorian calendar.'@en ;
+    skos:notation 'SDN:P37::gregorian'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P37/current/julian/1/> .
+<http://vocab.nerc.ac.uk/collection/P37/current/julian/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P37/current/julian/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'julian'@en ;
+    skos:definition 'Julian calendar.'@en ;
+    skos:notation 'SDN:P37::julian'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P37/current/noleap/1/> .
+<http://vocab.nerc.ac.uk/collection/P37/current/noleap/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P37/current/noleap/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'noleap'@en ;
+    skos:definition 'Gregorian calendar without leap years, i.e., all years are 365 days long.'@en ;
+    skos:notation 'SDN:P37::noleap'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P37/current/none/1/> .
+<http://vocab.nerc.ac.uk/collection/P37/current/none/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P37/current/none/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'none'@en ;
+    skos:definition 'No calendar.'@en ;
+    skos:notation 'SDN:P37::none'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P37/current/proleptic_gregorian/1/> .
+<http://vocab.nerc.ac.uk/collection/P37/current/proleptic_gregorian/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P37/current/proleptic_gregorian/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'proleptic_gregorian'@en ;
+    skos:definition 'A Gregorian calendar extended to dates before the 15th of October 1582. That is, a year is a leap year if either: (i) it is divisible by 4 but not by 100; (ii) it is divisible by 400.'@en ;
+    skos:notation 'SDN:P37::proleptic_gregorian'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P37/current/standard/1/> .
+<http://vocab.nerc.ac.uk/collection/P37/current/standard/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P37/current/standard/>;
+    dc:modified '2015-02-18T11:28:48'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'standard'@en ;
+    skos:definition 'Mixed Gregorian/Julian calendar, as implemented in the Unidata Udunits software, in which dates prior to 15th October 1582 are assumed to use  the Julian calendar. Dates on or after 15th October 1582 are assumed to use the Gregorian calendar.'@en ;
+    skos:notation 'SDN:P37::standard'^^xsd:string .

@@ -1,0 +1,120 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/B21/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B21/current/B21001/1/> .
+<http://vocab.nerc.ac.uk/collection/B21/current/B21001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B21/current/B21001/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'European'@en ;
+    skos:definition 'European level'@en ;
+    skos:notation 'SDN:B21::B21001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B21/current/B21002/1/> .
+<http://vocab.nerc.ac.uk/collection/B21/current/B21002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B21/current/B21002/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Global'@en ;
+    skos:definition 'Worldwide'@en ;
+    skos:notation 'SDN:B21::B21002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B21/current/B21003/1/> .
+<http://vocab.nerc.ac.uk/collection/B21/current/B21003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B21/current/B21003/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'National'@en ;
+    skos:definition 'Country level'@en ;
+    skos:notation 'SDN:B21::B21003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B21/current/B21004/1/> .
+<http://vocab.nerc.ac.uk/collection/B21/current/B21004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B21/current/B21004/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Regional'@en ;
+    skos:definition 'Sub national  level within a country'@en ;
+    skos:notation 'SDN:B21::B21004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B21/current/B21005/1/> .
+<http://vocab.nerc.ac.uk/collection/B21/current/B21005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B21/current/B21005/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Regional(Transboundary)'@en ;
+    skos:definition 'Sub national level across countries'@en ;
+    skos:notation 'SDN:B21::B21005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B21/current/B21006/1/> .
+<http://vocab.nerc.ac.uk/collection/B21/current/B21006/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B21/current/B21006/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Local'@en ;
+    skos:definition 'Sub regional level within a country'@en ;
+    skos:notation 'SDN:B21::B21006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B21/current/B21007/1/> .
+<http://vocab.nerc.ac.uk/collection/B21/current/B21007/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B21/current/B21007/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Local(Transboundary)'@en ;
+    skos:definition 'Sub regional level across countries'@en ;
+    skos:notation 'SDN:B21::B21007'^^xsd:string .

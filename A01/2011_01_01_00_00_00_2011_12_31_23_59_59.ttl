@@ -1,0 +1,165 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/A01/2011_01_01_00_00_00_2011_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/A01/current/Agents_of_Coastal_Change/1/> .
+<http://vocab.nerc.ac.uk/collection/A01/current/Agents_of_Coastal_Change/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/A01/current/Agents_of_Coastal_Change/>;
+    dc:modified '2011-08-15T11:25:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Agents of Coastal Change'@en ;
+    skos:definition 'Actions and processes that change the nature or location of the boundary between land and sea.'@en ;
+    skos:notation 'SDN:A01::Agents_of_Coastal_Change'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/A01/current/Effects_of_Coastal_Change/1/> .
+<http://vocab.nerc.ac.uk/collection/A01/current/Effects_of_Coastal_Change/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/A01/current/Effects_of_Coastal_Change/>;
+    dc:modified '2011-08-15T11:25:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Effects of Coastal Change'@en ;
+    skos:definition 'The consequences of changes in the nature or location of the boundary between land and sea.'@en ;
+    skos:notation 'SDN:A01::Effects_of_Coastal_Change'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/A01/current/Emergency_Response_and_Disaster_Recovery/1/> .
+<http://vocab.nerc.ac.uk/collection/A01/current/Emergency_Response_and_Disaster_Recovery/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/A01/current/Emergency_Response_and_Disaster_Recovery/>;
+    dc:modified '2011-08-15T11:25:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Emergency Response and Disaster Recovery'@en ;
+    skos:definition 'Actions, requirements and processes that occur in response to natural or human events that destroy or put at risk life, property or the environment (including wildlife).'@en ;
+    skos:notation 'SDN:A01::Emergency_Response_and_Disaster_Recovery'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/A01/current/Habitat_Alteration/1/> .
+<http://vocab.nerc.ac.uk/collection/A01/current/Habitat_Alteration/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/A01/current/Habitat_Alteration/>;
+    dc:modified '2011-08-15T11:25:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Habitat Alteration'@en ;
+    skos:definition 'Processes, activities and events that change the nature of the environment provided for living organisms.'@en ;
+    skos:notation 'SDN:A01::Habitat_Alteration'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/A01/current/Human_Activity/1/> .
+<http://vocab.nerc.ac.uk/collection/A01/current/Human_Activity/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/A01/current/Human_Activity/>;
+    dc:modified '2011-08-15T11:25:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Human Activity'@en ;
+    skos:definition 'Actions and processes caused by humans.'@en ;
+    skos:notation 'SDN:A01::Human_Activity'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/A01/current/Human_Responses_to_Coastal_Change/1/> .
+<http://vocab.nerc.ac.uk/collection/A01/current/Human_Responses_to_Coastal_Change/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/A01/current/Human_Responses_to_Coastal_Change/>;
+    dc:modified '2011-08-15T11:25:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Human Responses to Coastal Change'@en ;
+    skos:definition 'Human actions, requirements and processes that occur in response to changes in the nature or location of the boundary between land and sea.'@en ;
+    skos:notation 'SDN:A01::Human_Responses_to_Coastal_Change'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/A01/current/Legislation_and_Policy/1/> .
+<http://vocab.nerc.ac.uk/collection/A01/current/Legislation_and_Policy/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/A01/current/Legislation_and_Policy/>;
+    dc:modified '2011-08-15T11:25:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Legislation and Policy'@en ;
+    skos:definition 'Actions and processes of local and national government.'@en ;
+    skos:notation 'SDN:A01::Legislation_and_Policy'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/A01/current/Mitigation_Strategies_and_Preparedness/1/> .
+<http://vocab.nerc.ac.uk/collection/A01/current/Mitigation_Strategies_and_Preparedness/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/A01/current/Mitigation_Strategies_and_Preparedness/>;
+    dc:modified '2011-08-15T11:25:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mitigation Strategies and Preparedness'@en ;
+    skos:definition 'Actions, requirements and processes required to prevent the occurrence of catastrophic events.'@en ;
+    skos:notation 'SDN:A01::Mitigation_Strategies_and_Preparedness'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/A01/current/Natural_Processes/1/> .
+<http://vocab.nerc.ac.uk/collection/A01/current/Natural_Processes/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/A01/current/Natural_Processes/>;
+    dc:modified '2011-08-15T11:25:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Natural Processes'@en ;
+    skos:definition 'Actions and processes that result from the forces of nature such as weather and tides.'@en ;
+    skos:notation 'SDN:A01::Natural_Processes'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/A01/current/Sediment_Budget/1/> .
+<http://vocab.nerc.ac.uk/collection/A01/current/Sediment_Budget/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/A01/current/Sediment_Budget/>;
+    dc:modified '2011-08-15T11:25:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sediment Budget'@en ;
+    skos:definition 'The balance between sediment added to and removed from the coastal system.'@en ;
+    skos:notation 'SDN:A01::Sediment_Budget'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/A01/current/Shoreline_Accretion_Shoaling_and_Emergence/1/> .
+<http://vocab.nerc.ac.uk/collection/A01/current/Shoreline_Accretion_Shoaling_and_Emergence/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/A01/current/Shoreline_Accretion_Shoaling_and_Emergence/>;
+    dc:modified '2011-08-15T11:25:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Shoreline Accretion, Shoaling and Emergence'@en ;
+    skos:definition 'Processes, activities and events that extend the boundary between land and sea seawards.'@en ;
+    skos:notation 'SDN:A01::Shoreline_Accretion_Shoaling_and_Emergence'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/A01/current/Shoreline_Erosion_Flooding_and_Submergence/1/> .
+<http://vocab.nerc.ac.uk/collection/A01/current/Shoreline_Erosion_Flooding_and_Submergence/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/A01/current/Shoreline_Erosion_Flooding_and_Submergence/>;
+    dc:modified '2011-08-15T11:25:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Shoreline Erosion, Flooding and Submergence'@en ;
+    skos:definition 'Processes, activities and events that extend the boundary between land and sea landwards.'@en ;
+    skos:notation 'SDN:A01::Shoreline_Erosion_Flooding_and_Submergence'^^xsd:string .

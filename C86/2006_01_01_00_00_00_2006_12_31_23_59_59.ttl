@@ -1,0 +1,93 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C86/2006_01_01_00_00_00_2006_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C86/current/SDNPR001/1/> .
+<http://vocab.nerc.ac.uk/collection/C86/current/SDNPR001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C86/current/SDNPR001/>;
+    dc:modified '2006-08-18T14:33:02'^^xsd:dateTime ;
+    skos:altLabel 'MetadataCollator'^^xsd:string ;
+    skos:prefLabel 'metadata collator'@en ;
+    skos:definition 'Responsible for the compilation of metadata for one or more datasets and submission of that metadata to the appropriate SeaDataNet metadata repository.'@en ;
+    skos:notation 'SDN:C86::SDNPR001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C86/current/SDNPR003/1/> .
+<http://vocab.nerc.ac.uk/collection/C86/current/SDNPR003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C86/current/SDNPR003/>;
+    dc:modified '2006-08-18T14:33:02'^^xsd:dateTime ;
+    skos:altLabel 'ProgrammeArchive'^^xsd:string ;
+    skos:prefLabel 'programme archive responsibility'@en ;
+    skos:definition 'Responsible for the archive centre handling distribution of delayed mode data from a collecting programme and the long term stewardship of its data.'@en ;
+    skos:notation 'SDN:C86::SDNPR003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C86/current/SDNPR002/1/> .
+<http://vocab.nerc.ac.uk/collection/C86/current/SDNPR002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C86/current/SDNPR002/>;
+    dc:modified '2006-08-18T14:33:02'^^xsd:dateTime ;
+    skos:altLabel 'ProgrammeOperation'^^xsd:string ;
+    skos:prefLabel 'programme operation responsibility'@en ;
+    skos:definition 'Responsible for the operation of a data collecting programme.'@en ;
+    skos:notation 'SDN:C86::SDNPR002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C86/current/SDNPR004/1/> .
+<http://vocab.nerc.ac.uk/collection/C86/current/SDNPR004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C86/current/SDNPR004/>;
+    dc:modified '2006-08-18T14:33:02'^^xsd:dateTime ;
+    skos:altLabel 'ProgrammeRealTime'^^xsd:string ;
+    skos:prefLabel 'programme realtime responsibility'@en ;
+    skos:definition 'Responsible for the centre handling distribution of true and near real time data from a collecting programme.'@en ;
+    skos:notation 'SDN:C86::SDNPR004'^^xsd:string .

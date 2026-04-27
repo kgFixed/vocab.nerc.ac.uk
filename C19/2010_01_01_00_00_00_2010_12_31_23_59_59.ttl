@@ -1,0 +1,199 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C19/2010_01_01_00_00_00_2010_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C19/2009_01_01_00_00_00_2009_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2010-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/IRM/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/IRM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/IRM/>;
+    dc:modified '2010-10-04T10:57:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Irminger Sea'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 52.3194,
+    "Easternmost_longitude": -21.0859,
+    "Northernmost_latitude": 74.2241,
+    "Westernmost_longitude": -45.8572
+}}}'''@en ;
+    skos:notation 'SDN:C19::IRM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/ZZ/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/ZZ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/ZZ/>;
+    dc:modified '2010-10-04T10:51:43'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Unknown'@en ;
+    skos:definition 'The correct value is not known to and not computable by the creator of this information. However a correct value probably exists.'@en ;
+    skos:notation 'SDN:C19::ZZ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/SVX00020/3/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00020/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/SVX00020/>;
+    dc:modified '2010-10-04T09:21:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'South American freshwater bodies'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C19::SVX00020'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/SVX00006/3/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00006/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/SVX00006/>;
+    dc:modified '2010-10-04T09:20:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Australian freshwater bodies'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C19::SVX00006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/SVX00002/3/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00002/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/SVX00002/>;
+    dc:modified '2010-10-04T09:20:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Antarctic freshwater bodies'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C19::SVX00002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/SVX00001/3/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/SVX00001/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/SVX00001/>;
+    dc:modified '2010-10-04T09:19:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'African freshwater bodies'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C19::SVX00001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/IJM/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/IJM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/IJM/>;
+    dc:modified '2010-10-04T09:15:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'IJsselmeer'@en ;
+    skos:definition '''{"node": {
+    "Spatial_Coverage": {
+        "Southernmost_latitude": 52.2729,
+        "Easternmost_longitude": 6.0234,
+        "Northernmost_latitude": 53.2302,
+        "Westernmost_longitude": 4.9841
+    },
+    "content": "."
+}}'''@en ;
+    skos:notation 'SDN:C19::IJM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/MKM/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/MKM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/MKM/>;
+    dc:modified '2010-10-04T09:11:36'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Markermeer'@en ;
+    skos:definition '''{"node": {
+    "Spatial_Coverage": {
+        "Southernmost_latitude": 52.204,
+        "Easternmost_longitude": 5.6812,
+        "Northernmost_latitude": 52.7511,
+        "Westernmost_longitude": 4.9528
+    },
+    "content": "."
+}}'''@en ;
+    skos:notation 'SDN:C19::MKM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/NSL02/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/NSL02/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/NSL02/>;
+    dc:modified '2010-05-25T19:56:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Eastern Scheldt'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 51.403094,
+    "Easternmost_longitude": 4.253288,
+    "Northernmost_latitude": 51.822408,
+    "Westernmost_longitude": 3.546351
+}}}'''@en ;
+    skos:notation 'SDN:C19::NSL02'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/NSL03/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/NSL03/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/NSL03/>;
+    dc:modified '2010-05-25T19:56:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Wadden Sea'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 52.874095,
+    "Easternmost_longitude": 9.837974,
+    "Northernmost_latitude": 55.761223,
+    "Westernmost_longitude": 4.45101
+}}}'''@en ;
+    skos:notation 'SDN:C19::NSL03'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C19/current/NSL01/1/> .
+<http://vocab.nerc.ac.uk/collection/C19/current/NSL01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C19/current/NSL01/>;
+    dc:modified '2010-05-25T19:56:44'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Western Scheldt'@en ;
+    skos:definition '''{"node": {"Spatial_Coverage": {
+    "Southernmost_latitude": 51.327511,
+    "Easternmost_longitude": 4.253288,
+    "Northernmost_latitude": 51.464513,
+    "Westernmost_longitude": 3.546351
+}}}'''@en ;
+    skos:notation 'SDN:C19::NSL01'^^xsd:string .

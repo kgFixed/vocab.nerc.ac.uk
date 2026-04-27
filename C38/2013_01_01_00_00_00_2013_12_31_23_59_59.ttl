@@ -1,0 +1,131 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C38/2013_01_01_00_00_00_2013_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C38/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2013-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH1378/5/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH1378/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH1378/>;
+    dc:modified '2013-06-20T11:56:02'^^xsd:dateTime ;
+    skos:altLabel 'Le Port'^^xsd:string ;
+    skos:prefLabel 'Le Port'@en ;
+    skos:definition '''{"node": {
+    "country": "Réunion",
+    "latitude": -20.916667,
+    "longitude": 55.3
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH1378'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH1379/5/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH1379/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH1379/>;
+    dc:modified '2013-06-20T11:56:02'^^xsd:dateTime ;
+    skos:altLabel 'Saint-Denis'^^xsd:string ;
+    skos:prefLabel 'Saint-Denis'@en ;
+    skos:definition '''{"node": {
+    "country": "Réunion",
+    "latitude": -20.866667,
+    "longitude": 55.466667
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH1379'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH1370/5/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH1370/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH1370/>;
+    dc:modified '2013-06-20T11:56:02'^^xsd:dateTime ;
+    skos:altLabel 'Saint-Pierre'^^xsd:string ;
+    skos:prefLabel 'Saint-Pierre'@en ;
+    skos:definition '''{"node": {
+    "country": "Réunion",
+    "latitude": -21.333333,
+    "longitude": 55.483333
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH1370'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6473/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6473/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6473/>;
+    dc:modified '2013-05-14T14:43:48'^^xsd:dateTime ;
+    skos:altLabel 'Caniçal'^^xsd:string ;
+    skos:prefLabel 'Caniçal'@en ;
+    skos:definition '''{"node": {
+    "country": "Portugal",
+    "notes": "Madeira",
+    "latitude": 32.737003,
+    "longitude": -16.732657
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6473'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6472/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6472/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6472/>;
+    dc:modified '2013-02-06T13:48:46'^^xsd:dateTime ;
+    skos:altLabel 'Cambridge'^^xsd:string ;
+    skos:prefLabel 'Cambridge'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "notes": "Maryland",
+    "latitude": 38.578,
+    "longitude": -76.0732
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6472'^^xsd:string .

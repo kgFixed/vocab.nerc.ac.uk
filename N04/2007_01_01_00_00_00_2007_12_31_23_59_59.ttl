@@ -1,0 +1,120 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/N04/2007_01_01_00_00_00_2007_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/N04/current/7/2/> .
+<http://vocab.nerc.ac.uk/collection/N04/current/7/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/N04/current/7/>;
+    dc:modified '2007-08-17T16:48:13'^^xsd:dateTime ;
+    skos:altLabel 'NumSim Page'^^xsd:string ;
+    skos:prefLabel 'NumSim description'@en ;
+    skos:definition 'Pointer to a NumSim record via an appropriate service.'@en ;
+    skos:notation 'SDN:N04::7'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/N04/current/4/1/> .
+<http://vocab.nerc.ac.uk/collection/N04/current/4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/N04/current/4/>;
+    dc:modified '2007-05-16T12:49:54'^^xsd:dateTime ;
+    skos:altLabel 'CuratorPage'^^xsd:string ;
+    skos:prefLabel 'curator home page'@en ;
+    skos:definition 'Home page of data curator.'@en ;
+    skos:notation 'SDN:N04::4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/N04/current/3/1/> .
+<http://vocab.nerc.ac.uk/collection/N04/current/3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/N04/current/3/>;
+    dc:modified '2007-05-16T12:49:54'^^xsd:dateTime ;
+    skos:altLabel 'DataPage'^^xsd:string ;
+    skos:prefLabel 'data home page'@en ;
+    skos:definition 'Pointer to a page which will allow downloading of data.'@en ;
+    skos:notation 'SDN:N04::3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/N04/current/2/1/> .
+<http://vocab.nerc.ac.uk/collection/N04/current/2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/N04/current/2/>;
+    dc:modified '2007-05-16T12:49:54'^^xsd:dateTime ;
+    skos:altLabel 'DataURL'^^xsd:string ;
+    skos:prefLabel 'data uniform resource locator'@en ;
+    skos:definition 'Pointer direct to the dataset instantiation.'@en ;
+    skos:notation 'SDN:N04::2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/N04/current/5/1/> .
+<http://vocab.nerc.ac.uk/collection/N04/current/5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/N04/current/5/>;
+    dc:modified '2007-05-16T12:49:54'^^xsd:dateTime ;
+    skos:altLabel 'ExtMetadata'^^xsd:string ;
+    skos:prefLabel 'extended metadata'@en ;
+    skos:definition 'Pointer to the MOLES record for the object via the appropriate service.'@en ;
+    skos:notation 'SDN:N04::5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/N04/current/6/1/> .
+<http://vocab.nerc.ac.uk/collection/N04/current/6/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/N04/current/6/>;
+    dc:modified '2007-05-16T12:49:54'^^xsd:dateTime ;
+    skos:altLabel 'MetadataSource'^^xsd:string ;
+    skos:prefLabel 'original metadata source'@en ;
+    skos:definition 'Pointer to an original metadata record imported into MOLES.'@en ;
+    skos:notation 'SDN:N04::6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/N04/current/1/1/> .
+<http://vocab.nerc.ac.uk/collection/N04/current/1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/N04/current/1/>;
+    dc:modified '2007-05-16T12:49:54'^^xsd:dateTime ;
+    skos:altLabel 'ObjectPage'^^xsd:string ;
+    skos:prefLabel 'object home page'@en ;
+    skos:definition 'Descriptive home page for the referenced object'@en ;
+    skos:notation 'SDN:N04::1'^^xsd:string .

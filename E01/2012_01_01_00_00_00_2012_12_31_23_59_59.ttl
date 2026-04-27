@@ -1,0 +1,272 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/E01/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/E01/2009_01_01_00_00_00_2011_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2012-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/E01/current/ESS143/2/> .
+<http://vocab.nerc.ac.uk/collection/E01/current/ESS143/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/E01/current/ESS143/>;
+    dc:modified '2012-09-26T14:14:49'^^xsd:dateTime ;
+    skos:altLabel 'andenes'^^xsd:string ;
+    skos:prefLabel 'Andenes'@en ;
+    skos:definition '''{"node": {
+    "country": "Norway",
+    "latitude": 69.3167,
+    "longitude": 16.15
+}}'''@en ;
+    skos:notation 'SDN:E01::ESS143'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/E01/current/ESS156/1/> .
+<http://vocab.nerc.ac.uk/collection/E01/current/ESS156/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/E01/current/ESS156/>;
+    dc:modified '2012-09-20T14:39:08'^^xsd:dateTime ;
+    skos:altLabel 'harwich'^^xsd:string ;
+    skos:prefLabel 'Harwich'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "latitude": 51.9467,
+    "longitude": 1.2863
+}}'''@en ;
+    skos:notation 'SDN:E01::ESS156'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/E01/current/ESS113/3/> .
+<http://vocab.nerc.ac.uk/collection/E01/current/ESS113/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/E01/current/ESS113/>;
+    dc:modified '2012-09-20T14:23:08'^^xsd:dateTime ;
+    skos:altLabel 'st_helier_jersey'^^xsd:string ;
+    skos:prefLabel 'St. Helier (Jersey)'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "latitude": 49.1833,
+    "longitude": -2.1167
+}}'''@en ;
+    skos:notation 'SDN:E01::ESS113'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/E01/current/ESS145/1/> .
+<http://vocab.nerc.ac.uk/collection/E01/current/ESS145/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/E01/current/ESS145/>;
+    dc:modified '2012-04-22T12:16:43'^^xsd:dateTime ;
+    skos:altLabel 'aasiaat'^^xsd:string ;
+    skos:prefLabel 'Aasiaat'@en ;
+    skos:definition '''{"node": {
+    "country": "Greenland",
+    "latitude": 68.71,
+    "longitude": -52.8833
+}}'''@en ;
+    skos:notation 'SDN:E01::ESS145'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/E01/current/ESS146/1/> .
+<http://vocab.nerc.ac.uk/collection/E01/current/ESS146/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/E01/current/ESS146/>;
+    dc:modified '2012-04-22T12:16:43'^^xsd:dateTime ;
+    skos:altLabel 'ammassalik'^^xsd:string ;
+    skos:prefLabel 'Ammassalik'@en ;
+    skos:definition '''{"node": {
+    "country": "Greenland",
+    "latitude": 65.5,
+    "longitude": -37
+}}'''@en ;
+    skos:notation 'SDN:E01::ESS146'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/E01/current/ESS153/1/> .
+<http://vocab.nerc.ac.uk/collection/E01/current/ESS153/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/E01/current/ESS153/>;
+    dc:modified '2012-04-22T12:16:43'^^xsd:dateTime ;
+    skos:altLabel 'cascais'^^xsd:string ;
+    skos:prefLabel 'Cascais'@en ;
+    skos:definition '''{"node": {
+    "country": "Portugal",
+    "latitude": 38.7,
+    "longitude": -9.417
+}}'''@en ;
+    skos:notation 'SDN:E01::ESS153'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/E01/current/ESS144/1/> .
+<http://vocab.nerc.ac.uk/collection/E01/current/ESS144/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/E01/current/ESS144/>;
+    dc:modified '2012-04-22T12:16:43'^^xsd:dateTime ;
+    skos:altLabel 'ilulisaat'^^xsd:string ;
+    skos:prefLabel 'Ilulisaat'@en ;
+    skos:definition '''{"node": {
+    "country": "Greenland",
+    "latitude": 69.2167,
+    "longitude": -51.1
+}}'''@en ;
+    skos:notation 'SDN:E01::ESS144'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/E01/current/ESS154/1/> .
+<http://vocab.nerc.ac.uk/collection/E01/current/ESS154/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/E01/current/ESS154/>;
+    dc:modified '2012-04-22T12:16:43'^^xsd:dateTime ;
+    skos:altLabel 'lagos'^^xsd:string ;
+    skos:prefLabel 'Lagos'@en ;
+    skos:definition '''{"node": {
+    "country": "Portugal",
+    "latitude": 37.1,
+    "longitude": -8.6667
+}}'''@en ;
+    skos:notation 'SDN:E01::ESS154'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/E01/current/ESS152/1/> .
+<http://vocab.nerc.ac.uk/collection/E01/current/ESS152/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/E01/current/ESS152/>;
+    dc:modified '2012-04-22T12:16:43'^^xsd:dateTime ;
+    skos:altLabel 'malin_head'^^xsd:string ;
+    skos:prefLabel 'Malin Head'@en ;
+    skos:definition '''{"node": {
+    "country": "Ireland",
+    "latitude": 55.3717,
+    "longitude": -7.3333
+}}'''@en ;
+    skos:notation 'SDN:E01::ESS152'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/E01/current/ESS149/1/> .
+<http://vocab.nerc.ac.uk/collection/E01/current/ESS149/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/E01/current/ESS149/>;
+    dc:modified '2012-04-22T12:16:43'^^xsd:dateTime ;
+    skos:altLabel 'maniitsoq'^^xsd:string ;
+    skos:prefLabel 'Maniitsoq'@en ;
+    skos:definition '''{"node": {
+    "country": "Greenland",
+    "latitude": 65.4133,
+    "longitude": -52.905
+}}'''@en ;
+    skos:notation 'SDN:E01::ESS149'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/E01/current/ESS155/1/> .
+<http://vocab.nerc.ac.uk/collection/E01/current/ESS155/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/E01/current/ESS155/>;
+    dc:modified '2012-04-22T12:16:43'^^xsd:dateTime ;
+    skos:altLabel 'ponta_delgada'^^xsd:string ;
+    skos:prefLabel 'Ponta Delgada'@en ;
+    skos:definition '''{"node": {
+    "country": "Portugal",
+    "latitude": 37.735,
+    "longitude": -25.6717
+}}'''@en ;
+    skos:notation 'SDN:E01::ESS155'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/E01/current/ESS151/1/> .
+<http://vocab.nerc.ac.uk/collection/E01/current/ESS151/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/E01/current/ESS151/>;
+    dc:modified '2012-04-22T12:16:43'^^xsd:dateTime ;
+    skos:altLabel 'qaqortoq'^^xsd:string ;
+    skos:prefLabel 'Qaqortoq'@en ;
+    skos:definition '''{"node": {
+    "country": "Greenland",
+    "latitude": 60.7167,
+    "longitude": -46.0333
+}}'''@en ;
+    skos:notation 'SDN:E01::ESS151'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/E01/current/ESS150/1/> .
+<http://vocab.nerc.ac.uk/collection/E01/current/ESS150/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/E01/current/ESS150/>;
+    dc:modified '2012-04-22T12:16:43'^^xsd:dateTime ;
+    skos:altLabel 'reykjavik'^^xsd:string ;
+    skos:prefLabel 'Reykjavik'@en ;
+    skos:definition '''{"node": {
+    "country": "Iceland",
+    "latitude": 64.15,
+    "longitude": -21.9333
+}}'''@en ;
+    skos:notation 'SDN:E01::ESS150'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/E01/current/ESS148/1/> .
+<http://vocab.nerc.ac.uk/collection/E01/current/ESS148/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/E01/current/ESS148/>;
+    dc:modified '2012-04-22T12:16:43'^^xsd:dateTime ;
+    skos:altLabel 'rorvik'^^xsd:string ;
+    skos:prefLabel 'Rørvik'@en ;
+    skos:definition '''{"node": {
+    "country": "Norway",
+    "latitude": 64.8667,
+    "longitude": 11.25
+}}'''@en ;
+    skos:notation 'SDN:E01::ESS148'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/E01/current/ESS147/1/> .
+<http://vocab.nerc.ac.uk/collection/E01/current/ESS147/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/E01/current/ESS147/>;
+    dc:modified '2012-04-22T12:16:43'^^xsd:dateTime ;
+    skos:altLabel 'sisimiut'^^xsd:string ;
+    skos:prefLabel 'Sisimiut'@en ;
+    skos:definition '''{"node": {
+    "country": "Greenland",
+    "latitude": 66.9333,
+    "longitude": -53.6667
+}}'''@en ;
+    skos:notation 'SDN:E01::ESS147'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/E01/current/ESS142/1/> .
+<http://vocab.nerc.ac.uk/collection/E01/current/ESS142/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/E01/current/ESS142/>;
+    dc:modified '2012-04-22T12:16:43'^^xsd:dateTime ;
+    skos:altLabel 'vardo'^^xsd:string ;
+    skos:prefLabel 'Vardø'@en ;
+    skos:definition '''{"node": {
+    "country": "Norway",
+    "latitude": 70.3333,
+    "longitude": 31.1
+}}'''@en ;
+    skos:notation 'SDN:E01::ESS142'^^xsd:string .

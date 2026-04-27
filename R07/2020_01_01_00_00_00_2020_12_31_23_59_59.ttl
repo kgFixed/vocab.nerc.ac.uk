@@ -1,0 +1,183 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/R07/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R07/current/CF/1/> .
+<http://vocab.nerc.ac.uk/collection/R07/current/CF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R07/current/CF/>;
+    dc:modified '2020-04-07T22:59:46'^^xsd:dateTime ;
+    skos:altLabel 'CF'^^xsd:string ;
+    skos:prefLabel 'Quality flag change'@en ;
+    skos:definition 'A quality flag was changed.'@en ;
+    skos:notation 'SDN:R07::CF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R07/current/CR/1/> .
+<http://vocab.nerc.ac.uk/collection/R07/current/CR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R07/current/CR/>;
+    dc:modified '2020-04-07T22:59:46'^^xsd:dateTime ;
+    skos:altLabel 'CR'^^xsd:string ;
+    skos:prefLabel 'Record creation'@en ;
+    skos:definition 'A new record was created.'@en ;
+    skos:notation 'SDN:R07::CR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R07/current/CV/1/> .
+<http://vocab.nerc.ac.uk/collection/R07/current/CV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R07/current/CV/>;
+    dc:modified '2020-04-07T22:59:46'^^xsd:dateTime ;
+    skos:altLabel 'CV'^^xsd:string ;
+    skos:prefLabel 'Value change'@en ;
+    skos:definition 'A value was changed.'@en ;
+    skos:notation 'SDN:R07::CV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R07/current/DC/1/> .
+<http://vocab.nerc.ac.uk/collection/R07/current/DC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R07/current/DC/>;
+    dc:modified '2020-04-07T22:59:46'^^xsd:dateTime ;
+    skos:altLabel 'DC'^^xsd:string ;
+    skos:prefLabel 'Station check with duplicate checking software'@en ;
+    skos:definition 'The station was checked using duplicate checking software.'@en ;
+    skos:notation 'SDN:R07::DC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R07/current/ED/1/> .
+<http://vocab.nerc.ac.uk/collection/R07/current/ED/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R07/current/ED/>;
+    dc:modified '2020-04-07T22:59:46'^^xsd:dateTime ;
+    skos:altLabel 'ED'^^xsd:string ;
+    skos:prefLabel 'Parameter value edit'@en ;
+    skos:definition 'A parameter value was edited.'@en ;
+    skos:notation 'SDN:R07::ED'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R07/current/IP/1/> .
+<http://vocab.nerc.ac.uk/collection/R07/current/IP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R07/current/IP/>;
+    dc:modified '2020-04-07T22:59:46'^^xsd:dateTime ;
+    skos:altLabel 'IP'^^xsd:string ;
+    skos:prefLabel 'History group for complete input record'@en ;
+    skos:definition 'This history group operates on the complete input record.'@en ;
+    skos:notation 'SDN:R07::IP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R07/current/NG/1/> .
+<http://vocab.nerc.ac.uk/collection/R07/current/NG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R07/current/NG/>;
+    dc:modified '2020-04-07T22:59:46'^^xsd:dateTime ;
+    skos:altLabel 'NG'^^xsd:string ;
+    skos:prefLabel 'No good trace'@en ;
+    skos:definition 'No good trace.'@en ;
+    skos:notation 'SDN:R07::NG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R07/current/PE/1/> .
+<http://vocab.nerc.ac.uk/collection/R07/current/PE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R07/current/PE/>;
+    dc:modified '2020-04-07T22:59:46'^^xsd:dateTime ;
+    skos:altLabel 'PE'^^xsd:string ;
+    skos:prefLabel 'Position error'@en ;
+    skos:definition 'Profile position has been erroneously encoded, and has been corrected where possible.'@en ;
+    skos:notation 'SDN:R07::PE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R07/current/QC/1/> .
+<http://vocab.nerc.ac.uk/collection/R07/current/QC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R07/current/QC/>;
+    dc:modified '2020-04-07T22:59:46'^^xsd:dateTime ;
+    skos:altLabel 'QC'^^xsd:string ;
+    skos:prefLabel 'Quality control'@en ;
+    skos:definition 'Quality control performed.'@en ;
+    skos:notation 'SDN:R07::QC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R07/current/QCF/1/> .
+<http://vocab.nerc.ac.uk/collection/R07/current/QCF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R07/current/QCF/>;
+    dc:modified '2020-04-07T22:59:46'^^xsd:dateTime ;
+    skos:altLabel 'QCF$'^^xsd:string ;
+    skos:prefLabel 'Tests failed'@en ;
+    skos:definition 'Tests failed.'@en ;
+    skos:notation 'SDN:R07::QCF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R07/current/QCP/1/> .
+<http://vocab.nerc.ac.uk/collection/R07/current/QCP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R07/current/QCP/>;
+    dc:modified '2020-04-07T22:59:46'^^xsd:dateTime ;
+    skos:altLabel 'QCP$'^^xsd:string ;
+    skos:prefLabel 'Tests performed'@en ;
+    skos:definition 'Tests performed.'@en ;
+    skos:notation 'SDN:R07::QCP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R07/current/SV/1/> .
+<http://vocab.nerc.ac.uk/collection/R07/current/SV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R07/current/SV/>;
+    dc:modified '2020-04-07T22:59:46'^^xsd:dateTime ;
+    skos:altLabel 'SV'^^xsd:string ;
+    skos:prefLabel 'Value set'@en ;
+    skos:definition 'Set a value.'@en ;
+    skos:notation 'SDN:R07::SV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R07/current/TE/1/> .
+<http://vocab.nerc.ac.uk/collection/R07/current/TE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R07/current/TE/>;
+    dc:modified '2020-04-07T22:59:46'^^xsd:dateTime ;
+    skos:altLabel 'TE'^^xsd:string ;
+    skos:prefLabel 'Time error'@en ;
+    skos:definition 'Profile date and/or time have been erroneously encoded, and have been corrected where possible.'@en ;
+    skos:notation 'SDN:R07::TE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R07/current/UP/1/> .
+<http://vocab.nerc.ac.uk/collection/R07/current/UP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R07/current/UP/>;
+    dc:modified '2020-04-07T22:59:46'^^xsd:dateTime ;
+    skos:altLabel 'UP'^^xsd:string ;
+    skos:prefLabel 'Station passed through the update program'@en ;
+    skos:definition 'The station passed through the update program.'@en ;
+    skos:notation 'SDN:R07::UP'^^xsd:string .

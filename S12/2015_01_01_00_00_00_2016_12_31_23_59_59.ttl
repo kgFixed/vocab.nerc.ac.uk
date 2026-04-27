@@ -1,0 +1,127 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S12/2015_01_01_00_00_00_2016_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S12/2013_01_01_00_00_00_2014_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2016-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1249/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1249/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1249/>;
+    dc:modified '2016-04-06T08:37:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'spleen'@en ;
+    skos:definition 'An abdominal organ involved in the production and removal of blood cells in most vertebrates and forming part of the immune system.'@en ;
+    skos:notation 'SDN:S12::S1249'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1248/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1248/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1248/>;
+    dc:modified '2016-04-06T08:36:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'kidney'@en ;
+    skos:definition 'The kidneys are bean-shaped organs that serve several essential regulatory roles in vertebrates. Their main function is the balance of Electrolytes in the blood, along with homeostasis of pH. They also remove excess organic molecules from the blood, and it is by this action that their best-known function is performed: the removal of waste products of metabolism.'@en ;
+    skos:notation 'SDN:S12::S1248'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1247/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1247/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1247/>;
+    dc:modified '2016-04-06T08:35:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'lung'@en ;
+    skos:definition 'The lungs are the primary organs of respiration in humans and many other animals including a few fish and some snails. In mammals and most other vertebrates, two lungs are located near the backbone on either side of the heart. Their function in the respiratory system is to extract oxygen from the atmosphere and transfer it into the bloodstream, and to release carbon dioxide from the bloodstream into the atmosphere, in a process of gas exchange.'@en ;
+    skos:notation 'SDN:S12::S1247'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1246/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1246/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1246/>;
+    dc:modified '2016-03-08T09:51:15'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'white muscle tissue'@en ;
+    skos:definition 'The white muscle is also known as fast muscle and depends on anaerobic metabolism for energy. This muscle contains lower levels of myoglobin and mitochondria than red muslce. It is the predominant type of muscle in fish.'@en ;
+    skos:notation 'SDN:S12::S1246'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1245/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1245/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1245/>;
+    dc:modified '2016-03-08T09:50:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'red muscle tissue'@en ;
+    skos:definition 'The red muscle is also known as slow muscle and depends on aerobic metabolism for energy. This muscle contains a lot of myoglobin, capillaries and also a lot of glycogen and lipids. It is located in most fish as a band along the side of the fish.'@en ;
+    skos:notation 'SDN:S12::S1245'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1244/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1244/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1244/>;
+    dc:modified '2016-03-07T17:06:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'heart'@en ;
+    skos:definition 'The heart is the organ that pumps blood around the body of an animal.'@en ;
+    skos:notation 'SDN:S12::S1244'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S12/current/S1243/1/> .
+<http://vocab.nerc.ac.uk/collection/S12/current/S1243/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S12/current/S1243/>;
+    dc:modified '2016-02-03T10:39:06'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'hepatopancreas'@en ;
+    skos:definition 'The hepatopancreas, digestive gland or midgut gland is an organ of the digestive tract of arthropods, molluscs and fish. It provides the functions which in mammals are provided separately by the liver and pancreas, including the production of digestive enzymes, and absorption of digested food.'@en ;
+    skos:notation 'SDN:S12::S1243'^^xsd:string .

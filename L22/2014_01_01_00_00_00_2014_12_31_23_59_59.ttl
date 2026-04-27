@@ -1,0 +1,1072 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2014_01_01_00_00_00_2014_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2013_01_01_00_00_00_2013_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2014-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0816/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0816/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0816/>;
+    dc:modified '2014-12-18T14:00:40'^^xsd:dateTime ;
+    skos:altLabel 'LGR N2O+CO 23d analyser'^^xsd:string ;
+    skos:prefLabel 'Los Gatos Research N2O and CO 23d ICOS Analyser'@en ;
+    skos:definition 'A continuous gas analyser capable of real-time, continuous measurements of ambient N2O,CO and H2O using off-axis integrated cavity output spectroscopy (OA ICOS) - laser absorption. Sub ppb precision (N2O,CO) in less than one second. Maximum Drift 0.1 ppb(CO, N2O) and 50 ppm or 1% of reading (H2O). Precision of 0.1 ppb/0.050 ppb (CO,N2O), 50 ppm/10 ppm (H2O). Operating Temperatures 10 to 35 deg C standard model or 0 to 45 deg C for enhanced model.'@en ;
+    skos:notation 'SDN:L22::TOOL0816'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0815/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0815/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0815/>;
+    dc:modified '2014-12-10T11:29:01'^^xsd:dateTime ;
+    skos:altLabel 'Sperry Marine SRD 500'^^xsd:string ;
+    skos:prefLabel 'Sperry Marine SRD 500 Doppler speed log'@en ;
+    skos:definition 'A dual-axis Doppler speedlLog operating at 307kHz. This instrument measures speeds in the -20 to 50 knot range  with accuracy of +/- 0.1 (for speeds <2 knots) in bottom tracking mode and +/-0.1 (for speeds <10 knots) in water tracking mode.'@en ;
+    skos:notation 'SDN:L22::TOOL0815'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0814/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0814/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0814/>;
+    dc:modified '2014-12-10T10:15:48'^^xsd:dateTime ;
+    skos:altLabel 'EA501P echosounder'^^xsd:string ;
+    skos:prefLabel 'Simrad EA501P echosounder'@en ;
+    skos:definition 'A single-beam, single-frequency, portable echosounder for bottom detection. It is housed in an aluminium casing and can be fitted with one of several transducer at differing frequencies (38, 49, 120, 200 and 710 kHz). Maximum depth detection is 1900 m in sewater and 3000 m in freshwater.'@en ;
+    skos:notation 'SDN:L22::TOOL0814'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0813/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0813/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0813/>;
+    dc:modified '2014-12-09T16:36:40'^^xsd:dateTime ;
+    skos:altLabel 'Sperry Marine MK-27F'^^xsd:string ;
+    skos:prefLabel 'Sperry Marine MK-27F Gyrocompass'@en ;
+    skos:definition 'Fibre optic gyrocompass for heading and attitude. It is designed for millitary applications. Sensor can be either deck or pedestal mounted in sheltered or non-sheltered environment.  Heading accuracy is 0.35 degree secant latitude. Pitch and roll accuracy is 0.1 degrees.'@en ;
+    skos:notation 'SDN:L22::TOOL0813'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0812/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0812/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0812/>;
+    dc:modified '2014-12-09T14:23:19'^^xsd:dateTime ;
+    skos:altLabel 'Eppley TUVR'^^xsd:string ;
+    skos:prefLabel 'Eppley Total Ultraviolet Radiometer'@en ;
+    skos:definition 'The Eppley Total Ultraviolet Radiometer (TUVR) measures total short-wave solar radiation (295 to 385 nm) with sensitivity of approx. 150 microV/Wm-2. The unit is of brass construction and includes adjustable leveling screws and a circular spirit level. The instrument utilizes a hermetically sealed selenium barrier-layer cell which is protected by a quartz window. An encapsulated narrow bandpass (interference) filter limits the spectral response of the photocell.'@en ;
+    skos:notation 'SDN:L22::TOOL0812'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0810/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0810/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0810/>;
+    dc:modified '2014-12-08T15:22:19'^^xsd:dateTime ;
+    skos:altLabel 'RAMSES ACC-UV radiometer'^^xsd:string ;
+    skos:prefLabel 'TriOS RAMSES ACC-UV Hyperspectral UVA and UVB Radiometer'@en ;
+    skos:definition 'This is a spectral radiometer measuring over the UV band range (280-500 nm) with a cosine-response to measure irradiance. It is fitted with a 256 channel silicon photodiode array with channels giving 2.2 nm/pixel and a spectral accuracy of 02 nm. Typical saturation (4ms integration time) is 20 W/m2/nm/sr (at 300 nm), 17 W/m2/nm/sr (at 360nm), 18W W/m2/nm/sr (at 500nm). Typical NEI (8ms integration time) is 0.85 microW/m2/nm/sr (at 300nm), 0.75 microW/m2/nm/sr (at 360nm), 0.80 microW/m2/nm/sr (at 500nm). Accuracy is quoted as being better than 6-10 per cent depending on spectral range.'@en ;
+    skos:notation 'SDN:L22::TOOL0810'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0809/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0809/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0809/>;
+    dc:modified '2014-11-19T14:11:16'^^xsd:dateTime ;
+    skos:altLabel 'RBR TGR-2050 TG'^^xsd:string ;
+    skos:prefLabel 'RBR TGR-2050 submersible tide gauge'@en ;
+    skos:definition 'A small (265mm x 38mm OD) self-contained, submersible temperature and pressure logger designed to monitor tide levels without interference from wave action by averaging pressure data sampled at 4 Hz. This operating mode differentiates it from the similar TDR-2050. Temperature channel is calibrated to ±0.002C. Depth channel is calibrated to an accuracy of ±0.05% full scale.'@en ;
+    skos:notation 'SDN:L22::TOOL0809'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0808/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0808/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0808/>;
+    dc:modified '2014-11-19T12:51:04'^^xsd:dateTime ;
+    skos:altLabel 'ST2401 TP'^^xsd:string ;
+    skos:prefLabel 'Rosemount ST2401 temperature probe'@en ;
+    skos:definition 'A platinum resistor thermometer with a serial interface primarily used for air temperature measurements in meteorological packages but also used as a shipboard hull thermometer.'@en ;
+    skos:notation 'SDN:L22::TOOL0808'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0807/3/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0807/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0807/>;
+    dc:modified '2014-11-12T11:31:22'^^xsd:dateTime ;
+    skos:altLabel 'NIOZ 10.5cm steel corer'^^xsd:string ;
+    skos:prefLabel 'NIOZ Steel 10.5cm manual sediment corer'@en ;
+    skos:definition 'A manual sediment corer produced by NIOZ for sampling sediments in shallow waters from a small boat.  It comprises a 10.5cm diameter (core area 0.009 m2) steel core with a closure at the top attached to a 2m aluminium pole. It is manually pushed approximately 25 cm into the sediment, the top is closed and then it is pulled out complete with the sediment sample.'@en ;
+    skos:notation 'SDN:L22::TOOL0807'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0806/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0806/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0806/>;
+    dc:modified '2014-11-12T11:31:22'^^xsd:dateTime ;
+    skos:altLabel 'NIOZ 15cm PVC corer'^^xsd:string ;
+    skos:prefLabel 'NIOZ PVC 15cm manual sediment corer'@en ;
+    skos:definition 'A manual sediment corer produced by NIOZ for sampling sediments exposed at low tide. It comprises a 1m-long PVC tube with a diameter of 15 cm (core area 0.0175 m2) that has a closure the top. It is manually pushed approximately 25 cm into the sediment, the top is closed and then it is pulled out complete with the sediment sample.'@en ;
+    skos:notation 'SDN:L22::TOOL0806'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0640/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0640/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0640/>;
+    dc:modified '2014-11-12T11:29:50'^^xsd:dateTime ;
+    skos:altLabel 'SBE 3F temperature sensor'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 3F temperature sensor'@en ;
+    skos:definition 'Water temperature sensor primarily designed for use on the SBE 25 and 25plus Sealogger CTD systems but can be used as a component in custom oceanographic profiling systems or high-accuracy temperature-monitoring applications. The sensor operates over the range -5 to +35 degC and has an initial accuracy of +/-0.001 degC. The sensor has a depth rating of 6800 m (aluminium housing) or 10500 m (titanium housing). The SBE 3F is an enhanced version of the SBE 3 temperature sensor.'@en ;
+    skos:notation 'SDN:L22::TOOL0640'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0416/4/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0416/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0416/>;
+    dc:modified '2014-11-12T11:29:50'^^xsd:dateTime ;
+    skos:altLabel 'SBE 3P temperature sensor'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 3plus (SBE 3P) temperature sensor'@en ;
+    skos:definition 'Water temperature sensor designed for use on the SBE 9plus CTD system. The sensor operates over the range -5 to +35 °C, a resolution of 0.0003 °C at 24 Hz and an initial accuracy of ± 0.001 °C. The typical sampling rate is 24 Hz, and the sensor has a depth rating of 6800 meters (aluminium housing) or 10500 meters (titanium housing).'@en ;
+    skos:notation 'SDN:L22::TOOL0416'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0417/7/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0417/7/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0417/>;
+    dc:modified '2014-11-12T11:29:50'^^xsd:dateTime ;
+    skos:altLabel 'SBE 4C conductivity sensor'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 4C conductivity sensor'@en ;
+    skos:definition 'Water conductivity sensor designed for use on the SBE 9plus or SBE 25 CTD system. The sensor operates over the range 0 to 7 S/m, with a resolution of 0.00004 S/m at 24 Hz and an initial accuracy of 0.0003 S/m. The typical sampling rate is 24 Hz, and the sensor has a depth rating of 3400 meters or 6800 meters (aluminium housing), or 10500 meters (titanium housing).'@en ;
+    skos:notation 'SDN:L22::TOOL0417'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/NETT0118/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/NETT0118/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/NETT0118/>;
+    dc:modified '2014-11-12T11:29:50'^^xsd:dateTime ;
+    skos:altLabel 'Sameoto neuston sampler'^^xsd:string ;
+    skos:prefLabel 'Neuston sampler - Sameoto and Jaroszynski (1969)'@en ;
+    skos:definition 'Has a 102 cm x 102 cm square mouth opening aluminium box frame 152 cm long equipped with foam floatation on top, a pair of fins on the side, and a fin on the bottom.  Attached to the back is a net 104 cm x 104 cm at the mouth and 927 cm long made from 0.308 mm nylon mesh. A two-part towing bridle was attached to one side and the sampler kited out away from the side of the vessel beyond the ships wake. Towing speeds 8 to 11 knots [Wiebe and Benfield 2003 Plate 20 E].'@en ;
+    skos:notation 'SDN:L22::NETT0118'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0804/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0804/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0804/>;
+    dc:modified '2014-11-12T10:38:36'^^xsd:dateTime ;
+    skos:altLabel 'Aaanderaa PR'^^xsd:string ;
+    skos:prefLabel 'Aanderaa pressure recorder'@en ;
+    skos:definition 'An early (1970s) pressure recorder that used a Digiquartz type 2-300a quartz crystal pressure transducer. The pressure sensor consisted of a convoluted bellows linked to a 40kHz quartz crystal resonator coupled by piezoelectric action to an electronic resonator. Data were recorded onto 0.25 inch magnetic tape on an Aanderaa data logger in the same case. A quartz crystal clock was used for controlling the sampling interval. The data were recorded as 10 bit binary words in serial form with the frequency count from the sensor stored as the most and least significant counts.'@en ;
+    skos:notation 'SDN:L22::TOOL0804'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0797/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0797/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0797/>;
+    dc:modified '2014-09-18T15:18:31'^^xsd:dateTime ;
+    skos:altLabel 'Furuno FE 700 echo sounder'^^xsd:string ;
+    skos:prefLabel 'Furuno FE 700 echo sounder'@en ;
+    skos:definition 'The Furuno FE-700 is an echo sounder for shallow or deep water applications. This instrument uses ultrasonic pulses to detect the seabed and other underwater objects. The operating frequency is 50 kHz, 200 kHz or 50/200 kHz alternating transmit. Echo sounding data is displayed on a 6.5-inch colour TFT (Thin Film Transistor) LCD display. It has an operating range of 800 m (2500 ft, minimum range is 0.5 m (200 kHz), 2.0 m (50 kHz)). Accuracy is +/-2.5%.'@en ;
+    skos:notation 'SDN:L22::TOOL0797'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0798/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0798/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0798/>;
+    dc:modified '2014-09-18T15:18:31'^^xsd:dateTime ;
+    skos:altLabel 'Furuno GP36 GPS+DGPS'^^xsd:string ;
+    skos:prefLabel 'Furuno Navigator GP36 Global Positioning System receivers'@en ;
+    skos:definition 'The Furuno GP-36 is a 12 parallel channel, all-in-view GPS system with a built in differential GPS (DGPS) receiver. It is has a 4.5 inch monochrome LCD video display. Accuracy is approx. 50 m (GPS), or approx. 5 m (DGPS), 95% of the time. This model superseded the Furuno GP-35.'@en ;
+    skos:notation 'SDN:L22::TOOL0798'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0799/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0799/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0799/>;
+    dc:modified '2014-09-18T15:18:31'^^xsd:dateTime ;
+    skos:altLabel 'Furuno GP37 GPS'^^xsd:string ;
+    skos:prefLabel 'Furuno Navigator GP37 Global Positioning System receivers'@en ;
+    skos:definition 'The Furuno GP-37 is a 12-parallel channel, all-in-view GPS receiver designed for coastal ships, and fishing boats. It is equipped with WAAS (Wide Area Augmentation System) and DGPS (differential GPS) receivers. It has a 4.5 inch monochrome LCD display. The unit offers position fixes with accuracy of 10m for basic GPS, 3m where a WAAS service is available, and 5m with DGPS.'@en ;
+    skos:notation 'SDN:L22::TOOL0799'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0800/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0800/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0800/>;
+    dc:modified '2014-09-18T15:18:31'^^xsd:dateTime ;
+    skos:altLabel 'Furuno GP500 GPS'^^xsd:string ;
+    skos:prefLabel 'Furuno Navigator GP500 Global Positioning System receivers'@en ;
+    skos:definition 'The Furuno GP-500 is a dual channel (up to 5 satellites multiplex tracked) GPS receiver. It has an LCD readout display. Accuracy is better than 15 m rms (HDOP < 3).'@en ;
+    skos:notation 'SDN:L22::TOOL0800'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0801/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0801/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0801/>;
+    dc:modified '2014-09-18T15:18:31'^^xsd:dateTime ;
+    skos:altLabel 'Furuno GP80 and GP80D GPS'^^xsd:string ;
+    skos:prefLabel 'Furuno Navigator GP80 and GP80D Global Positioning System receivers'@en ;
+    skos:definition 'The Furuno GP-80 is an 8-parallel channel, all-in-view GPS receiver designed for every type of vessel. It has a 6 inch monochrome LCD display.  The GP-80 is a DGPS-ready receiver that can be linked with an external differential beacon receiver. The GP-80D has a built-in DGPS receiver. Accuracy is GPS: 10 m approx. (95 % of the time SA off), DGPS: approx. 5 m (95% of the time).'@en ;
+    skos:notation 'SDN:L22::TOOL0801'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0802/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0802/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0802/>;
+    dc:modified '2014-09-18T15:18:31'^^xsd:dateTime ;
+    skos:altLabel 'Furuno GP90 and GP90D GPS'^^xsd:string ;
+    skos:prefLabel 'Furuno Navigator GP90 and GP90D Global Positioning System receivers'@en ;
+    skos:definition 'The Furuno GP-90 is a 12-parallel channel, all-in-view GPS receiver designed for SOLAS ships. It has a 6 inch monochrome LCD display. It is equipped with WAAS (Wide Area Augmentation System). The GP-90 is a DGPS-ready receiver that can be linked with an external differential beacon receiver. The GP-90D has a built-in DGPS receiver. Accuracy is GPS: 10 m approx. (95 % of the time SA off), DGPS: approx. 5 m (95% of the time), WAAS: 3 m (95% of the time).'@en ;
+    skos:notation 'SDN:L22::TOOL0802'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0793/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0793/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0793/>;
+    dc:modified '2014-09-17T10:29:32'^^xsd:dateTime ;
+    skos:altLabel 'Furuno DS 50 speed log'^^xsd:string ;
+    skos:prefLabel 'Furuno DS 50 and DS 50T Doppler speed log'@en ;
+    skos:definition 'The Furuno DS-50 is a 3-beam Doppler speed log providing display of speed over a wide range from -10.0 to 40kt. Speeds are detected relative to ground or water both fore/aft and athwartship. This model operates at 440kHz, and has speed accuracy of 0.1kt. The DS 50T is supplied with an additional transceiver unit.'@en ;
+    skos:notation 'SDN:L22::TOOL0793'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0794/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0794/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0794/>;
+    dc:modified '2014-09-17T10:29:32'^^xsd:dateTime ;
+    skos:altLabel 'Furuno DS 80 speed log'^^xsd:string ;
+    skos:prefLabel 'Furuno DS 80 Doppler speed log'@en ;
+    skos:definition 'The Furuno DS-80 is a pair-beam Doppler speed log providing display of speed over a wide range from 0 to 40kt. Speeds are detected relative to ground or water both fore/aft and athwartship. this model operates at 1 MHz and has speed accuracy of 0.1kt for water depth of more than 3m.'@en ;
+    skos:notation 'SDN:L22::TOOL0794'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0796/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0796/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0796/>;
+    dc:modified '2014-09-17T10:29:32'^^xsd:dateTime ;
+    skos:altLabel 'Furuno FCV 582 fish finder'^^xsd:string ;
+    skos:prefLabel 'Furuno FCV 582 video echosounder fish finder'@en ;
+    skos:definition 'The Furuno FCV-582 is dual-frequency (50kHz and 200kHz) color video sounder designed for smaller vessels. Its 8 or 16 color presentation gives information on fish density and the nature of the ocean floors. This device has six pulse lengths from 0.2 to 3.6ms for performance on both shallow and deep ranges. It has a colour CRT display and has an operational range of 500 m (1500 ft).'@en ;
+    skos:notation 'SDN:L22::TOOL0796'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0789/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0789/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0789/>;
+    dc:modified '2014-09-16T10:06:36'^^xsd:dateTime ;
+    skos:altLabel 'GE Druck 1830 and 1840 pressure sensors'^^xsd:string ;
+    skos:prefLabel 'GE Druck PTX and PCDR 1830 and 1840 series level pressure sensors'@en ;
+    skos:definition 'The PDCR 1830/1840 transducer (mV output) and PTX 1830/1840 transmitter (4-20 mA output) are fully submersible sensors  for the measurement of hydrostatic liquid levels. IP68 rated for indefinite immersion in 700 mH2O. Range is from 0.75 mH2O to 600 mH2O with an accuracy of +/-0.06%. Operating temperatures between -20 deg C and 60 deg C.'@en ;
+    skos:notation 'SDN:L22::TOOL0789'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0788/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0788/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0788/>;
+    dc:modified '2014-09-12T17:20:07'^^xsd:dateTime ;
+    skos:altLabel 'Gunther grab'^^xsd:string ;
+    skos:prefLabel 'Gunther grab'@en ;
+    skos:definition 'A light sediment grab, 12.5 cm wide and weighing 1kg. The grab is equipped with 8kg weights and nylon gauze sacks (0.5mm mesh size) for the sediment storage. The surface of the grab is 270 cm squared. Note that sizes and depths may vary. A full description is available in https://www.bodc.ac.uk/data/documents/nodb/pdf/Gunther_1963.pdf.'@en ;
+    skos:notation 'SDN:L22::TOOL0788'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/NETT0174/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/NETT0174/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/NETT0174/>;
+    dc:modified '2014-09-12T17:20:07'^^xsd:dateTime ;
+    skos:altLabel 'KC Denmark 25 cm small plankton net'^^xsd:string ;
+    skos:prefLabel 'KC Denmark AS small plankton net'@en ;
+    skos:definition 'Construction has an upper cylindrical net made of strong Beaver Nylon with a diameter of 25 cm and a length of 15 cm. Below is a conical mesh net bag made of Monodur Nytal (Nylon) and is 40 cm deep.  The net is ended with a 35 ml or 80 ml (fitted with mesh windows) sample cylinder.'@en ;
+    skos:notation 'SDN:L22::NETT0174'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/NETT0175/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/NETT0175/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/NETT0175/>;
+    dc:modified '2014-09-12T17:20:07'^^xsd:dateTime ;
+    skos:altLabel 'Lindahl sampling hose'^^xsd:string ;
+    skos:prefLabel 'Lindahl dividable phytoplankton sampling hose'@en ;
+    skos:definition 'A rubber hose (material may vary) comprising length sections which integrate water samples from selected depth intervals. The division of the hose is adapted as needed. The hose inner diameter is >12 mm. The hose end is weighted. The hose is slowly lowered into the water (20 m/min). The top valve is closed when the hose has reached maximum depth. Sections are sequentially closed with valves as they appear during ascent. A full description is available in https://www.bodc.ac.uk/data/documents/nodb/pdf/Lindahl_1986.pdf.'@en ;
+    skos:notation 'SDN:L22::NETT0175'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0787/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0787/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0787/>;
+    dc:modified '2014-09-01T08:09:10'^^xsd:dateTime ;
+    skos:altLabel 'PARFLUX Mark8-13'^^xsd:string ;
+    skos:prefLabel 'McLane PARFLUX Mark8-13'@en ;
+    skos:definition 'A sediment trap designed for mid-water mooring deployment (maximum depth 6500m) with a conical collector passing settled particles into one of a set of bottles mounted in a carousel. The bottles are changed after a user-selected period of time.  An optional wet sample particle divider may be fitted to divide wet specimens into 5-10 equal parts. Compass/tilt and pressure sensors may also be fitted. This model carries 13 bottles (250 or 500 ml) and is 1.16m tall and 0.66m diameter. The reduced size eases handling at sea.'@en ;
+    skos:notation 'SDN:L22::TOOL0787'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0786/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0786/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0786/>;
+    dc:modified '2014-09-01T08:07:46'^^xsd:dateTime ;
+    skos:altLabel 'PARFLUX Mark78HW-13'^^xsd:string ;
+    skos:prefLabel 'McLane PARFLUX Mark78HW-13 Sediment Traps'@en ;
+    skos:definition 'A sediment trap designed for mid-water mooring deployment (maximum depth 6500m) with a conical collector passing settled particles into one of a set of bottles mounted in a carousel. The bottles are changed after a user-selected period of time.  An optional wet sample particle divider may be fitted to divide wet specimens into 5-10 equal parts. Compass/tilt and pressure sensors may also be fitted. This model carries 13 wide bottles (250 or 500 ml) and is 1.64m tall and 0.91m diameter.'@en ;
+    skos:notation 'SDN:L22::TOOL0786'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0785/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0785/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0785/>;
+    dc:modified '2014-09-01T08:06:25'^^xsd:dateTime ;
+    skos:altLabel 'PARFLUX Mark78H-21'^^xsd:string ;
+    skos:prefLabel 'McLane PARFLUX Mark78H-21 Sediment Traps'@en ;
+    skos:definition 'A sediment trap designed for mid-water mooring deployment (maximum depth 6500m) with a conical collector passing settled particles into one of a set of bottles mounted in a carousel. The bottles are changed after a user-selected period of time.  An optional wet sample particle divider may be fitted to divide wet specimens into 5-10 equal parts. Compass/tilt and pressure sensors may also be fitted.  This model carries 21 bottles (250 or 500 ml) and is 1.64m tall and 0.91m diameter.'@en ;
+    skos:notation 'SDN:L22::TOOL0785'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0784/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0784/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0784/>;
+    dc:modified '2014-08-28T09:27:27'^^xsd:dateTime ;
+    skos:altLabel 'SMBA multicorer'^^xsd:string ;
+    skos:prefLabel 'Barnett-Watson multiple corer'@en ;
+    skos:definition 'A corer designed at SMBA (current name Scottish Association for Marine Science) that collects multiple undisturbed samples of the upper sediment, flocculent material and overlying water. This is achieved by a hydraulically-damped controlled descent of the open core liners once the frame has landed on the seabed. Rubber seals at the top and bottom of the core liner prevent sample loss during recovery. The outer framework supports weighted arrays of polycarbonate liners (4 split liners of 10cm internal diameter and 8 split liners of 6 cm internal diameter) hanging from a water-filled dashpot.'@en ;
+    skos:notation 'SDN:L22::TOOL0784'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0783/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0783/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0783/>;
+    dc:modified '2014-08-26T15:43:04'^^xsd:dateTime ;
+    skos:altLabel 'Forel-Ule Vials'^^xsd:string ;
+    skos:prefLabel 'Liquid Vial Forel-Ule Colour Comparator'@en ;
+    skos:definition 'A set of 21 glass vials in a frame containing standard solutions made with differing proportions of distilled water, ammonia, copper sulphate, potassium chromate and cobalt sulphate. The formulations result in a colour palette that covers naturally occurring water bodies, which are visually compared in-situ with the vials and assigned the number (1-21) of the nearest colour match.'@en ;
+    skos:notation 'SDN:L22::TOOL0783'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0782/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0782/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0782/>;
+    dc:modified '2014-08-26T15:37:47'^^xsd:dateTime ;
+    skos:altLabel 'Atelier VIX Forel-Ule filters'^^xsd:string ;
+    skos:prefLabel 'Atelier VIX plastic Forel-Ule colour comparator'@en ;
+    skos:definition 'A set of 21 plastic filters that match the colours of the standard Forel-Ule vials. Natural water bodies are colour matched in-situ by visual comparison with the filters and assigned the number (1-21) of the nearest match. The filters were designed by scientists at NIOZ and are manufactured by  Altelier VIX.  More information is available at DOI: http://dx.doi.org/10.2971/jeos.2014.14025.'@en ;
+    skos:notation 'SDN:L22::TOOL0782'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0781/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0781/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0781/>;
+    dc:modified '2014-08-26T15:31:50'^^xsd:dateTime ;
+    skos:altLabel 'Datawell waverider'^^xsd:string ;
+    skos:prefLabel 'Datawell waverider buoy'@en ;
+    skos:definition 'A non-directional waverider system with an accelerometer mounted in a loose tethered buoy (0.7 or 0.9m in diameter) that measures the vertical accelerations of the buoy as it moves with the water surface.  The accelerations are integrated twice within the buoy and the displacement signal so obtained is then transmitted to a shore station where it is processed to provide wave data statistics.'@en ;
+    skos:notation 'SDN:L22::TOOL0781'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0778/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0778/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0778/>;
+    dc:modified '2014-08-26T15:01:04'^^xsd:dateTime ;
+    skos:altLabel 'Olympus IMT-2'^^xsd:string ;
+    skos:prefLabel 'Olympus IMT-2 series inverted microscope'@en ;
+    skos:definition 'An inverted (the light source illuminates the specimen from above) optical microscope series with a fixed stage and focus adjustment by vertical movement of the nosepiece.  Different stages - some incorporating high accuracy micrometers, condensers and light sources are available for a wide range of applications including Koehler illumination, phase contrast and fluorescence microscopy.'@en ;
+    skos:notation 'SDN:L22::TOOL0778'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0777/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0777/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0777/>;
+    dc:modified '2014-08-20T12:41:30'^^xsd:dateTime ;
+    skos:altLabel 'FlowQuest 75'^^xsd:string ;
+    skos:prefLabel 'FlowQuest 75 Ultra long-range Acoustic Current Profiler'@en ;
+    skos:definition 'FlowQuest 75 Ultra long-range Acoustic Current Profiler with an operating frequency of 75 kHz. Standard depth of 800 meters with a temperature range of -5 degC to 45 degC. Velocity accuracy of +/- 1 percent +/- 5mm/s and a maximum measuring range of 900 meters.'@en ;
+    skos:notation 'SDN:L22::TOOL0777'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0775/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0775/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0775/>;
+    dc:modified '2014-08-18T12:53:59'^^xsd:dateTime ;
+    skos:altLabel 'RAMSES-ACC-VIS radiometer'^^xsd:string ;
+    skos:prefLabel 'TriOS RAMSES-ACC-VIS Hyperspectral UV-VIS Radiometer'@en ;
+    skos:definition 'This is a spectral radiometer measuring over the visual and UV bands (320-950 nm) with a cosine-response to measure irradiance. It is fitted with a 256-channel silicon photodiode array with 190 usable channels giving 3.3 nm per pixel and a spectral accuracy of 0.3 nm. Typical saturation (4 ms integration time) is 10 W m-2 nm-1 (at 400nm), 8 W m-2 nm-1 (at 500nm) and 14 W m-2 nm-1 (at 700nm). Typical NEI (8 sec integration time) is 0.4 µW m-2 nm-1 (at 400nm), 0.4 µW m-2 nm-1 (at 500nm) and 0.6 µW m-2 nm-1 (at 700nm). Accuracy is quoted as better than 6-10 per cent (depending on spectral range). The accompanying software is capable of providing PAR and UV integrations and converting the energy measurements into photon fluxes. More information is available at http://www.trios.de/.'@en ;
+    skos:notation 'SDN:L22::TOOL0775'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0774/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0774/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0774/>;
+    dc:modified '2014-08-18T12:52:46'^^xsd:dateTime ;
+    skos:altLabel 'RAMSES-ARC radiometer'^^xsd:string ;
+    skos:prefLabel 'TriOS RAMSES-ARC Hyperspectral UV-VIS Radiometer'@en ;
+    skos:definition 'This is a spectral radiometer measuring over the visual and UV bands (320-950 nm) with the sensor mounted at the base of a black tube to measure radiance. It is fitted with a 256-channel silicon photodiode array with 190 usable channels giving 3.3 nm per pixel and a spectral accuracy of 0.3 nm. Typical saturation (at 200nm) is 1 W m-2 nm-1 sr -1. The field of view is 7 degrees in air (but this can be optimized) and the accuracy is better than 6% (depending on spectral range). The accompanying software is capable of providing PAR and UV integrations and converting the energy measurements into photon fluxes. More information is available at http://www.trios.de/.'@en ;
+    skos:notation 'SDN:L22::TOOL0774'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0761/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0761/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0761/>;
+    dc:modified '2014-08-15T11:24:21'^^xsd:dateTime ;
+    skos:altLabel 'Northstar 826'^^xsd:string ;
+    skos:prefLabel 'Northstar 826 navigation system'@en ;
+    skos:definition 'The 826 navigation system was designed and manufactured by Northstar. This instrument has been discontinued.'@en ;
+    skos:notation 'SDN:L22::TOOL0761'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0764/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0764/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0764/>;
+    dc:modified '2014-08-15T11:24:21'^^xsd:dateTime ;
+    skos:altLabel 'Northstar 941X'^^xsd:string ;
+    skos:prefLabel 'Northstar 941X GPS receiver'@en ;
+    skos:definition 'The Northstar 941X combines 12-channels GPS navigation with Differential GPS capability, high definition display, loran compatibility, built-in tide data up to year 2010, and other navigation features. This instrument has been discontinued.'@en ;
+    skos:notation 'SDN:L22::TOOL0764'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0765/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0765/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0765/>;
+    dc:modified '2014-08-15T11:24:21'^^xsd:dateTime ;
+    skos:altLabel 'Northstar 941XD'^^xsd:string ;
+    skos:prefLabel 'Northstar 941XD GPS receiver'@en ;
+    skos:definition 'The Northstar 941XD combines a 12-channel GPS navigation with Differential GPS capability, high definition display, loran compatibility, built-in tide data up to year 2010, and other navigation features. This model contains an internal DGPS (differential GPS) receiver. This provides accuracy in the 2-5m range.'@en ;
+    skos:notation 'SDN:L22::TOOL0765'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0766/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0766/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0766/>;
+    dc:modified '2014-08-15T11:24:21'^^xsd:dateTime ;
+    skos:altLabel 'Northstar 951X'^^xsd:string ;
+    skos:prefLabel 'Northstar 951X GPS receiver'@en ;
+    skos:definition 'The Northstar 951X combines GPS navigation with Differential GPS capability, high definition display, loran compatibility, built-in tide data up to year 2010, and other navigation features. This instrument has been discontinued.'@en ;
+    skos:notation 'SDN:L22::TOOL0766'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0762/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0762/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0762/>;
+    dc:modified '2014-08-15T11:24:21'^^xsd:dateTime ;
+    skos:altLabel 'Northstar 952'^^xsd:string ;
+    skos:prefLabel 'Northstar 952 GPS receiver'@en ;
+    skos:definition 'The Northstar 952 combines GPS navigation with Differential GPS capability, high definition display, loran compatibility, built-in tide data up to year 2010, and other navigation features. The 12 parallel dual channel updates once every second with a 3m accuracy. This instrument has been discontinued.'@en ;
+    skos:notation 'SDN:L22::TOOL0762'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0767/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0767/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0767/>;
+    dc:modified '2014-08-15T11:24:21'^^xsd:dateTime ;
+    skos:altLabel 'Northstar 952X'^^xsd:string ;
+    skos:prefLabel 'Northstar 952X GPS receiver'@en ;
+    skos:definition 'The Northstar 952X combines GPS navigation with Differential GPS capability, high definition display, loran compatibility, built-in tide data up to year 2010, and other navigation features. The 12 parallel dual channel updates once every second with a 3m accuracy. This instrument has been discontinued.'@en ;
+    skos:notation 'SDN:L22::TOOL0767'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0763/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0763/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0763/>;
+    dc:modified '2014-08-15T11:24:21'^^xsd:dateTime ;
+    skos:altLabel 'Northstar 957 SGPS/WAAS'^^xsd:string ;
+    skos:prefLabel 'Northstar 957 SGPS/WAAS receiver'@en ;
+    skos:definition 'The Northstar 957 SGPS/WAAS receiver is an optional component of the Northstar 957 GPS/WASS vector chart navigator. Measurements have accuracy of 3m for this model.'@en ;
+    skos:notation 'SDN:L22::TOOL0763'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0769/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0769/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0769/>;
+    dc:modified '2014-08-15T11:24:21'^^xsd:dateTime ;
+    skos:altLabel 'Raychart 320'^^xsd:string ;
+    skos:prefLabel 'Raytheon Raychart 320 GPS'@en ;
+    skos:definition 'The Raytheon 320 GPS Plotter has a 12-channel built-in GPS that provides the following navigational systems: Wide Area Augmentation System (WAAS), ground based differential GPS, and standard GPS. This model is WAAS, EGNOS, and MSAS ready and provides a position accuracy of 2 meters'@en ;
+    skos:notation 'SDN:L22::TOOL0769'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0768/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0768/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0768/>;
+    dc:modified '2014-08-15T11:24:21'^^xsd:dateTime ;
+    skos:altLabel 'Raynav 300'^^xsd:string ;
+    skos:prefLabel 'Raytheon Raynav 300 GPS'@en ;
+    skos:definition 'The Raytheon 300 GPS Plotter has a 12-channel built-in GPS that provides the following navigational systems: Wide Area Augmentation System (WAAS), ground based differential GPS, and standard GPS. This model is WAAS, EGNOS, and MSAS ready and provides a position accuracy of 3 meters'@en ;
+    skos:notation 'SDN:L22::TOOL0768'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0770/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0770/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0770/>;
+    dc:modified '2014-08-15T11:24:21'^^xsd:dateTime ;
+    skos:altLabel 'Raytheon RD500'^^xsd:string ;
+    skos:prefLabel 'Raytheon RD500 singlebeam echosounder'@en ;
+    skos:definition 'The Raytheon RD500 echosounder records and prints depth in six ranges from zero to 10, 25, 50, 100, 500, and 1,000 feet, meters, or fathoms. Accuracy is 0.2 m in the 0-100m ranges, and the greater of 1m or 2 percent of the deeper ranges. Digital display of depth is provided by three-digit LCD on the front control panel. An audible depth alarm indicator is presettable from one to 999 feet, meters, or fathoms, to warn of shallow conditions.The device has a 80-kHz transducer but is also available without one, for use on ships equipped with Raytheon\'s DSL-250 MKII and DSL- 450 MKII Doppler Speed Logs'@en ;
+    skos:notation 'SDN:L22::TOOL0770'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0758/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0758/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0758/>;
+    dc:modified '2014-08-14T16:07:38'^^xsd:dateTime ;
+    skos:altLabel 'Centurion P(Y)'^^xsd:string ;
+    skos:prefLabel 'Trimble Centurion P(Y)'@en ;
+    skos:definition 'The Trimble Centurion P(Y) GPS receiver utilizes the P(Y)-code broadcast on the L2 carrier frequency for positioning. This device can use Asset surveyor software and TDC1 data logger to collect data with accuracy of 1-4m. This device has been discontinued, and is no longer supported by Trimble.'@en ;
+    skos:notation 'SDN:L22::TOOL0758'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0759/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0759/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0759/>;
+    dc:modified '2014-08-14T16:07:38'^^xsd:dateTime ;
+    skos:altLabel 'NT200D'^^xsd:string ;
+    skos:prefLabel 'Trimble NT200D GPS receiver'@en ;
+    skos:definition 'The Trimble NT-200D was a high-performance, sub-meter position GPS receiver for marine applications. It combines a 12-channel GPS receiver and a dual-channel transmitter. This model was the predecessor of the NT300D, and has been discontinued.'@en ;
+    skos:notation 'SDN:L22::TOOL0759'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0755/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0755/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0755/>;
+    dc:modified '2014-08-14T16:07:38'^^xsd:dateTime ;
+    skos:altLabel 'SeaBeam 2000'^^xsd:string ;
+    skos:prefLabel 'SeaBeam 2000 multibeam echo sounder'@en ;
+    skos:definition 'SeaBeam sensors are now manufactured by L-3 Communications Elac Nautik GmbH. The Seabeam 2000 is a multi-beam echo sounder of which a single swath covers an angular range of -60 degrees to 60 degrees from the vertical direction with 121 beams. This instrument was developed in the 1980s, and has now been discontinued.'@en ;
+    skos:notation 'SDN:L22::TOOL0755'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0760/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0760/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0760/>;
+    dc:modified '2014-08-14T16:07:38'^^xsd:dateTime ;
+    skos:altLabel 'TA-12'^^xsd:string ;
+    skos:prefLabel 'Trimble Tasman 12-channel GPS receiver'@en ;
+    skos:definition 'The Trimble Tasman (also TA-12) is a 12-channel GPS receiver with all-in-view tracking. This receiver can be used for navigation in international areas where the MSO reciprocity may not yet have been established, or where the TA-12 can be switched in real time between PPS and SPS modes with no loss of continuity. The TA-12 operates in temperatures from -20 to +55 degC, at altitudes up to 51,000 ft, and with a maximum track velocity of 800 knots. It offers acquisition time of 1.5 minutes, 1 Hz update rate, and accuracy of 0.124 NM (2dRMS), 5.6 m/s (RMS per axis), 24 meters, 1 sigma 100 nsec.'@en ;
+    skos:notation 'SDN:L22::TOOL0760'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0752/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0752/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0752/>;
+    dc:modified '2014-07-18T10:41:59'^^xsd:dateTime ;
+    skos:altLabel 'Air-Sea gravity system II'^^xsd:string ;
+    skos:prefLabel 'Micro-g LaCoste air-sea gravity system II gravimeter'@en ;
+    skos:definition 'Device used for gravity measurements from ships and aircarft. The system incoporates Zero-Length String sensor technology, fibre optic gyros and accelorometers. System resolution; 0.01 milliGals. Accuracy at sea; < 1.00 mGal (reported). The system replaced the S-Meter.'@en ;
+    skos:notation 'SDN:L22::TOOL0752'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0190/3/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0190/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0190/>;
+    dc:modified '2014-07-17T10:51:00'^^xsd:dateTime ;
+    skos:altLabel 'SBE 45 MicroTSG'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 45 MicroTSG thermosalinograph'@en ;
+    skos:definition 'A small externally powered, high-accuracy instrument, designed for shipboard determination of sea surface (pumped-water) conductivity and temperature. It is constructed of plastic and titanium to ensure long life with minimum maintenance. It may optionally be interfaced to an external SBE 38 hull temperature sensor.'@en ;
+    skos:notation 'SDN:L22::TOOL0190'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0318/4/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0318/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0318/>;
+    dc:modified '2014-07-17T10:50:30'^^xsd:dateTime ;
+    skos:altLabel 'SBE 35'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 35 thermometer'@en ;
+    skos:definition 'An oceanographic thermometer with a measurement range of -5 to +35 deg C; an initial accuracy of 0.001 deg C; and a resolution of 0.000025 deg C. The sensor is an ultra-stable aged thermistor with a drift rate of less than 0.001deg C per year. It can be used both in fixed point cells and at depths up to 6800 metres in combination with an SBE water sampling carousel.'@en ;
+    skos:notation 'SDN:L22::TOOL0318'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0191/3/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0191/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0191/>;
+    dc:modified '2014-07-17T10:50:30'^^xsd:dateTime ;
+    skos:altLabel 'SBE 38 TS'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 38 thermometer'@en ;
+    skos:definition 'An oceanographic thermometer with a measurement range of -5 to +35C; absolute accuracy better than 0.001C and resolution of approximately 0.00025C. The sensor is an ultra-stable aged thermistor with a drift rate of less than 0.002C per year. The reference resistor is a hermetically sealed VISHAY. It may be fitted in a 10,500m titanium pressure housing.'@en ;
+    skos:notation 'SDN:L22::TOOL0191'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0738/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0738/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0738/>;
+    dc:modified '2014-07-16T17:05:28'^^xsd:dateTime ;
+    skos:altLabel 'Hydrolabs Series 5 probes'^^xsd:string ;
+    skos:prefLabel 'Hydrolabs Series 5 probes'@en ;
+    skos:definition 'Multi-parameter probes that can measure from 12 (MS5) to 16 (DS5 and DS5X) parameters simultaneously. Measurements include temperature, depth, conductivity, salinity, specific conductance, TDS, pH, ORP, dissolved oxygen, turbidity, chlorophyll a, blue-green algae, Rhodamine WT, ammonium, nitrate, chloride, PAR and total dissolved gases. These probes can be deployed at depths up to 200 m and  can be used in continuous monitoring programs.'@en ;
+    skos:notation 'SDN:L22::TOOL0738'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0736/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0736/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0736/>;
+    dc:modified '2014-07-16T17:05:28'^^xsd:dateTime ;
+    skos:altLabel 'Omega KFH strain gauge'^^xsd:string ;
+    skos:prefLabel 'Omega KFH series strain gauge'@en ;
+    skos:definition 'Pre-wired, miniature strain gauges. The series contains linear pattern precision gauges (0.3 mm to 20 mm grids), planar XY pattern (Tee Rosette) (0 / 90 degrees) gauges (0.6 to 6 mm grids) and planar rosette pattern (0 / 45 / 90 degrees) gauges (0.6 to 6 mm grids). All models are available with 1 or 3 meter leads, 120 or 350 nominal resistance (ohms). Resistance tolerance, +/- 0.35 % (+/- 1 %, with 0.6 mm and 1.5 mm grid length). Gauge factor, ~2. Gauge factor tolerance, +/- 1 % (+/- 1.5 %, with 0.6 mm and 1.5 mm grid length).'@en ;
+    skos:notation 'SDN:L22::TOOL0736'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0734/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0734/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0734/>;
+    dc:modified '2014-07-16T17:05:28'^^xsd:dateTime ;
+    skos:altLabel 'U.S. Sensor Ultra thermistors'^^xsd:string ;
+    skos:prefLabel 'U.S. Sensor Ultra Precision Interchangeable Thermistors'@en ;
+    skos:definition 'A series of interchangeable, resistive thermistors of electrical component size for use in temperature sensing. Epoxy encapsulated with tinned copper allow wires. Resistance (at +25 degrees C) ranges from 2,252 - 50,000 Ohms. Operating range is -55 to +80 degrees C, accuracy is +/- 0.05 degrees C.'@en ;
+    skos:notation 'SDN:L22::TOOL0734'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0737/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0737/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0737/>;
+    dc:modified '2014-07-16T17:05:28'^^xsd:dateTime ;
+    skos:altLabel 'YSI 6-series sondes'^^xsd:string ;
+    skos:prefLabel 'YSI 6-series multiparameter water quality sondes'@en ;
+    skos:definition 'Comprehensive multi-parameter, water quality monitoring sondes. Designed for long-term monitoring, profiling and spot sampling. The 6-series may be split into several categories: V2 Sondes, 600 Sondes, Drinking Water Sondes and System. Each category has a slightly different design purpose with V2 Sondes ideal for long-term monitoring with a greater number of parameters, whereas 600 sondes are ideal for specific applications with fewer parameters available.  Typical parameter specifications for relevant sensors include dissolved oxygen which has ranges of 0-50 mg/l, with a resolution of +/- 0.1 mg/l, an accuracy of 1%-2% of reading for values between 0-20 mg/l and an accuracy of +/- 15% of reading for values 20-50 mg/l. Temp ranges are from-5 to +50 degC, with an accuracy of +/- 0.15 degC. Conductivity has a range of 0-100 mS/cm, with an accuracy of +/-0.5 % of reading + 0.001 mS/cm and a resolution of 0.001 - 0.1 mS/cm.'@en ;
+    skos:notation 'SDN:L22::TOOL0737'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0724/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0724/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0724/>;
+    dc:modified '2014-07-09T16:23:06'^^xsd:dateTime ;
+    skos:altLabel 'GO 8050 pCO2'^^xsd:string ;
+    skos:prefLabel 'General Oceanics model 8050 pCO2 measuring system'@en ;
+    skos:definition 'The General Oceanics model 8050 pCO2 Measuring System is an autonomous analytical system for measuring carbon dioxide in surface water. It includes a headspace equilibrator, an infrared CO2 analyser, and computer-controlled and -monitored pumps. It measures: pressure (flow) in range 0 to 10 dbar, with accuracy of 0.2 percent and resolution of 0.03 percent; temperature in range -3 to 50 degC, with accuracy of 0.003 percent and resolution of 0.0005 degC; conductivity in range 0 to 64 mS/cm, with accuracy of 0.003 mS/cm and resolution of 0.001 mS/cm; Oxygen in range 0 to 25ppm (250 percent saturation), with accuracy of 0.1ppm (1 percent saturation) and 0.01ppm (0.1 percent saturation); pH in range 0 to 0.14 pH, with accuracy of 0.01 pH and resolution of 0.001 pH; Redox in range -1000 to 1000 mV, with accuracy of 1 mV and resolution of 0.1 mV.'@en ;
+    skos:notation 'SDN:L22::TOOL0724'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0721/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0721/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0721/>;
+    dc:modified '2014-07-09T16:23:06'^^xsd:dateTime ;
+    skos:altLabel 'Microstrain 3DM-GX1'^^xsd:string ;
+    skos:prefLabel 'Microstrain 3DM-GX1 Gyro Enhanced Orientation Sensor'@en ;
+    skos:definition 'The MicroStrain 3DM-GX3 is a triaxial accelerometer designed to measure 360 degrees of angular motion on three orthogonal axes. The 3DM-GX1 has now been retired in favour of later MicroStrain products. The 3DM-GX1 featured on-board processing/filtering of accelerometer, gyro and magnetometer channels, with standard RS-232 and RS-485 outputs, and optional analog output. It offers 16 bit A/D resolution, accuracy of +/-0.5 degrees for static test conditions or +/-2 degrees for dynamic test conditions, 100 Hz digital output rate for Euler, Matrix and Quaternion, and operates in temperatures of -40 to 70 degrees C with enclosure (or +85 degrees C without enclosure).'@en ;
+    skos:notation 'SDN:L22::TOOL0721'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0722/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0722/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0722/>;
+    dc:modified '2014-07-09T16:23:06'^^xsd:dateTime ;
+    skos:altLabel 'Middleton EQ08'^^xsd:string ;
+    skos:prefLabel 'Middleton Solar EQ08 Pyranometer'@en ;
+    skos:definition 'The Middleton EQ08 Solar Pyranometer is designed for the measurement of global solar irradiance on a plane surface. It has a response time (to 95%) of less than 11 seconds; zero offset at 200 W/m2 of less than 3 W/m2 and at 5K/h of less than 2W/m2; non-linearity of less than 0.5 percent; directional response with respect to 1000 W/m2 of less than 15 W/m2, Spectral selectivity (0.35 to 1.5 um) of less than 3 percent; temperature response (for 50K interval) of less than 2 percent; and tilt response (0-90 degrees) of less than 0.35 percent.'@en ;
+    skos:notation 'SDN:L22::TOOL0722'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0723/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0723/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0723/>;
+    dc:modified '2014-07-09T16:23:06'^^xsd:dateTime ;
+    skos:altLabel 'Middleton SK01-DP2'^^xsd:string ;
+    skos:prefLabel 'Middleton Solar SK01-DP2 Pyranometer'@en ;
+    skos:definition 'The Middleton SK01-DP2 PAR Sensor (or Quantum Sensor) is for measuring electromagnetic radiation  at Photosynthetically Active wavelengths. It uses a silicon photodiode detector, shielded by a cosine-corrected diffuser and an interference reflector, to measure PAR on a horizontal surface. The detector is boosted by a low noise amplifier that is drift stabilised. The SK01-DP2 features: viewing angle 2*pi steradians; spectral range of 400-700nm; irradiance of 0-3000 umol/s/m2; sensitivity of 0.5 mV/umol/s/m2; response time (to 95 percent) of 30 ms; operating temperature of -35 to 60 degreesC; non-linearity of less than 1 percent; spectral response of +/- 5 percent.'@en ;
+    skos:notation 'SDN:L22::TOOL0723'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0726/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0726/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0726/>;
+    dc:modified '2014-07-09T16:23:06'^^xsd:dateTime ;
+    skos:altLabel 'OSi OWI-430 WIVIS'^^xsd:string ;
+    skos:prefLabel 'OSi OWI-430 DSP-WIVIS Present Weather and Visibility Sensor'@en ;
+    skos:definition 'The Osi OWI-430 WIVIS is an optical weather and visibility sensor that measures visibility, rain, snow, drizzle, freezing and mixed precipitation conditions. It measures rain in dynamic range 0.1 to 3000 mm/hr; snow in dynamic range 0.01 to 300 mm/hr; visibility in dynamic range 0.001 to 10 km. It is designed to operate in temperatures from -40 to 50 degC, and humidity from 0 to 100 percent.'@en ;
+    skos:notation 'SDN:L22::TOOL0726'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0728/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0728/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0728/>;
+    dc:modified '2014-07-09T16:23:06'^^xsd:dateTime ;
+    skos:altLabel 'RBR TR-1060P'^^xsd:string ;
+    skos:prefLabel 'RBR TR-1060P Temperature Logger'@en ;
+    skos:definition 'The TR-1060P is a small, self-contained, submersible temperature logger calibrated to +/-0.002 degC, with a typical calibration drift of less than 0.002 degC per year. It is a 25mm diameter version of the TR-1050, but has the same or better performance with a 24 bit a/d. It can be deployed for a period of up to three years and can collect more than 2,400,000 samples. Data are retained in memory for 20 years (even without batteries).  It has a depth rating of 1200 m, download speed ~115000 samples per minute, clock accuracy +/- 32 seconds per year, 8 Mb flash memory, and 240mm x 25 mm casing. Measures temperature from -5 to 35 degC, but can be calibrated to a wider range on request. Accuracy is +/-0.002 degC, resolution better than 0.00005 degC.'@en ;
+    skos:notation 'SDN:L22::TOOL0728'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0729/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0729/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0729/>;
+    dc:modified '2014-07-09T16:23:06'^^xsd:dateTime ;
+    skos:altLabel 'RBR TWR-2050P'^^xsd:string ;
+    skos:prefLabel 'RBR TWR-2050 Submersible Tide and Wave Recorder'@en ;
+    skos:definition 'The TWR-2050P is a small, self-contained, submersible temperature, wave and depth recorder (sensors and data logger). It can be deployed for a period of up to three years and can collect more than 1,200,000 sets of samples. Data can be retained in memory for 20 years (even without batteries). Available in two casings, plastic and titanium, with depth ratings of 740m and 6600m respectively. The temperature channel of the TWR-2050 is calibrated to an accuracy of ± 0.002°C (ITS-90) over the range -5 to +35°C.  Typical drift has been measured to be 0.002°C per year. The thermistor may be external (<3sec time constant) or internal (<20sec time constant). A fast thermistor probe (0.095sec) is also available. The depth channel is calibrated to an accuracy of 0.05%fs  Ranges from 10m to 6,600m are available. Temperature and depth only sensors (TDR) and surface-mounted sensors (HT) are also available.'@en ;
+    skos:notation 'SDN:L22::TOOL0729'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0730/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0730/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0730/>;
+    dc:modified '2014-07-09T16:23:06'^^xsd:dateTime ;
+    skos:altLabel 'RBR XR-620'^^xsd:string ;
+    skos:prefLabel 'RBR XR-620 CTD Profiler'@en ;
+    skos:definition 'A small profiling data logger designed to monitor conductivity, temperature and depth. Conductivity (accuracy ± 0.003 mS/cm) is measured using a 3-coil closed loop feedback inductive cell for superior temperature compensation. The thermistor (Themometrics) used to record temperature (accuracy ± 0.002°C) is aged and hermetically sealed in the tip of a shock resistant solid glass rod. Pressure (accuracy 0.05% full scale) sensors use reliable semiconductor technology and 316 stainless steel housing developed for long-term stability in harsh environments. The XR-620 is a profiling version of the XR-420.'@en ;
+    skos:notation 'SDN:L22::TOOL0730'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0731/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0731/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0731/>;
+    dc:modified '2014-07-09T16:23:06'^^xsd:dateTime ;
+    skos:altLabel 'Reefnet Sensus Ultra'^^xsd:string ;
+    skos:prefLabel 'ReefNet Sensus Ultra'@en ;
+    skos:definition 'The ReefNet Sensus Ultra is a compact temperature and depth logging sensor designed for use as a dive computer. Depths between 0 and 500 feet are measured with precision better than 0.5 inches of water, and accuracy of +/-12 inches. Temperature is measured between -20 degC and + 40 degC, with precision of 0.01 degC, and accuracy of +/-0.8 degC. Sampling interval is configurable from 1 second to over 18 hours, with storage capacity of one year at 60 second sampling resolution.'@en ;
+    skos:notation 'SDN:L22::TOOL0731'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0720/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0720/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0720/>;
+    dc:modified '2014-07-09T12:07:47'^^xsd:dateTime ;
+    skos:altLabel 'SMRU Ltd CTD/Fluorometer SRDL'^^xsd:string ;
+    skos:prefLabel 'SMRU Ltd CTD/Fluorometer Satellite Relay Data Logger'@en ;
+    skos:definition 'A package comprising a Valeport CTD sensor head plus a customised Turner Cyclops-7 fluorometer combined with an RF unit and antenna suitable for transmission of data via the Argos satellite system. The unit contains an internal battery and a microprocessor that logs data and schedules the transfer of data. The package is designed for attachment to marine mammals and has an operational depth range of down to 2000 m. CTD accuracy is 0.005 C (temperature), 0.01 mS/cm (conductivity) and 2 dBar (pressure).  It is built and calibrated at Valeport Ltd, while SMRU Ltd, the commercial arm of the Sea Mammal Research Unit of the University of St Andrews, is responsible for its distribution, and for streaming and processing the data. More information is available at http://www.smru.st-and.ac.uk/Instrumentation/FluorometryTag/.'@en ;
+    skos:notation 'SDN:L22::TOOL0720'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0719/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0719/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0719/>;
+    dc:modified '2014-07-09T12:07:44'^^xsd:dateTime ;
+    skos:altLabel 'SMRU Ltd SRDL 9000x'^^xsd:string ;
+    skos:prefLabel 'SMRU Ltd Satellite Relay Data Logger 9000x'@en ;
+    skos:definition 'A depth and temperature sensor package combined with an RF unit and antenna suitable for transmission of data via the Argos satellite system. The unit contains an internal battery and a microprocessor that logs data and schedules the transfer of data. The package is designed for attachment to marine mammals and has an operational depth range of down to 2000 m. It is built and calibrated at Valeport Ltd, while SMRU Ltd, the commercial arm of the Sea Mammal Research Unit of the University of St Andrews, is responsible for its distribution, and for streaming and processing the data. More information is available at http://www.smru.st-and.ac.uk/Instrumentation/SRDL/.'@en ;
+    skos:notation 'SDN:L22::TOOL0719'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0446/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0446/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0446/>;
+    dc:modified '2014-07-09T11:41:29'^^xsd:dateTime ;
+    skos:altLabel 'SMRU Ltd CTD-SRDL 9000'^^xsd:string ;
+    skos:prefLabel 'SMRU Ltd CTD-Satellite Relay Data Logger 9000'@en ;
+    skos:definition 'CTD sensor package combined with a 401 MHz RF unit and antenna suitable for transmission of conductivity, temperature and pressure data via the Argos satellite system. The unit contains an internal battery and a microprocessor that logs data and schedules the transfer of data. The package is designed for attachment to marine mammals and has an operational temperature range of -20 to +50 degC and a depth range of up to 2000 m. Auxiliary sensors may be attached. It is built and calibrated at Valeport Ltd, while SMRU Ltd, the commercial arm of the Sea Mammal Research Unit of the University of St Andrews, is responsible for its distribution, and for streaming and processing the data.'@en ;
+    skos:notation 'SDN:L22::TOOL0446'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0718/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0718/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0718/>;
+    dc:modified '2014-07-08T16:28:56'^^xsd:dateTime ;
+    skos:altLabel 'Sippican T-10 XBT'^^xsd:string ;
+    skos:prefLabel 'Lockheed Martin Sippican T-10 XBT probe'@en ;
+    skos:definition 'An expendable free-fall temperature probe that provides a profile of measured temperature against depth calculated from a fall-rate model. The T-10 XBT Probe can be used to a maximum depth of 200m, may be deployed at a ship speed of up to 10 knots and has a vertical resolution of 65cm.'@en ;
+    skos:notation 'SDN:L22::TOOL0718'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0717/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0717/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0717/>;
+    dc:modified '2014-07-08T16:27:38'^^xsd:dateTime ;
+    skos:altLabel 'Sippican T-6 XBT'^^xsd:string ;
+    skos:prefLabel 'Lockheed Martin Sippican T-6 XBT probe'@en ;
+    skos:definition 'An expendable free-fall temperature probe that provides a profile of measured temperature against depth calculated from a fall-rate model. The T-6 XBT Probe can be used to a maximum depth of 460m, may be deployed at a ship speed of up to 15 knots and has a vertical resolution of 65cm.'@en ;
+    skos:notation 'SDN:L22::TOOL0717'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0714/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0714/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0714/>;
+    dc:modified '2014-07-08T16:26:13'^^xsd:dateTime ;
+    skos:altLabel 'Sippican AXCTD'^^xsd:string ;
+    skos:prefLabel 'Lockheed Martin Sippican AXCTD'@en ;
+    skos:definition 'An expendable free-fall probe that provides a profile of measured temperature and salinity against depth calculated from a fall-rate model. The AXCTD Probe is deployed by aircraft and can be used to a maximum depth of 1000m.'@en ;
+    skos:notation 'SDN:L22::TOOL0714'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0716/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0716/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0716/>;
+    dc:modified '2014-07-08T16:24:25'^^xsd:dateTime ;
+    skos:altLabel 'Sippican T-11 XBT'^^xsd:string ;
+    skos:prefLabel 'Lockheed Martin Sippican T-11 XBT probe'@en ;
+    skos:definition 'An expendable free-fall temperature probe that provides a profile of measured temperature against depth calculated from a fall-rate model. The T-11 XBT Probe can be used to a maximum depth of 460m, may be deployed at a ship speed of up to 6 knots and has a vertical resolution of  65cm.'@en ;
+    skos:notation 'SDN:L22::TOOL0716'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0713/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0713/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0713/>;
+    dc:modified '2014-07-08T16:17:50'^^xsd:dateTime ;
+    skos:altLabel 'Sparton AXBT'^^xsd:string ;
+    skos:prefLabel 'Sparton AXBT'@en ;
+    skos:definition 'An expendable free-fall temperature probe that provides a profile of measured temperature against depth calculated from a fall-rate model. The AXBT Probe is deployed by aircraft and can be used to a maximum depth of 800m.'@en ;
+    skos:notation 'SDN:L22::TOOL0713'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0712/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0712/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0712/>;
+    dc:modified '2014-06-30T14:51:49'^^xsd:dateTime ;
+    skos:altLabel 'Aanderaa 4050'^^xsd:string ;
+    skos:prefLabel 'Aanderaa temperature sensor 4050'@en ;
+    skos:definition 'A compact fully integrated sensor for measuring the water temperature. The sensor is designed to be mounted on Aanderaa recording instruments (e.g. RCM 9/11 doppler current meter) and data loggers. The sensor can also be used as stand alone, and is easily integrated in other measurement systems with third party data loggers. Resolution is 0.001 C and accuracy is 0.03 C. Further development of the 4050 has been suspended in favour of the replacement 4060 model. More information may be found in http://www.aanderaa.com/productsdetail.php?Temperature-Sensor-12.'@en ;
+    skos:notation 'SDN:L22::TOOL0712'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0711/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0711/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0711/>;
+    dc:modified '2014-06-30T14:50:40'^^xsd:dateTime ;
+    skos:altLabel 'Aanderaa 4060'^^xsd:string ;
+    skos:prefLabel 'Aanderaa temperature sensor 4060'@en ;
+    skos:definition 'A compact fully integrated sensor for measuring the water temperature based on a Fenwell thermistor that is designed to be mounted on the Aanderaa SeaGuard Platform. The sensor can also be used as stand-alone (RS232) and is easily integrated in other measurement systems with third party data loggers. It replaces the 4050 temperature sensor. Resolution is 0.001 C and accuracy is 0.03 C. More information may be found in http://www.aanderaa.com/media/pdfs/Temperature-Sensor-4060.pdf.'@en ;
+    skos:notation 'SDN:L22::TOOL0711'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0710/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0710/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0710/>;
+    dc:modified '2014-06-30T14:49:20'^^xsd:dateTime ;
+    skos:altLabel 'TRIAXYS DWS'^^xsd:string ;
+    skos:prefLabel 'TRIAXYS directional wave sensor'@en ;
+    skos:definition 'A sensor packaged in a small stainless steel box with a single connector for power and data that outputs fully processed wave data. Sampling is in bursts from 1-34 minutes with a sampling interval from 5-1440 minutes. It may be located anywhere on a floating platform and comprises three accelerometers and three rate sensors that measure displacement along the three orthogonal axes of the platform. Direction is measured using a gimballed fluxgate compass. Resolution is 0.01m for height, 0.1 second for period and one degree for direction. Accuracy is better than 2% for height and period and 3 degrees for direction. More information is available in http://axystechnologies.com/wp-content/uploads/2014/01/TRIAXYS-NW-Sensors-Digital-Layout.pdf.'@en ;
+    skos:notation 'SDN:L22::TOOL0710'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0709/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0709/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0709/>;
+    dc:modified '2014-06-30T14:47:55'^^xsd:dateTime ;
+    skos:altLabel 'TRIAXYS WS'^^xsd:string ;
+    skos:prefLabel 'TRIAXYS non-directional wave sensor'@en ;
+    skos:definition 'A sensor packaged in a small stainless steel box with a single connector for power and data that outputs fully processed wave data. Sampling is in bursts from 1-34 minutes with a sampling interval from 5-1440 minutes. It may be located anywhere on a floating platform and comprises three accelerometers and three rate sensors that measure displacement along the three orthogonal axes of the platform. Resolution is 0.01m for height and 0.1 second for period. Accuracy is better than 2% for height and period. More information is available in http://axystechnologies.com/wp-content/uploads/2014/01/TRIAXYS-NW-Sensors-Digital-Layout.pdf.'@en ;
+    skos:notation 'SDN:L22::TOOL0709'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0708/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0708/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0708/>;
+    dc:modified '2014-06-17T10:19:55'^^xsd:dateTime ;
+    skos:altLabel 'DXD pressure transducer'^^xsd:string ;
+    skos:prefLabel 'Heise Model DXD Digital Output Pressure Transducer'@en ;
+    skos:definition 'This is digital pressure transducer with an RS232 or RS485 interface in a stainless steel housing with an accuracy of 0.02% full scale. More information is available at http://www.heise.com/Products/pressure_transducers/upload/Heise-Bul-HTR-4-08-3.pdf.'@en ;
+    skos:notation 'SDN:L22::TOOL0708'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0707/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0707/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0707/>;
+    dc:modified '2014-06-17T10:17:19'^^xsd:dateTime ;
+    skos:altLabel 'AD590 temperature transducer'^^xsd:string ;
+    skos:prefLabel 'Analog Devices AD590 Temperature Transducer'@en ;
+    skos:definition 'This is a 2-terminal integrated circuit temperature transducer that produces an output current proportional to absolute temperature (one microAmp per Kelvin). It is calibrated by laser trimming of the resistors on the chip to produce an output of 298.2 microAmps at 298.2K. It is supplied in a range of standard electronic component packages for inclusion on circuit boards. It can operate from -55-150C, is linear to 0.3C over full range and has an accuracy of 0.5C. Further details may be found at http://www.analog.com/en/mems-sensors/digital-temperature-sensors/ad590/products/product.html.'@en ;
+    skos:notation 'SDN:L22::TOOL0707'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0706/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0706/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0706/>;
+    dc:modified '2014-06-12T18:07:30'^^xsd:dateTime ;
+    skos:altLabel 'Vemco Minilog II T'^^xsd:string ;
+    skos:prefLabel 'Vemco Minilog II T 16-bit Temperature Logger'@en ;
+    skos:definition 'The VEMCO Minilog II T is a fully submersible, 10-year temperature data logger measures and stores temperature at specified sampling intervals. The Minilog- II-T data logger is manufactured to withstand both fresh and saltwater environments.'@en ;
+    skos:notation 'SDN:L22::TOOL0706'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0700/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0700/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0700/>;
+    dc:modified '2014-06-10T16:58:38'^^xsd:dateTime ;
+    skos:altLabel 'Skipper DL 850 speed log'^^xsd:string ;
+    skos:prefLabel 'Skipper Electronics DL 850 Doppler speed log'@en ;
+    skos:definition 'A dual axis speed log which uses the Doppler principle to measure the longitudinal and fore/aft transversal ship speed relative to the sea bed or the water. It contains 4 x 540 kHz transducers for speed log function. An auxilliary 270 kHz transducer provides an echo sounder function which measures depth (<130 m). Speed range is +/- 40 knots (<0.2 knots accuracy).'@en ;
+    skos:notation 'SDN:L22::TOOL0700'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0701/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0701/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0701/>;
+    dc:modified '2014-06-10T16:58:38'^^xsd:dateTime ;
+    skos:altLabel 'Vaisala PTB110'^^xsd:string ;
+    skos:prefLabel 'Vaisala PTB110 barometer'@en ;
+    skos:definition 'An industrial, analog barometer which uses a silicon capacitive sensor (BAROCAP). The sensor produces either frequency or voltage output. The operating range is between 500 - 1100 mbar, +/- 0.3 mbar total accuracy at 20 degree C.'@en ;
+    skos:notation 'SDN:L22::TOOL0701'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0624/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0624/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0624/>;
+    dc:modified '2014-06-10T16:44:38'^^xsd:dateTime ;
+    skos:altLabel 'Sperry NAVIGAT X MK 2 gyrocompass'^^xsd:string ;
+    skos:prefLabel 'Sperry Marine NAVIGAT X MK 2 digital gyrocompass'@en ;
+    skos:definition 'A digital gyrocompass for use in marine navigation. The system comprises a gyrosphere supported in fluid, suspended at a single point. The system can drive up to 4 analogue repeaters and has 5 independent serial outputs and 1 dependent 6 steps/degree heading outputs. Heading accuracy is <0.1 degrees secant latitude (linear mean settle point), <0.1 degrees secant latitude (static), <0.4 degrees secant latitude (dynamic). The NAVIGAT X MK2 is a low cost model based on the NAVIGAT X MK 1 and is a member of the Sperry Marine range of heading sensors, which comprises the NAVIGAT 3000 fiberoptic gyrocompass, the NAVIGAT X MK 1 and the NAVIGAT X MK 2 digital gyrocompasses.'@en ;
+    skos:notation 'SDN:L22::TOOL0624'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0696/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0696/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0696/>;
+    dc:modified '2014-05-08T08:21:55'^^xsd:dateTime ;
+    skos:altLabel 'SBE 26+ SEAGAUGE'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 26plus SEAGAUGE Wave and Tide Recorder'@en ;
+    skos:definition 'The SBE 26 SEAGAUGE is a water level recorder with a Digiquartz pressure sensor, accurate clock, precision thermometer and optional conductivity sensor in a casing able to operate down to 600m. Pressure data are integrated to give sea level or are burst recorded at rates up to 4 Hz to measure characterise waves. The instrument offers improved temperature sensor accuracy (0.01C with 0.001C resolution or optionally 0.001C with 0.0001C resolution), data storage and operational functionality over the SBE-26. More information at http://www.seabird.com/products/spec_sheets/26plusdata.htm.'@en ;
+    skos:notation 'SDN:L22::TOOL0696'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0695/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0695/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0695/>;
+    dc:modified '2014-05-01T15:18:08'^^xsd:dateTime ;
+    skos:altLabel 'CAE HE20/K pyranometer'^^xsd:string ;
+    skos:prefLabel 'CAE HE20/K pyranometer'@en ;
+    skos:definition 'A HE20/K pyranometer measuring total incident solar radiation with temperature dependence of less than 2 percent, and nonlinearity of +/-1.5 percent from 0 to 1500 W/m2. Operating temperature range is -40 to 60 degC.'@en ;
+    skos:notation 'SDN:L22::TOOL0695'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0694/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0694/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0694/>;
+    dc:modified '2014-05-01T15:14:48'^^xsd:dateTime ;
+    skos:altLabel 'CAE PMB2 rain/snow gauge'^^xsd:string ;
+    skos:prefLabel 'CAE PMB2 rain/snow gauge'@en ;
+    skos:definition 'A mechanical rain/snow gauge with sensitivity of 100cm2 cup area and accuracy of +/-0.2mm from 0 to 300mm per hour. Operating temperature range is 0 to 60 degC.'@en ;
+    skos:notation 'SDN:L22::TOOL0694'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0693/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0693/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0693/>;
+    dc:modified '2014-05-01T15:11:12'^^xsd:dateTime ;
+    skos:altLabel 'CAE TU20 thermistor/hygrometer'^^xsd:string ;
+    skos:prefLabel 'CAE TU20 thermistor/hygrometer'@en ;
+    skos:definition 'An electronic hygrometer TU20 that comprises a PT100 thermometer and a capacitance hygrometer, with sensitivity of 0.02 degC and accuracy of +/-2 percent from 0 to 100 percent relative humidity. Operating temperature range is -20 to 50 degC.'@en ;
+    skos:notation 'SDN:L22::TOOL0693'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0692/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0692/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0692/>;
+    dc:modified '2014-05-01T15:08:06'^^xsd:dateTime ;
+    skos:altLabel 'CAE BA20 barometer'^^xsd:string ;
+    skos:prefLabel 'CAE BA20 barometer'@en ;
+    skos:definition 'An electronic barometer with sensitivity of 0.1 hPa and accuracy of +/-0.5 hPa from 600 to 1100 hPa. Operating temperature range is -40 to 60 degC.'@en ;
+    skos:notation 'SDN:L22::TOOL0692'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0691/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0691/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0691/>;
+    dc:modified '2014-05-01T15:04:32'^^xsd:dateTime ;
+    skos:altLabel 'CAE DV20/VV20 anemometer'^^xsd:string ;
+    skos:prefLabel 'CAE DV20/VV20 anemometer'@en ;
+    skos:definition 'A cup and vane anemometer with sensity of 0.02 m/s and accuracy of +/-1 percent from 0 to 61 m/s, and 0 to 360 degrees. Operating temperature range is -30 to 60 degC.'@en ;
+    skos:notation 'SDN:L22::TOOL0691'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0690/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0690/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0690/>;
+    dc:modified '2014-05-01T14:20:50'^^xsd:dateTime ;
+    skos:altLabel 'CAE System Stazione Meteorologica SPM20'^^xsd:string ;
+    skos:prefLabel 'CAE SPM20 Weather Station'@en ;
+    skos:definition 'A modular weather station'@en ;
+    skos:notation 'SDN:L22::TOOL0690'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0689/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0689/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0689/>;
+    dc:modified '2014-04-16T15:52:43'^^xsd:dateTime ;
+    skos:altLabel 'ES60 echosounder'^^xsd:string ;
+    skos:prefLabel 'Simrad ES60 echosounder'@en ;
+    skos:definition 'A third generation single-beam or split-beam multi-frequncy echosounder primarily designed for fish-finding but may also be used in fisheries research. More information may be found in http://www.simrad.com/www/01/NOKBG0397.nsf/AllWeb/1C1B8782314422F9C12570F300270EAC/$file/Simrad_ES60_Brochure_English.pdf?OpenElement.This instrument is now (April 2014) flagged as discontinues on the Simrad web site.'@en ;
+    skos:notation 'SDN:L22::TOOL0689'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0688/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0688/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0688/>;
+    dc:modified '2014-04-15T15:48:27'^^xsd:dateTime ;
+    skos:altLabel 'SBE 39-IM TR'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 39-IM temperature recorder'@en ;
+    skos:definition 'A high-accuracy temperature recorder (pressure optional) with internal battery and a built-in inductive modem intended for moorings with either real-time telemetry or a surface data logger.  Data are also stored in internal non-volatile memory as insurance against data loss.  Calibration coefficients stored in EEPROM allow the SBE 39 to transmit data in engineering units. The SBE 39 thermistor has a long history of exceptional initial accuracy (0.002C) and stability (typical drift is 0.0002C per month).  The standard plastic housing is for depths down to 600m, but an optional titanium housing can withstand depths of 10500m.  For more information see http://www.seabird.com/products/spec_sheets/39imdata.htm.'@en ;
+    skos:notation 'SDN:L22::TOOL0688'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0687/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0687/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0687/>;
+    dc:modified '2014-04-15T11:23:19'^^xsd:dateTime ;
+    skos:altLabel 'SBE 56 TR'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 56 temperature recorder'@en ;
+    skos:definition 'This is a small (30cm by 2.54cm diameter) high-accuracy battery-powered temperature and time logger capable of sampling intervals from 0.5 seconds to 9 hours. Battery life with a sampling rate of 15 seconds is almost two years and the memory can store over 15 million samples. Temperature is measured by a pressure-protected (1500m depth) thermistor. Initial accuracy is 0.002C and drift is typically less than 0.002C per year. More information may be found at http://www.seabird.com/products/spec_sheets/39imdata.htm.'@en ;
+    skos:notation 'SDN:L22::TOOL0687'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0681/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0681/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0681/>;
+    dc:modified '2014-04-01T15:52:56'^^xsd:dateTime ;
+    skos:altLabel 'FlowQuest 150'^^xsd:string ;
+    skos:prefLabel 'FlowQuest 150 Long-range Acoustic Current Profiler'@en ;
+    skos:definition 'FlowQuest 150 Long-range Acoustic Current Profiler with an operating frequency of 150 kHz. Standard depth of 800 meters with a temperature range of -5 degC to 45 degC. Velocity accuracy of +/- 1 percent +/- 5mm/s and a maximum measuring range of 500 meters.'@en ;
+    skos:notation 'SDN:L22::TOOL0681'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0680/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0680/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0680/>;
+    dc:modified '2014-04-01T15:52:49'^^xsd:dateTime ;
+    skos:altLabel 'Druck RPT350'^^xsd:string ;
+    skos:prefLabel 'GE Druck RPT 350 Resonant Pressure Transducer'@en ;
+    skos:definition 'A Resonant Pressure Transducer, designed to measure pressure in the range 35-3500 mbar, with accuracy of 0.01 percent, stability of 100 ppm, and insensitive to media density. The RPT350 is available with RS232 or RS485 outputs.'@en ;
+    skos:notation 'SDN:L22::TOOL0680'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0670/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0670/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0670/>;
+    dc:modified '2014-03-11T15:59:35'^^xsd:dateTime ;
+    skos:altLabel 'SBE 48 CTD Hull TS'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 48 Hull Temperature Sensor'@en ;
+    skos:definition 'A high-accuracy temperature recorder with non-volatile memory and RS-232 port, designed for shipboard determination of sea surface temperature. It is magnetically fixed just below the water line with the temperature sensor in contact with the inside of the ship\'s hull. The thermistor is the same as the SBE 39 which has an accuracy of 0.002C, stability of 0.0002 C/month and resolution of 0.0001 C .  A real-time clock accurate within 1 minute/year is included for self-contained operation. More information is given in http://www.seabird.com/pdf_documents/manuals/48_004.pdf.'@en ;
+    skos:notation 'SDN:L22::TOOL0670'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0669/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0669/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0669/>;
+    dc:modified '2014-03-11T15:57:33'^^xsd:dateTime ;
+    skos:altLabel 'SBE 41CP CTD'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 41CP CTD'@en ;
+    skos:definition 'A self-contained unit comprising the MicroCAT temperature, conductivity and pressure sensors and a pump that is designed specifically for deployment on profiling floats, particularly Argo.  The unit is designed to provide stable salinity data accurate to 0.005 PSU for periods in excess of three years without any form of maintenance. Temperature is within 0.002 C (stability 0.0002 C/year) and pressure within 2 dbar (stability 0.8 dbar/year).  During float ascent samples are collected at 1 Hz and logged to internal storage to provide a continuous profile passed to the float controller at the surface.  More information is given in http://www.seabird.com/products/spec_sheets/41data.htm.'@en ;
+    skos:notation 'SDN:L22::TOOL0669'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0668/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0668/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0668/>;
+    dc:modified '2014-03-11T15:55:41'^^xsd:dateTime ;
+    skos:altLabel 'SBE 41 CTD'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 41 CTD'@en ;
+    skos:definition 'A self-contained unit comprising the MicroCAT temperature, conductivity and pressure sensors and a pump that is designed specifically for deployment on profiling floats, particularly Argo.  The unit is designed to provide stable salinity data accurate to 0.005 PSU for periods in excess of three years without any form of maintenance. Temperature is within 0.002 C (stability 0.0002 C/year) and pressure within 2 dbar (stability 0.8 dbar/year).  During float ascent spot samples are taken and transmitted to the float controller.  More information is given in http://www.seabird.com/products/spec_sheets/41data.htm.'@en ;
+    skos:notation 'SDN:L22::TOOL0668'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0667/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0667/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0667/>;
+    dc:modified '2014-03-11T15:53:12'^^xsd:dateTime ;
+    skos:altLabel 'SBE 21 TSG'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 21 Thermosalinograph'@en ;
+    skos:definition 'A platinum-electrode conductivity sensor and a thermistor mounted in a corrosion-resistant plastic and titanium housing designed to be continuously plumbed into a vessel\'s pumped seawater supply. The instrument may be interfaced to a remote SBE 38 temperature sensor mounted either on the hull or in the seawater inlet. Data are both stored in internal memory and output to a serial port for external logging.  Conductivity is measured in the range 0-7 S/m with an accuracy of 0.001 S/m and a resolution  of 0.0001 S/m. Housing temperature is measured in the range -5-35C with an accuracy of 0.01 C and a resolution  of 0.001 C. Remote temperature is measured in the range -5-35C  with an accuracy of 0.001 C and a resolution  of 0.0003 C. More information at http://www.seabird.com/products/spec_sheets/21data.htm.'@en ;
+    skos:notation 'SDN:L22::TOOL0667'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0666/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0666/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0666/>;
+    dc:modified '2014-03-11T15:50:22'^^xsd:dateTime ;
+    skos:altLabel 'Eppley PSP'^^xsd:string ;
+    skos:prefLabel 'Eppley Precision Spectral Pyranometer'@en ;
+    skos:definition 'A discontinued instrument that measured sun and sky irradiance in the range of wavelengths 0.285 to 2.8 microns, including most of the solar spectrum.  It had a "hemispheric receiver" intended to approximate the cosine response for oblique rays. More information may be found at http://www.yale.edu/ceo/Documentation/Eppley%20Precision%20Spectral%20Pyranometer.pdf.'@en ;
+    skos:notation 'SDN:L22::TOOL0666'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0665/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0665/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0665/>;
+    dc:modified '2014-02-14T10:45:27'^^xsd:dateTime ;
+    skos:altLabel 'Minilog12-TDR'^^xsd:string ;
+    skos:prefLabel 'Vemco Minilog12 temperature-pressure recorder'@en ;
+    skos:definition 'A miniature data logger that records temperature and depth at a user programmed time interval. 12-bit version gives a resolution of 0.015 degC and an accuracy of +/-0.1 degC. It is housed in a waterproof cylinder and the temperature sensor is mounted on a protruding stainless steel probe.'@en ;
+    skos:notation 'SDN:L22::TOOL0665'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0664/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0664/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0664/>;
+    dc:modified '2014-02-14T10:44:00'^^xsd:dateTime ;
+    skos:altLabel 'Seapoint SFF'^^xsd:string ;
+    skos:prefLabel 'Seapoint Fluorescein Fluorometer'@en ;
+    skos:definition 'A low power fluorometer for in-situ measurements of fluorescein dye, at concentrations as low as 0.02 ug/L, and at depths to 6000 metres. May be used open in-situ, or with a pump through sample volume. Output voltage is proportional to fluorescein concentration.'@en ;
+    skos:notation 'SDN:L22::TOOL0664'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0181/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0181/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0181/>;
+    dc:modified '2014-02-14T10:14:38'^^xsd:dateTime ;
+    skos:altLabel 'Minilog8-TR'^^xsd:string ;
+    skos:prefLabel 'Vemco Minilog8 temperature recorder'@en ;
+    skos:definition 'A miniature data logger that records temperature at a user programmed time interval. 8-bit version gives a resolution of 0.1C and an accuracy of between +-0.2C to +-0.3C depending on range specified. It is housed in a waterproof cylinder and the temperature sensor is mounted on a protruding stainless steel probe.'@en ;
+    skos:notation 'SDN:L22::TOOL0181'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0105/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0105/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0105/>;
+    dc:modified '2014-02-14T10:13:29'^^xsd:dateTime ;
+    skos:altLabel 'Minilog12-TR'^^xsd:string ;
+    skos:prefLabel 'Vemco Minilog12 temperature recorder'@en ;
+    skos:definition 'A miniature data logger that records temperature at a user programmed time interval. 12-bit version gives a resolution of 0.015C and an accuracy of +-0.1C. It is housed in a waterproof cylinder and the temperature sensor is mounted on a protruding stainless steel probe. Further information may be found on the BODC document server at URL: http://www.bodc.ac.uk/data/documents/nodb/108661/'@en ;
+    skos:notation 'SDN:L22::TOOL0105'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0663/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0663/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0663/>;
+    dc:modified '2014-02-06T10:11:22'^^xsd:dateTime ;
+    skos:altLabel 'CMST-DSTO USR'^^xsd:string ;
+    skos:prefLabel 'CMST-DSTO underwater sound recorder'@en ;
+    skos:definition 'Instrument that contains a hydrophone plus a data logger in a deep-water housing designed for long-term monitoring of underwater noise. It can be deployed for periods of up to two years. Sampling frequency and schedule (including burst recording) may be programmed. More information at http://cmst.curtin.edu.au/products/usr.cfm.'@en ;
+    skos:notation 'SDN:L22::TOOL0663'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0660/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0660/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0660/>;
+    dc:modified '2014-01-28T11:01:06'^^xsd:dateTime ;
+    skos:altLabel 'OSIL MSC'^^xsd:string ;
+    skos:prefLabel 'OSIL Marine Snow Catcher'@en ;
+    skos:definition 'The Marine Snow Catcher is a large volume water bottle designed to collect Marine Snow particles. The water transport through the device during the descent is controlled through two large diameter terminal apertures constructed to reduce turbulence. The device is usually rested upright after recovery to allow the marine particles to sink to the bottom, after which, the overlying water is slowly drained off via a tap. The bottom section of the water bottle is detachable allowing recovery of the marine snow.'@en ;
+    skos:notation 'SDN:L22::TOOL0660'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0659/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0659/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0659/>;
+    dc:modified '2014-01-27T15:36:42'^^xsd:dateTime ;
+    skos:altLabel 'Dionex ICS-2500 IC'^^xsd:string ;
+    skos:prefLabel 'Dionex ICS-2500 ion chromatograph'@en ;
+    skos:definition 'A gas chromatograph that separates and analyses compounds that do not degrade or decompose in the gas phase. The instrument can be configured with a wide range of modules to build the optimum system for an application. The ICS-2500 features include component modularity, a variety of pump configurations, multiple detectors, full automation capability and System Wellness. The instrument was originally manufactured by Dionex Corporation which was bought by Thermo Scientific (part of Thermo Fisher Scientific). The ICS-2500 was introduced in 2005 and is no longer in production.'@en ;
+    skos:notation 'SDN:L22::TOOL0659'^^xsd:string .

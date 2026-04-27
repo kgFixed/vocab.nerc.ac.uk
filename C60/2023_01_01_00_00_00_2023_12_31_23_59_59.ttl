@@ -1,0 +1,100 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C60/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C60/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2023-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C60/current/IAC/1/> .
+<http://vocab.nerc.ac.uk/collection/C60/current/IAC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C60/current/IAC/>;
+    dc:modified '2023-06-26T15:19:45'^^xsd:dateTime ;
+    skos:altLabel 'hasApplicableContextObject'^^xsd:string ;
+    skos:prefLabel 'iop#hasApplicableContextObject'@en ;
+    skos:definition 'I-ADOPT ontology object property linking a VariableSet to one or more applicable ContextObject.'@en ;
+    skos:notation 'SDN:C60::IAC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C60/current/IAM/1/> .
+<http://vocab.nerc.ac.uk/collection/C60/current/IAM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C60/current/IAM/>;
+    dc:modified '2023-06-26T15:19:43'^^xsd:dateTime ;
+    skos:altLabel 'hasApplicableMatrix'^^xsd:string ;
+    skos:prefLabel 'iop#hasApplicableMatrix'@en ;
+    skos:definition 'I-ADOPT ontology object property linking a VariableSet to one or more applicable Matrix.'@en ;
+    skos:notation 'SDN:C60::IAM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C60/current/IAO/1/> .
+<http://vocab.nerc.ac.uk/collection/C60/current/IAO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C60/current/IAO/>;
+    dc:modified '2023-06-26T15:19:40'^^xsd:dateTime ;
+    skos:altLabel 'hasApplicableObjectOfInterest'^^xsd:string ;
+    skos:prefLabel 'iop#hasApplicableObjectOfInterest'@en ;
+    skos:definition 'I-ADOPT ontology object property linking a VariableSet to one or more applicable ObjectOfInterest.'@en ;
+    skos:notation 'SDN:C60::IAO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C60/current/IAP/1/> .
+<http://vocab.nerc.ac.uk/collection/C60/current/IAP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C60/current/IAP/>;
+    dc:modified '2023-06-26T15:19:37'^^xsd:dateTime ;
+    skos:altLabel 'hasApplicableProperty'^^xsd:string ;
+    skos:prefLabel 'iop#hasApplicableProperty'@en ;
+    skos:definition 'I-ADOPT ontology object property linking a VariableSet to one or more applicable Property.'@en ;
+    skos:notation 'SDN:C60::IAP'^^xsd:string .

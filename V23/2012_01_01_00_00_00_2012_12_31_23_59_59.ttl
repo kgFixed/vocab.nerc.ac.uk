@@ -1,0 +1,300 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/V23/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/G29/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/G29/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/G29/>;
+    dc:modified '2012-07-27T15:17:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'MX_ScopeCode'@en ;
+    skos:definition 'Extension of MD_ScopeCode for the needs of GMX application schemas and in the context of a transfer'@en ;
+    skos:notation 'SDN:V23::G29'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/G28/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/G28/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/G28/>;
+    dc:modified '2012-07-27T15:16:27'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'MD_TopologyLevelCode'@en ;
+    skos:definition 'Degree of complexity of the spatial relationships'@en ;
+    skos:notation 'SDN:V23::G28'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/P05/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/P05/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/P05/>;
+    dc:modified '2012-07-27T15:15:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'MD_TopicCategoryCode'@en ;
+    skos:definition 'High-level geographic data thematic classification to assist in the grouping and search of available geographic data sets. Can be used to group keywords as well. Listed examples are not exhaustive.'@en ;
+    skos:notation 'SDN:V23::P05'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/G26/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/G26/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/G26/>;
+    dc:modified '2012-07-27T15:14:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'MD_SpatialRepresentationTypeCode'@en ;
+    skos:definition 'Method used to represent geographic information in the dataset'@en ;
+    skos:notation 'SDN:V23::G26'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/G25/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/G25/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/G25/>;
+    dc:modified '2012-07-27T15:14:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'MD_ScopeCode'@en ;
+    skos:definition 'Class of information to which the referencing entity applies'@en ;
+    skos:notation 'SDN:V23::G25'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/G23/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/G23/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/G23/>;
+    dc:modified '2012-07-27T15:11:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'MD_RestrictionCode'@en ;
+    skos:definition 'Limitation(s) placed upon the access or use of the data'@en ;
+    skos:notation 'SDN:V23::G23'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/G22/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/G22/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/G22/>;
+    dc:modified '2012-07-27T15:10:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'MD_ProgressCode'@en ;
+    skos:definition 'Status of the dataset or progress of a review'@en ;
+    skos:notation 'SDN:V23::G22'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/G21/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/G21/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/G21/>;
+    dc:modified '2012-07-27T15:03:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'MD_PixelOrientationCode'@en ;
+    skos:definition 'Point in a pixel corresponding to the Earth location of the pixel'@en ;
+    skos:notation 'SDN:V23::G21'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/G20/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/G20/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/G20/>;
+    dc:modified '2012-07-27T15:02:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'MD_ObligationCode'@en ;
+    skos:definition 'Obligation of the element or entity'@en ;
+    skos:notation 'SDN:V23::G20'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/G19/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/G19/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/G19/>;
+    dc:modified '2012-07-27T14:52:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'MD_MediumNameCode'@en ;
+    skos:definition 'Name of the medium'@en ;
+    skos:notation 'SDN:V23::G19'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/G18/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/G18/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/G18/>;
+    dc:modified '2012-07-27T14:38:10'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'MD_MediumFormatCode'@en ;
+    skos:definition 'Method used to write to the medium'@en ;
+    skos:notation 'SDN:V23::G18'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/G17/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/G17/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/G17/>;
+    dc:modified '2012-07-27T14:37:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'MD_MaintenanceFrequencyCode'@en ;
+    skos:definition 'Frequency with which modifications and deletions are made to the data after they are first produced'@en ;
+    skos:notation 'SDN:V23::G17'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/G07/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/G07/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/G07/>;
+    dc:modified '2012-07-27T14:36:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'DS_InitiativeTypeCode'@en ;
+    skos:definition 'Type of aggregation activity in which datasets are related'@en ;
+    skos:notation 'SDN:V23::G07'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/G06/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/G06/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/G06/>;
+    dc:modified '2012-07-27T14:36:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'DS_AssociationTypeCode'@en ;
+    skos:definition 'Justification for the correlation of two datasets'@en ;
+    skos:notation 'SDN:V23::G06'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/G05/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/G05/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/G05/>;
+    dc:modified '2012-07-27T14:35:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'DQ_EvaluationMethodTypeCode'@en ;
+    skos:definition 'Type or method for evaluating an identified data quality measure'@en ;
+    skos:notation 'SDN:V23::G05'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/G04/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/G04/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/G04/>;
+    dc:modified '2012-07-27T14:34:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CI_RoleCode'@en ;
+    skos:definition 'Function performed by the responsible party'@en ;
+    skos:notation 'SDN:V23::G04'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/G15/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/G15/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/G15/>;
+    dc:modified '2012-07-27T14:31:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'MD_ImagingConditionCode'@en ;
+    skos:definition 'Code which indicates conditions which may affect the image'@en ;
+    skos:notation 'SDN:V23::G15'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/L19/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/L19/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/L19/>;
+    dc:modified '2012-07-27T14:31:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'MD_KeywordTypeCode'@en ;
+    skos:definition 'Methods used to group similar keywords'@en ;
+    skos:notation 'SDN:V23::L19'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/G03/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/G03/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/G03/>;
+    dc:modified '2012-07-27T14:24:55'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CI_PresentationFormCode'@en ;
+    skos:definition 'Mode in which the data are represented'@en ;
+    skos:notation 'SDN:V23::G03'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/G01/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/G01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/G01/>;
+    dc:modified '2012-07-27T10:58:04'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CI_DateTypeCode'@en ;
+    skos:definition 'Identification of when a given event occurred'@en ;
+    skos:notation 'SDN:V23::G01'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/L02/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/L02/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/L02/>;
+    dc:modified '2012-07-27T10:55:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'MD_GeometricObjectTypeCode'@en ;
+    skos:definition 'Name of point or vector objects used to locate zero-, one-, two-, or three-dimensional spatial locations in the dataset'@en ;
+    skos:notation 'SDN:V23::L02'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/G13/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/G13/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/G13/>;
+    dc:modified '2012-07-27T10:48:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'MD_DimensionNameTypeCode'@en ;
+    skos:definition 'Name of the dimension'@en ;
+    skos:notation 'SDN:V23::G13'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/G12/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/G12/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/G12/>;
+    dc:modified '2012-07-27T10:32:12'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'MD_DatatypeCode'@en ;
+    skos:definition 'Datatype of element or entity'@en ;
+    skos:notation 'SDN:V23::G12'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/G11/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/G11/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/G11/>;
+    dc:modified '2012-07-27T10:30:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'MD_CoverageContentTypeCode'@en ;
+    skos:definition 'Specific type of information represented in the cell'@en ;
+    skos:notation 'SDN:V23::G11'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/G10/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/G10/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/G10/>;
+    dc:modified '2012-07-27T10:29:38'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'MD_ClassificationCode'@en ;
+    skos:definition 'Name of the handling restrictions on the dataset'@en ;
+    skos:notation 'SDN:V23::G10'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/G09/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/G09/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/G09/>;
+    dc:modified '2012-07-27T10:27:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'MD_CharacterSetCode'@en ;
+    skos:definition 'Name of the character coding standard used in the resource'@en ;
+    skos:notation 'SDN:V23::G09'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/V23/current/G08/1/> .
+<http://vocab.nerc.ac.uk/collection/V23/current/G08/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/V23/current/G08/>;
+    dc:modified '2012-07-27T10:26:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'MD_CellGeometryCode'@en ;
+    skos:definition 'Code indicating whether grid data are points or area'@en ;
+    skos:notation 'SDN:V23::G08'^^xsd:string .

@@ -1,0 +1,91 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/B76/2021_01_01_00_00_00_2021_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/B76/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2021-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B76/current/B7600029/1/> .
+<http://vocab.nerc.ac.uk/collection/B76/current/B7600029/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B76/current/B7600029/>;
+    dc:modified '2021-10-15T12:08:04'^^xsd:dateTime ;
+    skos:altLabel 'Slocum G3S'^^xsd:string ;
+    skos:prefLabel 'Teledyne Webb Research Slocum G3S glider'@en ;
+    skos:definition 'A long-range autonomous underwater vehicle (AUV) based on buoyancy. The G3S utilises the same features as the G3 glider but uses a new STM32 Processor. This replaces the Persistor processor used on the G3 glider in the Science and Flight Bays. The G3S is used for remote water column sampling. It uses hydraulic buoyancy change to alter the vehicle density in relation to the surrounding water thereby causing the vehicle to either float or sink. Given an appropriate dive or climb angle, the wings and body lift and convert some of this vertical motion into a forward saw tooth horizontal motion. Periodically, the glider surfaces and calls via Iridium Satellite Phone (anywhere in world) or Free Wave RF Modem (line of sight) in to Dockserver (auto attendant computer) to relay navigational fix, data and receive further instructions for command and control. The glider is capable of storm sampling and can be flown in a coordinated fleet. It is 1.5 m in length, has a hull diameter of 22 cm and mass of 55-70 kgs (dependent upon configuration). It has an exchangeable payload (capacity up to 6 L) which is capable of housing a variety of environmental sensors such as nitrate and oxygen. It uses lithium or alkaline batteries. It has a deployment range of 350-13000 km (dependent upon configuration), a deployment length of 15 days to 18 months (dependent upon configuration) and an operating depth range of 4-1000m. Navigation is via GPS waypoints, a pressure and altimeter sensor. Maximum speed is 0.35 m/s (0.68 knot) with the buoyancy engine and an average up to 0.5 m/s (1 knots) with full drive, with the thruster: Up to 1 m/s (2 knots). It transmits via RF modem, Iridium (RUDICS), ARGOS or acoustic modem. The new STM32L4 CPU processor utilises OpenRTOS running up to 120 MHz, with 8 Mbytes RAM and 32 Mbytes of flash memory.'@en ;
+    skos:notation 'SDN:B76::B7600029'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B76/current/B7600028/2/> .
+<http://vocab.nerc.ac.uk/collection/B76/current/B7600028/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B76/current/B7600028/>;
+    dc:modified '2021-08-10T11:01:24'^^xsd:dateTime ;
+    skos:altLabel 'SIO Spray2'^^xsd:string ;
+    skos:prefLabel 'Scripps Institution of Oceanography Spray 2 glider'@en ;
+    skos:definition 'The Spray underwater glider is an autonomous vehicle developed at the Instrument Development Group of Scripps Institution of Oceanography that profiles vertically by controlling buoyancy and moves horizontally on wings. Spray steers by changing its center of mass through the movement of internal heavy battery packs, communicates to shore using Iridium, and navigates with GPS. Spray carries sensors to measure a number of variables, including pressure, temperature, salinity, optical properties, dissolved oxygen, and velocity. In typical use, Spray cycles from the surface to 1000 m, traveling 6 km horizontally in 6 hours, with a horizontal velocity of about 0.25 m/s and a vertical velocity of roughly 0.1 m/s. GPS and Iridium antennas are in Spray\'s wings, so when Spray is on the surface, it rolls 90 degrees to navigate and communicate. During communication, Spray sends data to shore, and shore-based pilots can change mission parameters such as waypoints and dive depth. The Sray2 has a larger payload capacity than the first generation of this model.'@en ;
+    skos:notation 'SDN:B76::B7600028'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B76/current/B7600027/1/> .
+<http://vocab.nerc.ac.uk/collection/B76/current/B7600027/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B76/current/B7600027/>;
+    dc:modified '2021-08-10T10:58:13'^^xsd:dateTime ;
+    skos:altLabel 'SIO Spray'^^xsd:string ;
+    skos:prefLabel 'Scripps Institution of Oceanography Spray glider'@en ;
+    skos:definition 'The Spray underwater glider is an autonomous vehicle developed at the Instrument Development Group of Scripps Institution of Oceanography that profiles vertically by controlling buoyancy and moves horizontally on wings. Spray steers by changing its center of mass through the movement of internal heavy battery packs, communicates to shore using Iridium, and navigates with GPS. Spray carries sensors to measure a number of variables, including pressure, temperature, salinity, optical properties, dissolved oxygen, and velocity. In typical use, Spray cycles from the surface to 1000 m, traveling 6 km horizontally in 6 hours, with a horizontal velocity of about 0.25 m/s and a vertical velocity of roughly 0.1 m/s. GPS and Iridium antennas are in Spray\'s wings, so when Spray is on the surface, it rolls 90 degrees to navigate and communicate. During communication, Spray sends data to shore, and shore-based pilots can change mission parameters such as waypoints and dive depth. Typical deployment duration is 3-5 months, depending on sensor suite, stratification, dive depth, and profiling speed.'@en ;
+    skos:notation 'SDN:B76::B7600027'^^xsd:string .

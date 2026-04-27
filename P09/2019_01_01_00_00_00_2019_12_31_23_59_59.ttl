@@ -1,0 +1,217 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P09/2019_01_01_00_00_00_2019_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P09/2018_01_01_00_00_00_2018_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2019-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/NRAD/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/NRAD/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/NRAD/>;
+    dc:modified '2019-05-03T17:52:59'^^xsd:dateTime ;
+    skos:altLabel 'NRAD'^^xsd:string ;
+    skos:prefLabel 'NET TOTAL INCOMING RADIATION'@en ;
+    skos:definition 'Net vector irradiance as energy of electromagnetic radiation (longwave + shortwave) {Net total radiation} in the atmosphere.'@en ;
+    skos:notation 'SDN:P09::NRAD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/SINC/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/SINC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/SINC/>;
+    dc:modified '2019-05-03T17:52:59'^^xsd:dateTime ;
+    skos:altLabel 'SINC'^^xsd:string ;
+    skos:prefLabel 'SHORT-WAVE INCOMING RADIATION'@en ;
+    skos:definition 'Downwelling vector irradiance as energy of electromagnetic radiation (solar wavelengths) in the atmosphere.'@en ;
+    skos:notation 'SDN:P09::SINC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/VEMH/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/VEMH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/VEMH/>;
+    dc:modified '2019-05-03T17:52:59'^^xsd:dateTime ;
+    skos:altLabel 'VEMH'^^xsd:string ;
+    skos:prefLabel 'ESTIMATED MAXIMUM WAVE HEIGHT'@en ;
+    skos:definition 'Wave height maximum of waves on the water body by visual estimation.'@en ;
+    skos:notation 'SDN:P09::VEMH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/VGHS/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/VGHS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/VGHS/>;
+    dc:modified '2019-05-03T17:52:59'^^xsd:dateTime ;
+    skos:altLabel 'VGHS'^^xsd:string ;
+    skos:prefLabel 'GENERIC SIGNIF. WAVE HEIGHT'@en ;
+    skos:definition 'Significant wave height of waves {Hs} on the water body.'@en ;
+    skos:notation 'SDN:P09::VGHS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/VGTA/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/VGTA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/VGTA/>;
+    dc:modified '2019-05-03T17:52:59'^^xsd:dateTime ;
+    skos:altLabel 'VGTA'^^xsd:string ;
+    skos:prefLabel 'GENERIC AVERAGE WAVE PERIOD'@en ;
+    skos:definition 'Period mean of waves on the water body.'@en ;
+    skos:notation 'SDN:P09::VGTA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/VHZA/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/VHZA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/VHZA/>;
+    dc:modified '2019-05-03T17:52:59'^^xsd:dateTime ;
+    skos:altLabel 'VHZA'^^xsd:string ;
+    skos:prefLabel 'AVER ZERO CROSSING WAVE HEIGHT'@en ;
+    skos:definition 'Zero-crossing wave height mean of waves {mean Hz} on the water body.'@en ;
+    skos:notation 'SDN:P09::VHZA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/VMNL/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/VMNL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/VMNL/>;
+    dc:modified '2019-05-03T17:52:59'^^xsd:dateTime ;
+    skos:altLabel 'VMNL'^^xsd:string ;
+    skos:prefLabel 'DEPTH OF THE DEEPEST TROUGH'@en ;
+    skos:definition 'Wave level minimum of waves on the water body.'@en ;
+    skos:notation 'SDN:P09::VMNL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/VST1/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/VST1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/VST1/>;
+    dc:modified '2019-05-03T17:52:59'^^xsd:dateTime ;
+    skos:altLabel 'VST1'^^xsd:string ;
+    skos:prefLabel 'MAXIMUM WAVE STEEPNESS'@en ;
+    skos:definition 'Wave steepness maximum of waves on the water body.'@en ;
+    skos:notation 'SDN:P09::VST1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/VTMX/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/VTMX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/VTMX/>;
+    dc:modified '2019-05-03T17:52:59'^^xsd:dateTime ;
+    skos:altLabel 'VTMX'^^xsd:string ;
+    skos:prefLabel 'MAXIMUM WAVE PERIOD'@en ;
+    skos:definition 'Zero-crossing period maximum of waves on the water body.'@en ;
+    skos:notation 'SDN:P09::VTMX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/VTZM/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/VTZM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/VTZM/>;
+    dc:modified '2019-05-03T17:52:59'^^xsd:dateTime ;
+    skos:altLabel 'VTZM'^^xsd:string ;
+    skos:prefLabel 'PERIOD OF THE HIGHEST WAVE'@en ;
+    skos:definition 'Period at maximum recorded height of waves {THmax} on the water body.'@en ;
+    skos:notation 'SDN:P09::VTZM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/WBFO/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/WBFO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/WBFO/>;
+    dc:modified '2019-05-03T17:52:59'^^xsd:dateTime ;
+    skos:altLabel 'WBFO'^^xsd:string ;
+    skos:prefLabel 'BEAUFORT WIND FORCE'@en ;
+    skos:definition 'Speed of wind {wind speed} in the atmosphere by visual estimation and conversion to Beaufort scale.'@en ;
+    skos:notation 'SDN:P09::WBFO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/WETT/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/WETT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/WETT/>;
+    dc:modified '2019-05-03T17:52:59'^^xsd:dateTime ;
+    skos:altLabel 'WETT'^^xsd:string ;
+    skos:prefLabel 'WET BULB TEMPERATURE'@en ;
+    skos:definition 'Wet bulb temperature of the atmosphere.'@en ;
+    skos:notation 'SDN:P09::WETT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/BEAR/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/BEAR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/BEAR/>;
+    dc:modified '2019-05-03T16:40:17'^^xsd:dateTime ;
+    skos:altLabel 'BEAR'^^xsd:string ;
+    skos:prefLabel 'BEARING AWAY FROM INSTRUMENT'@en ;
+    skos:definition 'Bearing (from fixed reference point) by Trimble GPS.'@en ;
+    skos:notation 'SDN:P09::BEAR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/DRVA/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/DRVA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/DRVA/>;
+    dc:modified '2019-05-03T16:40:17'^^xsd:dateTime ;
+    skos:altLabel 'DRVA'^^xsd:string ;
+    skos:prefLabel 'DIRECTION OF RADIAL VECTOR'@en ;
+    skos:definition 'Direction (towards) of water current (Eulerian measurement) in the water body by directional range-gated radar.'@en ;
+    skos:notation 'SDN:P09::DRVA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/RDIN/3/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/RDIN/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/RDIN/>;
+    dc:modified '2019-05-03T16:40:17'^^xsd:dateTime ;
+    skos:altLabel 'RDIN'^^xsd:string ;
+    skos:prefLabel 'TOTAL INCIDENT RADIATION'@en ;
+    skos:definition 'Downwelling vector irradiance as energy of electromagnetic radiation (longwave + shortwave) {Total radiation} in the atmosphere.'@en ;
+    skos:notation 'SDN:P09::RDIN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/RDVA/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/RDVA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/RDVA/>;
+    dc:modified '2019-05-03T16:40:17'^^xsd:dateTime ;
+    skos:altLabel 'RDVA'^^xsd:string ;
+    skos:prefLabel 'RADIAL SEAWATER VELOCITY'@en ;
+    skos:definition 'Speed of water current (Eulerian measurement) in the water body by directional range-gated radar.'@en ;
+    skos:notation 'SDN:P09::RDVA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P09/current/RNGE/1/> .
+<http://vocab.nerc.ac.uk/collection/P09/current/RNGE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P09/current/RNGE/>;
+    dc:modified '2019-05-03T16:40:17'^^xsd:dateTime ;
+    skos:altLabel 'RNGE'^^xsd:string ;
+    skos:prefLabel 'RANGE AWAY FROM INSTRUMENT'@en ;
+    skos:definition 'Range (from fixed reference point) by unspecified GPS system.'@en ;
+    skos:notation 'SDN:P09::RNGE'^^xsd:string .

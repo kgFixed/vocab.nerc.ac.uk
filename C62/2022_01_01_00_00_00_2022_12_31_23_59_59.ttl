@@ -1,0 +1,208 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C62/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C62/2021_01_01_00_00_00_2021_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2022-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/SI-061/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/SI-061/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/SI-061/>;
+    dc:modified '2022-12-06T15:31:41'^^xsd:dateTime ;
+    skos:altLabel 'Municipality in Slovenia'^^xsd:string ;
+    skos:prefLabel 'Ljubljana'@en ;
+    skos:definition 'Urban Municipality of Slovenia.'@en ;
+    skos:notation 'SDN:C62::SI-061'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/MX-BCN/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/MX-BCN/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/MX-BCN/>;
+    dc:modified '2022-12-06T15:26:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Baja California'@en ;
+    skos:definition 'State of Mexico'@en ;
+    skos:notation 'SDN:C62::MX-BCN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/MXCTY009/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/MXCTY009/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/MXCTY009/>;
+    dc:modified '2022-12-06T15:25:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mexico City'@en ;
+    skos:definition 'Federal Entity of Mexico. Native name is Ciudad de Mexico.'@en ;
+    skos:notation 'SDN:C62::MXCTY009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/ID-JB/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/ID-JB/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/ID-JB/>;
+    dc:modified '2022-12-06T15:10:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'West Java'@en ;
+    skos:definition 'Province of Indonesia. Native name is Jawa Barat.'@en ;
+    skos:notation 'SDN:C62::ID-JB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/FI-13/2/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/FI-13/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/FI-13/>;
+    dc:modified '2022-12-06T15:07:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'North Karelia'@en ;
+    skos:definition 'Region of Finland. Native name is Pohjois-Karjala (Finnish), Norra Karelen (Swedish).'@en ;
+    skos:notation 'SDN:C62::FI-13'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/NO-06/3/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/NO-06/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/NO-06/>;
+    dc:modified '2022-10-07T10:59:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Buskerud'@en ;
+    skos:definition 'Norwegian county'@en ;
+    skos:notation 'SDN:C62::NO-06'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/NO-12/3/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/NO-12/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/NO-12/>;
+    dc:modified '2022-10-07T10:59:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Hordaland'@en ;
+    skos:definition 'Norwegian county'@en ;
+    skos:notation 'SDN:C62::NO-12'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/NO-19/3/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/NO-19/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/NO-19/>;
+    dc:modified '2022-10-07T10:59:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Troms'@en ;
+    skos:definition 'Norwegian county'@en ;
+    skos:notation 'SDN:C62::NO-19'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/NO-30/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/NO-30/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/NO-30/>;
+    dc:modified '2022-10-07T09:33:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Viken'@en ;
+    skos:definition 'Norwegian county'@en ;
+    skos:notation 'SDN:C62::NO-30'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/NO-46/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/NO-46/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/NO-46/>;
+    dc:modified '2022-10-07T09:33:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Vestland'@en ;
+    skos:definition 'Norwegian county'@en ;
+    skos:notation 'SDN:C62::NO-46'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/NO-54/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/NO-54/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/NO-54/>;
+    dc:modified '2022-10-07T09:33:35'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Troms og Finnmark'@en ;
+    skos:definition 'Norwegian county'@en ;
+    skos:notation 'SDN:C62::NO-54'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/CL-CO/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/CL-CO/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/CL-CO/>;
+    dc:modified '2022-07-26T10:09:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Coquimbo'@en ;
+    skos:definition 'Region of Chile'@en ;
+    skos:notation 'SDN:C62::CL-CO'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/VN-SG/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/VN-SG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/VN-SG/>;
+    dc:modified '2022-06-28T09:47:57'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ho Chi Minh'@en ;
+    skos:definition 'Municipality (equivalent to province) of Viet Nam'@en ;
+    skos:notation 'SDN:C62::VN-SG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/MT-12/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/MT-12/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/MT-12/>;
+    dc:modified '2022-03-01T16:33:28'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Gzira'@en ;
+    skos:definition 'Local council area of Malta. Native name is Il-Gzira.'@en ;
+    skos:notation 'SDN:C62::MT-12'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/BH-13/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/BH-13/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/BH-13/>;
+    dc:modified '2022-02-27T22:16:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Capital Governorate'@en ;
+    skos:definition 'Capital region of Bahrain. Native name is Al Asimah. Also known as Al Manamah.'@en ;
+    skos:notation 'SDN:C62::BH-13'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C62/current/VE-A/1/> .
+<http://vocab.nerc.ac.uk/collection/C62/current/VE-A/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C62/current/VE-A/>;
+    dc:modified '2022-02-27T22:16:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Distrito Capital'@en ;
+    skos:definition 'Capital district of Venezuela, containing Caracas'@en ;
+    skos:notation 'SDN:C62::VE-A'^^xsd:string .

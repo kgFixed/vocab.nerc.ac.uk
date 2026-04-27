@@ -1,0 +1,188 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C38/2012_01_01_00_00_00_2012_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C38/2011_01_01_00_00_00_2011_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2012-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6453/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6453/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6453/>;
+    dc:modified '2012-12-10T14:31:36'^^xsd:dateTime ;
+    skos:altLabel 'Nazaré'^^xsd:string ;
+    skos:prefLabel 'Nazaré'@en ;
+    skos:definition '''{"node": {
+    "country": "Portugal",
+    "notes": "Leiria District",
+    "latitude": 39.5866,
+    "longitude": -9.0723
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6453'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6452/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6452/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6452/>;
+    dc:modified '2012-12-10T14:27:14'^^xsd:dateTime ;
+    skos:altLabel 'Strandby Havn'^^xsd:string ;
+    skos:prefLabel 'Strandby Havn'@en ;
+    skos:definition '''{"node": {
+    "country": "Denmark",
+    "latitude": 57.493,
+    "longitude": 10.5028
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6452'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6435/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6435/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6435/>;
+    dc:modified '2012-10-18T08:35:26'^^xsd:dateTime ;
+    skos:altLabel 'Puerto Ayora'^^xsd:string ;
+    skos:prefLabel 'Puerto Ayora'@en ;
+    skos:definition '''{"node": {
+    "country": "Ecuador",
+    "notes": "Galapagos",
+    "latitude": -0.74841,
+    "longitude": -90.31354
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6435'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6434/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6434/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6434/>;
+    dc:modified '2012-10-18T08:32:27'^^xsd:dateTime ;
+    skos:altLabel 'Cocodrie'^^xsd:string ;
+    skos:prefLabel 'Cocodrie'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "notes": "Louisiana",
+    "latitude": 29.24548,
+    "longitude": -90.66158
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6434'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6433/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6433/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6433/>;
+    dc:modified '2012-10-18T08:31:34'^^xsd:dateTime ;
+    skos:altLabel 'Portland'^^xsd:string ;
+    skos:prefLabel 'Portland'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "notes": "Oregon",
+    "latitude": 45.56822,
+    "longitude": -122.72142
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6433'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH169/3/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH169/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH169/>;
+    dc:modified '2012-10-18T08:29:36'^^xsd:dateTime ;
+    skos:altLabel 'Portland'^^xsd:string ;
+    skos:prefLabel 'Portland'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "notes": "Maine",
+    "latitude": 43.65,
+    "longitude": -70.23333
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH169'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6432/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6432/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6432/>;
+    dc:modified '2012-10-18T08:26:50'^^xsd:dateTime ;
+    skos:altLabel 'Lewes'^^xsd:string ;
+    skos:prefLabel 'Lewes'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "notes": "Delaware",
+    "latitude": 38.78238,
+    "longitude": -75.11955
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6432'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6412/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6412/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6412/>;
+    dc:modified '2012-09-12T13:40:08'^^xsd:dateTime ;
+    skos:altLabel 'Loctudy'^^xsd:string ;
+    skos:prefLabel 'Loctudy'@en ;
+    skos:definition '''{"node": {
+    "country": "France",
+    "latitude": 47.83411,
+    "longitude": -4.1724
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6412'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C38/current/BSH6392/1/> .
+<http://vocab.nerc.ac.uk/collection/C38/current/BSH6392/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C38/current/BSH6392/>;
+    dc:modified '2012-05-08T11:47:51'^^xsd:dateTime ;
+    skos:altLabel 'Gournes'^^xsd:string ;
+    skos:prefLabel 'Gournes'@en ;
+    skos:definition '''{"node": {
+    "country": "Greece",
+    "notes": "Small village in Crete 15km E of Iraklion. Alternative spellings Goyrnes and Gouves.",
+    "latitude": 35.33509,
+    "longitude": 25.28173
+}}'''@en ;
+    skos:notation 'SDN:C38::BSH6392'^^xsd:string .

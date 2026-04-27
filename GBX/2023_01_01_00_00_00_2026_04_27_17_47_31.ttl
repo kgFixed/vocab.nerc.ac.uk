@@ -1,0 +1,378 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/GBX/2023_01_01_00_00_00_2026_04_27_17_47_31.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/GBX/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-27T17:47:31'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/GN000109/3/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/GN000109/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/GN000109/>;
+    dc:modified '2024-12-11T11:29:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Product order form - PROVESS data attribution information.'@en ;
+    skos:definition '{"node": {"p": "\'\'This study uses data from the PROVESS Project CDROM, project coordinated at the Proudman Oceanographic Laboratory (now part of the National Oceanography Centre); data provided by the British Oceanographic Data Centre and funded by the European Commission through the Marine Science and Technology (MAST) III programme.\'\'"}}'@en ;
+    skos:notation 'SDN:GBX::GN000109'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/GN000117/3/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/GN000117/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/GN000117/>;
+    dc:modified '2024-12-11T11:29:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Links directory - related links directory pages title'@en ;
+    skos:definition 'Related links directory pages at BODC'@en ;
+    skos:notation 'SDN:GBX::GN000117'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/H5000006/4/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/H5000006/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/H5000006/>;
+    dc:modified '2024-12-11T11:29:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'help text - Simulation layers tagged'@en ;
+    skos:definition '''{"node": {"p": [
+    "This refers to the total number of layers within a simulation, for example the numberof depth levels. Restrict your search to simulations containing specific number oflayers. Click to select the number of layers. Use Control + click or Shift + clickas appropriate to select additional simulations with different numbers of layers. Youmay also use Control + click to deselect.",
+    "Once you have completed your selection use the Update button to submit your search criteria.",
+    "The default is to match any data irrespective of whether it is affiliated to simulations containing specific numbers of layers.",
+    "You may revisit this section and amend your criteria at any time."
+]}}'''@en ;
+    skos:notation 'SDN:GBX::H5000006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/H5000009/4/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/H5000009/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/H5000009/>;
+    dc:modified '2024-12-11T11:29:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Help text - Date range tagged'@en ;
+    skos:definition '''{"node": {
+    "p": [
+        "Refine your search to select data between specified dates. Use the &#34;pull-down&#34; menus (yyyy mm dd) to select data collected between specific dates.",
+        "Once you are happy with your selection use the update button to submit your search criteria.",
+        "The default will match any data irrespective of its start/end date.",
+        "You may revisit this section and amend your criteria at any time."
+    ],
+    "ul": {"li": "If you select a start date and an end date then all data between your start and end dates are returned."}
+}}'''@en ;
+    skos:notation 'SDN:GBX::H5000009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/HP00001Z/3/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/HP00001Z/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/HP00001Z/>;
+    dc:modified '2024-12-11T11:29:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'current meter data type help'@en ;
+    skos:definition '''{"node": {"p": [
+    "Restrict your search to data from particular types of instrument and/or data collected from particular types of platform.",
+    {
+        "strong": "narrow button",
+        "content": [
+            "Click to select a single entry from a list.  Use Control+click or Shift+click to select additional entries as appropriate. You may also use Control+click to deselect.  Once you have chosen from a list press the appropriate",
+            ". This will restrict the choices available in the other lists."
+        ]
+    }
+]}}'''@en ;
+    skos:notation 'SDN:GBX::HP00001Z'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/HP00002A/5/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/HP00002A/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/HP00002A/>;
+    dc:modified '2024-12-11T11:29:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Parameters help'@en ;
+    skos:definition '''{"node": {"p": [
+    "Restrict your search to particular types of parameter.",
+    {
+        "strong": "narrow button",
+        "content": [
+            "Click to select a single entry from a list.  Use Control+click or Shift+click to select additional entries as appropriate. You may also use Control+click to deselect.  Once you have chosen from a list press the appropriate",
+            ". This will restrict the choices available in the other lists."
+        ]
+    }
+]}}'''@en ;
+    skos:notation 'SDN:GBX::HP00002A'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/HP00003A/4/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/HP00003A/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/HP00003A/>;
+    dc:modified '2024-12-11T11:29:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Geographic area help'@en ;
+    skos:definition '{"node": {"p": "Use the interactive map to define your geographic area of interest. Alternatively, type the coordinates of the required area in the form below the map. The area displayed as yellow defines the geographic limits for your current criteria. Your selection must be within this area. Help information for the interactive map is provided via its toolbar."}}'@en ;
+    skos:notation 'SDN:GBX::HP00003A'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/HP00004A/5/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/HP00004A/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/HP00004A/>;
+    dc:modified '2024-12-11T11:29:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Date and duration help'@en ;
+    skos:definition '''{"node": {
+    "p": [
+        "Refine your search to specified dates and/or a time span greater or equal to a specified duration.",
+        "Use the \\"pull-down\\" menus (yyyy mm dd) to select data collected between specific dates. Your selection must be within the allowed range."
+    ],
+    "ul": {"li": "If you select a start date and an end date then all records containing data collected between your start and end dates are returned."}
+}}'''@en ;
+    skos:notation 'SDN:GBX::HP00004A'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/HP00004B/5/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/HP00004B/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/HP00004B/>;
+    dc:modified '2024-12-11T11:29:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Date and duration help'@en ;
+    skos:definition '''{"node": {"p": [
+    "To select a time span, for example longer than one month or two years, please enter a number in the duration box and use the \\"pull-down\\" menu to select its units. Your entry must be less than the maximum duration.",
+    "If used in conjunction with start and end date selections your search results will meet both criteria."
+]}}'''@en ;
+    skos:notation 'SDN:GBX::HP00004B'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/HP00005B/5/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/HP00005B/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/HP00005B/>;
+    dc:modified '2024-12-11T11:29:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Water depth help'@en ;
+    skos:definition '''{"node": {"ul": {"li": [
+    "If you insert a minimum and maximum value then all records with a water depth between your minimum and maximum values are returned.",
+    "If you insert a minimum value only then all records with a water depth equal to or more than your specified value are returned.",
+    "If you insert a maximum value only then all records with a water depth less than or equal to your specified value are returned."
+]}}}'''@en ;
+    skos:notation 'SDN:GBX::HP00005B'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/HP00006B/5/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/HP00006B/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/HP00006B/>;
+    dc:modified '2024-12-11T11:29:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Instrument depth help'@en ;
+    skos:definition '{"node": {"ul": {"li": "If you insert a minimum and maximum value then all records containing measurements at depths between your minimum and maximum values are returned."}}}'@en ;
+    skos:notation 'SDN:GBX::HP00006B'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/HP00008A/7/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/HP00008A/7/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/HP00008A/>;
+    dc:modified '2024-12-11T11:29:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Originator help'@en ;
+    skos:definition '''{"node": {"p": [
+    "Restrict your search to particular countries and/or organisations.",
+    {
+        "strong": "narrow button",
+        "content": [
+            "Click to select a single entry from a list.  Use Control+click or Shift+click to select additional entries as appropriate. You may also use Control+click to deselect.  Once you have chosen from a list press the appropriate",
+            ". This will restrict the choices available in the other list."
+        ]
+    }
+]}}'''@en ;
+    skos:notation 'SDN:GBX::HP00008A'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/HP00009A/5/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/HP00009A/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/HP00009A/>;
+    dc:modified '2024-12-11T11:29:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'QC and data warnings help'@en ;
+    skos:definition '''{"node": {
+    "p": [
+        "The default is to",
+        "This may be changed using the radio buttons followed by pressing the update button."
+    ],
+    "ul": {"li": [
+        {
+            "a": {
+                "href": "/about/information_technology/data_processing_steps/",
+                "content": "quality control procedures"
+            },
+            "content": [
+                "Include all records \\u2014 regardless of whether BODC has completed",
+                "."
+            ]
+        },
+        "Include all records regardless of whether a BODC data quality warning flag has been applied during quality control procedures."
+    ]}
+}}'''@en ;
+    skos:notation 'SDN:GBX::HP00009A'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/ST000139/3/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/ST000139/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/ST000139/>;
+    dc:modified '2024-12-11T11:29:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'view - usage - select purpose'@en ;
+    skos:definition 'Please select the purpose for which the data are to be licenced/used i.e., whetherfor purely academic/educational purposes or used commercially.'@en ;
+    skos:notation 'SDN:GBX::ST000139'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/ST000170/3/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/ST000170/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/ST000170/>;
+    dc:modified '2024-12-11T11:29:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'error page - main text'@en ;
+    skos:definition 'Unfortunately, our application has encountered an error and was unable to complete your request. The error message was as follows'@en ;
+    skos:notation 'SDN:GBX::ST000170'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/ST000257/3/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/ST000257/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/ST000257/>;
+    dc:modified '2024-12-11T11:29:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'exception email - title'@en ;
+    skos:definition 'Exception raised in series application======================================'@en ;
+    skos:notation 'SDN:GBX::ST000257'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/ST000259/3/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/ST000259/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/ST000259/>;
+    dc:modified '2024-12-11T11:29:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'exception email - jre message'@en ;
+    skos:definition 'JRE messages------------'@en ;
+    skos:notation 'SDN:GBX::ST000259'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/ST000266/3/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/ST000266/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/ST000266/>;
+    dc:modified '2024-12-11T11:29:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'exception email - stack trace title'@en ;
+    skos:definition 'Stack trace-----------'@en ;
+    skos:notation 'SDN:GBX::ST000266'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/T3000058/2/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/T3000058/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/T3000058/>;
+    dc:modified '2024-12-11T11:29:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bulk insert results- Status code defintions'@en ;
+    skos:definition '''{"node": {"table": {"tr": [
+    {"th": [
+        "CODE",
+        {
+            "align": "center",
+            "content": "Reason"
+        }
+    ]},
+    {"td": [
+        200,
+        "Success - item inserted"
+    ]},
+    {"td": [
+        400,
+        "Specified update already member of list or is currently pending"
+    ]},
+    {"td": [
+        401,
+        "User not authorised - login required"
+    ]},
+    {"td": [
+        403,
+        "User not authorised - insufficient permissions"
+    ]},
+    {"td": [
+        404,
+        "List identifier not a valid list"
+    ]},
+    {"td": [
+        500,
+        "Oracle error - please try again (please contact enquiries@bodc.ac.uk if problem persists)"
+    ]}
+]}}}'''@en ;
+    skos:notation 'SDN:GBX::T3000058'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/TX000186/3/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/TX000186/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/TX000186/>;
+    dc:modified '2024-12-11T11:29:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'error - main text'@en ;
+    skos:definition 'Unfortunately, our application has encountered an error and was unable to complete your request. The error message was as follows'@en ;
+    skos:notation 'SDN:GBX::TX000186'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/GN000037/5/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/GN000037/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/GN000037/>;
+    dc:modified '2024-12-11T11:15:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'registration - user info 2'@en ;
+    skos:definition '''{"node": {
+    "p": [
+        "The \'Personal Details\' provided will not be given to any third parties. BODC will make a permanent, secure archive of your personal details, which will only be used to",
+        "We will take all reasonable precautions to protect your personal data from loss, misuse or alteration. Only authorised BODC employees will have access to this information."
+    ],
+    "ul": {"li": [
+        "provide you with data and/or information",
+        "generate the online licences for when you request data",
+        "ensure that we remain compliant with NERC Data Policy",
+        "generate anonymised \'performance indicators\' to support future funding of our web development",
+        "seek information, to satisfy impact metrics, regarding how you used the data you requested and its impact on your work"
+    ]},
+    "h2": "Your contact details"
+}}'''@en ;
+    skos:notation 'SDN:GBX::GN000037'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GBX/current/BU000018/3/> .
+<http://vocab.nerc.ac.uk/collection/GBX/current/BU000018/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GBX/current/BU000018/>;
+    dc:modified '2024-12-11T11:07:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'download kml button'@en ;
+    skos:definition 'Download metadata (KML)'@en ;
+    skos:notation 'SDN:GBX::BU000018'^^xsd:string .

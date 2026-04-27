@@ -1,0 +1,190 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S05/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S05/2021_01_01_00_00_00_2021_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2022-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050248/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050248/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050248/>;
+    dc:modified '2022-11-29T16:49:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'conversion to ESAS code using the visibility table'@en ;
+    skos:definition 'Classification into classes (A-D) with standardised ranges specified in the European Seabirds At Sea (ESAS) visibility table.'@en ;
+    skos:notation 'SDN:S05::S050248'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050247/2/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050247/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050247/>;
+    dc:modified '2022-11-21T09:38:52'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation using the haversine formula'@en ;
+    skos:definition 'The parameter has been calculated using the haversine formula to determine the angular distance between two points on the surface of a sphere.'@en ;
+    skos:notation 'SDN:S05::S050247'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050246/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050246/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050246/>;
+    dc:modified '2022-11-10T13:11:24'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'standardisation to 25 degrees Celsius'@en ;
+    skos:definition 'The measured value was measured at, or corrected to, a fix reference temperature of 25 degrees Celsius.'@en ;
+    skos:notation 'SDN:S05::S050246'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050179/2/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050179/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050179/>;
+    dc:modified '2022-11-10T12:55:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation using Takahashi correction to in-situ temperature'@en ;
+    skos:definition 'A partial pressure of CO2 data processing protocol specified in Takahashi et al (1993) Seasonal variation of CO2 and nutrients in the high-latitude surface oceans: A comparative study. Global Biogeochemical Cycles, 7, 843-878.'@en ;
+    skos:notation 'SDN:S05::S050179'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050027/2/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050027/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050027/>;
+    dc:modified '2022-11-10T12:54:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation using OC5 algorithm'@en ;
+    skos:definition 'Calibration algorithm used to generate chlorophyll concentrations from remotely sensed multiple-waveband normalised water-leaving radiance measurements.'@en ;
+    skos:notation 'SDN:S05::S050027'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050047/2/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050047/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050047/>;
+    dc:modified '2022-11-10T12:52:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation using Fourier analysis after Goda (1970)'@en ;
+    skos:definition 'A wave data processing protocol specified in Goda, Y. (1970) Proc. JSCE, 180 (in Japanese).'@en ;
+    skos:notation 'SDN:S05::S050047'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050048/2/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050048/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050048/>;
+    dc:modified '2022-11-10T12:52:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation using Fourier analysis after Nolte and Hsu (1972)'@en ;
+    skos:definition 'A wave data processing protocol specified in Nolte K G,Hsu F H.Statistics of ocean wave groups[C].Dallas,Texas:Fourth Annual Offshore Technology Conf,1972:637-644.'@en ;
+    skos:notation 'SDN:S05::S050048'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050245/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050245/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050245/>;
+    dc:modified '2022-05-25T19:27:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation using the published OC4Me algorithm'@en ;
+    skos:definition 'Calibration algorithm used to derive chlorophyll-a concentrations from the band ratio of four bands of remotely sensed surface reflectance data. OC4Me uses sensor-specific coefficients and remotely sensed reflectance from the Medium Resolution Imaging Spectrometer (MERIS) instrument.'@en ;
+    skos:notation 'SDN:S05::S050245'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050244/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050244/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050244/>;
+    dc:modified '2022-05-25T19:27:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation using the published OC3V algorithm'@en ;
+    skos:definition 'Calibration algorithm used to derive chlorophyll-a concentrations from the band ratio of three bands of remotely sensed surface reflectance data. OC3V uses sensor-specific coefficients and remotely sensed reflectance from a Visible Infrared Imaging Radiometer Suite (VIIRS) instrument.'@en ;
+    skos:notation 'SDN:S05::S050244'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050243/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050243/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050243/>;
+    dc:modified '2022-05-25T19:27:21'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation using the published OC3M algorithm'@en ;
+    skos:definition 'Calibration algorithm used to derive chlorophyll-a concentrations from the band ratio of three bands of remotely sensed surface reflectance data. OC3M uses sensor-specific coefficients and remotely sensed reflectance from the Moderate Resolution Imaging Spectroradiometer (MODIS) instrument.'@en ;
+    skos:notation 'SDN:S05::S050243'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050111/3/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050111/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050111/>;
+    dc:modified '2022-04-27T17:00:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation using stereometrical configurations of Edler(1979) and carbon factor of Gonzalez and Smetacek(1994)'@en ;
+    skos:definition 'Abundance to biovolume conversion following the protocol described in Edler L (ed) (1979) Recommendations for marine biological studies in the Baltic Sea—phytoplankton and chlorophyll. The Baltic Marine Biologists Publ 5:1-38. Biovolume to carbon biomass using the carbon conversion factor of Gonzalez, H.E., Smetacek, V., (1994). The possible role of the cyclopoid copepod Oithona in retarding vertical flux of zooplankton fecal material. Mar. Ecol.Prog. Ser. 113, 233-246.'@en ;
+    skos:notation 'SDN:S05::S050111'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050202/3/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050202/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050202/>;
+    dc:modified '2022-04-27T17:00:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'using the epsilon notation'@en ;
+    skos:definition 'The isotope composition is reported using the epsilon notation for stable isotope fractionation defined as the deviation of the isotope ratio of a sample relative to a standardin parts per ten thousand (((Rsample - Rstandard)/Rstandard)x10000).'@en ;
+    skos:notation 'SDN:S05::S050202'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050203/3/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050203/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050203/>;
+    dc:modified '2022-04-27T17:00:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'using the delta notation'@en ;
+    skos:definition 'The isotope composition is reported using the delta notation for stable isotope fractionation defined as the deviation of the isotope ratio of a sample relative to a standardin parts per thousand (((Rsample - Rstandard)/Rstandard)x1000).'@en ;
+    skos:notation 'SDN:S05::S050203'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050242/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050242/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050242/>;
+    dc:modified '2022-03-24T14:00:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation using equations from Legendre and Gosseline (1996)'@en ;
+    skos:definition 'The parameter has been calculated using the equations published in Legendre, L., and Gosseline, M. (1996). Estimation of N and C uptake rates by phytoplankton using 15N and 13C: revisiting the usual computation formulae. J. Plankt. Res. 19, 263-271.'@en ;
+    skos:notation 'SDN:S05::S050242'^^xsd:string .

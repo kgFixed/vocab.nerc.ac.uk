@@ -1,0 +1,154 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S20/2019_01_01_00_00_00_2019_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S20/2018_01_01_00_00_00_2018_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2019-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000024/1/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000024/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000024/>;
+    dc:modified '2019-10-14T15:26:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '1 micropascal'@en ;
+    skos:definition 'The reference level is a pressure of 1 micropascal.'@en ;
+    skos:notation 'SDN:S20::S2000024'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000023/1/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000023/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000023/>;
+    dc:modified '2019-03-26T20:46:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'last reading set'@en ;
+    skos:definition 'The reference is the time of the last reading set.'@en ;
+    skos:notation 'SDN:S20::S2000023'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000022/1/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000022/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000022/>;
+    dc:modified '2019-03-26T20:46:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '1900-01-01T00:00:00Z'@en ;
+    skos:definition 'The time reference is midnight UTC on the 1st January 1900.'@en ;
+    skos:notation 'SDN:S20::S2000022'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000021/1/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000021/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000021/>;
+    dc:modified '2019-03-26T20:45:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'start of dive'@en ;
+    skos:definition 'The reference is the start of the platform dive.'@en ;
+    skos:notation 'SDN:S20::S2000021'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000020/1/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000020/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000020/>;
+    dc:modified '2019-03-26T20:44:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'start of day 00:00:00 UT'@en ;
+    skos:definition 'The time reference is midnight UTC at the start of the day.'@en ;
+    skos:notation 'SDN:S20::S2000020'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000019/1/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000019/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000019/>;
+    dc:modified '2019-03-26T20:44:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '1970-01-01T00:00:00Z'@en ;
+    skos:definition 'The time reference is midnight UTC on the 1st January 1970.'@en ;
+    skos:notation 'SDN:S20::S2000019'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000018/1/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000018/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000018/>;
+    dc:modified '2019-03-26T20:43:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '1950-01-01T00:00:00Z'@en ;
+    skos:definition 'The time reference is midnight UTC on the 1st January 1950.'@en ;
+    skos:notation 'SDN:S20::S2000018'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000017/1/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000017/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000017/>;
+    dc:modified '2019-02-01T17:34:56'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Irish Grid Reference System'@en ;
+    skos:definition 'A geographic grid reference system used in Ireland based on 1965 Datum and the Airy Modified Ellipsoid.'@en ;
+    skos:notation 'SDN:S20::S2000017'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000016/1/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000016/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000016/>;
+    dc:modified '2019-02-01T17:12:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'OSGB36'@en ;
+    skos:definition 'The Ordnance Survey Great Britain 1936 datum based on the Airy 1830 ellipsoid.'@en ;
+    skos:notation 'SDN:S20::S2000016'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S20/current/S2000015/2/> .
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000015/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S20/current/S2000015/>;
+    dc:modified '2019-01-22T19:57:07'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'WGS84'@en ;
+    skos:definition 'The World Geodetic System 1984 datum.'@en ;
+    skos:notation 'SDN:S20::S2000015'^^xsd:string .

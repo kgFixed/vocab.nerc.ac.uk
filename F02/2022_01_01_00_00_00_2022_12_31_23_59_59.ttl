@@ -1,0 +1,181 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/F02/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/F02/2018_01_01_00_00_00_2021_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2022-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/F02/current/F0200010/4/> .
+<http://vocab.nerc.ac.uk/collection/F02/current/F0200010/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/F02/current/F0200010/>;
+    dc:modified '2022-11-13T22:13:00'^^xsd:dateTime ;
+    skos:altLabel 'HetHNA'^^xsd:string ;
+    skos:prefLabel 'Heterotrophic prokaryotes with relatively high nucleic acid'@en ;
+    skos:definition 'Heterotrophic prokaryotes include both Bacteria and Archaea. When they do not contain any photosynthetic pigments and thus do not have any auto-fluorescence property exploitable by flow cytometry, they require staining with a fluorescent dye. In most studies a nucleic acid dye is used. Most of the time, staining of nucleic acids by a green emitting fluorescent dye is used. Blue laser excitation enables heterotrophic prokaryotes to be distinguished in various groups thanks to sideward or forward scatter, and green fluorescence signatures: cells with a higher green fluorescence signal correspond to heterotrophic prokaryotes with a relatively high nucleic acid content (HetHNA). Their scatter signals (forward and sideward) are equal or lower than those of OraPicoProk and RedPicoEuk, and may overlap those of RedPicoProk.'@en ;
+    skos:notation 'SDN:F02::F0200010'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/F02/current/F0200011/4/> .
+<http://vocab.nerc.ac.uk/collection/F02/current/F0200011/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/F02/current/F0200011/>;
+    dc:modified '2022-11-13T22:13:00'^^xsd:dateTime ;
+    skos:altLabel 'HetLNA'^^xsd:string ;
+    skos:prefLabel 'Heterotrophic prokaryotes with relatively low nucleic acid'@en ;
+    skos:definition 'Heterotrophic prokaryotes include both Bacteria and Archaea. When they do not contain any photosynthetic pigments and thus do not have any auto-fluorescence property exploitable by flow cytometry, they require staining with a fluorescent dye. In most studies a nucleic acid dye is used. Most of the time, staining of nucleic acids by a green emitting fluorescent dye is used. Blue laser excitation enables heterotrophic prokaryotes to be distinguished in various groups thanks to sideward or forward scatter, and green fluorescence signatures: cells with a lower green fluorescence correspond to heterotrophic prokaryotes with a relatively lower nucleic acid content (HetLNA).  Their scatter signals (sideward and forward) are equal or lower than those of OraPicoProk and RedPico, and may overlap those of RedPicoProk.'@en ;
+    skos:notation 'SDN:F02::F0200011'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/F02/current/F0200007/6/> .
+<http://vocab.nerc.ac.uk/collection/F02/current/F0200007/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/F02/current/F0200007/>;
+    dc:modified '2022-11-13T22:13:00'^^xsd:dateTime ;
+    skos:altLabel 'HsNano'^^xsd:string ;
+    skos:prefLabel 'Red fluorescing nanophytoplankton with relatively high sideward light scattering properties'@en ;
+    skos:definition 'The HsNano group consists of eukaryotic cells that have a high sideward scatter signal when excited by a blue laser, compared to the RedNano and OraNano groups, but similar forward scatter and red fluorescence signatures. These cells also display a high depolarization ratio (horizontal/vertical polarized forward light scatter). This optical property is very useful to discriminate Coccolithales that are covered with coccoliths (CaCO3 platelets, Green et al. 1996; von Dassow et al., 2012), as well as some autotrophs and armored dinoflagellates. Staining is not required to distinguish them by flow cytometry due to the presence of fluorescent photosynthetic pigments.'@en ;
+    skos:notation 'SDN:F02::F0200007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/F02/current/F0200016/3/> .
+<http://vocab.nerc.ac.uk/collection/F02/current/F0200016/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/F02/current/F0200016/>;
+    dc:modified '2022-11-13T22:13:00'^^xsd:dateTime ;
+    skos:altLabel 'OraMicro'^^xsd:string ;
+    skos:prefLabel 'Orange fluorescing microphytoplankton'@en ;
+    skos:definition 'The OraMicro group consist of cells greater than 20 µm They display higher forward scatter and orange fluorescence signals than OraNano, and a higher orange fluorescence/red fluorescence ratio compared to the RedMicro group. Staining is not required to distinguish them by flow cytometry. Cells have a high phycoerythrin content and may also contain phycocyanin that can be excited by a red laser. In this case, when cells are excited by a laser beam with a wavelength approximately of 533 nm (green), then they will emit a higher red fluorescence signal compared to chlorophyll a-only containing cells due to the energy transfer to the pigment phycocyanin that will also emit fluorescence in the red fluorescence channel. This group can include cells or groups of cells greater than 20 µm including cryptophytes, colonial cyanobacterial filaments, but also dinoflagellates and some ciliates. Due to the small volumes usually analyzed by flow cytometry (typically less than 1 cm^3), this group is not always properly quantified when cells are not abundant enough. When forward scatter is calibrated using solutions of beads with different diameters or phytoplankton cell-cultures, it is possible to distinguish microphytoplankton from nanophytoplankton cells with a size close to 20 µm. Chains or colonies may be too large for flow cytometry analysis, depending on instrument characteristics (tubing inner diameter, flow cell dimensions, pulse shape recording or not).'@en ;
+    skos:notation 'SDN:F02::F0200016'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/F02/current/F0200006/5/> .
+<http://vocab.nerc.ac.uk/collection/F02/current/F0200006/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/F02/current/F0200006/>;
+    dc:modified '2022-11-13T22:13:00'^^xsd:dateTime ;
+    skos:altLabel 'OraNano'^^xsd:string ;
+    skos:prefLabel 'Orange and red fluorescing nanophytoplankton'@en ;
+    skos:definition 'The OraNano group belongs to the arbitrary size class of nanoplankton (3 -20 µm). They contain phycoerythrin and may contain phycocyanin that can be excited by a red laser beam (615-640 nm). When excited by a blue laser, they bear similar forward scatter as the RedNano with a high orange fluorescence signatures, often observed above OraPico group in orange and red fluorescence cytograms. Staining is not required to distinguish them by flow cytometry due to the presence of fluorescent photosynthetic pigments. If the OraNano cells contain both phycoerythrin and phycocyanin and are excited by a laser beam <575 nm, they will emit a higher red fluorescence signal compared to RedNano (due to the energy transfer to red fluorescence). This groups is represented by some cyanobacteria, red algae or cryptophytes.'@en ;
+    skos:notation 'SDN:F02::F0200006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/F02/current/F0200014/4/> .
+<http://vocab.nerc.ac.uk/collection/F02/current/F0200014/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/F02/current/F0200014/>;
+    dc:modified '2022-11-13T22:13:00'^^xsd:dateTime ;
+    skos:altLabel 'OraPico'^^xsd:string ;
+    skos:prefLabel 'Orange and red fluorescing picophytoplankton'@en ;
+    skos:definition 'The OraPico group consists of prokaryotes and eukaryotes that contain the pigment phycoerythrin and with a size lesser than 3 µm. When excited by a blue laser, their sideward and forward scatter signatures are larger than those of OraPicoProk but with a red fluorescence signature similar to the RedPico. This group belongs mostly to cyanobacteria and cryptophytes.'@en ;
+    skos:notation 'SDN:F02::F0200014'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/F02/current/F0200003/5/> .
+<http://vocab.nerc.ac.uk/collection/F02/current/F0200003/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/F02/current/F0200003/>;
+    dc:modified '2022-11-13T22:13:00'^^xsd:dateTime ;
+    skos:altLabel 'OraPicoProk'^^xsd:string ;
+    skos:prefLabel 'Orange fluorescing prokaryote picophytoplankton'@en ;
+    skos:definition 'The OraPicoProk, often identified as Synechococcus cells, are unicellular photosynthetic cyanobacteria with forward scatter and sideward scatter signatures larger than those of most of marine heterotrophic bacteria. Their optical signatures can span over almost two decades of signal sensitivity range (Vaulot et al., 1995). Staining is not required to distinguish them by flow cytometry due to the presence of photosynthetic pigments.  When excited by a blue laser, the OraPicoProk cluster displays higher forward scatter and red fluorescence signatures than RedPicoProk at any given depth. They contain phycoerythrin, and have a distinct orange fluorescence signature which can be excited by any <575 nm wavelength laser.  Depending on the band pass filters, the OraPicoProk cluster is well resolved in red vs green, and/or in red vs orange fluorescence cytograms when containing phycoerythrin. '@en ;
+    skos:notation 'SDN:F02::F0200003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/F02/current/F0200008/4/> .
+<http://vocab.nerc.ac.uk/collection/F02/current/F0200008/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/F02/current/F0200008/>;
+    dc:modified '2022-11-13T22:13:00'^^xsd:dateTime ;
+    skos:altLabel 'RedMicro'^^xsd:string ;
+    skos:prefLabel 'Red only fluorescing microphytoplankton'@en ;
+    skos:definition 'The Redmico group is a polyphyletic group defined by cells > 20 µm in size. Staining is not required to distinguish microphytoplankton by flow cytometry due to the presence of fluorescent photosynthetic pigments. When excited by a blue laser, this group is discriminated thanks to its forward scatter (FSC or FWS) and red fluorescence (FLR) signals, that are the largest observed by flow cytometry in the microbial community. Due to the small volumes usually analyzed by flow cytometry (less than 1 cm3 in most cases), this group is not always properly counted when cells are not abundant enough. When FSC (or FWS) is calibrated by using beads or phytoplankton cultures, it enables microphytoplankton to be distinguished from nanophytoplankton with a size of about 20 µm. Chains or colony forming cells may be too large for flow cytometry analysis depending on instrument characteristics (tubing size, flow cell dimension, pulse shape recording or not).'@en ;
+    skos:notation 'SDN:F02::F0200008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/F02/current/F0200005/4/> .
+<http://vocab.nerc.ac.uk/collection/F02/current/F0200005/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/F02/current/F0200005/>;
+    dc:modified '2022-11-13T22:13:00'^^xsd:dateTime ;
+    skos:altLabel 'RedNano'^^xsd:string ;
+    skos:prefLabel 'Red only fluorescing nanophytoplankton'@en ;
+    skos:definition 'The RedNano group is a polyphyletic group. This group is defined by eukaryotic phytoplankton cells with a size between 3 µm and 20 µm. Staining is not required to distinguish them by flow cytometry due to the presence of fluorescent photosynthetic pigments. On cytograms and when excited by a blue laser, they differ from RedPico by higher red fluorescence, sideward scatter and forward scatter signatures. Red only fluorescing nanophytoplankton cells are distinguished from phycoerythrin containing cells by their lack of orange fluorescence.'@en ;
+    skos:notation 'SDN:F02::F0200005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/F02/current/F0200004/4/> .
+<http://vocab.nerc.ac.uk/collection/F02/current/F0200004/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/F02/current/F0200004/>;
+    dc:modified '2022-11-13T22:13:00'^^xsd:dateTime ;
+    skos:altLabel 'RedPico'^^xsd:string ;
+    skos:prefLabel 'Red only fluorescing picophytoplankton'@en ;
+    skos:definition 'The RedPico is a polyphyletic group. Based on the literature, this group is defined by eukaryotic phytoplankton cells with a diameter <3 µm (Buitenhuis et al. and references there in, 2012). Staining is not required to distinguish them by flow cytometry due to the presence of fluorescent photosynthetic pigments. The smallest nowadays eukaryotic picophytoplankton known belongs to the genus Ostreococcus. Red only fluorescing eukaryotic picophytoplankton exhibits a well-defined flow cytometry signature when excited with a blue laser, with forward scatter and red fluorescence signals larger than those of RedPicoProk, but smaller than those of the RedNano. The forward scatter signal of beads lesser than 3 µm is widely used by the community as an optical standard to localize this group although beads are not a reliable indicator of cell size as measured by flow cytometry. Successive size filtrations or cultures can be used to estimate scatter and size relationship.'@en ;
+    skos:notation 'SDN:F02::F0200004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/F02/current/F0200002/5/> .
+<http://vocab.nerc.ac.uk/collection/F02/current/F0200002/5/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/F02/current/F0200002/>;
+    dc:modified '2022-11-13T22:13:00'^^xsd:dateTime ;
+    skos:altLabel 'RedPicoProk'^^xsd:string ;
+    skos:prefLabel 'Red only fluorescing prokaryote picophytoplankton'@en ;
+    skos:definition 'The RedPicoProk are commonly identified as the unicellular photosynthetic cyanobacteria Prochlorococcus. Due to their photosynthetic pigments, staining is not required to detect them by flow cytometry. When excited by a blue laser, their forward scatter and red auto-fluorescence emitted by chlorophylls (divinyl chlorophyll a for the Prochlorophytes) allow their discrimination from the background noise. These are the smallest marine photosynthetic microorganisms known to date (Chisholm et al., 1988). Their detection requires sensitive photodetectors or high powered lasers, optimally at 445 nm wavelength. They do not emit orange fluorescence because they lack the pigment phycoerythrin. However, at the sea surface, their red fluorescence may be too dim to be detected by flow cytometry and, as a consequence, they are often mixed with the background signal (mix between instrumental noise and non-fluorescing particles such as heterotrophic prokaryotes). When well defined (deep water communities, for instance), RedPicoProk do not overlap with the background signal. In deep layers, RedPicoProk often show a bimodal distribution of the red fluorescence, due to the coexistence of two different ecotypes (Campbell and Vaulot, 1993).In samples incubated with a DNA-staining fluorescent dye and excited with a blue laser to perform heterotrophic prokaryote analyses, Prochlorococcus group(s) can be readily distinguished using sideward scatter vs red fluorescence cytogram, or red fluorescence vs SYBR Green (nucleic acid dye) green fluorescence cytogram.'@en ;
+    skos:notation 'SDN:F02::F0200002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/F02/current/F0200015/4/> .
+<http://vocab.nerc.ac.uk/collection/F02/current/F0200015/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/F02/current/F0200015/>;
+    dc:modified '2022-11-13T22:13:00'^^xsd:dateTime ;
+    skos:altLabel 'RedRedNano'^^xsd:string ;
+    skos:prefLabel 'Red and red only fluorescing nanophytoplankton'@en ;
+    skos:definition 'The RedRedNano group belongs to the nanoplankton size class (3-20 µm) and cells are emitting in the red when excited by a red laser, due to phycocyanin content in the cell (Read et al., 2014), but not in the orange when excited by a blue laser. This group of cells contains phycocyanin with no or little phycoerythrin. Forward scatter and red fluorescence signatures are similar to RedNano. They include cryptophytes or cyanobacteria classes, especially when they form colonies.'@en ;
+    skos:notation 'SDN:F02::F0200015'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/F02/current/F0200013/4/> .
+<http://vocab.nerc.ac.uk/collection/F02/current/F0200013/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/F02/current/F0200013/>;
+    dc:modified '2022-11-13T22:13:00'^^xsd:dateTime ;
+    skos:altLabel 'RedRedPico'^^xsd:string ;
+    skos:prefLabel 'Red and red only fluorescing picophytoplankton'@en ;
+    skos:definition 'The RedRedPico is a group mainly identified as Synechococcus cells which contains only phycocyanin (PC). This groups can only be resolved using a red laser as excitation source of PC. These PC-rich species are expected to be more abundant in turbid estuaries, as PC is optimized for the orange-red light conditions in these waters, whereas phycoerythrin (PE) pigments present in some other Synechococcus are optimally tuned to the blue-green light in clear waters such as (Stomp et al., 2007). These RedRedPico overlap the RedPicoProk on the orange vs red fluorescence cytograms induced by the blue 488 nm laser beam (Liu et al., 2014).'@en ;
+    skos:notation 'SDN:F02::F0200013'^^xsd:string .

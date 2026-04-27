@@ -1,0 +1,100 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S09/2007_01_01_00_00_00_2009_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S09/2006_01_01_00_00_00_2006_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2009-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S09/current/S09190/1/> .
+<http://vocab.nerc.ac.uk/collection/S09/current/S09190/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S09/current/S09190/>;
+    dc:modified '2009-04-16T15:44:45'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '2-12um'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:S09::S09190'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S09/current/S09189/1/> .
+<http://vocab.nerc.ac.uk/collection/S09/current/S09189/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S09/current/S09189/>;
+    dc:modified '2009-01-19T15:37:23'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '50-100um'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:S09::S09189'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S09/current/S09188/1/> .
+<http://vocab.nerc.ac.uk/collection/S09/current/S09188/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S09/current/S09188/>;
+    dc:modified '2009-01-19T15:36:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '15-20um'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:S09::S09188'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S09/current/S09187/1/> .
+<http://vocab.nerc.ac.uk/collection/S09/current/S09187/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S09/current/S09187/>;
+    dc:modified '2009-01-19T15:36:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel '30-50um'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:S09::S09187'^^xsd:string .

@@ -1,0 +1,552 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/HA2/2017_01_01_00_00_00_2017_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20055/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20055/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20055/>;
+    dc:modified '2017-11-07T15:29:12'^^xsd:dateTime ;
+    skos:altLabel 'Natural gas storage site'^^xsd:string ;
+    skos:prefLabel 'Natural gas storage site location'@en ;
+    skos:definition 'Points or polygons indicating location of facilities that have been licenced for natural gas storage.'@en ;
+    skos:notation 'SDN:HA2::HA20055'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20054/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20054/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20054/>;
+    dc:modified '2017-11-07T15:26:57'^^xsd:dateTime ;
+    skos:altLabel 'Carbon capture storage site'^^xsd:string ;
+    skos:prefLabel 'Carbon capture storage site location'@en ;
+    skos:definition 'Points or polygons indicating location of facilities that have been licenced for carbon capture storage.'@en ;
+    skos:notation 'SDN:HA2::HA20054'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20005/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20005/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Advisory Councils'^^xsd:string ;
+    skos:prefLabel 'Advisory Councils boundaries'@en ;
+    skos:definition 'Polygons indicating the boundaries of Regional Advisory Councils.'@en ;
+    skos:notation 'SDN:HA2::HA20005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20034/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20034/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20034/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Aggregates extraction site'^^xsd:string ;
+    skos:prefLabel 'Aggregates extraction site location'@en ;
+    skos:definition 'Points or polygons indicating location of marine aggregate extraction sites.'@en ;
+    skos:notation 'SDN:HA2::HA20034'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20014/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20014/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20014/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Archaelogical sites'^^xsd:string ;
+    skos:prefLabel 'Archaelogical site location'@en ;
+    skos:definition 'Points or polygons indicating sites that show signs of past human behaviour or activity.'@en ;
+    skos:notation 'SDN:HA2::HA20014'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20006/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20006/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20006/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Areas used for military purposes'^^xsd:string ;
+    skos:prefLabel 'Areas used for military purpose location'@en ;
+    skos:definition 'Polygons indicating the boundaries of areas whose use is restricted by law to military purposes.'@en ;
+    skos:notation 'SDN:HA2::HA20006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20045/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20045/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20045/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Bathing sites'^^xsd:string ;
+    skos:prefLabel 'Bathing site location'@en ;
+    skos:definition 'Points or polygons indicating bathing water quality.'@en ;
+    skos:notation 'SDN:HA2::HA20045'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20032/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20032/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20032/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Boreholes'^^xsd:string ;
+    skos:prefLabel 'Borehole location'@en ;
+    skos:definition 'Points indicating location of offshore hydrocarbon boreholes.'@en ;
+    skos:notation 'SDN:HA2::HA20032'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20002/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20002/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Brackish-water aquaculture farms'^^xsd:string ;
+    skos:prefLabel 'Brackish-water aquaculture farm location'@en ;
+    skos:definition 'Points or polygons indicating location of sites dedicated to farming of finfish and shellfish in brackish water.'@en ;
+    skos:notation 'SDN:HA2::HA20002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20035/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20035/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20035/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Deep-sea mining sites'^^xsd:string ;
+    skos:prefLabel 'Deep-sea mining site location'@en ;
+    skos:definition 'Points or polygons indicating location of research and exploration of deep-sea minerals.'@en ;
+    skos:notation 'SDN:HA2::HA20035'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20033/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20033/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20033/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Dredging sites'^^xsd:string ;
+    skos:prefLabel 'Dredging site location'@en ;
+    skos:definition 'Points or polygons indicating location of dredging sites.'@en ;
+    skos:notation 'SDN:HA2::HA20033'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20025/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20025/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20025/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Fish catches'^^xsd:string ;
+    skos:prefLabel 'Fish catches statistics'@en ;
+    skos:definition 'Statistics on fish catches by FAO 3-alpha code.'@en ;
+    skos:notation 'SDN:HA2::HA20025'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20026/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20026/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20026/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Fish landings'^^xsd:string ;
+    skos:prefLabel 'Fish landings statistics'@en ;
+    skos:definition 'Statistics on fish landings by FAO 3-alpha code.'@en ;
+    skos:notation 'SDN:HA2::HA20026'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20029/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20029/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20029/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Fish ports'^^xsd:string ;
+    skos:prefLabel 'Fish port location'@en ;
+    skos:definition 'Points or polygons indicating location of fish ports.'@en ;
+    skos:notation 'SDN:HA2::HA20029'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20027/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20027/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20027/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Fishing effort'^^xsd:string ;
+    skos:prefLabel 'Gear-specific fishing effort'@en ;
+    skos:definition 'Amount of fishing gear of a specific type used on the fishing grounds over a given unit of time.'@en ;
+    skos:notation 'SDN:HA2::HA20027'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20028/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20028/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20028/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Fishing intensity'^^xsd:string ;
+    skos:prefLabel 'Fishing intensity'@en ;
+    skos:definition 'Fishing effort per unit area per unit time.'@en ;
+    skos:notation 'SDN:HA2::HA20028'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20007/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20007/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20007/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Fishing zones'^^xsd:string ;
+    skos:prefLabel 'Fishing zone location'@en ;
+    skos:definition 'Boundaries of FAO and ICES fishing zones or any other area legally defined as a fishing zone.'@en ;
+    skos:notation 'SDN:HA2::HA20007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20003/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20003/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Freshwater aquaculture farms'^^xsd:string ;
+    skos:prefLabel 'Freshwater aquaculture farm location'@en ;
+    skos:definition 'Points or polygons indicating location of sites dedicated to farming of finfish and shellfish in freshwater.'@en ;
+    skos:notation 'SDN:HA2::HA20003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20036/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20036/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20036/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Gas pipelines'^^xsd:string ;
+    skos:prefLabel 'Gas pipeline location'@en ;
+    skos:definition 'Lines indicating actual routes of submarine gas pipelines.'@en ;
+    skos:notation 'SDN:HA2::HA20036'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20040/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20040/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20040/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Industrial and domestic wastewater'^^xsd:string ;
+    skos:prefLabel 'Industrial and domestic wastewater plant location'@en ;
+    skos:definition 'Points indicating location of industrial and domestic wastewater treatment plants.'@en ;
+    skos:notation 'SDN:HA2::HA20040'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20008/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20008/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20008/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'International Conventions'^^xsd:string ;
+    skos:prefLabel 'International Conventions sea boundaries'@en ;
+    skos:definition 'Boundaries of regional sea conventions.'@en ;
+    skos:notation 'SDN:HA2::HA20008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20009/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20009/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20009/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Licences'^^xsd:string ;
+    skos:prefLabel 'Exploitation licenced area'@en ;
+    skos:definition 'Polygons indicating boundaries of sea areas concessions granted by states to private entities for the exploitation of natural resources (e.g. extraction or exploration of oil and gas, construction of renewable energy sites).'@en ;
+    skos:notation 'SDN:HA2::HA20009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20015/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20015/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20015/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Lighthouses'^^xsd:string ;
+    skos:prefLabel 'Lighthouse location'@en ;
+    skos:definition 'Points indicating location of operating or abandoned lighthouses.'@en ;
+    skos:notation 'SDN:HA2::HA20015'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20047/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20047/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20047/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Marinas'^^xsd:string ;
+    skos:prefLabel 'Marina location'@en ;
+    skos:definition 'Points indicating location of yacht marinas.'@en ;
+    skos:notation 'SDN:HA2::HA20047'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20018/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20018/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20018/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Marine current power facilities'^^xsd:string ;
+    skos:prefLabel 'Marine current power facility location'@en ;
+    skos:definition 'Points or polygons indicating location of facilities that produce energy from harnessing of the kinetic energy of marine currents.'@en ;
+    skos:notation 'SDN:HA2::HA20018'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20048/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20048/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20048/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Marine environment leisure usage'^^xsd:string ;
+    skos:prefLabel 'Marine environment leisure usage location'@en ;
+    skos:definition 'Points or polygons indicating location of leisure sites within or adjacent to the marine environment.'@en ;
+    skos:notation 'SDN:HA2::HA20048'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20039/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20039/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20039/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Marine litter'^^xsd:string ;
+    skos:prefLabel 'Marine litter monitoring site location'@en ;
+    skos:definition 'Areas used for the monitoring of marine litter.'@en ;
+    skos:notation 'SDN:HA2::HA20039'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20004/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20004/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Marine protected areas'^^xsd:string ;
+    skos:prefLabel 'Marine protected area location'@en ;
+    skos:definition 'Polygons indicating legally defined areas within or adjacent to the marine environment for a conservation purpose.'@en ;
+    skos:notation 'SDN:HA2::HA20004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20010/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20010/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20010/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Maritime boundaries'^^xsd:string ;
+    skos:prefLabel 'Maritime boundaries'@en ;
+    skos:definition 'Boundaries of Baseline, Contiguous zone (24 nm), Continental Shelf, Delimitation line between states, Exclusive Economic Zone (200 nm), Territorial sea (12 nm).'@en ;
+    skos:notation 'SDN:HA2::HA20010'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20016/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20016/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20016/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Musea'^^xsd:string ;
+    skos:prefLabel 'Maritime museum location'@en ;
+    skos:definition 'Points indicating location of maritime musea.'@en ;
+    skos:notation 'SDN:HA2::HA20016'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20019/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20019/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20019/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Nuclear plants'^^xsd:string ;
+    skos:prefLabel 'Nuclear plant location'@en ;
+    skos:definition 'Points or polygons indicating location of plants that produce nuclear energy in coastal areas.'@en ;
+    skos:notation 'SDN:HA2::HA20019'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20020/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20020/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20020/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Ocean thermal energy facilities'^^xsd:string ;
+    skos:prefLabel 'Ocean thermal energy facility location'@en ;
+    skos:definition 'Points or polygons indicating location of facilities that produce energy from the ocean\'s naturally available temperature gradient.'@en ;
+    skos:notation 'SDN:HA2::HA20020'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20031/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20031/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20031/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Offshore installations'^^xsd:string ;
+    skos:prefLabel 'Offshore installation location'@en ;
+    skos:definition 'Points or polygons indicating location of offshore installations for hydrocarbon extraction and / or exploration.'@en ;
+    skos:notation 'SDN:HA2::HA20031'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20041/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20041/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20041/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Oil discharges (accidental or illegal)'^^xsd:string ;
+    skos:prefLabel 'Oil discharge (accidental spills, illegal discharges) location'@en ;
+    skos:definition 'Points or polygons indicating offshore oil discharges.'@en ;
+    skos:notation 'SDN:HA2::HA20041'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20037/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20037/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20037/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Oil pipelines'^^xsd:string ;
+    skos:prefLabel 'Oil pipeline location'@en ;
+    skos:definition 'Lines indicating actual routes of submarine oil pipelines.'@en ;
+    skos:notation 'SDN:HA2::HA20037'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20021/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20021/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20021/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Osmotic power facilities'^^xsd:string ;
+    skos:prefLabel 'Osmotic power facility location'@en ;
+    skos:definition 'Points or polygons indicating location of facilities that produce energy from the difference in the salt concentration between seawater and river water.'@en ;
+    skos:notation 'SDN:HA2::HA20021'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20042/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20042/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20042/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Other discharges'^^xsd:string ;
+    skos:prefLabel 'Offshore (other than oil) discharge location'@en ;
+    skos:definition 'Points or polygons indicating offshore discharges.'@en ;
+    skos:notation 'SDN:HA2::HA20042'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20049/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20049/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20049/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Ports'^^xsd:string ;
+    skos:prefLabel 'Port location'@en ;
+    skos:definition 'Points or polygons indicating location of sea ports.'@en ;
+    skos:notation 'SDN:HA2::HA20049'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20012/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20012/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20012/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Power cables'^^xsd:string ;
+    skos:prefLabel 'Power cable location'@en ;
+    skos:definition 'Lines indicating actual routes of submarine power cables.'@en ;
+    skos:notation 'SDN:HA2::HA20012'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20051/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20051/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20051/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Real-time traffic'^^xsd:string ;
+    skos:prefLabel 'Shipping accident location'@en ;
+    skos:definition 'Points indicating location of shipping accident.'@en ;
+    skos:notation 'SDN:HA2::HA20051'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20044/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20044/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20044/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Salt evaporation ponds'^^xsd:string ;
+    skos:prefLabel 'Salt evaporation pond location'@en ;
+    skos:definition 'Points or polygons indicating location of salt evaporation ponds.'@en ;
+    skos:notation 'SDN:HA2::HA20044'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20001/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20001/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Sea-water aquaculture farms'^^xsd:string ;
+    skos:prefLabel 'Sea-water aquaculture farm location'@en ;
+    skos:definition 'Points or polygons indicating location of sites dedicated to farming of finfish and shellfish in sea water.'@en ;
+    skos:notation 'SDN:HA2::HA20001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20052/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20052/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20052/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Shipping density'^^xsd:string ;
+    skos:prefLabel 'Shipping density'@en ;
+    skos:definition 'Average number of ships per unit of time within a grid cell.'@en ;
+    skos:notation 'SDN:HA2::HA20052'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20053/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20053/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20053/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Shipping emissions'^^xsd:string ;
+    skos:prefLabel 'Shipping emissions'@en ;
+    skos:definition 'Average emissions of pollutants from shipping within a grid cell.'@en ;
+    skos:notation 'SDN:HA2::HA20053'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20011/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20011/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20011/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Spatial planning zones'^^xsd:string ;
+    skos:prefLabel 'Spatial planning zone location'@en ;
+    skos:definition 'Polygons indicating sea areas allocated to various human activities in the framework of a maritime spatial plan.'@en ;
+    skos:notation 'SDN:HA2::HA20011'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20030/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20030/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20030/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'TACs and quotas'^^xsd:string ;
+    skos:prefLabel 'Total Allowable Catches (TAC) and quotas'@en ;
+    skos:definition 'Total Allowable Catches and quotas annually defined for commercially important fish stocks.'@en ;
+    skos:notation 'SDN:HA2::HA20030'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20013/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20013/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20013/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Telecommunication cables'^^xsd:string ;
+    skos:prefLabel 'Telecommunication cable location'@en ;
+    skos:definition 'Lines indicating actual routes of submarine telecommunication cables.'@en ;
+    skos:notation 'SDN:HA2::HA20013'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20022/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20022/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20022/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Tidal energy facilities'^^xsd:string ;
+    skos:prefLabel 'Tidal energy facility location'@en ;
+    skos:definition 'Points or polygons indicating location of facilities that produce energy from tides.'@en ;
+    skos:notation 'SDN:HA2::HA20022'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20046/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20046/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20046/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Tourist accommodation density'^^xsd:string ;
+    skos:prefLabel 'Density of tourist accommodation establishments'@en ;
+    skos:definition 'Number of tourist accommodation establishments per square kilometre.'@en ;
+    skos:notation 'SDN:HA2::HA20046'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20050/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20050/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20050/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Traffic'^^xsd:string ;
+    skos:prefLabel 'Ship traffic location'@en ;
+    skos:definition 'Position of vessels based on AIS, LRIT, VMS etc.'@en ;
+    skos:notation 'SDN:HA2::HA20050'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20043/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20043/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20043/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Waste disposal'^^xsd:string ;
+    skos:prefLabel 'Waste disposal location'@en ;
+    skos:definition 'Points or polygons indicating offshore sites used for waste disposal.'@en ;
+    skos:notation 'SDN:HA2::HA20043'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20038/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20038/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20038/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Water pipelines'^^xsd:string ;
+    skos:prefLabel 'Water pipeline location'@en ;
+    skos:definition 'Lines indicating actual routes of submarine water pipelines.'@en ;
+    skos:notation 'SDN:HA2::HA20038'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20023/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20023/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20023/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Wave energy facilities'^^xsd:string ;
+    skos:prefLabel 'Wave energy facility location'@en ;
+    skos:definition 'Points or polygons indicating location of facilities that produce energy from wind waves.'@en ;
+    skos:notation 'SDN:HA2::HA20023'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20024/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20024/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20024/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Wind energy facilities'^^xsd:string ;
+    skos:prefLabel 'Wind energy facility location'@en ;
+    skos:definition 'Points or polygons indicating location of offshore facilities that produce energy from wind.'@en ;
+    skos:notation 'SDN:HA2::HA20024'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/HA2/current/HA20017/1/> .
+<http://vocab.nerc.ac.uk/collection/HA2/current/HA20017/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/HA2/current/HA20017/>;
+    dc:modified '2017-02-02T13:55:48'^^xsd:dateTime ;
+    skos:altLabel 'Wrecks'^^xsd:string ;
+    skos:prefLabel 'Wreck location'@en ;
+    skos:definition 'Points indicating location of remains of ships that have wrecked.'@en ;
+    skos:notation 'SDN:HA2::HA20017'^^xsd:string .

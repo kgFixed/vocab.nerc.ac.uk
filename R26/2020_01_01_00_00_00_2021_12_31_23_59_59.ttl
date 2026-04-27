@@ -1,0 +1,172 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/R26/2020_01_01_00_00_00_2021_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/R26/2019_01_01_00_00_00_2019_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2021-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R26/current/MENSOR/1/> .
+<http://vocab.nerc.ac.uk/collection/R26/current/MENSOR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R26/current/MENSOR/>;
+    dc:modified '2021-09-14T12:16:36'^^xsd:dateTime ;
+    skos:altLabel 'MENSOR'^^xsd:string ;
+    skos:prefLabel 'Mensor'@en ;
+    skos:definition 'A manufacturing company located in San Marcos, Texas (United States of America), specialised in precision pressure products.'@en ;
+    skos:notation 'SDN:R26::MENSOR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R26/current/QUARTZDYNE/1/> .
+<http://vocab.nerc.ac.uk/collection/R26/current/QUARTZDYNE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R26/current/QUARTZDYNE/>;
+    dc:modified '2021-09-14T12:16:36'^^xsd:dateTime ;
+    skos:altLabel 'QUARTZDYNE'^^xsd:string ;
+    skos:prefLabel 'Quartzdyne'@en ;
+    skos:definition 'A ChampionX company specialised in resonating quartz pressure transducers and temperature gauges, located in Salt Lake City, Utah (United States of America).'@en ;
+    skos:notation 'SDN:R26::QUARTZDYNE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R26/current/SBE/2/> .
+<http://vocab.nerc.ac.uk/collection/R26/current/SBE/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R26/current/SBE/>;
+    dc:modified '2021-06-02T23:04:11'^^xsd:dateTime ;
+    skos:altLabel 'SBE'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific'@en ;
+    skos:definition 'A large, global company based in the United States of America that develops and manufactures products for the measurement of salinity, temperature, pressure, dissolved oxygen, fluorescence, nutrients and related oceanographic parameters in marine waters. It is formed from three ocean science companies, Sea-Bird Electronics, WET Labs and Satlantic that were combined in 2011.'@en ;
+    skos:notation 'SDN:R26::SBE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R26/current/APL_UW/1/> .
+<http://vocab.nerc.ac.uk/collection/R26/current/APL_UW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R26/current/APL_UW/>;
+    dc:modified '2021-02-11T14:21:39'^^xsd:dateTime ;
+    skos:altLabel 'APL_UW'^^xsd:string ;
+    skos:prefLabel 'University of Washington, Applied Physics Laboratory'@en ;
+    skos:definition 'Organisation e-mail: webadmin@apl.washington.edu; Organisation website: http://www.apl.washington.edu/'@en ;
+    skos:notation 'SDN:R26::APL_UW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R26/current/KELLER/1/> .
+<http://vocab.nerc.ac.uk/collection/R26/current/KELLER/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R26/current/KELLER/>;
+    dc:modified '2021-02-11T14:21:39'^^xsd:dateTime ;
+    skos:altLabel 'KELLER'^^xsd:string ;
+    skos:prefLabel 'KELLER AG für Druckmesstechnik'@en ;
+    skos:definition 'A multinational technology company based in Winterthur, Switzerland, specialised in the manufacture of pressure sensors.'@en ;
+    skos:notation 'SDN:R26::KELLER'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R26/current/MBARI/1/> .
+<http://vocab.nerc.ac.uk/collection/R26/current/MBARI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R26/current/MBARI/>;
+    dc:modified '2021-02-11T14:21:39'^^xsd:dateTime ;
+    skos:altLabel 'MBARI'^^xsd:string ;
+    skos:prefLabel 'Monterey Bay Aquarium Research Institute'@en ;
+    skos:definition 'A non-profit oceanographic research centre located in Moss Landing, California (United States of America), with a technology unit dedicated to the development of oceanographic instruments and platforms.'@en ;
+    skos:notation 'SDN:R26::MBARI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R26/current/SEAPOINT/1/> .
+<http://vocab.nerc.ac.uk/collection/R26/current/SEAPOINT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R26/current/SEAPOINT/>;
+    dc:modified '2021-02-11T14:21:39'^^xsd:dateTime ;
+    skos:altLabel 'SEAPOINT'^^xsd:string ;
+    skos:prefLabel 'Seapoint Sensors, Inc.'@en ;
+    skos:definition 'A worldwide supplier of underwater optical sensors located in Exeter, New Hampshire (United States of America).'@en ;
+    skos:notation 'SDN:R26::SEAPOINT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R26/current/SEASCAN/1/> .
+<http://vocab.nerc.ac.uk/collection/R26/current/SEASCAN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R26/current/SEASCAN/>;
+    dc:modified '2021-02-11T14:21:39'^^xsd:dateTime ;
+    skos:altLabel 'SEASCAN'^^xsd:string ;
+    skos:prefLabel 'Seascan, Inc.'@en ;
+    skos:definition 'A small manufacturing company located in Falmouth, Massachusetts (United States of America), specialising in oceanographic research equipment.'@en ;
+    skos:notation 'SDN:R26::SEASCAN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R26/current/TRIOS/1/> .
+<http://vocab.nerc.ac.uk/collection/R26/current/TRIOS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R26/current/TRIOS/>;
+    dc:modified '2021-02-11T14:21:39'^^xsd:dateTime ;
+    skos:altLabel 'TRIOS'^^xsd:string ;
+    skos:prefLabel 'TriOS Mess- und Datentechnik GmbH'@en ;
+    skos:definition 'A manufacturing company located in Rastede, Germany, specialised in the production and supply of optical sensors including radiometers, photometers and fluorometers for marine research and industrial applications.'@en ;
+    skos:notation 'SDN:R26::TRIOS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R26/current/TSK/1/> .
+<http://vocab.nerc.ac.uk/collection/R26/current/TSK/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R26/current/TSK/>;
+    dc:modified '2021-02-11T14:21:39'^^xsd:dateTime ;
+    skos:altLabel 'TSK'^^xsd:string ;
+    skos:prefLabel 'Tsurumi-Seiki Co., Ltd.'@en ;
+    skos:definition 'A Japanese manufacturer based in Yokohama (head office), specialised in the production of oceanographic observation equipment and water quality monitoring instruments.'@en ;
+    skos:notation 'SDN:R26::TSK'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R26/current/TURNER_DESIGN/1/> .
+<http://vocab.nerc.ac.uk/collection/R26/current/TURNER_DESIGN/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R26/current/TURNER_DESIGN/>;
+    dc:modified '2021-02-11T14:21:39'^^xsd:dateTime ;
+    skos:altLabel 'TURNER_DESIGN'^^xsd:string ;
+    skos:prefLabel 'Turner Designs'@en ;
+    skos:definition 'A manufacturing company located in San Jose, California (United States of America), specialised in the supply of fluorometers for environmental and industrial uses.'@en ;
+    skos:notation 'SDN:R26::TURNER_DESIGN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R26/current/Unknown/1/> .
+<http://vocab.nerc.ac.uk/collection/R26/current/Unknown/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R26/current/Unknown/>;
+    dc:modified '2021-02-11T14:21:39'^^xsd:dateTime ;
+    skos:altLabel 'Unknown'^^xsd:string ;
+    skos:prefLabel 'Unknown'@en ;
+    skos:definition 'Unknown sensor maker; the use of this code should be exceptional, as the sensor maker should be known.'@en ;
+    skos:notation 'SDN:R26::Unknown'^^xsd:string .

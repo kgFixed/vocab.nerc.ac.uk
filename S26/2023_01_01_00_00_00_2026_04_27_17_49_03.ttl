@@ -1,0 +1,145 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S26/2023_01_01_00_00_00_2026_04_27_17_49_03.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S26/2022_01_01_00_00_00_2022_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-27T17:49:03'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT02007/1/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT02007/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT02007/>;
+    dc:modified '2026-04-15T17:18:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'hydrothermal fluid [dissolved plus reactive particulate <0.4/0.45um phase]'@en ;
+    skos:definition 'Sample of hot groundwater that has circulated within the Earth\'s crust that can emerge at the Earth\'s surface as hot springs, geothermal fields, geysers, or hydrothermal vents, filtered through a 0.4um or 0.45um pore filter.'@en ;
+    skos:notation 'SDN:S26::MAT02007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT02008/1/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT02008/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT02008/>;
+    dc:modified '2026-04-15T17:18:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'hydrothermal fluid [dissolved plus reactive particulate phase]'@en ;
+    skos:definition 'Sample of hot groundwater that has circulated within the Earth\'s crust that can emerge at the Earth\'s surface as hot springs, geothermal fields, geysers, or hydrothermal vents.'@en ;
+    skos:notation 'SDN:S26::MAT02008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT02006/1/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT02006/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT02006/>;
+    dc:modified '2026-02-14T13:54:19'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water body [particulate specified elsewhere phase]'@en ;
+    skos:definition 'Particulate phase of any body of water from a puddle to an ocean when a method for phase separation was used and is specified elsewhere in the metadata.'@en ;
+    skos:notation 'SDN:S26::MAT02006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT02005/1/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT02005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT02005/>;
+    dc:modified '2026-02-12T22:05:34'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water body [dissolved plus reactive particulate specified elsewhere phase]'@en ;
+    skos:definition 'Dissolved phase of any body of water from a puddle to an ocean when further information about phase separation is given elsewhere in the metadata.'@en ;
+    skos:notation 'SDN:S26::MAT02005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT02004/1/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT02004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT02004/>;
+    dc:modified '2025-04-03T14:18:09'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'matrix specified elsewhere'@en ;
+    skos:definition 'The matrix is described elsewhere in the metadata.'@en ;
+    skos:notation 'SDN:S26::MAT02004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT02002/1/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT02002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT02002/>;
+    dc:modified '2025-02-05T15:16:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sediment anoxic layer'@en ;
+    skos:definition 'Sample of disaggregated minerals or mineraloids whose pore waters are deficient in dissolved oxygen.'@en ;
+    skos:notation 'SDN:S26::MAT02002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT02003/1/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT02003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT02003/>;
+    dc:modified '2025-02-05T15:16:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sediment oxygenated layer'@en ;
+    skos:definition 'Sample of disaggregated minerals or mineraloids whose pore waters have dissolved oxygen available.'@en ;
+    skos:notation 'SDN:S26::MAT02003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT02001/2/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT02001/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT02001/>;
+    dc:modified '2025-02-04T17:26:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sediment-water interface'@en ;
+    skos:definition 'Code deprecated on 04/02/2025: created in wrong collection. Definition was: The boundary of the seabed sediment with the body of water.'@en ;
+    skos:notation 'SDN:S26::MAT02001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S26/current/MAT02000/1/> .
+<http://vocab.nerc.ac.uk/collection/S26/current/MAT02000/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S26/current/MAT02000/>;
+    dc:modified '2024-01-04T12:13:54'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'water body [particulate 0.1-0.8um phase]'@en ;
+    skos:definition 'Solids contained in a sample from any body of water from a puddle to an ocean that have been collected by filtration through a 0.1um filter. This term is used for measurements on the solid expressed in the context of the water body (e.g. Analyte concentration multiplied by SPM concentration).'@en ;
+    skos:notation 'SDN:S26::MAT02000'^^xsd:string .

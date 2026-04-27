@@ -1,0 +1,111 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/GSB/2011_01_01_00_00_00_2011_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GSB/current/903/1/> .
+<http://vocab.nerc.ac.uk/collection/GSB/current/903/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GSB/current/903/>;
+    dc:modified '2011-01-28T12:26:26'^^xsd:dateTime ;
+    skos:altLabel '3CseismometerHydrophones'^^xsd:string ;
+    skos:prefLabel '3C seismometers with hydrophone'@en ;
+    skos:definition 'Devices placed on the ground or seabed to measure physical movement of that substrate whilst simultanously measuring underwater acoutic signals. These are built of multiple motion sensors oriented in a tri-axial mode plus a hydrophone.'@en ;
+    skos:notation 'SDN:GSB::903'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GSB/current/902/1/> .
+<http://vocab.nerc.ac.uk/collection/GSB/current/902/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GSB/current/902/>;
+    dc:modified '2011-01-28T12:26:26'^^xsd:dateTime ;
+    skos:altLabel '3Cseismometers'^^xsd:string ;
+    skos:prefLabel '3C seismometers'@en ;
+    skos:definition 'Devices placed on the ground or seabed to measure physical movement of that substrate. 3C seismometers are built of multiple motion sensors oriented in a tri-axial mode. Allows for recording of compressional and shear waves.'@en ;
+    skos:notation 'SDN:GSB::902'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GSB/current/369/1/> .
+<http://vocab.nerc.ac.uk/collection/GSB/current/369/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GSB/current/369/>;
+    dc:modified '2011-01-28T12:26:26'^^xsd:dateTime ;
+    skos:altLabel 'Hydrophones'^^xsd:string ;
+    skos:prefLabel 'Hydrophones'@en ;
+    skos:definition 'Devices containing transducers that convert underwater sound waves into electrical signals.'@en ;
+    skos:notation 'SDN:GSB::369'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GSB/current/901/1/> .
+<http://vocab.nerc.ac.uk/collection/GSB/current/901/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GSB/current/901/>;
+    dc:modified '2011-01-28T12:26:26'^^xsd:dateTime ;
+    skos:altLabel 'MultipleStreamer'^^xsd:string ;
+    skos:prefLabel 'Multiple streamers'@en ;
+    skos:definition 'An array of regularly spaced streamers towed behind a vessel listening the same source.'@en ;
+    skos:notation 'SDN:GSB::901'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GSB/current/368/1/> .
+<http://vocab.nerc.ac.uk/collection/GSB/current/368/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GSB/current/368/>;
+    dc:modified '2011-01-28T12:26:26'^^xsd:dateTime ;
+    skos:altLabel 'Seismometers'^^xsd:string ;
+    skos:prefLabel 'Seismometers'@en ;
+    skos:definition 'Devices placed on the ground or seabed to measure physical movement of that substrate.'@en ;
+    skos:notation 'SDN:GSB::368'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/GSB/current/900/1/> .
+<http://vocab.nerc.ac.uk/collection/GSB/current/900/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/GSB/current/900/>;
+    dc:modified '2011-01-28T12:26:26'^^xsd:dateTime ;
+    skos:altLabel 'Streamers'^^xsd:string ;
+    skos:prefLabel 'Streamers'@en ;
+    skos:definition 'Individual marine cables incorporating regularly separated hydrophones, designed for continuous towing through the water. A streamer is neutrally buoyant and depth controllers are attached to depress the streamer to the proper towing depth.'@en ;
+    skos:notation 'SDN:GSB::900'^^xsd:string .

@@ -1,0 +1,138 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C64/2011_01_01_00_00_00_2011_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C64/current/1/1/> .
+<http://vocab.nerc.ac.uk/collection/C64/current/1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C64/current/1/>;
+    dc:modified '2011-06-06T16:04:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Northern North Sea'@en ;
+    skos:definition 'The northern part of the North Sea to approximately 5 degrees east and 61 degrees north.'@en ;
+    skos:notation 'SDN:C64::1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C64/current/2/1/> .
+<http://vocab.nerc.ac.uk/collection/C64/current/2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C64/current/2/>;
+    dc:modified '2011-06-06T16:04:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Southern North Sea'@en ;
+    skos:definition 'The southern part of the North Sea to approximately 5 degrees east and 55 degrees north.'@en ;
+    skos:notation 'SDN:C64::2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C64/current/3/1/> .
+<http://vocab.nerc.ac.uk/collection/C64/current/3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C64/current/3/>;
+    dc:modified '2011-06-06T16:04:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Eastern Channel'@en ;
+    skos:definition 'The part of the English Channel which is east of a line between Dartmouth and Cherbourg.'@en ;
+    skos:notation 'SDN:C64::3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C64/current/4/1/> .
+<http://vocab.nerc.ac.uk/collection/C64/current/4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C64/current/4/>;
+    dc:modified '2011-06-06T16:04:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Western Channel and Celtic Sea'@en ;
+    skos:definition 'The part of the English Channel which is west of a line between Dartmouth and Cherbourg and the UK waters of the Celtic Sea to approximately 10 degrees west.'@en ;
+    skos:notation 'SDN:C64::4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C64/current/5/1/> .
+<http://vocab.nerc.ac.uk/collection/C64/current/5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C64/current/5/>;
+    dc:modified '2011-06-06T16:04:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Irish Sea'@en ;
+    skos:definition 'The Irish Sea between the Mull of Kintyre to the north and St. Georges Channel to the south.'@en ;
+    skos:notation 'SDN:C64::5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C64/current/6/1/> .
+<http://vocab.nerc.ac.uk/collection/C64/current/6/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C64/current/6/>;
+    dc:modified '2011-06-06T16:04:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Minches and Western Scotland'@en ;
+    skos:definition 'The waters on the Scottish Continental Shelf to the east of the Western Isles including the Minches.'@en ;
+    skos:notation 'SDN:C64::6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C64/current/7/1/> .
+<http://vocab.nerc.ac.uk/collection/C64/current/7/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C64/current/7/>;
+    dc:modified '2011-06-06T16:04:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Scottish Continental Shelf'@en ;
+    skos:definition 'The Scottish Continental Shelf excluding the Minches and coastal waters to the west of Scotland.'@en ;
+    skos:notation 'SDN:C64::7'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C64/current/8/1/> .
+<http://vocab.nerc.ac.uk/collection/C64/current/8/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C64/current/8/>;
+    dc:modified '2011-06-06T16:04:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Atlantic North-West Approaches and Rockall Trough'@en ;
+    skos:definition 'Atlantic North-West Approaches out to approximately 25 degrees west including Rockall Trough.'@en ;
+    skos:notation 'SDN:C64::8'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C64/current/9/1/> .
+<http://vocab.nerc.ac.uk/collection/C64/current/9/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C64/current/9/>;
+    dc:modified '2011-06-06T16:04:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Shared waters between Northern Ireland and Republic of Ireland'@en ;
+    skos:definition 'Carlingford Lough and Lough Foyle shared waters between N Ireland and Rep of Ireland.'@en ;
+    skos:notation 'SDN:C64::9'^^xsd:string .

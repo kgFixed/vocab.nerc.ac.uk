@@ -1,0 +1,237 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/B20/2016_01_01_00_00_00_2016_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B20/current/B20001/3/> .
+<http://vocab.nerc.ac.uk/collection/B20/current/B20001/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B20/current/B20001/>;
+    dc:modified '2016-11-10T14:01:25'^^xsd:dateTime ;
+    skos:altLabel 'aggregates'^^xsd:string ;
+    skos:prefLabel 'Aggregates'@en ;
+    skos:definition 'The members or participants belong to the marine aggregates sector.'@en ;
+    skos:notation 'SDN:B20::B20001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B20/current/B20012/1/> .
+<http://vocab.nerc.ac.uk/collection/B20/current/B20012/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B20/current/B20012/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'NGO_conservation'^^xsd:string ;
+    skos:prefLabel 'NGO/conservation group'@en ;
+    skos:definition 'The members or participants belong to a non-governmental organisation (NGO) or a conservation group.'@en ;
+    skos:notation 'SDN:B20::B20012'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B20/current/B20016/1/> .
+<http://vocab.nerc.ac.uk/collection/B20/current/B20016/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B20/current/B20016/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'angling'^^xsd:string ;
+    skos:prefLabel 'Recreational angling'@en ;
+    skos:definition 'The members or participants belong to the recreational angling sector.'@en ;
+    skos:notation 'SDN:B20::B20016'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B20/current/B20002/1/> .
+<http://vocab.nerc.ac.uk/collection/B20/current/B20002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B20/current/B20002/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'aquaculture'^^xsd:string ;
+    skos:prefLabel 'Aquaculture'@en ;
+    skos:definition 'The members or participants belong to the aquaculture sector.'@en ;
+    skos:notation 'SDN:B20::B20002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B20/current/B20003/1/> .
+<http://vocab.nerc.ac.uk/collection/B20/current/B20003/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B20/current/B20003/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'cabling'^^xsd:string ;
+    skos:prefLabel 'Cabling industry'@en ;
+    skos:definition 'The members or participants belong to the cabling industry sector.'@en ;
+    skos:notation 'SDN:B20::B20003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B20/current/B20004/1/> .
+<http://vocab.nerc.ac.uk/collection/B20/current/B20004/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B20/current/B20004/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'chemical'^^xsd:string ;
+    skos:prefLabel 'Chemical industry'@en ;
+    skos:definition 'The members or participants belong to the chemical industry sector.'@en ;
+    skos:notation 'SDN:B20::B20004'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B20/current/B20005/1/> .
+<http://vocab.nerc.ac.uk/collection/B20/current/B20005/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B20/current/B20005/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'coastal_group'^^xsd:string ;
+    skos:prefLabel 'Coastal group or partnership'@en ;
+    skos:definition 'The members or participants belong to a coastal group or partnership.'@en ;
+    skos:notation 'SDN:B20::B20005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B20/current/B20006/1/> .
+<http://vocab.nerc.ac.uk/collection/B20/current/B20006/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B20/current/B20006/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'consultants'^^xsd:string ;
+    skos:prefLabel 'Consultants'@en ;
+    skos:definition 'The members or participants are consultants.'@en ;
+    skos:notation 'SDN:B20::B20006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B20/current/B20007/1/> .
+<http://vocab.nerc.ac.uk/collection/B20/current/B20007/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B20/current/B20007/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'fisheries'^^xsd:string ;
+    skos:prefLabel 'Fisheries'@en ;
+    skos:definition 'The members or participants belong to the fisheries sector.'@en ;
+    skos:notation 'SDN:B20::B20007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B20/current/B20008/1/> .
+<http://vocab.nerc.ac.uk/collection/B20/current/B20008/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B20/current/B20008/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'government'^^xsd:string ;
+    skos:prefLabel 'Government'@en ;
+    skos:definition 'The members or participants belong to the central government sector.'@en ;
+    skos:notation 'SDN:B20::B20008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B20/current/B20009/1/> .
+<http://vocab.nerc.ac.uk/collection/B20/current/B20009/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B20/current/B20009/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'leisure_tourism'^^xsd:string ;
+    skos:prefLabel 'Leisure and tourism industry'@en ;
+    skos:definition 'The members or participants belong to the leisure and tourism industry sector.'@en ;
+    skos:notation 'SDN:B20::B20009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B20/current/B20010/1/> .
+<http://vocab.nerc.ac.uk/collection/B20/current/B20010/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B20/current/B20010/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'local_government'^^xsd:string ;
+    skos:prefLabel 'Local government'@en ;
+    skos:definition 'The members or participants belong to the local government sector.'@en ;
+    skos:notation 'SDN:B20::B20010'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B20/current/B20011/1/> .
+<http://vocab.nerc.ac.uk/collection/B20/current/B20011/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B20/current/B20011/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'military'^^xsd:string ;
+    skos:prefLabel 'Military'@en ;
+    skos:definition 'The members or participants belong to the military sector.'@en ;
+    skos:notation 'SDN:B20::B20011'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B20/current/B20013/1/> .
+<http://vocab.nerc.ac.uk/collection/B20/current/B20013/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B20/current/B20013/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'nuclear'^^xsd:string ;
+    skos:prefLabel 'Nuclear industry'@en ;
+    skos:definition 'The members or participants belong to the nuclear industry sector.'@en ;
+    skos:notation 'SDN:B20::B20013'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B20/current/B20014/1/> .
+<http://vocab.nerc.ac.uk/collection/B20/current/B20014/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B20/current/B20014/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'oil_gas'^^xsd:string ;
+    skos:prefLabel 'Oil and gas industry'@en ;
+    skos:definition 'The members or participants belong to the oil and gas industry sector.'@en ;
+    skos:notation 'SDN:B20::B20014'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B20/current/B20015/1/> .
+<http://vocab.nerc.ac.uk/collection/B20/current/B20015/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B20/current/B20015/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'port'^^xsd:string ;
+    skos:prefLabel 'Port authorities'@en ;
+    skos:definition 'The members or participants belong to the port authorities sector.'@en ;
+    skos:notation 'SDN:B20::B20015'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B20/current/B20017/1/> .
+<http://vocab.nerc.ac.uk/collection/B20/current/B20017/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B20/current/B20017/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'renewable_energy'^^xsd:string ;
+    skos:prefLabel 'Renewable energy'@en ;
+    skos:definition 'The members or participants belong to the renewable energy sector.'@en ;
+    skos:notation 'SDN:B20::B20017'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B20/current/B20018/1/> .
+<http://vocab.nerc.ac.uk/collection/B20/current/B20018/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B20/current/B20018/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'shipping'^^xsd:string ;
+    skos:prefLabel 'Shipping'@en ;
+    skos:definition 'The members or participants belong to the shipping sector.'@en ;
+    skos:notation 'SDN:B20::B20018'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B20/current/B20019/1/> .
+<http://vocab.nerc.ac.uk/collection/B20/current/B20019/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B20/current/B20019/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'statutory_body'^^xsd:string ;
+    skos:prefLabel 'Statutory body/agency'@en ;
+    skos:definition 'The members or participants belong to a statutory body or statutory agency.'@en ;
+    skos:notation 'SDN:B20::B20019'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B20/current/B20020/1/> .
+<http://vocab.nerc.ac.uk/collection/B20/current/B20020/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B20/current/B20020/>;
+    dc:modified '2016-09-29T00:00:00'^^xsd:dateTime ;
+    skos:altLabel 'water_industry'^^xsd:string ;
+    skos:prefLabel 'Water industry'@en ;
+    skos:definition 'The members or participants belong to the water industry sector.'@en ;
+    skos:notation 'SDN:B20::B20020'^^xsd:string .

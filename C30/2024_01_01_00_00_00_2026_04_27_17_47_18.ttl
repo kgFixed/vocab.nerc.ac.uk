@@ -1,0 +1,91 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C30/2024_01_01_00_00_00_2026_04_27_17_47_18.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C30/2023_01_01_00_00_00_2023_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-27T17:47:18'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/EDS/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/EDS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/EDS/>;
+    dc:modified '2026-04-01T17:34:08'^^xsd:dateTime ;
+    skos:altLabel 'EDS'^^xsd:string ;
+    skos:prefLabel 'Environmental Data Service Vocabulary Governance'@en ;
+    skos:definition 'Governance for vocabularies used for cross-data centre information infrastructure in the UKRI-NERC\'s Environmental Data Service.'@en ;
+    skos:notation 'SDN:C30::EDS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/OCEANOPS/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/OCEANOPS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/OCEANOPS/>;
+    dc:modified '2026-03-18T15:30:01'^^xsd:dateTime ;
+    skos:altLabel 'GOOS/OceanOPS'^^xsd:string ;
+    skos:prefLabel 'GOOS/OceanOPS Vocabulary Governance'@en ;
+    skos:definition 'Governance for vocabularies managed by the Global Ocean Observing System (GOOS) under OceanOPS (https://www.ocean-ops.org) and hosted on the NERC Vocabulary Server (NVS).'@en ;
+    skos:notation 'SDN:C30::OCEANOPS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C30/current/EMODPHYS/1/> .
+<http://vocab.nerc.ac.uk/collection/C30/current/EMODPHYS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C30/current/EMODPHYS/>;
+    dc:modified '2024-01-08T18:29:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'EMODnet Physics'@en ;
+    skos:definition 'Governance for vocabularies created for the European Marine Observation and Data Network (EMODnet) Physics infrastructure. EMODnet Physics is an upstream ocean data integrating service providing a single point of access to in situ ocean physics time-series data and vertical profiles, data products and metadata built with common standards, free of charge and no restrictions. The governance is loosely defined as the scientific expertise within the consortium with no formal processes defined.'@en ;
+    skos:notation 'SDN:C30::EMODPHYS'^^xsd:string .

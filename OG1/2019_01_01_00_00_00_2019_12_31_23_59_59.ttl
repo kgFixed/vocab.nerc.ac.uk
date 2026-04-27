@@ -1,0 +1,91 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/OG1/2019_01_01_00_00_00_2019_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/OG1/2018_01_01_00_00_00_2018_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2019-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/BETA650/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/BETA650/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/BETA650/>;
+    dc:modified '2019-08-12T14:13:17'^^xsd:dateTime ;
+    skos:altLabel 'BETA_BACKSCATTERING650'^^xsd:string ;
+    skos:prefLabel 'Total angle specific volume from backscattering sensor at 650 nanometers'@en ;
+    skos:definition 'Total angle specific volume from backscattering sensor at 650 nanometers.'@en ;
+    skos:notation 'SDN:OG1::BETA650'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/BETA880/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/BETA880/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/BETA880/>;
+    dc:modified '2019-08-12T14:13:17'^^xsd:dateTime ;
+    skos:altLabel 'BETA_BACKSCATTERING880'^^xsd:string ;
+    skos:prefLabel 'Total angle specific volume from backscattering sensor at 880 nanometers'@en ;
+    skos:definition 'Total angle specific volume from backscattering sensor at 880 nanometers.'@en ;
+    skos:notation 'SDN:OG1::BETA880'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/FLUOPHYC/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/FLUOPHYC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/FLUOPHYC/>;
+    dc:modified '2019-03-21T11:31:20'^^xsd:dateTime ;
+    skos:altLabel 'FLUORESCENCE_PHYCOERYTHRIN'^^xsd:string ;
+    skos:prefLabel 'Phycoerythrin signal from fluorescence sensor'@en ;
+    skos:definition 'Phycoerythrin signal from a fluorescence sensor.'@en ;
+    skos:notation 'SDN:OG1::FLUOPHYC'^^xsd:string .

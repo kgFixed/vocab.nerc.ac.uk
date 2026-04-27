@@ -1,0 +1,271 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C61/2021_01_01_00_00_00_2021_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C61/2020_01_01_00_00_00_2020_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2021-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY191/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY191/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY191/>;
+    dc:modified '2021-12-01T11:18:25'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Southampton'@en ;
+    skos:definition 'Town in Pennsylvania, USA'@en ;
+    skos:notation 'SDN:C61::USCTY191'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY190/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY190/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY190/>;
+    dc:modified '2021-11-10T16:57:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Livonia'@en ;
+    skos:definition 'City in Michigan, USA'@en ;
+    skos:notation 'SDN:C61::USCTY190'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY189/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY189/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY189/>;
+    dc:modified '2021-10-29T10:19:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Beverly'@en ;
+    skos:definition 'City in Massachusetts, USA'@en ;
+    skos:notation 'SDN:C61::USCTY189'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/CHNPT008/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/CHNPT008/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/CHNPT008/>;
+    dc:modified '2021-10-27T13:53:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Xi\'an'@en ;
+    skos:definition 'City in Shaanxi Province, China. Alternative spellings: Sian, Hsi-an.'@en ;
+    skos:notation 'SDN:C61::CHNPT008'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY188/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY188/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY188/>;
+    dc:modified '2021-10-27T13:53:49'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Lafayette'@en ;
+    skos:definition 'Township in New Jersey, USA. Not Lafayette, CO (USCTY109) or Lafayette, LA (USCTY041).'@en ;
+    skos:notation 'SDN:C61::USCTY188'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/ITPT0017/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/ITPT0017/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/ITPT0017/>;
+    dc:modified '2021-10-25T17:02:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Pisa'@en ;
+    skos:definition 'City in Tuscany, Italy'@en ;
+    skos:notation 'SDN:C61::ITPT0017'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/SWPT0007/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/SWPT0007/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/SWPT0007/>;
+    dc:modified '2021-10-25T17:02:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Linköping'@en ;
+    skos:definition 'City in Östergötland, Sweden'@en ;
+    skos:notation 'SDN:C61::SWPT0007'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY185/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY185/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY185/>;
+    dc:modified '2021-10-25T17:02:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Arcata'@en ;
+    skos:definition 'City in California, USA'@en ;
+    skos:notation 'SDN:C61::USCTY185'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY186/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY186/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY186/>;
+    dc:modified '2021-10-25T17:02:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Corpus Christi'@en ;
+    skos:definition 'City in Texas, USA'@en ;
+    skos:notation 'SDN:C61::USCTY186'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY187/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY187/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY187/>;
+    dc:modified '2021-10-25T17:02:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Rochester'@en ;
+    skos:definition 'City in New York, USA'@en ;
+    skos:notation 'SDN:C61::USCTY187'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY184/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY184/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY184/>;
+    dc:modified '2021-09-08T12:50:51'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Broomfield'@en ;
+    skos:definition 'City in Colorado, USA'@en ;
+    skos:notation 'SDN:C61::USCTY184'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/TZPT0001/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/TZPT0001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/TZPT0001/>;
+    dc:modified '2021-07-29T09:48:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Dar es Salaam'@en ;
+    skos:definition 'Capital city of Tanzania'@en ;
+    skos:notation 'SDN:C61::TZPT0001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/TZPT0002/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/TZPT0002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/TZPT0002/>;
+    dc:modified '2021-07-29T09:48:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Buyu'@en ;
+    skos:definition 'Town in Zanzibar West, Tanzania'@en ;
+    skos:notation 'SDN:C61::TZPT0002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY183/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY183/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY183/>;
+    dc:modified '2021-06-22T11:38:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Chandler'@en ;
+    skos:definition 'City in Arizona, USA'@en ;
+    skos:notation 'SDN:C61::USCTY183'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY182/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY182/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY182/>;
+    dc:modified '2021-05-25T17:04:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Burlington'@en ;
+    skos:definition 'City in Vermont, USA'@en ;
+    skos:notation 'SDN:C61::USCTY182'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/CYPT0001/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/CYPT0001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/CYPT0001/>;
+    dc:modified '2021-05-04T16:22:08'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Nicosia'@en ;
+    skos:definition 'Capital City of Cyprus, located in Nicosia District. Native name is Lefkosia.'@en ;
+    skos:notation 'SDN:C61::CYPT0001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/SPPT0020/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/SPPT0020/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/SPPT0020/>;
+    dc:modified '2021-05-03T21:47:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Girona'@en ;
+    skos:definition 'City in Catalonia, Spain. Native name is Girona (Catalan), Gerona (Spanish).'@en ;
+    skos:notation 'SDN:C61::SPPT0020'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/BZPT0002/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/BZPT0002/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/BZPT0002/>;
+    dc:modified '2021-03-30T17:55:37'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Belmopan'@en ;
+    skos:definition 'Capital City of Belize, located in Cayo District.'@en ;
+    skos:notation 'SDN:C61::BZPT0002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/UAEPT001/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/UAEPT001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/UAEPT001/>;
+    dc:modified '2021-03-28T22:46:20'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Sharjah'@en ;
+    skos:definition 'Capital city of the Emirate of Sharjah, United Arab Emirates.'@en ;
+    skos:notation 'SDN:C61::UAEPT001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY181/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY181/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY181/>;
+    dc:modified '2021-02-10T15:32:26'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Glenside'@en ;
+    skos:definition 'Town ("census-designated place") in Pennsylvania, USA'@en ;
+    skos:notation 'SDN:C61::USCTY181'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/BZPT0001/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/BZPT0001/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/BZPT0001/>;
+    dc:modified '2021-02-10T08:42:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Belize City'@en ;
+    skos:definition 'City in Belize District, Belize.'@en ;
+    skos:notation 'SDN:C61::BZPT0001'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/GERPT049/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/GERPT049/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/GERPT049/>;
+    dc:modified '2021-01-19T16:15:47'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Duisburg'@en ;
+    skos:definition 'City in North Rhine-Westphalia, Germany.'@en ;
+    skos:notation 'SDN:C61::GERPT049'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C61/current/USCTY180/1/> .
+<http://vocab.nerc.ac.uk/collection/C61/current/USCTY180/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C61/current/USCTY180/>;
+    dc:modified '2021-01-06T16:03:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Scarborough'@en ;
+    skos:definition 'Town in Maine, USA.'@en ;
+    skos:notation 'SDN:C61::USCTY180'^^xsd:string .

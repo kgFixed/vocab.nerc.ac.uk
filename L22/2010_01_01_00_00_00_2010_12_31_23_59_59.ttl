@@ -1,0 +1,1135 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2010_01_01_00_00_00_2010_12_31_23_59_59.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2009_01_01_00_00_00_2009_12_31_23_59_59.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2010-12-31T23:59:59'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0359/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0359/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0359/>;
+    dc:modified '2010-11-24T09:31:30'^^xsd:dateTime ;
+    skos:altLabel 'IFP Flexotir source'^^xsd:string ;
+    skos:prefLabel 'Institut Francais du Petrole Flexotir seismic source'@en ;
+    skos:definition 'A seismic source whereby small charges (50-150g) are propelled through a rubber hose by water under pressure into an empty, perforated sphere where they are detonated. The holes in the sphere allow the water repelled by the explosion to flow in and out, thus dissipating some of the energy in the bubble effect. Flexotir was commonly used as an energy source for seafloor seismic surveys during the 1970s.'@en ;
+    skos:notation 'SDN:L22::TOOL0359'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0360/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0360/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0360/>;
+    dc:modified '2010-11-24T09:31:30'^^xsd:dateTime ;
+    skos:altLabel 'IFP Geomecanique hydrophones'^^xsd:string ;
+    skos:prefLabel 'Institut Francais du Petrole Geomecanique hydrophone array'@en ;
+    skos:definition 'A collection of underwater microphones mounted in cable designed to be towed behind a ship.'@en ;
+    skos:notation 'SDN:L22::TOOL0360'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0035/6/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0035/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0035/>;
+    dc:modified '2010-11-18T12:42:13'^^xsd:dateTime ;
+    skos:altLabel 'SBE 911 CTD'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 911 CTD'@en ;
+    skos:definition 'High precision and accuracy CTD made up from a Sea-Bird SBE 9 underwater unit and a SBE 11 deck unit. The underwater unit comprises protective cage (usually with a rosette) holding a pressure unit and temperature/conductivity unit. The latter is connected to a pump-fed plastic tubing circuit that may include other sensors. All plumbed and non-plumbed instruments (e.g. transmissometers and light meters) on the package are logged by the SBE 11. The unit was replaced by the SBE 911plus in 1997.'@en ;
+    skos:notation 'SDN:L22::TOOL0035'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0152/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0152/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0152/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'AML CT array'^^xsd:string ;
+    skos:prefLabel 'Applied Microsystems conductivity and temperature array'@en ;
+    skos:definition 'A data logger based on the AML MC7 micro-CTD with 3 remote conductivity plus temperature sensors. The logger can sample on command, at a fixed rate or in burst mode and has a real-time feed.'@en ;
+    skos:notation 'SDN:L22::TOOL0152'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0292/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0292/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0292/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'ASL IPS4 ice profiler'^^xsd:string ;
+    skos:prefLabel 'ASL Environmental Sciences IPS4 Ice Profiler Sonar'@en ;
+    skos:definition 'The ASL Environmental Sciences ISP4 is an upward looking sonar device for measuring ice keel drafts. Distance between the instrument and ice keel is measured by sonar at an operating frequency of 420 kHz with a beam width of 1.8 degrees and sampling rate of up to 2Hz. Water depth is measured by a pressure sensor and ice draft is calculated by difference. It has a depth range of 175 metres in ice or 225 metres in water and a precision of 0.05 metres.'@en ;
+    skos:notation 'SDN:L22::TOOL0292'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0244/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0244/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0244/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'Alpkem RFA/2 AA'^^xsd:string ;
+    skos:prefLabel 'Alpkem RFA/2 colorimetric autoanalyser'@en ;
+    skos:definition 'A rapid flow analyser that may be used to measure nutrient concentrations in seawater. It is a continuous flow instrument consisting of a sampler, peristaltic pump, analytical cartridge, heating bath, colorimeter, data station, and printer.'@en ;
+    skos:notation 'SDN:L22::TOOL0244'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0006/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0006/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0006/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'B-B 9006 STD'^^xsd:string ;
+    skos:prefLabel 'Bissett-Bermann 9006 STD system'@en ;
+    skos:definition 'The Bissett-Bermann 9006 was an STD (salinity, temperature depth) profiler.  Output was analogue, producing plots of salinity and temperature versus depth that were subsequently manually digitised.'@en ;
+    skos:notation 'SDN:L22::TOOL0006'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0005/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0005/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0005/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'B-B 9040 CTD'^^xsd:string ;
+    skos:prefLabel 'Bissett-Bermann 9040 CTD system'@en ;
+    skos:definition 'This instrument, also known as the Plessey 9040, incorporates pressure, temperature and conductivity sensors whose output may be digitally logged in addition to the derived parameters depth, salinity and sound velocity. An optional dissolved oxygen sensor is available. Salinity accuracy is quoted at +/-0.02 ppt and temperature accuracy is quoted at +/-0.02 C in normal oceanographic conditions.'@en ;
+    skos:notation 'SDN:L22::TOOL0005'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0353/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0353/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0353/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'Bolt Long-Life air gun'^^xsd:string ;
+    skos:prefLabel 'Bolt Technology Corporation Long-Life air gun'@en ;
+    skos:definition 'A family of air guns with maximum bubble sizes from 125 to 2000 cubic inches. Air guns comprise a towed chamber that rapidly release a single bubble of highly compressed air on command to generate an acoustic shock wave plus sonic oscillations as the bubble collapses. This family has been used as energy sources for seafloor seismic surveys since their introduction in 1992.'@en ;
+    skos:notation 'SDN:L22::TOOL0353'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0050/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0050/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0050/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'CTG 2-pi PAR'^^xsd:string ;
+    skos:prefLabel 'Chelsea Technologies Group 2-pi PAR irradiance sensor'@en ;
+    skos:definition 'A submersible irradiance sensor designed by Plymouth marine Laboratory and developed commercially by CTG. The collector is designed to measure the amount of light available for photosynthesis over a hemisphere. Sensors are often paired, one facing up the other down, to determine total PAR. Relative Spectral Sensitivity flat to + 3% from 450-700nm, down 8% of 400nm and 36% at 350nm. Casings on commercial instruments are rated to 1000m depth, but operationally deployed prototype instruments from PML were only rated to 500m.'@en ;
+    skos:notation 'SDN:L22::TOOL0050'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0043/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0043/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0043/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'CTG Aqualog CTD'^^xsd:string ;
+    skos:prefLabel 'Chelsea Technologies Group Aqualog CTD'@en ;
+    skos:definition 'A self-contained unit comprising pressure, temperature and conductivity sensors, an optional dissolved oxygen sensor, a fluorometer and a data logger. The unit could be used in a variety of modes including vertical profiling, towed undulator and short-term moorings.'@en ;
+    skos:notation 'SDN:L22::TOOL0043'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0049/4/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0049/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0049/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'CTG Aquatracka fluorometer'^^xsd:string ;
+    skos:prefLabel 'Chelsea Technologies Group Aquatracka fluorometer'@en ;
+    skos:definition 'A submersible fluorometer that may be configured for measurement of chlorophyll-a, tracer dye or set up as a nephelometer to measure turbidity. It is manufactured from titanium giving a depth rating of 6000m.'@en ;
+    skos:notation 'SDN:L22::TOOL0049'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0109/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0109/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0109/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'Florida-Bahamas cable -1990'^^xsd:string ;
+    skos:prefLabel 'Florida-Bahamas cable to 1990'@en ;
+    skos:definition 'Cabling installed on the seabed primarily to provide a telecommunication link between Florida and the Bahamas until 1990 but able to provide information on currents due to resistance variation. More information at http://www.bodc.ac.uk/data/documents/nodb/110738/.'@en ;
+    skos:notation 'SDN:L22::TOOL0109'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0110/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0110/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0110/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'Florida-Bahamas cable 1990-'^^xsd:string ;
+    skos:prefLabel 'Florida-Bahamas cable from 1990'@en ;
+    skos:definition 'Cabling installed on the seabed primarily to provide a telecommunication link between Florida and the Bahamas from 1990, but able to provide information on currents due to resistance variation. More information at http://www.bodc.ac.uk/data/documents/nodb/110741/.'@en ;
+    skos:notation 'SDN:L22::TOOL0110'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0248/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0248/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0248/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'Nansen bottle'^^xsd:string ;
+    skos:prefLabel 'Nansen-Petterson water bottle'@en ;
+    skos:definition 'Metal or plastic insulated bottles with an approximate capacity of 1-2 litres designed for deployment on a cable, sealed by with a spring-loaded valve when triggered by dropping a weight down the cable. It was designed to recover an uncontaminated sample from depth within 0.01C of its in-situ temperature. The design is an improvement by Petterson in collaboration with Nansen on an original design by Nansen. Both designs are commonly known as Nansen bottles.'@en ;
+    skos:notation 'SDN:L22::TOOL0248'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0002/3/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0002/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0002/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'Neil Brown MK3 CTD'^^xsd:string ;
+    skos:prefLabel 'Neil Brown MK3 CTD'@en ;
+    skos:definition 'The Neil Brown MK3 CTD consists of an integral unit containing pressure, temperature and conductivity sensors with an optional dissolved oxygen sensor in a pressure-hardened casing. The most widely used variant in the 1980s and 1990s was the MK3B. The MK3C fitted with an improved pressure sensor to reduce hysteresis was developed to meet the requirements of the WOCE project. The instrument is no longer in production, but is supported (repair and calibration) by General Oceanics.'@en ;
+    skos:notation 'SDN:L22::TOOL0002'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0053/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0053/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0053/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'RBR XR-420 CTD'^^xsd:string ;
+    skos:prefLabel 'RBR XR-420 CTD Marine'@en ;
+    skos:definition 'A small autonomous data logger designed to monitor conductivity, temperature and depth. Conductivity (accuracy ± 0.003 mS/cm) is measured using a 3-coil closed loop feedback inductive cell for superior temperature compensation. The thermistor (Themometrics) used to record temperature (accuracy ± 0.002°C) is aged and hermetically sealed in the tip of a shock resistant solid glass rod. Pressure (accuracy 0.05% full scale) sensors use reliable semiconductor technology and 316 stainless steel housing developed for long-term stability in harsh environments.'@en ;
+    skos:notation 'SDN:L22::TOOL0053'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0211/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0211/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0211/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'RCM 4/5'^^xsd:string ;
+    skos:prefLabel 'Aanderaa RCM 4/5 Recording Current Meter'@en ;
+    skos:definition 'Family of self-recording current meters with Savonius Rotors recording averaged speed and a magnetic compass recording spot directions. The meter has a balanced weight vane which aligns it with the current flow and is mounted using shackles between segments of mooring line. Optional temperature, pressure and conductivity sensors may be fitted. The RCM5 has a strengthened casing allowing deployment to 6000m. For more details see http://www.bodc.ac.uk/data/documents/nodb/4872/'@en ;
+    skos:notation 'SDN:L22::TOOL0211'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0039/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0039/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0039/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'SBE 13 DO'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 13 Dissolved Oxygen Sensor'@en ;
+    skos:definition 'Dissolved oxygen sensor with either a Beckmann (SBE 13B) or YSI polarographic element (SBE 13Y limited to 2000m depth). Designed to interface with the SBE 9 and 9plus CTD underwater units. An optional plenum to connect into the pumped plumbing system was available but usage with the membrane exposed was possible. Replaced by the SBE 43 in 2001.'@en ;
+    skos:notation 'SDN:L22::TOOL0039'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0042/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0042/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0042/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'SBE 19 SEACAT'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 19 SEACAT CTD'@en ;
+    skos:definition 'A self-contained battery powered CTD with precision semiconductor strain gauge pressure sensor. Water was supplied to the conductivity sensor by a pump. Housing was plastic (up to 600m depth), aluminium (up to 6800m depth) or titanium (up to 10500m depth). Optional oxygen, pH, fluorescence, PAR, light transmission and turbidity sensors could be fitted. Primarily designed for profiling applications but may be used on a short (less than 2 weeks) duration mooring. Replaced by the SBE19plus model in 2001.'@en ;
+    skos:notation 'SDN:L22::TOOL0042'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0047/4/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0047/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0047/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'SBE 19+ SEACAT'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 19plus SEACAT CTD'@en ;
+    skos:definition 'Self contained self powered CTD profiler. Measures conductivity, temperature and pressure in both profiling (samples at 4 scans/sec) and moored (sample rates of once every 5 seconds to once every 9 hours) mode. Available in plastic or titanium housing with depth ranges of 600m and 7000m respectively. Minature submersible pump provides water to conductivity cell.'@en ;
+    skos:notation 'SDN:L22::TOOL0047'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0040/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0040/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0040/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'SBE 25 Sealogger'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 25 Sealogger CTD'@en ;
+    skos:definition 'A compact self-contained CTD comprising a conductivity sensor plumbed into a pumped water supply and separate pressure and temperature sensor modules. The whole unit is mounted in a stainless steel cage with a battery pack, data logger and memory. A dissolved oxygen sensor may be plumbed into the pumped water supply and other sensor modules such as fluorometers and transmissometers may be mounted in the cage and interfaced to the data logger. The instrument may also be used with external power and data logging through an RS-232 interface.'@en ;
+    skos:notation 'SDN:L22::TOOL0040'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0094/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0094/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0094/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'SEBAPULS 20 radar WLR'^^xsd:string ;
+    skos:prefLabel 'SEBAPULS 20 radar water level recorder'@en ;
+    skos:definition 'Pulse microwave radar measuring the distance between instrument and surface water. This model is able to measure distances up to 20m with an accuracy of plus or minus 5mm.'@en ;
+    skos:notation 'SDN:L22::TOOL0094'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0095/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0095/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0095/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'SEBAPULS 30 radar WLR'^^xsd:string ;
+    skos:prefLabel 'SEBAPULS 30 radar water level recorder'@en ;
+    skos:definition 'Pulse microwave radar measuring the distance between instrument and surface water. This model is able to measure distances up to 30m with an accuracy of plus or minus 3mm.'@en ;
+    skos:notation 'SDN:L22::TOOL0095'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0096/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0096/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0096/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'SEBAPULS 70 radar WLR'^^xsd:string ;
+    skos:prefLabel 'SEBAPULS 70 radar water level recorder'@en ;
+    skos:definition 'Pulse microwave radar measuring the distance between instrument and surface water. This model is able to measure distances up to 70m with an accuracy of plus or minus 15mm.'@en ;
+    skos:notation 'SDN:L22::TOOL0096'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0003/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0003/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0003/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'SeaTech transmissometer'^^xsd:string ;
+    skos:prefLabel 'SeaTech transmissometer'@en ;
+    skos:definition 'SeaTech manufactured a range of transmissometers to measure optical attenuance, usually (but not exclusively) at red (660nm) light wavelengths. Path lengths varied from 5cm for use in turbid waters to 1m for use in the clear deep ocean. The instruments are no longer manufactured and no source of support is known.'@en ;
+    skos:notation 'SDN:L22::TOOL0003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0243/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0243/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0243/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'Spekker colorimeter'^^xsd:string ;
+    skos:prefLabel 'Hilger Spekker colorimeter'@en ;
+    skos:definition 'A photoelectric absorbsiometer developed in 1936 and manufactered by Adam Hilger Ltd, London. A light source with a photocell on each side provides a basic means of operation. The instrument is set up with a solution to be measured in the sample light beam and then balance the EMF of the photocells to zero on a galvanometer. It can be used to measure nutrient concentrations in seawater.'@en ;
+    skos:notation 'SDN:L22::TOOL0243'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0229/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0229/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0229/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'Vaisala GM70 CO2 analyser'^^xsd:string ;
+    skos:prefLabel 'Vaisala GM70 atmospheric carbon dioxide analyser'@en ;
+    skos:definition 'An instrument designed for the measurement of atmospheric carbon dioxide incorporating a probe that connects to a pump aspirator. The probe contains a CARBOCAP sensor comprising three major components - a light source, a Fabry-Perot interferometer and an IR detector. The interferometer allows light of two wavelengths to pass through to the detector - the wavelength at which carbon dioxide absorbs light and a nearby non-absorbing wavelength for comparison purposes. The probe is used in conjunction with a MI70 meter which promotes easy transfer of data to a PC.'@en ;
+    skos:notation 'SDN:L22::TOOL0229'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0232/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0232/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0232/>;
+    dc:modified '2010-11-18T12:39:41'^^xsd:dateTime ;
+    skos:altLabel 'Valeport CTD 600'^^xsd:string ;
+    skos:prefLabel 'Valeport CTD 600'@en ;
+    skos:definition 'A CTD that samples on either time or depth increments based sampling with direct-reading or self-logging modes. Depth rating is 1500m. Available with either a platinum resistance thermometer (accuracy temperature 0.02C, salinity 0.07 PSU) or thermistor (accuracy temperature 0.1C, salinity 0.15 PSU) temperature sensors and inductive coil conductivity sensors. Both types have a resolution of 0.002C for temperature and 0.003 PSU for salinity.'@en ;
+    skos:notation 'SDN:L22::TOOL0232'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0357/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0357/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0357/>;
+    dc:modified '2010-11-18T12:37:16'^^xsd:dateTime ;
+    skos:altLabel 'Bolt 1500-LL air gun'^^xsd:string ;
+    skos:prefLabel 'Bolt Technology Corporation 1500-LL air gun'@en ;
+    skos:definition 'A towed chamber that rapidly releases a single bubble of highly compressed air on command to generate an acoustic shock wave plus sonic oscillations as the bubble collapses. It is used a an energy source for seafloor seismic surveys. The 1500-LL is designed for chamber volumes ranging from 40 to 1500 cubic inches and has a maximum operating pressure of 2000 psi. Multiple guns can be configured in a cluster to increase energy output.'@en ;
+    skos:notation 'SDN:L22::TOOL0357'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0356/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0356/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0356/>;
+    dc:modified '2010-11-18T12:37:16'^^xsd:dateTime ;
+    skos:altLabel 'Bolt 1900-LLXT air gun'^^xsd:string ;
+    skos:prefLabel 'Bolt Technology Corporation 1900-LLXT air gun'@en ;
+    skos:definition 'A towed chamber that rapidly releases a single bubble of highly compressed air on command to generate an acoustic shock wave plus sonic oscillations as the bubble collapses. It is used a an energy source for seafloor seismic surveys and is suited to both shallow and deep water work. The 1900-LLXT is designed for chamber volumes ranging from 10 to 380 cubic inches and has been tested at an operating pressure of 3000 psi.'@en ;
+    skos:notation 'SDN:L22::TOOL0356'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0355/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0355/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0355/>;
+    dc:modified '2010-11-18T12:37:16'^^xsd:dateTime ;
+    skos:altLabel 'Bolt 2800-LLX air gun'^^xsd:string ;
+    skos:prefLabel 'Bolt Technology Corporation 2800-LLX air gun'@en ;
+    skos:definition 'A towed chamber that rapidly releases a single bubble of highly compressed air on command to generate an acoustic shock wave plus sonic oscillations as the bubble collapses. It is used a an energy source for seafloor seismic surveys and is suited to shallow water work. The L2800-LLX is designed for chamber volumes ranging from 5 to 120 cubic inches and has a maximum operating pressure of 2000 psi. It can be configured in 2-3 gun clusters to increase energy output.'@en ;
+    skos:notation 'SDN:L22::TOOL0355'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0354/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0354/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0354/>;
+    dc:modified '2010-11-18T12:37:16'^^xsd:dateTime ;
+    skos:altLabel 'Hydrophone'^^xsd:string ;
+    skos:prefLabel 'Hydrophone'@en ;
+    skos:definition 'A generic term for an acoustic intensity sensor (microphone) with an acoustic impedence matched to the density of water to optimise sonic detection under water.'@en ;
+    skos:notation 'SDN:L22::TOOL0354'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0341/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0341/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0341/>;
+    dc:modified '2010-10-14T10:51:49'^^xsd:dateTime ;
+    skos:altLabel 'CTG MINIpack CTD-F'^^xsd:string ;
+    skos:prefLabel 'Chelsea Technologies Group MINIpack CTD-F'@en ;
+    skos:definition 'A single titanium/acetyl housing containing temperature, conductivity, pressure and fluorescence sensors, a data logger and internal batteries. The fluorometer can be configured to measure a variety of pigments or turbidity and the sensor package has a depth rating of 600m. Data can be recorded internally or output in real time. Spare channels are available to interface up to 16 external sensors such as PAR and dissolved oxygen.'@en ;
+    skos:notation 'SDN:L22::TOOL0341'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0352/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0352/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0352/>;
+    dc:modified '2010-10-01T10:54:41'^^xsd:dateTime ;
+    skos:altLabel 'Manchester CAS HTDMA'^^xsd:string ;
+    skos:prefLabel 'Manchester Centre for Atmospheric Science Hygroscopic Tandem Differential Mobility Analyser'@en ;
+    skos:definition 'The Hygroscopic Tandem Differential Mobility Analyser (HTDMA) measures the changes in aerosol size distribution in response to a change in relative humidity. It uses two Differential Mobility Analysers (DMAs), operated in series. The incoming air sample is dried to <10% relative humidity, and the first DMA selects a monodisperse distribution of a chosen size. The monodisperse subsample is humidified, and the second DMA, coupled to a particle counter, measures the size distribution of the humidified sample.'@en ;
+    skos:notation 'SDN:L22::TOOL0352'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0079/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0079/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0079/>;
+    dc:modified '2010-09-08T11:20:45'^^xsd:dateTime ;
+    skos:altLabel 'Gyro'^^xsd:string ;
+    skos:prefLabel 'Gyrocompass'@en ;
+    skos:definition 'A compass of unspecified make or model number that finds true north by using a fast-spinning wheel and friction forces to sense the rotation of the Earth.'@en ;
+    skos:notation 'SDN:L22::TOOL0079'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0078/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0078/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0078/>;
+    dc:modified '2010-09-08T11:18:07'^^xsd:dateTime ;
+    skos:altLabel 'GPS'^^xsd:string ;
+    skos:prefLabel 'Global Positioning Satellite System'@en ;
+    skos:definition 'A location system of unspecified make or model that determines location on the Earth\'s surface using the Global Positioning Satellite Network. Angular co-ordinates are given relative to WGS84 CRS. Other parameters such as platform velocity may be derived from this.'@en ;
+    skos:notation 'SDN:L22::TOOL0078'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0074/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0074/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0074/>;
+    dc:modified '2010-09-08T10:12:41'^^xsd:dateTime ;
+    skos:altLabel 'Underwater PAR'^^xsd:string ;
+    skos:prefLabel 'Underwater PAR radiometer'@en ;
+    skos:definition 'Underwater PAR radiometer of unknown type. Assumed to have a spectral response of 400-700nm. Could have any type of collector (flat plate cosine collector, spherical or hemispherical).'@en ;
+    skos:notation 'SDN:L22::TOOL0074'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0066/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0066/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0066/>;
+    dc:modified '2010-09-08T10:09:52'^^xsd:dateTime ;
+    skos:altLabel 'BackScat 1302'^^xsd:string ;
+    skos:prefLabel 'Dr.Haardt BackScat Fluorometer Model 1302'@en ;
+    skos:definition 'Backscatter fluorometer comprising three optical sensors integrated into one housing with a light source of 2 xenon flash tubes and filters for the detection of chlorophyll, yellow substance (gelbstoff) and Mie backscattering.'@en ;
+    skos:notation 'SDN:L22::TOOL0066'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0028/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0028/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0028/>;
+    dc:modified '2010-09-07T11:26:56'^^xsd:dateTime ;
+    skos:altLabel 'RCM 9 IW'^^xsd:string ;
+    skos:prefLabel 'Aanderaa RCM 9 IW Recording Current Meter'@en ;
+    skos:definition 'The RCM 9 IW is a single-point doppler recording current meter with a medium weight case to operate at depths of up to 2000 metres. Further information may be found on the BODC document server at URL http://www.bodc.ac.uk/data/documents/nodb/106028/'@en ;
+    skos:notation 'SDN:L22::TOOL0028'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0027/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0027/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0027/>;
+    dc:modified '2010-09-07T11:25:23'^^xsd:dateTime ;
+    skos:altLabel 'RCM 9 LW'^^xsd:string ;
+    skos:prefLabel 'Aanderaa RCM 9 LW Recording Current Meter'@en ;
+    skos:definition 'The RCM 9 LW is a single-point doppler recording current meter with a lightweight case to operate at depths of up to 300 metres. Further information may be found on the BODC document server at URL http://www.bodc.ac.uk/data/documents/nodb/106028/'@en ;
+    skos:notation 'SDN:L22::TOOL0027'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0026/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0026/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0026/>;
+    dc:modified '2010-09-07T11:22:02'^^xsd:dateTime ;
+    skos:altLabel 'RCM 11'^^xsd:string ;
+    skos:prefLabel 'Aanderaa RCM 11 Recording Current Meter'@en ;
+    skos:definition 'The RCM 11 is a single-point doppler recording current meter pressure cased to operate at depths of up to 6000 metres. Further information may be found on the BODC document server at URL http://www.bodc.ac.uk/data/documents/nodb/106028/'@en ;
+    skos:notation 'SDN:L22::TOOL0026'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0093/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0093/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0093/>;
+    dc:modified '2010-09-06T17:01:34'^^xsd:dateTime ;
+    skos:altLabel 'TSS HRP-2-25 CMS'^^xsd:string ;
+    skos:prefLabel 'TSS HRP-2-25 compact motion sensor'@en ;
+    skos:definition 'The TSS Compact Motion Sensor is designed to meet the motion measurement requirements of a oceanographic instruments and platforms from single-beam echo-sounders to dynamic positioning systems. The CMS can be used to measure heave, pitch and roll of a vessel. For more information see http://www.bodc.ac.uk/data/documents/nodb/147645/'@en ;
+    skos:notation 'SDN:L22::TOOL0093'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0335/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0335/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0335/>;
+    dc:modified '2010-09-06T12:45:22'^^xsd:dateTime ;
+    skos:altLabel 'Analogue TG'^^xsd:string ;
+    skos:prefLabel 'Analogue tide gauge'@en ;
+    skos:definition 'Generic term for instruments that transform the damped level of the sea surface into a marking on a chart by a continous pen recorder or an analogue display that may be read and written into a ledger.'@en ;
+    skos:notation 'SDN:L22::TOOL0335'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0342/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0342/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0342/>;
+    dc:modified '2010-09-06T12:45:22'^^xsd:dateTime ;
+    skos:altLabel 'ChemLab AA-II'^^xsd:string ;
+    skos:prefLabel 'ChemLab AA-II segmented continuous flow autoanalyser'@en ;
+    skos:definition 'A rapid flow analyser that may be used to measure nutrient concentrations in seawater. It is a continuous flow instrument consisting of a sampler, peristaltic pump, analytical cartridge, heating bath, colorimeter, data station, and printer.'@en ;
+    skos:notation 'SDN:L22::TOOL0342'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0337/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0337/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0337/>;
+    dc:modified '2010-09-06T12:45:22'^^xsd:dateTime ;
+    skos:altLabel 'Decca navigation'^^xsd:string ;
+    skos:prefLabel 'Decca main chain navigation receiver'@en ;
+    skos:definition 'A hyperbolic low-frequency (70 and 130 kHz) signal receiver that determined position based on the phase difference between signals transmitted by groups of a master plus three slave transmitters. Range depended on radio reception conditions but was typically 450km (day) to 750km (night). Accuracy ranged from 50m (day) or 200m (night) in ideal conditions down to 2km near the range limit. The system operated from the WWII until the UK transmitters were switched off at the end of March 2000.'@en ;
+    skos:notation 'SDN:L22::TOOL0337'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0348/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0348/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0348/>;
+    dc:modified '2010-09-06T12:45:22'^^xsd:dateTime ;
+    skos:altLabel 'Fugro SeaSTAR 9200-G2'^^xsd:string ;
+    skos:prefLabel 'Fugro SeaSTAR 9200-G2 Differential Navigation System receiver'@en ;
+    skos:definition 'A dual-frequency Differential Global Satellite Navigation System (DGSNS) receiver that incorporates both GPS and GLONASS reception capability. It also tracks the Fugro L-Band satellite broadcast of DGNSS corrections and, as backup, can receive these corrections via the internet. This functionality allows the instrument to provide positional information with a horizontal accuracy of 15cm and a vertical accuracy of 20cm.'@en ;
+    skos:notation 'SDN:L22::TOOL0348'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0336/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0336/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0336/>;
+    dc:modified '2010-09-06T12:45:22'^^xsd:dateTime ;
+    skos:altLabel 'Grundy 6620 thermosalinograph'^^xsd:string ;
+    skos:prefLabel 'Grundy Environmental 6620 thermosalinograph'@en ;
+    skos:definition 'An autoranging instrument taking inputs from a hull or inlet thermometer to give sea temperature plus co-located temperature and conductivity sensors to give salinity. In general use during the 1980s and 1990s.'@en ;
+    skos:notation 'SDN:L22::TOOL0336'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0333/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0333/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0333/>;
+    dc:modified '2010-09-06T12:45:22'^^xsd:dateTime ;
+    skos:altLabel 'Magee AE1 Aethalometer'^^xsd:string ;
+    skos:prefLabel 'Magee Scientific AE1 Aethalometer'@en ;
+    skos:definition 'The Magee Scientific AE1 Aethalometer determines concentration of light absorbing aerosol particles from measurements of light transmission through a sample. Air is filtered through a quartz fibre filter tape that traps particulate matter. Measurements are taken at user-specified time intervals ranging from one second to several minutes and the instrument outputs a voltage that is indicative of the amount of light absorbed by the sample.'@en ;
+    skos:notation 'SDN:L22::TOOL0333'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0331/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0331/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0331/>;
+    dc:modified '2010-09-06T12:45:22'^^xsd:dateTime ;
+    skos:altLabel 'Radar Water Level Recorder'^^xsd:string ;
+    skos:prefLabel 'Radar Water Level Recorder'@en ;
+    skos:definition 'A generic term for radar water level recorders (also known as wavemeters) that measure the distance between the instrument and the water surface. They can be used to measure ocean waves or sea level (depending on sampling frequency) and have been employed on structures such as oil platforms.'@en ;
+    skos:notation 'SDN:L22::TOOL0331'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0313/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0313/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0313/>;
+    dc:modified '2010-09-06T12:45:22'^^xsd:dateTime ;
+    skos:altLabel 'Trimble 4000AX GPS'^^xsd:string ;
+    skos:prefLabel 'Trimble 4000AX Global Positioning System receiver'@en ;
+    skos:definition 'A GPS receiver in use on research vessels in the 1990s. Sampling rate reported in cruise report literature as approximately 1 second'@en ;
+    skos:notation 'SDN:L22::TOOL0313'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0340/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0340/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0340/>;
+    dc:modified '2010-09-06T12:45:22'^^xsd:dateTime ;
+    skos:altLabel 'VACC'^^xsd:string ;
+    skos:prefLabel 'University of Leeds Volatile Aerosol Concentration and Composition instrument'@en ;
+    skos:definition 'The Volatile Aerosol Concentration and Composition instrument (VACC) indicates the size-resolved chemical composition of an aerosol sample. Air is drawn in through a quartz tube heating element, programmed to cycle over temperatures between 40 and 900 degrees C. Particles are sized by a hybrid optical particle counter. Temperature dependent changes in size spectra are characteristic of the chemical composition of the aerosol particles.'@en ;
+    skos:notation 'SDN:L22::TOOL0340'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0166/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0166/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0166/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Aanderaa RDCP 600'^^xsd:string ;
+    skos:prefLabel 'Aanderaa RDCP 600 Recording Doppler Current Profiler'@en ;
+    skos:definition 'The RDCP 600 is a medium range, 600kHz self-recording Doppler Current Profiler. The standard RDCP 600 can be deployed to a depth of 300m, with a velocity range of 0-500 cm/s, vertical velocity accuracy of 1.0 cm/s and horizontal velocity accuracy of 0.5cm/s.'@en ;
+    skos:notation 'SDN:L22::TOOL0166'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0297/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0297/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0297/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Aerodyne HR Tof AMS'^^xsd:string ;
+    skos:prefLabel 'Aerodyne High Resolution Time-of-Flight Aerosol Mass Spectrometer'@en ;
+    skos:definition 'An in-situ instrument that provides quantitative size and chemical mass loading information in real-time for non-refractory sub-micron atmospheric aerosol particles from high-resolution time-of-flight and mass-spectrometer measurements. The HR-ToF-AMS variant has a detection limit for nitrate of 0.003 (V-mode) or 0.05 (W-mode) ug/m3.'@en ;
+    skos:notation 'SDN:L22::TOOL0297'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0283/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0283/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0283/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Air thermometer'^^xsd:string ;
+    skos:prefLabel 'Atmospheric thermometer'@en ;
+    skos:definition 'A generic term for a device that measures atmospheric temperature. The term is for use where details of the make, model number and measurement principle are not known.'@en ;
+    skos:notation 'SDN:L22::TOOL0283'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0240/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0240/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0240/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Autolab salinometer'^^xsd:string ;
+    skos:prefLabel 'Autolab bench salinometer'@en ;
+    skos:definition 'A laboratory instrument that determines salinity of a water sample by comparison of its electrical conductivity with a standard solution.'@en ;
+    skos:notation 'SDN:L22::TOOL0240'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0281/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0281/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0281/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Barometer'^^xsd:string ;
+    skos:prefLabel 'Barometer'@en ;
+    skos:definition 'A generic term for a device that measures atmospheric pressure. The term is for use where details of the make, model number and measurement principle are not known.'@en ;
+    skos:notation 'SDN:L22::TOOL0281'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0235/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0235/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0235/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Bottle'^^xsd:string ;
+    skos:prefLabel 'Water bottle'@en ;
+    skos:definition 'A generic term for a device for the collection of a water sample from a pre-determined depth in a water body. The device is positioned at the desired depth where it is closed and sealed by some form of command from the surface.'@en ;
+    skos:notation 'SDN:L22::TOOL0235'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0222/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0222/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0222/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'CS100 barometer'^^xsd:string ;
+    skos:prefLabel 'Setra CS100 barometer'@en ;
+    skos:definition 'A barometer based on a capacitive pressure transducer measuring pressure in the 600 to 1100 mB range. Accuracy is +-0.5 mB at 20C and +-1 mB over the range 0-40C. Marketed by Campbell Scientific.'@en ;
+    skos:notation 'SDN:L22::TOOL0222'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0280/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0280/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0280/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Cup and vane anemometer'^^xsd:string ;
+    skos:prefLabel 'Cup and vane anemometer'@en ;
+    skos:definition 'A generic term for a device that measures windspeed by determining the speed of rotation of 3 cups mounted on horizontal arms with a central pivot and wind direction by determining the orientation of a separate pivot-mounted sail. The term is for use where the measurement principle is known, but details of the make and model number are not known.'@en ;
+    skos:notation 'SDN:L22::TOOL0280'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0128/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0128/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0128/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'DRP-5 PAR'^^xsd:string ;
+    skos:prefLabel 'Didcot/ELE DRP-5 PAR sensor'@en ;
+    skos:definition 'A sensor that measures the photon flux density of light in the 400-700nm waveband using a blue-enhanced silicon photocell. Cosine correction ensures that readings are obtained from widely varied angles of incidence.'@en ;
+    skos:notation 'SDN:L22::TOOL0128'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0196/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0196/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0196/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Druck RPT 301 barometer'^^xsd:string ;
+    skos:prefLabel 'Druck RPT 301 barometer'@en ;
+    skos:definition 'A barometer based on silicon pressure sensor having a multi-layer construction. The resonator and pressure sensitive diaphragm micro-machined from one piece of silicon. The resonator is bonded to a second silicon wafer containing the drive and pick-up system under vacuum.'@en ;
+    skos:notation 'SDN:L22::TOOL0196'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0131/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0131/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0131/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'EM12 S-120 echosounder'^^xsd:string ;
+    skos:prefLabel 'Simrad EM12 S-120 multibeam echosounder'@en ;
+    skos:definition 'A low frequency (13 kHz) multibeam echo sounder with full ocean depth capability. The angular coverage is 120 degrees with a swath width of 3.5 times depth. It was introduced in 1989 replaced by the EM120 in 2000.'@en ;
+    skos:notation 'SDN:L22::TOOL0131'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0277/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0277/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0277/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Endeco 1125 DO'^^xsd:string ;
+    skos:prefLabel 'Endeco model 1125 dissolved oxygen system'@en ;
+    skos:definition 'A controller with up to four multiplexed Endeco type 1128 pulsed-electrode dissolved oxygen probes. Endeco are now a subsidiary of YSI.'@en ;
+    skos:notation 'SDN:L22::TOOL0277'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0122/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0122/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0122/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'FSI OEM C-T module'^^xsd:string ;
+    skos:prefLabel 'Falmouth Scientific Instruments OEM conductivity-temperature sensor'@en ;
+    skos:definition 'A high accuracy conductivity and temperature sensor that can be readily adapted to various user platforms. The interface electronics provide a DC voltage output proportional to conductivity or temperature. Conductivity is measured by a large inductively coupled sensor that is less affected by biofouling than wetted electrode sensors. Temperature is measured by a high grade Platiunum Resistence Thermometer (PRT) that provides linear temperature response and high stability. The electronics approach is very linear, eliminating the need for complex equations to convert outputs to physical units.'@en ;
+    skos:notation 'SDN:L22::TOOL0122'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0123/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0123/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0123/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'FSI OTM'^^xsd:string ;
+    skos:prefLabel 'Falmouth Scientific Instruments ocean temperature module'@en ;
+    skos:definition 'A standards-grade platinum resistance thermometer with a low-power micro-controller to collect, scale and transmit real-time data via RS-232 or RS-485'@en ;
+    skos:notation 'SDN:L22::TOOL0123'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0141/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0141/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0141/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'HS-2 OBS-fluorometer'^^xsd:string ;
+    skos:prefLabel 'HOBI HydroScat-2 Optical Backscatter Fluorometer'@en ;
+    skos:definition 'Instrument that measures optical backscatter at 2 wavelengths (420nm and 700nm as standard but can be customised) plus chlorophyll fluorescence. Casings available for 330m, 4000m or custom maximum depth working.'@en ;
+    skos:notation 'SDN:L22::TOOL0141'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0238/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0238/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0238/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Hg RTM'^^xsd:string ;
+    skos:prefLabel 'Mercury reversing thermometer'@en ;
+    skos:definition 'A generic term for a mercury-in-glass thermometer that freezes the temperature reading when turned upside-down.'@en ;
+    skos:notation 'SDN:L22::TOOL0238'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0228/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0228/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0228/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Hugrun Seamon Mini TR'^^xsd:string ;
+    skos:prefLabel 'Hugrun Seamon Mini temperature recorder'@en ;
+    skos:definition 'A small underwater temperature sensor and data logger manufactured by Hugrun (subsequently Star-Oddi) and no longer manufactured under that name.'@en ;
+    skos:notation 'SDN:L22::TOOL0228'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0282/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0282/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0282/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Hygrometer'^^xsd:string ;
+    skos:prefLabel 'Hygrometer'@en ;
+    skos:definition 'A generic term for a device that measures atmospheric humidity. The term is for use where details of the make, model number and measurement principle are not known.'@en ;
+    skos:notation 'SDN:L22::TOOL0282'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0227/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0227/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0227/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'IOS MkIII BPR'^^xsd:string ;
+    skos:prefLabel 'Institute of Oceanographic Sciences MkIII bottom pressure recorder'@en ;
+    skos:definition 'A deep water (300-5000m) seafloor pressure gauge designed and built by IOS Bidston (now Proudman Oceanographic Laboratory) with two pressure transducers and PRT sea temperature sensors coupled to a 12-channel commercial data logger in a spherical pressure housing.'@en ;
+    skos:notation 'SDN:L22::TOOL0227'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0226/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0226/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0226/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'IOS MkIV BPR'^^xsd:string ;
+    skos:prefLabel 'Institute of Oceanographic Sciences MkIV bottom pressure recorder'@en ;
+    skos:definition 'A deep water (300-5000m) seafloor pressure gauge designed and built by IOS Bidston (now Proudman Oceanographic Laboratory) with an internal casette tape data logger recording Bell and Howell strain gauges and/or Digiquartz pressure sensors.'@en ;
+    skos:notation 'SDN:L22::TOOL0226'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0304/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0304/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0304/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'IXSEA PHINS'^^xsd:string ;
+    skos:prefLabel 'IXSEA Photonic Inertial Navigation System'@en ;
+    skos:definition 'PHINS, or PHotonic Inertial Navigation System (INS) that outputs position, heading, pitch, roll, heave, depth and velocity. The PHINS uses a high accuracy inertial measurement unit and produces positional data with an accuracy ranging from metres to cm, depending on the specific instrumentation setup. INS drift performance is known to be inadequate without a velocity input from an ADCP.'@en ;
+    skos:notation 'SDN:L22::TOOL0304'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0193/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0193/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0193/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'LI-190 PAR'^^xsd:string ;
+    skos:prefLabel 'LI-COR LI-190 PAR sensor'@en ;
+    skos:definition 'A non-submersible cosine-corrected PAR sensor sensitive wavelengths from 400-700nm with sharp cut-off due to an interference filter. It may be used as a reference sensor for LI-192 and LI-193 Underwater Quantum Sensor.'@en ;
+    skos:notation 'SDN:L22::TOOL0193'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0120/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0120/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0120/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'LI-192 PAR'^^xsd:string ;
+    skos:prefLabel 'LI-COR LI-192 PAR sensor'@en ;
+    skos:definition 'An underwater or atmospheric quantum sensor with cosine correction that can operate down to 560m. Fitted with a blue-enhanced silicon photovoltaic detector.'@en ;
+    skos:notation 'SDN:L22::TOOL0120'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0278/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0278/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0278/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Liverpool CSV metals'^^xsd:string ;
+    skos:prefLabel 'University of Liverpool cathodic stripping voltammetry metal analyser'@en ;
+    skos:definition 'A research mode continuous flow metal analyser developed and deployed by Liverpool University Earth and Ocean Sciences department. It is based on cathodic stripping voltammetry with a mercury cathode and the capability for continuous UV light digestion if required.'@en ;
+    skos:notation 'SDN:L22::TOOL0278'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0302/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0302/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0302/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'MacroTide WLR'^^xsd:string ;
+    skos:prefLabel 'Coastal Leasing MacroTide water level recorder'@en ;
+    skos:definition 'A sub-surface water level recorder designed for measurement of tidal signals and water temperature with an ICS Strain Gauge Pressure Sensor logged at 12-bit resolution and a YSI internal (or optionally external) thermistor. Pressure accuracy is 0.1% of measurement range. Temperature accuracy is 0.1C (resolution 0.02C).'@en ;
+    skos:notation 'SDN:L22::TOOL0302'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0303/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0303/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0303/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'MacroTide+ WLR'^^xsd:string ;
+    skos:prefLabel 'Coastal Leasing MacroTide+ water level recorder'@en ;
+    skos:definition 'A sub-surface water level recorder designed for measurement of tidal signals and water temperature with a Parascientific Digiquartz pressure sensor logged at 16-bit resolution and a YSI internal (or optionally external) thermistor. Pressure accuracy is 0.015% of measurement range. Temperature accuracy is 0.1C (resolution 0.02C).'@en ;
+    skos:notation 'SDN:L22::TOOL0303'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0300/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0300/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0300/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Manchester CAS DMPS'^^xsd:string ;
+    skos:prefLabel 'Manchester Centre for Atmospheric Science Differential Mobility Particle Sizer'@en ;
+    skos:definition 'An in-situ instrument that gives size-resolved aerosol particle counts in the range 3.4 nm to 830 nm. The instrument comprises an ultrafine and a standard differential mobility analyser, and an ultrafine and a standard optical particle counter. It is a research mode instrument developed by the University of Manchester Centre for Atmospheric Science that is not in commercial production.'@en ;
+    skos:notation 'SDN:L22::TOOL0300'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0170/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0170/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0170/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'NAS-2E nutrient analyser'^^xsd:string ;
+    skos:prefLabel 'EnviroTech LLC NAS-2E Nutrient Analyser'@en ;
+    skos:definition 'In-situ nutrient analyser for high frequency time-series determination of nutrient concentrations in marine and fresh waters.'@en ;
+    skos:notation 'SDN:L22::TOOL0170'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0233/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0233/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0233/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'NKE SP2T TDR'^^xsd:string ;
+    skos:prefLabel 'NKE SP2T temperature and depth recorder'@en ;
+    skos:definition 'A family of small self-contained temperature and depth recorders with either internal or external (fast response) temperature sensors. A range of casing options give operating depths of between 10m and 4000m (operating depth specified as model number suffix). Temperature accuracy is 0.05C in range 0-20C and 0.1C outside this range. Depth accuracy is 0.3% full scale and resolution is 0.3% full scale. Wireless (inductive or radio) data connections are available.'@en ;
+    skos:notation 'SDN:L22::TOOL0233'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0144/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0144/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0144/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Neil Brown MK2 CTD'^^xsd:string ;
+    skos:prefLabel 'Neil Brown MK2 conductivity temperature and depth system'@en ;
+    skos:definition 'An integral unit comprising pressure, temperature and conductivity sensors.'@en ;
+    skos:notation 'SDN:L22::TOOL0144'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0149/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0149/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0149/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'OTS-1200 CTD'^^xsd:string ;
+    skos:prefLabel 'Meerestechnik OTS-1200 CTD'@en ;
+    skos:definition 'An integral unit comprising pressure, temperature and conductivity sensors.'@en ;
+    skos:notation 'SDN:L22::TOOL0149'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0134/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0134/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0134/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'PSA-916T Altimeter'^^xsd:string ;
+    skos:prefLabel 'Benthos PSA-916T Sonar Altimeter'@en ;
+    skos:definition 'A titanium sonar altimeter with 200 kHz operating frequency and 14 deg conical band width. It has a range of 100 m and is depth rated to 6000 m.'@en ;
+    skos:notation 'SDN:L22::TOOL0134'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0169/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0169/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0169/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'RBR DR-1050 depth recorder'^^xsd:string ;
+    skos:prefLabel 'RBR DR-1050 depth recorder'@en ;
+    skos:definition 'The DR-1050 is a pressure recorder with possible ranges of 10, 20, 50, 100, 200, 500, 740, 1000, 2000, 4000, 6000 and 10000 dbar; an accuracy of 0.05% full scale; a resolution of <0.001% full scale; and a time constant of <10 msec.'@en ;
+    skos:notation 'SDN:L22::TOOL0169'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0212/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0212/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0212/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'RCM 4/5 TS'^^xsd:string ;
+    skos:prefLabel 'Aanderaa RCM 4/5 temperature and salinity recorders'@en ;
+    skos:definition 'Withdrawn RCM4 or RCM5 current meters fitted with conductivity and temperature sensors given a new lease of life as temperature and salinity recorders.'@en ;
+    skos:notation 'SDN:L22::TOOL0212'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0121/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0121/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0121/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'RCM 7/8'^^xsd:string ;
+    skos:prefLabel 'Aanderaa RCM 7/8 Recording Current Meter'@en ;
+    skos:definition 'Family of self-recording paddle wheel current meters with different pressure cases that record the vector averaged speed and direction over a sampling interval. The paddle wheel rotor is magnetically coupled to an electronic counter. The meter has a balanced weight vane which aligns it with the current flow. For more details see http://www.bodc.ac.uk/data/documents/nodb/65611/.'@en ;
+    skos:notation 'SDN:L22::TOOL0121'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0273/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0273/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0273/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'RD200A echosounder'^^xsd:string ;
+    skos:prefLabel 'RD200A echosounder'@en ;
+    skos:definition 'A single-beam navigational echo sounder optimised for measurements of water depth below keel in water depths less than 100m.'@en ;
+    skos:notation 'SDN:L22::TOOL0273'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0200/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0200/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0200/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Ruthern pH monitor'^^xsd:string ;
+    skos:prefLabel 'Ruthern Instruments marine pH monitor'@en ;
+    skos:definition 'A pH monitor that may be included in either a portable or bulkhead-mounted system. It consists of a highly reproducible free-diffusion liquid junction which reduces the usual liquid junction potential error encountered with electrode systems. A capillary liquid junction is formed between the reference reservior (containing the silver/silver chloride electrode) and the pH cell (containing the pH electrode and the sample to be analysed). Capable of extreme accuracy and long term stability, giving a precision of +/- 0.01 pH unit across the salinity range 1 to 40 ppt combined with temperature precision to 0.02 deg C.'@en ;
+    skos:notation 'SDN:L22::TOOL0200'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0154/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0154/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0154/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'S4 CM'^^xsd:string ;
+    skos:prefLabel 'Interocean S4 current meter'@en ;
+    skos:definition 'Basic elecromagnetic current meter with two pairs of internal electrodes and a flux-gate compass with integral data logger'@en ;
+    skos:notation 'SDN:L22::TOOL0154'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0156/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0156/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0156/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'S4A CM'^^xsd:string ;
+    skos:prefLabel 'Interocean S4A current meter'@en ;
+    skos:definition 'Advanced elecromagnetic current meter with two pairs of internal electrodes and a flux-gate compass with high capacity integral data logger. Includes adaptive current sampling as standard.'@en ;
+    skos:notation 'SDN:L22::TOOL0156'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0153/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0153/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0153/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'S4AD CM'^^xsd:string ;
+    skos:prefLabel 'Interocean S4AD current meter'@en ;
+    skos:definition 'A current meter is designed to directly measure the true magnitude and direction current motion in any water environment using two pairs of titanium electrodes located symmetrically on the equator of the sensor. An internal flux-gate compass provides heading information, used to reference current direction to magnetic North or, for fixed installations, the instrument may be operated in an X-Y orthogonal mode whereby the current vector can be referenced to a landform or structure. It can be deployed upto depths of 6000m. Further information may be found on the BODC document server at URL http://www.bodc.ac.uk/data/documents/nodb/40555/. The "A" designation indicates advanced current measurement with adaptive sampling as standard. The "D" indicates a pressure-hardened casing.'@en ;
+    skos:notation 'SDN:L22::TOOL0153'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0157/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0157/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0157/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'S4DW CM/wave'^^xsd:string ;
+    skos:prefLabel 'Interocean S4DW current meter directional wave monitor'@en ;
+    skos:definition 'Instrument combines electromagnetic current sensors and a high precision pressure sensor to measure wave orbital current components,directional wave spectra and tides. Incorporates programmable burst mode sampling and a very high capacity data logger.'@en ;
+    skos:notation 'SDN:L22::TOOL0157'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0155/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0155/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0155/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'S4R CM'^^xsd:string ;
+    skos:prefLabel 'Interocean S4R current meter'@en ;
+    skos:definition 'Basic elecromagnetic current meter with two pairs of internal electrodes and a flux-gate compass with no integral data logger. Designed for real-time monitoring applications.'@en ;
+    skos:notation 'SDN:L22::TOOL0155'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0180/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0180/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0180/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'SAIV SD-204 CTD'^^xsd:string ;
+    skos:prefLabel 'SAIV SD-204 CTD'@en ;
+    skos:definition 'A CTD that measures, calculates and records sea water conductivity, salinity, temperature, depth (pressure),  sound velocity and water density. Three optional sensors can be added, for example: dissolved oxygen, fluorescence and turbidity. For optional sensors with several sensitivies, the SD204 has an autorange capability. The instrument is equipped with a mooring bar with a shackle at each end. Data are recorded in physical units and simultaneously transmitted via an RS232 I/O watertight connector for on-line use.'@en ;
+    skos:notation 'SDN:L22::TOOL0180'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0266/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0266/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0266/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'SBE 39 TR'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird SBE 39 temperature recorder'@en ;
+    skos:definition 'A high-accuracy temperature recorder (pressure optional) with internal battery and non-volatile memory for deployment at depths up to 10500 meters. It is intended for moorings or other long-term, fixed-site applications, as well as shorter-term deployments on nets, towed vehicles or ROVs. Calibration coefficients stored in EEPROM allow the SBE 39 to transmit data in engineering units. The SBE 39 thermistor has a long history of exceptional accuracy and stability (typical drift is less than 0.002C per year). The SBE 39 communicates directly with a computer via a standard RA-232 interface. For more information see http://www.bodc.ac.uk/data/documents/nodb/108627/'@en ;
+    skos:notation 'SDN:L22::TOOL0266'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0189/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0189/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0189/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'SCUFA II fluorometer'^^xsd:string ;
+    skos:prefLabel 'Turner Designs SCUFA II Submersible Fluorometer'@en ;
+    skos:definition 'An accurate, versatile submersible fluorometer for chlorophyll and dye tracking applications. It is capable of operation in a wide range of concentrations and environmental conditions. Output options include chlorophyll-a, cyanobacteria, Rhodamine WT, fluorescin. A turbidity sensor may also be incorporated and logged as a parallel channel. From 1 December 2008, Turner Designs have discontinued all SCUFA Submersible Fluorometer applications. Supported until end 2013'@en ;
+    skos:notation 'SDN:L22::TOOL0189'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0246/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0246/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0246/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'SP500 spectrophotometer'^^xsd:string ;
+    skos:prefLabel 'Unicam SP500 spectrophotometer'@en ;
+    skos:definition 'A laboratory instrument that measures the amount of light at discrete pre-determined wavelengths that is transmitted or emitted by a sample.'@en ;
+    skos:notation 'SDN:L22::TOOL0246'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0187/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0187/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0187/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'SeaTech S131 fluorometer'^^xsd:string ;
+    skos:prefLabel 'SeaTech S131 fluorometer'@en ;
+    skos:definition 'A chlorophyll-a fluorometer with six internally selectable ranges, permitting measurement of chlorophyll-a permitting measurement of chlorophyll-a concentrations from approximately 0.015ug/l to 1000ug/l.'@en ;
+    skos:notation 'SDN:L22::TOOL0187'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0119/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0119/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0119/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Seapoint SCF'^^xsd:string ;
+    skos:prefLabel 'Seapoint chlorophyll fluorometer'@en ;
+    skos:definition 'A high-performance, low power fluorometer for in-situ measurements of chlorophyll-a able to operate at depths of up to 6000 metres. May be used open in-situ or with a pump through sample volume. Internal circuitry gives an output voltage that is proportional to chlorophyll-a concentration.'@en ;
+    skos:notation 'SDN:L22::TOOL0119'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0104/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0104/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0104/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Seapoint Turbidity Meter'^^xsd:string ;
+    skos:prefLabel 'Seapoint Turbidity Meter'@en ;
+    skos:definition 'A turbidity meter that detects light scattered by particles suspended in water and generates an output voltage proportional to the SPM concentration. Range is selected by two digital lines which can be hard wired or microprocessor controlled, thereby choosing the appropriate range and resolution for measurement of extremely clean to very turbid waters. The offset voltage is within 1 mV of zero and requires no adjustment across gains. The optical design confines the sensing volume to within 5 cm of the sensor allowing near-bottom measurements and minimizing errant reflections in restricted spaces. Further information may be found on the BODC document server at URL: http://www.bodc.ac.uk/data/documents/nodb/119173/'@en ;
+    skos:notation 'SDN:L22::TOOL0104'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0239/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0239/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0239/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'SiS RTM 4002 X'^^xsd:string ;
+    skos:prefLabel 'SiS RTM 4002 X digital reversing thermometer'@en ;
+    skos:definition 'A second-generation digital thermometer that collects a burst of temperature readings when inverted. It has a range of -2C to 40C, a resolution of 0.0001C below 10C (0.001C above 10C) and an accuracy of 0.003C. A glass-titanium housing with double o-ring seals of similar physical dimensions to an Hg-in-glass instrument gives an operating depth of 10000m.'@en ;
+    skos:notation 'SDN:L22::TOOL0239'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0198/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0198/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0198/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Simrad EK-60 echosounder'^^xsd:string ;
+    skos:prefLabel 'Simrad EK-60 echosounder'@en ;
+    skos:definition 'A split-beam scientific echosounder primarily designed for fisheries research. It can operate seven frequencies simultaneously ranging from 18 to 710 kHz. Real time echo integration and target strength analysis in an unlimited number of layers is provided as well as storage of raw data for replay or analysis in one of several post-processing software packages such as Simrad\'s BI60.'@en ;
+    skos:notation 'SDN:L22::TOOL0198'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0262/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0262/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0262/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Sippican T-5 XBT'^^xsd:string ;
+    skos:prefLabel 'Lockheed Martin Sippican T-5 XBT probe'@en ;
+    skos:definition 'An expendable free-fall temperature probe that provides a profile of measured temperature against depth calculated from a fall-rate model. The T-5 XBT Probe can be used within a maximum depth of 1830m, may be deployed at a ship speed of up to 6 knots and has a vertical resolution of 65cm.'@en ;
+    skos:notation 'SDN:L22::TOOL0262'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0263/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0263/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0263/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Sippican T-7 XBT'^^xsd:string ;
+    skos:prefLabel 'Lockheed Martin Sippican T-7 XBT probe'@en ;
+    skos:definition 'An expendable free-fall temperature probe that provides a profile of measured temperature against depth calculated from a fall-rate model. The T-7 XBT Probe can be used within a maximum depth of 760m, may be deployed at a ship speed of up to 15 knots and has a vertical resolution of 65cm.'@en ;
+    skos:notation 'SDN:L22::TOOL0263'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0183/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0183/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0183/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Star-Oddi DST CTD'^^xsd:string ;
+    skos:prefLabel 'Star-Oddi DST CTD'@en ;
+    skos:definition 'A miniature self-contained CTD primarily designed for mounting on fish, birds or marine mammals. Salinity resolution is 0.02 PSU and accuracy +-0.75 PSU. Temperature resolution is 0.032C and accuracy +-0.1C.'@en ;
+    skos:notation 'SDN:L22::TOOL0183'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0139/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0139/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0139/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Sunburst SAMI-CO2'^^xsd:string ;
+    skos:prefLabel 'Sunburst Submersible Autonomous Moored Instrument Carbon Dioxide Sensor'@en ;
+    skos:definition 'A reagent based CO2 sensor for measuring partial pressure of carbon dioxide (pCO2) in-situ in water over a range of approximately 0-2000 micro-atmospheres with a precision of approximately 1 microatmosphere at 360 microatmospheres. Maximum deployment depth is approximately 100 metres for SAMI-CO2-100 (PVC housing) and 1500 metres for SAMI-CO2-1500 (aluminium housing).'@en ;
+    skos:notation 'SDN:L22::TOOL0139'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0221/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0221/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0221/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'TE525 rain gauge'^^xsd:string ;
+    skos:prefLabel 'Texas Electronics TE525 rain gauge'@en ;
+    skos:definition 'A tipping bucket rain gauge with a 6 inch collector and levelling screw adjustment. The sensor output has a switch closure for each bucket tip. It has a resolution of 0.01 inches and accuracy of between 1 and 5% depending on rainfall rate (more accurate for lighter rainfall). Marketed by Campbell Scientific.'@en ;
+    skos:notation 'SDN:L22::TOOL0221'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0276/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0276/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0276/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'TSG103 thermosalinograph'^^xsd:string ;
+    skos:prefLabel 'OceanData TSG103 thermosalinograph'@en ;
+    skos:definition 'An autoranging instrument taking inputs from a hull or inlet thermometer to give sea temperature plus co-located temperature and conductivity sensors to give salinity. In general use during the 1980s and 1990s'@en ;
+    skos:notation 'SDN:L22::TOOL0276'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0237/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0237/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0237/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Thermometer'^^xsd:string ;
+    skos:prefLabel 'Waterproof thermometer'@en ;
+    skos:definition 'A generic term for a temperature sensor capable of being immersed in water primarily intended to measure water body temperature but could also be used to determine temperature of other matrices.'@en ;
+    skos:notation 'SDN:L22::TOOL0237'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0231/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0231/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0231/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Tinytag TGP-0050 TR'^^xsd:string ;
+    skos:prefLabel 'Gemini Tinytag plus TGP-0050 temperature recorder'@en ;
+    skos:definition 'A data logger plus a 10k NTC thermistor internally mounted within a robust IP68 waterproof casing suitable for measuring atmospheric or shallow water temperatures. Temperatures in the range -30 to 50C can be measured and the logger may be used up to water depths of 15 metres. The instrument can store approximately 16000 data readings and be set up with measurement intervals between one second and ten days.'@en ;
+    skos:notation 'SDN:L22::TOOL0231'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0182/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0182/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0182/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Tinytalk TK-0040 TR'^^xsd:string ;
+    skos:prefLabel 'Omni Tinytalk TK-0040 temperature recorder'@en ;
+    skos:definition 'A miniature temperature logger with a user programmed time interval. This model has an encapsulated thermistor with a range of -30 to 50C at a resolution of 0.25C and an accuracy of +-0.2C. It is housed in a splashproof metal 35mm film cannister.'@en ;
+    skos:notation 'SDN:L22::TOOL0182'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0199/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0199/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0199/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Trimble NT300D GPS'^^xsd:string ;
+    skos:prefLabel 'Trimble NT300D Global Positioning System receiver'@en ;
+    skos:definition 'A high-performance, sub-meter position GPS receiver for marine applications. It combines a state-of-the-art, 12-channel GPS receiver and a high-performance dual-channel transmitter. It was discontinued in 2009.'@en ;
+    skos:notation 'SDN:L22::TOOL0199'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0145/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0145/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0145/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Unknown fluorometer'^^xsd:string ;
+    skos:prefLabel 'Unknown chlorophyll fluorometer'@en ;
+    skos:definition 'An in-situ instrument that transmits pulses of UV light into a region of the surrounding water body and records the amount of red light generated as a result by chlorophyll fluorescence.'@en ;
+    skos:notation 'SDN:L22::TOOL0145'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0148/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0148/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0148/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Unknown transmissometer'^^xsd:string ;
+    skos:prefLabel 'Unknown transmissometer'@en ;
+    skos:definition 'An in-situ instrument that transmits monochromatic light through a region of the surrounding water body and records how much is received by a sensor a fixed distance away.'@en ;
+    skos:notation 'SDN:L22::TOOL0148'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0127/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0127/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0127/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Vaisala WAV151 vane'^^xsd:string ;
+    skos:prefLabel 'Vaisala WAV151 wind vane'@en ;
+    skos:definition 'A counter-balanced, low-threshold, optoelectic wind-vane. Infrared LEDs and phototransistors are mounted on six orbits on each side of a 6-bit GRAY-coded disc. Turning the vane causes the disc to change the code received by the phototransistors.'@en ;
+    skos:notation 'SDN:L22::TOOL0127'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0265/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0265/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0265/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Wavescan met package'^^xsd:string ;
+    skos:prefLabel 'Fugro Oceanor Wavescan buoy meteorological package'@en ;
+    skos:definition 'A meteorological tower with wind, air pressure and air temperature sensors mounted on top of a metocean waverider buoy with on-board data logging and telemetry capability. More information is given in https://www.bodc.ac.uk/data/documents/nodb/64211/'@en ;
+    skos:notation 'SDN:L22::TOOL0265'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0264/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0264/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0264/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'Wavescan waverider'^^xsd:string ;
+    skos:prefLabel 'Fugro Oceanor Wavescan buoy waverider'@en ;
+    skos:definition 'A meteocean waverider buoy incorporating directional wave sensors with sophisticated on-board data reduction, data logging and telemetry capability. The buoy may also carry a meteorological tower and a sub-surface sensor package that are considered to be separate data production tools. More information is given in https://www.bodc.ac.uk/data/documents/nodb/64211/'@en ;
+    skos:notation 'SDN:L22::TOOL0264'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0269/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL0269/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL0269/>;
+    dc:modified '2010-05-18T16:10:58'^^xsd:dateTime ;
+    skos:altLabel 'anemometer'^^xsd:string ;
+    skos:prefLabel 'anemometer'@en ;
+    skos:definition 'A generic term for a mechanical device for measuring wind speed and direction designed for use where no information on instrument make, model or measurement principle are obtainable.'@en ;
+    skos:notation 'SDN:L22::TOOL0269'^^xsd:string .
