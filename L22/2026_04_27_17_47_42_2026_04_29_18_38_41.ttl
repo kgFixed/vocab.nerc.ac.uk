@@ -1,0 +1,73 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2026_04_27_17_47_42_2026_04_29_18_38_41.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2024_01_01_00_00_00_2026_04_27_17_47_41.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-29T18:38:41'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL2300/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL2300/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL2300/>;
+    dc:modified '2026-04-28T09:56:22'^^xsd:dateTime ;
+    skos:altLabel 'NOC SixSense proto'^^xsd:string ;
+    skos:prefLabel 'National Oceanography Centre (NOC) SixSense prototype multiparameter sensor'@en ;
+    skos:definition 'SixSense is a prototype multiparameter sensor with 6 measured parameters: conductivity, temperature, dissolved oxygen, pressure, redox potential (Eh), and pH. Conductivity, temperature, and dissolved oxygen are measured by a glass CT-DO chip. Conductivity data are provided in siemens per metre, and temperature data are provided in degrees Celsius. Dissolved oxygen is measured by an electrochemical method and data are provided as micromoles per litre. A pressure transducer provides data in decibars. An ion sensitive field effect transistor (ISFET) sensor is used for pH measurement, and Eh is measured using the difference in electrical potential between a sensing electrode and a reference electrode. Eh data are provided in millivolts. Two variants of the SixSense have been developed. The miniature puck variant has a depth rating of 1000 m and a second variant with a pressure housing has a depth rating of 2000 m.'@en ;
+    skos:notation 'SDN:L22::TOOL2300'^^xsd:string .
