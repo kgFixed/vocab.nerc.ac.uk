@@ -1,0 +1,136 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/R41/2026_04_27_17_48_40_2026_04_30_18_35_48.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/R41/2026_03_19_10_52_20_2026_04_27_17_48_39.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-04-30T18:35:48'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R41/current/R4100026/2/> .
+<http://vocab.nerc.ac.uk/collection/R41/current/R4100026/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R41/current/R4100026/>;
+    dc:modified '2026-04-29T13:56:19'^^xsd:dateTime ;
+    skos:altLabel 'Argo UHH'^^xsd:string ;
+    skos:prefLabel 'Argo UHH'@en ;
+    skos:definition 'Argo program led by IFM.'@en ;
+    skos:notation 'SDN:R41::R4100026'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R41/current/R4100003/2/> .
+<http://vocab.nerc.ac.uk/collection/R41/current/R4100003/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R41/current/R4100003/>;
+    dc:modified '2026-04-29T13:56:19'^^xsd:dateTime ;
+    skos:altLabel 'Argo eq AUSTRALIA'^^xsd:string ;
+    skos:prefLabel 'Argo eq AUSTRALIA'@en ;
+    skos:definition 'Equivalent Argo program led by CSIRO.'@en ;
+    skos:notation 'SDN:R41::R4100003'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R41/current/R4100009/2/> .
+<http://vocab.nerc.ac.uk/collection/R41/current/R4100009/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R41/current/R4100009/>;
+    dc:modified '2026-04-29T13:56:19'^^xsd:dateTime ;
+    skos:altLabel 'Argo eq CANADA'^^xsd:string ;
+    skos:prefLabel 'Argo eq CANADA'@en ;
+    skos:definition 'Equivalent Canadian Argo program led by DFO.'@en ;
+    skos:notation 'SDN:R41::R4100009'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R41/current/R4100013/2/> .
+<http://vocab.nerc.ac.uk/collection/R41/current/R4100013/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R41/current/R4100013/>;
+    dc:modified '2026-04-29T13:56:19'^^xsd:dateTime ;
+    skos:altLabel 'Argo eq CHINA'^^xsd:string ;
+    skos:prefLabel 'Argo eq CHINA'@en ;
+    skos:definition 'Equivalent Argo program operated by China.'@en ;
+    skos:notation 'SDN:R41::R4100013'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R41/current/R4100022/2/> .
+<http://vocab.nerc.ac.uk/collection/R41/current/R4100022/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R41/current/R4100022/>;
+    dc:modified '2026-04-29T13:56:19'^^xsd:dateTime ;
+    skos:altLabel 'Argo eq FRANCE'^^xsd:string ;
+    skos:prefLabel 'Argo eq FRANCE'@en ;
+    skos:definition 'Equivalent Argo program operated by France.Equivalent Argo programs regroup floats contributing to Argo but that are not in the "global implementation phase" with respect to the Argo framework at the time of deployment.'@en ;
+    skos:notation 'SDN:R41::R4100022'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R41/current/R4100033/2/> .
+<http://vocab.nerc.ac.uk/collection/R41/current/R4100033/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R41/current/R4100033/>;
+    dc:modified '2026-04-29T13:56:19'^^xsd:dateTime ;
+    skos:altLabel 'Argo eq IRELAND'^^xsd:string ;
+    skos:prefLabel 'Argo eq IRELAND'@en ;
+    skos:definition 'Equivalent Argo program led by National University of Ireland.'@en ;
+    skos:notation 'SDN:R41::R4100033'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R41/current/R4100063/2/> .
+<http://vocab.nerc.ac.uk/collection/R41/current/R4100063/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R41/current/R4100063/>;
+    dc:modified '2026-04-29T13:56:19'^^xsd:dateTime ;
+    skos:altLabel 'Argo eq UK'^^xsd:string ;
+    skos:prefLabel 'Argo eq UK'@en ;
+    skos:definition 'Equivalent Argo program operated by UK.'@en ;
+    skos:notation 'SDN:R41::R4100063'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R41/current/R4100053/2/> .
+<http://vocab.nerc.ac.uk/collection/R41/current/R4100053/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R41/current/R4100053/>;
+    dc:modified '2026-04-29T13:06:42'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Concept created in error'@en ;
+    skos:definition 'Concept created in error'@en ;
+    skos:notation 'SDN:R41::R4100053'^^xsd:string .
