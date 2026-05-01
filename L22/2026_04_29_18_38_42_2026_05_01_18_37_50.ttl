@@ -1,0 +1,82 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2026_04_29_18_38_42_2026_05_01_18_37_50.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2026_04_27_17_47_42_2026_04_29_18_38_41.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-05-01T18:37:50'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL2303/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL2303/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL2303/>;
+    dc:modified '2026-04-30T15:37:45'^^xsd:dateTime ;
+    skos:altLabel 'Applied Ocean Sciences BOREALIS'^^xsd:string ;
+    skos:prefLabel 'Applied Ocean Sciences BOREALIS hydrophone'@en ;
+    skos:definition 'A passive acoustic monitoring recorder and edge-processing unit featuring a single-channel Sensor Tech SQ-17 hydrophone, designed for deployment on Sofar Spotter platform buoys in either moored or drifting configurations. It can be used for a range of applications including marine mammal monitoring, EIA\'s, and for maritime domain awareness such as IUU fishing. It can be used with optional temperature, pressure and conductivity sensors. The system conforms to the open Bristlemouth ecosystem, a standard interface to allow plug-and-play and open source interfaces. Low power consumption (~39 mW) allows for 1TB internal storage (up to ~60 days). Frequency band from 18 Hz to 16 kHz, depth-rated to 100 m, hydrophone sensitivity is -203 dB re 1V/μPa at 20 degC. Sample frequency: 31.25 ksps, pre-amp gain: 30.9 dB.'@en ;
+    skos:notation 'SDN:L22::TOOL2303'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL2302/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL2302/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL2302/>;
+    dc:modified '2026-04-30T13:53:24'^^xsd:dateTime ;
+    skos:altLabel 'Unspec polarising microscope'^^xsd:string ;
+    skos:prefLabel 'Unspecified polarised light microscope'@en ;
+    skos:definition 'A specialised optical microscope used to analyse substances with direction-dependent properties like crystals, minerals, fibres, and biological tissues. It typically includes a polariser below the specimen, an analyser above the objective, a rotatable stage, and strain‑free optics, enabling the observation of birefringence, extinction, and interference colours.'@en ;
+    skos:notation 'SDN:L22::TOOL2302'^^xsd:string .
