@@ -1,0 +1,91 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/OG1/2026_04_27_17_47_59_2026_05_02_18_37_39.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/OG1/2024_01_01_00_00_00_2026_04_27_17_47_58.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-05-02T18:37:39'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/PHASE/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/PHASE/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/PHASE/>;
+    dc:modified '2026-05-01T11:18:39'^^xsd:dateTime ;
+    skos:altLabel 'PHASE'^^xsd:string ;
+    skos:prefLabel 'Identifier of glider phase'@en ;
+    skos:definition 'Derived from the glider\'s engineering state, glider phase reflects the state of glider behaviour. Accepted values range from 0 - 5, with the definitions available at: https://github.com/OceanGlidersCommunity/OG-format-user-manual/blob/main/vocabularyCollection/phase_translation_tables.md.'@en ;
+    skos:notation 'SDN:OG1::PHASE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/NITRATE_NITRITE/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/NITRATE_NITRITE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/NITRATE_NITRITE/>;
+    dc:modified '2026-05-01T10:27:25'^^xsd:dateTime ;
+    skos:altLabel 'NITRATE_NITRITE'^^xsd:string ;
+    skos:prefLabel 'Concentration of nitrate+nitrite by colorimetry'@en ;
+    skos:definition 'Nitrate+nitrite concentration per unit volume of fresh or salt water by colorimetry.'@en ;
+    skos:notation 'SDN:OG1::NITRATE_NITRITE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/PHOS/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/PHOS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/PHOS/>;
+    dc:modified '2026-05-01T10:27:24'^^xsd:dateTime ;
+    skos:altLabel 'PHOSPHATE'^^xsd:string ;
+    skos:prefLabel 'Concentration of phosphate by colorimetry'@en ;
+    skos:definition 'Phosphate concentration per unit volume of fresh or salt water by colorimetry.'@en ;
+    skos:notation 'SDN:OG1::PHOS'^^xsd:string .
