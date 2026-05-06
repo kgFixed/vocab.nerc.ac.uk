@@ -1,0 +1,91 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/B75/2026_05_04_18_43_22_2026_05_06_18_35_34.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/B75/2026_04_30_18_35_29_2026_05_04_18_43_21.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-05-06T18:35:34'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG00434/2/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG00434/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG00434/>;
+    dc:modified '2026-05-05T14:52:55'^^xsd:dateTime ;
+    skos:altLabel 'OIA'^^xsd:string ;
+    skos:prefLabel 'OI Analytical'@en ;
+    skos:definition 'Organisation e-mail: oi-info@xylem.com; Organisation website: https://www.ysi.com/oi-analytical'@en ;
+    skos:notation 'SDN:B75::ORG00434'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02203/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02203/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02203/>;
+    dc:modified '2026-05-05T11:17:39'^^xsd:dateTime ;
+    skos:altLabel 'OGS-O'^^xsd:string ;
+    skos:prefLabel 'National Institute of Oceanography and Applied Geophysics, Oceanography Section'@en ;
+    skos:definition 'Organisation e-mail: ogs@pec.it; Organisation website: https://www.ogs.it/en'@en ;
+    skos:notation 'SDN:B75::ORG02203'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG00403/2/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG00403/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG00403/>;
+    dc:modified '2026-05-05T10:57:42'^^xsd:dateTime ;
+    skos:altLabel 'OGS-RIMA'^^xsd:string ;
+    skos:prefLabel 'National Institute of Oceanography and Applied Geophysics, Dept of Marine Technology and Research'@en ;
+    skos:definition 'Organisation e-mail: mailbox@ogs.trieste.it; Organisation website: http://www.ogs.trieste.it/'@en ;
+    skos:notation 'SDN:B75::ORG00403'^^xsd:string .

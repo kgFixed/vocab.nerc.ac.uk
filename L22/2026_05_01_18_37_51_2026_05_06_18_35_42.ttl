@@ -1,0 +1,73 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2026_05_01_18_37_51_2026_05_06_18_35_42.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2026_04_29_18_38_42_2026_05_01_18_37_50.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-05-06T18:35:42'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL2305/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL2305/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL2305/>;
+    dc:modified '2026-05-05T16:33:36'^^xsd:dateTime ;
+    skos:altLabel 'Aurora 1030W TOC'^^xsd:string ;
+    skos:prefLabel 'OI Analytics Aurora 1030W total organic carbon (TOC) analyser'@en ;
+    skos:definition 'A total organic carbon (TOC) analyser ideal for applications including analysis of drinking water, pharmaceutical cleaning validation, and wastewater analysis. This instrument uses the heated persulfate wet oxidation technique to analyse organic contamination levels of aqueous samples, and measures concentration using non-dispersive infrared (NDIR) detection. Multiple application-specific configurations are available to choose from to improve sample throughput and productivity. An 88-position rotary autosampler fits directly underneath the Aurora 1030W analyser. Samples may be injected manually via syringe, sipper tube, autosampler, or multi-stream at-line sampling module. Sample injection volume: 10 microL to 10 mL. Measurement range: 10 ppb to 30,000 ppm C. Instrument detection limit: 2 ppb C. Up to 300 samples can be analysed in a 24-hour period.'@en ;
+    skos:notation 'SDN:L22::TOOL2305'^^xsd:string .
