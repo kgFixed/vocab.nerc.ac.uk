@@ -1,0 +1,82 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/R27/2026_04_30_18_35_48_2026_05_09_18_35_24.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/R27/2026_04_27_17_48_33_2026_04_30_18_35_47.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-05-09T18:35:24'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/SBE41N_V5.3.5/2/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/SBE41N_V5.3.5/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/SBE41N_V5.3.5/>;
+    dc:modified '2026-05-08T11:01:48'^^xsd:dateTime ;
+    skos:altLabel 'SBE41N_V5.3.5'^^xsd:string ;
+    skos:prefLabel 'Sea-Bird Scientific SBE 41N CTD V5.3.5'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with pump-controlled, T-C ducted flow. The unit is designed for deployment on profiling floats hosting multiple biogeochemical (BGC) sensors. This CTD operates in continuous profiling (CP) mode, thus sampling at 1 Hz during float ascent. Data from all the float\'s sensors, including the optional bolt-on ones, are integrated in the data stream and transmitted to the float controller when the float reaches the surface. This SBE41N model has firmware version 5.3.5.'@en ;
+    skos:notation 'SDN:R27::SBE41N_V5.3.5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/R27/current/RBR_ARGO3.1/1/> .
+<http://vocab.nerc.ac.uk/collection/R27/current/RBR_ARGO3.1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/R27/current/RBR_ARGO3.1/>;
+    dc:modified '2026-05-08T11:01:47'^^xsd:dateTime ;
+    skos:altLabel 'RBR_ARGO3.1'^^xsd:string ;
+    skos:prefLabel 'RBRargo3.1 CTD'@en ;
+    skos:definition 'A system comprising temperature, conductivity and pressure sensors with Computational Fluid Dynamic (CFD) optimised flow path, manufactured by RBR. Salinity is measured by induction of water flushing freely through the conductivity cell, and is accurate to within 10 cm of the air-ocean interface. The unit is designed specifically for profiling floats, including those hosting multiple biogeochemical (BGC) sensors. The system supports both spot and continuous sampling modes, with sampling speeds configurable to up to 8 Hz. The depth rating for a standard profile is 2000 dbar, with energy consumption of approximately 400 J. The ceramic used is a 6k-rated ceramic which differs from the 2k-rated ceramic in the RBR_ARGO3.'@en ;
+    skos:notation 'SDN:R27::RBR_ARGO3.1'^^xsd:string .
