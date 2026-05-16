@@ -1,0 +1,100 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2026_05_06_18_35_47_2026_05_16_18_36_15.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2026_04_27_17_48_00_2026_05_06_18_35_46.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-05-16T18:36:15'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SCHLXX03/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SCHLXX03/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SCHLXX03/>;
+    dc:modified '2026-05-15T15:23:58'^^xsd:dateTime ;
+    skos:altLabel 'chl-a_water_20-200um'^^xsd:string ;
+    skos:prefLabel 'Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate 20-200um phase]'@en ;
+    skos:definition 'The mass of all variants of chlorophyll-a contained in particles that pass through a 200um pore filter or mesh but are retained on a 20um pore filter per unit volume of any body of fresh or salt water.'@en ;
+    skos:notation 'SDN:P01::SCHLXX03'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SCHLXX04/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SCHLXX04/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SCHLXX04/>;
+    dc:modified '2026-05-15T15:23:58'^^xsd:dateTime ;
+    skos:altLabel 'chl-a_water_3-20um'^^xsd:string ;
+    skos:prefLabel 'Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate 3-20um phase]'@en ;
+    skos:definition 'The mass of all variants of chlorophyll-a contained in particles that pass through a 20um pore filter or mesh but are retained on a 3um pore filter per unit volume of any body of fresh or salt water.'@en ;
+    skos:notation 'SDN:P01::SCHLXX04'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/CPHLFAF5/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/CPHLFAF5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/CPHLFAF5/>;
+    dc:modified '2026-05-15T15:23:58'^^xsd:dateTime ;
+    skos:altLabel 'chl-a_water_3-20um_fluor'^^xsd:string ;
+    skos:prefLabel 'Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate 3-20um phase] by filtration, acetone extraction and fluorometry'@en ;
+    skos:definition 'Fluorometric assay of acetone extract from particulates collected on a 3 um pore filter filtering water previously filtered through a 20 um pore filter.'@en ;
+    skos:notation 'SDN:P01::CPHLFAF5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SCHLXX02/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SCHLXX02/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SCHLXX02/>;
+    dc:modified '2026-05-15T15:23:58'^^xsd:dateTime ;
+    skos:altLabel 'chl-a_water_GF/F-3um'^^xsd:string ;
+    skos:prefLabel 'Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate GF/F-3um phase]'@en ;
+    skos:definition 'The mass of all variants of chlorophyll-a contained in particles that pass through a 3um pore filter or mesh but are retained on a GF/F pore filter per unit volume of any body of fresh or salt water.'@en ;
+    skos:notation 'SDN:P01::SCHLXX02'^^xsd:string .
