@@ -1,0 +1,73 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2026_05_06_18_35_43_2026_05_21_18_37_14.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2026_05_01_18_37_51_2026_05_06_18_35_42.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-05-21T18:37:14'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1773/2/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL1773/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL1773/>;
+    dc:modified '2026-05-20T07:47:04'^^xsd:dateTime ;
+    skos:altLabel 'OS icListen SC35-ETH'^^xsd:string ;
+    skos:prefLabel 'Ocean Sonics icListen SC35 ETH smart hydrophone'@en ;
+    skos:definition 'A broadband digital hydrophone. The instrument processes data while streaming HD acoustic data in real time. The icListen can be used as a digital hydrophone, acoustic recorder, or both simultaneously. These Smart Hydrophones are ultra-low-noise and have a wide dynamic range for high-quality signal quality and stability. The ETH model uses an ethernet connection. It is depth rated to 3500m. It has a frequency range between 10Hz and 200kHz. This model is part of the icListen HF hydrophone range.'@en ;
+    skos:notation 'SDN:L22::TOOL1773'^^xsd:string .
