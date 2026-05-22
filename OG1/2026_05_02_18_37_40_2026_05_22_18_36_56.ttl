@@ -1,0 +1,118 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/OG1/2026_05_02_18_37_40_2026_05_22_18_36_56.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/OG1/2026_04_27_17_47_59_2026_05_02_18_37_39.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-05-22T18:36:56'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/PH_IN_SITU_TOTAL/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/PH_IN_SITU_TOTAL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/PH_IN_SITU_TOTAL/>;
+    dc:modified '2026-05-21T16:38:22'^^xsd:dateTime ;
+    skos:altLabel 'PH_TOTAL'^^xsd:string ;
+    skos:prefLabel 'pH (total scale) of the water body'@en ;
+    skos:definition 'pH of the water body measured on the total scale (pH based on concentrations of the free proton and the proton associated with SO4 2-).'@en ;
+    skos:notation 'SDN:OG1::PH_IN_SITU_TOTAL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/PRES2/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/PRES2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/PRES2/>;
+    dc:modified '2026-05-21T15:24:05'^^xsd:dateTime ;
+    skos:altLabel 'PRES2'^^xsd:string ;
+    skos:prefLabel 'Sea water pressure, equals 0 at sea-level (second sensor)'@en ;
+    skos:definition 'Pressure (spatial co-ordinate) exerted by the water body measured by a second profiling pressure sensor and corrected to read zero at sea level.'@en ;
+    skos:notation 'SDN:OG1::PRES2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/CNDC2/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/CNDC2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/CNDC2/>;
+    dc:modified '2026-05-21T15:24:03'^^xsd:dateTime ;
+    skos:altLabel 'CNDC2'^^xsd:string ;
+    skos:prefLabel 'Electrical conductivity (second sensor)'@en ;
+    skos:definition 'Electrical conductivity of the water body measured by a second sensor.'@en ;
+    skos:notation 'SDN:OG1::CNDC2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/TEMP2/1/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/TEMP2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/TEMP2/>;
+    dc:modified '2026-05-21T15:24:02'^^xsd:dateTime ;
+    skos:altLabel 'TEMP2'^^xsd:string ;
+    skos:prefLabel 'Sea temperature in-situ ITS-90 scale (second sensor)'@en ;
+    skos:definition 'Temperature of the water body expressed against the International Temperature Scale 1990 (ITS-90), measured by a second sensor.'@en ;
+    skos:notation 'SDN:OG1::TEMP2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/CNDC/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/CNDC/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/CNDC/>;
+    dc:modified '2026-05-21T15:20:22'^^xsd:dateTime ;
+    skos:altLabel 'CNDC'^^xsd:string ;
+    skos:prefLabel 'Electrical conductivity'@en ;
+    skos:definition 'Electrical conductivity of the water body.'@en ;
+    skos:notation 'SDN:OG1::CNDC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OG1/current/TEMP/2/> .
+<http://vocab.nerc.ac.uk/collection/OG1/current/TEMP/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OG1/current/TEMP/>;
+    dc:modified '2026-05-21T15:19:49'^^xsd:dateTime ;
+    skos:altLabel 'TEMP'^^xsd:string ;
+    skos:prefLabel 'Sea temperature in-situ ITS-90 scale'@en ;
+    skos:definition 'Temperature of the water body expressed against the International Temperature Scale 1990 (ITS-90).'@en ;
+    skos:notation 'SDN:OG1::TEMP'^^xsd:string .
