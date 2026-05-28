@@ -1,0 +1,253 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C17/2026_05_23_18_36_04_2026_05_28_18_38_08.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C17/2026_05_06_18_35_36_2026_05_23_18_36_03.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-05-28T18:38:08'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/06KT/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/06KT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/06KT/>;
+    dc:modified '2026-05-27T14:53:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Hooge'@en ;
+    skos:definition '''{"node": {
+    "country": "Germany",
+    "decommissioned": 2018,
+    "MMSI": 211309740,
+    "platformclass": "vessel of opportunity",
+    "notes": "Coastguard/tug with port in Husum. History is uncertain",
+    "callsign": "DLQL",
+    "length": 21,
+    "commissioned": 1984
+}}'''@en ;
+    skos:notation 'SDN:C17::06KT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/31AN/6/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/31AN/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/31AN/>;
+    dc:modified '2026-05-27T14:53:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Atlantis II'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "decommissioned": "1996-07-23",
+    "platformclass": "research vessel",
+    "notes": "WHOI research vessel from 1963 to 1996.",
+    "built": 1962,
+    "callsign": "KADC",
+    "length": 64,
+    "IMO": 5029752,
+    "title": "RV",
+    "commissioned": "1963-02-01"
+}}'''@en ;
+    skos:notation 'SDN:C17::31AN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/321J/7/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/321J/7/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/321J/>;
+    dc:modified '2026-05-27T14:53:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Great Land'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "decommissioned": 2011,
+    "platformclass": "vessel of opportunity",
+    "notes": "Ro-Ro cargo vessel.",
+    "built": 1975,
+    "callsign": "WFDP",
+    "length": 241,
+    "IMO": 7420493,
+    "commissioned": 1975
+}}'''@en ;
+    skos:notation 'SDN:C17::321J'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/3226/4/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/3226/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/3226/>;
+    dc:modified '2026-05-27T14:53:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Mount Hood'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "decommissioned": "1999-08-10",
+    "platformclass": "naval vessel",
+    "notes": "Kilauea class ammunition ship.",
+    "pennant": "AE 29",
+    "callsign": "NWZR",
+    "length": 172,
+    "title": "USS",
+    "WOD": 3665,
+    "commissioned": "1971-05-01"
+}}'''@en ;
+    skos:notation 'SDN:C17::3226'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/32AW/6/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/32AW/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/32AW/>;
+    dc:modified '2026-05-27T14:53:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Atlantic Twin'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "platformclass": "fishing vessel",
+    "built": 1965,
+    "callsign": "WY5063",
+    "IMO": 7214064
+}}'''@en ;
+    skos:notation 'SDN:C17::32AW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/CI68/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/CI68/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/CI68/>;
+    dc:modified '2026-05-27T14:53:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Dawn'@en ;
+    skos:definition '''{"node": {
+    "country": "Cayman Islands",
+    "MMSI": 319238200,
+    "platformclass": "vessel of opportunity",
+    "notes": "Offshore supply ship. Built as DAWN (VC) flag changed to KY in 2021.",
+    "built": 2021,
+    "callsign": "ZGQI3",
+    "length": 80,
+    "IMO": 9756298,
+    "commissioned": "2021-11",
+    "JCOMMOPs_Recruitment_Date": "2023-11-23"
+}}'''@en ;
+    skos:notation 'SDN:C17::CI68'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/32YN/3/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/32YN/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/32YN/>;
+    dc:modified '2026-05-27T14:53:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Chapman'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "decommissioned": "1998-06-02",
+    "MMSI": 306082000,
+    "platformclass": "research vessel",
+    "notes": "Donated to University of Puerto Rico.",
+    "pennant": "R 446",
+    "callsign": "WTED",
+    "length": 38.7,
+    "IMO": 7907051,
+    "title": "NOAA Ship",
+    "WOD": 3508,
+    "commissioned": "1980-07-11"
+}}'''@en ;
+    skos:notation 'SDN:C17::32YN'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/06E5/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/06E5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/06E5/>;
+    dc:modified '2026-05-27T09:42:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Egidora'@en ;
+    skos:definition '''{"node": {
+    "country": "Germany",
+    "MMSI": 211770520,
+    "platformclass": "research vessel",
+    "notes": "Research catamaran operated by the Research and Technology Centre Westcoast (FTZ) of Kiel University mainly at the Wadden Sea. Built as Egidora",
+    "built": 2017,
+    "callsign": "DBLV",
+    "length": 15
+}}'''@en ;
+    skos:notation 'SDN:C17::06E5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/06PM/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/06PM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/06PM/>;
+    dc:modified '2026-05-27T09:42:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Hooge'@en ;
+    skos:definition '''{"node": {
+    "country": "Germany",
+    "MMSI": 211796430,
+    "platformclass": "research vessel",
+    "notes": "Multi-purpose workboat, also used for seabird and mammal surveys. Owned by the State Agency for Coastal Protection, National Park and Marine Protection Schleswig-Holstein. Built as Hooge.",
+    "built": 2018,
+    "callsign": "DA2498",
+    "length": 22,
+    "commissioned": 2018
+}}'''@en ;
+    skos:notation 'SDN:C17::06PM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/26CQ/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/26CQ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/26CQ/>;
+    dc:modified '2026-05-27T09:42:46'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Northern Karoline'@en ;
+    skos:definition '''{"node": {
+    "country": "Denmark",
+    "MMSI": 219027310,
+    "platformclass": "research vessel",
+    "notes": "Offshore survey vessel owned by Northern Survey. Built as a whaler KVINT (GB), KJAPP (NO) from 1951, SOUTHERN JESTER (GB) from 1952, cv. to cargo KVINT (NO) in 1966, KVINTESS from 1976, cv. to standby vessel Strilhval in 1983, became Karoline (FO) in 2010, cv. to survey vessel Northern Karoline (DK) in 2020.",
+    "built": 1950,
+    "callsign": "OZIP2",
+    "length": 51.15,
+    "previous_name": "Karoline",
+    "IMO": 5335450,
+    "commissioned": 2020
+}}'''@en ;
+    skos:notation 'SDN:C17::26CQ'^^xsd:string .

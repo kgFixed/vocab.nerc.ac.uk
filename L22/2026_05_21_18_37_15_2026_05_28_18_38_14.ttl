@@ -1,0 +1,73 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2026_05_21_18_37_15_2026_05_28_18_38_14.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2026_05_06_18_35_43_2026_05_21_18_37_14.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-05-28T18:38:14'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL2306/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL2306/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL2306/>;
+    dc:modified '2026-05-27T15:34:04'^^xsd:dateTime ;
+    skos:altLabel 'Holme grab'^^xsd:string ;
+    skos:prefLabel 'Holme vacuum grab'@en ;
+    skos:definition 'The Holme grab is a sediment sampling device that uses the force provided by a vacuum chamber (containing air at atmospheric pressure) to suck in sediment and is a modification of the original vacuum grab described by Hunt (1926). It was developed by Holme (1955) at the Plymouth Laboratory of the Marine Biological Association. It comprises a pressure cylinder with a detachable lid and a central opening at the bottom that is connected to an exterior, downwardly directed sampling tube. Prior to sampling, the gullet is sealed with a plug that is held in place by retaining hooks during its descent. Upon reaching the seabed, the lower, funnel-shaped half of the sampling tube is jolted up into the release mechanism which dislodges the plug - causing it to fly up into the chamber, thus allowing an inrush of water and sediment into the trap-tube. The instrument can then be retrieved and the lid unscrewed to decanter the contents into a jar. The grab is designed to collect small, unstratified sediment samples and can handle coarser sediments such as gravel. The diameter of the gullet determines the size of sediment that can be sampled and the amount of sediment that can be obtained is dependent on water depth and conditions. Sediment samples are difficult to obtain in shallower depths. Full measurements and material specifications of Holme\'s vacuum grab can be found in: Holme, N.A., 1955. An improved \'vacuum\' grab for sampling the sea-floor. J. Mar. Biol. Ass. UK, 34 (545-55).'@en ;
+    skos:notation 'SDN:L22::TOOL2306'^^xsd:string .
