@@ -1,0 +1,73 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2026_05_28_18_38_15_2026_05_30_18_36_26.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2026_05_21_18_37_15_2026_05_28_18_38_14.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-05-30T18:36:26'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL2308/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL2308/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL2308/>;
+    dc:modified '2026-05-29T10:32:32'^^xsd:dateTime ;
+    skos:altLabel 'OS icListen HF series'^^xsd:string ;
+    skos:prefLabel 'Ocean Sonics icListen HF hydrophone series'@en ;
+    skos:definition 'A series of compact high frequency smart digital hydrophones that can process, stream, and record acoustic data in real-time. Applications include marine mammal monitoring, pile driving and marine construction, passive acoustic monitoring, shipping noise, earthquake and tsunamis, and pipeline leak detection. A low frequency model (HF-L e.g. SJ9L) and a high-intensity model (HF-X2 e.g. SJ9-X2) are also available alongside the standard HF (e.g. SJ9) model. The standard frequency range is 10 Hz to 200 kHz (+/- 3 dB bandwidth) with a low frequency cutoff of 1 Hz for the HF-L and HF-X2 models. Dynamic range is 147 dB. Peak Sound Pressure Level (SPL) is 179 dB re uPa for standard HF and HF-L models, and 215 dB re uPa for the HF-X2 model. Instruments have rechargeable batteries, a large internal memory (maximum 1 TB data storage), and a built-in event detector. They use an ethernet communication interface. Different depth ratings are available. Products in the icListen HF range include the SB and SC ranges (no longer commercially available) and the SJ range.'@en ;
+    skos:notation 'SDN:L22::TOOL2308'^^xsd:string .

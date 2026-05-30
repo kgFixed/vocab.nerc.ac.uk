@@ -1,0 +1,118 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2026_05_28_18_38_18_2026_05_30_18_36_29.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2026_05_22_18_36_58_2026_05_28_18_38_17.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-05-30T18:36:29'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/PRNODS01/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/PRNODS01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/PRNODS01/>;
+    dc:modified '2026-05-29T14:00:55'^^xsd:dateTime ;
+    skos:altLabel 'PropCount_detritus_in_stomach'^^xsd:string ;
+    skos:prefLabel 'Proportion by number of organic detritus in biota {biological entity specified elsewhere [Subcomponent: stomach]}'@en ;
+    skos:definition 'A quantified subset, based on counts, of small pieces of dead organic material of animal, plant, fungal, or microbial origin, or detached and broken down fragments of a structure of organic origin (for example: fish scales, faecal pellets, marine snow, or fragments of seaweed and coral) found within an identified biological object described elsewhere in the metadata.'@en ;
+    skos:notation 'SDN:P01::PRNODS01'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/PRNIIS01/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/PRNIIS01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/PRNIIS01/>;
+    dc:modified '2026-05-29T14:00:55'^^xsd:dateTime ;
+    skos:altLabel 'PropCount_inorganic_items_in_stomach'^^xsd:string ;
+    skos:prefLabel 'Proportion by number of inorganic items in biota {biological entity specified elsewhere [Subcomponent: stomach]}'@en ;
+    skos:definition 'A quantified subset, based on counts, of unspecified objects (whole or fragments) made of matter of mineral or man-made origin (for example: plastic, glass, metal, sediment, or stones) found within an identified biological object described elsewhere in the metadata.'@en ;
+    skos:notation 'SDN:P01::PRNIIS01'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/PRNUIS01/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/PRNUIS01/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/PRNUIS01/>;
+    dc:modified '2026-05-29T14:00:55'^^xsd:dateTime ;
+    skos:altLabel 'PropCount_unknown_items_in_stomach'^^xsd:string ;
+    skos:prefLabel 'Proportion by number of unidentified items in biota {biological entity specified elsewhere [Subcomponent: stomach]}'@en ;
+    skos:definition 'A quantified subset, based on counts, of unspecified objects of unknown or unidentifiable origin found within an identified biological object described elsewhere in the metadata.'@en ;
+    skos:notation 'SDN:P01::PRNUIS01'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/PRWWODS1/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/PRWWODS1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/PRWWODS1/>;
+    dc:modified '2026-05-29T14:00:55'^^xsd:dateTime ;
+    skos:altLabel 'PropWetWt_detritus_in_stomach'^^xsd:string ;
+    skos:prefLabel 'Proportion by wet weight of organic detritus in biota {biological entity specified elsewhere [Subcomponent: stomach]}'@en ;
+    skos:definition 'The weight (normalised by total sample weight) of small pieces of dead organic material of animal, plant, fungal, or microbial origin, or detached and broken down fragments of a structure of organic origin (for example: fish scales, faecal pellets, marine snow, or fragments of seaweed and coral) found within an identified biological object described elsewhere in the metadata.'@en ;
+    skos:notation 'SDN:P01::PRWWODS1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/PRWWIIS1/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/PRWWIIS1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/PRWWIIS1/>;
+    dc:modified '2026-05-29T14:00:55'^^xsd:dateTime ;
+    skos:altLabel 'PropWetWt_inorganic_items_in_stomach'^^xsd:string ;
+    skos:prefLabel 'Proportion by wet weight of inorganic items in biota {biological entity specified elsewhere [Subcomponent: stomach]}'@en ;
+    skos:definition 'The weight (normalised by total sample weight) of unspecified objects (whole or fragments) made of matter of mineral or man-made origin (for example: plastic, glass, metal, sediment, or stones) found within an identified biological object described elsewhere in the metadata.'@en ;
+    skos:notation 'SDN:P01::PRWWIIS1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/PRWWUIS1/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/PRWWUIS1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/PRWWUIS1/>;
+    dc:modified '2026-05-29T14:00:55'^^xsd:dateTime ;
+    skos:altLabel 'PropWetWt_unspecified_items_in_stomach'^^xsd:string ;
+    skos:prefLabel 'Proportion by wet weight of unidentified items in biota {biological entity specified elsewhere [Subcomponent: stomach]}'@en ;
+    skos:definition 'The weight (normalised by total sample weight) of unspecified objects of unknown or unidentifiable origin found within an identified biological object described elsewhere in the metadata.'@en ;
+    skos:notation 'SDN:P01::PRWWUIS1'^^xsd:string .
