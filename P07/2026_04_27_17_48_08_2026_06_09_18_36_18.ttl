@@ -1,0 +1,694 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P07/2026_04_27_17_48_08_2026_06_09_18_36_18.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P07/2024_01_01_00_00_00_2026_04_27_17_48_07.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-06-09T18:36:18'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/85OOR0BH/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/85OOR0BH/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/85OOR0BH/>;
+    dc:modified '2026-06-08T13:55:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_content_of_biological_taxon_of_mature_individuals_expressed_as_wet_weight_in_sea_water'@en ;
+    skos:definition 'Biomass of mature individuals of various fish species as identified by their taxonomic name (e.g. Sardina pilchardus) in gram per m2. "Biological taxon" is a name or other label identifying an organism or a group of organisms as belonging to a unit of classification in a hierarchical taxonomy. There must be an auxiliary coordinate variable with standard name biological_taxon_name to identify the taxon in human readable format and optionally an auxiliary coordinate variable with standard name biological_taxon_identifier to provide a machine-readable identifier. See Section 6.1.2 of the CF convention (version 1.8 or later) for information about biological taxon auxiliary coordinate variables. Mature individuals refer to individuals that have reached sexual maturity.'@en ;
+    skos:notation 'SDN:P07::85OOR0BH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/LVG0I14K/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/LVG0I14K/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/LVG0I14K/>;
+    dc:modified '2026-06-08T13:55:33'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_content_of_biological_taxon_of_immature_individuals_expressed_as_wet_weight_in_sea_water'@en ;
+    skos:definition 'Biomass of immature individuals of various fish species as identified by their taxonomic name (e.g. Sardina pilchardus) in gram per m2. "Biological taxon" is a name or other label identifying an organism or a group of organisms as belonging to a unit of classification in a hierarchical taxonomy. There must be an auxiliary coordinate variable with standard name biological_taxon_name to identify the taxon in human readable format and optionally an auxiliary coordinate variable with standard name biological_taxon_identifier to provide a machine-readable identifier. See Section 6.1.2 of the CF convention (version 1.8 or later) for information about biological taxon auxiliary coordinate variables. Immature individuals refer to individuals that have not yet reached sexual maturity.'@en ;
+    skos:notation 'SDN:P07::LVG0I14K'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/0BCQ2T1Y/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/0BCQ2T1Y/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/0BCQ2T1Y/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'tendency_of_atmosphere_mass_content_of_carbon_dioxide_expressed_as_carbon_due_to_emissions_and_surface_fluxes'@en ;
+    skos:definition 'The phrase "tendency_of_X" means derivative of X with respect to time. "Content" indicates a quantity per unit area. The "atmosphere content" of a quantity refers to the vertical integral from the surface to the top of the atmosphere. For the content between specified levels in the atmosphere, standard names including "content_of_atmosphere_layer" are used. The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "Emission" means emission from a primary source located anywhere within the atmosphere, including at the lower boundary (i.e. the surface of the earth). "Emission" is a process entirely distinct from "re-emission" which is used in some standard names. In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. The surface called "surface" means the lower boundary of the atmosphere. The chemical formula for carbon dioxide is CO2.'@en ;
+    skos:notation 'SDN:P07::0BCQ2T1Y'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/0IFTNCTW/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/0IFTNCTW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/0IFTNCTW/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_mature_individuals_of_biological_taxon_expressed_as_wet_weight_in_sea_water'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". Mature individuals refer to individuals that have reached sexual maturity. "Biological taxon" is a name or other label identifying an organism or a group of organisms as belonging to a unit of classification in a hierarchical taxonomy. There must be an auxiliary coordinate variable with standard name biological_taxon_name to identify the taxon in human readable format and optionally an auxiliary coordinate variable with standard name biological_taxon_identifier to provide a machine-readable identifier. See Section 6.1.2 of the CF convention (version 1.8 or later) for information about biological taxon auxiliary coordinate variables. The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.'@en ;
+    skos:notation 'SDN:P07::0IFTNCTW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/0M1ZD0AP/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/0M1ZD0AP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/0M1ZD0AP/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_suspended_matter_in_sea_water_at_sea_water_surface'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". Suspended matter may also be called suspended sediment. Suspended sediment means undissolved solid particles. The phrase "sea water surface" means the upper boundary of the liquid portion of an ocean or sea, including the boundary to floating ice if present.'@en ;
+    skos:notation 'SDN:P07::0M1ZD0AP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/1TKGBACZ/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/1TKGBACZ/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/1TKGBACZ/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_content_of_biological_taxon_expressed_as_wet_weight_in_sea_water'@en ;
+    skos:definition 'Total biomass or biomass per age group in years (standard birth date January 1) of various fish species as identified by their taxonomic name (e.g. Sardina pilchardus) in gram per m2. "Biological taxon" is a name or other label identifying an organism or a group of organisms as belonging to a unit of classification in a hierarchical taxonomy. There must be an auxiliary coordinate variable with standard name biological_taxon_name to identify the taxon in human readable format and optionally an auxiliary coordinate variable with standard name biological_taxon_identifier to provide a machine-readable identifier. See Section 6.1.2 of the CF convention (version 1.8 or later) for information about biological taxon auxiliary coordinate variables.'@en ;
+    skos:notation 'SDN:P07::1TKGBACZ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/2KTWMQUM/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/2KTWMQUM/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/2KTWMQUM/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sinking_mole_flux_at_sea_floor_of_particulate_silicon_in_sea_water'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. "Sinking" is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid. Particulate silicon means the sum of all organic (biogenic) and inorganic silicon that does not pass through a reference filter pore size.'@en ;
+    skos:notation 'SDN:P07::2KTWMQUM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/36UW7DBQ/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/36UW7DBQ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/36UW7DBQ/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ocean_mass_content_of_demersal_fish_expressed_as_wet_weight'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. Demersal fish spend a fraction of their lives in close association with the seabed, feeding primarily on bottom organisms, they can carry out diel vertical migrations (e.g. cod). The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.'@en ;
+    skos:notation 'SDN:P07::36UW7DBQ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/594RQ52K/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/594RQ52K/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/594RQ52K/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_content_of_organic_mercury_in_macrobenthos'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. "Organic mercury" describes a family of chemical species in which mercury atoms covalently bonded to carbon-containing groups, forming organomercury compounds. "Macrobenthos" refers to benthic organisms visible to the naked eye.'@en ;
+    skos:notation 'SDN:P07::594RQ52K'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/6WRVG0ER/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/6WRVG0ER/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/6WRVG0ER/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ocean_number_content_of_demersal_fish'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. Demersal fish spend a fraction of their lives in close association with the seabed, feeding primarily on bottom organisms, they can carry out diel vertical migrations (e.g. cod).'@en ;
+    skos:notation 'SDN:P07::6WRVG0ER'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/775ZJ0F5/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/775ZJ0F5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/775ZJ0F5/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ocean_mass_content_of_immature_individuals_of_biological_taxon_expressed_as_wet_weight'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. Immature individuals refer to individuals that have not yet reached sexual maturity. "Biological taxon" is a name or other label identifying an organism or a group of organisms as belonging to a unit of classification in a hierarchical taxonomy. There must be an auxiliary coordinate variable with standard name biological_taxon_name to identify the taxon in human readable format and optionally an auxiliary coordinate variable with standard name biological_taxon_identifier to provide a machine-readable identifier. See Section 6.1.2 of the CF convention (version 1.8 or later) for information about biological taxon auxiliary coordinate variables. The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.'@en ;
+    skos:notation 'SDN:P07::775ZJ0F5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/81LS95P6/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/81LS95P6/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/81LS95P6/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_flux_of_carbon_burial_below_sea_floor_sediment'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. Burial means that the material is buried in the sediment and will not be reinjected in the ocean. The surface called "sea floor" means the lower boundary of the ocean. "Sea floor sediment" is sediment deposited at the sea bed.'@en ;
+    skos:notation 'SDN:P07::81LS95P6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/889V9VVB/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/889V9VVB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/889V9VVB/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_demersal_fish_expressed_as_wet_weight_in_sea_water'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". Demersal fish spend a fraction of their lives in close association with the seabed, feeding primarily on bottom organisms, they can carry out diel vertical migrations (e.g. cod). The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.'@en ;
+    skos:notation 'SDN:P07::889V9VVB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/9RFL799F/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/9RFL799F/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/9RFL799F/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ocean_number_content_of_small_pelagic_fish'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. Small pelagic fish (<=250 g) live in waters near the surface or throughout the water column (e.g., herring, sardines, anchovies).'@en ;
+    skos:notation 'SDN:P07::9RFL799F'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/A1E3PHJH/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/A1E3PHJH/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/A1E3PHJH/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ocean_number_content_of_mesopelagic_fish'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. Mesopelagic fish live in the mesopelagic or "Twilight Zone" at depths of about 200-1000 m, where light is limited.'@en ;
+    skos:notation 'SDN:P07::A1E3PHJH'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/AJ3DRJDQ/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/AJ3DRJDQ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/AJ3DRJDQ/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'surface_net_downward_mass_flux_of_carbon_dioxide_expressed_as_carbon'@en ;
+    skos:definition 'This quantity is the flux of carbon from the atmosphere to the land surface, as well as riverine carbon exported from the land to the ocean. The surface called "surface" means the lower boundary of the atmosphere. "Downward" indicates a vector component which is positive when directed downward (negative upward). Net downward mass flux is the difference between downward_mass_flux and upward_mass_flux. In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. The chemical formula for carbon dioxide is CO2.'@en ;
+    skos:notation 'SDN:P07::AJ3DRJDQ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BC4TK802/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BC4TK802/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BC4TK802/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ocean_number_content_of_biological_taxon'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. "Biological taxon" is a name or other label identifying an organism or a group of organisms as belonging to a unit of classification in a hierarchical taxonomy. There must be an auxiliary coordinate variable with standard name biological_taxon_name to identify the taxon in human readable format and optionally an auxiliary coordinate variable with standard name biological_taxon_identifier to provide a machine-readable identifier. See Section 6.1.2 of the CF convention (version 1.8 or later) for information about biological taxon auxiliary coordinate variables.'@en ;
+    skos:notation 'SDN:P07::BC4TK802'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/BD6ED0ST/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/BD6ED0ST/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/BD6ED0ST/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'echo_intensity_test_quality_flag'@en ;
+    skos:definition 'A quality flag that reports the result of the Echo Intensity test, which checks that beams in adjacent bins do not differ by more than an operator-provided amount. The linkage between the data variable and this variable is achieved using the ancillary_variables attribute. There are standard names for other specific quality tests which take the form of X_quality_flag. Quality information that does not match any of the specific quantities should be given the more general standard name of quality_flag.'@en ;
+    skos:notation 'SDN:P07::BD6ED0ST'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF12S23/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF12S23/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF12S23/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_suspended_matter_in_sea_water'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". Suspended matter may also be called suspended sediment. Suspended sediment means undissolved solid particles.'@en ;
+    skos:notation 'SDN:P07::CF12S23'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CF12S23/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CF12S23/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CF12S23/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_suspended_matter_in_sea_water'@en ;
+    skos:definition 'Mass concentration means mass per unit volume and is used in the construction mass_concentration_of_X_in_Y, where X is a material constituent of Y.  A chemical species denoted by X may be described by a single term such as \'nitrogen\' or a phrase such as \'nox_expressed_as_nitrogen\'.'@en ;
+    skos:notation 'SDN:P07::CF12S23'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV10N35/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV10N35/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV10N35/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_surface_height_amplitude_due_to_earth_tide'@en ;
+    skos:definition '"Sea surface height" is a time-varying quantity. Amplitude is the magnitude of a periodic variation modelled by a sinusoidal function. A coordinate variable of harmonic_period should be used to specify the period of the sinusoidal wave. The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. Tides are a significant contributor to the observed sea surface height; earth tide means the solid earth tide.'@en ;
+    skos:notation 'SDN:P07::CFV10N35'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV10N37/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV10N37/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV10N37/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_surface_height_amplitude_due_to_geocentric_ocean_tide'@en ;
+    skos:definition '"Sea surface height" is a time-varying quantity. Amplitude is the magnitude of a periodic variation modelled by a sinusoidal function. A coordinate variable of harmonic_period should be used to specify the period of the sinusoidal wave. The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. Tides are a significant contributor to the observed sea surface height; geocentric ocean tide means the sum total of ocean tide and load tide.'@en ;
+    skos:notation 'SDN:P07::CFV10N37'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV10N38/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV10N38/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV10N38/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_surface_height_amplitude_due_to_non_equilibrium_ocean_tide'@en ;
+    skos:definition '"Sea surface height" is a time-varying quantity. Amplitude is the magnitude of a periodic variation modelled by a sinusoidal function. A coordinate variable of harmonic_period should be used to specify the period of the sinusoidal wave. The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. Tides are a significant contributor to the observed sea surface height; non equilibrium ocean tide refers to the long period ocean tide.'@en ;
+    skos:notation 'SDN:P07::CFV10N38'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV10N39/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV10N39/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV10N39/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_surface_height_amplitude_due_to_pole_tide'@en ;
+    skos:definition '"Sea surface height" is a time-varying quantity. Amplitude is the magnitude of a periodic variation modelled by a sinusoidal function. A coordinate variable of harmonic_period should be used to specify the period of the sinusoidal wave. The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. Tides are a significant contributor to the observed sea surface height; the pole tide occurs due to variations in the earth\'s rotation.'@en ;
+    skos:notation 'SDN:P07::CFV10N39'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/EKTT9B75/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/EKTT9B75/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/EKTT9B75/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_optical_thickness_due_to_secondary_particulate_organic_matter_ambient_aerosol_particles'@en ;
+    skos:definition 'Aerosol AOD due to secondary aerosol at wavelength of 550 nanometers. The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path. The atmosphere optical thickness applies to radiation passing through the entire atmosphere. A coordinate variable of radiation_wavelength or radiation_frequency can be specified to indicate that the optical thickness applies at specific wavelengths or frequencies. "Aerosol" means the system of suspended liquid or solid particles in air (except cloud droplets) and their carrier gas, the air itself. "Ambient_aerosol" means that the aerosol is measured or modelled at the ambient state of pressure, temperature and relative humidity that exists in its immediate environment. "Ambient aerosol particles" are aerosol particles that have taken up ambient water through hygroscopic growth. The extent of hygroscopic growth depends on the relative humidity and the composition of the particles. The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.'@en ;
+    skos:notation 'SDN:P07::EKTT9B75'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/EWJHAWB4/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/EWJHAWB4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/EWJHAWB4/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ocean_mass_content_of_mature_individuals_of_biological_taxon_expressed_as_wet_weight'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. Mature individuals refer to individuals that have reached sexual maturity. "Biological taxon" is a name or other label identifying an organism or a group of organisms as belonging to a unit of classification in a hierarchical taxonomy. There must be an auxiliary coordinate variable with standard name biological_taxon_name to identify the taxon in human readable format and optionally an auxiliary coordinate variable with standard name biological_taxon_identifier to provide a machine-readable identifier. See Section 6.1.2 of the CF convention (version 1.8 or later) for information about biological taxon auxiliary coordinate variables. The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.'@en ;
+    skos:notation 'SDN:P07::EWJHAWB4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/F61RU7IS/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/F61RU7IS/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/F61RU7IS/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sinking_mole_flux_at_sea_floor_of_particulate_organic_nitrogen_in_sea_water'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. "Sinking" is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid. "Particulate organic nitrogen" means the sum of all organic nitrogen compounds, which are solid or which are bound to solid particles. "Organic nitrogen", when measured, always refers to all nitrogen incorporated in carbon compounds in the sample. Models may use the term to refer to nitrogen contained in specific groups of organic compounds in which case the data variable should be accompanied by a complete description of the species represented, for example, by using a comment attribute.'@en ;
+    skos:notation 'SDN:P07::F61RU7IS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/G0MHQGQY/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/G0MHQGQY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/G0MHQGQY/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'change_in_sea_surface_height_due_to_earth_tide'@en ;
+    skos:definition '"Sea surface height" is a time-varying quantity. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. Tides are a significant contributor to the observed sea surface height; earth tide means the solid earth tide.'@en ;
+    skos:notation 'SDN:P07::G0MHQGQY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/G1IP6NWI/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/G1IP6NWI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/G1IP6NWI/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_large_pelagic_fish_expressed_as_wet_weight_in_sea_water'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". Large pelagic fish (>250 g) live in waters near the surface or throughout the water column (e.g., tuna, marlin, pelagic sharks). The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.'@en ;
+    skos:notation 'SDN:P07::G1IP6NWI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/GIWUWAF2/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/GIWUWAF2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/GIWUWAF2/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_flux_of_nitrogen_out_of_sea_floor_sediment_due_to_denitrification'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. The surface called "sea floor" means the lower boundary of the ocean. "Sea floor sediment" is sediment deposited at the sea bed. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. "Denitrification" is the conversion of nitrate into gaseous compounds such as nitric oxide, nitrous oxide and molecular nitrogen which are then emitted to the atmosphere.'@en ;
+    skos:notation 'SDN:P07::GIWUWAF2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/GOF95M8G/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/GOF95M8G/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/GOF95M8G/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ocean_mass_content_of_mesopelagic_fish_expressed_as_wet_weight'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. Mesopelagic fish live in the mesopelagic or "Twilight Zone" at depths of about 200-1000 m, where light is limited. The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.'@en ;
+    skos:notation 'SDN:P07::GOF95M8G'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/GTTTDBLZ/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/GTTTDBLZ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/GTTTDBLZ/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ocean_mass_content_of_small_pelagic_fish_expressed_as_wet_weight'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. Small pelagic fish (<=250 g) live in waters near the surface or throughout the water column (e.g., herring, sardines, anchovies). The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.'@en ;
+    skos:notation 'SDN:P07::GTTTDBLZ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/KJ73NZ3O/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/KJ73NZ3O/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/KJ73NZ3O/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'probability_of_occurence_of_biological_taxon'@en ;
+    skos:definition '"probability_of_X" means the chance that X is true or of at least one occurrence of X. Space and time coordinates must be used to indicate the area and time-interval to which a probability applies. "Biological taxon" is a name or other label identifying an organism or a group of organisms as belonging to a unit of classification in a hierarchical taxonomy. There must be an auxiliary coordinate variable with standard name biological_taxon_name to identify the taxon in human readable format and optionally an auxiliary coordinate variable with standard name biological_taxon_identifier to provide a machine-readable identifier. See Section 6.1.2 of the CF convention (version 1.8 or later) for information about biological taxon auxiliary coordinate variables.'@en ;
+    skos:notation 'SDN:P07::KJ73NZ3O'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/LHCM04B0/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/LHCM04B0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/LHCM04B0/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'number_concentration_of_mature_individuals_of_biological_taxon_in_sea_water'@en ;
+    skos:definition '"Number concentration" means the number of particles or other specified objects per unit volume. Mature individuals refer to individuals that have reached sexual maturity. "Biological taxon" is a name or other label identifying an organism or a group of organisms as belonging to a unit of classification in a hierarchical taxonomy. There must be an auxiliary coordinate variable with standard name biological_taxon_name to identify the taxon in human readable format and optionally an auxiliary coordinate variable with standard name biological_taxon_identifier to provide a machine-readable identifier. See Section 6.1.2 of the CF convention (version 1.8 or later) for information about biological taxon auxiliary coordinate variables.'@en ;
+    skos:notation 'SDN:P07::LHCM04B0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/O0YEG6TL/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/O0YEG6TL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/O0YEG6TL/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_bathypelagic_fish_expressed_as_wet_weight_in_sea_water'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". Bathypelagic fish are deep-sea fish that live at depths of about 1000-3000 m in cold and dark waters. The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.'@en ;
+    skos:notation 'SDN:P07::O0YEG6TL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/O1Z99660/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/O1Z99660/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/O1Z99660/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'probability_of_mass_concentration_of_volcanic_ash_in_air_above_threshold'@en ;
+    skos:definition '"probability_of_X_above_threshold" means the chance that X is above the threshold. Space and time coordinates must be used to indicate the area and time to which a probability applies. "Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". "Volcanic ash" means the fine-grained products of explosive volcanic eruptions, such as minerals or crystals, older fragmented rock (e.g. andesite) and glass. Particles within a volcanic ash cloud have diameters less than 2 mm. "Volcanic ash" does not include non-volcanic dust. It must have a coordinate variable or scalar coordinate variable with the standard name of mass_concentration_of_volcanic_ash_in_air to supply the threshold(s).'@en ;
+    skos:notation 'SDN:P07::O1Z99660'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/OESLPJLG/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/OESLPJLG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/OESLPJLG/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'number_concentration_of_mesopelagic_fish_in_sea_water'@en ;
+    skos:definition '"Number concentration" means the number of particles or other specified objects per unit volume. Mesopelagic fish live in the mesopelagic or "Twilight Zone" at depths of about 200-1000 m, where light is limited.'@en ;
+    skos:notation 'SDN:P07::OESLPJLG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/OITMP30K/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/OITMP30K/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/OITMP30K/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_optical_thickness_due_to_biomass_burning_particulate_matter_ambient_aerosol_particles'@en ;
+    skos:definition 'Aerosol AOD due to biomass burning aerosol at wavelength of 550 nanometers. The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-optical_thickness) on traversing the path. The atmosphere optical thickness applies to radiation passing through the entire atmosphere. A coordinate variable of radiation_wavelength or radiation_frequency can be specified to indicate that the optical thickness applies at specific wavelengths or frequencies. "Aerosol" means the system of suspended liquid or solid particles in air (except cloud droplets) and their carrier gas, the air itself. "Ambient_aerosol" means that the aerosol is measured or modelled at the ambient state of pressure, temperature and relative humidity that exists in its immediate environment. "Ambient aerosol particles" are aerosol particles that have taken up ambient water through hygroscopic growth. The extent of hygroscopic growth depends on the relative humidity and the composition of the particles. The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase.'@en ;
+    skos:notation 'SDN:P07::OITMP30K'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/OPPW9P98/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/OPPW9P98/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/OPPW9P98/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'number_concentration_of_demersal_fish_in_sea_water'@en ;
+    skos:definition '"Number concentration" means the number of particles or other specified objects per unit volume. Demersal fish spend a fraction of their lives in close association with the seabed, feeding primarily on bottom organisms, they can carry out diel vertical migrations (e.g. cod).'@en ;
+    skos:notation 'SDN:P07::OPPW9P98'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/P071KY6K/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/P071KY6K/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/P071KY6K/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'number_concentration_of_large_pelagic_fish_in_sea_water'@en ;
+    skos:definition '"Number concentration" means the number of particles or other specified objects per unit volume. Large pelagic fish (>250 g) live in waters near the surface or throughout the water column (e.g., tuna, marlin, pelagic sharks).'@en ;
+    skos:notation 'SDN:P07::P071KY6K'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/P1AK5DIX/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/P1AK5DIX/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/P1AK5DIX/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'volume_fraction_of_ridged_ice_in_sea_ice'@en ;
+    skos:definition '"Volume fraction" is used in the construction "volume_fraction_of_X_in_Y", where X is a material constituent of Y. It is evaluated as the volume of X divided by the volume of Y (including X). It may be expressed as a fraction, a percentage, or any other dimensionless representation of a fraction. Sea ice "ridging" occurs in rough sea conditions. The motion of the sea surface can cause areas of sea ice to deform and fold resulting in ridged upper and lower surfaces. The ridges can be as much as twenty metres thick if thick ice is deformed. "Sea ice" means all ice floating in the sea which has formed from freezing sea water, rather than by other processes such as calving of land ice to form icebergs. This quantity specifically refers to the volume of ice that is ridged or dynamically deformed, divided by the total volume of sea ice that yields the fraction.'@en ;
+    skos:notation 'SDN:P07::P1AK5DIX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/PSFINQ3E/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/PSFINQ3E/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/PSFINQ3E/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_ice_internal_pressure'@en ;
+    skos:definition 'Sea ice internal pressure is the effective pressure associated with the internal stress field of the sea ice cover, representing the instantaneous internal mechanical state of the ice and not its material strength. "Sea ice" means all ice floating in the sea which has formed from freezing sea water, rather than by other processes such as calving of land ice to form icebergs.'@en ;
+    skos:notation 'SDN:P07::PSFINQ3E'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/PXKN80UB/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/PXKN80UB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/PXKN80UB/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ocean_mass_content_of_biological_taxon_expressed_as_wet_weight'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. "Biological taxon" is a name or other label identifying an organism or a group of organisms as belonging to a unit of classification in a hierarchical taxonomy. There must be an auxiliary coordinate variable with standard name biological_taxon_name to identify the taxon in human readable format and optionally an auxiliary coordinate variable with standard name biological_taxon_identifier to provide a machine-readable identifier. See Section 6.1.2 of the CF convention (version 1.8 or later) for information about biological taxon auxiliary coordinate variables. The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.'@en ;
+    skos:notation 'SDN:P07::PXKN80UB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/QW5TE9YE/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/QW5TE9YE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/QW5TE9YE/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'atmosphere_optical_thickness_due_to_ambient_aerosol_particles_assuming_clear_sky'@en ;
+    skos:definition 'AOD from aerosols assuming cloud free fraction of gridbox if od550aer is for all-sky. The optical thickness is the integral along the path of radiation of a volume scattering/absorption/attenuation coefficient. The radiative flux is reduced by a factor exp(-"optical_thickness") on traversing the path. The atmosphere optical thickness applies to radiation passing through the entire atmosphere. A coordinate variable of radiation_wavelength or radiation_frequency can be specified to indicate that the optical thickness applies at specific wavelengths or frequencies. "Aerosol" means the system of suspended liquid or solid particles in air (except cloud droplets) and their carrier gas, the air itself. Aerosol particles take up ambient water (a process known as hygroscopic growth) depending on the relative humidity and the composition of the particles. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. Phrase "assuming_cloud_free" means the cloud free fraction of the grid box.'@en ;
+    skos:notation 'SDN:P07::QW5TE9YE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/QWTOW9BV/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/QWTOW9BV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/QWTOW9BV/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'number_concentration_of_immature_individuals_of_biological_taxon_in_sea_water'@en ;
+    skos:definition '"Number concentration" means the number of particles or other specified objects per unit volume. Immature individuals refer to individuals that have not yet reached sexual maturity. "Biological taxon" is a name or other label identifying an organism or a group of organisms as belonging to a unit of classification in a hierarchical taxonomy. There must be an auxiliary coordinate variable with standard name biological_taxon_name to identify the taxon in human readable format and optionally an auxiliary coordinate variable with standard name biological_taxon_identifier to provide a machine-readable identifier. See Section 6.1.2 of the CF convention (version 1.8 or later) for information about biological taxon auxiliary coordinate variables.'@en ;
+    skos:notation 'SDN:P07::QWTOW9BV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/QY06XVNL/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/QY06XVNL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/QY06XVNL/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ocean_mass_content_of_bathypelagic_fish_expressed_as_wet_weight'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. Bathypelagic fish are deep-sea fish that live at depths of about 1000-3000 m in cold and dark waters. The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.'@en ;
+    skos:notation 'SDN:P07::QY06XVNL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/RLQ7NOQ3/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/RLQ7NOQ3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/RLQ7NOQ3/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_suspended_matter_in_sea_water_at_sea_floor'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". Suspended matter may also be called suspended sediment. Suspended sediment means undissolved solid particles. The surface called "sea floor" means the lower boundary of the ocean. The *parameter* at the sea floor is that adjacent to the ocean bottom, which would be the deepest grid cell in an ocean model and within the benthic boundary layer for measurements.'@en ;
+    skos:notation 'SDN:P07::RLQ7NOQ3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/S4NCXRH7/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/S4NCXRH7/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/S4NCXRH7/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'healpix_index'@en ;
+    skos:definition 'HEALPix (Hierarchical Equal Area isoLatitude Pixelation of a sphere) indices indicate the location of HEALPix cells in latitude and longitude, including their cell bounds. The relationship between HEALPix indices and latitude and longitude is described by the grid_mapping variable with a grid_mapping_name of "healpix", that must be attached to the data variable as described in Chapter 5.6 of the CF Convention. A HEALPix index variable must have an integer data type.'@en ;
+    skos:notation 'SDN:P07::S4NCXRH7'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/TEHQ4X3K/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/TEHQ4X3K/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/TEHQ4X3K/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_mesopelagic_fish_expressed_as_wet_weight_in_sea_water'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". Mesopelagic fish live in the mesopelagic or "Twilight Zone" at depths of about 200-1000 m, where light is limited. The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.'@en ;
+    skos:notation 'SDN:P07::TEHQ4X3K'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/VXJU0JEL/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/VXJU0JEL/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/VXJU0JEL/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_content_of_organic_mercury_in_sea_floor_sediment_mixed_layer'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. "Organic mercury" describes a family of chemical species in which mercury atoms are covalently bonded to carbon-containing groups, forming organomercury compounds. The surface called "sea floor" means the lower boundary of the ocean. "Sea floor sediment" is sediment deposited at the sea bed. The sea floor sediment mixed layer describes the uppermost layer (approximately 5-10 cm) of sediments, where sediments are likely to be resuspended.'@en ;
+    skos:notation 'SDN:P07::VXJU0JEL'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/W2UCETWV/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/W2UCETWV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/W2UCETWV/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'number_concentration_of_bathypelagic_fish_in_sea_water'@en ;
+    skos:definition '"Number concentration" means the number of particles or other specified objects per unit volume. Bathypelagic fish are deep-sea fish that live at depths of about 1000-3000 m in cold and dark waters.'@en ;
+    skos:notation 'SDN:P07::W2UCETWV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/WB8FZZ5U/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/WB8FZZ5U/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/WB8FZZ5U/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ocean_mass_content_of_large_pelagic_fish_expressed_as_wet_weight'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. Large pelagic fish (>250 g) live in waters near the surface or throughout the water column (e.g., tuna, marlin, pelagic sharks). The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.'@en ;
+    skos:notation 'SDN:P07::WB8FZZ5U'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/WJTO45T8/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/WJTO45T8/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/WJTO45T8/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sinking_mole_flux_at_sea_floor_of_particulate_organic_phosphorus_in_sea_water'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. "Sinking" is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid. Particulate organic phosphorus means organic phosphorus that does not pass through a reference filter pore size. "Organic phosphorus" means phosphorus in carbon compounds.'@en ;
+    skos:notation 'SDN:P07::WJTO45T8'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/XW8VAQDP/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/XW8VAQDP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/XW8VAQDP/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ocean_number_content_of_bathypelagic_fish'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. Bathypelagic fish are deep-sea fish that live at depths of about 1000-3000 m in cold and dark waters.'@en ;
+    skos:notation 'SDN:P07::XW8VAQDP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/XY16HWNE/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/XY16HWNE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/XY16HWNE/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_immature_individuals_of_biological_taxon_expressed_as_wet_weight_in_sea_water'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". Immature individuals refer to individuals that have not yet reached sexual maturity. "Biological taxon" is a name or other label identifying an organism or a group of organisms as belonging to a unit of classification in a hierarchical taxonomy. There must be an auxiliary coordinate variable with standard name biological_taxon_name to identify the taxon in human readable format and optionally an auxiliary coordinate variable with standard name biological_taxon_identifier to provide a machine-readable identifier. See Section 6.1.2 of the CF convention (version 1.8 or later) for information about biological taxon auxiliary coordinate variables. The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.'@en ;
+    skos:notation 'SDN:P07::XY16HWNE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/YE76XMRU/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/YE76XMRU/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/YE76XMRU/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'number_concentration_of_small_pelagic_fish_in_sea_water'@en ;
+    skos:definition '"Number concentration" means the number of particles or other specified objects per unit volume. Small pelagic fish (<=250 g) live in waters near the surface or throughout the water column (e.g., herring, sardines, anchovies).'@en ;
+    skos:notation 'SDN:P07::YE76XMRU'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/YHX681W6/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/YHX681W6/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/YHX681W6/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sinking_mole_flux_at_sea_floor_of_particulate_iron_in_sea_water'@en ;
+    skos:definition 'In accordance with common usage in geophysical disciplines, "flux" implies per unit area, called "flux density" in physics. "Sinking" is the gravitational settling of particulate matter suspended in a liquid. A sinking flux is positive downwards and is calculated relative to the movement of the surrounding fluid. Iron means iron in all chemical forms, commonly referred to as "total iron". Particulate iron means iron which is solid or which is bound to solid particles that does not pass through a reference filter pore size, including insoluble Fe(III).'@en ;
+    skos:notation 'SDN:P07::YHX681W6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/Z098V4XQ/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/Z098V4XQ/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/Z098V4XQ/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_biological_taxon_of_mature_individuals_expressed_as_wet_weight_in_sea_water'@en ;
+    skos:definition 'Biomass of mature individuals of various fish species as identified by their taxonomic name (e.g. Sardina pilchardus) in gram per m3. "Biological taxon" is a name or other label identifying an organism or a group of organisms as belonging to a unit of classification in a hierarchical taxonomy. There must be an auxiliary coordinate variable with standard name biological_taxon_name to identify the taxon in human readable format and optionally an auxiliary coordinate variable with standard name biological_taxon_identifier to provide a machine-readable identifier. See Section 6.1.2 of the CF convention (version 1.8 or later) for information about biological taxon auxiliary coordinate variables. Mature individuals refer to individuals that have reached sexual maturity.'@en ;
+    skos:notation 'SDN:P07::Z098V4XQ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/ZPRX3FE0/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/ZPRX3FE0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/ZPRX3FE0/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_content_of_oxidized_mercury_in_sea_floor_sediment_mixed_layer'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. "Oxidized mercury" refers to mercury in its ionic form, which may be directly emitted to the environment or formed through the oxidation of elemental mercury. The surface called "sea floor" means the lower boundary of the ocean. "Sea floor sediment" is sediment deposited at the sea bed. The sea floor sediment mixed layer describes the uppermost layer (approximately 5-10 cm) of sediments, where sediments are likely to be resuspended.'@en ;
+    skos:notation 'SDN:P07::ZPRX3FE0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/ZSDAR2KM/4/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/ZSDAR2KM/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/ZSDAR2KM/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'amplitude_of_global_average_sea_level_change'@en ;
+    skos:definition 'Global average sea level change is due to change in volume of the water in the ocean, caused by mass and/or density change, or to change in the volume of the ocean basins, caused by tectonics etc. It is sometimes called "eustatic", which is a term that also has other definitions. It differs from the change in the global average sea surface height relative to the centre of the Earth by the global average vertical movement of the ocean floor. Zero sea level change is an arbitrary level. Amplitude is the magnitude of a periodic variation modelled by a sinusoidal function. A coordinate variable of harmonic_period should be used to specify the period of the sinusoidal wave. Because global average sea level change quantifies the change in volume of the world ocean, it is not calculated necessarily by considering local changes in mean sea level.'@en ;
+    skos:notation 'SDN:P07::ZSDAR2KM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/ZVQJ49UE/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/ZVQJ49UE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/ZVQJ49UE/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ocean_mass_content_of_zooplankton_expressed_as_carbon'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. The "ocean content" of a quantity refers to the vertical integral from the surface to the bottom of the ocean. The phrase "expressed_as" is used in the construction A_expressed_as_B, where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. "Zooplankton" means the total zooplankton population, with components such as mesozooplankton, microzooplankton and miscellaneous zooplankton.'@en ;
+    skos:notation 'SDN:P07::ZVQJ49UE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/ZYBMK4J5/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/ZYBMK4J5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/ZYBMK4J5/>;
+    dc:modified '2026-06-08T13:55:32'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mole_content_of_oxidized_mercury_in_macrobenthos'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. "Oxidized mercury" refers to mercury in its ionic form, which may be directly emitted to the environment or formed through the oxidation of elemental mercury. "Macrobenthos" refers to benthic organisms visible to the naked eye.'@en ;
+    skos:notation 'SDN:P07::ZYBMK4J5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/6XB1P4UG/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/6XB1P4UG/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/6XB1P4UG/>;
+    dc:modified '2026-06-08T13:55:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ocean_number_content_of_immature_individuals_of_biological_taxon'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. Immature individuals refer to individuals that have not yet reached sexual maturity. "Biological taxon" is a name or other label identifying an organism or a group of organisms as belonging to a unit of classification in a hierarchical taxonomy. There must be an auxiliary coordinate variable with standard name biological_taxon_name to identify the taxon in human readable format and optionally an auxiliary coordinate variable with standard name biological_taxon_identifier to provide a machine-readable identifier. See Section 6.1.2 of the CF convention (version 1.8 or later) for information about biological taxon auxiliary coordinate variables.'@en ;
+    skos:notation 'SDN:P07::6XB1P4UG'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/6Z8J0Z06/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/6Z8J0Z06/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/6Z8J0Z06/>;
+    dc:modified '2026-06-08T13:55:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_particulate_organic_matter_expressed_as_carbon_in_sea_water'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A. Particulate means suspended solids of all sizes. Particulate organic matter (also called POM) means organic matter that does not pass through a reference filter pore size. "Organic matter" means material which is derived from living organisms or from their biological activities. Organic matter consists of carbon-based compounds.'@en ;
+    skos:notation 'SDN:P07::6Z8J0Z06'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CFV10N36/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CFV10N36/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CFV10N36/>;
+    dc:modified '2026-06-08T13:55:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'sea_surface_height_amplitude_due_to_equilibrium_ocean_tide'@en ;
+    skos:definition '"Sea surface height" is a time-varying quantity. Amplitude is the magnitude of a periodic variation modelled by a sinusoidal function. A coordinate variable of harmonic_period should be used to specify the period of the sinusoidal wave. The specification of a physical process by the phrase due_to_process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. Tides are a significant contributor to the observed sea surface height; equilibrium ocean tide refers to the long period ocean tide.'@en ;
+    skos:notation 'SDN:P07::CFV10N36'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/CVWA4OGB/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/CVWA4OGB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/CVWA4OGB/>;
+    dc:modified '2026-06-08T13:55:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_small_pelagic_fish_expressed_as_wet_weight_in_sea_water'@en ;
+    skos:definition '"Mass concentration" means mass per unit volume and is used in the construction "mass_concentration_of_X_in_Y", where X is a material constituent of Y. A chemical species or biological group denoted by X may be described by a single term such as "nitrogen" or a phrase such as "nox_expressed_as_nitrogen". Small pelagic fish (<=250 g) live in waters near the surface or throughout the water column (e.g., herring, sardines, anchovies). The phrase "expressed_as" is used in the construction "A_expressed_as_B", where B is a chemical constituent of A. It means that the quantity indicated by the standard name is calculated solely with respect to the B contained in A, neglecting all other chemical constituents of A.'@en ;
+    skos:notation 'SDN:P07::CVWA4OGB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/GD8EEKQ5/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/GD8EEKQ5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/GD8EEKQ5/>;
+    dc:modified '2026-06-08T13:55:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ocean_number_content_of_large_pelagic_fish'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. Large pelagic fish (>250 g) live in waters near the surface or throughout the water column (e.g., tuna, marlin, pelagic sharks).'@en ;
+    skos:notation 'SDN:P07::GD8EEKQ5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/JD5K04M5/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/JD5K04M5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/JD5K04M5/>;
+    dc:modified '2026-06-08T13:55:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'ocean_number_content_of_mature_individuals_of_biological_taxon'@en ;
+    skos:definition '"Content" indicates a quantity per unit area. Mature individuals refer to individuals that have reached sexual maturity. "Biological taxon" is a name or other label identifying an organism or a group of organisms as belonging to a unit of classification in a hierarchical taxonomy. There must be an auxiliary coordinate variable with standard name biological_taxon_name to identify the taxon in human readable format and optionally an auxiliary coordinate variable with standard name biological_taxon_identifier to provide a machine-readable identifier. See Section 6.1.2 of the CF convention (version 1.8 or later) for information about biological taxon auxiliary coordinate variables.'@en ;
+    skos:notation 'SDN:P07::JD5K04M5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/KBKBXYAD/2/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/KBKBXYAD/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/KBKBXYAD/>;
+    dc:modified '2026-06-08T13:55:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'mass_concentration_of_biological_taxon_of_immature_individuals_expressed_as_wet_weight_in_sea_water'@en ;
+    skos:definition 'Biomass of immature individuals of various fish species as identified by their taxonomic name (e.g. Sardina pilchardus) in gram per m3. "Biological taxon" is a name or other label identifying an organism or a group of organisms as belonging to a unit of classification in a hierarchical taxonomy. There must be an auxiliary coordinate variable with standard name biological_taxon_name to identify the taxon in human readable format and optionally an auxiliary coordinate variable with standard name biological_taxon_identifier to provide a machine-readable identifier. See Section 6.1.2 of the CF convention (version 1.8 or later) for information about biological taxon auxiliary coordinate variables. Immature individuals refer to individuals that have not yet reached sexual maturity.'@en ;
+    skos:notation 'SDN:P07::KBKBXYAD'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P07/current/T4QVHCST/1/> .
+<http://vocab.nerc.ac.uk/collection/P07/current/T4QVHCST/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P07/current/T4QVHCST/>;
+    dc:modified '2026-06-08T13:55:31'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'change_in_sea_surface_height_due_to_pole_tide'@en ;
+    skos:definition '"Sea surface height" is a time-varying quantity. The specification of a physical process by the phrase "due_to_" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. Tides are a significant contributor to the observed sea surface height; the pole tide occurs due to variations in the earth\'s rotation.'@en ;
+    skos:notation 'SDN:P07::T4QVHCST'^^xsd:string .
