@@ -1,0 +1,118 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C17/2026_06_10_18_37_06_2026_06_13_18_36_26.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C17/2026_05_30_18_36_20_2026_06_10_18_37_05.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-06-13T18:36:26'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/74K8/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/74K8/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/74K8/>;
+    dc:modified '2026-06-12T10:06:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Saorsa Na Mara'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "MMSI": 235033134,
+    "platformclass": "research vessel",
+    "notes": "Coastguard/survey ship built by Briggs Marine, UK. Refitted to R/V in 2025. Used by the UK Environment Agency. Built date uncertain.",
+    "callsign": "MLMJ8",
+    "length": 12
+}}'''@en ;
+    skos:notation 'SDN:C17::74K8'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/74Y0/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/74Y0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/74Y0/>;
+    dc:modified '2026-06-12T10:06:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Uhuru'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "MMSI": 232039189,
+    "platformclass": "self-propelled boat",
+    "notes": "Tankers pilot operating in Loch Ewe, Scotland. Part of Scottish Coastal Observatory.",
+    "built": "2020-08-12",
+    "callsign": "MKJN6",
+    "length": 10,
+    "commissioned": "2022-02-28"
+}}'''@en ;
+    skos:notation 'SDN:C17::74Y0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/PAOM/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/PAOM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/PAOM/>;
+    dc:modified '2026-06-12T10:06:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Pyxis Leader'@en ;
+    skos:definition '''{"node": {
+    "country": "Panama",
+    "MMSI": 354591000,
+    "platformclass": "vessel of opportunity",
+    "notes": "Vehicles Carrier. Built as PYXIS LEADER",
+    "built": 2004,
+    "callsign": "H9ML",
+    "length": 199,
+    "IMO": 9284738,
+    "commissioned": 2004,
+    "JCOMMOPs_Recruitment_Date": "2026-02-02"
+}}'''@en ;
+    skos:notation 'SDN:C17::PAOM'^^xsd:string .
