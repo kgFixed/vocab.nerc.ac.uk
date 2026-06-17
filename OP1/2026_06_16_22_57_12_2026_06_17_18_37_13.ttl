@@ -1,0 +1,102 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/OP1/2026_06_16_22_57_12_2026_06_17_18_37_13.ttl> .
+
+<>
+    a tree:Node
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OP1/current/OPL1/1/> .
+<http://vocab.nerc.ac.uk/collection/OP1/current/OPL1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OP1/current/OPL1/>;
+    dc:modified '2026-06-16T23:07:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Formation'@en ;
+    skos:definition 'The practice is ad hoc with some documentation.'@en ;
+    skos:notation 'SDN:OP1::OPL1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OP1/current/OPL2/1/> .
+<http://vocab.nerc.ac.uk/collection/OP1/current/OPL2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OP1/current/OPL2/>;
+    dc:modified '2026-06-16T23:07:00'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Repeatable'@en ;
+    skos:definition 'The practice is defined and informally documented and the practice is repeatable by the practice creator.'@en ;
+    skos:notation 'SDN:OP1::OPL2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OP1/current/OPL5/1/> .
+<http://vocab.nerc.ac.uk/collection/OP1/current/OPL5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OP1/current/OPL5/>;
+    dc:modified '2026-06-16T23:07:00'^^xsd:dateTime ;
+    skos:altLabel 'best practice'^^xsd:string ;
+    skos:prefLabel 'Sustained'@en ;
+    skos:definition 'The practice has been reviewed by an internal or external multi-institutional Expert Panel or Expert Working Group, and that review has been documented in either the document or elsewhere; the practice is approved and published by an ocean-focused organization or organizational unit. Practice is adopted at least regionally. Practice includes either a defined process or a clear description of how quality is assessed. Practice has specific methods or approaches to implement user feedback and approve updates. Practice documentation includes or references training materials relevant to the practice.'@en ;
+    skos:notation 'SDN:OP1::OPL5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OP1/current/OPL4/1/> .
+<http://vocab.nerc.ac.uk/collection/OP1/current/OPL4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OP1/current/OPL4/>;
+    dc:modified '2026-06-16T23:07:00'^^xsd:dateTime ;
+    skos:altLabel 'better practice'^^xsd:string ;
+    skos:prefLabel 'Adopted'@en ;
+    skos:definition 'The practice is actively used by multiple institutions. Practice documentation includes or references specific procedures for practitioners to confirm their proper implementation of the practice. Practice documentation is sufficient for the key outcomes of the practice to be understood and used by stakeholders without detailed knowledge of this and similar practices. A Mechanism(s) is available for evolution of practice and its documentation through feedback contact information (e.g. emails), review meetings or other means for user feedback. Practice documentation uses consistent document structure and descriptive information (metadata) that follow recognized international or regional documentation.'@en ;
+    skos:notation 'SDN:OP1::OPL4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/OP1/current/OPL3/1/> .
+<http://vocab.nerc.ac.uk/collection/OP1/current/OPL3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/OP1/current/OPL3/>;
+    dc:modified '2026-06-16T23:07:00'^^xsd:dateTime ;
+    skos:altLabel 'good practice'^^xsd:string ;
+    skos:prefLabel 'Documented'@en ;
+    skos:definition 'The practice is formally documented and described by metadata which both conform at least to some existing guidelines. Practice documentation is openly available in a sustained repository with a permanent identifier such as a DOI or ISBN. Practice documentation is sufficient for replication by a practitioner with prior experience using similar practices.'@en ;
+    skos:notation 'SDN:OP1::OPL3'^^xsd:string .
