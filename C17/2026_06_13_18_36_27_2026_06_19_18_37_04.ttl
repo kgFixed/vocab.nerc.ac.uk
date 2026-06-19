@@ -1,0 +1,406 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C17/2026_06_13_18_36_27_2026_06_19_18_37_04.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C17/2026_06_10_18_37_06_2026_06_13_18_36_26.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-06-19T18:37:04'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/39FI/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/39FI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/39FI/>;
+    dc:modified '2026-06-18T16:24:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'SG678'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "platformclass": "sub-surface gliders",
+    "notes": "Underwater Seaglider SG678 (WMO code 4802996) operated by Caribbean Coastal Ocean Observing System (CARICOOS). Glider SG678 was active as of 2025.",
+    "WMO_Number": 4802996,
+    "WOD": 12012,
+    "commissioned": 2020
+}}'''@en ;
+    skos:notation 'SDN:C17::39FI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/39PT/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/39PT/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/39PT/>;
+    dc:modified '2026-06-18T16:24:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'd639sg17'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "platformclass": "sub-surface gliders",
+    "notes": "Underwater Slocum Glider d639sg17 (serial number 639, WMO code 8901027) owned by the United States Naval Research Laboratory. Glider d639sg17 was active as of 2023.",
+    "length": 1.5,
+    "WMO_Number": 8901027,
+    "commissioned": 2023
+}}'''@en ;
+    skos:notation 'SDN:C17::39PT'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/39QV/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/39QV/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/39QV/>;
+    dc:modified '2026-06-18T16:24:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CP 375'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "synonym": "cp_375",
+    "platformclass": "sub-surface gliders",
+    "notes": "Underwater Slocum glider CP 375, also known as cp_375 (WMO code 4801988) operated by Ocean Observatories Initiative (OOI) Coastal & Global Scale Nodes (CGSN). Glider CP 375 was active as of 2015.",
+    "WMO_Number": 4801988,
+    "WOD": 12030,
+    "commissioned": 2015
+}}'''@en ;
+    skos:notation 'SDN:C17::39QV'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/5474/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/5474/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/5474/>;
+    dc:modified '2026-06-18T16:24:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Conti Benguela'@en ;
+    skos:definition '''{"node": {
+    "country": "Liberia",
+    "MMSI": 636091569,
+    "platformclass": "vessel of opportunity",
+    "notes": "Oil/Chemical Tanker. Built as CONTI BENGUELA",
+    "built": 2008,
+    "callsign": "A8PL7",
+    "length": 185,
+    "IMO": 9391373,
+    "commissioned": 2008,
+    "JCOMMOPs_Recruitment_Date": "2025-10-13"
+}}'''@en ;
+    skos:notation 'SDN:C17::5474'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/MLYY/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/MLYY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/MLYY/>;
+    dc:modified '2026-06-18T16:24:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CMA CGM Marlin'@en ;
+    skos:definition '''{"node": {
+    "country": "Malta",
+    "MMSI": 229705000,
+    "platformclass": "vessel of opportunity",
+    "notes": "Container Ship. Built as Ital Laguna (IT), became CMA CGM MARLIN (MT) in December 2021",
+    "built": 2006,
+    "callsign": "9HA5569",
+    "length": 249,
+    "previous_name": "Ital Laguna",
+    "IMO": 9322463,
+    "commissioned": "2021-12",
+    "JCOMMOPs_Recruitment_Date": "2025-10-12"
+}}'''@en ;
+    skos:notation 'SDN:C17::MLYY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/PABR/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/PABR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/PABR/>;
+    dc:modified '2026-06-18T16:24:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Prism Brilliance'@en ;
+    skos:definition '''{"node": {
+    "country": "Panama",
+    "MMSI": 371086000,
+    "platformclass": "vessel of opportunity",
+    "notes": "LNG Tanker. Built as PRISM BRILLIANCE",
+    "built": 2019,
+    "callsign": "3FXT5",
+    "length": 299,
+    "IMO": 9810551,
+    "commissioned": 2019,
+    "JCOMMOPs_Recruitment_Date": "2025-10-01"
+}}'''@en ;
+    skos:notation 'SDN:C17::PABR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/PAVW/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/PAVW/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/PAVW/>;
+    dc:modified '2026-06-18T16:24:40'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CMA CGM Kailas'@en ;
+    skos:definition '''{"node": {
+    "country": "Panama",
+    "MMSI": 371866000,
+    "platformclass": "vessel of opportunity",
+    "notes": "Container Ship. Built as CMA CGM KAILAS. Built under the Bahamas flag, changed to the Panama flag in March 2006",
+    "built": "2006-02",
+    "callsign": "3ECM4",
+    "length": 197,
+    "IMO": 9339545,
+    "commissioned": "2006-03",
+    "JCOMMOPs_Recruitment_Date": "2025-10-12"
+}}'''@en ;
+    skos:notation 'SDN:C17::PAVW'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/49AS/6/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/49AS/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/49AS/>;
+    dc:modified '2026-06-18T16:24:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Asashio Maru'@en ;
+    skos:definition '''{"node": {
+    "country": "Japan",
+    "decommissioned": 2010,
+    "MMSI": 431000378,
+    "platformclass": "vessel of opportunity on fixed route",
+    "notes": "Ro-Ro passenger ferry.",
+    "built": 1989,
+    "callsign": "JJ3661",
+    "length": 65.02,
+    "IMO": 8904238,
+    "commissioned": 1989
+}}'''@en ;
+    skos:notation 'SDN:C17::49AS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/49BB/6/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/49BB/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/49BB/>;
+    dc:modified '2026-06-18T16:24:39'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ashiya Maru'@en ;
+    skos:definition '''{"node": {
+    "country": "Japan",
+    "platformclass": "self-propelled boat",
+    "notes": "Tug.",
+    "built": 1990,
+    "callsign": "JJ3677",
+    "length": 43,
+    "IMO": 9004994
+}}'''@en ;
+    skos:notation 'SDN:C17::49BB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/49C4/6/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/49C4/6/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/49C4/>;
+    dc:modified '2026-06-18T15:18:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Chokai'@en ;
+    skos:definition '''{"node": {
+    "country": "Japan",
+    "platformclass": "naval vessel",
+    "notes": "Patrol vessel.",
+    "built": 1979,
+    "callsign": "8KXB",
+    "length": 77,
+    "IMO": 7900792
+}}'''@en ;
+    skos:notation 'SDN:C17::49C4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/543C/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/543C/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/543C/>;
+    dc:modified '2026-06-18T15:18:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Weser Point'@en ;
+    skos:definition '''{"node": {
+    "country": "Liberia",
+    "MMSI": 636093358,
+    "platformclass": "vessel of opportunity",
+    "notes": "Bulk Carrier. Built as WESER POINT",
+    "built": 2025,
+    "callsign": "5LVE9",
+    "length": 229,
+    "IMO": 1033688,
+    "commissioned": 2025,
+    "JCOMMOPs_Recruitment_Date": "2025-10-27"
+}}'''@en ;
+    skos:notation 'SDN:C17::543C'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/546N/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/546N/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/546N/>;
+    dc:modified '2026-06-18T15:18:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'One Inspiration'@en ;
+    skos:definition '''{"node": {
+    "country": "Liberia",
+    "MMSI": 636023348,
+    "platformclass": "vessel of opportunity",
+    "notes": "Container Ship. Built ad ONE INSPIRATION",
+    "built": 2023,
+    "callsign": "5LNG9",
+    "length": 400,
+    "IMO": 9939149,
+    "commissioned": 2023,
+    "JCOMMOPs_Recruitment_Date": "2024-10-01"
+}}'''@en ;
+    skos:notation 'SDN:C17::546N'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/54YU/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/54YU/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/54YU/>;
+    dc:modified '2026-06-18T15:18:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'SFL Maui'@en ;
+    skos:definition '''{"node": {
+    "country": "Liberia",
+    "MMSI": 636021013,
+    "platformclass": "vessel of opportunity",
+    "notes": "Container Ship. Built as Skiathos, became DAL Karoo in March 2014, became Skiathos in March 2018, became Skiathos I in June 2019, became SFL MAUI in August 2021. Built under the Liberia flag, changed to Malta flag in June 2019, changed to Liberia flaf in August 2021",
+    "built": 2013,
+    "callsign": "5LBV2",
+    "length": 270,
+    "IMO": 9635688,
+    "commissioned": "2021-08",
+    "JCOMMOPs_Recruitment_Date": "2014-06-24"
+}}'''@en ;
+    skos:notation 'SDN:C17::54YU'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/AGBY/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/AGBY/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/AGBY/>;
+    dc:modified '2026-06-18T15:18:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Regula'@en ;
+    skos:definition '''{"node": {
+    "country": "Antigua and Barbuda",
+    "MMSI": 304304000,
+    "platformclass": "vessel of opportunity",
+    "notes": "Container Ship. Built as O M Nubium, became Hunze Trader in November 2008, became REGULA in October 2013. Built under the Liberia flag, changed to Cyprus in March 2009, changed to Antigua and Barbuda in October 2021",
+    "built": 2008,
+    "callsign": "V2QX5",
+    "length": 131.5,
+    "IMO": 9430064,
+    "commissioned": "2021-10",
+    "JCOMMOPs_Recruitment_Date": "2022-01-14"
+}}'''@en ;
+    skos:notation 'SDN:C17::AGBY'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/MLYI/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/MLYI/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/MLYI/>;
+    dc:modified '2026-06-18T15:18:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CMA CGM Fuzhou'@en ;
+    skos:definition '''{"node": {
+    "country": "Malta",
+    "MMSI": 229819000,
+    "platformclass": "vessel of opportunity",
+    "notes": "Container Ship. Built as Viking Merlin, became CMA CGM FUZHOU in February 2022. Built under the Liberia flag, changed to the Singapore flag in November 2016, changed to the Malta flag in February 2022",
+    "built": 2014,
+    "callsign": "9HA5608",
+    "length": 177,
+    "IMO": 9596313,
+    "commissioned": "2022-02",
+    "JCOMMOPs_Recruitment_Date": "2025-10-12"
+}}'''@en ;
+    skos:notation 'SDN:C17::MLYI'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/315M/4/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/315M/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/315M/>;
+    dc:modified '2026-06-18T15:18:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Maury'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "decommissioned": 1953,
+    "platformclass": "research vessel",
+    "notes": "Johns Hopkins University RV. Launched in 1950. WOD data 1949-1953. Out of UNOLS service 1972. Up for sale in 2013.",
+    "built": 1950,
+    "title": "RV",
+    "WOD": 2476,
+    "commissioned": 1949
+}}'''@en ;
+    skos:notation 'SDN:C17::315M'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/31MU/3/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/31MU/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/31MU/>;
+    dc:modified '2026-06-18T15:18:01'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Maury'@en ;
+    skos:definition '''{"node": {
+    "country": "United States",
+    "decommissioned": 1969,
+    "platformclass": "research vessel",
+    "notes": "US Navy hydrographic vessel.",
+    "built": 1945,
+    "pennant": "AGS-16",
+    "length": 130,
+    "previous_name": "Renate",
+    "title": "USS",
+    "WOD": 1802,
+    "commissioned": 1946
+}}'''@en ;
+    skos:notation 'SDN:C17::31MU'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/74PD/11/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/74PD/11/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/74PD/>;
+    dc:modified '2026-06-18T09:15:58'^^xsd:dateTime ;
+    skos:altLabel 'PM'^^xsd:string ;
+    skos:prefLabel 'Prince Madog'@en ;
+    skos:definition '''{"node": {
+    "country": "United Kingdom",
+    "decommissioned": "2001-07",
+    "platformclass": "research vessel",
+    "notes": "Operated by UCNW from 1968-2001. Became Madog in 2009.",
+    "built": 1968,
+    "callsign": "GTQU",
+    "IMO": 6615467,
+    "title": "RV",
+    "commissioned": 1968
+}}'''@en ;
+    skos:notation 'SDN:C17::74PD'^^xsd:string .
