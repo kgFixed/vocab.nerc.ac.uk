@@ -1,0 +1,124 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C17/2026_06_19_18_37_05_2026_06_23_18_36_45.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C17/2026_06_13_18_36_27_2026_06_19_18_37_04.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-06-23T18:36:45'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/545L/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/545L/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/545L/>;
+    dc:modified '2026-06-22T10:54:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Bu Fintas'@en ;
+    skos:definition '''{"node": {
+    "country": "Liberia",
+    "MMSI": 636024674,
+    "platformclass": "vessel of opportunity",
+    "notes": "LNG Tanker. Built as BU FINTAS",
+    "built": 2024,
+    "callsign": "5LTT6",
+    "length": 290,
+    "IMO": 9976824,
+    "commissioned": 2024,
+    "JCOMMOPs_Recruitment_Date": "2025-10-01"
+}}'''@en ;
+    skos:notation 'SDN:C17::545L'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/PAI6/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/PAI6/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/PAI6/>;
+    dc:modified '2026-06-22T10:54:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'G. Spirit'@en ;
+    skos:definition '''{"node": {
+    "country": "Panama",
+    "MMSI": 374993000,
+    "platformclass": "vessel of opportunity",
+    "notes": "LPG Tanker. Built as G. SPIRIT",
+    "built": 2018,
+    "callsign": "3EEW9",
+    "length": 225,
+    "IMO": 9797876,
+    "commissioned": 2018,
+    "JCOMMOPs_Recruitment_Date": "2025-10-01"
+}}'''@en ;
+    skos:notation 'SDN:C17::PAI6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/PARS/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/PARS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/PARS/>;
+    dc:modified '2026-06-22T10:54:13'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Prism Agility'@en ;
+    skos:definition '''{"node": {
+    "country": "Panama",
+    "MMSI": 372487000,
+    "platformclass": "vessel of opportunity",
+    "notes": "LNG Tanker. Built as PRISM AGILITY",
+    "built": 2019,
+    "callsign": "3FNY8",
+    "length": 299,
+    "IMO": 9810549,
+    "commissioned": 2019,
+    "JCOMMOPs_Recruitment_Date": "2025-10-01"
+}}'''@en ;
+    skos:notation 'SDN:C17::PARS'^^xsd:string .
