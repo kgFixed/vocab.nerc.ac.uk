@@ -1,0 +1,523 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2026_06_10_18_37_22_2026_06_24_18_37_04.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2026_05_30_18_36_30_2026_06_10_18_37_21.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-06-24T18:37:04'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/B3TERTB0/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/B3TERTB0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/B3TERTB0/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_3-TBPDP_drysed_lcms'^^xsd:string ;
+    skos:prefLabel 'Concentration of (3-tert-butylphenyl) diphenyl phosphate per unit dry weight of sediment by liquid chromatography-mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::B3TERTB0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BTAFLUO3/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BTAFLUO3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BTAFLUO3/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS113507-82-7_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of 1,1,2,2-tetrafluoro-2-(1,1,2,2,2-pentafluoroethoxy)ethanesulfonic acid {PFEESA CAS 113507-82-7} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::BTAFLUO3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BDECANE7/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BDECANE7/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BDECANE7/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS120226-60-0_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of 3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,12-henicosafluorododecane-1-sulfonic acid {10:2 FTSA CAS 120226-60-0} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::BDECANE7'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BLPHOSP6/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BLPHOSP6/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BLPHOSP6/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS126-72-7_drysed_lcms'^^xsd:string ;
+    skos:prefLabel 'Concentration of tris(2,3-dibromopropyl) phosphate {TDBPP CAS 126-72-7} per unit dry weight of sediment by liquid chromatography-mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BLPHOSP6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BUOROPR1/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BUOROPR1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BUOROPR1/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS13252-13-6_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of 2,3,3,3-tetrafluoro-2-(heptafluoropropoxy)propanoic acid {CAS 13252-13-6} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::BUOROPR1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BNMETHY5/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BNMETHY5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BNMETHY5/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS2355-31-9_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of N-methyl perfluorooctane sulfonamidoacetic acid {NMeFOSAA CAS 2355-31-9} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::BNMETHY5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BOSPHAT2/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BOSPHAT2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BOSPHAT2/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS2528-38-3_drysed_lcms'^^xsd:string ;
+    skos:prefLabel 'Concentration of tripentyl phosphate {CAS 2528-38-3} per unit dry weight of sediment by liquid chromatography-mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BOSPHAT2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BEXYLPH7/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BEXYLPH7/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BEXYLPH7/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS2528-39-4_drysed_lcms'^^xsd:string ;
+    skos:prefLabel 'Concentration of trihexyl phosphate {CAS 2528-39-4} per unit dry weight of sediment by liquid chromatography-mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BEXYLPH7'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BYLDIPH3/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BYLDIPH3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BYLDIPH3/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS26444-49-5_drysed_lcms'^^xsd:string ;
+    skos:prefLabel 'Concentration of (2-methylphenyl) diphenyl phosphate {Diphenyl cresyl phosphate CAS 26444-49-5} per unit dry weight of sediment by liquid chromatography-mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BYLDIPH3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BENTANO4/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BENTANO4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BENTANO4/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS2706-90-3_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of perfluoropentanoic acid {CAS 2706-90-3} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::BENTANO4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BLPHOSP2/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BLPHOSP2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BLPHOSP2/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS29761-21-5_drysed_lcms'^^xsd:string ;
+    skos:prefLabel 'Concentration of 8-methylnonyl diphenyl phosphate {Isodecyl diphenyl phosphate CAS 29761-21-5} per unit dry weight of sediment by liquid chromatography-mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BLPHOSP2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BSULFON0/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BSULFON0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BSULFON0/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS2991-50-6_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of 2-[ethyl(1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8-heptadecafluorooctylsulfonyl)amino]acetic acid {N-ethylperfluorooctane sulfonamidoacetic acid CAS 2991-50-6} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::BSULFON0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/B1SULFO9/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/B1SULFO9/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/B1SULFO9/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS30334-69-1_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of 1,1,2,2,3,3,4,4,4-nonafluorobutane-1-sulfonamide {FBSA CAS 30334-69-1} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::B1SULFO9'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BONYLAM6/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BONYLAM6/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BONYLAM6/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS34455-29-3_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of 2-[dimethyl-[3-(3,3,4,4,5,5,6,6,7,7,8,8,8-tridecafluorooctylsulfonylamino)propyl]azaniumyl]acetate {Capstone B CAS 34455-29-3} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::BONYLAM6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/B5666HE0/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/B5666HE0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/B5666HE0/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS356-02-5_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of 4,4,5,5,6,6,6-heptafluorohexanoic acid {3:3 FTCA CAS 356-02-5} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::B5666HE0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BINICAC4/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BINICAC4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BINICAC4/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS40143-79-1_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of bis(1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8-heptadecafluorooctyl)phosphinic acid {8:8 PFPi CAS 40143-79-1} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::BINICAC4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/B21212H3/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/B21212H3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/B21212H3/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS53826-13-4_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of 3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,12-henicosafluorododecanoic acid {10:2 FTCA CAS 53826-13-4} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::B21212H3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/B666TRI1/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/B666TRI1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/B666TRI1/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS610800-34-5_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of 1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8-heptadecafluorooctyl(1,1,2,2,3,3,4,4,5,5,6,6,6-tridecafluorohexyl)phosphinic acid {6:8 PFPi CAS 610800-34-5} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::B666TRI1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BCAFLUO0/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BCAFLUO0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BCAFLUO0/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS646-83-3_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of 1,2,2,3,3,4,5,5,6,6-decafluoro-4-(1,1,2,2,2-pentafluoroethyl)cyclohexane-1-sulfonic acid {PFECHS CAS 646-83-3} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::BCAFLUO0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BHOSPHA4/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BHOSPHA4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BHOSPHA4/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS69515-46-4_drysed_lcms'^^xsd:string ;
+    skos:prefLabel 'Concentration of diphenyl (3-propan-2-ylphenyl) phosphate {CAS 69515-46-4} per unit dry weight of sediment by liquid chromatography-mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BHOSPHA4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/B26CHLO4/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/B26CHLO4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/B26CHLO4/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS73606-19-6_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of potassium 2-(6-chloro-1,1,2,2,3,3,4,4,5,5,6,6-dodecafluorohexoxy)-1,1,2,2-tetrafluoroethanesulfonate {CAS 73606-19-6} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::B26CHLO4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BLEDYSP2/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BLEDYSP2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BLEDYSP2/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS7429-91-6_drysed_icpms'^^xsd:string ;
+    skos:prefLabel 'Concentration of labile dysprosium {CAS 7429-91-6} per unit dry weight of sediment by inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BLEDYSP2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BELITHI6/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BELITHI6/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BELITHI6/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS7439-93-2_drysed_icpms'^^xsd:string ;
+    skos:prefLabel 'Concentration of labile lithium {CAS 7439-93-2} per unit dry weight of sediment by inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BELITHI6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BILELUT5/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BILELUT5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BILELUT5/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS7439-94-3_drysed_icpms'^^xsd:string ;
+    skos:prefLabel 'Concentration of labile lutetium {CAS 7439-94-3} per unit dry weight of sediment by inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BILELUT5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BNEODYM7/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BNEODYM7/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BNEODYM7/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS7440-00-8_drysed_icpms'^^xsd:string ;
+    skos:prefLabel 'Concentration of labile neodymium {CAS 7440-00-8} per unit dry weight of sediment by inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BNEODYM7'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BLEPRAS8/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BLEPRAS8/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BLEPRAS8/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS7440-10-0_drysed_icpms'^^xsd:string ;
+    skos:prefLabel 'Concentration of labile praseodymium {CAS 7440-10-0} per unit dry weight of sediment by inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BLEPRAS8'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BSAMARI7/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BSAMARI7/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BSAMARI7/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS7440-19-9_drysed_icpms'^^xsd:string ;
+    skos:prefLabel 'Concentration of labile samarium {CAS 7440-19-9} per unit dry weight of sediment by inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BSAMARI7'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BABILET1/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BABILET1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BABILET1/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS7440-27-9_drysed_icpms'^^xsd:string ;
+    skos:prefLabel 'Concentration of labile terbium {CAS 7440-27-9} per unit dry weight of sediment by inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BABILET1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BETHULI9/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BETHULI9/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BETHULI9/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS7440-30-4_drysed_icpms'^^xsd:string ;
+    skos:prefLabel 'Concentration of labile thulium {CAS 7440-30-4} per unit dry weight of sediment by inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BETHULI9'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BABILET4/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BABILET4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BABILET4/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS7440-31-5_drysed_icpms'^^xsd:string ;
+    skos:prefLabel 'Concentration of labile tin {CAS 7440-31-5} per unit dry weight of sediment by inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BABILET4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BNTIMON3/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BNTIMON3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BNTIMON3/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS7440-36-0_drysed_icpms'^^xsd:string ;
+    skos:prefLabel 'Concentration of labile antimony {CAS 7440-36-0} per unit dry weight of sediment by inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BNTIMON3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BARSENI6/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BARSENI6/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BARSENI6/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS7440-38-2_drysed_icpms'^^xsd:string ;
+    skos:prefLabel 'Concentration of labile arsenic {CAS 7440-38-2} per unit dry weight of sediment by inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BARSENI6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BRYLLIU6/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BRYLLIU6/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BRYLLIU6/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS7440-41-7_drysed_icpms'^^xsd:string ;
+    skos:prefLabel 'Concentration of labile beryllium {CAS 7440-41-7} per unit dry weight of sediment by inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BRYLLIU6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BLABILE2/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BLABILE2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BLABILE2/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS7440-47-3_drysed_icpms'^^xsd:string ;
+    skos:prefLabel 'Concentration of labile chromium {CAS 7440-47-3} per unit dry weight of sediment by inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BLABILE2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BLEERBI5/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BLEERBI5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BLEERBI5/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS7440-52-0_drysed_icpms'^^xsd:string ;
+    skos:prefLabel 'Concentration of labile erbium {CAS 7440-52-0} per unit dry weight of sediment by inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BLEERBI5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BUROPIU5/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BUROPIU5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BUROPIU5/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS7440-53-1_drysed_icpms'^^xsd:string ;
+    skos:prefLabel 'Concentration of labile europium {CAS 7440-53-1} per unit dry weight of sediment by inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BUROPIU5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BDOLINI3/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BDOLINI3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BDOLINI3/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS7440-54-2_drysed_icpms'^^xsd:string ;
+    skos:prefLabel 'Concentration of labile gadolinium {CAS 7440-54-2} per unit dry weight of sediment by inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BDOLINI3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BEHOLMI5/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BEHOLMI5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BEHOLMI5/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS7440-60-0_drysed_icpms'^^xsd:string ;
+    skos:prefLabel 'Concentration of labile holmium {CAS 7440-60-0} per unit dry weight of sediment by inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BEHOLMI5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BLEURAN4/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BLEURAN4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BLEURAN4/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS7440-61-1_drysed_icpms'^^xsd:string ;
+    skos:prefLabel 'Concentration of labile uranium {CAS 7440-61-1} per unit dry weight of sediment by inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BLEURAN4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BYTTERB0/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BYTTERB0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BYTTERB0/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS7440-64-4_drysed_icpms'^^xsd:string ;
+    skos:prefLabel 'Concentration of labile ytterbium {CAS 7440-64-4} per unit dry weight of sediment by inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::BYTTERB0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/B1SULFO4/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/B1SULFO4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/B1SULFO4/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS749786-16-1_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of 1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,11-tricosafluoroundecane-1-sulfonic acid {PFUnDS CAS 749786-16-1} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::B1SULFO4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BTRIFLU0/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BTRIFLU0/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BTRIFLU0/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS76-05-1_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of 2,2,2-trifluoroacetic acid {CAS 76-05-1} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::BTRIFLU0'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BORO1125/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BORO1125/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BORO1125/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS777011-38-8_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of 8-chloro-1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8-hexadecafluorooctane-1-sulfonic acid {Cl-PFOS CAS 777011-38-8} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::BORO1125'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BANE1SU5/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BANE1SU5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BANE1SU5/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS791563-89-8_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of 1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13,13-heptacosafluorotridecane-1-sulfonic acid {PFTrDS CAS 791563-89-8} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::BANE1SU5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BRODODE2/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BRODODE2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BRODODE2/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS79780-39-5_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of 1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,12-pentacosafluorododecane-1-sulfonic acid {PFDoS CAS 79780-39-5} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::BRODODE2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BIMETHY6/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BIMETHY6/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BIMETHY6/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS80475-32-7_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of 3-(dimethylamino)-N-(3,3,4,4,5,5,6,6,7,7,8,8,8-tridecafluorooctylsulfonyl)propan-1-amine oxide {Capstone A CAS 80475-32-7} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::BIMETHY6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BTADECA1/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BTADECA1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BTADECA1/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS812-70-4_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of 4,4,5,5,6,6,7,7,8,8,9,9,10,10,10-pentadecafluorodecanoic acid {7:3 FTCA CAS 812-70-4} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::BTADECA1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BAFLUOR5/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BAFLUOR5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BAFLUOR5/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS83329-89-9_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of potassium 2-(8-chloro-1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8-hexadecafluorooctoxy)-1,1,2,2-tetrafluoroethanesulfonate {CAS 83329-89-9} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::BAFLUOR5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/B22TETR6/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/B22TETR6/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/B22TETR6/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS908020-52-0_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of azanium 2,2-difluoro-2-[1,1,2,2-tetrafluoro-2-(1,1,2,2,2-pentafluoroethoxy)ethoxy]acetate {CAS 908020-52-0} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::B22TETR6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/B77888U3/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/B77888U3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/B77888U3/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS914637-49-3_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of 4,4,5,5,6,6,7,7,8,8,8-undecafluorooctanoic acid {5:3 FTCA CAS 914637-49-3} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::B77888U3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BROPANO5/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BROPANO5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BROPANO5/>;
+    dc:modified '2026-06-23T16:48:18'^^xsd:dateTime ;
+    skos:altLabel 'Conc_CAS919005-14-4_drysed<2000um_ws_lchrms'^^xsd:string ;
+    skos:prefLabel 'Concentration of 2,2,3-trifluoro-3-[1,1,2,2,3,3-hexafluoro-3-(trifluoromethoxy)propoxy]propanoic acid {ADONA CAS 919005-14-4} per unit dry weight of sediment <2000um by wet sieving and liquid chromatography-high resolution mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a subsample of wet sediment that passes through a 2000 micron sieve and analysed by the specified method. The measurement is then reported on a dry weight basis.'@en ;
+    skos:notation 'SDN:P01::BROPANO5'^^xsd:string .
