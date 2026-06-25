@@ -1,0 +1,73 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C00/2026_04_27_17_47_15_2026_06_25_18_36_27.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C00/2020_01_01_00_00_00_2026_04_27_17_47_14.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-06-25T18:36:27'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C00/current/GEBCO2601/1/> .
+<http://vocab.nerc.ac.uk/collection/C00/current/GEBCO2601/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C00/current/GEBCO2601/>;
+    dc:modified '2026-06-24T09:37:41'^^xsd:dateTime ;
+    skos:altLabel 'GEBCO_26_20260423'^^xsd:string ;
+    skos:prefLabel 'GEBCO_26 grid version 20260423'@en ;
+    skos:definition 'Bathymetric depth set to the value for the 15-second by 15-second grid cell containing the series spatial coverage from the GEBCO_2026 gridded bathymetry finalised on 2026-04-23.'@en ;
+    skos:notation 'SDN:C00::GEBCO2601'^^xsd:string .
