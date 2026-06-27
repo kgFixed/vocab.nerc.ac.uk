@@ -1,0 +1,82 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C75/2026_05_06_18_35_39_2026_06_27_18_35_47.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C75/2026_04_28_18_36_03_2026_05_06_18_35_38.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-06-27T18:35:47'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/PCC/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/PCC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/PCC/>;
+    dc:modified '2026-06-26T15:30:53'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Pontifical Catholic University of Chile, Department of Hydraulic and Environmental Engineering'@en ;
+    skos:definition 'Native name is Pontificia Universidad Católica de Chile, Departamento de Ingeniería Hidráulica y Ambiental.'@en ;
+    skos:notation 'SDN:C75::PCC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/PES/3/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/PES/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/PES/>;
+    dc:modified '2026-06-26T10:52:38'^^xsd:dateTime ;
+    skos:altLabel 'Portsmouth SEES'^^xsd:string ;
+    skos:prefLabel 'University of Portsmouth, School of the Environment and Life Sciences'@en ;
+    skos:definition 'Portsmouth Polytechnic Department of Geology (1969 to 1992-07-06); University of Portsmouth Department of Geology (1992-07-07 to 1996); University of Portsmouth School of Earth and Environmental Sciences (1997 to 2019-08); University of Portsmouth, School of the Environment, Geography and Geosciences (2019-09 to 2024-07); University of Portsmouth, School of the Environment and Life Sciences (2024-08 to present);'@en ;
+    skos:notation 'SDN:C75::PES'^^xsd:string .
