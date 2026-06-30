@@ -1,0 +1,172 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C75/2026_06_27_18_35_48_2026_06_30_18_37_42.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C75/2026_05_06_18_35_39_2026_06_27_18_35_47.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-06-30T18:37:42'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/HIR/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/HIR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/HIR/>;
+    dc:modified '2026-06-29T16:28:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Highlands Rewilding'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::HIR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/ULS/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/ULS/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/ULS/>;
+    dc:modified '2026-06-29T16:28:18'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ulster Wildlife'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::ULS'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/CWR/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/CWR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/CWR/>;
+    dc:modified '2026-06-29T16:28:18'^^xsd:dateTime ;
+    skos:altLabel 'CWR'^^xsd:string ;
+    skos:prefLabel 'Center for Whale Research'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::CWR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/CDZ/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/CDZ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/CDZ/>;
+    dc:modified '2026-06-29T16:28:18'^^xsd:dateTime ;
+    skos:altLabel 'Cambridge Zoology'^^xsd:string ;
+    skos:prefLabel 'University of Cambridge, Department of Zoology'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::CDZ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/DUB/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/DUB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/DUB/>;
+    dc:modified '2026-06-29T16:28:18'^^xsd:dateTime ;
+    skos:altLabel 'Duke Biology'^^xsd:string ;
+    skos:prefLabel 'Duke University, Department of Biology'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::DUB'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/LIZ/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/LIZ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/LIZ/>;
+    dc:modified '2026-06-29T16:28:18'^^xsd:dateTime ;
+    skos:altLabel 'IZW'^^xsd:string ;
+    skos:prefLabel 'Leibniz Institute for Zoo and Wildlife Research'@en ;
+    skos:definition 'Native name is Leibniz-Institut für Zoo- und Wildtierforschung.'@en ;
+    skos:notation 'SDN:C75::LIZ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/PEA/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/PEA/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/PEA/>;
+    dc:modified '2026-06-29T16:28:18'^^xsd:dateTime ;
+    skos:altLabel 'MPG-EVA'^^xsd:string ;
+    skos:prefLabel 'Max Planck Institute for Evolutionary Anthropology'@en ;
+    skos:definition 'Native name is Max-Planck-Institut für evolutionäre Anthropologie.'@en ;
+    skos:notation 'SDN:C75::PEA'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/NWM/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/NWM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/NWM/>;
+    dc:modified '2026-06-29T16:28:18'^^xsd:dateTime ;
+    skos:altLabel 'NWMC'^^xsd:string ;
+    skos:prefLabel 'National Wildlife Management Centre'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::NWM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/QSM/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/QSM/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/QSM/>;
+    dc:modified '2026-06-29T16:28:18'^^xsd:dateTime ;
+    skos:altLabel 'SMAE'^^xsd:string ;
+    skos:prefLabel 'Queen\'s University Belfast, School of Mechanical and Aerospace Engineering'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::QSM'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/TCP/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/TCP/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/TCP/>;
+    dc:modified '2026-06-29T16:28:18'^^xsd:dateTime ;
+    skos:altLabel 'TCP'^^xsd:string ;
+    skos:prefLabel 'Taï Chimpanzee Project'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::TCP'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/UWC/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/UWC/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/UWC/>;
+    dc:modified '2026-06-29T16:28:18'^^xsd:dateTime ;
+    skos:altLabel 'Washington Biology'^^xsd:string ;
+    skos:prefLabel 'University of Washington, Center for Conservation Biology'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::UWC'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/UYB/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/UYB/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/UYB/>;
+    dc:modified '2026-06-29T16:28:18'^^xsd:dateTime ;
+    skos:altLabel 'York Biology'^^xsd:string ;
+    skos:prefLabel 'University of York, Department of Biology'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::UYB'^^xsd:string .

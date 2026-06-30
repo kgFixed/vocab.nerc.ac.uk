@@ -1,0 +1,181 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/B75/2026_06_27_18_35_43_2026_06_30_18_37_37.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/B75/2026_05_06_18_35_35_2026_06_27_18_35_42.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-06-30T18:37:37'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02214/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02214/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02214/>;
+    dc:modified '2026-06-29T12:21:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Highlands Rewilding'@en ;
+    skos:definition 'Organisation e-mail: info@highlandsrewilding.co.uk; Organisation website: https://www.highlandsrewilding.co.uk/'@en ;
+    skos:notation 'SDN:B75::ORG02214'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02215/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02215/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02215/>;
+    dc:modified '2026-06-29T12:21:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Ulster Wildlife'@en ;
+    skos:definition 'Organisation e-mail: info@ulsterwildlife.org; Organisation website: https://www.ulsterwildlife.org/'@en ;
+    skos:notation 'SDN:B75::ORG02215'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02216/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02216/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02216/>;
+    dc:modified '2026-06-29T12:21:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Queen\'s University Belfast, School of Mechanical and Aerospace Engineering'@en ;
+    skos:definition 'Organisation e-mail: schooloffice.mae@qub.ac.uk; Organisation website: https://www.qub.ac.uk/schools/SchoolofMechanicalandAerospaceEngineering/'@en ;
+    skos:notation 'SDN:B75::ORG02216'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG00018/2/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG00018/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG00018/>;
+    dc:modified '2026-06-29T11:33:26'^^xsd:dateTime ;
+    skos:altLabel 'York Biology'^^xsd:string ;
+    skos:prefLabel 'University of York, Department of Biology'@en ;
+    skos:definition 'Organisation e-mail: biol-reception@york.ac.uk; Organisation website: http://york.ac.uk/biology/'@en ;
+    skos:notation 'SDN:B75::ORG00018'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02206/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02206/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02206/>;
+    dc:modified '2026-06-29T10:45:47'^^xsd:dateTime ;
+    skos:altLabel 'CWR'^^xsd:string ;
+    skos:prefLabel 'Center for Whale Research'@en ;
+    skos:definition 'Organisation e-mail: info@whaleresearch.com; Organisation website: https://www.whaleresearch.com/'@en ;
+    skos:notation 'SDN:B75::ORG02206'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02212/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02212/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02212/>;
+    dc:modified '2026-06-29T10:45:47'^^xsd:dateTime ;
+    skos:altLabel 'Cambridge Zoology'^^xsd:string ;
+    skos:prefLabel 'University of Cambridge, Department of Zoology'@en ;
+    skos:definition 'Organisation e-mail: reception@zoo.cam.ac.uk; Organisation website: https://www.zoo.cam.ac.uk/'@en ;
+    skos:notation 'SDN:B75::ORG02212'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02208/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02208/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02208/>;
+    dc:modified '2026-06-29T10:45:47'^^xsd:dateTime ;
+    skos:altLabel 'Duke Biology'^^xsd:string ;
+    skos:prefLabel 'Duke University, Department of Biology'@en ;
+    skos:definition 'Organisation e-mail: biologygrants@duke.edu; Organisation website: https://biology.duke.edu/'@en ;
+    skos:notation 'SDN:B75::ORG02208'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02210/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02210/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02210/>;
+    dc:modified '2026-06-29T10:45:47'^^xsd:dateTime ;
+    skos:altLabel 'Leibniz-IZW'^^xsd:string ;
+    skos:prefLabel 'Leibniz Institute for Zoo and Wildlife Research'@en ;
+    skos:definition 'Organisation e-mail: direktor@izw-berlin.de; Organisation website: https://www.izw-berlin.de/en/'@en ;
+    skos:notation 'SDN:B75::ORG02210'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02211/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02211/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02211/>;
+    dc:modified '2026-06-29T10:45:47'^^xsd:dateTime ;
+    skos:altLabel 'MPG-EVA'^^xsd:string ;
+    skos:prefLabel 'Max Planck Institute for Evolutionary Anthropology'@en ;
+    skos:definition 'Organisation e-mail: info@eva.mpg.de; Organisation website: https://www.eva.mpg.de/index/'@en ;
+    skos:notation 'SDN:B75::ORG02211'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02209/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02209/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02209/>;
+    dc:modified '2026-06-29T10:45:47'^^xsd:dateTime ;
+    skos:altLabel 'NWMC'^^xsd:string ;
+    skos:prefLabel 'National Wildlife Management Centre'@en ;
+    skos:definition 'Organisation e-mail: nwmc@apha.gsi.gov.uk; Organisation website: https://www.aphascientific.com/services/wildlife-management/'@en ;
+    skos:notation 'SDN:B75::ORG02209'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02213/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02213/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02213/>;
+    dc:modified '2026-06-29T10:45:47'^^xsd:dateTime ;
+    skos:altLabel 'TCP'^^xsd:string ;
+    skos:prefLabel 'Ta� Chimpanzee Project'@en ;
+    skos:definition 'Organisation e-mail: taichimpanzeeproject@gmail.com; Organisation website: https://www.taichimpproject.org/'@en ;
+    skos:notation 'SDN:B75::ORG02213'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02207/1/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02207/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02207/>;
+    dc:modified '2026-06-29T10:45:47'^^xsd:dateTime ;
+    skos:altLabel 'Washington Biology'^^xsd:string ;
+    skos:prefLabel 'University of Washington, Center for Conservation Biology'@en ;
+    skos:definition 'Organisation e-mail: uwbio@uw.edu; Organisation website: https://biology.washington.edu/fields/conservation-biology'@en ;
+    skos:notation 'SDN:B75::ORG02207'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/B75/current/ORG02205/2/> .
+<http://vocab.nerc.ac.uk/collection/B75/current/ORG02205/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/B75/current/ORG02205/>;
+    dc:modified '2026-06-29T10:08:24'^^xsd:dateTime ;
+    skos:altLabel 'DIHA'^^xsd:string ;
+    skos:prefLabel 'Pontifical Catholic University of Chile, Department of Hydraulic and Environmental Engineering'@en ;
+    skos:definition 'Organisation e-mail: mrojasp@uc.cl; Organisation website: https://www.ing.uc.cl/hidraulica-y-ambiental/'@en ;
+    skos:notation 'SDN:B75::ORG02205'^^xsd:string .

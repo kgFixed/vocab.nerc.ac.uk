@@ -1,0 +1,82 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2026_06_24_18_37_05_2026_06_30_18_37_48.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2026_06_10_18_37_22_2026_06_24_18_37_04.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-06-30T18:37:48'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/FYLPHOS1/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/FYLPHOS1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/FYLPHOS1/>;
+    dc:modified '2026-06-29T17:19:41'^^xsd:dateTime ;
+    skos:altLabel 'Conc_1330-78-5_drysed_lcms'^^xsd:string ;
+    skos:prefLabel 'Concentration of tricresyl phosphate {tris(methylphenyl) phosphate CAS 1330-78-5} per unit dry weight of sediment by liquid chromatography-mass spectrometry'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried, unsieved subsample of sediment and analysed by the specified method.'@en ;
+    skos:notation 'SDN:P01::FYLPHOS1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/FYLPHOS0/2/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/FYLPHOS0/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/FYLPHOS0/>;
+    dc:modified '2026-06-29T17:09:20'^^xsd:dateTime ;
+    skos:altLabel 'Conc_1330-78-5_drysed'^^xsd:string ;
+    skos:prefLabel 'Concentration of tricresyl phosphate {tris(methylphenyl) phosphate CAS 1330-78-5} per unit dry weight of sediment'@en ;
+    skos:definition 'The quantity or mass of the specified analyte contained in a dried subsample of sediment that has not been sieved.'@en ;
+    skos:notation 'SDN:P01::FYLPHOS0'^^xsd:string .
