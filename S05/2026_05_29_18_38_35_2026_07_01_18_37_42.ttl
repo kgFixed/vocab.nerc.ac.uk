@@ -1,0 +1,127 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S05/2026_05_29_18_38_35_2026_07_01_18_37_42.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S05/2026_04_27_17_48_48_2026_05_29_18_38_34.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-07-01T18:37:42'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050298/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050298/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050298/>;
+    dc:modified '2026-06-30T14:44:29'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation from acoustic surface tracking'@en ;
+    skos:definition 'A method for estimating non-directional wave properties using an instruments direct measurements of sea surface elevation.'@en ;
+    skos:notation 'SDN:S05::S050298'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050297/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050297/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050297/>;
+    dc:modified '2026-06-30T14:43:38'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation from near-surface orbital velocities'@en ;
+    skos:definition 'A method for estimating non-directional wave properties using measurements of orbital wave velocities close to the sea surface.'@en ;
+    skos:notation 'SDN:S05::S050297'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050296/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050296/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050296/>;
+    dc:modified '2026-06-30T14:42:05'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation from internal pressure sensor'@en ;
+    skos:definition 'A method for estimating non-directional wave properties using measurements of an instruments internal pressure sensor.'@en ;
+    skos:notation 'SDN:S05::S050296'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050295/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050295/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050295/>;
+    dc:modified '2026-06-30T14:41:14'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation by maximum likelihood method with surface tracking'@en ;
+    skos:definition 'A method for estimating directional wave spectra, using current profilers to measure orbital velocity close to the surface from an array of spatially separated measurement cells. This method utilizes Acoustic Surface Tracking to estimate the non-directional wave spectrum.'@en ;
+    skos:notation 'SDN:S05::S050295'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050294/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050294/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050294/>;
+    dc:modified '2026-06-30T14:40:11'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation by maximum likelihood method'@en ;
+    skos:definition 'A method for estimating directional wave spectra, using current profilers to measure orbital velocity close to the surface from an array of spatially separated measurement cells.'@en ;
+    skos:notation 'SDN:S05::S050294'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050293/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050293/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050293/>;
+    dc:modified '2026-06-30T14:37:58'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation by SUV method'@en ;
+    skos:definition 'A method for measuring directional wave properties, using measurements of Acoustic Surface Tracking (S) and estimates of the two horizontal components of the wave\'s orbital wave velocity (U and V) made close to surface.'@en ;
+    skos:notation 'SDN:S05::S050293'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S05/current/S050292/1/> .
+<http://vocab.nerc.ac.uk/collection/S05/current/S050292/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S05/current/S050292/>;
+    dc:modified '2026-06-30T14:36:41'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'computation by PUV method'@en ;
+    skos:definition 'A method for measuring directional and non-directional wave properties, using measurements of pressure (P) and the two horizontal components of the wave\'s orbital velocity (U and V) Measurements come from the instruments position, used to infer wave properties at surface.'@en ;
+    skos:notation 'SDN:S05::S050292'^^xsd:string .
