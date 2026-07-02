@@ -1,0 +1,136 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2026_06_30_18_37_49_2026_07_02_18_37_44.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2026_06_24_18_37_05_2026_06_30_18_37_48.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-07-02T18:37:44'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/GYDSXXP2/2/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/GYDSXXP2/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/GYDSXXP2/>;
+    dc:modified '2026-07-01T21:02:51'^^xsd:dateTime ;
+    skos:altLabel 'astaxanthin'^^xsd:string ;
+    skos:prefLabel 'Concentration of astaxanthin {CAS 472-61-7} per unit volume of the water body [particulate >unknown phase]'@en ;
+    skos:definition 'Concentration of the carotenoid pigment astaxanthin per unit volume of a water body.  The pigment is contained in suspended particles of unspecified size.'@en ;
+    skos:notation 'SDN:P01::GYDSXXP2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/GYDSXXP3/2/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/GYDSXXP3/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/GYDSXXP3/>;
+    dc:modified '2026-07-01T21:02:51'^^xsd:dateTime ;
+    skos:altLabel 'canthaxanthin'^^xsd:string ;
+    skos:prefLabel 'Concentration of canthaxanthin {CAS 514-78-3} per unit volume of the water body [particulate >unknown phase]'@en ;
+    skos:definition 'Concentration of the carotenoid pigment canthaxanthin per unit volume of a water body.  The pigment is contained in suspended particles of unspecified size.'@en ;
+    skos:notation 'SDN:P01::GYDSXXP3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/CHLC04PX/2/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/CHLC04PX/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/CHLC04PX/>;
+    dc:modified '2026-07-01T21:02:51'^^xsd:dateTime ;
+    skos:altLabel 'chlorophyll-c2'^^xsd:string ;
+    skos:prefLabel 'Concentration of chlorophyll-c2 {chl-c2} per unit volume of the water body [particulate >unknown phase]'@en ;
+    skos:definition 'Concentration (mass or moles) of the pigment chlorophyll-c2 contained in a unit volume of a sample of any body of fresh or salt water. The pigment is contained in suspended particles of unspecified size.'@en ;
+    skos:notation 'SDN:P01::CHLC04PX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/CHLC05PX/2/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/CHLC05PX/2/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/CHLC05PX/>;
+    dc:modified '2026-07-01T21:02:51'^^xsd:dateTime ;
+    skos:altLabel 'violaxanthin'^^xsd:string ;
+    skos:prefLabel 'Concentration of violaxanthin {CAS 126-29-4} per unit volume of the water body [particulate >unknown phase]'@en ;
+    skos:definition 'Concentration of the carotenoid pigment violaxanthin per unit volume of a water body.  The pigment is contained in suspended particles of unspecified size.'@en ;
+    skos:notation 'SDN:P01::CHLC05PX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/CANXHPP2/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/CANXHPP2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/CANXHPP2/>;
+    dc:modified '2026-07-01T12:19:27'^^xsd:dateTime ;
+    skos:altLabel 'canthaxanthin_water>GF/F_m_HPLC'^^xsd:string ;
+    skos:prefLabel 'Concentration of canthaxanthin {CAS 514-78-3} per unit volume of the water body [particulate >GF/F phase] by filtration, methanol extraction and high performance liquid chromatography (HPLC)'@en ;
+    skos:definition 'The amount (mass or moles) of the specified pigment determined by HPLC assay of a sample collected by dissolution in methanol of the residue collected by GF/F filtration of a known volume of any water body.'@en ;
+    skos:notation 'SDN:P01::CANXHPP2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SCHLFLP1/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SCHLFLP1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SCHLFLP1/>;
+    dc:modified '2026-07-01T12:19:27'^^xsd:dateTime ;
+    skos:altLabel 'chl-a_water>2um_m_fluor'^^xsd:string ;
+    skos:prefLabel 'Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate >2um phase] by filtration, methanol extraction and fluorometry'@en ;
+    skos:definition 'Fluorometric assay of methanol extract from particulates collected on a 2um filter.'@en ;
+    skos:notation 'SDN:P01::SCHLFLP1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/NEOXMHP2/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/NEOXMHP2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/NEOXMHP2/>;
+    dc:modified '2026-07-01T12:19:27'^^xsd:dateTime ;
+    skos:altLabel 'crocoxanthin_water>GF/F_m_HPLC'^^xsd:string ;
+    skos:prefLabel 'Concentration of crocoxanthin {Croco CAS 21284-10-6} per unit volume of the water body [particulate >GF/F phase] by filtration, methanol extraction and high performance liquid chromatography (HPLC)'@en ;
+    skos:definition 'The amount (mass or moles) of the specified pigment determined by HPLC assay of a sample collected by dissolution in methanol of the residue collected by GF/F filtration of a known volume of any water body.'@en ;
+    skos:notation 'SDN:P01::NEOXMHP2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/GDHPLC02/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/GDHPLC02/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/GDHPLC02/>;
+    dc:modified '2026-07-01T12:19:27'^^xsd:dateTime ;
+    skos:altLabel 'gyroxanthin_diester_water>GF/F_m_HPLC'^^xsd:string ;
+    skos:prefLabel 'Concentration of gyroxanthin diester per unit volume of the water body [particulate >GF/F phase] by filtration, methanol extraction and high performance liquid chromatography (HPLC)'@en ;
+    skos:definition 'The amount (mass or moles) of the specified pigment determined by HPLC assay of a sample collected by dissolution in methanol of the residue collected by GF/F filtration of a known volume of any water body.'@en ;
+    skos:notation 'SDN:P01::GDHPLC02'^^xsd:string .

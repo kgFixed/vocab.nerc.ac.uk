@@ -1,0 +1,73 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2026_06_19_18_37_11_2026_07_02_18_37_41.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2026_06_10_18_37_16_2026_06_19_18_37_10.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-07-02T18:37:41'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL2313/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL2313/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL2313/>;
+    dc:modified '2026-07-01T09:33:33'^^xsd:dateTime ;
+    skos:altLabel 'NOC TADIC LOC v5'^^xsd:string ;
+    skos:prefLabel 'National Oceanography Centre (NOC) TADIC v5 Lab-On-Chip (LOC) sensor'@en ;
+    skos:definition 'A prototype microfluidic sensor for the combined analysis of total alkalinity (TA) and dissolved inorganic carbon (DIC) in water. Analysis can also be performed on a single channel as a standalone TA or DIC sensor. DIC measurement is based on a conductometric/resistance measurement. The water sample is acidified converting DIC to gaseous carbon dioxide (CO2). The CO2 travels through a gas-permeable membrane into an acceptor fluid of sodium hydroxide, and the resultant change in conductivity of this fluid is used to calculate DIC concentration in units of mS/cm. TA measurement uses a colorimetric method and a single-point titration. A known volume of acid and a pH-sensitive dye are added to the water sample. Gaseous CO2 produced is removed from the sample by traveling across a gas-permeable membrane into a sodium hydroxide acceptor fluid. The resulting sample-titrant mixture is illuminated by 2 LEDs with wavelengths of 435 nm and 591 nm. Optical measurements are taken by an absorbance cell, and the absorbance ratio and pH are measured. TA is calculated from these measurements in units of umol/kg. Samples are filtered through a 0.4 um filter. Standards and blanks are also routinely measured as part of each analysis. An integrated thermistor provides a temperature output in degrees C and allows for temperature correction of TA and DIC measurements. Depth rating is 6000 m.'@en ;
+    skos:notation 'SDN:L22::TOOL2313'^^xsd:string .
