@@ -1,0 +1,126 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C17/2026_06_23_18_36_46_2026_07_04_18_35_41.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C17/2026_06_19_18_37_05_2026_06_23_18_36_45.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-07-04T18:35:41'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/54RF/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/54RF/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/54RF/>;
+    dc:modified '2026-07-03T10:06:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Arkadia'@en ;
+    skos:definition '''{"node": {
+    "country": "Liberia",
+    "MMSI": 636017164,
+    "platformclass": "vessel of opportunity",
+    "notes": "Container Ship. Built as Hansa Kristiansand (LR), renamed to Kota Machan in 2002, then Hansa Kristiansand in 2003, Mol Focus in 2007, Zim Santos in 2008 and back to Hansa Kristiansand in 2011. Became ARKADIA in 2015.",
+    "built": 2001,
+    "callsign": "A8ET4",
+    "length": 170,
+    "previous_name": "Hansa Kristiansand",
+    "IMO": 9226815,
+    "commissioned": 2015,
+    "JCOMMOPs_Recruitment_Date": "2024-06-10"
+}}'''@en ;
+    skos:notation 'SDN:C17::54RF'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/ML24/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/ML24/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/ML24/>;
+    dc:modified '2026-07-03T10:06:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'CMA CGM Caimep'@en ;
+    skos:definition '''{"node": {
+    "country": "Malta",
+    "MMSI": 229075000,
+    "platformclass": "vessel of opportunity",
+    "notes": "Container ship. Built as Lena-S (AG), became APL Indonesia in 2010, became Lena-S in 2015, became Als Juventus (SG) in 2018. Became CMA CGM CAIMEP (MT) in 2021.",
+    "built": 2010,
+    "callsign": "9HA5437",
+    "length": 261,
+    "previous_name": "Als Juventus",
+    "IMO": 9431757,
+    "commissioned": 2021
+}}'''@en ;
+    skos:notation 'SDN:C17::ML24'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C17/current/SIYJ/1/> .
+<http://vocab.nerc.ac.uk/collection/C17/current/SIYJ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C17/current/SIYJ/>;
+    dc:modified '2026-07-03T10:06:30'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Capitaine Tasman'@en ;
+    skos:definition '''{"node": {
+    "country": "Singapore",
+    "MMSI": 563060800,
+    "platformclass": "vessel of opportunity",
+    "notes": "Container ship. Built as Fesco Vladimir(CY), became Vladimir in 2013. GTSPP collected in November 2024.",
+    "built": 2009,
+    "callsign": "9V5992",
+    "length": 184,
+    "previous_name": "Vladimir",
+    "IMO": 9354533,
+    "WOD": 12178,
+    "commissioned": 2018
+}}'''@en ;
+    skos:notation 'SDN:C17::SIYJ'^^xsd:string .

@@ -1,0 +1,82 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2026_07_02_18_37_45_2026_07_04_18_35_48.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2026_06_30_18_37_49_2026_07_02_18_37_44.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-07-04T18:35:48'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/CHLCXXPX/3/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/CHLCXXPX/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/CHLCXXPX/>;
+    dc:modified '2026-07-03T10:39:49'^^xsd:dateTime ;
+    skos:altLabel 'Chlorophyll-c'^^xsd:string ;
+    skos:prefLabel 'Concentration of chlorophyll-c {chl-c} per unit volume of the water body'@en ;
+    skos:definition 'Concentration of all forms of the pigment chlorophyll-c per unit volume of a water body.  The pigment is contained in suspended particles of unspecified size.'@en ;
+    skos:notation 'SDN:P01::CHLCXXPX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/CHLCHPP2/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/CHLCHPP2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/CHLCHPP2/>;
+    dc:modified '2026-07-03T10:22:11'^^xsd:dateTime ;
+    skos:altLabel 'chl-c_water>GF/F_m_HPLC'^^xsd:string ;
+    skos:prefLabel 'Concentration of chlorophyll-c {chl-c} per unit volume of the water body [particulate >GF/F phase] by filtration, methanol extraction and high performance liquid chromatography (HPLC)'@en ;
+    skos:definition 'The amount (mass or moles) of the specified pigment determined by HPLC assay of a sample collected by dissolution in methanol of the residue collected by GF/F filtration of a known volume of any water body. The quoted value either results from a single determination or the average of replicate determinations.'@en ;
+    skos:notation 'SDN:P01::CHLCHPP2'^^xsd:string .
