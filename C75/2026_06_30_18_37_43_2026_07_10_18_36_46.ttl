@@ -1,0 +1,91 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/C75/2026_06_30_18_37_43_2026_07_10_18_36_46.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/C75/2026_06_27_18_35_48_2026_06_30_18_37_42.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-07-10T18:36:46'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/ETR/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/ETR/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/ETR/>;
+    dc:modified '2026-07-09T11:22:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'University of Exeter, Department of Earth and Environmental Sciences'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::ETR'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/KBE/1/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/KBE/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/KBE/>;
+    dc:modified '2026-07-09T11:22:59'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'University of Copenhagen, Section for Molecular Ecology and Evolution'@en ;
+    skos:definition "" ;
+    skos:notation 'SDN:C75::KBE'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/C75/current/UCN/4/> .
+<http://vocab.nerc.ac.uk/collection/C75/current/UCN/4/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/C75/current/UCN/>;
+    dc:modified '2026-07-09T11:22:59'^^xsd:dateTime ;
+    skos:altLabel 'SOS Bangor'^^xsd:string ;
+    skos:prefLabel 'Bangor University School of Ocean Sciences'@en ;
+    skos:definition 'HISTORY: University of Wales, Bangor School of Ocean Sciences(1954-01-01 to 2007-09-30); Bangor University School of Ocean Sciences(2007-10-01 to present); This is a duplicate record, please use C75.UNW.'@en ;
+    skos:notation 'SDN:C75::UCN'^^xsd:string .
