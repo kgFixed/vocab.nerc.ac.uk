@@ -1,0 +1,136 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2026_07_11_18_37_22_2026_07_14_18_37_19.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2026_07_04_18_35_49_2026_07_11_18_37_21.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-07-14T18:37:19'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/MDMASD10/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/MDMASD10/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/MDMASD10/>;
+    dc:modified '2026-07-13T14:18:11'^^xsd:dateTime ;
+    skos:altLabel 'POC_SD'^^xsd:string ;
+    skos:prefLabel 'Concentration standard deviation of organic carbon {organic_C CAS 7440-44-0} {POC} per unit volume of the water body [particulate >unknown phase]'@en ;
+    skos:definition 'The square root of the average of the squares of deviations about the mean of a set of values of the specified measurement.'@en ;
+    skos:notation 'SDN:P01::MDMASD10'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/NTOTSDZZ/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/NTOTSDZZ/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/NTOTSDZZ/>;
+    dc:modified '2026-07-13T14:18:11'^^xsd:dateTime ;
+    skos:altLabel 'TPN_SD'^^xsd:string ;
+    skos:prefLabel 'Concentration standard deviation of total nitrogen {total_N} {TPN} per unit volume of the water body [particulate >unknown phase]'@en ;
+    skos:definition 'The square root of the average of the squares of deviations about the mean of a set of values of the specified measurement.'@en ;
+    skos:notation 'SDN:P01::NTOTSDZZ'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SPMA254A/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SPMA254A/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SPMA254A/>;
+    dc:modified '2026-07-13T13:33:30'^^xsd:dateTime ;
+    skos:altLabel 'SPMA254A'^^xsd:string ;
+    skos:prefLabel 'Absorbance of electromagnetic radiation (254nm wavelength) {light absorbance} by the suspended particulate material >GF/F by filtration and spectrophotometry'@en ;
+    skos:definition 'Spectrophotometric scan on GF/F filtered material.'@en ;
+    skos:notation 'SDN:P01::SPMA254A'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SPMA330A/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SPMA330A/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SPMA330A/>;
+    dc:modified '2026-07-13T13:33:30'^^xsd:dateTime ;
+    skos:altLabel 'SPMA330A'^^xsd:string ;
+    skos:prefLabel 'Absorbance of electromagnetic radiation (330nm wavelength) {light absorbance} by the suspended particulate material >GF/F by filtration and spectrophotometry'@en ;
+    skos:definition 'Spectrophotometric scan on GF/F filtered material.'@en ;
+    skos:notation 'SDN:P01::SPMA330A'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/SPMA350A/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/SPMA350A/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/SPMA350A/>;
+    dc:modified '2026-07-13T13:33:30'^^xsd:dateTime ;
+    skos:altLabel 'SPMA350A'^^xsd:string ;
+    skos:prefLabel 'Absorbance of electromagnetic radiation (350nm wavelength) {light absorbance} by the suspended particulate material >GF/F by filtration and spectrophotometry'@en ;
+    skos:definition 'Spectrophotometric scan on GF/F filtered material.'@en ;
+    skos:notation 'SDN:P01::SPMA350A'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/ZU00M00F/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/ZU00M00F/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/ZU00M00F/>;
+    dc:modified '2026-07-13T13:26:55'^^xsd:dateTime ;
+    skos:altLabel 'Abund_BE003330_image'^^xsd:string ;
+    skos:prefLabel 'Abundance of mesozooplankton [Size: >1000um] per unit volume of the water body by filtration and image analysis'@en ;
+    skos:definition 'Number of individuals from the specified biological entity identified retained on a 1000um filter, counted using image analysis, and normalised to a unit volume of water sample.'@en ;
+    skos:notation 'SDN:P01::ZU00M00F'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/ZU00M00H/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/ZU00M00H/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/ZU00M00H/>;
+    dc:modified '2026-07-13T13:26:55'^^xsd:dateTime ;
+    skos:altLabel 'Abund_BE003331_image'^^xsd:string ;
+    skos:prefLabel 'Abundance of mesozooplankton [Size: >200um] per unit volume of the water body by filtration and image analysis'@en ;
+    skos:definition 'Number of individuals from the specified biological entity identified retained on a 200um filter, counted using image analysis, and normalised to a unit volume of water sample.'@en ;
+    skos:notation 'SDN:P01::ZU00M00H'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/ZU00M00G/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/ZU00M00G/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/ZU00M00G/>;
+    dc:modified '2026-07-13T13:26:55'^^xsd:dateTime ;
+    skos:altLabel 'Abund_BE010961_image'^^xsd:string ;
+    skos:prefLabel 'Abundance of mesozooplankton [Size: 200-1000um] per unit volume of the water body by filtration and image analysis'@en ;
+    skos:definition 'Number of individuals from the specified biological entity identified retained on a 200um filter after passing through a 1000um filter, counted using image analysis, and normalised to a unit volume of water sample.'@en ;
+    skos:notation 'SDN:P01::ZU00M00G'^^xsd:string .
