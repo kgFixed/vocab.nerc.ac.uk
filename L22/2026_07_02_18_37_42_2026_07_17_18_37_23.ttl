@@ -1,0 +1,82 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2026_07_02_18_37_42_2026_07_17_18_37_23.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2026_06_19_18_37_11_2026_07_02_18_37_41.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-07-17T18:37:23'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL2317/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL2317/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL2317/>;
+    dc:modified '2026-07-16T11:04:34'^^xsd:dateTime ;
+    skos:altLabel 'P-ONE Acoustic Receiver'^^xsd:string ;
+    skos:prefLabel 'Pacific Ocean Neutrino Explorer {P-ONE} Acoustic Receiver'@en ;
+    skos:definition 'A piezo-based acoustic receiver used within the Pacific Ocean Neutrino Experiment (P‑ONE) large-volume neutrino telescope acoustic positioning system. The receiver is acoustically coupled to the glass hemisphere of a P‑ONE module and detects acoustic signals transmitted by seafloor acoustic transceivers. These measurements are used to determine the real-time positions of instrumented mooring strings and individual detector modules, enabling precise geometry reconstruction of the neutrino telescope. The receiver converts incident acoustic pressure waves into electrical signals for timing and positioning analysis and operates under deep-ocean pressure conditions as part of the long-term P‑ONE observatory infrastructure. These show absolute sensitivities of approximately -165dBreV2/μPa2 and -125dBreV2/μPa2 at the lowest and highest possible gain setting in a frequency range of 10-40 kHz. high accuracy in the tracking of relative ranging times at approximately 230-280 us at distances of up to 1600 m.'@en ;
+    skos:notation 'SDN:L22::TOOL2317'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL2316/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL2316/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL2316/>;
+    dc:modified '2026-07-16T10:51:18'^^xsd:dateTime ;
+    skos:altLabel 'Brechtel SEMS 2100'^^xsd:string ;
+    skos:prefLabel 'Brechtel 2100 scanning electrical mobility spectrometer'@en ;
+    skos:definition 'An ultra-fast particle mobility spectrometer used to measure particle number size distributions. Applications include identifying key properties of air pollution and aerosol-cloud interactions. This instrument outputs measurements of aerosol number size distribution in addition to real-time measurements of temperature, relative humidity, and pressure. The SEMS 2100 operates by classifying particles based on their electrical mobility which is influenced by their size and charge. Aerosol sample flow range: 0.1 - 2.0 lpm; sheath flow range: 2.5 - 12 lpm; particle concentration range: 1 - 10 million per cubic centimetre. It is fully automated for long-term unattended operation. Selectable particle diameter size range: 0.005-0.3 um; 0.005 - 1.0 um; 0.01 - 2.0 um. Operating temperature: 15 - 35 degC. Operating pressure: 200 - 1000 mb.'@en ;
+    skos:notation 'SDN:L22::TOOL2316'^^xsd:string .
