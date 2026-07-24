@@ -1,0 +1,82 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2026_07_17_18_37_27_2026_07_24_18_36_01.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2026_07_14_18_37_20_2026_07_17_18_37_26.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-07-24T18:36:01'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/RESPRSPX/8/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/RESPRSPX/8/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/RESPRSPX/>;
+    dc:modified '2026-07-23T07:52:17'^^xsd:dateTime ;
+    skos:altLabel 'Resp_insitu'^^xsd:string ;
+    skos:prefLabel 'Consumption rate of oxygen {O2 CAS 7782-44-7} {respiration} per day per unit volume of the water body by in-vitro incubation in the dark on in-situ rig and Winkler titration'@en ;
+    skos:definition 'Respiration rates estimated on bulk water samples from changes in oxygen concentration measured by the Winkler method, in bottles incubated in the dark for a set time period (typically 24 hours) on an in-situ rig at the depths the samples were collected.'@en ;
+    skos:notation 'SDN:P01::RESPRSPX'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/RESPROPX/8/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/RESPROPX/8/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/RESPROPX/>;
+    dc:modified '2026-07-23T07:49:31'^^xsd:dateTime ;
+    skos:altLabel 'Resp_ondeck'^^xsd:string ;
+    skos:prefLabel 'Consumption rate of oxygen {O2 CAS 7782-44-7} {respiration} per day per unit volume of the water body by in-vitro incubation in the dark on deck and Winkler titration'@en ;
+    skos:definition 'Respiration rates estimated on bulk water samples from changes in oxygen concentration measured by the Winkler method, in bottles incubated in the dark for a set time period (typically 24 hours) in on-deck incubators cooled with pumped surface water (\'shipboard incubations\').'@en ;
+    skos:notation 'SDN:P01::RESPROPX'^^xsd:string .
