@@ -1,0 +1,82 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S27/2026_06_30_18_37_55_2026_07_25_18_37_43.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S27/2026_06_11_18_39_13_2026_06_30_18_37_54.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-07-25T18:37:43'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S27/current/CS004632/1/> .
+<http://vocab.nerc.ac.uk/collection/S27/current/CS004632/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S27/current/CS004632/>;
+    dc:modified '2026-07-24T16:31:51'^^xsd:dateTime ;
+    skos:altLabel 'gadoterate meglumine'^^xsd:string ;
+    skos:prefLabel '2-[4,7-bis(carboxylatomethyl)-10-(carboxymethyl)-1,4,7,10-tetrazacyclododec-1-yl]acetate;gadolinium(3+);(2R,3R,4R,5S)-6-(methylamino)hexane-1,2,3,4,5-pentol'@en ;
+    skos:definition 'A weakly magnetic macrocyclic (12 atoms forming a ring), ionic substance used as a contrasting agent in magnetic resonance imaging (MRI).'@en ;
+    skos:notation 'SDN:S27::CS004632'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S27/current/CS004631/1/> .
+<http://vocab.nerc.ac.uk/collection/S27/current/CS004631/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S27/current/CS004631/>;
+    dc:modified '2026-07-24T16:31:51'^^xsd:dateTime ;
+    skos:altLabel 'gadoteridol'^^xsd:string ;
+    skos:prefLabel '2-[4,7-bis(carboxylatomethyl)-10-(2-hydroxypropyl)-1,4,7,10-tetrazacyclododec-1-yl]acetate;gadolinium(3+)'@en ;
+    skos:definition 'A weakly magnetic macrocyclic (12 atoms forming a ring), non-ionic substance used as a contrasting agent in magnetic resonance imaging (MRI).'@en ;
+    skos:notation 'SDN:S27::CS004631'^^xsd:string .
