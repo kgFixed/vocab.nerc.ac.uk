@@ -1,0 +1,82 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/S06/2026_07_17_18_37_35_2026_07_28_18_38_54.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/S06/2026_04_27_17_48_49_2026_07_17_18_37_34.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-07-28T18:38:54'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600114/3/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600114/3/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600114/>;
+    dc:modified '2026-07-27T12:14:03'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Directional spectral density'@en ;
+    skos:definition 'A spectral analysis wave property. The variance of sea surface elevation at a given frequency (wave period reciprocal) and given direction in a directional wave power spectrum.'@en ;
+    skos:notation 'SDN:S06::S0600114'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/S06/current/S0600361/1/> .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600361/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/S06/current/S0600361/>;
+    dc:modified '2026-07-27T12:14:02'^^xsd:dateTime ;
+    skos:altLabel ''^^xsd:string ;
+    skos:prefLabel 'Non-directional spectral density'@en ;
+    skos:definition 'A spectral analysis wave property. The variance of sea surface elevation at a given frequency (wave period reciprocal) in a wave power spectrum.'@en ;
+    skos:notation 'SDN:S06::S0600361'^^xsd:string .

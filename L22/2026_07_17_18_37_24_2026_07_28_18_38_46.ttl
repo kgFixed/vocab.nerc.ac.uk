@@ -1,0 +1,73 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2026_07_17_18_37_24_2026_07_28_18_38_46.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/L22/2026_07_02_18_37_42_2026_07_17_18_37_23.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-07-28T18:38:46'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/L22/current/TOOL2318/1/> .
+<http://vocab.nerc.ac.uk/collection/L22/current/TOOL2318/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/L22/current/TOOL2318/>;
+    dc:modified '2026-07-27T18:00:40'^^xsd:dateTime ;
+    skos:altLabel 'TPA500 altimeter'^^xsd:string ;
+    skos:prefLabel 'Tritech PA-500 altimeter'@en ;
+    skos:definition 'Digital precision altimeter with 500 kHz signal giving highly accurate height off seabed and subsea distance measurements. Operates effectively between -10 °C and 40 °C at heights up to 50 m above the seabed. Standard depth rating is 4000 m, with 700 and 6800 m options. This term can be used for either the MKI or MKII version, which will be identified elsewhere in the supporting metadata.'@en ;
+    skos:notation 'SDN:L22::TOOL2318'^^xsd:string .
