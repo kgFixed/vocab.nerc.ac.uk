@@ -1,0 +1,208 @@
+@prefix tree: <https://w3id.org/tree#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@base <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2026_07_24_18_36_02_2026_07_29_18_37_47.ttl> .
+
+<>
+    a tree:Node
+     ;
+    tree:relation [
+      a tree:LessThanRelation ;
+      tree:node <https://kgfixed.github.io/vocab.nerc.ac.uk/P01/2026_07_17_18_37_27_2026_07_24_18_36_01.ttl> ;
+      tree:path dc:modified ;
+      tree:value '2026-07-29T18:37:47'^^xsd:dateTime
+    ]
+     .
+
+<feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  
+  
+  tree:shape [
+    a sh:NodeShape ;
+    sh:nodeKind sh:IRI ;
+    sh:property [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path dc:isVersionOf
+    ],
+    [
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:path dc:modified
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:altLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:prefLabel
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:definition
+    ],
+    [
+      sh:datatype xsd:string ;
+      sh:minCount 1 ;
+      sh:path skos:notation
+    ];
+    sh:targetClass skos:Concept
+  ] ;
+  tree:view <> ;
+  .
+
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BRAZACY3/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BRAZACY3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BRAZACY3/>;
+    dc:modified '2026-07-28T16:03:56'^^xsd:dateTime ;
+    skos:altLabel 'Conc_120066-54-8_unfilt_ICPMS'^^xsd:string ;
+    skos:prefLabel 'Concentration of 2-[4,7-bis(carboxylatomethyl)-10-(2-hydroxypropyl)-1,4,7,10-tetrazacyclododec-1-yl]acetate;gadolinium(3+) {gadoteridol CAS 120066-54-8} per unit volume of the water body [dissolved plus reactive particulate phase] by acidification and high performance liquid chromatography - inductively coupled plasma mass spectrometry'@en ;
+    skos:definition 'The amount (mass or moles) of the analyte measured in a specified volume of an unfiltered, acidified sample from any body of fresh or salt water by ICP-MS.'@en ;
+    skos:notation 'SDN:P01::BRAZACY3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BYLATOM5/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BYLATOM5/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BYLATOM5/>;
+    dc:modified '2026-07-28T16:03:56'^^xsd:dateTime ;
+    skos:altLabel 'Conc_92943-93-6_unfilt_ICPMS'^^xsd:string ;
+    skos:prefLabel 'Concentration of 2-[4,7-bis(carboxylatomethyl)-10-(carboxymethyl)-1,4,7,10-tetrazacyclododec-1-yl]acetate;gadolinium(3+);(2R,3R,4R,5S)-6-(methylamino)hexane-1,2,3,4,5-pentol {gadoterate meglumine CAS 92943-93-6} per unit volume of the water body [dissolved plus reactive particulate phase] by acidification and high performance liquid chromatography - inductively coupled plasma mass spectrometry'@en ;
+    skos:definition 'The amount (mass or moles) of the analyte measured in a specified volume of an unfiltered, acidified sample from any body of fresh or salt water by ICP-MS.'@en ;
+    skos:notation 'SDN:P01::BYLATOM5'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BRIUMWA3/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BRIUMWA3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BRIUMWA3/>;
+    dc:modified '2026-07-28T16:03:56'^^xsd:dateTime ;
+    skos:altLabel 'Conc_Ce_unfilt_ICPMS'^^xsd:string ;
+    skos:prefLabel 'Concentration of cerium {Ce CAS 7440-45-1} per unit volume of the water body [dissolved plus reactive particulate phase] by acidification and inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The amount (mass or moles) of the analyte measured in a specified volume of an unfiltered, acidified sample from any body of fresh or salt water by ICP-MS.'@en ;
+    skos:notation 'SDN:P01::BRIUMWA3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BYSPROS6/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BYSPROS6/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BYSPROS6/>;
+    dc:modified '2026-07-28T16:03:56'^^xsd:dateTime ;
+    skos:altLabel 'Conc_Dy_unfilt_ICPMS'^^xsd:string ;
+    skos:prefLabel 'Concentration of dysprosium {Dy CAS 7429-91-6} per unit volume of the water body [dissolved plus reactive particulate phase] by acidification and inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The amount (mass or moles) of the analyte measured in a specified volume of an unfiltered, acidified sample from any body of fresh or salt water by ICP-MS.'@en ;
+    skos:notation 'SDN:P01::BYSPROS6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BBIUMWA9/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BBIUMWA9/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BBIUMWA9/>;
+    dc:modified '2026-07-28T16:03:56'^^xsd:dateTime ;
+    skos:altLabel 'Conc_Er_unfilt_ICPMS'^^xsd:string ;
+    skos:prefLabel 'Concentration of erbium {Er CAS 7440-52-0} per unit volume of the water body [dissolved plus reactive particulate phase] by acidification and inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The amount (mass or moles) of the analyte measured in a specified volume of an unfiltered, acidified sample from any body of fresh or salt water by ICP-MS.'@en ;
+    skos:notation 'SDN:P01::BBIUMWA9'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BEUROPI4/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BEUROPI4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BEUROPI4/>;
+    dc:modified '2026-07-28T16:03:56'^^xsd:dateTime ;
+    skos:altLabel 'Conc_Eu_unfilt_ICPMS'^^xsd:string ;
+    skos:prefLabel 'Concentration of europium {Eu CAS 7440-53-1} per unit volume of the water body [dissolved plus reactive particulate phase] by acidification and inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The amount (mass or moles) of the analyte measured in a specified volume of an unfiltered, acidified sample from any body of fresh or salt water by ICP-MS.'@en ;
+    skos:notation 'SDN:P01::BEUROPI4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BADOLIN8/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BADOLIN8/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BADOLIN8/>;
+    dc:modified '2026-07-28T16:03:56'^^xsd:dateTime ;
+    skos:altLabel 'Conc_Gd_unfilt_ICPMS'^^xsd:string ;
+    skos:prefLabel 'Concentration of gadolinium {Gd CAS 7440-54-2} per unit volume of the water body [dissolved plus reactive particulate phase] by acidification and inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The amount (mass or moles) of the analyte measured in a specified volume of an unfiltered, acidified sample from any body of fresh or salt water by ICP-MS.'@en ;
+    skos:notation 'SDN:P01::BADOLIN8'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BHOLMIU6/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BHOLMIU6/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BHOLMIU6/>;
+    dc:modified '2026-07-28T16:03:56'^^xsd:dateTime ;
+    skos:altLabel 'Conc_Ho_unfilt_ICPMS'^^xsd:string ;
+    skos:prefLabel 'Concentration of holmium {Ho CAS 7440-60-0} per unit volume of the water body [dissolved plus reactive particulate phase] by acidification and inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The amount (mass or moles) of the analyte measured in a specified volume of an unfiltered, acidified sample from any body of fresh or salt water by ICP-MS.'@en ;
+    skos:notation 'SDN:P01::BHOLMIU6'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BNTHANU2/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BNTHANU2/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BNTHANU2/>;
+    dc:modified '2026-07-28T16:03:56'^^xsd:dateTime ;
+    skos:altLabel 'Conc_La_unfilt_ICPMS'^^xsd:string ;
+    skos:prefLabel 'Concentration of lanthanum {La CAS 7439-91-0} per unit volume of the water body [dissolved plus reactive particulate phase] by acidification and inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The amount (mass or moles) of the analyte measured in a specified volume of an unfiltered, acidified sample from any body of fresh or salt water by ICP-MS.'@en ;
+    skos:notation 'SDN:P01::BNTHANU2'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BLUTETI1/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BLUTETI1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BLUTETI1/>;
+    dc:modified '2026-07-28T16:03:56'^^xsd:dateTime ;
+    skos:altLabel 'Conc_Lu_unfilt_ICPMS'^^xsd:string ;
+    skos:prefLabel 'Concentration of lutetium {Lu CAS 7439-94-3} per unit volume of the water body [dissolved plus reactive particulate phase] by acidification and inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The amount (mass or moles) of the analyte measured in a specified volume of an unfiltered, acidified sample from any body of fresh or salt water by ICP-MS.'@en ;
+    skos:notation 'SDN:P01::BLUTETI1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BEODYMI9/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BEODYMI9/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BEODYMI9/>;
+    dc:modified '2026-07-28T16:03:56'^^xsd:dateTime ;
+    skos:altLabel 'Conc_Nd_unfilt_ICPMS'^^xsd:string ;
+    skos:prefLabel 'Concentration of neodymium {Nd CAS 7440-00-8} per unit volume of the water body [dissolved plus reactive particulate phase] by acidification and inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The amount (mass or moles) of the analyte measured in a specified volume of an unfiltered, acidified sample from any body of fresh or salt water by ICP-MS.'@en ;
+    skos:notation 'SDN:P01::BEODYMI9'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BODYMIU4/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BODYMIU4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BODYMIU4/>;
+    dc:modified '2026-07-28T16:03:56'^^xsd:dateTime ;
+    skos:altLabel 'Conc_Pr_unfilt_ICPMS'^^xsd:string ;
+    skos:prefLabel 'Concentration of praseodymium {Pr CAS 7440-10-0} per unit volume of the water body [dissolved plus reactive particulate phase] by acidification and inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The amount (mass or moles) of the analyte measured in a specified volume of an unfiltered, acidified sample from any body of fresh or salt water by ICP-MS.'@en ;
+    skos:notation 'SDN:P01::BODYMIU4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BSAMARI3/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BSAMARI3/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BSAMARI3/>;
+    dc:modified '2026-07-28T16:03:56'^^xsd:dateTime ;
+    skos:altLabel 'Conc_Sm_unfilt_ICPMS'^^xsd:string ;
+    skos:prefLabel 'Concentration of samarium {Sm CAS 7440-19-9} per unit volume of the water body [dissolved plus reactive particulate phase] by acidification and inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The amount (mass or moles) of the analyte measured in a specified volume of an unfiltered, acidified sample from any body of fresh or salt water by ICP-MS.'@en ;
+    skos:notation 'SDN:P01::BSAMARI3'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BTERBIU4/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BTERBIU4/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BTERBIU4/>;
+    dc:modified '2026-07-28T16:03:56'^^xsd:dateTime ;
+    skos:altLabel 'Conc_Tb_unfilt_ICPMS'^^xsd:string ;
+    skos:prefLabel 'Concentration of terbium {Tb CAS 7440-27-9} per unit volume of the water body [dissolved plus reactive particulate phase] by acidification and inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The amount (mass or moles) of the analyte measured in a specified volume of an unfiltered, acidified sample from any body of fresh or salt water by ICP-MS.'@en ;
+    skos:notation 'SDN:P01::BTERBIU4'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BTHULIU1/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BTHULIU1/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BTHULIU1/>;
+    dc:modified '2026-07-28T16:03:56'^^xsd:dateTime ;
+    skos:altLabel 'Conc_Tm_unfilt_ICPMS'^^xsd:string ;
+    skos:prefLabel 'Concentration of thulium {Tm CAS 7440-30-4} per unit volume of the water body [dissolved plus reactive particulate phase] by acidification and inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The amount (mass or moles) of the analyte measured in a specified volume of an unfiltered, acidified sample from any body of fresh or salt water by ICP-MS.'@en ;
+    skos:notation 'SDN:P01::BTHULIU1'^^xsd:string .
+<feed> tree:member <http://vocab.nerc.ac.uk/collection/P01/current/BTTERBI6/1/> .
+<http://vocab.nerc.ac.uk/collection/P01/current/BTTERBI6/1/>
+    a skos:Concept ;
+    dc:isVersionOf <http://vocab.nerc.ac.uk/collection/P01/current/BTTERBI6/>;
+    dc:modified '2026-07-28T16:03:56'^^xsd:dateTime ;
+    skos:altLabel 'Conc_Yb_unfilt_ICPMS'^^xsd:string ;
+    skos:prefLabel 'Concentration of ytterbium {Yb CAS 7440-64-4} per unit volume of the water body [dissolved plus reactive particulate phase] by acidification and inductively-coupled plasma mass spectrometry'@en ;
+    skos:definition 'The amount (mass or moles) of the analyte measured in a specified volume of an unfiltered, acidified sample from any body of fresh or salt water by ICP-MS.'@en ;
+    skos:notation 'SDN:P01::BTTERBI6'^^xsd:string .
